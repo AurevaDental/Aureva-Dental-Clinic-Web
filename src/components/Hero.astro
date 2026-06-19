@@ -1,0 +1,66 @@
+---
+import { getConfig } from '../utils/getConfig';
+
+const config = getConfig();
+const { hero_section, site_meta } = config;
+
+// Formulating the WhatsApp deep link
+const whatsappBase = "https://wa.me/";
+const encodedMessage = encodeURIComponent(site_meta.whatsapp_default_message);
+const whatsappUrl = `${whatsappBase}${site_meta.whatsapp_number}?text=${encodedMessage}`;
+---
+
+<header class="relative min-h-[90vh] flex items-center px-6 py-20 lg:px-24 overflow-hidden">
+  <!-- HTML5 Background Video Container -->
+  <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+    <video 
+      src={hero_section.video_url} 
+      autoplay 
+      loop 
+      muted 
+      playsinline
+      class="w-full h-full object-cover filter brightness-[0.7] contrast-[0.95]"
+      preload="auto"
+    >
+    </video>
+    <!-- Soft warm Japandi overlay for maximum readability and visual aesthetic -->
+    <div class="absolute inset-0 bg-gradient-to-r from-japandi-cream via-japandi-cream/90 to-japandi-sand/60 mix-blend-normal"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto w-full relative z-10">
+    <div class="max-w-3xl flex flex-col items-start space-y-8 animate-slow-fade">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-japandi-clay bg-japandi-sand/65 text-xs font-semibold text-japandi-moss uppercase tracking-wider">
+        <span class="w-1.5 h-1.5 rounded-full bg-japandi-moss animate-pulse"></span>
+        <span>A serene approach to dental wellness</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-japandi-charcoal leading-[1.15] font-medium tracking-tight">
+        {hero_section.headline}
+      </h1>
+      
+      <p class="text-lg md:text-xl text-japandi-earth max-w-xl font-light leading-relaxed">
+        {hero_section.sub_headline}
+      </p>
+      
+      <div class="pt-4 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <a 
+          href={whatsappUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center justify-center px-8 py-4 bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal font-medium rounded-full transition-all duration-300 transform hover:-translate-y-0.5 shadow-md shadow-japandi-moss/10"
+        >
+          {hero_section.cta_text}
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+        <a 
+          href="#services" 
+          class="inline-flex items-center justify-center px-8 py-4 border border-japandi-clay text-japandi-charcoal hover:bg-japandi-sand/60 font-medium rounded-full transition-all duration-300"
+        >
+          Explore Services
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

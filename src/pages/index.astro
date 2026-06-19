@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import DoctorsGallery from '../components/DoctorsGallery.astro';
+import LocationsAndReviews from '../components/LocationsAndReviews.astro';
+import { getConfig } from '../utils/getConfig';
+
+export const prerender = true;
+
+const config = getConfig();
+const { site_meta } = config;
+---
+
+<Layout>
+	<!-- Hero Section -->
+	<Hero />
+
+	<!-- Services Grid -->
+	<Services />
+
+	<!-- Doctors Horizontal Scroll Gallery -->
+	<DoctorsGallery />
+
+	<!-- Locations Deep Map Links & Social Proof Reviews -->
+	<LocationsAndReviews />
+
+	<!-- Sergeant/Minimalist Footer -->
+	<footer class="bg-japandi-sand/80 border-t border-japandi-clay/50 py-12 px-6 lg:px-24">
+		<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-japandi-earth font-light">
+			<div class="flex items-center gap-2">
+				<span class="w-2.5 h-2.5 rounded-full bg-japandi-moss"></span>
+				<span class="font-serif font-medium text-sm text-japandi-charcoal tracking-wide">Aureva Dental</span>
+			</div>
+			
+			<div class="flex gap-8">
+				<a href="#services" class="hover:text-japandi-charcoal transition-colors">Services</a>
+				<a href="#team" class="hover:text-japandi-charcoal transition-colors">Artisans</a>
+				<a href="#locations" class="hover:text-japandi-charcoal transition-colors">Sanctuaries</a>
+			</div>
+			
+			<div>
+				<p>&copy; {new Date().getFullYear()} Aureva Dental. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+</Layout>

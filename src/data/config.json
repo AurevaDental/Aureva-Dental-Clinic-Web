@@ -1,0 +1,119 @@
+{
+  "site_meta": {
+    "title": "Aureva Dental | Serene & Modern Japandi Dental Care",
+    "description": "Experience premium, stress-free dental care in a space inspired by Japandi aesthetics. Calm environment, holistic treatments, and expert care.",
+    "whatsapp_number": "12065550190",
+    "whatsapp_default_message": "Hello Aureva Dental, I would like to schedule a dental consultation."
+  },
+  "theme_colors": {
+    "light": {
+      "bg_primary": "#F5F2EB",
+      "bg_secondary": "#EAE4D9",
+      "border_color": "#D6CEBF",
+      "text_primary": "#2A2C2B",
+      "accent_moss": "#4E5E50",
+      "accent_earth": "#8D7B68"
+    },
+    "dark": {
+      "bg_primary": "#1C1F1D",
+      "bg_secondary": "#242825",
+      "border_color": "#383E3A",
+      "text_primary": "#ECE7DF",
+      "accent_moss": "#7D9082",
+      "accent_earth": "#A89A8A"
+    }
+  },
+  "hero_section": {
+    "headline": "Calm Mind. Healthy Smile.",
+    "sub_headline": "Experience dental care re-imagined as a soothing ritual. Minimalist design, warm earth tones, and pain-free treatments for your peace of mind.",
+    "cta_text": "Begin Your Journey",
+    "video_url": "https://assets.mixkit.co/videos/preview/mixkit-modern-dental-office-interior-41984-large.mp4"
+  },
+  "services_section": {
+    "title": "Holistic Services",
+    "subtitle": "Mindful treatments tailored to your body's natural balance.",
+    "services_list": [
+      {
+        "id": "preventive",
+        "title": "Holistic Prevention",
+        "description": "Biological dental cleanings, biomimetic sealants, and gentle diagnostics centered on preserving your natural tooth structure.",
+        "duration": "60 mins",
+        "price": "From $150"
+      },
+      {
+        "id": "cosmetic",
+        "title": "Minimally Invasive Esthetics",
+        "description": "Artisanal porcelain veneers, biological whitening, and composite bonding that enhance your unique, natural smile.",
+        "duration": "90 mins",
+        "price": "Custom Pricing"
+      },
+      {
+        "id": "restorative",
+        "title": "Restorative Harmony",
+        "description": "Metal-free zirconia implants, biological crowns, and ceramic restorations designed to integrate seamlessly with your body.",
+        "duration": "120 mins",
+        "price": "From $850"
+      }
+    ]
+  },
+  "doctors_section": {
+    "title": "Our Artisans",
+    "subtitle": "Meet the practitioners who blend clinical excellence with artistic care.",
+    "team": [
+      {
+        "id": "takahashi",
+        "name": "Dr. Emi Takahashi, DDS",
+        "role": "Lead Aesthetic Architect",
+        "qualifications": "Harvard School of Dental Medicine / 12 Years Exp.",
+        "image_url": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600&h=800",
+        "philosophy": "Dentistry is the quiet harmony of biological health and clean visual art."
+      },
+      {
+        "id": "vance",
+        "name": "Dr. Lukas Vance, DMD",
+        "role": "Holistic Restorative Specialist",
+        "qualifications": "UCSF School of Dentistry / 9 Years Exp.",
+        "image_url": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600&h=800",
+        "philosophy": "Treating the mouth is treating the gateway to the entire body's wellness."
+      }
+    ]
+  },
+  "locations_section": {
+    "title": "Serene Sanctuaries",
+    "subtitle": "Find peace in our clinic locations designed with Japandi principles.",
+    "locations_list": [
+      {
+        "id": "seattle",
+        "name": "Aureva Dental — Seattle",
+        "address": "120 Kyoto Way, Suite 400, Seattle, WA 98101",
+        "google_maps_url": "https://maps.google.com/?q=Kyoto+Way+Seattle+WA",
+        "phone": "(206) 555-0190",
+        "hours": "Mon - Fri: 8:00 AM - 5:00 PM"
+      }
+    ]
+  },
+  "social_proof": {
+    "title": "Serene Experiences",
+    "subtitle": "Stories of healing, comfort, and radiant smiles from our patients.",
+    "testimonials": [
+      {
+        "name": "Aria Montgomery",
+        "role": "Creative Director",
+        "text": "The most peaceful dental visit I've ever had. The warm wood textures, gentle background music, and Dr. Takahashi's touch made me feel like I was in a high-end spa, not a dental chair.",
+        "rating": 5
+      },
+      {
+        "name": "Kenji Tanaka",
+        "role": "Architect",
+        "text": "I highly appreciate the Japandi minimalism of the clinic. But more than the gorgeous layout, Dr. Vance's holistic focus and painless biological approach solved my severe dental anxiety.",
+        "rating": 5
+      },
+      {
+        "name": "shuvadip manna",
+        "role": "xyz",
+        "text": "too good",
+        "rating": 5
+      }
+    ]
+  }
+}

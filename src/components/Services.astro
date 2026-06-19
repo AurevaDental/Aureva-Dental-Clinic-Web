@@ -1,0 +1,58 @@
+---
+import { getConfig } from '../utils/getConfig';
+
+const config = getConfig();
+const { services_section } = config;
+---
+
+<section id="services" class="py-24 px-6 lg:px-24 bg-japandi-cream border-t border-japandi-clay/40 relative">
+  <!-- Subtle line decoration -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-12 bg-japandi-clay"></div>
+
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="max-w-3xl mb-16 animate-slow-fade">
+      <p class="text-xs font-semibold text-japandi-earth uppercase tracking-widest mb-3">
+        {services_section.subtitle}
+      </p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-japandi-charcoal font-medium tracking-tight">
+        {services_section.title}
+      </h2>
+    </div>
+
+    <!-- Responsive Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {services_section.services_list.map((service, index) => (
+        <div 
+          class="bg-japandi-sand/55 hover:bg-japandi-sand border border-japandi-clay/50 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-japandi-charcoal/5 animate-slow-fade"
+          style={`animation-delay: ${index * 0.15}s;`}
+        >
+          <div>
+            <div class="w-10 h-10 rounded-full bg-japandi-cream border border-japandi-clay flex items-center justify-center mb-6 text-japandi-moss">
+              <span class="text-sm font-semibold">{index + 1}</span>
+            </div>
+            
+            <h3 class="text-2xl font-serif text-japandi-charcoal font-medium mb-4">
+              {service.title}
+            </h3>
+            
+            <p class="text-japandi-earth font-light leading-relaxed mb-8 text-sm">
+              {service.description}
+            </p>
+          </div>
+
+          <div class="pt-6 border-t border-japandi-clay/40 flex justify-between items-center text-xs">
+            <div>
+              <p class="text-[10px] text-japandi-earth uppercase tracking-wider mb-0.5">Session Time</p>
+              <p class="font-medium text-japandi-charcoal">{service.duration}</p>
+            </div>
+            <div class="text-right">
+              <p class="text-[10px] text-japandi-earth uppercase tracking-wider mb-0.5">Investment</p>
+              <p class="font-semibold text-japandi-moss text-sm">{service.price}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
