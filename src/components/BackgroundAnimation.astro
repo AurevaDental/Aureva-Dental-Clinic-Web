@@ -1,183 +1,179 @@
 ---
-// BackgroundAnimation.astro - Soothing, premium Japandi/Dental background animation
+// BackgroundAnimation.astro - Soothing Komorebi (Dappled Sunlight) & Twinkling Zen Sparkles
 ---
 
 <div class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
-  <!-- 1. Calming Morphing Ambient Blobs (Organic & Soothing) -->
-  <div class="ambient-blob blob-1"></div>
-  <div class="ambient-blob blob-2"></div>
-  <div class="ambient-blob blob-3"></div>
+  <!-- 1. Dappled Sunlight (Komorebi Shadow / Light) -->
+  <div class="komorebi-container">
+    <div class="sun-beam"></div>
+    <svg class="dappled-shadow" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <filter id="soft-blur">
+          <feGaussianBlur stdDeviation="8" />
+        </filter>
+      </defs>
+      <!-- Leaf shadow paths -->
+      <g filter="url(#soft-blur)" class="shadow-group">
+        <path d="M-10,-10 C15,-5 20,30 5,45 C-5,55 -25,45 -25,20 Z" fill="var(--color-accent-moss)" opacity="0.07"></path>
+        <path d="M90,-20 C110,0 120,35 100,50 C80,65 65,45 70,15 Z" fill="var(--color-accent-earth)" opacity="0.06"></path>
+        <path d="M30,80 C50,75 75,90 70,110 C60,125 35,120 40,95 Z" fill="var(--color-accent-moss)" opacity="0.05"></path>
+      </g>
+    </svg>
+  </div>
 
-  <!-- 2. Soothing Zen Particles / Clean Bubbles (Rising slowly) -->
-  <div class="zen-particles-container">
-    {Array.from({ length: 12 }).map((_, i) => {
-      // Generate varying properties for a natural organic feel
-      const left = `${5 + (i * 8.5) + (Math.sin(i) * 3)}%`;
-      const size = `${3 + (i % 3) * 2}px`;
-      const delay = `${(i * 1.5) % 15}s`;
-      const duration = `${15 + (i % 4) * 4}s`;
-      const opacity = 0.08 + (i % 3) * 0.05;
+  <!-- 2. Twinkling Zen Sparkle Stars (Thin line-art stars) -->
+  <div class="twinkle-container">
+    {Array.from({ length: 8 }).map((_, i) => {
+      // Set distinct positions, animation delays, and rotation directions
+      const top = `${10 + (i * 12) + (Math.sin(i) * 5)}%`;
+      const left = `${10 + ((i * 13) % 80)}%`;
+      const scale = 0.6 + (i % 3) * 0.25;
+      const delay = `${i * 2.2}s`;
+      const duration = `${8 + (i % 3) * 4}s`;
       return (
-        <div 
-          class="zen-particle" 
-          style={`left: ${left}; width: ${size}; height: ${size}; animation-delay: ${delay}; animation-duration: ${duration}; --max-opacity: ${opacity};`}
-        />
+        <svg 
+          class="zen-sparkle" 
+          style={`top: ${top}; left: ${left}; transform: scale(${scale}); animation-delay: ${delay}; animation-duration: ${duration};`}
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="1.2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+        >
+          <path d="M12 3v18M3 12h18" />
+          <path d="M8 8l8 8M8 16l8-8" opacity="0.4" stroke-dasharray="1 1" />
+        </svg>
       );
     })}
   </div>
 </div>
 
 <style>
-  /* Base blob style with heavy hardware-accelerated blur */
-  .ambient-blob {
+  /* Komorebi Container */
+  .komorebi-container {
     position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.15;
-    mix-blend-mode: multiply;
-    pointer-events: none;
-    will-change: transform;
-    transition: opacity 0.5s ease;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
 
-  /* Dark mode support - reduce opacity/blend mode for dark backgrounds */
-  :global(.dark) .ambient-blob {
-    mix-blend-mode: screen;
-    opacity: 0.04;
+  /* Shifting subtle sunlight rays */
+  .sun-beam {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      ellipse at 30% 20%,
+      rgba(245, 242, 235, 0.4) 0%,
+      rgba(234, 228, 217, 0.15) 40%,
+      transparent 70%
+    );
+    animation: sunlight-shift 40s ease-in-out infinite alternate;
+    mix-blend-mode: overlay;
   }
 
-  /* Blob 1: Calming Moss Green */
-  .blob-1 {
-    top: -10%;
-    left: -10%;
-    width: 50vw;
-    height: 50vw;
-    background: radial-gradient(circle, var(--color-accent-moss) 0%, transparent 70%);
-    animation: drift-1 30s ease-in-out infinite alternate;
+  :global(.dark) .sun-beam {
+    background: radial-gradient(
+      ellipse at 30% 20%,
+      rgba(125, 144, 130, 0.08) 0%,
+      rgba(36, 40, 37, 0.2) 50%,
+      transparent 80%
+    );
   }
 
-  /* Blob 2: Warm Earth Clay */
-  .blob-2 {
-    bottom: -15%;
-    right: -10%;
-    width: 60vw;
-    height: 60vw;
-    background: radial-gradient(circle, var(--color-accent-earth) 0%, transparent 70%);
-    animation: drift-2 35s ease-in-out infinite alternate;
-  }
-
-  /* Blob 3: Soft Sand */
-  .blob-3 {
-    top: 40%;
-    left: 60%;
-    width: 45vw;
-    height: 45vw;
-    background: radial-gradient(circle, var(--color-bg-secondary) 0%, transparent 70%);
-    animation: drift-3 25s ease-in-out infinite alternate;
-  }
-
-  /* Zen Particle Container */
-  .zen-particles-container {
+  /* Leaf shadow animation overlay */
+  .dappled-shadow {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
   }
 
-  /* Pure CSS Rising Zen Particle */
-  .zen-particle {
+  .shadow-group {
+    transform-origin: 50% 50%;
+    animation: shadow-drift 60s ease-in-out infinite alternate;
+  }
+
+  /* Twinkling Zen Sparkles */
+  .twinkle-container {
     position: absolute;
-    bottom: -20px;
-    border-radius: 50%;
-    background-color: var(--color-accent-moss);
-    box-shadow: 0 0 6px var(--color-accent-moss);
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .zen-sparkle {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    color: var(--color-accent-moss);
     opacity: 0;
     will-change: transform, opacity;
-    animation: float-up linear infinite;
+    animation: twinkle-pulse ease-in-out infinite;
   }
 
-  :global(.dark) .zen-particle {
-    background-color: var(--color-text-primary);
-    box-shadow: 0 0 6px var(--color-text-primary);
+  :global(.dark) .zen-sparkle {
+    color: var(--color-accent-earth);
   }
 
-  /* Keyframes for Morphing Blobs */
-  @keyframes drift-1 {
+  /* Keyframe Animations */
+  @keyframes sunlight-shift {
     0% {
-      transform: translate(0, 0) scale(1) rotate(0deg);
+      transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate(-5vw, -5vh) rotate(5deg);
+    }
+  }
+
+  @keyframes shadow-drift {
+    0% {
+      transform: scale(1) rotate(0deg) translate(0, 0);
     }
     50% {
-      transform: translate(10vw, 8vh) scale(1.15) rotate(120deg);
+      transform: scale(1.08) rotate(4deg) translate(2vw, 1vh);
     }
     100% {
-      transform: translate(-5vw, 15vh) scale(0.9) rotate(240deg);
+      transform: scale(0.95) rotate(-3deg) translate(-1vw, -2vh);
     }
   }
 
-  @keyframes drift-2 {
-    0% {
-      transform: translate(0, 0) scale(1) rotate(0deg);
+  @keyframes twinkle-pulse {
+    0%, 100% {
+      opacity: 0.04;
+      transform: rotate(0deg) scale(0.8);
     }
     50% {
-      transform: translate(-8vw, -12vh) scale(0.9) rotate(-120deg);
-    }
-    100% {
-      transform: translate(5vw, -5vh) scale(1.1) rotate(-240deg);
-    }
-  }
-
-  @keyframes drift-3 {
-    0% {
-      transform: translate(0, 0) scale(1);
-    }
-    50% {
-      transform: translate(-12vw, 10vh) scale(1.1);
-    }
-    100% {
-      transform: translate(8vw, -8vh) scale(0.9);
+      opacity: 0.35;
+      transform: rotate(45deg) scale(1.15);
+      filter: drop-shadow(0 0 6px currentColor);
     }
   }
 
-  /* Keyframe for rising particles with a soothing sway */
-  @keyframes float-up {
-    0% {
-      transform: translateY(0) translateX(0) scale(0.8);
-      opacity: 0;
-    }
-    10% {
-      opacity: var(--max-opacity);
-    }
-    90% {
-      opacity: var(--max-opacity);
-    }
-    100% {
-      transform: translateY(-110vh) translateX(calc(sin(var(--max-opacity) * 10) * 40px)) scale(1.2);
-      opacity: 0;
-    }
-  }
-
-  /* Mobile Compatibility: Optimize animations to minimize CPU/GPU load */
+  /* Mobile Compatibility & Performance Optimization */
   @media (max-width: 768px) {
-    .ambient-blob {
-      filter: blur(80px); /* Lower blur radius is much faster to render on mobile GPUs */
-      opacity: 0.12;
+    .sun-beam {
+      animation: sunlight-shift 60s ease-in-out infinite alternate; /* Slower and cheaper to compute */
     }
-    :global(.dark) .ambient-blob {
-      opacity: 0.03;
+    .shadow-group {
+      animation: shadow-drift 90s ease-in-out infinite alternate;
     }
-    .blob-3 {
-      display: none; /* Remove 3rd blob to reduce draw layers */
-    }
-    /* Reduce number of rising particles on mobile to improve performance */
-    .zen-particle:nth-child(even) {
+    /* Hide some leaf paths to reduce overdraw on lower-end mobile GPUs */
+    .shadow-group path:nth-child(3) {
       display: none;
     }
-    /* Slower, gentler movements on mobile */
-    .blob-1 {
-      animation: drift-1 45s ease-in-out infinite alternate;
+    /* Reduce sparkle count by hiding odd sparkles on mobile */
+    .zen-sparkle:nth-child(odd) {
+      display: none;
     }
-    .blob-2 {
-      animation: drift-2 50s ease-in-out infinite alternate;
+    .zen-sparkle {
+      width: 22px;
+      height: 22px;
     }
   }
 </style>
