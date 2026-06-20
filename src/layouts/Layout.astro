@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import CustomCursor from '../components/CustomCursor';
 import Header from '../components/Header.astro';
+import BackgroundAnimation from '../components/BackgroundAnimation.astro';
 import { getConfig } from '../utils/getConfig';
 import { ClientRouter } from 'astro:transitions';
 
@@ -66,7 +67,10 @@ const { title, description } = config.site_meta;
 			/>
 		</noscript>
 	</head>
-	<body class="bg-japandi-cream text-japandi-charcoal font-sans antialiased selection:bg-japandi-clay selection:text-japandi-charcoal min-h-screen flex flex-col">
+	<body class="bg-japandi-cream text-japandi-charcoal font-sans antialiased selection:bg-japandi-clay selection:text-japandi-charcoal min-h-screen flex flex-col relative z-0">
+		<!-- Soothing Background UI Animation -->
+		<BackgroundAnimation />
+
 		<!-- Custom Interactive Cursor Component -->
 		<CustomCursor client:only="react" />
 		
