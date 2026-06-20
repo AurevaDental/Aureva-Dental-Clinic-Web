@@ -1,0 +1,183 @@
+---
+// BackgroundAnimation.astro - Soothing, premium Japandi/Dental background animation
+---
+
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+  <!-- 1. Calming Morphing Ambient Blobs (Organic & Soothing) -->
+  <div class="ambient-blob blob-1"></div>
+  <div class="ambient-blob blob-2"></div>
+  <div class="ambient-blob blob-3"></div>
+
+  <!-- 2. Soothing Zen Particles / Clean Bubbles (Rising slowly) -->
+  <div class="zen-particles-container">
+    {Array.from({ length: 12 }).map((_, i) => {
+      // Generate varying properties for a natural organic feel
+      const left = `${5 + (i * 8.5) + (Math.sin(i) * 3)}%`;
+      const size = `${3 + (i % 3) * 2}px`;
+      const delay = `${(i * 1.5) % 15}s`;
+      const duration = `${15 + (i % 4) * 4}s`;
+      const opacity = 0.08 + (i % 3) * 0.05;
+      return (
+        <div 
+          class="zen-particle" 
+          style={`left: ${left}; width: ${size}; height: ${size}; animation-delay: ${delay}; animation-duration: ${duration}; --max-opacity: ${opacity};`}
+        />
+      );
+    })}
+  </div>
+</div>
+
+<style>
+  /* Base blob style with heavy hardware-accelerated blur */
+  .ambient-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    will-change: transform;
+    transition: opacity 0.5s ease;
+  }
+
+  /* Dark mode support - reduce opacity/blend mode for dark backgrounds */
+  :global(.dark) .ambient-blob {
+    mix-blend-mode: screen;
+    opacity: 0.04;
+  }
+
+  /* Blob 1: Calming Moss Green */
+  .blob-1 {
+    top: -10%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, var(--color-accent-moss) 0%, transparent 70%);
+    animation: drift-1 30s ease-in-out infinite alternate;
+  }
+
+  /* Blob 2: Warm Earth Clay */
+  .blob-2 {
+    bottom: -15%;
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, var(--color-accent-earth) 0%, transparent 70%);
+    animation: drift-2 35s ease-in-out infinite alternate;
+  }
+
+  /* Blob 3: Soft Sand */
+  .blob-3 {
+    top: 40%;
+    left: 60%;
+    width: 45vw;
+    height: 45vw;
+    background: radial-gradient(circle, var(--color-bg-secondary) 0%, transparent 70%);
+    animation: drift-3 25s ease-in-out infinite alternate;
+  }
+
+  /* Zen Particle Container */
+  .zen-particles-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Pure CSS Rising Zen Particle */
+  .zen-particle {
+    position: absolute;
+    bottom: -20px;
+    border-radius: 50%;
+    background-color: var(--color-accent-moss);
+    box-shadow: 0 0 6px var(--color-accent-moss);
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: float-up linear infinite;
+  }
+
+  :global(.dark) .zen-particle {
+    background-color: var(--color-text-primary);
+    box-shadow: 0 0 6px var(--color-text-primary);
+  }
+
+  /* Keyframes for Morphing Blobs */
+  @keyframes drift-1 {
+    0% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    50% {
+      transform: translate(10vw, 8vh) scale(1.15) rotate(120deg);
+    }
+    100% {
+      transform: translate(-5vw, 15vh) scale(0.9) rotate(240deg);
+    }
+  }
+
+  @keyframes drift-2 {
+    0% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    50% {
+      transform: translate(-8vw, -12vh) scale(0.9) rotate(-120deg);
+    }
+    100% {
+      transform: translate(5vw, -5vh) scale(1.1) rotate(-240deg);
+    }
+  }
+
+  @keyframes drift-3 {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-12vw, 10vh) scale(1.1);
+    }
+    100% {
+      transform: translate(8vw, -8vh) scale(0.9);
+    }
+  }
+
+  /* Keyframe for rising particles with a soothing sway */
+  @keyframes float-up {
+    0% {
+      transform: translateY(0) translateX(0) scale(0.8);
+      opacity: 0;
+    }
+    10% {
+      opacity: var(--max-opacity);
+    }
+    90% {
+      opacity: var(--max-opacity);
+    }
+    100% {
+      transform: translateY(-110vh) translateX(calc(sin(var(--max-opacity) * 10) * 40px)) scale(1.2);
+      opacity: 0;
+    }
+  }
+
+  /* Mobile Compatibility: Optimize animations to minimize CPU/GPU load */
+  @media (max-width: 768px) {
+    .ambient-blob {
+      filter: blur(80px); /* Lower blur radius is much faster to render on mobile GPUs */
+      opacity: 0.12;
+    }
+    :global(.dark) .ambient-blob {
+      opacity: 0.03;
+    }
+    .blob-3 {
+      display: none; /* Remove 3rd blob to reduce draw layers */
+    }
+    /* Reduce number of rising particles on mobile to improve performance */
+    .zen-particle:nth-child(even) {
+      display: none;
+    }
+    /* Slower, gentler movements on mobile */
+    .blob-1 {
+      animation: drift-1 45s ease-in-out infinite alternate;
+    }
+    .blob-2 {
+      animation: drift-2 50s ease-in-out infinite alternate;
+    }
+  }
+</style>
