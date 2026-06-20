@@ -1,0 +1,82 @@
+---
+// BackgroundAnimation.astro - Soothing Sparkles (Dental Theme)
+---
+
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-[0]" aria-hidden="true">
+  
+  <!-- 1. Gentle Sparkles (Cleanliness/Dental theme) -->
+  <div class="sparkle-container">
+    {Array.from({ length: 12 }).map((_, i) => {
+      // Adjusted positioning for more sparkles across the screen
+      const top = `${5 + (i * 8) + (Math.sin(i) * 15)}%`;
+      const left = `${5 + ((i * 23) % 90)}%`;
+      const delay = `${i * 1.2}s`;
+      const duration = `${5 + (i % 4) * 2}s`;
+      const scale = 0.4 + (i % 4) * 0.2; // Small and varied sparkles
+      return (
+        <svg 
+          class="gentle-sparkle" 
+          style={`top: ${top}; left: ${left}; transform: scale(${scale}); animation-delay: ${delay}; animation-duration: ${duration};`}
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="1.2" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+        >
+          <path d="M12 3v18M3 12h18" />
+          <path d="M8 8l8 8M8 16l8-8" opacity="0.5" stroke-dasharray="1 1" />
+        </svg>
+      );
+    })}
+  </div>
+</div>
+
+<style>
+  /* Base Container */
+  .sparkle-container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Gentle Sparkles */
+  .gentle-sparkle {
+    position: absolute;
+    width: 20px; /* Small base size */
+    height: 20px;
+    color: var(--color-accent-moss);
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: sparkle-fade ease-in-out infinite;
+  }
+
+  :global(.dark) .gentle-sparkle {
+    color: var(--color-accent-earth);
+  }
+
+  /* Keyframe Animations */
+  @keyframes sparkle-fade {
+    0%, 100% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.6);
+    }
+    50% {
+      opacity: 0.3; /* Very subtle visibility flash */
+      transform: rotate(45deg) scale(1.1);
+      filter: drop-shadow(0 0 3px currentColor);
+    }
+  }
+
+  /* Mobile Optimization */
+  @media (max-width: 768px) {
+    .gentle-sparkle:nth-child(odd) {
+      display: none;
+    }
+    .gentle-sparkle {
+      width: 16px;
+      height: 16px;
+    }
+  }
+</style>
