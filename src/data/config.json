@@ -29,6 +29,28 @@
     "cta_text": "Begin Your Journey",
     "video_url": "https://assets.mixkit.co/videos/preview/mixkit-modern-dental-office-interior-41984-large.mp4"
   },
+  "stats_section": [
+    {
+      "label": "Patients Treated",
+      "value": 15000,
+      "suffix": "+"
+    },
+    {
+      "label": "Years of Experience",
+      "value": 20,
+      "suffix": "+"
+    },
+    {
+      "label": "Expert Dentists",
+      "value": 12,
+      "suffix": ""
+    },
+    {
+      "label": "Awards Won",
+      "value": 25,
+      "suffix": "+"
+    }
+  ],
   "services_section": {
     "title": "Holistic Services",
     "subtitle": "Mindful treatments tailored to your body's natural balance.",
@@ -38,23 +60,86 @@
         "title": "Holistic Prevention",
         "description": "Biological dental cleanings, biomimetic sealants, and gentle diagnostics centered on preserving your natural tooth structure.",
         "duration": "60 mins",
-        "price": "From $150"
+        "price": "From $150",
+        "image_url": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=600&h=400"
       },
       {
         "id": "cosmetic",
         "title": "Minimally Invasive Esthetics",
         "description": "Artisanal porcelain veneers, biological whitening, and composite bonding that enhance your unique, natural smile.",
         "duration": "90 mins",
-        "price": "Custom Pricing"
+        "price": "Custom Pricing",
+        "image_url": "https://images.unsplash.com/photo-1598256989800-fea5ce5146f2?auto=format&fit=crop&q=80&w=600&h=400"
       },
       {
         "id": "restorative",
         "title": "Restorative Harmony",
         "description": "Metal-free zirconia implants, biological crowns, and ceramic restorations designed to integrate seamlessly with your body.",
         "duration": "120 mins",
-        "price": "From $850"
+        "price": "From $850",
+        "image_url": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600&h=400"
       }
     ]
+  },
+  "specialized_services_section": {
+    "title": "Specialized Expertise",
+    "subtitle": "Advanced treatments for complex dental needs.",
+    "services_list": [
+      {
+        "id": "smile-design",
+        "title": "Digital Smile Design",
+        "description": "Comprehensive smile makeover using 3D scanning and facial harmony analysis to craft your perfect smile.",
+        "image_url": "https://images.unsplash.com/photo-1581594549595-35f6edc7b762?auto=format&fit=crop&q=80&w=600&h=400"
+      },
+      {
+        "id": "invisible-aligners",
+        "title": "Invisible Aligners",
+        "description": "Discreet, comfortable orthodontic treatment using clear aligners to gently guide your teeth into alignment.",
+        "image_url": "https://images.unsplash.com/photo-1580665516709-6f17e0b51ab6?auto=format&fit=crop&q=80&w=600&h=400"
+      },
+      {
+        "id": "laser-dentistry",
+        "title": "Laser Dentistry",
+        "description": "Minimally invasive soft and hard tissue treatments utilizing advanced laser technology for faster healing.",
+        "image_url": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600&h=400"
+      }
+    ]
+  },
+  "why_us_section": {
+    "title": "Why Choose Aureva",
+    "subtitle": "Our commitment to your peace of mind and overall well-being.",
+    "reasons": [
+      {
+        "title": "Calming Environment",
+        "description": "Our clinic is designed to soothe the senses, reducing anxiety and promoting relaxation.",
+        "icon": "leaf"
+      },
+      {
+        "title": "Holistic Approach",
+        "description": "We treat the whole person, recognizing the profound connection between oral health and systemic wellness.",
+        "icon": "heart"
+      },
+      {
+        "title": "Advanced Technology",
+        "description": "We utilize state-of-the-art equipment for precise diagnostics and minimally invasive treatments.",
+        "icon": "shield"
+      },
+      {
+        "title": "Expert Practitioners",
+        "description": "Our team of specialists brings years of advanced training and artistic sensibility to every procedure.",
+        "icon": "star"
+      }
+    ]
+  },
+  "gallery_slider": [
+    "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1200&h=600",
+    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1200&h=600",
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200&h=600"
+  ],
+  "virtual_tour": {
+    "title": "Step Inside Our Sanctuary",
+    "subtitle": "Take a 360° virtual tour of our Japandi-inspired clinic.",
+    "embed_url": "https://www.google.com/maps/embed?pb=!4v1690000000000!6m8!1m7!1sCAoSLEFGMVFpcE80b3F0TTRfU1M1RnQxZVZXZG1IeXh6Wnp1cTRFckp1TWh4NUpM!2m2!1d47.6062!2d-122.3321!3f320!4f10!5f0.7820865974627469"
   },
   "doctors_section": {
     "title": "Our Artisans",
@@ -115,5 +200,22 @@
         "rating": 5
       }
     ]
-  }
+  },
+  "social_media": [
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/aurevadental",
+      "icon": "instagram"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://facebook.com/aurevadental",
+      "icon": "facebook"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/aurevadental",
+      "icon": "twitter"
+    }
+  ]
 }
