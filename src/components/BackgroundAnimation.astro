@@ -1,38 +1,21 @@
 ---
-// BackgroundAnimation.astro - Soothing Komorebi (Dappled Sunlight) & Twinkling Zen Sparkles
+// BackgroundAnimation.astro - Soothing Sparkles (Dental Theme)
 ---
 
-<div class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
-  <!-- 1. Dappled Sunlight (Komorebi Shadow / Light) -->
-  <div class="komorebi-container">
-    <div class="sun-beam"></div>
-    <svg class="dappled-shadow" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <defs>
-        <filter id="soft-blur">
-          <feGaussianBlur stdDeviation="8" />
-        </filter>
-      </defs>
-      <!-- Leaf shadow paths -->
-      <g filter="url(#soft-blur)" class="shadow-group">
-        <path d="M-10,-10 C15,-5 20,30 5,45 C-5,55 -25,45 -25,20 Z" fill="var(--color-accent-moss)" opacity="0.07"></path>
-        <path d="M90,-20 C110,0 120,35 100,50 C80,65 65,45 70,15 Z" fill="var(--color-accent-earth)" opacity="0.06"></path>
-        <path d="M30,80 C50,75 75,90 70,110 C60,125 35,120 40,95 Z" fill="var(--color-accent-moss)" opacity="0.05"></path>
-      </g>
-    </svg>
-  </div>
-
-  <!-- 2. Twinkling Zen Sparkle Stars (Thin line-art stars) -->
-  <div class="twinkle-container">
-    {Array.from({ length: 8 }).map((_, i) => {
-      // Set distinct positions, animation delays, and rotation directions
-      const top = `${10 + (i * 12) + (Math.sin(i) * 5)}%`;
-      const left = `${10 + ((i * 13) % 80)}%`;
-      const scale = 0.6 + (i % 3) * 0.25;
-      const delay = `${i * 2.2}s`;
-      const duration = `${8 + (i % 3) * 4}s`;
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-[0]" aria-hidden="true">
+  
+  <!-- 1. Gentle Sparkles (Cleanliness/Dental theme) -->
+  <div class="sparkle-container">
+    {Array.from({ length: 12 }).map((_, i) => {
+      // Adjusted positioning for more sparkles across the screen
+      const top = `${5 + (i * 8) + (Math.sin(i) * 15)}%`;
+      const left = `${5 + ((i * 23) % 90)}%`;
+      const delay = `${i * 1.2}s`;
+      const duration = `${5 + (i % 4) * 2}s`;
+      const scale = 0.4 + (i % 4) * 0.2; // Small and varied sparkles
       return (
         <svg 
-          class="zen-sparkle" 
+          class="gentle-sparkle" 
           style={`top: ${top}; left: ${left}; transform: scale(${scale}); animation-delay: ${delay}; animation-duration: ${duration};`}
           viewBox="0 0 24 24" 
           fill="none" 
@@ -42,7 +25,7 @@
           stroke-linejoin="round"
         >
           <path d="M12 3v18M3 12h18" />
-          <path d="M8 8l8 8M8 16l8-8" opacity="0.4" stroke-dasharray="1 1" />
+          <path d="M8 8l8 8M8 16l8-8" opacity="0.5" stroke-dasharray="1 1" />
         </svg>
       );
     })}
@@ -50,130 +33,50 @@
 </div>
 
 <style>
-  /* Komorebi Container */
-  .komorebi-container {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-
-  /* Shifting subtle sunlight rays */
-  .sun-beam {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(
-      ellipse at 30% 20%,
-      rgba(245, 242, 235, 0.4) 0%,
-      rgba(234, 228, 217, 0.15) 40%,
-      transparent 70%
-    );
-    animation: sunlight-shift 40s ease-in-out infinite alternate;
-    mix-blend-mode: overlay;
-  }
-
-  :global(.dark) .sun-beam {
-    background: radial-gradient(
-      ellipse at 30% 20%,
-      rgba(125, 144, 130, 0.08) 0%,
-      rgba(36, 40, 37, 0.2) 50%,
-      transparent 80%
-    );
-  }
-
-  /* Leaf shadow animation overlay */
-  .dappled-shadow {
+  /* Base Container */
+  .sparkle-container {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
   }
 
-  .shadow-group {
-    transform-origin: 50% 50%;
-    animation: shadow-drift 60s ease-in-out infinite alternate;
-  }
-
-  /* Twinkling Zen Sparkles */
-  .twinkle-container {
+  /* Gentle Sparkles */
+  .gentle-sparkle {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-  }
-
-  .zen-sparkle {
-    position: absolute;
-    width: 28px;
-    height: 28px;
+    width: 20px; /* Small base size */
+    height: 20px;
     color: var(--color-accent-moss);
     opacity: 0;
     will-change: transform, opacity;
-    animation: twinkle-pulse ease-in-out infinite;
+    animation: sparkle-fade ease-in-out infinite;
   }
 
-  :global(.dark) .zen-sparkle {
+  :global(.dark) .gentle-sparkle {
     color: var(--color-accent-earth);
   }
 
   /* Keyframe Animations */
-  @keyframes sunlight-shift {
-    0% {
-      transform: translate(0, 0) rotate(0deg);
-    }
-    100% {
-      transform: translate(-5vw, -5vh) rotate(5deg);
-    }
-  }
-
-  @keyframes shadow-drift {
-    0% {
-      transform: scale(1) rotate(0deg) translate(0, 0);
-    }
-    50% {
-      transform: scale(1.08) rotate(4deg) translate(2vw, 1vh);
-    }
-    100% {
-      transform: scale(0.95) rotate(-3deg) translate(-1vw, -2vh);
-    }
-  }
-
-  @keyframes twinkle-pulse {
+  @keyframes sparkle-fade {
     0%, 100% {
-      opacity: 0.04;
-      transform: rotate(0deg) scale(0.8);
+      opacity: 0;
+      transform: rotate(0deg) scale(0.6);
     }
     50% {
-      opacity: 0.35;
-      transform: rotate(45deg) scale(1.15);
-      filter: drop-shadow(0 0 6px currentColor);
+      opacity: 0.3; /* Very subtle visibility flash */
+      transform: rotate(45deg) scale(1.1);
+      filter: drop-shadow(0 0 3px currentColor);
     }
   }
 
-  /* Mobile Compatibility & Performance Optimization */
+  /* Mobile Optimization */
   @media (max-width: 768px) {
-    .sun-beam {
-      animation: sunlight-shift 60s ease-in-out infinite alternate; /* Slower and cheaper to compute */
-    }
-    .shadow-group {
-      animation: shadow-drift 90s ease-in-out infinite alternate;
-    }
-    /* Hide some leaf paths to reduce overdraw on lower-end mobile GPUs */
-    .shadow-group path:nth-child(3) {
+    .gentle-sparkle:nth-child(odd) {
       display: none;
     }
-    /* Reduce sparkle count by hiding odd sparkles on mobile */
-    .zen-sparkle:nth-child(odd) {
-      display: none;
-    }
-    .zen-sparkle {
-      width: 22px;
-      height: 22px;
+    .gentle-sparkle {
+      width: 16px;
+      height: 16px;
     }
   }
 </style>
