@@ -3,16 +3,19 @@ import '../styles/global.css';
 import CustomCursor from '../components/CustomCursor';
 import Header from '../components/Header.astro';
 import { getConfig } from '../utils/getConfig';
+import { ClientRouter } from 'astro:transitions';
 
 const config = getConfig();
 const { title, description } = config.site_meta;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="custom-cursor-active">
 	<head>
+		<ClientRouter />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		
