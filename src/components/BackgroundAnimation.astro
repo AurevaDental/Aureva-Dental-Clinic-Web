@@ -19,7 +19,8 @@
       const radiusX = (i % 3) * 4 + Math.random() * 2; 
       const radiusY = (i % 4) * 4 + Math.random() * 4; 
       
-      const top = `calc(50% + ${Math.sin(angle) * radiusY}%)`;
+      // Shifted the vertical center up to 40% so sparkles are on the upper section of the tooth
+      const top = `calc(40% + ${Math.sin(angle) * radiusY}%)`;
       const left = `calc(50% + ${Math.cos(angle) * radiusX}%)`;
       const delay = `${i * 0.4}s`;
       const duration = `${4 + (i % 3) * 1.5}s`;
@@ -57,14 +58,17 @@
     position: absolute;
     width: 20px; /* Small base size */
     height: 20px;
-    color: var(--color-accent-moss);
+    color: #FFFFFF; /* Forced white sparkles */
     opacity: 0;
+    --sparkle-opacity: 0.95; /* Super bright for light theme */
+    --sparkle-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2)); /* Slight dark shadow so white pops on light bg */
     will-change: transform, opacity;
     animation: sparkle-fade ease-in-out infinite;
   }
 
   :global(.dark) .gentle-sparkle {
-    color: var(--color-accent-earth);
+    --sparkle-opacity: 0.5; /* Dimmer for dark theme */
+    --sparkle-filter: drop-shadow(0 0 3px currentColor); /* Bright white glow on dark bg */
   }
 
   /* Keyframe Animations */
@@ -74,9 +78,9 @@
       transform: translate(-50%, -50%) rotate(0deg) scale(calc(var(--base-scale, 1) * 0.6));
     }
     50% {
-      opacity: 0.4; /* Slightly more visible */
+      opacity: var(--sparkle-opacity);
       transform: translate(-50%, -50%) rotate(45deg) scale(calc(var(--base-scale, 1) * 1.1));
-      filter: drop-shadow(0 0 3px currentColor);
+      filter: var(--sparkle-filter);
     }
   }
 
