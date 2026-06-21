@@ -4,19 +4,30 @@
 
 <div class="fixed inset-0 pointer-events-none overflow-hidden z-[0]" aria-hidden="true">
   
+  <!-- Tooth Background Image -->
+  <div class="absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 z-[-1]">
+    <!-- Displaying the exact original image without color alteration, but using a mask to fade the square edges into a soft aura -->
+    <img src="/tooth-bg.png" alt="Tooth Background" class="w-full h-full object-cover sm:object-contain sm:max-h-[90%] opacity-[0.23] dark:opacity-[0.20] transition-all duration-700" style="-webkit-mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%); mask-image: radial-gradient(ellipse at center, black 35%, transparent 75%);" />
+  </div>
+
   <!-- 1. Gentle Sparkles (Cleanliness/Dental theme) -->
   <div class="sparkle-container">
-    {Array.from({ length: 12 }).map((_, i) => {
-      // Adjusted positioning for more sparkles across the screen
-      const top = `${5 + (i * 8) + (Math.sin(i) * 15)}%`;
-      const left = `${5 + ((i * 23) % 90)}%`;
-      const delay = `${i * 1.2}s`;
-      const duration = `${5 + (i % 4) * 2}s`;
-      const scale = 0.4 + (i % 4) * 0.2; // Small and varied sparkles
+    {Array.from({ length: 18 }).map((_, i) => {
+      // Position sparkles directly ON the center tooth
+      const angle = (i / 18) * Math.PI * 2;
+      // Tighter distribution: 0-10% horizontally, 0-18% vertically from center
+      const radiusX = (i % 3) * 4 + Math.random() * 2; 
+      const radiusY = (i % 4) * 4 + Math.random() * 4; 
+      
+      const top = `calc(50% + ${Math.sin(angle) * radiusY}%)`;
+      const left = `calc(50% + ${Math.cos(angle) * radiusX}%)`;
+      const delay = `${i * 0.4}s`;
+      const duration = `${4 + (i % 3) * 1.5}s`;
+      const scale = 0.6 + (i % 4) * 0.2; // Varied sizes
       return (
         <svg 
           class="gentle-sparkle" 
-          style={`top: ${top}; left: ${left}; transform: scale(${scale}); animation-delay: ${delay}; animation-duration: ${duration};`}
+          style={`top: ${top}; left: ${left}; --base-scale: ${scale}; animation-delay: ${delay}; animation-duration: ${duration};`}
           viewBox="0 0 24 24" 
           fill="none" 
           stroke="currentColor" 
@@ -60,11 +71,11 @@
   @keyframes sparkle-fade {
     0%, 100% {
       opacity: 0;
-      transform: rotate(0deg) scale(0.6);
+      transform: translate(-50%, -50%) rotate(0deg) scale(calc(var(--base-scale, 1) * 0.6));
     }
     50% {
-      opacity: 0.3; /* Very subtle visibility flash */
-      transform: rotate(45deg) scale(1.1);
+      opacity: 0.4; /* Slightly more visible */
+      transform: translate(-50%, -50%) rotate(45deg) scale(calc(var(--base-scale, 1) * 1.1));
       filter: drop-shadow(0 0 3px currentColor);
     }
   }
