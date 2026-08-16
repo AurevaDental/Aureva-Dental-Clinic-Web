@@ -14,7 +14,7 @@ import { getConfig } from '../utils/getConfig';
 export const prerender = true;
 
 const config = getConfig();
-const { social_media } = config;
+const { social_media, show_stats_section, show_gallery_slider } = config;
 
 // Simple icon mapper for social media
 const socialIcons = {
@@ -29,7 +29,7 @@ const socialIcons = {
 	<Hero />
 
   <!-- Stats Counter Section -->
-  <StatsCounter />
+  {show_stats_section !== false && <StatsCounter />}
 
 	<!-- Services Grid -->
 	<Services />
@@ -41,7 +41,7 @@ const socialIcons = {
   <WhyUs />
 
   <!-- Image Slider / Gallery -->
-  <ImageSlider />
+  {show_gallery_slider !== false && <ImageSlider />}
 
 	<!-- Doctors Horizontal Scroll Gallery -->
 	<DoctorsGallery />

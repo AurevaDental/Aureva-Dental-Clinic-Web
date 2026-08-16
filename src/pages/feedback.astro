@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { decryptReviews, encryptReviews } from '../utils/crypto';
 
 export const prerender = false;
 
@@ -27,31 +28,26 @@ if (Astro.request.method === 'POST') {
     } else if (isNaN(ratingInt) || ratingInt < 1 || ratingInt > 5) {
       error = 'Invalid rating value.';
     } else {
-      // Resolve path to config.json
-      // In Astro, build files can run from dist or dev environment, path.resolve solves it relative to cwd
-      const configPath = path.resolve('./src/data/config.json');
+      // Resolve path to review.json
+      const reviewPath = path.resolve('./src/data/review.json');
       
-      // Read current config
-      const rawData = await fs.readFile(configPath, 'utf-8');
-      const config = JSON.parse(rawData);
+      // Read current reviews
+      const rawData = await fs.readFile(reviewPath, 'utf-8');
+      const encryptedPayload = JSON.parse(rawData);
+      
+      const reviews = decryptReviews(encryptedPayload);
 
-      // Append new testimonial
-      if (!config.social_proof) {
-        config.social_proof = { title: "Serene Experiences", subtitle: "", testimonials: [] };
-      }
-      if (!config.social_proof.testimonials) {
-        config.social_proof.testimonials = [];
-      }
-
-      config.social_proof.testimonials.push({
+      reviews.push({
         name: formName,
         role: formRole,
         text: formText,
         rating: ratingInt
       });
 
-      // Write back to config.json
-      await fs.writeFile(configPath, JSON.stringify(config, null, 2), 'utf-8');
+      const newEncryptedPayload = encryptReviews(reviews);
+
+      // Write back to review.json
+      await fs.writeFile(reviewPath, JSON.stringify(newEncryptedPayload, null, 2), 'utf-8');
       
       success = true;
     }
@@ -61,7 +57,7 @@ if (Astro.request.method === 'POST') {
 }
 ---
 
-<Layout>
+<Layout hideHeader={success}>
   <div class="min-h-[85vh] flex items-center justify-center px-6 py-16 lg:px-24">
     <div class="w-full max-w-xl bg-japandi-sand/35 border border-japandi-clay/40 rounded-[2.5rem] p-8 md:p-12 hover:shadow-xl hover:shadow-japandi-charcoal/5 transition-all duration-500 animate-slow-fade">
       
@@ -76,7 +72,7 @@ if (Astro.request.method === 'POST') {
           
           <h2 class="text-3xl font-serif text-japandi-charcoal font-medium">Thank You</h2>
           <p class="text-sm text-japandi-earth font-light max-w-sm mx-auto leading-relaxed">
-            Your serene experience has been successfully recorded. It has been added to our testimonial database and will show on the homepage.
+            feedback submitted successfully!
           </p>
           
           <div class="pt-6">
@@ -111,7 +107,7 @@ if (Astro.request.method === 'POST') {
             </div>
           )}
 
-          <form method="POST" class="space-y-6">
+          <form method="POST" action="/feedback" data-astro-reload class="space-y-6">
             <!-- Name Input -->
             <div class="flex flex-col space-y-2">
               <label for="name" class="text-xs font-medium uppercase tracking-widest text-japandi-earth">Full Name</label>

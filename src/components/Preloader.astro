@@ -1,0 +1,41 @@
+---
+---
+
+<div id="preloader" class="fixed inset-0 z-[100] bg-japandi-cream flex items-center justify-center transition-opacity duration-1000 ease-in-out opacity-100">
+  <img 
+    src="/logo.png" 
+    alt="Aureva Dental Logo" 
+    class="h-48 md:h-56 w-auto object-contain animate-pulse drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] contrast-125 dark:invert dark:brightness-125 dark:hue-rotate-180" 
+  />
+</div>
+
+<script>
+  // Function to hide the preloader
+  function hidePreloader() {
+    const preloader = document.getElementById('preloader');
+    if (preloader && preloader.style.display !== 'none') {
+      setTimeout(() => {
+        preloader.classList.remove('opacity-100');
+        preloader.classList.add('opacity-0');
+        
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 1000); // Wait for transition to finish
+      }, 5000); // 5-second delay before fading out
+    }
+  }
+
+  // Handle normal page load
+  window.addEventListener('load', hidePreloader);
+
+  // Fallback in case load event already fired or takes too long
+  setTimeout(hidePreloader, 3000);
+
+  // Hide instantly on Astro view transitions so it doesn't replay
+  document.addEventListener('astro:after-swap', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.display = 'none';
+    }
+  });
+</script>

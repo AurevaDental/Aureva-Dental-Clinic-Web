@@ -91,4 +91,6 @@ export interface AppConfig {
   doctors_section: DoctorsSection;
   locations_section: LocationsSection;
   social_proof: SocialProof;
+  show_stats_section?: boolean;
+  [key: string]: any;
 }

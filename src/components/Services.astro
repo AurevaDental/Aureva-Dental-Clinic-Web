@@ -2,7 +2,7 @@
 import { getConfig } from '../utils/getConfig';
 
 const config = getConfig();
-const { services_section } = config;
+const { services_section, show_service_images } = config;
 ---
 
 <section id="services" class="py-24 px-6 lg:px-24 bg-transparent border-t border-japandi-clay/40 relative">
@@ -27,7 +27,7 @@ const { services_section } = config;
           class="bg-japandi-sand/55 hover:bg-japandi-sand border border-japandi-clay/50 rounded-[2rem] overflow-hidden flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-japandi-charcoal/5 animate-slow-fade"
           style={`animation-delay: ${index * 0.15}s;`}
         >
-          {service.image_url && (
+          {show_service_images !== false && service.image_url && (
             <div class="w-full h-48 overflow-hidden">
               <img src={service.image_url} alt={service.title} class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
             </div>
@@ -48,11 +48,11 @@ const { services_section } = config;
 
             <div class="pt-6 border-t border-japandi-clay/40 flex justify-between items-center text-xs mt-auto">
               <div>
-                <p class="text-[10px] text-japandi-earth uppercase tracking-wider mb-0.5">Session Time</p>
-                <p class="font-medium text-japandi-charcoal">{service.duration}</p>
+                <span class="inline-block px-2 py-1 bg-japandi-clay/20 text-[9px] font-semibold text-japandi-moss uppercase tracking-widest rounded">
+                  {service.category}
+                </span>
               </div>
               <div class="text-right">
-                <p class="text-[10px] text-japandi-earth uppercase tracking-wider mb-0.5">Investment</p>
                 <p class="font-semibold text-japandi-moss text-sm">{service.price}</p>
               </div>
             </div>

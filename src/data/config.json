@@ -29,6 +29,12 @@
     "cta_text": "Begin Your Journey",
     "video_url": "https://assets.mixkit.co/videos/preview/mixkit-modern-dental-office-interior-41984-large.mp4"
   },
+  "show_stats_section": false,
+  "show_service_images": false,
+  "show_specialized_images": false,
+  "show_gallery_slider": false,
+  "show_doctor_images": false,
+  "virtual_tour_coming_soon": true,
   "stats_section": [
     {
       "label": "Patients Treated",
@@ -56,28 +62,39 @@
     "subtitle": "Mindful treatments tailored to your body's natural balance.",
     "services_list": [
       {
-        "id": "preventive",
-        "title": "Holistic Prevention",
-        "description": "Biological dental cleanings, biomimetic sealants, and gentle diagnostics centered on preserving your natural tooth structure.",
-        "duration": "60 mins",
-        "price": "From $150",
-        "image_url": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=600&h=400"
+        "id": "rct",
+        "title": "Root Canal Treatment",
+        "description": "Gentle, pain-free RCT using advanced rotary endodontics - save your natural tooth and eliminate infection completely.",
+        "category": "Restorative",
+        "price": "Rs. 4,000 - Rs. 8,000 / tooth"
       },
       {
-        "id": "cosmetic",
-        "title": "Minimally Invasive Esthetics",
-        "description": "Artisanal porcelain veneers, biological whitening, and composite bonding that enhance your unique, natural smile.",
-        "duration": "90 mins",
-        "price": "Custom Pricing",
-        "image_url": "https://images.unsplash.com/photo-1598256989800-fea5ce5146f2?auto=format&fit=crop&q=80&w=600&h=400"
+        "id": "extractions",
+        "title": "Tooth Extractions",
+        "description": "Simple and surgical extractions performed with care and precision, ensuring minimal discomfort and optimal healing.",
+        "category": "Essential",
+        "price": "Rs. 500 - Rs. 3,500 / tooth"
       },
       {
-        "id": "restorative",
-        "title": "Restorative Harmony",
-        "description": "Metal-free zirconia implants, biological crowns, and ceramic restorations designed to integrate seamlessly with your body.",
-        "duration": "120 mins",
-        "price": "From $850",
-        "image_url": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600&h=400"
+        "id": "fillings",
+        "title": "Dental Fillings & Restorations",
+        "description": "Tooth-coloured composite fillings that blend seamlessly - durable, aesthetic and mercury-free for total peace of mind.",
+        "category": "Restorative",
+        "price": "Rs. 1,500 - Rs. 5,000 / tooth"
+      },
+      {
+        "id": "scaling",
+        "title": "Scaling & Polishing",
+        "description": "Deep cleaning to remove plaque, tartar and stains - protecting gums and keeping your smile radiant and fresh.",
+        "category": "Preventive",
+        "price": "Rs. 1,500 - Rs. 3,500"
+      },
+      {
+        "id": "paediatric",
+        "title": "Paediatric Dentistry",
+        "description": "Gentle, child-friendly care in a warm environment - building positive dental experiences for a lifetime of healthy smiles.",
+        "category": "Paediatric",
+        "price": "Rs. 500 - Rs. 5,000"
       }
     ]
   },
@@ -86,48 +103,64 @@
     "subtitle": "Advanced treatments for complex dental needs.",
     "services_list": [
       {
-        "id": "smile-design",
-        "title": "Digital Smile Design",
-        "description": "Comprehensive smile makeover using 3D scanning and facial harmony analysis to craft your perfect smile.",
-        "image_url": "https://images.unsplash.com/photo-1581594549595-35f6edc7b762?auto=format&fit=crop&q=80&w=600&h=400"
+        "id": "smile-designing",
+        "title": "Smile Designing",
+        "description": "A complete aesthetic blueprint combining whitening, contouring, veneers and alignment planning into one holistic transformation.",
+        "category": "Signature",
+        "price": "Rs. 40,000 - Rs. 1,50,000"
       },
       {
-        "id": "invisible-aligners",
-        "title": "Invisible Aligners",
-        "description": "Discreet, comfortable orthodontic treatment using clear aligners to gently guide your teeth into alignment.",
-        "image_url": "https://images.unsplash.com/photo-1580665516709-6f17e0b51ab6?auto=format&fit=crop&q=80&w=600&h=400"
+        "id": "orthodontic",
+        "title": "Orthodontic Consultations",
+        "description": "Expert assessment of bite, crowding and spacing with personalised planning for braces or clear aligners.",
+        "category": "Orthodontic",
+        "price": "Rs. 500 - Rs. 1,500"
       },
       {
-        "id": "laser-dentistry",
-        "title": "Laser Dentistry",
-        "description": "Minimally invasive soft and hard tissue treatments utilizing advanced laser technology for faster healing.",
-        "image_url": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600&h=400"
+        "id": "aesthetic",
+        "title": "Cosmetology-Integrated Dental Care",
+        "description": "Dentistry meets beauty - combining smile design with facial aesthetics for harmonious, confidence-enhancing results.",
+        "category": "Aesthetic",
+        "price": "Rs. 5,000 onwards"
+      },
+      {
+        "id": "specialist",
+        "title": "MDS Specialist Sessions",
+        "description": "MDS-qualified specialists for advanced cases - periodontics, prosthodontics, orthodontics and oral surgery.",
+        "category": "Specialist",
+        "price": "Rs. 1,000 - Rs. 3,000"
       }
     ]
   },
   "why_us_section": {
-    "title": "Why Choose Aureva",
-    "subtitle": "Our commitment to your peace of mind and overall well-being.",
+    "subtitle": "OUR PHILOSOPHY",
+    "title": "Dentistry elevated<br/>into <span class=\"italic text-japandi-moss\">art.</span>",
+    "paragraphs": [
+      "At Aureva Dental, we believe your smile is the first thing the world notices about you - and the last thing you should leave to chance. We've built a studio, not a clinic. A space where precision meets aesthetics, and where every treatment is planned around your face, your goals, and your life.",
+      "Our philosophy is simple: beautiful dentistry begins with listening. We take the time to understand what you truly want, craft a plan unique to you, and walk alongside you every step of the way - with warmth, transparency, and clinical excellence."
+    ],
+    "quote": "\"A smile is the most powerful thing you wear. We make sure yours is perfectly designed.\"",
+    "button_text": "Begin Your Journey",
     "reasons": [
       {
-        "title": "Calming Environment",
-        "description": "Our clinic is designed to soothe the senses, reducing anxiety and promoting relaxation.",
+        "title": "Aesthetic First",
+        "description": "Every case begins with your vision, not a clinical checklist.",
         "icon": "leaf"
       },
       {
-        "title": "Holistic Approach",
-        "description": "We treat the whole person, recognizing the profound connection between oral health and systemic wellness.",
-        "icon": "heart"
-      },
-      {
-        "title": "Advanced Technology",
-        "description": "We utilize state-of-the-art equipment for precise diagnostics and minimally invasive treatments.",
-        "icon": "shield"
-      },
-      {
-        "title": "Expert Practitioners",
-        "description": "Our team of specialists brings years of advanced training and artistic sensibility to every procedure.",
+        "title": "Precision Care",
+        "description": "Advanced techniques and quality materials for lasting results.",
         "icon": "star"
+      },
+      {
+        "title": "Calm Studio",
+        "description": "A warm Japandi space designed to ease dental anxiety.",
+        "icon": "moon"
+      },
+      {
+        "title": "Transparent Pricing",
+        "description": "Full clarity before treatment. No surprise costs, ever.",
+        "icon": "target"
       }
     ]
   },
@@ -168,38 +201,19 @@
     "subtitle": "Find peace in our clinic locations designed with Japandi principles.",
     "locations_list": [
       {
-        "id": "seattle",
-        "name": "Aureva Dental — Seattle",
-        "address": "120 Kyoto Way, Suite 400, Seattle, WA 98101",
-        "google_maps_url": "https://maps.google.com/?q=Kyoto+Way+Seattle+WA",
-        "phone": "(206) 555-0190",
-        "hours": "Mon - Fri: 8:00 AM - 5:00 PM"
+        "id": "bengaluru",
+        "name": "Aureva Dental",
+        "address": "2nd Floor, 11/2B, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043",
+        "google_maps_url": "https://maps.app.goo.gl/sNdjoUAWePyoXd8g9?g_st=iw",
+        "phone": "+91 73497 01002",
+        "email": "aurevadentalclinic@gmail.com",
+        "hours": "Mon - Sun: 10:00 AM - 8:00 PM"
       }
     ]
   },
   "social_proof": {
     "title": "Serene Experiences",
-    "subtitle": "Stories of healing, comfort, and radiant smiles from our patients.",
-    "testimonials": [
-      {
-        "name": "Aria Montgomery",
-        "role": "Creative Director",
-        "text": "The most peaceful dental visit I've ever had. The warm wood textures, gentle background music, and Dr. Takahashi's touch made me feel like I was in a high-end spa, not a dental chair.",
-        "rating": 5
-      },
-      {
-        "name": "Kenji Tanaka",
-        "role": "Architect",
-        "text": "I highly appreciate the Japandi minimalism of the clinic. But more than the gorgeous layout, Dr. Vance's holistic focus and painless biological approach solved my severe dental anxiety.",
-        "rating": 5
-      },
-      {
-        "name": "shuvadip manna",
-        "role": "xyz",
-        "text": "too good",
-        "rating": 5
-      }
-    ]
+    "subtitle": "Stories of healing, comfort, and radiant smiles from our patients."
   },
   "social_media": [
     {
