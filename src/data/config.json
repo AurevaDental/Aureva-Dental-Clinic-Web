@@ -2,7 +2,7 @@
   "site_meta": {
     "title": "Aureva Dental | Serene & Modern Japandi Dental Care",
     "description": "Experience premium, stress-free dental care in a space inspired by Japandi aesthetics. Calm environment, holistic treatments, and expert care.",
-    "whatsapp_number": "12065550190",
+    "whatsapp_number": "917349701002",
     "whatsapp_default_message": "Hello Aureva Dental, I would like to schedule a dental consultation."
   },
   "theme_colors": {
@@ -179,18 +179,18 @@
     "subtitle": "Meet the practitioners who blend clinical excellence with artistic care.",
     "team": [
       {
-        "id": "takahashi",
-        "name": "Dr. Emi Takahashi, DDS",
+        "id": "shweta",
+        "name": "Dr.Shweta Founder",
         "role": "Lead Aesthetic Architect",
-        "qualifications": "Harvard School of Dental Medicine / 12 Years Exp.",
+        "qualifications": "Oxford Dental College / 5 Years Exp.",
         "image_url": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600&h=800",
         "philosophy": "Dentistry is the quiet harmony of biological health and clean visual art."
       },
       {
-        "id": "vance",
-        "name": "Dr. Lukas Vance, DMD",
+        "id": "agniss",
+        "name": "Dr. Agniss Mishra",
         "role": "Holistic Restorative Specialist",
-        "qualifications": "UCSF School of Dentistry / 9 Years Exp.",
+        "qualifications": "Oxford Dental College / 4 Years Exp.",
         "image_url": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600&h=800",
         "philosophy": "Treating the mouth is treating the gateway to the entire body's wellness."
       }
