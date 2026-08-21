@@ -1,8 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import { decryptReviews, encryptReviews } from '../utils/crypto';
+import { supabase } from '../lib/supabase';
 
 export const prerender = false;
 
@@ -23,31 +21,27 @@ if (Astro.request.method === 'POST') {
     
     const ratingInt = parseInt(formRating, 10);
 
-    if (!formName || !formRole || !formText) {
-      error = 'All fields are required. Please fill in all details.';
+    if (!formText) {
+      error = 'Please share your experience.';
     } else if (isNaN(ratingInt) || ratingInt < 1 || ratingInt > 5) {
       error = 'Invalid rating value.';
     } else {
-      // Resolve path to review.json
-      const reviewPath = path.resolve('./src/data/review.json');
-      
-      // Read current reviews
-      const rawData = await fs.readFile(reviewPath, 'utf-8');
-      const encryptedPayload = JSON.parse(rawData);
-      
-      const reviews = decryptReviews(encryptedPayload);
+      const finalName = formName || 'Anonymous';
+      const finalRole = formRole || '';
+      const { error: dbError } = await supabase
+        .from('reviews')
+        .insert([
+          {
+            name: finalName,
+            role: finalRole,
+            text: formText,
+            rating: ratingInt
+          }
+        ]);
 
-      reviews.push({
-        name: formName,
-        role: formRole,
-        text: formText,
-        rating: ratingInt
-      });
-
-      const newEncryptedPayload = encryptReviews(reviews);
-
-      // Write back to review.json
-      await fs.writeFile(reviewPath, JSON.stringify(newEncryptedPayload, null, 2), 'utf-8');
+      if (dbError) {
+        throw new Error(dbError.message);
+      }
       
       success = true;
     }
@@ -110,28 +104,26 @@ if (Astro.request.method === 'POST') {
           <form method="POST" action="/feedback" data-astro-reload class="space-y-6">
             <!-- Name Input -->
             <div class="flex flex-col space-y-2">
-              <label for="name" class="text-xs font-medium uppercase tracking-widest text-japandi-earth">Full Name</label>
+              <label for="name" class="text-xs font-medium uppercase tracking-widest text-japandi-earth">Full Name (Optional)</label>
               <input 
                 type="text" 
                 name="name" 
                 id="name" 
                 value={formName} 
                 placeholder="Aria Montgomery" 
-                required
                 class="w-full bg-japandi-sand/35 hover:bg-japandi-sand/60 focus:bg-japandi-cream dark:focus:bg-japandi-sand/10 border border-japandi-clay/45 rounded-2xl px-4 py-3.5 text-sm text-japandi-charcoal focus:outline-none focus:ring-1 focus:ring-japandi-moss/50 focus:border-japandi-moss/50 transition-all cursor-none"
               />
             </div>
 
             <!-- Role Input -->
             <div class="flex flex-col space-y-2">
-              <label for="role" class="text-xs font-medium uppercase tracking-widest text-japandi-earth">Profession / Role</label>
+              <label for="role" class="text-xs font-medium uppercase tracking-widest text-japandi-earth">Profession / Role (Optional)</label>
               <input 
                 type="text" 
                 name="role" 
                 id="role" 
                 value={formRole} 
                 placeholder="Creative Director" 
-                required
                 class="w-full bg-japandi-sand/35 hover:bg-japandi-sand/60 focus:bg-japandi-cream dark:focus:bg-japandi-sand/10 border border-japandi-clay/45 rounded-2xl px-4 py-3.5 text-sm text-japandi-charcoal focus:outline-none focus:ring-1 focus:ring-japandi-moss/50 focus:border-japandi-moss/50 transition-all cursor-none"
               />
             </div>

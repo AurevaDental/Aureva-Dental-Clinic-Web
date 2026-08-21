@@ -1,16 +1,26 @@
 ---
 import { getConfig } from '../utils/getConfig';
-import encryptedReviews from '../data/review.json';
-import { decryptReviews } from '../utils/crypto';
+import { supabase } from '../lib/supabase';
 
 const config = getConfig();
 const { locations_section, social_proof } = config;
 
 let reviews: any[] = [];
 try {
-  reviews = decryptReviews(encryptedReviews);
+  const { data, error } = await supabase
+    .from('reviews')
+    .select('*')
+    .order('created_at', { ascending: false });
+    
+  if (error) {
+    throw new Error(error.message);
+  }
+  
+  if (data) {
+    reviews = data;
+  }
 } catch (err) {
-  console.error("Failed to decrypt reviews", err);
+  console.error("Failed to fetch reviews", err);
 }
 ---
 
