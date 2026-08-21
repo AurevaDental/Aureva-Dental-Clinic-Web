@@ -7,17 +7,21 @@ const { locations_section, social_proof } = config;
 
 let reviews: any[] = [];
 try {
-  const { data, error } = await supabase
-    .from('reviews')
-    .select('*')
-    .order('created_at', { ascending: false });
+  if (supabase) {
+    const { data, error } = await supabase
+      .from('reviews')
+      .select('*')
+      .order('created_at', { ascending: false });
+      
+    if (error) {
+      throw new Error(error.message);
+    }
     
-  if (error) {
-    throw new Error(error.message);
-  }
-  
-  if (data) {
-    reviews = data;
+    if (data) {
+      reviews = data;
+    }
+  } else {
+    console.warn("Supabase client is not configured. No reviews will be loaded.");
   }
 } catch (err) {
   console.error("Failed to fetch reviews", err);

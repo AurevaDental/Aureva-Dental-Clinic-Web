@@ -26,6 +26,10 @@ if (Astro.request.method === 'POST') {
     } else if (isNaN(ratingInt) || ratingInt < 1 || ratingInt > 5) {
       error = 'Invalid rating value.';
     } else {
+      if (!supabase) {
+        throw new Error('Supabase client is not initialized. Please configure PUBLIC_SUPABASE_URL and PUBLIC_SUPABASE_ANON_KEY in your environment.');
+      }
+      
       const finalName = formName || 'Anonymous';
       const finalRole = formRole || '';
       const { error: dbError } = await supabase

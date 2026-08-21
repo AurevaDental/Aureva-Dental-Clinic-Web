@@ -11,7 +11,7 @@ import ImageSlider from '../components/ImageSlider.astro';
 import LocationsAndReviews from '../components/LocationsAndReviews.astro';
 import { getConfig } from '../utils/getConfig';
 
-export const prerender = true;
+export const prerender = false;
 
 const config = getConfig();
 const { social_media, show_stats_section, show_gallery_slider } = config;
