@@ -12,18 +12,39 @@ export interface HeroSection {
   video_url: string;
 }
 
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  duration: string;
+export interface ServiceItem {
+  name: string;
   price: string;
 }
 
-export interface ServicesSection {
+export interface ServiceCategory {
+  title: string;
+  items: ServiceItem[];
+}
+
+export interface HolisticServicesSection {
   title: string;
   subtitle: string;
-  services_list: Service[];
+  categories: ServiceCategory[];
+}
+
+export interface SpecializedExpertiseSection {
+  title: string;
+  subtitle: string;
+  categories: ServiceCategory[];
+}
+
+export interface MembershipPlan {
+  name: string;
+  price: string;
+  period: string;
+  features: string[];
+}
+
+export interface MembershipSection {
+  title: string;
+  subtitle: string;
+  plans: MembershipPlan[];
 }
 
 export interface TeamMember {
@@ -87,7 +108,9 @@ export interface AppConfig {
   site_meta: SiteMeta;
   theme_colors: ThemeConfig;
   hero_section: HeroSection;
-  services_section: ServicesSection;
+  holistic_services: HolisticServicesSection;
+  specialized_expertise: SpecializedExpertiseSection;
+  membership_section: MembershipSection;
   doctors_section: DoctorsSection;
   locations_section: LocationsSection;
   social_proof: SocialProof;

@@ -57,78 +57,120 @@
       "suffix": "+"
     }
   ],
-  "services_section": {
+  "holistic_services": {
     "title": "Holistic Services",
-    "subtitle": "Mindful treatments tailored to your body's natural balance.",
-    "services_list": [
+    "subtitle": "Standard, preventative, and essential care tailored to your natural balance.",
+    "categories": [
       {
-        "id": "rct",
-        "title": "Root Canal Treatment",
-        "description": "Gentle, pain-free RCT using advanced rotary endodontics - save your natural tooth and eliminate infection completely.",
-        "category": "Restorative",
-        "price": "Rs. 4,000 - Rs. 8,000 / tooth"
+        "title": "General Dentistry",
+        "items": [
+          { "name": "New Patient Consultation (Incl. RVG X-ray)", "price": "Rs. 600" },
+          { "name": "Scaling & Polishing", "price": "Rs. 2,000 - Rs. 5,000" },
+          { "name": "Tooth Filling", "price": "Rs. 1,500 - Rs. 4,000" },
+          { "name": "Tooth Extraction", "price": "Rs. 1,500 - Rs. 7,000" }
+        ]
       },
       {
-        "id": "extractions",
-        "title": "Tooth Extractions",
-        "description": "Simple and surgical extractions performed with care and precision, ensuring minimal discomfort and optimal healing.",
-        "category": "Essential",
-        "price": "Rs. 500 - Rs. 3,500 / tooth"
+        "title": "Root Canal Treatment (RCT)",
+        "items": [
+          { "name": "RCT (Anterior Tooth)", "price": "Rs. 4,000 - Rs. 6,000" },
+          { "name": "RCT (Premolar)", "price": "Rs. 5,000 - Rs. 8,000" },
+          { "name": "RCT (Molar)", "price": "Rs. 6,000 - Rs. 10,000" },
+          { "name": "Re-RCT", "price": "Rs. 8,000 onwards" }
+        ]
       },
       {
-        "id": "fillings",
-        "title": "Dental Fillings & Restorations",
-        "description": "Tooth-coloured composite fillings that blend seamlessly - durable, aesthetic and mercury-free for total peace of mind.",
-        "category": "Restorative",
-        "price": "Rs. 1,500 - Rs. 5,000 / tooth"
-      },
-      {
-        "id": "scaling",
-        "title": "Scaling & Polishing",
-        "description": "Deep cleaning to remove plaque, tartar and stains - protecting gums and keeping your smile radiant and fresh.",
-        "category": "Preventive",
-        "price": "Rs. 1,500 - Rs. 3,500"
-      },
-      {
-        "id": "paediatric",
-        "title": "Paediatric Dentistry",
-        "description": "Gentle, child-friendly care in a warm environment - building positive dental experiences for a lifetime of healthy smiles.",
-        "category": "Paediatric",
-        "price": "Rs. 500 - Rs. 5,000"
+        "title": "Kids Dentistry",
+        "items": [
+          { "name": "Kids Dental Check-up", "price": "Rs. 500" },
+          { "name": "Fluoride Application", "price": "Rs. 800 - Rs. 1,500" },
+          { "name": "Pit and Fissure Sealant", "price": "Rs. 1,500 - Rs. 2,500" }
+        ]
       }
     ]
   },
-  "specialized_services_section": {
+  "specialized_expertise": {
     "title": "Specialized Expertise",
-    "subtitle": "Advanced treatments for complex dental needs.",
-    "services_list": [
+    "subtitle": "Advanced treatments for complex dental, aesthetic, and surgical needs.",
+    "categories": [
       {
-        "id": "smile-designing",
-        "title": "Smile Designing",
-        "description": "A complete aesthetic blueprint combining whitening, contouring, veneers and alignment planning into one holistic transformation.",
-        "category": "Signature",
-        "price": "Rs. 40,000 - Rs. 1,50,000"
+        "title": "Crowns & Bridges",
+        "items": [
+          { "name": "Metal Crown", "price": "Rs. 3,000 - Rs. 5,000" },
+          { "name": "PFM Crown", "price": "Rs. 5,000 - Rs. 8,000" },
+          { "name": "Ceramic Crown", "price": "Rs. 6,000 - Rs. 10,000" },
+          { "name": "Zirconia Crown", "price": "Rs. 10,000 - Rs. 18,000" },
+          { "name": "Bridge (Per Unit)", "price": "Rs. 6,000 onwards" }
+        ]
       },
       {
-        "id": "orthodontic",
-        "title": "Orthodontic Consultations",
-        "description": "Expert assessment of bite, crowding and spacing with personalised planning for braces or clear aligners.",
-        "category": "Orthodontic",
-        "price": "Rs. 500 - Rs. 1,500"
+        "title": "Implants, Aligners & Braces",
+        "items": [
+          { "name": "Dental Implant (Per Implant)", "price": "Rs. 25,000 - Rs. 60,000" },
+          { "name": "Implant with Crown", "price": "Rs. 45,000 - Rs. 80,000" },
+          { "name": "Full Mouth Implants", "price": "Rs. 2,50,000 onwards" },
+          { "name": "Metal Braces", "price": "Rs. 30,000 onwards" },
+          { "name": "Ceramic Braces", "price": "Rs. 45,000 onwards" },
+          { "name": "Clear Aligners", "price": "Rs. 80,000 - Rs. 2,50,000" }
+        ]
       },
       {
-        "id": "aesthetic",
-        "title": "Cosmetology-Integrated Dental Care",
-        "description": "Dentistry meets beauty - combining smile design with facial aesthetics for harmonious, confidence-enhancing results.",
-        "category": "Aesthetic",
-        "price": "Rs. 5,000 onwards"
+        "title": "Smile Design & Cosmetic Dentistry",
+        "items": [
+          { "name": "Smile Consultation", "price": "Rs. 500" },
+          { "name": "Digital Smile Design", "price": "Rs. 3,000 - Rs. 7,000" },
+          { "name": "Teeth Whitening (Advanced)", "price": "Rs. 6,000 - Rs. 15,000" },
+          { "name": "Veneers (Per Tooth)", "price": "Rs. 8,000 - Rs. 25,000" },
+          { "name": "Smile Makeover", "price": "Rs. 80,000 onwards" }
+        ]
       },
       {
-        "id": "specialist",
-        "title": "MDS Specialist Sessions",
-        "description": "MDS-qualified specialists for advanced cases - periodontics, prosthodontics, orthodontics and oral surgery.",
-        "category": "Specialist",
-        "price": "Rs. 1,000 - Rs. 3,000"
+        "title": "Bridal & Groom Smile Packages",
+        "items": [
+          { "name": "Dental Check-up", "price": "Rs. 1,000 - Rs. 1,500" },
+          { "name": "The Express Glow (Whitening + Polish)", "price": "Rs. 12,000 - Rs. 18,000" },
+          { "name": "The Signature Bride / Groom", "price": "Rs. 35,000 - Rs. 55,000" },
+          { "name": "The Luxury Couture Smile", "price": "Rs. 1,20,000 - Rs. 1,80,000" },
+          { "name": "Couple's Wedding Radiance Pass", "price": "Rs. 1,80,000 - Rs. 2,50,000" }
+        ]
+      }
+    ]
+  },
+  "membership_section": {
+    "title": "Aureva Clinic Membership",
+    "subtitle": "Prioritize your oral health all year round with our exclusive annual care plans.",
+    "plans": [
+      {
+        "name": "Aureva Essential (Individual)",
+        "price": "Rs. 7,000",
+        "period": "year",
+        "features": [
+          "Priority booking",
+          "2 Free Consultations",
+          "10% off treatments"
+        ]
+      },
+      {
+        "name": "Aureva Privilege (Family)",
+        "price": "Rs. 18,000",
+        "period": "year",
+        "features": [
+          "Prioritized Family booking",
+          "4 Free Consultations",
+          "15% off treatments",
+          "Bonus: Free Whitening for one member"
+        ]
+      },
+      {
+        "name": "Aureva Royalty (VIP)",
+        "price": "Rs. 35,000",
+        "period": "year",
+        "features": [
+          "VIP Concierge booking",
+          "Unlimited Consultations",
+          "20% off treatments",
+          "Event Dedicated Smile Coach for weddings"
+        ]
       }
     ]
   },

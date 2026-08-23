@@ -2,8 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import StatsCounter from '../components/StatsCounter.astro';
-import Services from '../components/Services.astro';
-import SpecializedServices from '../components/SpecializedServices.astro';
+import HolisticServices from '../components/HolisticServices.astro';
+import SpecializedExpertise from '../components/SpecializedExpertise.astro';
+import Membership from '../components/Membership.astro';
 import WhyUs from '../components/WhyUs.astro';
 import DoctorsGallery from '../components/DoctorsGallery.astro';
 import VirtualTour from '../components/VirtualTour.astro';
@@ -31,11 +32,14 @@ const socialIcons = {
   <!-- Stats Counter Section -->
   {show_stats_section !== false && <StatsCounter />}
 
-	<!-- Services Grid -->
-	<Services />
+	<!-- Holistic Services Grid -->
+	<HolisticServices />
 
-  <!-- Specialized Services Section -->
-  <SpecializedServices />
+  <!-- Specialized Expertise Section -->
+  <SpecializedExpertise />
+
+  <!-- Membership Plans Section -->
+  <Membership />
 
   <!-- Why Choose Us -->
   <WhyUs />
