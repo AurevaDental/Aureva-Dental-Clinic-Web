@@ -9,11 +9,32 @@ import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   hideHeader?: boolean;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogType?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  ogImage?: string;
+  schemaMarkup?: string;
 }
 
-const { hideHeader = false } = Astro.props;
 const config = getConfig();
-const { title, description } = config.site_meta;
+const { 
+  hideHeader = false,
+  title = config.site_meta.title,
+  description = config.site_meta.description,
+  keywords,
+  canonical,
+  ogType = "website",
+  ogTitle = title,
+  ogDescription = description,
+  ogUrl = canonical,
+  ogImage = "https://www.aurevadental.com/assets/og-image.jpg",
+  schemaMarkup
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -43,16 +64,24 @@ const { title, description } = config.site_meta;
 		<!-- SEO Meta Tags -->
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		{keywords && <meta name="keywords" content={keywords} />}
+		{canonical && <link rel="canonical" href={canonical} />}
 		
 		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
+		<meta property="og:type" content={ogType} />
+		<meta property="og:title" content={ogTitle} />
+		<meta property="og:description" content={ogDescription} />
+		{ogUrl && <meta property="og:url" content={ogUrl} />}
+		<meta property="og:site_name" content="Aureva Dental" />
+		{ogImage && <meta property="og:image" content={ogImage} />}
 		
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
+		<meta property="twitter:title" content={ogTitle} />
+		<meta property="twitter:description" content={ogDescription} />
+		{ogImage && <meta property="twitter:image" content={ogImage} />}
+
+		{schemaMarkup && <script type="application/ld+json" set:html={schemaMarkup} />}
 
 		<!-- Asynchronous Google Fonts Loading for zero-render blocking -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
