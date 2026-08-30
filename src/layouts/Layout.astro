@@ -6,6 +6,7 @@ import BackgroundAnimation from '../components/BackgroundAnimation.astro';
 import Preloader from '../components/Preloader.astro';
 import { getConfig } from '../utils/getConfig';
 import { ClientRouter } from 'astro:transitions';
+import MobileBottomBar from '../components/MobileBottomBar.astro';
 
 interface Props {
   hideHeader?: boolean;
@@ -104,7 +105,7 @@ const {
 			/>
 		</noscript>
 	</head>
-	<body class="bg-japandi-cream text-japandi-charcoal font-sans antialiased selection:bg-japandi-clay selection:text-japandi-charcoal min-h-screen flex flex-col relative z-0">
+	<body class="bg-japandi-cream text-japandi-charcoal font-sans antialiased selection:bg-japandi-clay selection:text-japandi-charcoal min-h-screen flex flex-col relative z-0 pb-20 md:pb-0">
 		<!-- Splash Screen / Preloader -->
 		<Preloader />
 
@@ -121,6 +122,9 @@ const {
 		<main class="flex-grow">
 			<slot />
 		</main>
+
+		<!-- Sticky Mobile Bottom Bar -->
+		<MobileBottomBar />
 	</body>
 </html>
 

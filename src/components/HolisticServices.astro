@@ -36,6 +36,13 @@ const { holistic_services } = config;
               {category.title}
             </h3>
           </div>
+
+          <!-- Category Description (Optional) -->
+          {category.description && (
+            <p class="text-xs font-light text-japandi-earth leading-relaxed mb-6 italic">
+              {category.description}
+            </p>
+          )}
           
           <!-- Items List -->
           <ul class="space-y-5 flex-grow">

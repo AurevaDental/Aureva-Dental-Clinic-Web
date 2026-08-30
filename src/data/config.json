@@ -3,7 +3,7 @@
     "title": "Aureva Dental | Serene & Modern Japandi Dental Care",
     "description": "Experience premium, stress-free dental care in a space inspired by Japandi aesthetics. Calm environment, holistic treatments, and expert care.",
     "whatsapp_number": "917349701002",
-    "whatsapp_default_message": "Hello Aureva Dental, I would like to schedule a dental consultation."
+    "whatsapp_default_message": "Hello, I would like to book an appointment at Aureva Dental."
   },
   "theme_colors": {
     "light": {
@@ -25,8 +25,8 @@
   },
   "hero_section": {
     "headline": "Calm Mind. Healthy Smile.",
-    "sub_headline": "Experience dental care re-imagined as a soothing ritual. Minimalist design, warm earth tones, and pain-free treatments for your peace of mind.",
-    "cta_text": "Begin Your Journey",
+    "sub_headline": "A refined dental care experience designed around uncompromising clinical precision, strict safety protocols, and serene patient comfort.",
+    "cta_text": "Reserve Your Visit / Call Desk",
     "video_url": "https://assets.mixkit.co/videos/preview/mixkit-modern-dental-office-interior-41984-large.mp4"
   },
   "show_stats_section": false,
@@ -72,6 +72,7 @@
       },
       {
         "title": "Root Canal Treatment (RCT)",
+        "description": "Specialized Root Canal Treatments focusing on absolute disinfection, micro-precision cleaning, and long-term tooth preservation using multi-sitting specialized clinical protocols and digital imaging.",
         "items": [
           { "name": "RCT (Anterior Tooth)", "price": "Rs. 4,000 - Rs. 6,000" },
           { "name": "RCT (Premolar)", "price": "Rs. 5,000 - Rs. 8,000" },
@@ -245,11 +246,12 @@
       {
         "id": "bengaluru",
         "name": "Aureva Dental",
-        "address": "2nd Floor, 11/2B, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043",
+        "address": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru - 560043",
         "google_maps_url": "https://maps.app.goo.gl/sNdjoUAWePyoXd8g9?g_st=iw",
         "phone": "+91 73497 01002",
         "email": "aurevadentalclinic@gmail.com",
-        "hours": "Mon: 4:00 PM - 9:00 PM | Tue - Sun: 9:30 AM - 9:00 PM"
+        "hours": "Mon: 4:00 PM - 9:00 PM | Tue - Sun: 9:30 AM - 9:00 PM",
+        "parking": "Dedicated 2-wheeler and 4-wheeler parking available for patient convenience."
       }
     ]
   },

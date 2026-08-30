@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import StatsCounter from '../components/StatsCounter.astro';
 import HolisticServices from '../components/HolisticServices.astro';
 import SpecializedExpertise from '../components/SpecializedExpertise.astro';
+import ClinicalTrust from '../components/ClinicalTrust.astro';
 import Membership from '../components/Membership.astro';
 import WhyUs from '../components/WhyUs.astro';
 import DoctorsGallery from '../components/DoctorsGallery.astro';
@@ -28,7 +29,7 @@ const schemaMarkup = JSON.stringify({
   "priceRange": "₹500 - ₹250000",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande",
+    "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
     "addressLocality": "Bengaluru",
     "addressRegion": "KA",
     "postalCode": "560043",
@@ -91,6 +92,9 @@ const socialIcons = {
 
   <!-- Specialized Expertise Section -->
   <SpecializedExpertise />
+
+  <!-- Clinical Hygiene, Safety, & Payments -->
+  <ClinicalTrust />
 
   <!-- Membership Plans Section -->
   <Membership />
