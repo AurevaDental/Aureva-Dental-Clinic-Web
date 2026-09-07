@@ -1,0 +1,388 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getBlogPostBySlug, getAllBlogPosts } from '../../data/blogPosts';
+import { generateBreadcrumbSchema, generateBlogPostSchema } from '../../utils/seoSchemas';
+
+export const prerender = false;
+
+const { slug } = Astro.params;
+const post = getBlogPostBySlug(slug as string);
+
+if (!post) {
+  return Astro.redirect('/blog');
+}
+
+const canonicalUrl = `https://aurevadental.com/blog/${post.slug}`;
+const phoneCallUrl = "tel:+917349701002";
+const whatsappUrl = "https://wa.me/917349701002?text=Hi%20Aureva%20Dental,%20I%20would%20like%20to%20book%20a%20clear%20aligners%20consultation.";
+
+const breadcrumbs = [
+  { name: "Home", url: "https://aurevadental.com/" },
+  { name: "Blog", url: "https://aurevadental.com/blog" },
+  { name: post.title, url: canonicalUrl }
+];
+
+const breadcrumbSchema = JSON.stringify(generateBreadcrumbSchema(breadcrumbs));
+const blogPostSchema = JSON.stringify(generateBlogPostSchema({
+  headline: post.headline,
+  description: post.metaDescription,
+  url: canonicalUrl,
+  authorName: post.author,
+  authorJobTitle: post.authorRole,
+  datePublished: post.datePublished,
+  dateModified: post.dateModified
+}));
+
+const seoProps = {
+  title: post.title,
+  description: post.metaDescription,
+  canonical: canonicalUrl,
+  ogTitle: post.title,
+  ogDescription: post.metaDescription,
+  ogUrl: canonicalUrl,
+  schemaMarkup: [breadcrumbSchema, blogPostSchema]
+};
+---
+
+<Layout {...seoProps}>
+  <!-- Breadcrumb Navigation -->
+  <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
+    <div class="max-w-4xl mx-auto flex items-center gap-2 flex-wrap">
+      <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
+      <span>/</span>
+      <a href="/blog" class="hover:text-japandi-moss transition-colors">Blog</a>
+      <span>/</span>
+      <span class="text-japandi-charcoal font-medium truncate max-w-xs sm:max-w-md">{post.title}</span>
+    </div>
+  </nav>
+
+  <!-- Article Container -->
+  <article class="py-12 md:py-20 px-6 lg:px-24 bg-transparent">
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Article Header -->
+      <header class="space-y-6 pb-10 border-b border-japandi-clay/30 animate-slow-fade">
+        <div class="flex items-center gap-3">
+          <span class="text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-japandi-moss/10 text-japandi-moss">
+            {post.category}
+          </span>
+          <span class="text-xs text-japandi-earth font-light">
+            {post.readTime}
+          </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-japandi-charcoal font-medium tracking-tight leading-[1.2]">
+          Clear Aligners Cost in Bangalore: The Complete 2026 Guide & What to Expect
+        </h1>
+
+        <!-- Author Byline -->
+        <div class="flex items-center gap-4 pt-2">
+          <div class="w-12 h-12 rounded-full bg-japandi-moss/15 text-japandi-moss font-serif text-lg font-medium flex items-center justify-center shrink-0 border border-japandi-clay/60">
+            DS
+          </div>
+          <div>
+            <div class="text-sm font-semibold text-japandi-charcoal">
+              By <span class="text-japandi-moss">{post.author}</span>
+            </div>
+            <div class="text-xs text-japandi-earth font-light">
+              Clinical Director, Aureva Dental &bull; Last updated: {post.date}
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Article Body Content -->
+      <div class="prose prose-neutral max-w-none pt-10 text-japandi-charcoal font-light leading-relaxed text-base space-y-8">
+        
+        <p class="text-lg text-japandi-charcoal/90 leading-relaxed font-normal">
+          If you’ve been considering straightening your teeth or correcting minor crowding, traditional metal brackets and wires are no longer your only choice. Over the past few years, <strong class="font-medium text-japandi-charcoal">clear aligners (invisible braces)</strong> have become the go-to orthodontic solution for working professionals, college students, and adults across Bangalore who want a discreet, comfortable smile transformation.
+        </p>
+
+        <p>
+          However, the single most common question patients ask us during their first consultation at Aureva Dental is:  
+          <em class="block my-3 p-4 border-l-2 border-japandi-moss bg-japandi-sand/40 rounded-r-2xl font-serif text-japandi-charcoal text-lg">
+            "How much do clear aligners actually cost in Bangalore, and why is there such a wide price range?"
+          </em>
+          In this guide, we break down the real costs, the factors that influence your treatment estimate, and how the clear aligner journey works from start to finish.
+        </p>
+
+        <!-- Section 1 -->
+        <section class="pt-6 space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-serif font-medium text-japandi-charcoal pt-4 border-t border-japandi-clay/25">
+            1. Quick Summary: Average Clear Aligner Cost in Bangalore (2026)
+          </h2>
+          
+          <p>
+            In Bangalore, the total investment for clear aligner therapy typically ranges between <strong class="font-semibold text-japandi-moss">₹55,000 and ₹2,50,000+</strong>. 
+          </p>
+
+          <p>
+            The price varies depending on the complexity of your bite, how many custom trays you require, and whether you choose domestic or international aligner systems:
+          </p>
+
+          <!-- Pricing Table -->
+          <div class="overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-sand/35 my-6">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead>
+                <tr class="border-b border-japandi-clay/40 bg-japandi-sand/80">
+                  <th class="py-4 px-6 font-serif font-medium text-japandi-charcoal">Treatment Type / Tier</th>
+                  <th class="py-4 px-6 font-serif font-medium text-japandi-moss">Typical Price Range</th>
+                  <th class="py-4 px-6 font-serif font-medium text-japandi-earth">Ideal For</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-japandi-clay/20 text-japandi-charcoal font-light">
+                <tr class="hover:bg-japandi-sand/40 transition-colors">
+                  <td class="py-4 px-6 font-medium">Mild Alignment / Minor Spacing</td>
+                  <td class="py-4 px-6 text-japandi-moss font-semibold">₹55,000 – ₹85,000</td>
+                  <td class="py-4 px-6 text-japandi-earth">Minor front teeth spacing, slight rotations, post-braces relapse</td>
+                </tr>
+                <tr class="hover:bg-japandi-sand/40 transition-colors">
+                  <td class="py-4 px-6 font-medium">Moderate Crowding / Bite Correction</td>
+                  <td class="py-4 px-6 text-japandi-moss font-semibold">₹90,000 – ₹1,60,000</td>
+                  <td class="py-4 px-6 text-japandi-earth">Moderate overcrowding, midline correction, mild overbites</td>
+                </tr>
+                <tr class="hover:bg-japandi-sand/40 transition-colors">
+                  <td class="py-4 px-6 font-medium">Complex Orthodontic Cases</td>
+                  <td class="py-4 px-6 text-japandi-moss font-semibold">₹1,70,000 – ₹2,50,000+</td>
+                  <td class="py-4 px-6 text-japandi-earth">Severe rotations, deep bites, crossbites, full-arch reconstruction</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Clinical Safety Callout Box -->
+          <div class="p-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs sm:text-sm leading-relaxed space-y-1">
+            <strong class="font-semibold block text-amber-950 dark:text-amber-100 flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-amber-600 shrink-0">
+                <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+              </svg>
+              Note on Clinical Safety:
+            </strong>
+            <span>
+              Beware of direct-to-consumer "at-home impression kits" advertising aligners for ₹30,000. Moving teeth without an in-person digital 3D scan, bone-level assessment, and physical oversight by an orthodontist frequently leads to bite misalignment and irreversible root resorption.
+            </span>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="pt-6 space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-serif font-medium text-japandi-charcoal pt-4 border-t border-japandi-clay/25">
+            2. What Factors Determine Your Aligner Cost?
+          </h2>
+
+          <p>
+            When we evaluate your teeth at our studio on Horamavu Agara Road, your customized quote is determined by three core clinical factors:
+          </p>
+
+          <div class="space-y-4 pl-2">
+            <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">
+              <h3 class="text-lg font-serif font-medium text-japandi-charcoal">A. Number of Aligner Trays Needed</h3>
+              <p class="text-sm text-japandi-earth font-light leading-relaxed">
+                Clear aligners work by applying gentle, controlled biological pressure through a series of custom medical-grade plastic trays. Each set of trays is worn for 7 to 14 days before moving to the next.
+              </p>
+              <ul class="list-disc pl-5 text-xs sm:text-sm text-japandi-earth font-light space-y-1">
+                <li>A simple case might only need <strong class="text-japandi-charcoal font-medium">12 to 16 sets</strong> of aligners over 4 to 6 months.</li>
+                <li>A comprehensive case involving deep bite correction may require <strong class="text-japandi-charcoal font-medium">35 to 50+ sets</strong> over 12 to 18 months.</li>
+              </ul>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">
+              <h3 class="text-lg font-serif font-medium text-japandi-charcoal">B. Brand & Material Engineering</h3>
+              <ul class="list-disc pl-5 text-xs sm:text-sm text-japandi-earth font-light space-y-2">
+                <li><strong class="text-japandi-charcoal font-medium">Global Systems (e.g., Invisalign):</strong> Proven track record across millions of cases worldwide, utilizing patented multi-layer SmartTrack material. Best for complex movements.</li>
+                <li><strong class="text-japandi-charcoal font-medium">Certified Indian Aligner Labs (e.g., Toothsi/MakeO Pro, Illusion Aligners):</strong> High-quality, US-FDA approved clear polyurethane materials manufactured locally, offering an exceptional balance of precision and cost efficiency for mild-to-moderate corrections.</li>
+              </ul>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">
+              <h3 class="text-lg font-serif font-medium text-japandi-charcoal">C. Digital 3D Scanning & Smile Simulation</h3>
+              <p class="text-sm text-japandi-earth font-light leading-relaxed">
+                Modern aligner planning requires an advanced <strong class="text-japandi-charcoal font-medium">intraoral 3D digital scanner</strong>—eliminating the uncomfortable physical putty impressions of the past. A digital scan captures thousands of data points per second, generating a virtual 3D simulation that shows you your finished smile before you even start wearing Tray #1.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="pt-6 space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-serif font-medium text-japandi-charcoal pt-4 border-t border-japandi-clay/25">
+            3. Clear Aligners vs. Traditional Braces: Is the Extra Cost Worth It?
+          </h2>
+
+          <div class="overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-sand/35 my-6">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead>
+                <tr class="border-b border-japandi-clay/40 bg-japandi-sand/80">
+                  <th class="py-4 px-6 font-serif font-medium text-japandi-charcoal">Feature</th>
+                  <th class="py-4 px-6 font-serif font-medium text-japandi-moss">Clear Aligners</th>
+                  <th class="py-4 px-6 font-serif font-medium text-japandi-earth">Traditional Metal / Ceramic Braces</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-japandi-clay/20 text-japandi-charcoal font-light">
+                <tr class="hover:bg-japandi-sand/40 transition-colors">
+                  <td class="py-4 px-6 font-medium">Aesthetics</td>
+                  <td class="py-4 px-6 text-japandi-moss font-medium">Virtually invisible; unnoticeable in work meetings</td>
+                  <td class="py-4 px-6 text-japandi-earth">Visible metal brackets or ceramic blocks</td>
+                </tr>
+                <tr class="hover:bg-japandi-sand/40 transition-colors">
+                  <td class="py-4 px-6 font-medium">Dietary Freedom</td>
+                  <td class="py-4 px-6 text-japandi-moss font-semibold">No restrictions. Remove trays to eat your favorite foods</td>
+                  <td class="py-4 px-6 text-japandi-earth">Must avoid sticky, hard, or crunchy foods</td>
+                </tr>
+                <tr class="hover:bg-japandi-sand/40 transition-colors">
+                  <td class="py-4 px-6 font-medium">Oral Hygiene</td>
+                  <td class="py-4 px-6 text-japandi-moss font-medium">Normal brushing and flossing; clean teeth easily</td>
+                  <td class="py-4 px-6 text-japandi-earth">Tedious cleaning around brackets and wires</td>
+                </tr>
+                <tr class="hover:bg-japandi-sand/40 transition-colors">
+                  <td class="py-4 px-6 font-medium">Emergency Visits</td>
+                  <td class="py-4 px-6 text-japandi-moss font-medium">Rare (no broken wires or sharp brackets poking cheeks)</td>
+                  <td class="py-4 px-6 text-japandi-earth">Occasional emergency visits for loose brackets</td>
+                </tr>
+                <tr class="hover:bg-japandi-sand/40 transition-colors">
+                  <td class="py-4 px-6 font-medium">Comfort</td>
+                  <td class="py-4 px-6 text-japandi-moss font-medium">Smooth, scalloped edges customized to your gumline</td>
+                  <td class="py-4 px-6 text-japandi-earth">Requires orthodontic wax for mouth sores</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            For most working professionals in tech corridors like Manyata Tech Park, Bagmane, and surrounding North Bangalore hubs, the confidence of discreet treatment and the time saved from emergency clinic visits easily justifies the price difference.
+          </p>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="pt-6 space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-serif font-medium text-japandi-charcoal pt-4 border-t border-japandi-clay/25">
+            4. The Clear Aligner Journey at Aureva Dental
+          </h2>
+
+          <p>
+            We believe orthodontic care should be calm, transparent, and collaborative. Here is how we plan your treatment:
+          </p>
+
+          <ol class="space-y-4 pl-2">
+            <li class="p-5 rounded-2xl bg-japandi-sand/30 border border-japandi-clay/30 flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-japandi-moss/10 text-japandi-moss font-semibold text-xs flex items-center justify-center shrink-0">1</span>
+              <div>
+                <strong class="font-serif text-base font-medium text-japandi-charcoal block">Comprehensive Clinical Examination</strong>
+                <span class="text-xs sm:text-sm text-japandi-earth font-light">Dr. Shweta checks your periodontal (gum) health, jaw joints, and overall tooth alignment to ensure aligners are clinically safe for you.</span>
+              </div>
+            </li>
+
+            <li class="p-5 rounded-2xl bg-japandi-sand/30 border border-japandi-clay/30 flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-japandi-moss/10 text-japandi-moss font-semibold text-xs flex items-center justify-center shrink-0">2</span>
+              <div>
+                <strong class="font-serif text-base font-medium text-japandi-charcoal block">Digital Scan & Photographic Records</strong>
+                <span class="text-xs sm:text-sm text-japandi-earth font-light">High-definition digital mapping of your bite without uncomfortable gag-inducing putty.</span>
+              </div>
+            </li>
+
+            <li class="p-5 rounded-2xl bg-japandi-sand/30 border border-japandi-clay/30 flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-japandi-moss/10 text-japandi-moss font-semibold text-xs flex items-center justify-center shrink-0">3</span>
+              <div>
+                <strong class="font-serif text-base font-medium text-japandi-charcoal block">3D Virtual Smile Staging</strong>
+                <span class="text-xs sm:text-sm text-japandi-earth font-light">We review your customized digital movement plan together so you can see the predicted end result and know the exact timeline upfront.</span>
+              </div>
+            </li>
+
+            <li class="p-5 rounded-2xl bg-japandi-sand/30 border border-japandi-clay/30 flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-japandi-moss/10 text-japandi-moss font-semibold text-xs flex items-center justify-center shrink-0">4</span>
+              <div>
+                <strong class="font-serif text-base font-medium text-japandi-charcoal block">Aligner Delivery & Guidance</strong>
+                <span class="text-xs sm:text-sm text-japandi-earth font-light">You receive your custom trays along with instructions on wear time (20–22 hours per day) and hygiene maintenance.</span>
+              </div>
+            </li>
+
+            <li class="p-5 rounded-2xl bg-japandi-sand/30 border border-japandi-clay/30 flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-japandi-moss/10 text-japandi-moss font-semibold text-xs flex items-center justify-center shrink-0">5</span>
+              <div>
+                <strong class="font-serif text-base font-medium text-japandi-charcoal block">Progress Check-Ins</strong>
+                <span class="text-xs sm:text-sm text-japandi-earth font-light">Periodic short reviews every 6 to 8 weeks to monitor tooth tracking and hand over your next batch of trays.</span>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="pt-6 space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-serif font-medium text-japandi-charcoal pt-4 border-t border-japandi-clay/25">
+            Flexible Payment & EMI Options
+          </h2>
+
+          <p>
+            We understand that smile alignment is a meaningful personal investment. At Aureva Dental, we offer:
+          </p>
+
+          <ul class="list-disc pl-5 text-sm text-japandi-earth font-light space-y-2">
+            <li><strong class="text-japandi-charcoal font-medium">Transparent All-Inclusive Quotes:</strong> No hidden charges for check-ins or intermediate attachments.</li>
+            <li><strong class="text-japandi-charcoal font-medium">0% Interest EMI Options:</strong> Spread the treatment cost comfortably across flexible 6, 9, or 12-month installments.</li>
+          </ul>
+        </section>
+
+        <!-- Related Treatment Box -->
+        <div class="my-8 p-6 rounded-3xl bg-japandi-sand/55 border border-japandi-clay/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <span class="text-[10px] font-semibold text-japandi-moss uppercase tracking-wider block">Clinical Service</span>
+            <h4 class="font-serif text-lg font-medium text-japandi-charcoal mt-0.5">Explore Our Clear Aligners Treatment</h4>
+            <p class="text-xs text-japandi-earth font-light mt-1">Read clinical comparisons, case journeys, and 3D scan details.</p>
+          </div>
+          <a 
+            href="/treatments/clear-aligners"
+            class="px-5 py-2.5 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold uppercase tracking-wider hover:bg-japandi-charcoal transition-colors shrink-0"
+          >
+            View Treatment Page &rarr;
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Consultation Card as specified -->
+      <div class="mt-14 p-8 sm:p-10 rounded-[2.5rem] bg-japandi-sand/65 border border-japandi-clay/60 shadow-lg shadow-japandi-charcoal/5 space-y-5 text-center sm:text-left">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-japandi-moss/10 text-japandi-moss text-[10px] font-semibold uppercase tracking-wider">
+          Aureva Dental Studio &bull; Hennur Bande
+        </div>
+        
+        <h3 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium leading-snug">
+          Considering Clear Aligners in North Bengaluru?
+        </h3>
+
+        <p class="text-sm text-japandi-earth font-light leading-relaxed max-w-2xl">
+          Visit Aureva Dental on Horamavu Agara Road, Hennur Bande. Call <a href="tel:+917349701002" class="text-japandi-charcoal font-medium hover:text-japandi-moss underline">+91 73497 01002</a> or WhatsApp for a 3D digital scan.
+        </p>
+
+        <div class="pt-2 flex flex-wrap items-center justify-center sm:justify-start gap-4">
+          <a 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 shadow-md shadow-japandi-moss/15 cursor-none"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>Book 3D Scan on WhatsApp</span>
+          </a>
+
+          <a 
+            href={phoneCallUrl}
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-japandi-clay bg-japandi-cream/80 hover:bg-japandi-cream text-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 cursor-none"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-japandi-moss">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+            </svg>
+            <span>Call +91 73497 01002</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Catchment Footer Note -->
+      <div class="mt-12 text-center text-xs text-japandi-earth font-light">
+        <p>Conveniently located for patients across Hennur Bande, Horamavu Agara Road, Kalyan Nagar, Kothanur, and North Bengaluru.</p>
+      </div>
+
+    </div>
+  </article>
+</Layout>

@@ -293,3 +293,35 @@ export function generateTreatmentServiceSchema(params: {
   };
 }
 
+export function generateBlogPostSchema(params: {
+  headline: string;
+  description: string;
+  url: string;
+  authorName: string;
+  authorJobTitle?: string;
+  datePublished: string;
+  dateModified: string;
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": params.headline,
+    "description": params.description,
+    "author": {
+      "@type": "Person",
+      "name": params.authorName,
+      "jobTitle": params.authorJobTitle || "Clinical Director & Dental Surgeon"
+    },
+    "publisher": {
+      "@type": "DentalClinic",
+      "name": "Aureva Dental",
+      "url": "https://aurevadental.com"
+    },
+    "datePublished": params.datePublished,
+    "dateModified": params.dateModified,
+    "mainEntityOfPage": params.url
+  };
+}
+
+
