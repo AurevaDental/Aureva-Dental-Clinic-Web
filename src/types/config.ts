@@ -4,6 +4,7 @@ export interface SiteMeta {
   whatsapp_number: string;
   whatsapp_default_message: string;
   google_site_verification?: string;
+  google_maps_url?: string;
   rating_value?: number;
   review_count?: number;
   local_areas_served?: string[];

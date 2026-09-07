@@ -60,8 +60,8 @@ export function generateDentalClinicSchema() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 13.0336,
-      "longitude": 77.6534
+      "latitude": 13.0381741,
+      "longitude": 77.6416031
     },
     "openingHoursSpecification": [
       {
@@ -124,10 +124,10 @@ export function generateDentistSchema(config: any) {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 13.0336,
-      "longitude": 77.6534
+      "latitude": 13.0381741,
+      "longitude": 77.6416031
     },
-    "hasMap": "https://maps.app.goo.gl/sNdjoUAWePyoXd8g9",
+    "hasMap": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -221,8 +221,8 @@ export function generateDentistSchema(config: any) {
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": config.site_meta?.rating_value || "4.9",
-      "reviewCount": config.site_meta?.review_count || "184",
+      "ratingValue": config.site_meta?.rating_value?.toString() || "5.0",
+      "reviewCount": config.site_meta?.review_count?.toString() || "25",
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -286,8 +286,8 @@ export function generateTreatmentServiceSchema(params: {
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 13.0336,
-        "longitude": 77.6534
+        "latitude": 13.0381741,
+        "longitude": 77.6416031
       }
     }
   };
