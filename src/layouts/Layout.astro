@@ -106,20 +106,20 @@ const {
 		<!-- Local Geo Meta Tags for Google Local Search & Maps -->
 		<meta name="geo.region" content="IN-KA" />
 		<meta name="geo.placename" content="Bengaluru" />
-		<meta name="geo.position" content="13.033;77.650" />
-		<meta name="ICBM" content="13.033, 77.650" />
+		<meta name="geo.position" content="13.0336;77.6534" />
+		<meta name="ICBM" content="13.0336, 77.6534" />
 		
 		<!-- Open Graph / Facebook / WhatsApp -->
 		<meta property="og:type" content={ogType} />
 		<meta property="og:title" content={ogTitle} />
 		<meta property="og:description" content={ogDescription} />
 		{ogUrl && <meta property="og:url" content={ogUrl} />}
-		<meta property="og:site_name" content="Aureva Dental - Luxury Smile Studio" />
+		<meta property="og:site_name" content="Aureva Dental" />
 		<meta property="og:locale" content="en_IN" />
 		{ogImage && <meta property="og:image" content={ogImage} />}
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
-		<meta property="og:image:alt" content="Aureva Dental Studio - Hennur, Bengaluru" />
+		<meta property="og:image:alt" content="Aureva Dental - Hennur, Bengaluru" />
 
 		<!-- Open Graph Local Business & Contact Signals -->
 		<meta property="business:contact_data:street_address" content="2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande" />
@@ -136,9 +136,57 @@ const {
 		<meta property="twitter:title" content={ogTitle} />
 		<meta property="twitter:description" content={ogDescription} />
 		{ogImage && <meta property="twitter:image" content={ogImage} />}
-		<meta property="twitter:image:alt" content="Aureva Dental Studio - Hennur, Bengaluru" />
+		<meta property="twitter:image:alt" content="Aureva Dental - Hennur, Bengaluru" />
 
-		<!-- Structured Data (JSON-LD) -->
+		<!-- Canonical Root DentalClinic JSON-LD Structured Data -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "DentalClinic",
+		  "name": "Aureva Dental",
+		  "image": "https://aurevadental.com/og-image.jpg",
+		  "@id": "https://aurevadental.com",
+		  "url": "https://aurevadental.com",
+		  "telephone": "+917349701002",
+		  "priceRange": "₹₹",
+		  "address": {
+		    "@type": "PostalAddress",
+		    "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
+		    "addressLocality": "Bengaluru",
+		    "addressRegion": "KA",
+		    "postalCode": "560043",
+		    "addressCountry": "IN"
+		  },
+		  "geo": {
+		    "@type": "GeoCoordinates",
+		    "latitude": 13.0336,
+		    "longitude": 77.6534
+		  },
+		  "openingHoursSpecification": [
+		    {
+		      "@type": "OpeningHoursSpecification",
+		      "dayOfWeek": "Monday",
+		      "opens": "16:00",
+		      "closes": "21:00"
+		    },
+		    {
+		      "@type": "OpeningHoursSpecification",
+		      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+		      "opens": "09:30",
+		      "closes": "21:00"
+		    }
+		  ],
+		  "medicalSpecialty": [
+		    "Dentistry",
+		    "CosmeticDentistry",
+		    "Orthodontics",
+		    "Periodontics",
+		    "Endodontics"
+		  ]
+		}
+		</script>
+
+		<!-- Page-Specific Structured Data (JSON-LD) -->
 		{Array.isArray(schemaMarkup) ? (
 			schemaMarkup.map((schema) => (
 				<script type="application/ld+json" set:html={schema} />

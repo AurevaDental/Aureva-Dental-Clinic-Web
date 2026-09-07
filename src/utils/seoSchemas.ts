@@ -12,7 +12,7 @@ export interface FaqItem {
 export const LOCAL_FAQS: FaqItem[] = [
   {
     question: "Where is Aureva Dental located in Bengaluru?",
-    answer: "Aureva Dental is conveniently located at 2nd Floor, No. 11/4, Horamavu Agara Road, directly near Nayara Petrol Bunk, Hennur Bande, Bengaluru - 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Banaswadi, and North Bengaluru with dedicated 2-wheeler and 4-wheeler parking."
+    answer: "Aureva Dental is conveniently located at 2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Banaswadi, and North Bengaluru with dedicated 2-wheeler and 4-wheeler parking."
   },
   {
     question: "What dental treatments and specialities do you provide?",
@@ -20,7 +20,7 @@ export const LOCAL_FAQS: FaqItem[] = [
   },
   {
     question: "Are emergency dental appointments available at Aureva Dental?",
-    answer: "Yes, we accept same-day emergency appointments for acute toothaches, chipped teeth, dental trauma, and severe sensitivity. We are open 7 days a week, including Sundays (9:30 AM - 9:00 PM) and Mondays (4:00 PM - 9:00 PM). Call us immediately at +91 73497 01002 for urgent care."
+    answer: "Yes, we accept same-day emergency appointments for acute toothaches, chipped teeth, dental trauma, and severe sensitivity. We are open 7 days a week: Monday (4:00 PM – 9:00 PM) and Tuesday – Sunday (9:30 AM – 9:00 PM). Call us immediately at +91 73497 01002 for urgent care."
   },
   {
     question: "How much does a Root Canal Treatment (RCT) or Consultation cost?",
@@ -40,14 +40,61 @@ export const LOCAL_FAQS: FaqItem[] = [
   }
 ];
 
+export function generateDentalClinicSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "DentalClinic",
+    "name": "Aureva Dental",
+    "image": "https://aurevadental.com/og-image.jpg",
+    "@id": "https://aurevadental.com",
+    "url": "https://aurevadental.com",
+    "telephone": "+917349701002",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "KA",
+      "postalCode": "560043",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 13.0336,
+      "longitude": 77.6534
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Monday",
+        "opens": "16:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:30",
+        "closes": "21:00"
+      }
+    ],
+    "medicalSpecialty": [
+      "Dentistry",
+      "CosmeticDentistry",
+      "Orthodontics",
+      "Periodontics",
+      "Endodontics"
+    ]
+  };
+}
+
 export function generateDentistSchema(config: any) {
   const socialLinks = config.social_media?.map((s: any) => s.url) || [];
 
   return {
     "@context": "https://schema.org",
-    "@type": ["Dentist", "MedicalBusiness"],
-    "@id": "https://www.aurevadental.com/#dentist",
-    "name": "Aureva Dental - Luxury Smile Studio",
+    "@type": ["Dentist", "MedicalBusiness", "DentalClinic"],
+    "@id": "https://aurevadental.com/#dentist",
+    "name": "Aureva Dental",
     "legalName": "Aureva Dental Clinic",
     "alternateName": [
       "Aureva Dental",
@@ -55,13 +102,13 @@ export function generateDentistSchema(config: any) {
       "Aureva Dental Horamavu",
       "Aureva Dental Clinic Bengaluru"
     ],
-    "url": "https://www.aurevadental.com/",
-    "logo": "https://www.aurevadental.com/logo.png",
+    "url": "https://aurevadental.com/",
+    "logo": "https://aurevadental.com/logo.png",
     "image": [
-      "https://www.aurevadental.com/assets/og-image.jpg",
-      "https://www.aurevadental.com/logo.png"
+      "https://aurevadental.com/og-image.jpg",
+      "https://aurevadental.com/logo.png"
     ],
-    "description": "Aureva Dental is a premier luxury dental studio in Hennur, Bengaluru. Specialized in painless Root Canals, Digital Smile Design, Clear Aligners, Implants, and Bridal Packages.",
+    "description": "Aureva Dental is a modern dental clinic & smile studio in Hennur Bande, Horamavu Agara Road, Bengaluru. Painless root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
     "telephone": "+917349701002",
     "email": "aurevadentalclinic@gmail.com",
     "priceRange": "₹₹",
@@ -71,14 +118,14 @@ export function generateDentistSchema(config: any) {
       "@type": "PostalAddress",
       "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
       "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
+      "addressRegion": "KA",
       "postalCode": "560043",
       "addressCountry": "IN"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 13.033,
-      "longitude": 77.650
+      "latitude": 13.0336,
+      "longitude": 77.6534
     },
     "hasMap": "https://maps.app.goo.gl/sNdjoUAWePyoXd8g9",
     "openingHoursSpecification": [
@@ -210,3 +257,39 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
     }))
   };
 }
+
+export function generateTreatmentServiceSchema(params: {
+  name: string;
+  description: string;
+  url: string;
+  medicalSpecialty?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": params.name,
+    "description": params.description,
+    "url": params.url,
+    "provider": {
+      "@type": "DentalClinic",
+      "name": "Aureva Dental",
+      "url": "https://aurevadental.com",
+      "telephone": "+917349701002",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "KA",
+        "postalCode": "560043",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 13.0336,
+        "longitude": 77.6534
+      }
+    }
+  };
+}
+

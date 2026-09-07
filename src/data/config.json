@@ -1,7 +1,9 @@
 {
   "site_meta": {
-    "title": "Aureva Dental | Luxury Smile Studio in Hennur, Bengaluru",
-    "description": "Experience serene, modern Japandi dental care in Hennur, Bengaluru. Specialized in painless Root Canals, Clear Aligners, Implants, and Smile Design.",
+    "title": "Aureva Dental | Premium Dental Clinic & Smile Studio in Hennur, Bangalore",
+    "description": "Aureva Dental is a modern dental clinic & smile studio in Hennur Bande, Horamavu Agara Road, Bengaluru. Painless root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
+    "phone": "+91 73497 01002",
+    "address": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043",
     "whatsapp_number": "917349701002",
     "whatsapp_default_message": "Hello, I would like to book an appointment at Aureva Dental.",
     "google_site_verification": "",
@@ -264,11 +266,13 @@
       {
         "id": "bengaluru",
         "name": "Aureva Dental",
-        "address": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru - 560043",
+        "address": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043",
         "google_maps_url": "https://maps.app.goo.gl/sNdjoUAWePyoXd8g9?g_st=iw",
+        "latitude": 13.0336,
+        "longitude": 77.6534,
         "phone": "+91 73497 01002",
         "email": "aurevadentalclinic@gmail.com",
-        "hours": "Mon: 4:00 PM - 9:00 PM | Tue - Sun: 9:30 AM - 9:00 PM",
+        "hours": "Monday: 4:00 PM – 9:00 PM | Tuesday – Sunday: 9:30 AM – 9:00 PM",
         "parking": "Dedicated 2-wheeler and 4-wheeler parking available for patient convenience."
       }
     ]

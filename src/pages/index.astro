@@ -24,21 +24,21 @@ const { social_media, show_stats_section, show_gallery_slider } = config;
 const dentistSchema = JSON.stringify(generateDentistSchema(config));
 const faqSchema = JSON.stringify(generateFaqSchema());
 const breadcrumbSchema = JSON.stringify(generateBreadcrumbSchema([
-  { name: "Home", url: "https://www.aurevadental.com/" }
+  { name: "Home", url: "https://aurevadental.com/" }
 ]));
 
 const schemaMarkup = [dentistSchema, faqSchema, breadcrumbSchema];
 
 const seoProps = {
-  title: "Aureva Dental | Luxury Smile Studio in Hennur, Bengaluru",
-  description: "Premier Japandi dental studio in Hennur, Bengaluru. Gentle Root Canals, Invisible Clear Aligners, Dental Implants, Teeth Whitening & Smile Design. Book your consultation.",
+  title: "Aureva Dental | Premium Dental Clinic & Smile Studio in Hennur, Bangalore",
+  description: "Aureva Dental is a modern dental clinic & smile studio in Hennur Bande, Horamavu Agara Road, Bengaluru. Painless root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
   keywords: "dentist in hennur, dental clinic horamavu, best dentist near me, root canal treatment bengaluru, clear aligners hennur bangalore, dental implants, teeth whitening, smile makeover bengaluru, kalyan nagar dentist, babusapalya dental clinic, emergency dentist hennur",
-  canonical: "https://www.aurevadental.com/",
+  canonical: "https://aurevadental.com/",
   ogType: "website",
-  ogTitle: "Aureva Dental | Luxury Smile Studio in Hennur, Bengaluru",
-  ogDescription: "Where Aesthetics Meet Clinical Precision. Gentle dentistry, transparent pricing, annual memberships, and serene patient care in North Bengaluru.",
-  ogUrl: "https://www.aurevadental.com/",
-  ogImage: "https://www.aurevadental.com/assets/og-image.jpg",
+  ogTitle: "Aureva Dental | Premium Dental Clinic & Smile Studio in Hennur, Bangalore",
+  ogDescription: "Aureva Dental is a modern dental clinic & smile studio in Hennur Bande, Horamavu Agara Road, Bengaluru. Painless root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
+  ogUrl: "https://aurevadental.com/",
+  ogImage: "https://aurevadental.com/og-image.jpg",
   schemaMarkup
 };
 
@@ -87,40 +87,86 @@ const socialIcons = {
 	<!-- Locations Deep Map Links & Social Proof Reviews -->
 	<LocationsAndReviews />
 
-	<!-- Sergeant/Minimalist Footer -->
-	<footer class="bg-japandi-sand/80 border-t border-japandi-clay/50 py-12 px-6 lg:px-24">
-		<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-japandi-earth font-light">
-			<div class="flex items-center gap-2.5">
-				<img 
-					src="/logo.png" 
-					alt="Aureva Dental Logo" 
-					class="h-20 w-auto object-contain transition-all duration-300 dark:invert dark:brightness-125 dark:hue-rotate-180" 
-				/>
-			</div>
-			
-			<div class="flex gap-6 sm:gap-8">
-				<a href="#services" class="hover:text-japandi-charcoal transition-colors">Services</a>
-				<a href="#team" class="hover:text-japandi-charcoal transition-colors">Artisans</a>
-				<a href="#locations" class="hover:text-japandi-charcoal transition-colors">Sanctuaries</a>
-				<a href="#faq" class="hover:text-japandi-charcoal transition-colors">FAQ</a>
-				<a href="/feedback" class="hover:text-japandi-charcoal transition-colors">Feedback</a>
-			</div>
-			
-      <div class="flex items-center gap-4">
-        {social_media.map(social => (
-          <a 
-            href={social.url} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="text-japandi-earth hover:text-japandi-moss transition-colors"
-            aria-label={`Follow us on ${social.platform}`}
-            set:html={socialIcons[social.icon as keyof typeof socialIcons] || socialIcons.instagram}
-          >
-          </a>
-        ))}
-      </div>
+	<!-- Premium Japandi Footer with Canonical NAP -->
+	<footer class="bg-japandi-sand/80 border-t border-japandi-clay/50 pt-16 pb-12 px-6 lg:px-24">
+		<div class="max-w-7xl mx-auto">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-japandi-clay/30 text-xs">
+				<!-- Brand Column -->
+				<div class="space-y-4">
+					<img 
+						src="/logo.png" 
+						alt="Aureva Dental Logo" 
+						class="h-20 w-auto object-contain transition-all duration-300 dark:invert dark:brightness-125 dark:hue-rotate-180" 
+					/>
+					<p class="text-japandi-earth font-light leading-relaxed">
+						Calm Mind. Healthy Smile. A modern Japandi dental studio and sanctuary committed to clinical precision, transparent pricing, and gentle patient care.
+					</p>
+					<div class="flex items-center gap-3 pt-1">
+						{social_media.map(social => (
+							<a 
+								href={social.url} 
+								target="_blank" 
+								rel="noopener noreferrer" 
+								class="text-japandi-earth hover:text-japandi-moss transition-colors"
+								aria-label={`Follow us on ${social.platform}`}
+								set:html={socialIcons[social.icon as keyof typeof socialIcons] || socialIcons.instagram}
+							>
+							</a>
+						))}
+					</div>
+				</div>
 
-			<div>
+				<!-- Dedicated Treatments Column -->
+				<div class="space-y-3">
+					<h4 class="font-serif text-sm font-medium text-japandi-charcoal">Treatments</h4>
+					<ul class="space-y-2 text-japandi-earth font-light">
+						<li><a href="/treatments/clear-aligners" class="hover:text-japandi-moss transition-colors">Clear Aligners</a></li>
+						<li><a href="/treatments/dental-implants" class="hover:text-japandi-moss transition-colors">Dental Implants</a></li>
+						<li><a href="/treatments/root-canal-treatment" class="hover:text-japandi-moss transition-colors">Root Canal Treatment (RCT)</a></li>
+						<li><a href="/treatments/cosmetic-dentistry" class="hover:text-japandi-moss transition-colors">Cosmetic Dentistry & Veneers</a></li>
+						<li><a href="#services" class="hover:text-japandi-moss transition-colors">All Services & Pricing</a></li>
+					</ul>
+				</div>
+
+				<!-- Quick Links Column -->
+				<div class="space-y-3">
+					<h4 class="font-serif text-sm font-medium text-japandi-charcoal">Studio & Navigation</h4>
+					<ul class="space-y-2 text-japandi-earth font-light">
+						<li><a href="#team" class="hover:text-japandi-moss transition-colors">Our Artisans</a></li>
+						<li><a href="#locations" class="hover:text-japandi-moss transition-colors">Sanctuary Location</a></li>
+						<li><a href="#faq" class="hover:text-japandi-moss transition-colors">FAQ & Patient Guide</a></li>
+						<li><a href="/feedback" class="hover:text-japandi-moss transition-colors">Patient Feedback</a></li>
+						<li><a href="https://maps.app.goo.gl/sNdjoUAWePyoXd8g9" target="_blank" rel="noopener noreferrer" class="hover:text-japandi-moss transition-colors">Google Maps Listing</a></li>
+					</ul>
+				</div>
+
+				<!-- Canonical Contact Column -->
+				<div class="space-y-3">
+					<h4 class="font-serif text-sm font-medium text-japandi-charcoal">Aureva Dental</h4>
+					<p class="text-japandi-earth font-light leading-relaxed">
+						2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043
+					</p>
+					<div class="pt-1 flex flex-col gap-1.5 font-medium">
+						<a href="tel:+917349701002" class="text-japandi-charcoal hover:text-japandi-moss transition-colors">
+							Phone: +91 73497 01002
+						</a>
+						<a href="https://wa.me/917349701002" target="_blank" rel="noopener noreferrer" class="text-japandi-moss hover:text-japandi-charcoal transition-colors">
+							WhatsApp: +91 73497 01002
+						</a>
+					</div>
+					<div class="pt-2 text-[11px] text-japandi-earth font-light leading-relaxed">
+						<span class="font-medium text-japandi-charcoal block">Operating Hours:</span>
+						<span>Monday: 4:00 PM – 9:00 PM</span><br/>
+						<span>Tuesday – Sunday: 9:30 AM – 9:00 PM</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Catchment Note & Copyright -->
+			<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-japandi-earth font-light text-center md:text-left">
+				<p class="max-w-2xl">
+					Conveniently located for patients across Hennur Bande, Horamavu Agara Road, Kalyan Nagar, Kothanur, and North Bengaluru.
+				</p>
 				<p>&copy; {new Date().getFullYear()} Aureva Dental. All rights reserved.</p>
 			</div>
 		</div>
