@@ -10,7 +10,7 @@ User-agent: Bingbot
 Allow: /
 
 # Host
-Host: https://www.aurevadental.com
+Host: https://aurevadental.com
 
 # Sitemap
-Sitemap: https://www.aurevadental.com/sitemap.xml
+Sitemap: https://aurevadental.com/sitemap.xml
