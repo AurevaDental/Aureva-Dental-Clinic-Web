@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { supabase } from '../lib/supabase';
+import { generateBreadcrumbSchema } from '../utils/seoSchemas';
 
 export const prerender = false;
 
@@ -53,9 +54,22 @@ if (Astro.request.method === 'POST') {
     error = 'Failed to submit feedback: ' + (err as Error).message;
   }
 }
+
+const feedbackSeoProps = {
+  title: "Patient Feedback & Experience | Aureva Dental Hennur, Bengaluru",
+  description: "Share your experience at Aureva Dental Studio in Hennur, Bengaluru. Read patient reviews and help us refine our serene Japandi dental care.",
+  canonical: "https://www.aurevadental.com/feedback",
+  ogTitle: "Patient Feedback & Reviews | Aureva Dental Studio",
+  ogDescription: "Share your smile journey and experience with our dental artisans in Hennur, Bengaluru.",
+  ogUrl: "https://www.aurevadental.com/feedback",
+  schemaMarkup: JSON.stringify(generateBreadcrumbSchema([
+    { name: "Home", url: "https://www.aurevadental.com/" },
+    { name: "Feedback", url: "https://www.aurevadental.com/feedback" }
+  ]))
+};
 ---
 
-<Layout hideHeader={success}>
+<Layout hideHeader={success} {...feedbackSeoProps}>
   <div class="min-h-[85vh] flex items-center justify-center px-6 py-16 lg:px-24">
     <div class="w-full max-w-xl bg-japandi-sand/35 border border-japandi-clay/40 rounded-[2.5rem] p-8 md:p-12 hover:shadow-xl hover:shadow-japandi-charcoal/5 transition-all duration-500 animate-slow-fade">
       

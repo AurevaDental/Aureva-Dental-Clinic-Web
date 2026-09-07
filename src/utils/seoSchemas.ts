@@ -1,0 +1,212 @@
+/**
+ * SEO Structured Data (JSON-LD) Generator for Aureva Dental
+ * Generates Google Rich Results-compliant schemas for Local SEO, MedicalBusiness/Dentist,
+ * FAQPage rich snippets, and BreadcrumbList.
+ */
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export const LOCAL_FAQS: FaqItem[] = [
+  {
+    question: "Where is Aureva Dental located in Bengaluru?",
+    answer: "Aureva Dental is conveniently located at 2nd Floor, No. 11/4, Horamavu Agara Road, directly near Nayara Petrol Bunk, Hennur Bande, Bengaluru - 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Banaswadi, and North Bengaluru with dedicated 2-wheeler and 4-wheeler parking."
+  },
+  {
+    question: "What dental treatments and specialities do you provide?",
+    answer: "We offer comprehensive holistic and specialized dental care, including painless Root Canal Treatments (RCT), Clear Aligners and Invisible Braces, Dental Implants, Digital Smile Design, Ceramic & Zirconia Crowns, Advanced Teeth Whitening, Kids Dentistry, and preventative Scaling & Polishing in a calm, Japandi-inspired studio environment."
+  },
+  {
+    question: "Are emergency dental appointments available at Aureva Dental?",
+    answer: "Yes, we accept same-day emergency appointments for acute toothaches, chipped teeth, dental trauma, and severe sensitivity. We are open 7 days a week, including Sundays (9:30 AM - 9:00 PM) and Mondays (4:00 PM - 9:00 PM). Call us immediately at +91 73497 01002 for urgent care."
+  },
+  {
+    question: "How much does a Root Canal Treatment (RCT) or Consultation cost?",
+    answer: "Our new patient consultation (including digital RVG low-radiation X-ray) is Rs. 600. Single-sitting and specialized Root Canal Treatments start from Rs. 4,000 to Rs. 10,000 depending on tooth location (anterior, premolar, or molar). Transparent pricing is shared upfront before every procedure with no surprise fees."
+  },
+  {
+    question: "Do you offer Clear Aligners and Smile Makeovers?",
+    answer: "Yes, we specialize in Digital Smile Design, customized porcelain/ceramic veneers, and Clear Aligners (ranging from Rs. 80,000 to Rs. 2,50,000). We also offer curated Bridal & Groom smile radiance packages for upcoming weddings and events."
+  },
+  {
+    question: "What payment and EMI options are available for treatments?",
+    answer: "We accept all major Credit Cards, Debit Cards, UPI, and digital modes. Multi-stage treatments like Dental Implants and Aligners can be seamlessly converted into flexible zero-cost or low-cost monthly EMIs directly via your card-issuing bank at checkout."
+  },
+  {
+    question: "How can I book an appointment at Aureva Dental?",
+    answer: "You can book directly via WhatsApp at +91 73497 01002, call our clinic reception desk at +91 73497 01002, or tap the 'Book Appointment' button on our website for prompt slot confirmation."
+  }
+];
+
+export function generateDentistSchema(config: any) {
+  const socialLinks = config.social_media?.map((s: any) => s.url) || [];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": ["Dentist", "MedicalBusiness"],
+    "@id": "https://www.aurevadental.com/#dentist",
+    "name": "Aureva Dental - Luxury Smile Studio",
+    "legalName": "Aureva Dental Clinic",
+    "alternateName": [
+      "Aureva Dental",
+      "Aureva Dental Hennur",
+      "Aureva Dental Horamavu",
+      "Aureva Dental Clinic Bengaluru"
+    ],
+    "url": "https://www.aurevadental.com/",
+    "logo": "https://www.aurevadental.com/logo.png",
+    "image": [
+      "https://www.aurevadental.com/assets/og-image.jpg",
+      "https://www.aurevadental.com/logo.png"
+    ],
+    "description": "Aureva Dental is a premier luxury dental studio in Hennur, Bengaluru. Specialized in painless Root Canals, Digital Smile Design, Clear Aligners, Implants, and Bridal Packages.",
+    "telephone": "+917349701002",
+    "email": "aurevadentalclinic@gmail.com",
+    "priceRange": "₹₹",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, Credit Card, Debit Card, UPI",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560043",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 13.033,
+      "longitude": 77.650
+    },
+    "hasMap": "https://maps.app.goo.gl/sNdjoUAWePyoXd8g9",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday"],
+        "opens": "16:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:30",
+        "closes": "21:00"
+      }
+    ],
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Hennur" },
+      { "@type": "AdministrativeArea", "name": "Horamavu" },
+      { "@type": "AdministrativeArea", "name": "Hennur Bande" },
+      { "@type": "AdministrativeArea", "name": "Babusapalya" },
+      { "@type": "AdministrativeArea", "name": "Kalyan Nagar" },
+      { "@type": "AdministrativeArea", "name": "HRBR Layout" },
+      { "@type": "AdministrativeArea", "name": "Kammanahalli" },
+      { "@type": "AdministrativeArea", "name": "Banaswadi" },
+      { "@type": "AdministrativeArea", "name": "Ramamurthy Nagar" },
+      { "@type": "AdministrativeArea", "name": "North Bengaluru" },
+      { "@type": "AdministrativeArea", "name": "Bengaluru" }
+    ],
+    "medicalSpecialty": [
+      "Dentistry",
+      "CosmeticDentistry",
+      "Orthodontics",
+      "Endodontics",
+      "PediatricDentistry",
+      "Prosthodontics",
+      "OralSurgery"
+    ],
+    "availableService": [
+      {
+        "@type": "MedicalProcedure",
+        "name": "Root Canal Treatment",
+        "description": "Micro-precision cleaning and long-term tooth preservation using multi-sitting specialized protocols and digital imaging."
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Clear Aligners and Invisible Braces",
+        "description": "Discreet orthodontic smile alignment using advanced clear aligner technology."
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Dental Implants",
+        "description": "Permanent tooth replacement with biocompatible titanium implants and lifelike crowns."
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Digital Smile Design and Veneers",
+        "description": "Aesthetic smile makeovers tailored to facial harmony using digital precision."
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Teeth Whitening and Polishing",
+        "description": "Advanced gentle in-office whitening and stain removal for radiant smiles."
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Pediatric / Kids Dentistry",
+        "description": "Gentle cavity prevention, fluoride applications, and pit sealants for children."
+      }
+    ],
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Dr. Shweta",
+        "jobTitle": "Lead Aesthetic Architect & Founder",
+        "alumniOf": "Oxford Dental College",
+        "description": "Specialist in cosmetic smile design and aesthetic restorative dentistry with 5+ years experience."
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Agniss Mishra",
+        "jobTitle": "Holistic Restorative Specialist",
+        "alumniOf": "Oxford Dental College",
+        "description": "Specialist in endodontics and holistic restorative dentistry with 4+ years experience."
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": config.site_meta?.rating_value || "4.9",
+      "reviewCount": config.site_meta?.review_count || "184",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "sameAs": socialLinks
+  };
+}
+
+export function generateFaqSchema(faqs: FaqItem[] = LOCAL_FAQS) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+}
+
+export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  };
+}

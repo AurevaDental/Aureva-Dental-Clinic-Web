@@ -51,24 +51,48 @@ try {
         <div class="flex flex-col gap-6">
           {locations_section.locations_list.map((loc) => (
             <div class="bg-japandi-sand/55 border border-japandi-clay/45 rounded-3xl p-8 hover:bg-japandi-sand transition-all duration-300 hover:shadow-lg hover:shadow-japandi-charcoal/5">
-              <h3 class="text-xl font-serif text-japandi-charcoal font-medium mb-3">{loc.name}</h3>
-              
-              <!-- Address Deep Link (No Heavy Iframes) -->
-              <a 
-                href={loc.google_maps_url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="group inline-flex items-start text-sm text-japandi-earth hover:text-japandi-charcoal transition-colors duration-300 mb-6 leading-relaxed"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2.5 mt-0.5 text-japandi-moss flex-shrink-0">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                </svg>
-                <span class="border-b border-japandi-clay group-hover:border-japandi-charcoal transition-all">
-                  {loc.address}
+              <div class="flex items-center justify-between gap-4 mb-3">
+                <h3 class="text-xl font-serif text-japandi-charcoal font-medium">{loc.name}</h3>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-japandi-moss/10 text-japandi-moss text-[10px] font-semibold uppercase tracking-wider">
+                  <span class="w-1.5 h-1.5 rounded-full bg-japandi-moss"></span>
+                  Bengaluru Studio
                 </span>
-              </a>
+              </div>
+              
+              <!-- Address Deep Link with Landmark -->
+              <div class="mb-4">
+                <a 
+                  href={loc.google_maps_url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="group inline-flex items-start text-sm text-japandi-earth hover:text-japandi-charcoal transition-colors duration-300 leading-relaxed"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2.5 mt-0.5 text-japandi-moss flex-shrink-0">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                  </svg>
+                  <span class="border-b border-japandi-clay group-hover:border-japandi-charcoal transition-all">
+                    {loc.address}
+                  </span>
+                </a>
+              </div>
 
+              <!-- Quick Navigation Button -->
+              <div class="mb-6">
+                <a
+                  href={loc.google_maps_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-japandi-sand/80 border border-japandi-clay text-xs font-medium text-japandi-charcoal hover:bg-japandi-moss hover:text-japandi-cream transition-all duration-300 group"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4 text-japandi-moss group-hover:text-japandi-cream transition-colors">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.284a1.875 1.875 0 0 0-1.678 0L3.328 5.532c-.443.222-.728.67-.728 1.166v12.287c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.902 2.441Z" />
+                  </svg>
+                  <span>Open in Google Maps / Get Directions</span>
+                </a>
+              </div>
+
+              <!-- Contact & Operating Information -->
               <div class="space-y-3 pt-6 border-t border-japandi-clay/35 text-xs text-japandi-charcoal">
                 <div class="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-3 text-japandi-earth">
@@ -77,7 +101,7 @@ try {
                   <a 
                     href={`tel:${loc.phone.replace(/[^0-9+]/g, '')}`} 
                     onclick={`return gtag_report_conversion('tel:${loc.phone.replace(/[^0-9+]/g, '')}');`} 
-                    class="hover:text-japandi-moss transition-colors"
+                    class="hover:text-japandi-moss font-medium transition-colors"
                   >{loc.phone}</a>
                 </div>
                 {loc.email && (
@@ -102,6 +126,32 @@ try {
                     <span>{loc.parking}</span>
                   </div>
                 )}
+              </div>
+
+              <!-- Neighborhoods Served Signal for Local SEO -->
+              <div class="mt-6 pt-5 border-t border-japandi-clay/35">
+                <p class="text-[10px] font-semibold text-japandi-earth uppercase tracking-wider mb-2.5">
+                  Neighborhoods We Proudly Serve:
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  {[
+                    "Hennur",
+                    "Horamavu",
+                    "Hennur Bande",
+                    "Babusapalya",
+                    "Kalyan Nagar",
+                    "HRBR Layout",
+                    "Kammanahalli",
+                    "Banaswadi",
+                    "Ramamurthy Nagar",
+                    "Chelekere",
+                    "North Bengaluru"
+                  ].map((area) => (
+                    <span class="px-2.5 py-1 rounded-full bg-japandi-sand/80 border border-japandi-clay/60 text-[10px] text-japandi-charcoal">
+                      {area}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

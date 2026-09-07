@@ -1,9 +1,27 @@
 {
   "site_meta": {
-    "title": "Aureva Dental | Serene & Modern Japandi Dental Care",
-    "description": "Experience premium, stress-free dental care in a space inspired by Japandi aesthetics. Calm environment, holistic treatments, and expert care.",
+    "title": "Aureva Dental | Luxury Smile Studio in Hennur, Bengaluru",
+    "description": "Experience serene, modern Japandi dental care in Hennur, Bengaluru. Specialized in painless Root Canals, Clear Aligners, Implants, and Smile Design.",
     "whatsapp_number": "917349701002",
-    "whatsapp_default_message": "Hello, I would like to book an appointment at Aureva Dental."
+    "whatsapp_default_message": "Hello, I would like to book an appointment at Aureva Dental.",
+    "google_site_verification": "",
+    "rating_value": 4.9,
+    "review_count": 184,
+    "local_areas_served": [
+      "Hennur",
+      "Horamavu",
+      "Hennur Bande",
+      "Babusapalya",
+      "Kalyan Nagar",
+      "HRBR Layout",
+      "Kammanahalli",
+      "Banaswadi",
+      "Ramamurthy Nagar",
+      "Chelekere",
+      "Geddalahalli",
+      "Kothanur",
+      "North Bengaluru"
+    ]
   },
   "theme_colors": {
     "light": {

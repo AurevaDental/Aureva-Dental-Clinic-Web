@@ -3,6 +3,10 @@ export interface SiteMeta {
   description: string;
   whatsapp_number: string;
   whatsapp_default_message: string;
+  google_site_verification?: string;
+  rating_value?: number;
+  review_count?: number;
+  local_areas_served?: string[];
 }
 
 export interface HeroSection {
