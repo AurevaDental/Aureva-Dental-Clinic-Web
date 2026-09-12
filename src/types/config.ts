@@ -89,10 +89,27 @@ export interface Testimonial {
   rating: number;
 }
 
+export interface GoogleReview {
+  name: string;
+  role: string;
+  rating: number;
+  text: string;
+  date?: string;
+  treatment?: string;
+  verified?: boolean;
+  avatar_url?: string;
+  google_maps_url?: string;
+}
+
 export interface SocialProof {
   title: string;
   subtitle: string;
-  testimonials: Testimonial[];
+  google_rating?: number;
+  review_count?: number;
+  badge_text?: string;
+  google_maps_url?: string;
+  testimonials?: Testimonial[];
+  reviews?: GoogleReview[];
 }
 
 export interface ThemeColors {
@@ -119,6 +136,7 @@ export interface AppConfig {
   doctors_section: DoctorsSection;
   locations_section: LocationsSection;
   social_proof: SocialProof;
+  google_reviews?: GoogleReview[];
   show_stats_section?: boolean;
   [key: string]: any;
 }

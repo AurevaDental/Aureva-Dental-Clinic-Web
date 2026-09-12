@@ -265,6 +265,19 @@ export function generateDentistSchema(config: any) {
       "bestRating": "5",
       "worstRating": "1"
     },
+    "review": ((config.google_reviews as any[]) || []).slice(0, 5).map((r: any) => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": r.name
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": (r.rating || 5).toString(),
+        "bestRating": "5"
+      },
+      "reviewBody": r.text
+    })),
     "sameAs": socialLinks
   };
 }

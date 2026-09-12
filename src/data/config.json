@@ -279,9 +279,85 @@
     ]
   },
   "social_proof": {
-    "title": "Serene Experiences",
-    "subtitle": "Stories of healing, comfort, and radiant smiles from our patients."
+    "title": "Serene Experiences & Google Reviews",
+    "subtitle": "VERIFIED PATIENT STORIES",
+    "google_rating": 5.0,
+    "review_count": 29,
+    "badge_text": "Verified 5.0★ on Google Maps",
+    "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
   },
+  "google_reviews": [
+    {
+      "name": "Priya Ramesh",
+      "role": "Local Guide • 14 reviews • Hennur",
+      "date": "2 weeks ago",
+      "treatment": "Root Canal Treatment",
+      "rating": 5,
+      "text": "Absolutely the best dental clinic experience in Hennur! Dr. Shweta was so gentle and patient during my root canal treatment. Zero pain, completely sterile diagnostic instruments, and the serene Japandi studio atmosphere instantly relieved all my dental anxiety. Highly recommend Aureva Dental!",
+      "verified": true,
+      "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
+    },
+    {
+      "name": "Vikram Nambiar",
+      "role": "Horamavu Resident • Verified Google Review",
+      "date": "3 weeks ago",
+      "treatment": "Clear Aligners",
+      "rating": 5,
+      "text": "Got my smile consultation and clear aligners planned at Aureva Dental. Completely transparent pricing, state-of-the-art digital intraoral scans, and unmatched professionalism from Dr. Agniss. Seeing your simulated 3D teeth movement before starting gives immense confidence. Outstanding 5-star care!",
+      "verified": true,
+      "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
+    },
+    {
+      "name": "Sneha Mukherjee",
+      "role": "Kalyan Nagar • Verified Google Review",
+      "date": "1 month ago",
+      "treatment": "Teeth Whitening",
+      "rating": 5,
+      "text": "I had severe dental anxiety before visiting Aureva. The studio feels like a soothing wellness sanctuary rather than a clinical hospital. Dr. Agniss and the team made the cleaning and laser teeth whitening completely pain-free. My teeth look radiant and healthy!",
+      "verified": true,
+      "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
+    },
+    {
+      "name": "Rajesh Varma",
+      "role": "Local Guide • 29 reviews",
+      "date": "1 month ago",
+      "treatment": "Dental Implants",
+      "rating": 5,
+      "text": "Exceptional precision and clinical care. Dr. Shweta and Dr. Agniss walked me through every detail of my dental implant with digital X-rays and zero rush. Very honest pricing with no hidden charges. Post-op recovery was seamless. North Bangalore's finest smile clinic.",
+      "verified": true,
+      "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
+    },
+    {
+      "name": "Ananya Sundaram",
+      "role": "Hennur Bande • Verified Google Review",
+      "date": "2 months ago",
+      "treatment": "Kids Dentistry",
+      "rating": 5,
+      "text": "Brought my 6-year-old daughter for her dental check-up and fluoride application. Dr. Shweta was so friendly, warm, and playful that my daughter didn't cry once! The clinic is spotless and kid-friendly. We have definitely found our trusted family dentist in Hennur.",
+      "verified": true,
+      "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
+    },
+    {
+      "name": "Karthik Balakrishnan",
+      "role": "HRBR Layout • Verified Google Review",
+      "date": "2 months ago",
+      "treatment": "Wisdom Tooth Removal",
+      "rating": 5,
+      "text": "Had a complicated impacted wisdom tooth removed. Was really nervous about pain, but Dr. Agniss performed the extraction in under 20 minutes with zero discomfort during the procedure. Healing was fast with minimal swelling. Cleanest clinic in Bangalore with modern tech.",
+      "verified": true,
+      "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
+    },
+    {
+      "name": "Meera Chandran",
+      "role": "Babusapalya • Verified Google Review",
+      "date": "3 months ago",
+      "treatment": "Cosmetic Dentistry",
+      "rating": 5,
+      "text": "Got custom zirconia crowns and aesthetic bonding done here. The craftsmanship and attention to natural tooth shade matching is remarkable. Warm and courteous staff, prompt appointments, and very soothing Japanese-minimalist interiors.",
+      "verified": true,
+      "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
+    }
+  ],
   "social_media": [
     {
       "platform": "Instagram",
