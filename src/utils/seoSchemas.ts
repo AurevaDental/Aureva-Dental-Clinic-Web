@@ -243,7 +243,7 @@ export function generateDentistSchema(config: any) {
           "CosmeticDentistry",
           "Orthodontics"
         ],
-        "description": "Specialist in cosmetic smile design, clear aligners, and aesthetic restorative dentistry with 5+ years experience.",
+        "description": "Specialist in cosmetic smile design, clear aligners, and aesthetic restorative dentistry.",
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }
@@ -267,7 +267,7 @@ export function generateDentistSchema(config: any) {
           "Endodontics",
           "RestorativeDentistry"
         ],
-        "description": "Specialist in painless rotary root canal treatments and holistic restorative dentistry with 4+ years experience.",
+        "description": "Specialist in painless rotary root canal treatments and holistic restorative dentistry.",
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }

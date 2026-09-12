@@ -246,7 +246,7 @@
         "id": "shweta",
         "name": "Dr. Shweta",
         "role": "Lead Aesthetic Architect & Founder",
-        "qualifications": "Oxford Dental College / 5 Years Exp.",
+        "qualifications": "Oxford Dental College",
         "image_url": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600&h=800",
         "philosophy": "Dentistry is the quiet harmony of biological health and clean visual art."
       },
@@ -254,7 +254,7 @@
         "id": "agniss",
         "name": "Dr. Agniss Mishra",
         "role": "Holistic Restorative Specialist",
-        "qualifications": "Oxford Dental College / 4 Years Exp.",
+        "qualifications": "Oxford Dental College",
         "image_url": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600&h=800",
         "philosophy": "Treating the mouth is treating the gateway to the entire body's wellness."
       }
