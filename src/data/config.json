@@ -9,7 +9,7 @@
     "google_site_verification": "",
     "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
     "rating_value": 5.0,
-    "review_count": 25,
+    "review_count": 29,
     "local_areas_served": [
       "Hennur",
       "Horamavu",
@@ -50,7 +50,7 @@
     "cta_text": "Reserve Your Visit / Call Desk",
     "video_url": "https://assets.mixkit.co/videos/preview/mixkit-modern-dental-office-interior-41984-large.mp4"
   },
-  "show_stats_section": false,
+  "show_stats_section": true,
   "show_service_images": false,
   "show_specialized_images": false,
   "show_gallery_slider": false,
@@ -58,24 +58,24 @@
   "virtual_tour_coming_soon": true,
   "stats_section": [
     {
-      "label": "Patients Treated",
-      "value": 15000,
+      "label": "Google Rating",
+      "value": 5,
+      "suffix": ".0★"
+    },
+    {
+      "label": "Verified Reviews",
+      "value": 29,
       "suffix": "+"
     },
     {
-      "label": "Years of Experience",
-      "value": 20,
-      "suffix": "+"
+      "label": "Sterile Diagnostic Kits",
+      "value": 100,
+      "suffix": "%"
     },
     {
-      "label": "Expert Dentists",
-      "value": 12,
+      "label": "Days Open / Week",
+      "value": 7,
       "suffix": ""
-    },
-    {
-      "label": "Awards Won",
-      "value": 25,
-      "suffix": "+"
     }
   ],
   "holistic_services": {
@@ -244,8 +244,8 @@
     "team": [
       {
         "id": "shweta",
-        "name": "Dr.Shweta Founder",
-        "role": "Lead Aesthetic Architect",
+        "name": "Dr. Shweta",
+        "role": "Lead Aesthetic Architect & Founder",
         "qualifications": "Oxford Dental College / 5 Years Exp.",
         "image_url": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600&h=800",
         "philosophy": "Dentistry is the quiet harmony of biological health and clean visual art."

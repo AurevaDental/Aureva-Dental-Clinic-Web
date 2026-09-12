@@ -227,14 +227,14 @@ const displayReviews = reviews && reviews.length > 0 ? reviews : defaultReviews;
             href={locations_section.locations_list[0]?.google_maps_url || "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"}
             target="_blank"
             rel="noopener noreferrer"
-            title="Read 25 5-star Google Reviews"
+            title={`Read ${config.site_meta?.review_count || 29} 5-star Google Reviews`}
             class="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-japandi-sand/70 hover:bg-japandi-sand border border-japandi-clay/60 hover:border-japandi-moss/40 text-xs text-japandi-charcoal transition-all duration-300 group shadow-sm shrink-0"
           >
             <div class="flex items-center text-amber-500 text-xs tracking-tight">
               ★ ★ ★ ★ ★
             </div>
             <span class="font-bold">5.0</span>
-            <span class="text-japandi-earth text-[11px] font-normal">(25 Google Reviews)</span>
+            <span class="text-japandi-earth text-[11px] font-normal">({config.site_meta?.review_count || 29} Google Reviews)</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5 text-japandi-moss group-hover:translate-x-0.5 transition-transform">
               <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
             </svg>

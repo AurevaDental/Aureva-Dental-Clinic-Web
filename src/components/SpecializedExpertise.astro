@@ -26,6 +26,7 @@ const { specialized_expertise } = config;
 
         const getItemUrl = (name: string) => {
           const n = name.toLowerCase();
+          if (n.includes('whitening')) return '/treatments/teeth-whitening';
           if (n.includes('aligner')) return '/treatments/clear-aligners';
           if (n.includes('implant')) return '/treatments/dental-implants';
           if (isSmileDesign) return '/treatments/cosmetic-dentistry';

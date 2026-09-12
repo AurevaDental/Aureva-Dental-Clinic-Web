@@ -195,34 +195,73 @@ export function generateDentistSchema(config: any) {
       {
         "@type": "MedicalProcedure",
         "name": "Teeth Whitening and Polishing",
-        "description": "Advanced gentle in-office whitening and stain removal for radiant smiles."
+        "description": "Advanced gentle in-office laser whitening and stain removal for radiant smiles."
       },
       {
         "@type": "MedicalProcedure",
         "name": "Pediatric / Kids Dentistry",
-        "description": "Gentle cavity prevention, fluoride applications, and pit sealants for children."
+        "description": "Gentle cavity prevention, fluoride applications, and pit sealants for children in a calm clinic."
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Wisdom Tooth Removal & Oral Surgery",
+        "description": "Painless extraction of impacted wisdom teeth using digital low-radiation RVG imaging and gentle surgical technique."
       }
     ],
     "employee": [
       {
-        "@type": "Person",
+        "@type": "Dentist",
         "name": "Dr. Shweta",
         "jobTitle": "Lead Aesthetic Architect & Founder",
-        "alumniOf": "Oxford Dental College",
-        "description": "Specialist in cosmetic smile design and aesthetic restorative dentistry with 5+ years experience."
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "The Oxford Dental College, Bangalore"
+        },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "degree",
+            "name": "Bachelor of Dental Surgery (BDS)"
+          }
+        ],
+        "medicalSpecialty": [
+          "CosmeticDentistry",
+          "Orthodontics"
+        ],
+        "description": "Specialist in cosmetic smile design, clear aligners, and aesthetic restorative dentistry with 5+ years experience.",
+        "worksFor": {
+          "@id": "https://aurevadental.com/#dentist"
+        }
       },
       {
-        "@type": "Person",
+        "@type": "Dentist",
         "name": "Dr. Agniss Mishra",
         "jobTitle": "Holistic Restorative Specialist",
-        "alumniOf": "Oxford Dental College",
-        "description": "Specialist in endodontics and holistic restorative dentistry with 4+ years experience."
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "The Oxford Dental College, Bangalore"
+        },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "degree",
+            "name": "Bachelor of Dental Surgery (BDS)"
+          }
+        ],
+        "medicalSpecialty": [
+          "Endodontics",
+          "RestorativeDentistry"
+        ],
+        "description": "Specialist in painless rotary root canal treatments and holistic restorative dentistry with 4+ years experience.",
+        "worksFor": {
+          "@id": "https://aurevadental.com/#dentist"
+        }
       }
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": config.site_meta?.rating_value?.toString() || "5.0",
-      "reviewCount": config.site_meta?.review_count?.toString() || "25",
+      "reviewCount": config.site_meta?.review_count?.toString() || "29",
       "bestRating": "5",
       "worstRating": "1"
     },

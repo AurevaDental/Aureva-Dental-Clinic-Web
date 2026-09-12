@@ -10,7 +10,6 @@
 </div>
 
 <script>
-  // Function to hide the preloader
   function hidePreloader() {
     const preloader = document.getElementById('preloader');
     if (preloader && preloader.style.display !== 'none') {
@@ -20,18 +19,33 @@
         
         setTimeout(() => {
           preloader.style.display = 'none';
-        }, 1000); // Wait for transition to finish
-      }, 5000); // 5-second delay before fading out
+          try {
+            sessionStorage.setItem('aureva_preloader_seen', 'true');
+          } catch (e) {
+            // Storage quota or security exception fallback
+          }
+        }, 600); // Wait for transition to finish
+      }, 900); // 900ms delay before fading out
     }
   }
 
-  // Handle normal page load
-  window.addEventListener('load', hidePreloader);
+  // Check if visitor has already seen the preloader in this session
+  try {
+    if (sessionStorage.getItem('aureva_preloader_seen') === 'true') {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.style.display = 'none';
+      }
+    } else {
+      window.addEventListener('load', hidePreloader);
+      setTimeout(hidePreloader, 1500); // Fast fallback if load event was delayed
+    }
+  } catch (e) {
+    window.addEventListener('load', hidePreloader);
+    setTimeout(hidePreloader, 1500);
+  }
 
-  // Fallback in case load event already fired or takes too long
-  setTimeout(hidePreloader, 3000);
-
-  // Hide instantly on Astro view transitions so it doesn't replay
+  // Hide instantly on Astro view transitions so it never replays
   document.addEventListener('astro:after-swap', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
