@@ -4,6 +4,8 @@
  * FAQPage rich snippets, and BreadcrumbList.
  */
 
+import { DENTAL_OFFER_CATALOG } from '../data/dentalServiceCatalog.ts';
+
 export interface FaqItem {
   question: string;
   answer: string;
@@ -82,8 +84,16 @@ export function generateDentalClinicSchema() {
       "CosmeticDentistry",
       "Orthodontics",
       "Periodontics",
-      "Endodontics"
-    ]
+      "Endodontics",
+      "PediatricDentistry",
+      "Prosthodontics",
+      "OralSurgery"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Aureva Dental Comprehensive Services & Treatments",
+      "itemListElement": DENTAL_OFFER_CATALOG
+    }
   };
 }
 
@@ -208,6 +218,11 @@ export function generateDentistSchema(config: any) {
         "description": "Painless extraction of impacted wisdom teeth using digital low-radiation RVG imaging and gentle surgical technique."
       }
     ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Aureva Dental Comprehensive Services & Treatments",
+      "itemListElement": DENTAL_OFFER_CATALOG
+    },
     "employee": [
       {
         "@type": "Dentist",
