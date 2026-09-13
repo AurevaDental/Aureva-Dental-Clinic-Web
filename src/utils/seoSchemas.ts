@@ -13,16 +13,24 @@ export interface FaqItem {
 
 export const LOCAL_FAQS: FaqItem[] = [
   {
-    question: "Where is Aureva Dental located in Bengaluru?",
-    answer: "Aureva Dental is conveniently located at 2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Banaswadi, and North Bengaluru with dedicated 2-wheeler and 4-wheeler parking."
+    question: "Where is Aureva Dental located?",
+    answer: "Aureva Dental is conveniently located at 2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Kothanur, and North Bengaluru with dedicated patient parking."
+  },
+  {
+    question: "Can I pay with credit card or EMI at Aureva Dental?",
+    answer: "We accept all major Credit Cards, Debit Cards, UPI, and Net Banking. Patients wishing to split payments into monthly installments can seamlessly convert credit card transactions into flexible monthly EMIs directly via their bank's post-payment portal or net banking app."
+  },
+  {
+    question: "Who is the lead dentist at Aureva Dental Hennur?",
+    answer: "Dr. Shweta Singh, BDS (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. Our clinical team also includes Dr. Agniss Mishra, BDS (The Oxford Dental College, Bangalore), specializing in painless rotary endodontics and holistic restorative dentistry."
+  },
+  {
+    question: "Does Aureva Dental accept walk-ins or emergency appointments on Sundays?",
+    answer: "Yes, Aureva Dental is open on Sundays from 9:30 AM to 9:00 PM (Monday: 4:00 PM – 9:00 PM; Tuesday – Sunday: 9:30 AM – 9:00 PM). We welcome walk-in patients and prioritize same-day emergency appointments for acute toothaches, chipped or broken teeth, dental trauma, and severe sensitivity with low-radiation digital RVG diagnostics."
   },
   {
     question: "What dental treatments and specialities do you provide?",
     answer: "We offer comprehensive holistic and specialized dental care, including painless Root Canal Treatments (RCT), Clear Aligners and Invisible Braces, Dental Implants, Digital Smile Design, Ceramic & Zirconia Crowns, Advanced Teeth Whitening, Kids Dentistry, and preventative Scaling & Polishing in a calm, Japandi-inspired studio environment."
-  },
-  {
-    question: "Are emergency dental appointments available at Aureva Dental?",
-    answer: "Yes, we accept same-day emergency appointments for acute toothaches, chipped teeth, dental trauma, and severe sensitivity. We are open 7 days a week: Monday (4:00 PM – 9:00 PM) and Tuesday – Sunday (9:30 AM – 9:00 PM). Call us immediately at +91 73497 01002 for urgent care."
   },
   {
     question: "How much does a Root Canal Treatment (RCT) or Consultation cost?",
@@ -31,10 +39,6 @@ export const LOCAL_FAQS: FaqItem[] = [
   {
     question: "Do you offer Clear Aligners and Smile Makeovers?",
     answer: "Yes, we specialize in Digital Smile Design, customized porcelain/ceramic veneers, and Clear Aligners (ranging from Rs. 80,000 to Rs. 2,50,000). We also offer curated Bridal & Groom smile radiance packages for upcoming weddings and events."
-  },
-  {
-    question: "What payment and EMI options are available for treatments?",
-    answer: "We accept all major Credit Cards, Debit Cards, UPI, and digital modes. Multi-stage treatments like Dental Implants and Aligners can be seamlessly converted into flexible zero-cost or low-cost monthly EMIs directly via your card-issuing bank at checkout."
   },
   {
     question: "How can I book an appointment at Aureva Dental?",
@@ -48,15 +52,15 @@ export function generateDentalClinicSchema() {
     "@type": "DentalClinic",
     "name": "Aureva Dental",
     "image": "https://aurevadental.com/og-image.jpg",
-    "@id": "https://aurevadental.com",
-    "url": "https://aurevadental.com",
+    "@id": "https://aurevadental.com/#dentist",
+    "url": "https://aurevadental.com/",
     "telephone": "+917349701002",
     "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
+      "streetAddress": "2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
       "addressLocality": "Bengaluru",
-      "addressRegion": "KA",
+      "addressRegion": "Karnataka",
       "postalCode": "560043",
       "addressCountry": "IN"
     },
@@ -97,8 +101,36 @@ export function generateDentalClinicSchema() {
   };
 }
 
-export function generateDentistSchema(config: any) {
-  const socialLinks = config.social_media?.map((s: any) => s.url) || [];
+export function generateWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://aurevadental.com/#website",
+    "url": "https://aurevadental.com/",
+    "name": "Aureva Dental",
+    "alternateName": [
+      "Aureva Dental Clinic",
+      "Aureva Dental Studio",
+      "Aureva Dental Hennur"
+    ],
+    "description": "Premium Dental Clinic & Smile Studio in Hennur, Bangalore",
+    "inLanguage": "en-IN",
+    "publisher": {
+      "@id": "https://aurevadental.com/#dentist"
+    }
+  };
+}
+
+export function generateDentistSchema(config: any = {}) {
+  const socialLinks = config?.social_media?.map((s: any) => s.url) || [];
+  const allProfiles = [
+    "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
+    "https://www.google.com/maps?cid=10332859477033504351",
+    "https://www.instagram.com/aurevadental",
+    "https://www.facebook.com/aurevadental",
+    "https://www.practo.com/bangalore/clinic/aureva-dental-clinic-hennur",
+    ...socialLinks
+  ].filter((v, i, a) => typeof v === 'string' && v.length > 0 && a.indexOf(v) === i);
 
   return {
     "@context": "https://schema.org",
@@ -118,17 +150,30 @@ export function generateDentistSchema(config: any) {
       "https://aurevadental.com/og-image.jpg",
       "https://aurevadental.com/logo.png"
     ],
-    "description": "Aureva Dental is a modern dental clinic & smile studio in Hennur Bande, Horamavu Agara Road, Bengaluru. Painless root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
+    "description": "Aureva Dental is a modern dental clinic & smile studio at SLV Nilaya, Hennur Bande, Horamavu Agara Road, Bengaluru. Painless root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
     "telephone": "+917349701002",
     "email": "aurevadentalclinic@gmail.com",
     "priceRange": "₹₹",
     "currenciesAccepted": "INR",
-    "paymentAccepted": "Cash, Credit Card, Debit Card, UPI",
+    "paymentAccepted": [
+      "Cash",
+      "Credit Card",
+      "Debit Card",
+      "UPI",
+      "Net Banking"
+    ],
+    "paymentMethod": [
+      "https://schema.org/CreditCard",
+      "https://schema.org/DebitCard",
+      "https://schema.org/PaymentCard",
+      "https://schema.org/BankTransfer"
+    ],
+    "isAccessibleForFree": false,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
+      "streetAddress": "2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
       "addressLocality": "Bengaluru",
-      "addressRegion": "KA",
+      "addressRegion": "Karnataka",
       "postalCode": "560043",
       "addressCountry": "IN"
     },
@@ -138,6 +183,10 @@ export function generateDentistSchema(config: any) {
       "longitude": 77.6416031
     },
     "hasMap": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
+    "openingHours": [
+      "Mo 16:00-21:00",
+      "Tu-Su 09:30-21:00"
+    ],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -159,18 +208,87 @@ export function generateDentistSchema(config: any) {
         "closes": "21:00"
       }
     ],
+    "knowsAbout": [
+      "Rotary Endodontics",
+      "Root Canal Treatment",
+      "Dental Implants",
+      "Clear Aligners",
+      "Invisible Braces",
+      "Pediatric Dentistry",
+      "Laser Gum Therapy",
+      "Aesthetic Veneers",
+      "Digital Smile Design",
+      "Teeth Whitening",
+      "Oral Surgery",
+      "Wisdom Tooth Removal",
+      "Ceramic and Zirconia Crowns",
+      "Preventive Dentistry"
+    ],
     "areaServed": [
-      { "@type": "AdministrativeArea", "name": "Hennur" },
-      { "@type": "AdministrativeArea", "name": "Horamavu" },
-      { "@type": "AdministrativeArea", "name": "Hennur Bande" },
-      { "@type": "AdministrativeArea", "name": "Babusapalya" },
-      { "@type": "AdministrativeArea", "name": "Kalyan Nagar" },
-      { "@type": "AdministrativeArea", "name": "HRBR Layout" },
-      { "@type": "AdministrativeArea", "name": "Kammanahalli" },
-      { "@type": "AdministrativeArea", "name": "Banaswadi" },
-      { "@type": "AdministrativeArea", "name": "Ramamurthy Nagar" },
-      { "@type": "AdministrativeArea", "name": "North Bengaluru" },
-      { "@type": "AdministrativeArea", "name": "Bengaluru" }
+      {
+        "@type": "AdministrativeArea",
+        "name": "Hennur, Bengaluru",
+        "postalCode": "560043"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Horamavu, Bengaluru",
+        "postalCode": "560043"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Hennur Bande, Bengaluru",
+        "postalCode": "560043"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Kalyan Nagar, Bengaluru"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "HRBR Layout, Bengaluru"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Kothanur, Bengaluru"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Babusapalya, Bengaluru"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Kammanahalli, Bengaluru"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Banaswadi, Bengaluru"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Ramamurthy Nagar, Bengaluru"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Chelekere, Bengaluru"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Geddalahalli, Bengaluru"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "North Bengaluru"
+      },
+      {
+        "@type": "City",
+        "name": "Bengaluru"
+      },
+      {
+        "@type": "GeoShape",
+        "postalCode": "560043",
+        "addressCountry": "IN"
+      }
     ],
     "medicalSpecialty": [
       "Dentistry",
@@ -226,7 +344,7 @@ export function generateDentistSchema(config: any) {
     "employee": [
       {
         "@type": "Dentist",
-        "name": "Dr. Shweta",
+        "name": "Dr. Shweta Singh, BDS",
         "jobTitle": "Lead Aesthetic Architect & Founder",
         "alumniOf": {
           "@type": "EducationalOrganization",
@@ -243,14 +361,14 @@ export function generateDentistSchema(config: any) {
           "CosmeticDentistry",
           "Orthodontics"
         ],
-        "description": "Specialist in cosmetic smile design, clear aligners, and aesthetic restorative dentistry.",
+        "description": "Specialist in cosmetic smile design, clear aligners, and aesthetic restorative dentistry. Registered with Karnataka State Dental Council.",
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }
       },
       {
         "@type": "Dentist",
-        "name": "Dr. Agniss Mishra",
+        "name": "Dr. Agniss Mishra, BDS",
         "jobTitle": "Holistic Restorative Specialist",
         "alumniOf": {
           "@type": "EducationalOrganization",
@@ -267,7 +385,7 @@ export function generateDentistSchema(config: any) {
           "Endodontics",
           "RestorativeDentistry"
         ],
-        "description": "Specialist in painless rotary root canal treatments and holistic restorative dentistry.",
+        "description": "Specialist in painless rotary root canal treatments and holistic restorative dentistry. Registered with Karnataka State Dental Council.",
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }
@@ -282,6 +400,11 @@ export function generateDentistSchema(config: any) {
     },
     "review": ((config.google_reviews as any[]) || []).slice(0, 5).map((r: any) => ({
       "@type": "Review",
+      "itemReviewed": {
+        "@type": "Dentist",
+        "@id": "https://aurevadental.com/#dentist",
+        "name": "Aureva Dental"
+      },
       "author": {
         "@type": "Person",
         "name": r.name
@@ -293,7 +416,7 @@ export function generateDentistSchema(config: any) {
       },
       "reviewBody": r.text
     })),
-    "sameAs": socialLinks
+    "sameAs": allProfiles
   };
 }
 
@@ -337,17 +460,20 @@ export function generateTreatmentServiceSchema(params: {
     "name": params.name,
     "description": params.description,
     "url": params.url,
+    "procedureType": "https://schema.org/NoninvasiveProcedure",
     "provider": {
       "@type": "DentalClinic",
+      "@id": "https://aurevadental.com/#dentist",
       "name": "Aureva Dental",
-      "url": "https://aurevadental.com",
+      "url": "https://aurevadental.com/",
       "telephone": "+917349701002",
       "priceRange": "₹₹",
+      "image": "https://aurevadental.com/og-image.jpg",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
+        "streetAddress": "2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
         "addressLocality": "Bengaluru",
-        "addressRegion": "KA",
+        "addressRegion": "Karnataka",
         "postalCode": "560043",
         "addressCountry": "IN"
       },
@@ -375,6 +501,7 @@ export function generateBlogPostSchema(params: {
     "@type": "BlogPosting",
     "headline": params.headline,
     "description": params.description,
+    "image": params.image || "https://aurevadental.com/og-image.jpg",
     "author": {
       "@type": "Person",
       "name": params.authorName,
@@ -382,13 +509,22 @@ export function generateBlogPostSchema(params: {
     },
     "publisher": {
       "@type": "DentalClinic",
+      "@id": "https://aurevadental.com/#dentist",
       "name": "Aureva Dental",
-      "url": "https://aurevadental.com"
+      "url": "https://aurevadental.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aurevadental.com/logo.png"
+      }
     },
     "datePublished": params.datePublished,
     "dateModified": params.dateModified,
-    "mainEntityOfPage": params.url
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": params.url
+    }
   };
 }
+
 
 

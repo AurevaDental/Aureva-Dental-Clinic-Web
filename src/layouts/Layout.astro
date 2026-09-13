@@ -2,16 +2,18 @@
 import '../styles/global.css';
 import CustomCursor from '../components/CustomCursor';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import BackgroundAnimation from '../components/BackgroundAnimation.astro';
 import Preloader from '../components/Preloader.astro';
 import { getConfig } from '../utils/getConfig';
 import { ClientRouter } from 'astro:transitions';
 import MobileBottomBar from '../components/MobileBottomBar.astro';
 import BookingModal from '../components/BookingModal';
-import { generateDentistSchema } from '../utils/seoSchemas';
+import { generateDentistSchema, generateWebSiteSchema } from '../utils/seoSchemas';
 
 interface Props {
   hideHeader?: boolean;
+  hideFooter?: boolean;
   title?: string;
   description?: string;
   keywords?: string;
@@ -26,12 +28,15 @@ interface Props {
 }
 
 const config = getConfig();
+const currentUrl = new URL(Astro.url.pathname, "https://aurevadental.com").href;
+
 const { 
   hideHeader = false,
+  hideFooter = false,
   title = config.site_meta.title,
   description = config.site_meta.description,
   keywords = "dentist in hennur, dental clinic horamavu, root canal treatment bengaluru, clear aligners hennur, dental implants, teeth whitening, best dentist near me, kalyan nagar dentist",
-  canonical = "https://aurevadental.com/",
+  canonical = currentUrl,
   ogType = "website",
   ogTitle = title,
   ogDescription = description,
@@ -73,6 +78,7 @@ const {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="theme-color" content="#F5F2EB" />
+		<meta name="format-detection" content="telephone=yes" />
 
 		<link rel="icon" type="image/png" href="/logo.png" />
 		<link rel="apple-touch-icon" href="/logo.png" />
@@ -107,9 +113,13 @@ const {
 
 		<!-- Local Geo Meta Tags for Google Local Search & Maps -->
 		<meta name="geo.region" content="IN-KA" />
-		<meta name="geo.placename" content="Bengaluru" />
+		<meta name="geo.placename" content="Bengaluru, Hennur, Horamavu" />
 		<meta name="geo.position" content="13.0381741;77.6416031" />
 		<meta name="ICBM" content="13.0381741, 77.6416031" />
+		<meta name="city" content="Bengaluru" />
+		<meta name="state" content="Karnataka" />
+		<meta name="country" content="India" />
+		<meta name="zipcode" content="560043" />
 		
 		<!-- Open Graph / Facebook / WhatsApp -->
 		<meta property="og:type" content={ogType} />
@@ -121,16 +131,18 @@ const {
 		{ogImage && <meta property="og:image" content={ogImage} />}
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
-		<meta property="og:image:alt" content="Aureva Dental - Hennur, Bengaluru" />
+		<meta property="og:image:alt" content="Aureva Dental - Luxury Smile Studio in Hennur, Bengaluru" />
 
 		<!-- Open Graph Local Business & Contact Signals -->
-		<meta property="business:contact_data:street_address" content="2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande" />
+		<meta property="business:contact_data:street_address" content="2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande" />
 		<meta property="business:contact_data:locality" content="Bengaluru" />
 		<meta property="business:contact_data:region" content="Karnataka" />
 		<meta property="business:contact_data:postal_code" content="560043" />
 		<meta property="business:contact_data:country_name" content="India" />
 		<meta property="business:contact_data:phone_number" content="+917349701002" />
 		<meta property="business:contact_data:email" content="aurevadentalclinic@gmail.com" />
+		<meta property="place:location:latitude" content="13.0381741" />
+		<meta property="place:location:longitude" content="77.6416031" />
 		
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
@@ -141,15 +153,15 @@ const {
 		<meta property="twitter:image:alt" content="Aureva Dental - Hennur, Bengaluru" />
 
 		<!-- Canonical Google Rich Results JSON-LD Structured Data -->
+		<script type="application/ld+json" set:html={JSON.stringify(generateWebSiteSchema())} />
+		<script type="application/ld+json" set:html={JSON.stringify(generateDentistSchema(config))} />
 		{Array.isArray(schemaMarkup) ? (
 			schemaMarkup.map((schema) => (
 				<script type="application/ld+json" set:html={schema} />
 			))
 		) : schemaMarkup ? (
 			<script type="application/ld+json" set:html={schemaMarkup} />
-		) : (
-			<script type="application/ld+json" set:html={JSON.stringify(generateDentistSchema(config))} />
-		)}
+		) : null}
 
 		<!-- Preconnect to critical domains for lightning-fast loads -->
 		<link rel="preconnect" href="https://maps.googleapis.com" />
@@ -193,6 +205,9 @@ const {
 		<main class="flex-grow">
 			<slot />
 		</main>
+
+		<!-- Reusable Footer Component with Canonical NAP -->
+		{!hideFooter && <Footer />}
 
 		<!-- Interactive Booking Modal (Accessible site-wide) -->
 		<BookingModal client:load />

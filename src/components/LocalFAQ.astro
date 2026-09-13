@@ -33,9 +33,9 @@ import { LOCAL_FAQS } from '../utils/seoSchemas';
             aria-controls={`faq-answer-${index}`}
             id={`faq-question-${index}`}
           >
-            <span class="text-base sm:text-lg font-serif text-japandi-charcoal font-medium group-hover:text-japandi-moss transition-colors pr-2">
+            <h3 class="text-base sm:text-lg font-serif text-japandi-charcoal font-medium group-hover:text-japandi-moss transition-colors pr-2">
               {faq.question}
-            </span>
+            </h3>
             <div class="w-8 h-8 rounded-full bg-japandi-cream/80 border border-japandi-clay/60 flex items-center justify-center shrink-0 text-japandi-moss group-hover:bg-japandi-moss group-hover:text-japandi-cream transition-all duration-300">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -56,9 +56,9 @@ import { LOCAL_FAQS } from '../utils/seoSchemas';
             aria-labelledby={`faq-question-${index}`}
             class="faq-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out px-6 sm:px-8 text-xs sm:text-sm text-japandi-earth font-light leading-relaxed"
           >
-            <div class="pb-6 pt-2 border-t border-japandi-clay/25">
+            <p class="pb-6 pt-2 border-t border-japandi-clay/25">
               {faq.answer}
-            </div>
+            </p>
           </div>
         </div>
       ))}
