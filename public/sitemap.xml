@@ -15,8 +15,8 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
-      <image:title>Aureva Dental - Premium Dental Clinic &amp; Smile Studio in Hennur, Bangalore</image:title>
-      <image:caption>Modern Japandi dental clinic interior and diagnostic smile studio at Aureva Dental Hennur</image:caption>
+      <image:title>Aureva Dental - Premium Dental Clinic in Hennur, Bangalore</image:title>
+      <image:caption>Modern dental clinic interior and diagnostic smile studio at Aureva Dental Hennur</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://aurevadental.com/logo.png</image:loc>
@@ -294,8 +294,21 @@
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
-      <image:title>Best Dentist in Hennur, Bangalore | Aureva Dental Clinic</image:title>
+      <image:title>Best Dentist in Hennur, Bangalore | Aureva Dental</image:title>
       <image:caption>Compassionate family and cosmetic dental surgeons at Aureva Dental Hennur</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Local SEO: Emergency Dentist in Hennur -->
+  <url>
+    <loc>https://aurevadental.com/emergency-dentist-hennur</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Emergency Dentist in Hennur | Same-Day Relief | Aureva Dental</image:title>
+      <image:caption>Immediate emergency toothache relief, broken tooth repair, and Sunday appointments at Aureva Dental Hennur</image:caption>
     </image:image>
   </url>
 
@@ -308,7 +321,7 @@
     <image:image>
       <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
       <image:title>Top Dental Clinic in Hennur, Bangalore | Aureva Dental</image:title>
-      <image:caption>Modern Japandi dental clinic facility, RVG digital imaging and sterilisation suite</image:caption>
+      <image:caption>Modern dental clinic facility, RVG digital imaging and hospital-grade sterilisation suite</image:caption>
     </image:image>
   </url>
 
@@ -374,6 +387,97 @@
       <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
       <image:title>Wisdom Tooth Removal in Hennur, Bangalore | Aureva Dental</image:title>
       <image:caption>Painless impacted third molar extractions and emergency dental surgery in Hennur</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog Index -->
+  <url>
+    <loc>https://aurevadental.com/blog</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Dental Blog &amp; Oral Health Guide | Aureva Dental</image:title>
+      <image:caption>Evidence-based dental care guides, pricing breakdowns, and oral hygiene tips from Aureva Dental</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog: Clear Aligners Cost in Bangalore -->
+  <url>
+    <loc>https://aurevadental.com/blog/clear-aligners-cost-bangalore</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Clear Aligners Cost in Bangalore | Aureva Dental</image:title>
+      <image:caption>Comprehensive 2026 guide to clear aligners and invisible braces pricing in Bangalore</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog: Root Canal Treatment Cost in Hennur -->
+  <url>
+    <loc>https://aurevadental.com/blog/root-canal-treatment-cost-hennur</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Root Canal Treatment Cost in Hennur | Aureva Dental</image:title>
+      <image:caption>Complete guide to root canal treatment costs, single vs multi-sitting RCT, and zirconia crowns in Hennur</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog: Dental Implant Cost in Bangalore -->
+  <url>
+    <loc>https://aurevadental.com/blog/dental-implant-cost-bangalore</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Dental Implant Cost in Bangalore | Aureva Dental</image:title>
+      <image:caption>Detailed dental implant cost in Bangalore, bone grafting, full-mouth implants, and transparent pricing</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog: Tooth Extraction Cost in Bangalore -->
+  <url>
+    <loc>https://aurevadental.com/blog/tooth-extraction-cost-bangalore</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Tooth Extraction Cost in Bangalore | Aureva Dental</image:title>
+      <image:caption>Transparent tooth extraction cost in Bangalore, simple vs surgical extractions, and wisdom tooth removal</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog: Braces vs Clear Aligners -->
+  <url>
+    <loc>https://aurevadental.com/blog/braces-vs-clear-aligners</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Braces vs Clear Aligners Guide | Aureva Dental</image:title>
+      <image:caption>Head-to-head comparison of braces vs clear aligners: costs, comfort, lifestyle, and clinical results</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog: Teeth Whitening Cost in Bangalore -->
+  <url>
+    <loc>https://aurevadental.com/blog/teeth-whitening-cost-bangalore</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Teeth Whitening Cost in Bangalore | Aureva Dental</image:title>
+      <image:caption>Transparent teeth whitening cost in Bangalore, laser whitening vs home trays, and safety protocols</image:caption>
     </image:image>
   </url>
 
