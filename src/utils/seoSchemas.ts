@@ -134,7 +134,7 @@ export function generateDentistSchema(config: any = {}) {
 
   return {
     "@context": "https://schema.org",
-    "@type": ["Dentist", "MedicalBusiness", "DentalClinic"],
+    "@type": ["Dentist", "MedicalBusiness", "DentalClinic", "LocalBusiness"],
     "@id": "https://aurevadental.com/#dentist",
     "name": "Aureva Dental",
     "legalName": "Aureva Dental Clinic",

@@ -153,4 +153,108 @@
     </image:image>
   </url>
 
+  <!-- Clinic Contact & Location Entity -->
+  <url>
+    <loc>https://aurevadental.com/contact</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Contact Aureva Dental | Hennur, Bangalore Clinic &amp; Appointments</image:title>
+      <image:caption>Aureva Dental Clinic reception, directions and patient consultation booking in Hennur</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Local SEO: Dentist in Hennur -->
+  <url>
+    <loc>https://aurevadental.com/dentist-in-hennur</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Best Dentist in Hennur, Bangalore | Aureva Dental Clinic</image:title>
+      <image:caption>Compassionate family and cosmetic dentists Dr. Shweta Singh and Dr. Agniss Mishra</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Local SEO: Dental Clinic in Hennur -->
+  <url>
+    <loc>https://aurevadental.com/dental-clinic-in-hennur</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Top Dental Clinic in Hennur, Bangalore | Aureva Dental</image:title>
+      <image:caption>Modern Japandi dental clinic facility, RVG digital imaging and sterilisation suite</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Local SEO: Root Canal Treatment Hennur -->
+  <url>
+    <loc>https://aurevadental.com/root-canal-treatment-hennur</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Root Canal Treatment in Hennur, Bangalore | Aureva Dental</image:title>
+      <image:caption>Painless single-sitting rotary root canal treatment and zirconia crowns in Hennur</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Local SEO: Dental Implants Hennur -->
+  <url>
+    <loc>https://aurevadental.com/dental-implants-hennur</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Dental Implants in Hennur, Bangalore | Aureva Dental</image:title>
+      <image:caption>Permanent titanium and zirconia tooth replacements and full arch dental implants</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Local SEO: Invisible Aligners Hennur -->
+  <url>
+    <loc>https://aurevadental.com/invisible-aligners-hennur</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Invisible Aligners in Hennur, Bangalore | Aureva Dental</image:title>
+      <image:caption>Discreet 3D digital clear braces and custom invisible aligner trays in Hennur</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Local SEO: Teeth Whitening Hennur -->
+  <url>
+    <loc>https://aurevadental.com/teeth-whitening-hennur</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Teeth Whitening in Hennur, Bangalore | Aureva Dental</image:title>
+      <image:caption>Professional laser teeth whitening and bridal smile radiance packages in Hennur</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Local SEO: Wisdom Tooth Removal Hennur -->
+  <url>
+    <loc>https://aurevadental.com/wisdom-tooth-removal-hennur</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/og-image.jpg</image:loc>
+      <image:title>Wisdom Tooth Removal in Hennur, Bangalore | Aureva Dental</image:title>
+      <image:caption>Painless impacted third molar extractions and emergency dental surgery in Hennur</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
