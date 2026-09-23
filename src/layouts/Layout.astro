@@ -194,13 +194,14 @@ const primaryTagId = googleAnalyticsId || googleAdsId;
 		<meta property="place:location:latitude" content="13.0381741" />
 		<meta property="place:location:longitude" content="77.6416031" />
 		
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:site" content="@aurevadental" />
-		<meta property="twitter:title" content={ogTitle} />
-		<meta property="twitter:description" content={ogDescription} />
-		{ogImage && <meta property="twitter:image" content={ogImage} />}
-		<meta property="twitter:image:alt" content="Aureva Dental - Hennur, Bengaluru" />
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@aurevadental" />
+		<meta name="twitter:creator" content="@aurevadental" />
+		<meta name="twitter:title" content={ogTitle} />
+		<meta name="twitter:description" content={ogDescription} />
+		{ogImage && <meta name="twitter:image" content={ogImage} />}
+		<meta name="twitter:image:alt" content="Aureva Dental - Hennur, Bengaluru" />
 
 		<!-- Canonical Google Rich Results JSON-LD Structured Data -->
 		<script type="application/ld+json" set:html={JSON.stringify(generateWebSiteSchema())} />
