@@ -402,7 +402,7 @@ const seoProps = {
       const icon = item.querySelector('.faq-icon');
       if (!toggle || !content) return;
 
-      const newBtn = toggle.cloneNode(true);
+      const newBtn = toggle.cloneNode(true) as HTMLElement;
       toggle.parentNode?.replaceChild(newBtn, toggle);
 
       newBtn.addEventListener('click', () => {

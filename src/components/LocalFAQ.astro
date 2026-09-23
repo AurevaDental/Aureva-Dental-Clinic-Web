@@ -102,7 +102,7 @@ import { LOCAL_FAQS } from '../utils/seoSchemas';
       if (!toggleBtn || !content) return;
 
       // Ensure no duplicate listener
-      const newBtn = toggleBtn.cloneNode(true);
+      const newBtn = toggleBtn.cloneNode(true) as HTMLElement;
       toggleBtn.parentNode?.replaceChild(newBtn, toggleBtn);
 
       newBtn.addEventListener('click', () => {
