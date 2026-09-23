@@ -24,6 +24,7 @@ interface Props {
   ogUrl?: string;
   ogImage?: string;
   googleSiteVerification?: string;
+  bingSiteVerification?: string;
   schemaMarkup?: string | string[];
 }
 
@@ -43,21 +44,45 @@ const {
   ogUrl = canonical,
   ogImage = "https://aurevadental.com/assets/og-image.jpg",
   googleSiteVerification = config.site_meta?.google_site_verification || "",
+  bingSiteVerification = config.site_meta?.bing_site_verification || "",
   schemaMarkup
 } = Astro.props;
+
+const googleAdsId = config.site_meta?.google_ads_id || "AW-18385058775";
+const googleAnalyticsId = config.site_meta?.google_analytics_id || "";
+const googleTagManagerId = config.site_meta?.google_tag_manager_id || "";
+const primaryTagId = googleAnalyticsId || googleAdsId;
 ---
 
 <!doctype html>
 <html lang="en" class="custom-cursor-active">
 	<head>
-		<!-- Google tag (gtag.js) -->
-		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-18385058775"></script>
-		<script is:inline>
+		{/* Google Tag Manager (if GTM ID is configured) */}
+		{googleTagManagerId && (
+			<script is:inline define:vars={{ googleTagManagerId }}>
+				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer',googleTagManagerId);
+			</script>
+		)}
+
+		{/* Google tag (gtag.js) for Google Analytics and Google Ads */}
+		{primaryTagId && (
+			<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${primaryTagId}`}></script>
+		)}
+		<script is:inline define:vars={{ googleAdsId, googleAnalyticsId }}>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 
-		  gtag('config', 'AW-18385058775');
+		  if (googleAdsId) {
+		    gtag('config', googleAdsId);
+		  }
+		  if (googleAnalyticsId) {
+		    gtag('config', googleAnalyticsId);
+		  }
 
 		  function gtag_report_conversion(url) {
 		    var callback = function () {
@@ -73,6 +98,28 @@ const {
 		    });
 		    return false;
 		  }
+
+		  // Track pageviews across Astro View Transitions
+		  document.addEventListener('astro:page-load', function() {
+		    if (typeof window.gtag === 'function') {
+		      if (googleAdsId) {
+		        window.gtag('event', 'page_view', {
+		          page_location: window.location.href,
+		          page_path: window.location.pathname,
+		          page_title: document.title,
+		          send_to: googleAdsId
+		        });
+		      }
+		      if (googleAnalyticsId) {
+		        window.gtag('event', 'page_view', {
+		          page_location: window.location.href,
+		          page_path: window.location.pathname,
+		          page_title: document.title,
+		          send_to: googleAnalyticsId
+		        });
+		      }
+		    }
+		  });
 		</script>
 		<ClientRouter />
 		<meta charset="UTF-8" />
@@ -85,9 +132,12 @@ const {
 		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="generator" content={Astro.generator} />
 		
-		<!-- Google Search Console Verification Tag (if token provided) -->
+		{/* Search Console & Webmaster Verification Meta Tags */}
 		{googleSiteVerification && (
 			<meta name="google-site-verification" content={googleSiteVerification} />
+		)}
+		{bingSiteVerification && (
+			<meta name="msvalidate.01" content={bingSiteVerification} />
 		)}
 
 		<!-- Theme toggle prevention of flash (FOUC) -->
@@ -189,6 +239,18 @@ const {
 		</noscript>
 	</head>
 	<body class="bg-japandi-cream text-japandi-charcoal font-sans antialiased selection:bg-japandi-clay selection:text-japandi-charcoal min-h-screen flex flex-col relative z-0 pb-20 md:pb-0">
+		{/* Google Tag Manager (noscript fallback) */}
+		{googleTagManagerId && (
+			<noscript>
+				<iframe 
+					src={`https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}`}
+					height="0" 
+					width="0" 
+					style="display:none;visibility:hidden"
+				></iframe>
+			</noscript>
+		)}
+
 		<!-- Splash Screen / Preloader -->
 		<Preloader />
 

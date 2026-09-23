@@ -44,11 +44,11 @@ Aureva Dental is a premier dental practice located in Hennur Bande / Horamavu Ag
 ## Primary Canonical URLs
 
 - [Homepage](https://aurevadental.com/): Comprehensive clinic overview, doctor profiles, and appointment booking.
-- [Clear Aligners Treatment](https://aurevadental.com/treatments/clear-aligners/): Transparent aligner stages, eligibility, and payment options.
-- [Dental Implants Treatment](https://aurevadental.com/treatments/dental-implants/): Implant procedure breakdown, pricing tiers, and longevity.
-- [Root Canal Treatment](https://aurevadental.com/treatments/root-canal-treatment/): Single-sitting rotary endodontics protocol and pain relief.
-- [Cosmetic Dentistry](https://aurevadental.com/treatments/cosmetic-dentistry/): Veneers, composite bonding, and smile design.
-- [Teeth Whitening](https://aurevadental.com/treatments/teeth-whitening/): In-office LED whitening and take-home maintenance.
-- [Wisdom Teeth Removal](https://aurevadental.com/treatments/wisdom-teeth-removal/): Surgical impaction extraction protocols.
-- [Pediatric Dentistry](https://aurevadental.com/treatments/pediatric-dentistry/): Gentle preventative child dental care.
-- [Clinical Journal / Blog](https://aurevadental.com/blog/): Evidence-based patient guides, post-operative care, and oral hygiene education.
+- [Clear Aligners Treatment](https://aurevadental.com/treatments/clear-aligners): Transparent aligner stages, eligibility, and payment options.
+- [Dental Implants Treatment](https://aurevadental.com/treatments/dental-implants): Implant procedure breakdown, pricing tiers, and longevity.
+- [Root Canal Treatment](https://aurevadental.com/treatments/root-canal-treatment): Single-sitting rotary endodontics protocol and pain relief.
+- [Cosmetic Dentistry](https://aurevadental.com/treatments/cosmetic-dentistry): Veneers, composite bonding, and smile design.
+- [Teeth Whitening](https://aurevadental.com/treatments/teeth-whitening): In-office LED whitening and take-home maintenance.
+- [Wisdom Tooth Removal](https://aurevadental.com/treatments/wisdom-tooth-removal): Surgical impaction extraction protocols.
+- [Pediatric Dentistry](https://aurevadental.com/treatments/pediatric-dentistry): Gentle preventative child dental care.
+- [Clinical Journal / Blog](https://aurevadental.com/blog): Evidence-based patient guides, post-operative care, and oral hygiene education.
