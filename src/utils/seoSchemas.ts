@@ -22,7 +22,7 @@ export const LOCAL_FAQS: FaqItem[] = [
   },
   {
     question: "Who is the lead dentist at Aureva Dental Hennur?",
-    answer: "Dr. Shweta Singh, BDS (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. Our clinical team also includes Dr. Agniss Mishra, BDS (The Oxford Dental College, Bangalore), specializing in painless rotary endodontics and holistic restorative dentistry."
+    answer: "Dr. Shweta Singh, BDS (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. Our clinical team also includes Dr. Agniss Mishra, BDS (The Oxford Dental College, Bangalore), Dental Surgeon providing gentle preventive and restorative dental care."
   },
   {
     question: "Does Aureva Dental accept walk-ins or emergency appointments on Sundays?",
@@ -369,7 +369,7 @@ export function generateDentistSchema(config: any = {}) {
       {
         "@type": "Dentist",
         "name": "Dr. Agniss Mishra, BDS",
-        "jobTitle": "Holistic Restorative Specialist",
+        "jobTitle": "Dental Surgeon",
         "alumniOf": {
           "@type": "EducationalOrganization",
           "name": "The Oxford Dental College, Bangalore"
@@ -382,10 +382,9 @@ export function generateDentistSchema(config: any = {}) {
           }
         ],
         "medicalSpecialty": [
-          "Endodontics",
-          "RestorativeDentistry"
+          "Dentistry"
         ],
-        "description": "Specialist in painless rotary root canal treatments and holistic restorative dentistry. Registered with Karnataka State Dental Council.",
+        "description": "Dental Surgeon (BDS, The Oxford Dental College) providing gentle preventive and restorative dental care at Aureva Dental.",
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }
