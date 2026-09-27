@@ -74,6 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<script is:inline define:vars={{ googleAdsId, googleAnalyticsId }}>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
+		  window.gtag = gtag;
 		  gtag('js', new Date());
 
 		  if (googleAdsId) {
@@ -83,20 +84,100 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		    gtag('config', googleAnalyticsId);
 		  }
 
-		  function gtag_report_conversion(url) {
+		  // Global Google Ads & GTM Call Conversion Function
+		  window.gtag_report_conversion = function(url) {
+		    var targetUrl = url || 'tel:+917349701002';
+		    var navigated = false;
 		    var callback = function () {
-		      if (typeof(url) != 'undefined') {
+		      if (!navigated && typeof(url) != 'undefined' && url) {
+		        navigated = true;
 		        window.location = url;
 		      }
 		    };
-		    gtag('event', 'conversion', {
+
+		    // Push to Google Tag Manager dataLayer
+		    if (window.dataLayer) {
+		      window.dataLayer.push({
+		        event: 'clinic_call',
+		        event_category: 'Contact',
+		        event_action: 'Click to Call',
+		        event_label: targetUrl,
+		        phone_number: '+917349701002',
+		        page_location: window.location.href,
+		        page_title: document.title
+		      });
+		    }
+
+		    // Safety timeout in case ad script is blocked or network is slow
+		    setTimeout(callback, 500);
+
+		    // Send conversion to Google Ads
+		    if (typeof window.gtag === 'function') {
+		      window.gtag('event', 'conversion', {
 		        'send_to': 'AW-18385058775/c0YWCIGTj-8cENf31r5E',
 		        'value': 1.0,
 		        'currency': 'INR',
 		        'event_callback': callback
-		    });
+		      });
+		    } else {
+		      callback();
+		    }
 		    return false;
-		  }
+		  };
+		  var gtag_report_conversion = window.gtag_report_conversion;
+
+		  // Global delegated listener for calls, WhatsApp & appointments
+		  document.addEventListener('click', function(e) {
+		    var callLink = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+		    if (callLink) {
+		      var tel = callLink.getAttribute('href') || 'tel:+917349701002';
+		      if (window.dataLayer) {
+		        window.dataLayer.push({
+		          event: 'clinic_call',
+		          event_category: 'Contact',
+		          event_action: 'Phone Call Click',
+		          event_label: tel,
+		          phone_number: tel.replace('tel:', ''),
+		          page_location: window.location.href,
+		          page_title: document.title
+		        });
+		      }
+		      if (typeof window.gtag === 'function') {
+		        window.gtag('event', 'conversion', {
+		          'send_to': 'AW-18385058775/c0YWCIGTj-8cENf31r5E',
+		          'value': 1.0,
+		          'currency': 'INR'
+		        });
+		      }
+		    }
+
+		    var waLink = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]') : null;
+		    if (waLink) {
+		      if (window.dataLayer) {
+		        window.dataLayer.push({
+		          event: 'whatsapp_click',
+		          event_category: 'Contact',
+		          event_action: 'WhatsApp Chat Click',
+		          event_label: waLink.getAttribute('href'),
+		          page_location: window.location.href,
+		          page_title: document.title
+		        });
+		      }
+		    }
+
+		    var bookBtn = e.target && e.target.closest ? e.target.closest('[data-open-booking]') : null;
+		    if (bookBtn) {
+		      if (window.dataLayer) {
+		        window.dataLayer.push({
+          event: 'booking_modal_open',
+		          event_category: 'Engagement',
+		          event_action: 'Open Booking Modal',
+		          page_location: window.location.href,
+		          page_title: document.title
+		        });
+		      }
+		    }
+		  });
 
 		  // Track pageviews across Astro View Transitions
 		  document.addEventListener('astro:page-load', function() {
