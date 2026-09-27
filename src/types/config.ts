@@ -78,6 +78,10 @@ export interface Location {
   google_maps_url: string;
   phone: string;
   hours: string;
+  latitude?: number | string;
+  longitude?: number | string;
+  email?: string;
+  parking?: string;
 }
 
 export interface LocationsSection {

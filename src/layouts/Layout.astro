@@ -50,23 +50,22 @@ const {
 
 const googleAdsId = config.site_meta?.google_ads_id || "AW-18385058775";
 const googleAnalyticsId = config.site_meta?.google_analytics_id || "";
-const googleTagManagerId = config.site_meta?.google_tag_manager_id || "";
+const googleTagManagerId = config.site_meta?.google_tag_manager_id || "GTM-WRVN4QWK";
 const primaryTagId = googleAnalyticsId || googleAdsId;
 ---
 
 <!doctype html>
 <html lang="en" class="custom-cursor-active">
 	<head>
-		{/* Google Tag Manager (if GTM ID is configured) */}
+		<!-- Google Tag Manager -->
 		{googleTagManagerId && (
-			<script is:inline define:vars={{ googleTagManagerId }}>
-				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-				})(window,document,'script','dataLayer',googleTagManagerId);
-			</script>
+			<script is:inline set:html={`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${googleTagManagerId}');`} />
 		)}
+		<!-- End Google Tag Manager -->
 
 		{/* Google tag (gtag.js) for Google Analytics and Google Ads */}
 		{primaryTagId && (
@@ -101,6 +100,14 @@ const primaryTagId = googleAnalyticsId || googleAdsId;
 
 		  // Track pageviews across Astro View Transitions
 		  document.addEventListener('astro:page-load', function() {
+		    if (window.dataLayer) {
+		      window.dataLayer.push({
+		        event: 'page_view',
+		        page_location: window.location.href,
+		        page_path: window.location.pathname,
+		        page_title: document.title
+		      });
+		    }
 		    if (typeof window.gtag === 'function') {
 		      if (googleAdsId) {
 		        window.gtag('event', 'page_view', {
@@ -240,17 +247,11 @@ const primaryTagId = googleAnalyticsId || googleAdsId;
 		</noscript>
 	</head>
 	<body class="bg-japandi-cream text-japandi-charcoal font-sans antialiased selection:bg-japandi-clay selection:text-japandi-charcoal min-h-screen flex flex-col relative z-0 pb-20 md:pb-0">
-		{/* Google Tag Manager (noscript fallback) */}
+		<!-- Google Tag Manager (noscript) -->
 		{googleTagManagerId && (
-			<noscript>
-				<iframe 
-					src={`https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}`}
-					height="0" 
-					width="0" 
-					style="display:none;visibility:hidden"
-				></iframe>
-			</noscript>
+			<noscript set:html={`<iframe src="https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`} />
 		)}
+		<!-- End Google Tag Manager (noscript) -->
 
 		<!-- Splash Screen / Preloader -->
 		<Preloader />
