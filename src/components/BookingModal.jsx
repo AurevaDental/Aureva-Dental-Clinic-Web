@@ -27,6 +27,7 @@ export default function BookingModal() {
   const [phone, setPhone] = useState('');
   const [notes, setNotes] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [lastWhatsappUrl, setLastWhatsappUrl] = useState('');
 
   // Set default date to tomorrow
   useEffect(() => {
@@ -112,6 +113,7 @@ export default function BookingModal() {
     }
 
     // Open WhatsApp
+    setLastWhatsappUrl(whatsappUrl);
     window.open(whatsappUrl, '_blank');
     setSubmitted(true);
   };
@@ -173,18 +175,28 @@ export default function BookingModal() {
                 We have prepared your reservation on WhatsApp. Our clinical desk at Hennur Bande will promptly confirm your slot.
               </p>
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                {lastWhatsappUrl && (
+                  <a
+                    href={lastWhatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-6 py-3 rounded-full bg-emerald-600 text-white text-xs font-semibold uppercase tracking-wider hover:bg-emerald-700 transition-colors flex items-center justify-center gap-1.5"
+                  >
+                    <span>Send Message on WhatsApp</span>
+                  </a>
+                )}
                 <a
                   href="tel:+917349701002"
                   className="w-full sm:w-auto px-6 py-3 rounded-full border border-japandi-moss text-japandi-moss text-xs font-semibold uppercase tracking-wider hover:bg-japandi-moss/10 transition-colors"
                 >
-                  Call Desk: +91 73497 01002
+                  Call Desk
                 </a>
                 <button
                   type="button"
                   onClick={() => setIsOpen(false)}
-                  className="w-full sm:w-auto px-6 py-3 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold uppercase tracking-wider hover:bg-japandi-charcoal transition-colors"
+                  className="w-full sm:w-auto px-6 py-3 rounded-full bg-japandi-sand/80 text-japandi-charcoal hover:bg-japandi-clay/40 text-xs font-semibold uppercase tracking-wider transition-colors"
                 >
-                  Close Window
+                  Done
                 </button>
               </div>
             </div>

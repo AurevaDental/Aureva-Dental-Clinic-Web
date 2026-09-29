@@ -121,7 +121,7 @@ export function generateWebSiteSchema() {
   };
 }
 
-export function generateDentistSchema(config: any = {}) {
+export function generateDentistSchema(config: any = {}, includeFullCatalog: boolean = false) {
   const socialLinks = config?.social_media?.map((s: any) => s.url) || [];
   const allProfiles = [
     "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
@@ -336,11 +336,13 @@ export function generateDentistSchema(config: any = {}) {
         "description": "Painless extraction of impacted wisdom teeth using digital low-radiation RVG imaging and gentle surgical technique."
       }
     ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Aureva Dental Comprehensive Services & Treatments",
-      "itemListElement": DENTAL_OFFER_CATALOG
-    },
+    ...(includeFullCatalog ? {
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Aureva Dental Comprehensive Services & Treatments",
+        "itemListElement": DENTAL_OFFER_CATALOG
+      }
+    } : {}),
     "employee": [
       {
         "@type": "Dentist",
@@ -452,6 +454,7 @@ export function generateTreatmentServiceSchema(params: {
   description: string;
   url: string;
   medicalSpecialty?: string;
+  isSurgical?: boolean;
 }) {
   return {
     "@context": "https://schema.org",
@@ -459,7 +462,9 @@ export function generateTreatmentServiceSchema(params: {
     "name": params.name,
     "description": params.description,
     "url": params.url,
-    "procedureType": "https://schema.org/NoninvasiveProcedure",
+    "procedureType": params.isSurgical
+      ? "https://schema.org/SurgicalProcedure"
+      : "https://schema.org/NoninvasiveProcedure",
     "provider": {
       "@type": "DentalClinic",
       "@id": "https://aurevadental.com/#dentist",

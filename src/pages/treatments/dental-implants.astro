@@ -4,8 +4,8 @@ import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSc
 
 export const prerender = false;
 
-const pageTitle = "Dental Implants in Hennur | Aureva Dental";
-const pageDescription = "Restore missing teeth with permanent dental implants at Aureva Dental in Hennur, Bangalore. Titanium & zirconia options with transparent clinical pricing.";
+const pageTitle = "Dental Implants in Bangalore | Permanent Tooth Replacement | Aureva Dental";
+const pageDescription = "Restore missing teeth with permanent dental implants in Bangalore at Aureva Dental. Titanium & zirconia implants, single to full-arch restorations & transparent pricing.";
 const canonicalUrl = "https://aurevadental.com/treatments/dental-implants";
 const phoneCallUrl = "tel:+917349701002";
 const whatsappUrl = "https://wa.me/917349701002?text=Hello%2C%20I%20would%20like%20to%20consult%20about%20Dental%20Implants%20at%20Aureva%20Dental.";
@@ -24,7 +24,7 @@ const faqs = [
     answer: "Titanium implants are the gold standard with over 50 years of clinical evidence, offering immense tensile strength and rapid osseointegration. Zirconia implants are 100% ceramic and metal-free, making them ideal for patients with metal sensitivities or thin gum biotypes where complete ceramic aesthetics are prioritized."
   },
   {
-    question: "What is the cost of dental implants at Aureva Dental Hennur?",
+    question: "What is the cost of dental implants at Aureva Dental in Bangalore?",
     answer: "At Aureva Dental, single dental implants start from Rs. 25,000 to Rs. 60,000 depending on the implant brand system (Nobel Biocare, Straumann, Osstem) and surgical requirements. An implant with a custom CAD/CAM zirconia crown ranges between Rs. 45,000 and Rs. 80,000. Full-mouth rehabilitations start from Rs. 2,50,000. We accept all major Credit Cards, Debit Cards, UPI, and Net Banking; post-payment monthly EMI conversion is available via your issuing bank."
   }
 ];
@@ -41,7 +41,8 @@ const serviceSchema = JSON.stringify(generateTreatmentServiceSchema({
   name: "Dental Implants & Tooth Replacement",
   description: pageDescription,
   url: canonicalUrl,
-  medicalSpecialty: "OralSurgery"
+  medicalSpecialty: "OralSurgery",
+  isSurgical: true
 }));
 
 const seoProps = {

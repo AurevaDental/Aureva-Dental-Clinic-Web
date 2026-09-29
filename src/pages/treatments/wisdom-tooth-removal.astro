@@ -4,8 +4,8 @@ import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSc
 
 export const prerender = false;
 
-const pageTitle = "Wisdom Tooth Removal in Hennur | Aureva Dental";
-const pageDescription = "Painless wisdom tooth removal & oral surgery in Hennur, Bangalore at Aureva Dental. Digital RVG diagnostics & same-day emergency toothache relief.";
+const pageTitle = "Painless Wisdom Tooth Removal in Bangalore | Oral Surgery | Aureva Dental";
+const pageDescription = "Painless wisdom tooth removal & surgical disimpaction in Bangalore at Aureva Dental. Digital RVG diagnostics & same-day emergency toothache relief.";
 const canonicalUrl = "https://aurevadental.com/treatments/wisdom-tooth-removal";
 const phoneCallUrl = "tel:+917349701002";
 const whatsappUrl = "https://wa.me/917349701002?text=Hello%2C%20I%20have%20wisdom%20tooth%20pain%20and%20would%20like%20to%20consult%20at%20Aureva%20Dental.";
@@ -24,7 +24,7 @@ const faqs = [
     answer: "Not necessarily. We only recommend extracting wisdom teeth that are actively causing pain, impacted against adjacent healthy molars, infected (pericoronitis), or threatening cyst formation. Depending on your preference and clinical diagnostics, we can treat one tooth at a time or remove both on one side in a single appointment."
   },
   {
-    question: "What is the cost of wisdom tooth removal at Aureva Dental Hennur?",
+    question: "What is the cost of wisdom tooth removal at Aureva Dental in Bangalore?",
     answer: "At Aureva Dental, simple erupted tooth extractions range from Rs. 1,500 to Rs. 3,500. Surgical extractions for partially or fully impacted horizontal wisdom molars range between Rs. 4,500 and Rs. 9,000 depending on angulation and proximity to the mandibular nerve canal. Complete transparent pricing is shared upfront after reviewing your digital RVG X-ray."
   }
 ];
@@ -41,7 +41,8 @@ const serviceSchema = JSON.stringify(generateTreatmentServiceSchema({
   name: "Wisdom Tooth Removal & Oral Surgery",
   description: pageDescription,
   url: canonicalUrl,
-  medicalSpecialty: "OralSurgery"
+  medicalSpecialty: "OralSurgery",
+  isSurgical: true
 }));
 
 const seoProps = {

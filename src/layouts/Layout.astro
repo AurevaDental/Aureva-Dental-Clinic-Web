@@ -295,7 +295,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 		<!-- Canonical Google Rich Results JSON-LD Structured Data -->
 		<script type="application/ld+json" set:html={JSON.stringify(generateWebSiteSchema())} />
-		<script type="application/ld+json" set:html={JSON.stringify(generateDentistSchema(config))} />
+		<script type="application/ld+json" set:html={JSON.stringify(generateDentistSchema(config, Astro.url.pathname === '/' || Astro.url.pathname === ''))} />
 		{Array.isArray(schemaMarkup) ? (
 			schemaMarkup.map((schema) => (
 				<script type="application/ld+json" set:html={schema} />

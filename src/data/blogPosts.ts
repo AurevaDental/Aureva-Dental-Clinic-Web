@@ -755,6 +755,782 @@ export const BLOG_POSTS: BlogPost[] = [
     ctaHeadline: "Get a Radiant, Camera-Ready Smile in Hennur",
     ctaText: "Visit Aureva Dental on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp to book your laser teeth whitening session."
   }
+,
+{
+  "slug": "severe-throbbing-toothache-at-night",
+  "title": "Severe Throbbing Toothache at Night: Causes, Relief & When It's an Emergency | Aureva Dental",
+  "headline": "Severe Throbbing Toothache at Night: Causes, Immediate Relief & When to See an Emergency Dentist",
+  "metaDescription": "Waking up with a severe throbbing toothache at night? Understand acute irreversible pulpitis, practical night relief steps, and same-day root canal care at Aureva Dental Bangalore.",
+  "author": "Dr. Shweta Singh, BDS",
+  "authorRole": "Clinical Director & Dental Surgeon",
+  "authorCredentials": "Dr. Shweta Singh, BDS — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  "date": "September 2026",
+  "datePublished": "2026-09-25",
+  "dateModified": "2026-09-28",
+  "category": "Emergency Dental Care & Endodontics",
+  "readTime": "7 min read",
+  "excerpt": "Why toothaches throb violently at night, the clinical science of irreversible pulpitis, practical emergency steps to survive until morning, and definitive pain relief at Aureva Dental.",
+  "relatedTreatmentUrl": "/treatments/root-canal-treatment",
+  "relatedTreatmentName": "Single-Sitting Root Canal Treatment",
+  "introParagraphs": [
+    "There are few physical experiences as distressing as waking up in the dead of night to a severe, rhythmic, throbbing pain radiating through your jaw and temple. Nighttime toothaches are notoriously intense—pounding in sync with your heartbeat and resisting standard household painkillers.",
+    "At Aureva Dental in Hennur and Horamavu, Bangalore, nocturnal dental pain is the single most common reason patients reach out to our emergency helpline. This comprehensive clinical guide explains why dental pain surges when lying down, what your symptoms indicate, practical steps to survive the night, and the definitive dental care needed to save your natural tooth."
+  ],
+  "sections": [
+    {
+      "heading": "Why Does a Toothache Hurt More When Lying Down at Night?",
+      "paragraphs": [
+        "Many patients wonder why a manageable daytime dull ache suddenly transforms into an excruciating, unbearable throbbing episode as soon as they go to bed. The explanation lies in human circulatory physics and pulpal micro-anatomy.",
+        "When you stand or sit upright during the day, gravity helps drain venous blood from your head. When you lie down flat on a pillow, systemic blood pressure redistributes evenly, increasing intracranial and facial micro-vascular pressure. Inside an inflamed tooth, the dental pulp (nerve and capillary bundle) is trapped within a rigid, unyielding chamber of hard dentin and enamel.",
+        "As blood pools in your head, arterial pulsations create immense fluid pressure against sensory nerve fibers (A-delta and C fibers) trapped inside the non-compliant tooth walls, producing that unmistakable pounding, throbbing sensation."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Immediate Posture Adjustment",
+        "text": "Never lie completely flat when experiencing acute tooth pain. Elevate your head with 2 to 3 pillows to reduce vascular blood pressure in your head and relieve micro-pulpal tension."
+      }
+    },
+    {
+      "heading": "Top Causes of Severe Nighttime Tooth Pain",
+      "paragraphs": [
+        "Understanding the underlying etiology is crucial because different clinical conditions require specific medical and dental therapies:"
+      ],
+      "bulletPoints": [
+        "Acute Irreversible Pulpitis: Deep bacterial decay reaches the pulp chamber, triggering hyperemic vascular dilation that the nerve cannot survive. Pain is spontaneous, throbbing, and lingers for minutes after hot or cold triggers.",
+        "Periapical Dental Abscess: Bacterial infection exits the root apex into the surrounding alveolar jawbone, creating a localized pus pocket that creates intense pressure on bone nerve endings.",
+        "Cracked Tooth Syndrome: A microscopic hairline fracture flexes under nocturnal clenching or bruxism, pinching internal nerve tissue.",
+        "Acute Pericoronitis: Swollen, infected gum flaps covering an impacted wisdom tooth trap food and bacteria, radiating pain to the jaw and ear.",
+        "Severe Bruxism (Sleep Teeth Grinding): Subconscious nocturnal grinding strains periodontal ligament fibers, leaving teeth aching and tender to chewing."
+      ],
+      "table": {
+        "headers": [
+          "Clinical Condition",
+          "Pain Characteristic",
+          "Key Trigger",
+          "Definitive Treatment"
+        ],
+        "rows": [
+          [
+            "Reversible Pulpitis",
+            "Sharp, momentary twinge",
+            "Cold water or sweet food",
+            "Deep composite restoration"
+          ],
+          [
+            "Irreversible Pulpitis",
+            "Deep, pulsating throbbing at night",
+            "Spontaneous or lingering heat",
+            "Root Canal Treatment (RCT)"
+          ],
+          [
+            "Periapical Abscess",
+            "Severe throbbing with biting pain",
+            "Tapping on tooth, facial touch",
+            "Emergency drainage + RCT"
+          ],
+          [
+            "Wisdom Tooth Infection",
+            "Dull ache radiating to ear/throat",
+            "Chewing, limited mouth opening",
+            "Operculectomy or Extraction"
+          ]
+        ]
+      }
+    },
+    {
+      "heading": "Immediate Home Relief Steps to Get You Through the Night",
+      "paragraphs": [
+        "While home remedies will never cure an infected tooth root, they can help dull acute pain until our clinic opens in the morning:",
+        "1. Keep Head Elevated: Sleep propped up on two or three pillows to maintain gravitational venous drainage away from your jaw.",
+        "2. Cold Compress Application: Apply an ice pack wrapped in a clean cloth to the outside of your cheek for 15 minutes on, 15 minutes off. Never apply heat, which accelerates bacterial swelling.",
+        "3. Lukewarm Saltwater Rinse: Dissolve half a teaspoon of table salt in warm water and gently bathe your mouth. Salt acts as an osmotic anti-inflammatory and flushes away acidic food debris.",
+        "4. Over-The-Counter Analgesics: Medical-grade NSAIDs (like Ibuprofen or Paracetamol, if not contraindicated by your medical history) reduce prostaglandins. Never exceed recommended dosages.",
+        "5. Pure Clove Oil (Eugenol): Dab a tiny droplet of clove oil on a sterile cotton pellet and rest it gently near the aching tooth. Eugenol possesses documented natural analgesic properties."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Critical Caution: Never Place Aspirin on Gums",
+        "text": "Do NOT place an aspirin tablet or painkiller directly against your gum tissue. Acetylsalicylic acid causes severe chemical burns and mucosal ulceration without relieving pulpal nerve pain."
+      }
+    },
+    {
+      "heading": "When a Night Toothache Becomes a Medical Emergency",
+      "paragraphs": [
+        "Certain clinical symptoms signal that bacterial infection is spreading into deep fascial spaces of the head and neck. If you develop visible facial swelling closing your eye, swelling descending into your neck, difficulty swallowing (dysphagia), shortness of breath, or a high fever with chills, proceed immediately to the nearest hospital emergency department or call our emergency triage desk."
+      ]
+    },
+    {
+      "heading": "How Aureva Dental Provides Definitive Pain Relief",
+      "paragraphs": [
+        "Aureva Dental specializes in painless, single-sitting root canal treatments (RCT) designed to eradicate severe tooth pain permanently. Using high-resolution digital RVG radiography, we pinpoint the exact apical pathology in seconds.",
+        "Under computerized local anesthesia, the infected pulp tissue is gently removed using flexible nickel-titanium rotary files. The root canal system is thoroughly disinfected with ultrasonic irrigation and sealed with biocompatible gutta-percha. Most patients experience complete, lasting relief within 45 minutes and sleep peacefully the very next night."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why did my toothache suddenly stop hurting after hours of severe throbbing?",
+      "answer": "If excruciating throbbing pain suddenly vanishes, it often means the sensory nerve inside the pulp chamber has undergone complete necrosis (died). However, the underlying bacterial infection has not disappeared; it is now quietly eroding through the root tip into your jawbone, where it can form a painless cyst or sudden acute abscess."
+    },
+    {
+      "question": "Can antibiotics alone cure a nighttime toothache?",
+      "answer": "No. Antibiotics circulate through your bloodstream, but a necrotic tooth pulp has zero blood supply, meaning systemic antibiotics cannot enter the root canals to kill bacteria. Antibiotics only suppress peripheral tissue swelling; definitive physical cleaning via Root Canal Treatment is required."
+    },
+    {
+      "question": "Are emergency appointments available on Sundays at Aureva Dental?",
+      "answer": "Yes! Aureva Dental is fully operational on Sundays from 9:30 AM to 9:00 PM. We reserve emergency triage slots every single day for acute toothaches, chipped teeth, and swelling for patients in Hennur, Horamavu, Kalyan Nagar, and Manyata Tech Park."
+    },
+    {
+      "question": "How much does emergency root canal treatment cost in Bangalore?",
+      "answer": "Single-sitting root canal treatments at Aureva Dental range from Rs. 4,000 to Rs. 10,000 depending on the tooth's anatomical position (front incisor vs. multi-rooted molar) and clinical complexity. Transparent pricing is provided before starting any procedure."
+    }
+  ],
+  "conclusion": "A severe throbbing toothache at night is your body's urgent distress call. Do not endure another sleepless night in pain—reach out to Aureva Dental for compassionate, same-day relief.",
+  "ctaHeadline": "Stop Throbbing Night Tooth Pain Today",
+  "ctaText": "Aureva Dental is conveniently located on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or chat on WhatsApp for immediate priority dental triage."
+},
+{
+  "slug": "wisdom-tooth-pain-radiating-to-jaw-and-ear",
+  "title": "Wisdom Tooth Pain Radiating to Jaw and Ear: Symptoms, Pericoronitis & Treatment | Aureva Dental",
+  "headline": "Wisdom Tooth Pain Radiating to Jaw, Ear & Neck: Causes, Relief & Painless Removal",
+  "metaDescription": "Experiencing shooting wisdom tooth pain radiating to your ear and jaw? Learn why pericoronitis and impaction cause nerve pain and how painless removal at Aureva Dental helps.",
+  "author": "Dr. Agniss Mishra, BDS",
+  "authorRole": "Dental Surgeon & Oral Surgery Lead",
+  "authorCredentials": "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "date": "September 2026",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-28",
+  "category": "Oral Surgery & Wisdom Teeth",
+  "readTime": "8 min read",
+  "excerpt": "Understand the anatomical neural pathways behind referred ear and jaw pain from impacted wisdom teeth, pericoronitis treatment, and gentle oral surgical removal in Bangalore.",
+  "relatedTreatmentUrl": "/treatments/wisdom-tooth-removal",
+  "relatedTreatmentName": "Painless Wisdom Tooth Removal",
+  "introParagraphs": [
+    "If you are suffering from a dull, persistent ache in the back of your mouth that radiates upward into your ear canal, temples, or downward along your jawline, you are likely dealing with an impacted third molar (wisdom tooth).",
+    "Many patients consult ENT specialists believing they have a chronic middle-ear infection, only to discover that the root cause is a partially erupted wisdom tooth trapped beneath the gums. This guide breaks down the anatomy of referred dental pain, common complications, and how modern oral surgery at Aureva Dental resolves the condition permanently."
+  ],
+  "sections": [
+    {
+      "heading": "The Neurological Connection: Why Wisdom Teeth Cause Earaches",
+      "paragraphs": [
+        "How can a tooth in your lower jaw cause deep pain inside your ear? The answer lies in cranial neuroanatomy. Both your lower wisdom teeth and the sensory structures of your external ear, eardrum, and temple are innervated by branches of the same major nerve: the Mandibular branch (V3) of the Trigeminal Nerve (Cranial Nerve V).",
+        "Specifically, the Inferior Alveolar Nerve supplies the lower molars, while the Auriculotemporal Nerve supplies the temporomandibular joint (TMJ), ear canal, and temple. When an impacted wisdom tooth creates acute inflammation or bone pressure, nerve signals cross-stimulate adjacent sensory fibers in the trigeminal ganglion, causing your brain to interpret dental pain as an earache, headache, or stiff neck."
+      ]
+    },
+    {
+      "heading": "Primary Causes of Wisdom Tooth Pain Radiating to the Ear",
+      "paragraphs": [
+        "Several common dental conditions trigger this radiating pain complex:"
+      ],
+      "bulletPoints": [
+        "Pericoronitis (Infected Gum Flap): When a wisdom tooth only partially breaches the gumline, an overlying flap of soft tissue (operculum) forms. Food debris and anaerobic bacteria pack beneath this flap, leading to foul-smelling, swollen, and acutely tender gum infection.",
+        "Angular or Horizontal Impaction: When jaw space is insufficient, wisdom teeth grow sideways into the roots of adjacent second molars, causing root resorption, bone loss, and deep nerve compression.",
+        "Trismus (Jaw Lock): Severe pericoronal inflammation spreads into the adjacent masseter and pterygoid muscles of mastication, making it painful or impossible to open your mouth fully.",
+        "Follicular Cyst Formation: Fluid can accumulate within the developmental sac of an unerupted wisdom tooth, forming a dentigerous cyst that expands and weakens the surrounding jawbone."
+      ],
+      "table": {
+        "headers": [
+          "Symptom",
+          "Associated Condition",
+          "Urgency Level"
+        ],
+        "rows": [
+          [
+            "Pain radiating to ear & temple",
+            "Inferior alveolar nerve compression / TMJ strain",
+            "Moderate (Schedule visit within 24-48h)"
+          ],
+          [
+            "Foul taste & swollen gum flap",
+            "Acute Pericoronitis",
+            "High (Requires irrigation & medication)"
+          ],
+          [
+            "Inability to open mouth (Trismus)",
+            "Masticatory muscle space infection",
+            "Emergency (Same-day clinical drainage)"
+          ],
+          [
+            "Difficulty swallowing or throat pain",
+            "Submandibular space cellulitis",
+            "Immediate Emergency (Hospital / Urgent Care)"
+          ]
+        ]
+      }
+    },
+    {
+      "heading": "Immediate At-Home Relief Measures",
+      "paragraphs": [
+        "While waiting for your dental appointment, follow these conservative steps:",
+        "1. Warm Salt Water / Chlorhexidine Mouthwash: Gently swish with warm saline or 0.2% chlorhexidine mouthwash 3-4 times daily to flush bacteria from under the gum flap.",
+        "2. Warm Compress on Jaw: Apply a warm washcloth to the side of your face to relax spasming masticatory muscles.",
+        "3. Soft Food Diet: Switch to lukewarm, soft foods (khichdi, oats, smoothies, curd) to minimize mechanical trauma on inflamed gum tissue.",
+        "4. Avoid Probing with Toothpicks: Poking sharp objects beneath the swollen gum flap introduces dangerous bacteria and worsens tissue laceration."
+      ]
+    },
+    {
+      "heading": "Painless Wisdom Tooth Removal at Aureva Dental",
+      "paragraphs": [
+        "At Aureva Dental in Hennur, Bangalore, we view tooth extraction as a comfortable, micro-surgical discipline. Before any procedure, we take digital RVG X-rays to assess root angulation and distance from the mandibular nerve canal.",
+        "We use modern atraumatic sectioning techniques: rather than applying heavy mechanical force, the tooth is divided into tiny segments and gently elevated with zero bone trauma. Our patients experience minimal post-operative swelling and are back to normal routines in 2 to 3 days."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can I just take antibiotics instead of extracting the wisdom tooth?",
+      "answer": "Antibiotics will temporarily suppress the bacterial flare-up, but as soon as you finish the medication course, bacteria will inevitably reaccumulate under the persistent gum flap. The infection will recur, often more aggressively. Removing the problematic tooth provides the only permanent solution."
+    },
+    {
+      "question": "Is wisdom tooth extraction painful?",
+      "answer": "No. With modern high-potency local anesthesia, the entire quadrant is completely numb before we begin. You will feel gentle pressure, but absolutely zero sharp pain during the extraction."
+    },
+    {
+      "question": "How long does recovery take after wisdom tooth removal?",
+      "answer": "Most patients resume desk work and normal daily activities within 24 to 48 hours. Initial soft tissue healing takes 7 to 10 days, while jawbone filling of the socket matures over 6 to 8 weeks."
+    },
+    {
+      "question": "Do all four wisdom teeth need to be extracted simultaneously?",
+      "answer": "Not necessarily. We only extract wisdom teeth that are actively impacted, symptomatic, damaging adjacent molars, or non-functional. However, if multiple wisdom teeth require removal, extracting teeth on one side or all four at once can be arranged based on your preference."
+    }
+  ],
+  "conclusion": "Radiating wisdom tooth pain that reaches your ear and jaw is a sign of advancing infection or nerve compression. Contact Aureva Dental today for gentle diagnosis and same-day relief.",
+  "ctaHeadline": "Get Relief from Radiating Wisdom Tooth Pain",
+  "ctaText": "Visit Aureva Dental on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp to schedule your evaluation."
+},
+{
+  "slug": "pimple-on-gum-above-tooth",
+  "title": "Pimple on Gum Above Tooth: Causes of Dental Fistula, Abscess & Treatment | Aureva Dental",
+  "headline": "Pimple on Gum Above Tooth (Dental Fistula): What It Means, Dangers & Treatment Options",
+  "metaDescription": "Noticed a small pimple, bump, or boil on your gum above a tooth? Discover what a parulis / dental fistula indicates, why popping it is dangerous, and how root canals cure it.",
+  "author": "Dr. Shweta Singh, BDS",
+  "authorRole": "Clinical Director & Dental Surgeon",
+  "authorCredentials": "Dr. Shweta Singh, BDS — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  "date": "September 2026",
+  "datePublished": "2026-09-26",
+  "dateModified": "2026-09-28",
+  "category": "Emergency Dental Care & Endodontics",
+  "readTime": "7 min read",
+  "excerpt": "Learn what a gum boil or parulis signifies, why bursting it provides deceptive relief while bone loss continues, and how root canals permanently eliminate dental fistulas.",
+  "relatedTreatmentUrl": "/treatments/root-canal-treatment",
+  "relatedTreatmentName": "Single-Sitting Root Canal Treatment",
+  "introParagraphs": [
+    "Discovering a small white, yellow, or reddish bump on your gums—often resembling an ordinary acne pimple—can be alarming. You might notice it periodically swells, bursts with a foul or salty taste, and then seemingly disappears, only to reappear weeks later.",
+    "In dentistry, this lesion is known as a **parulis** or **dental fistula**. It is not a superficial skin problem, but the visible drainage portal of an underlying chronic dental infection inside your jawbone. This guide outlines why gum pimples develop, why popping them at home is dangerous, and how root canal therapy cures the issue at the source."
+  ],
+  "sections": [
+    {
+      "heading": "What Is a Gum Pimple (Parulis) Exactly?",
+      "paragraphs": [
+        "A parulis is the external mucosal opening of a sinus tract that leads down to an infected tooth root apex. When bacteria from deep dental decay, trauma, or an old leaky filling penetrate the pulp chamber, the tooth nerve dies (necroses).",
+        "Anaerobic bacteria multiply within the dead root canals and spill into the surrounding periapical jawbone. As your immune system fights the invaders, white blood cells form pus. Trapped within bone, the pus seeks the path of least resistance, tunneling through the cortical bone plate and elevating the gum tissue to form a visible 'pimple'."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "The Dangerous 'Relief' Illusion",
+        "text": "When a gum boil bursts and discharges pus, built-up bone pressure drops and any dull throbbing ache immediately subsides. Patients mistakenly assume the infection has healed. In reality, the chronic bacterial colony continues eroding jawbone unabated."
+      }
+    },
+    {
+      "heading": "Periapical Abscess vs. Periodontal Abscess",
+      "paragraphs": [
+        "Gum pimples generally fall into two distinct diagnostic categories:"
+      ],
+      "bulletPoints": [
+        "Endodontic / Periapical Abscess: Stemming from a necrotic tooth pulp. The tooth itself may be discolored, previously treated, or heavily decayed. Treatment requires Root Canal Treatment or extraction.",
+        "Periodontal Abscess: Stemming from advanced gum disease. Deep tartar and plaque beneath the gumline create a localized periodontal pocket. Treatment requires deep ultrasonic scaling, root planing, and antimicrobial irrigation.",
+        "Cracked Root / Vertical Root Fracture: A hairline fracture in the root allows bacteria to continuously seed the socket wall, requiring extraction."
+      ]
+    },
+    {
+      "heading": "Why You Must NEVER Pop a Gum Pimple at Home",
+      "paragraphs": [
+        "It is tempting to squeeze or puncture a gum boil with a needle or fingernails, but doing so carries severe medical risks:",
+        "1. Secondary Infection: The human mouth hosts over 700 bacterial species. Puncturing gum tissue introduces aggressive oral flora into deep capillary networks.",
+        "2. Chemical Tissue Necrosis: The purulent discharge contains proteolytic enzymes and endotoxins that irritate surrounding mucosal tissue.",
+        "3. Failure to Address the Cause: Popping the pimple only drains surface exudate; it does nothing to remove billions of bacteria thriving inside the root canal."
+      ]
+    },
+    {
+      "heading": "How Aureva Dental Diagnoses and Treats Gum Fistulas",
+      "paragraphs": [
+        "At Aureva Dental in Hennur/Horamavu, Bangalore, diagnosing a sinus tract is quick and precise. We often perform a specialized 'fistulogram' by inserting a flexible, sterile gutta-percha point into the tract and taking a digital RVG X-ray. The point points directly to the infected root tip with 100% diagnostic accuracy.",
+        "In over 95% of cases, the tooth can be preserved through single-sitting root canal treatment. We thoroughly debride and sterilize the infected canals with ultrasonic sodium hypochlorite and seal them with biocompatible gutta-percha. Within 7 to 14 days following treatment, the gum pimple shrinks and completely vanishes as healthy jawbone regenerates."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Will salt water rinses cure a pimple on the gum?",
+      "answer": "No. Salt water is a soothing mild antiseptic that cleans superficial tissues and eases irritation, but it cannot penetrate the sealed microscopic canals inside your tooth root where the infection originates."
+    },
+    {
+      "question": "Can an untreated gum pimple cause systemic health issues?",
+      "answer": "Yes. Chronic periapical infections continuously seed bacterial toxins and cytokines into your bloodstream. Left untreated for months or years, it can lead to extensive bone loss, sinus infections in upper molars, or sudden acute facial cellulitis."
+    },
+    {
+      "question": "Does root canal treatment for a gum boil hurt?",
+      "answer": "Not at all. At Aureva Dental, we use gentle computerized local anesthesia to ensure complete numbness before any instrumentation. Most patients report feeling instant relief once the canal pressure is evacuated."
+    },
+    {
+      "question": "How long does it take for the gum pimple to disappear after treatment?",
+      "answer": "Once the infected tooth root is disinfected and sealed during root canal therapy, the source of pus is gone. The sinus tract typically closes and disappears within 5 to 10 days."
+    }
+  ],
+  "conclusion": "A pimple on your gum is clear clinical evidence of a tooth infection that requires prompt professional attention. Preserve your natural smile by booking a consultation at Aureva Dental.",
+  "ctaHeadline": "Heal Gum Infections at the Source",
+  "ctaText": "Aureva Dental is conveniently located on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or message on WhatsApp for gentle, same-day diagnosis."
+},
+{
+  "slug": "chipped-front-tooth-repair",
+  "title": "Chipped Front Tooth Repair: Options, Costs & Emergency Care in Bangalore | Aureva Dental",
+  "headline": "Chipped Front Tooth Repair: Composite Bonding, Porcelain Veneers & Crown Options",
+  "metaDescription": "Chipped or fractured a front tooth? Learn about emergency steps, same-day composite bonding, porcelain veneers, and crowns at Aureva Dental Bangalore.",
+  "author": "Dr. Shweta Singh, BDS",
+  "authorRole": "Lead Aesthetic Architect & Clinical Director",
+  "authorCredentials": "Dr. Shweta Singh, BDS — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  "date": "September 2026",
+  "datePublished": "2026-09-27",
+  "dateModified": "2026-09-28",
+  "category": "Cosmetic Dentistry & Restorations",
+  "readTime": "7 min read",
+  "excerpt": "From immediate first-aid protocols to high-end composite edge bonding and porcelain veneers, discover how Aureva Dental restores chipped front teeth seamlessly in Bangalore.",
+  "relatedTreatmentUrl": "/treatments/cosmetic-dentistry",
+  "relatedTreatmentName": "Cosmetic Dentistry & Composite Bonding",
+  "introParagraphs": [
+    "A chipped front tooth is one of the most sudden and distressing dental events. Whether caused by biting into a hard olive pit, a sports collision, or accidental trauma, fracturing a visible front incisor instantly impacts your smile confidence and ability to speak naturally.",
+    "Fortunately, modern aesthetic dentistry offers several seamless, natural-looking solutions—often completed in a single clinic appointment. At Aureva Dental in Hennur and Horamavu, Bangalore, our Lead Aesthetic Architect Dr. Shweta Singh specializes in biomimetic composite bonding, porcelain veneers, and all-ceramic crowns to make your repaired tooth look indistinguishable from natural enamel."
+  ],
+  "sections": [
+    {
+      "heading": "First Aid: What to Do Immediately After Chipping a Tooth",
+      "paragraphs": [
+        "Taking the right immediate steps can safeguard your tooth from nerve damage and maximize restorative success:",
+        "1. Locate and Save the Fragment: If you can find the broken tooth chip, place it in a small container of cold milk, contact lens saline, or saliva. In some cases, we can re-bond your natural enamel fragment directly!",
+        "2. Rinse with Lukewarm Water: Gently rinse your mouth with warm water to clear blood and debris.",
+        "3. Control Bleeding: If your lip or gum is cut, apply gentle pressure with sterile gauze for 10 minutes.",
+        "4. Cover Sharp Edges: If the remaining tooth edge is sharp and lacerating your tongue, place a small piece of sugarless chewing gum or orthodontic wax over the edge.",
+        "5. Avoid Biting on the Area: Do not chew or bite on front teeth until evaluated by a dental professional."
+      ]
+    },
+    {
+      "heading": "Classifying the Fracture: How Severe Is It?",
+      "paragraphs": [
+        "Dentists classify dental fractures using the Ellis Classification system, which dictates the necessary treatment approach:"
+      ],
+      "bulletPoints": [
+        "Ellis Class I (Enamel Only): Minor chip involving only the outer white enamel layer. No pain or sensitivity. Repaired easily with cosmetic contouring or composite bonding.",
+        "Ellis Class II (Enamel and Dentin): The fracture penetrates the yellowish middle dentin layer. The tooth feels sensitive to cold air, hot drinks, or touch. Requires protective bonding or a veneer to shield dentinal tubules.",
+        "Ellis Class III (Enamel, Dentin, and Pulp Exposure): The fracture reaches the innermost nerve. You will see a tiny red dot of bleeding tissue on the broken surface, accompanied by sharp pain. Requires emergency root canal therapy followed by a crown."
+      ]
+    },
+    {
+      "heading": "Top Restorative Options for Chipped Front Teeth",
+      "paragraphs": [
+        "Depending on fracture size, aesthetic expectations, and budget, we offer three primary clinical solutions:"
+      ],
+      "table": {
+        "headers": [
+          "Treatment",
+          "Best For",
+          "Procedure Time",
+          "Durability",
+          "Cost Range (INR)"
+        ],
+        "rows": [
+          [
+            "Composite Edge Bonding",
+            "Small to medium chips, incisal edges",
+            "Single visit (45 mins)",
+            "5 to 8 years",
+            "₹2,500 – ₹5,000"
+          ],
+          [
+            "Porcelain Veneers (E.max)",
+            "Significant fractures, aesthetic demands",
+            "2 visits (3D scan + lab)",
+            "15 to 20 years",
+            "₹10,000 – ₹18,000"
+          ],
+          [
+            "All-Ceramic Zirconia Crown",
+            "Severe fractures (>50% tooth loss / RCT)",
+            "2 visits",
+            "15+ years",
+            "₹8,000 – ₹16,000"
+          ],
+          [
+            "Enamel Smoothing / Contouring",
+            "Tiny, superficial micro-chips",
+            "15 minutes",
+            "Permanent",
+            "₹1,000 – ₹2,000"
+          ]
+        ]
+      }
+    },
+    {
+      "heading": "Why Choose Aureva Dental for Smile Restoration",
+      "paragraphs": [
+        "Rebuilding a front tooth is an art as much as a science. Natural teeth are not flat white; they exhibit subtle translucency at the biting edge, micro-textures, and warm gradient undertones. At Aureva Dental, we use multi-layer polychromatic nano-hybrid composites that mimic natural tooth refraction so perfectly that no one will ever know your tooth was chipped.",
+        "We offer same-day emergency appointments throughout the week and all day Sunday, ensuring you never have to wait with a broken front smile."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can a chipped tooth heal or grow back on its own?",
+      "answer": "No. Tooth enamel is non-living tissue that contains no cells and cannot regenerate or heal itself once chipped. A dentist must physically restore the lost enamel to prevent bacterial penetration and sensitivity."
+    },
+    {
+      "question": "How long does cosmetic composite bonding last on a front tooth?",
+      "answer": "High-grade nano-hybrid composite bonding typically lasts 5 to 8 years with proper oral care. Avoiding biting directly on hard objects (ice, fingernails, hard nuts) and regular dental cleanings help prolong its aesthetic lifespan."
+    },
+    {
+      "question": "Is fixing a chipped tooth painful?",
+      "answer": "Fixing a minor or moderate chip with composite bonding or a veneer is completely painless and often requires zero anesthesia, as only minimal or no tooth structure is prepared."
+    },
+    {
+      "question": "What is the cost of repairing a chipped front tooth at Aureva Dental?",
+      "answer": "Composite bonding for a chipped front tooth at Aureva Dental Hennur ranges between Rs. 2,500 and Rs. 5,000 per tooth depending on the fracture volume. Transparent pricing is explained prior to beginning treatment."
+    }
+  ],
+  "conclusion": "A chipped front tooth can be repaired quickly, comfortably, and beautifully. Restore your confident smile today at Aureva Dental in Hennur and Horamavu, Bangalore.",
+  "ctaHeadline": "Restore Your Chipped Smile Today",
+  "ctaText": "Visit Aureva Dental on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp to book your same-day smile restoration."
+},
+{
+  "slug": "root-canal-aftercare",
+  "title": "Root Canal Aftercare: Recovery Timeline, Pain Management & Diet Guide | Aureva Dental",
+  "headline": "Root Canal Aftercare Guide: What to Expect, Recovery Timeline & What to Eat",
+  "metaDescription": "Complete patient aftercare guide following root canal treatment (RCT). Pain management, chewing restrictions, temporary filling care & crown placement advice by Aureva Dental.",
+  "author": "Dr. Shweta Singh, BDS",
+  "authorRole": "Clinical Director & Dental Surgeon",
+  "authorCredentials": "Dr. Shweta Singh, BDS — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  "date": "September 2026",
+  "datePublished": "2026-09-27",
+  "dateModified": "2026-09-28",
+  "category": "Patient Aftercare Guides",
+  "readTime": "6 min read",
+  "excerpt": "A patient-friendly guide to recovery after a root canal: managing mild tenderness, eating guidelines, temporary filling protection, and why crown placement is critical.",
+  "relatedTreatmentUrl": "/treatments/root-canal-treatment",
+  "relatedTreatmentName": "Root Canal Treatment",
+  "introParagraphs": [
+    "Congratulations on completing your Root Canal Treatment (RCT) at Aureva Dental! By removing the infected pulp from inside your tooth, we have saved your natural tooth from extraction and eliminated the source of severe dental infection.",
+    "Proper post-operative care during the next few days is essential to ensure smooth, uneventful healing of the surrounding bone and periodontal ligaments. This guide provides clear, practical instructions on what to expect, pain management, diet, and next steps."
+  ],
+  "sections": [
+    {
+      "heading": "What to Expect in the First 24 to 48 Hours",
+      "paragraphs": [
+        "It is completely normal to experience mild tenderness, dull aching, or a 'bruised' sensation around the treated tooth for 2 to 3 days following an RCT. This is not pulpal pain (the tooth nerve has been completely removed), but temporary inflammation in the periodontal ligament fibers that anchor the root into your jawbone.",
+        "Numbness from local anesthesia will persist for 2 to 4 hours after your appointment. Avoid chewing on your lips, cheek, or tongue while sensation is reduced. Do not consume very hot beverages until full sensation returns."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Periapical Healing Timeline",
+        "text": "Mild biting tenderness typically peaks within 24 hours and resolves completely within 4 to 7 days as the bone surrounding the tooth root tip regenerates."
+      }
+    },
+    {
+      "heading": "Pain Management & Medication Protocol",
+      "paragraphs": [
+        "Take all prescribed anti-inflammatory and pain medications exactly as directed by Dr. Shweta Singh or Dr. Agniss Mishra:",
+        "1. Scheduled Analgesics: If prescribed an NSAID (such as Ibuprofen or Paracetamol), taking the first dose before the numbness completely wears off significantly minimizes discomfort.",
+        "2. Antibiotic Course: If antibiotics were prescribed due to pre-existing swelling or bone infection, complete the full course even if you feel 100% fine after two days. Stopping early can breed resistant bacteria.",
+        "3. Avoid Home Poking: Do not poke the treated tooth with your tongue, fingers, or toothpicks."
+      ]
+    },
+    {
+      "heading": "Diet & Chewing Guidelines",
+      "paragraphs": [
+        "To safeguard the temporary filling and avoid fracturing the tooth:",
+        "1. Chew on the Opposite Side: Avoid chewing food on the side of your mouth with the treated tooth until your permanent crown has been cemented.",
+        "2. Soft Food Diet: Stick to soft, lukewarm foods for the first 48 hours—such as khichdi, dalia, curd rice, soup, steamed vegetables, and scrambled eggs.",
+        "3. Avoid Hard, Crunchy & Sticky Foods: Stay away from nuts, chewing gum, hard crusts, and sticky sweets that could dislodge your temporary filling.",
+        "4. Gentle Brushing & Flossing: Continue brushing your teeth normally with a soft toothbrush. When flossing near the temporary filling, gently slide the floss out sideways rather than snapping upward."
+      ]
+    },
+    {
+      "heading": "Why a Permanent Dental Crown Is Essential",
+      "paragraphs": [
+        "A tooth that has undergone a root canal loses its internal blood supply and moisture, making the remaining tooth structure brittle over time. Chewing forces on back molars can exceed 50 to 70 kg of pressure.",
+        "Without a high-strength protective dental crown (such as Zirconia or E-Max ceramic), a root canal-treated molar has a high risk of catastrophic vertical fracture that cannot be repaired, forcing extraction. Schedule your core buildup and crown appointment at Aureva Dental within 1 to 3 weeks following RCT completion."
+      ]
+    },
+    {
+      "heading": "Red Flags: When to Contact Us Immediately",
+      "paragraphs": [
+        "While mild tenderness is expected, reach out to our clinic helpline (+91 73497 01002) if you experience:",
+        "- Visible facial swelling or swelling in the gums that worsens after 48 hours.",
+        "- Severe, throbbing pain that is not relieved by prescribed medications.",
+        "- Complete dislodgement or loss of your temporary filling.",
+        "- An allergic reaction (rash, hives, itching) to any prescribed medication."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is it normal for a root canal-treated tooth to hurt when I chew on it?",
+      "answer": "Yes, mild to moderate tenderness when biting is common for the first 3 to 5 days due to bruised ligament fibers surrounding the root tip. This tenderness steadily subsides. If pain is severe or throbbing, contact our clinic so we can adjust the bite height of your temporary filling."
+    },
+    {
+      "question": "What should I do if a small piece of my temporary filling chips off?",
+      "answer": "Temporary fillings have several layers. If a tiny superficial flake chips away but the cavity remains sealed, there is no emergency. However, if the entire filling falls out and exposes the canal interior, call us right away for a quick 10-minute resealing appointment."
+    },
+    {
+      "question": "How soon after root canal treatment should I get a dental crown?",
+      "answer": "We recommend placing a permanent core buildup and crown within 2 to 3 weeks after completing your RCT. Delaying your crown increases the risk of bacterial microleakage into the canals or tooth fracture."
+    }
+  ],
+  "conclusion": "Root canal therapy has preserved your natural tooth for decades to come. Follow these aftercare instructions, protect the tooth, and schedule your crown fitting at Aureva Dental.",
+  "ctaHeadline": "Questions About Your Root Canal Recovery?",
+  "ctaText": "Our clinical team is always available. Call Aureva Dental at +91 73497 01002 or message us on WhatsApp for post-operative support."
+},
+{
+  "slug": "wisdom-tooth-extraction-aftercare",
+  "title": "Wisdom Tooth Extraction Aftercare: Preventing Dry Socket & Fast Healing | Aureva Dental",
+  "headline": "Wisdom Tooth Extraction Aftercare: Days 1 to 7 Recovery & How to Prevent Dry Socket",
+  "metaDescription": "Essential wisdom tooth removal aftercare instructions. Swelling management, bleeding control, soft food list, and vital tips to prevent dry socket by Aureva Dental.",
+  "author": "Dr. Agniss Mishra, BDS",
+  "authorRole": "Dental Surgeon & Oral Surgery Lead",
+  "authorCredentials": "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "date": "September 2026",
+  "datePublished": "2026-09-27",
+  "dateModified": "2026-09-28",
+  "category": "Patient Aftercare Guides",
+  "readTime": "8 min read",
+  "excerpt": "Complete recovery roadmap following wisdom tooth removal: stopping bleeding, ice pack protocols, day-by-day food suggestions, and preventing dry socket.",
+  "relatedTreatmentUrl": "/treatments/wisdom-tooth-removal",
+  "relatedTreatmentName": "Wisdom Tooth Removal",
+  "introParagraphs": [
+    "Now that your wisdom tooth extraction is complete, your body's remarkable healing process has begun. The primary objective during the next week is to protect the delicate blood clot that forms inside the extraction socket.",
+    "This natural blood clot protects the underlying jawbone and nerve endings while new tissue and bone regenerate. Following these evidence-based aftercare instructions provided by Aureva Dental will ensure swift recovery, prevent dry socket, and minimize facial swelling."
+  ],
+  "sections": [
+    {
+      "heading": "The Critical First 24 Hours: Golden Rules",
+      "paragraphs": [
+        "The first day sets the foundation for your entire recovery:",
+        "1. Gauze Pressure for Bleeding: Keep firm biting pressure on the sterile gauze pack placed over the socket for 45 to 60 minutes. If slight oozing continues, place a fresh, folded gauze or a damp black tea bag over the site and bite firmly for another 45 minutes (tannic acid in tea promotes clotting).",
+        "2. Absolutely NO Spitting or Swishing: Spitting creates negative oral pressure that can dislodge the blood clot. Swallow saliva naturally or gently dab your lips with a tissue.",
+        "3. NO Drinking Through Straws: Sucking on a straw creates suction that will pull the protective blood clot right out of the socket.",
+        "4. NO Smoking or Alcohol: Tobacco toxins and alcohol severely impair blood clot stability and raise dry socket risk by over 400%. Refrain from smoking for at least 72 hours.",
+        "5. Ice Pack for Swelling: Apply an ice pack wrapped in a cloth to your outer cheek in cycles of 15 minutes on, 15 minutes off throughout the first day."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "The #1 Rule to Avoid Dry Socket",
+        "text": "Never spit forcefully, suck through a drinking straw, or smoke for the first 72 hours. Protecting your blood clot is the key to pain-free healing."
+      }
+    },
+    {
+      "heading": "Understanding & Preventing 'Dry Socket' (Alveolar Osteitis)",
+      "paragraphs": [
+        "Dry socket occurs when the blood clot in the socket fails to form, dissolves, or is physically dislodged prematurely. This exposes sensitive alveolar bone and nerves directly to air, food, and oral fluids.",
+        "Symptoms typically appear 3 to 5 days after extraction and include sudden, intense throbbing pain radiating to the ear, an empty-looking socket, and a foul odor or bad taste in the mouth. If you suspect dry socket, contact Aureva Dental immediately. We can place a soothing medicated dressing that relieves pain within minutes."
+      ]
+    },
+    {
+      "heading": "Days 2 to 7: Active Recovery Timeline",
+      "paragraphs": [
+        "What to do as your healing progresses:",
+        "- Warm Saline Rinses (Starting Day 2): 24 hours after surgery, begin gentle mouth rinses with warm salt water (half teaspoon salt in warm water) after every meal. Do not swish vigorously—tilt your head gently from side to side and let the water fall out.",
+        "- Managing Swelling: Facial swelling typically peaks around 48 to 72 hours after surgery, which is normal biological inflammation. After 48 hours, switch from cold packs to warm compresses to promote circulation and relax stiff jaw muscles.",
+        "- Brushing Teeth: Brush your other teeth normally, but exercise extreme care near the extraction site. Do not use an electric toothbrush near the surgical area for the first week.",
+        "- Suture Removal: If non-dissolvable sutures were placed, visit Aureva Dental in 7 days for quick, painless removal."
+      ]
+    },
+    {
+      "heading": "Soft Food Guide: What to Eat & What to Avoid",
+      "paragraphs": [
+        "Nutritious, gentle nourishment accelerates tissue repair:"
+      ],
+      "bulletPoints": [
+        "Safe Foods (Days 1 to 3): Smoothies (eaten with a spoon, not a straw), fruit yogurt, curd rice, clear broths, mashed potatoes, creamy pumpkin soup, and lukewarm dalia.",
+        "Soft Solids (Days 4 to 7): Well-cooked soft khichdi, scrambled eggs, soft idlis dipped in mild sambar, steamed fish, and oatmeal.",
+        "Foods to Strictly Avoid: Chips, popcorn, nuts, spicy gravies, crusty breads, hard rice, and anything with small seeds (like kiwi or sesame) that can lodge inside the healing socket."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How much bleeding is normal after wisdom tooth extraction?",
+      "answer": "A pinkish saliva tinge or minor oozing for the first 12 to 24 hours is completely normal. However, if bright red blood actively pools in your mouth and does not stop after 45 minutes of firm biting on gauze, contact our emergency helpline."
+    },
+    {
+      "question": "When can I resume gym workouts and heavy physical exercise?",
+      "answer": "Avoid strenuous exercise, heavy lifting, running, and bending over for the first 3 to 4 days. Vigorous physical activity elevates blood pressure, which can trigger delayed bleeding and throbbing."
+    },
+    {
+      "question": "Why can't I open my mouth fully after wisdom tooth removal?",
+      "answer": "Difficulty opening your mouth (trismus) is common due to temporary inflammation of the masseter muscle. It usually resolves within 5 to 7 days. Applying warm compresses and performing gentle jaw opening exercises from Day 3 onwards helps restore normal movement."
+    }
+  ],
+  "conclusion": "Recovering from wisdom tooth extraction is smooth and straightforward when following these guidelines. Contact Aureva Dental whenever you need guidance.",
+  "ctaHeadline": "Need Post-Extraction Assistance in Hennur?",
+  "ctaText": "Our clinic is open Tuesday to Sunday. Call +91 73497 01002 or contact us on WhatsApp for any post-operative questions."
+},
+{
+  "slug": "dental-implant-aftercare",
+  "title": "Dental Implant Aftercare: Day-by-Day Recovery & Osseointegration Care | Aureva Dental",
+  "headline": "Dental Implant Aftercare Guide: Recovery Timeline, Oral Hygiene & Long-Term Success",
+  "metaDescription": "Comprehensive post-operative guide for dental implants. Swelling control, bleeding management, soft diet protocols & how to safeguard bone osseointegration by Aureva Dental.",
+  "author": "Dr. Shweta Singh, BDS",
+  "authorRole": "Clinical Director & Dental Surgeon",
+  "authorCredentials": "Dr. Shweta Singh, BDS — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  "date": "September 2026",
+  "datePublished": "2026-09-28",
+  "dateModified": "2026-09-28",
+  "category": "Patient Aftercare Guides",
+  "readTime": "7 min read",
+  "excerpt": "Learn how to care for your new dental implant: the first 72 hours, protecting the osseointegration phase, cleaning techniques, and ensuring a lifetime of stable function.",
+  "relatedTreatmentUrl": "/treatments/dental-implants",
+  "relatedTreatmentName": "Dental Implants",
+  "introParagraphs": [
+    "Congratulations on taking a permanent step toward restoring your complete smile! A dental implant is the gold standard in modern tooth replacement, fusing directly with your jawbone in a biological process called **osseointegration**.",
+    "The success rate of dental implants at Aureva Dental exceeds 98%. Ensuring proper post-operative care during the initial healing days safeguards the bone-to-implant interface and sets the stage for a lifetime of stable chewing and natural aesthetics."
+  ],
+  "sections": [
+    {
+      "heading": "The First 72 Hours: Protecting the Surgical Site",
+      "paragraphs": [
+        "Immediate actions to take following your implant placement surgery:",
+        "1. Gauze Compression: Maintain gentle biting pressure on the sterile gauze pad placed over the surgical area for 45 minutes to arrest any minor capillary ooze.",
+        "2. Cold Compresses: Apply an ice pack to your cheek for 15 minutes at a time during the first 24 hours to minimize facial swelling.",
+        "3. Do Not Disturb the Site: Keep your tongue, fingers, and toothpicks completely away from the implant site or healing abutment. Excessive mechanical micro-movement can disrupt early bone cell formation.",
+        "4. Head Elevation: Sleep with your head elevated on two pillows for the first two nights to reduce facial blood pressure and throbbing."
+      ]
+    },
+    {
+      "heading": "Diet & Nutrition During the Osseointegration Phase",
+      "paragraphs": [
+        "Osseointegration takes 8 to 12 weeks as osteoblasts deposit new bone matrix around the microscopic titanium threads:",
+        "- Days 1 to 7: Soft, nutrient-rich, lukewarm foods only. Ideal choices include fruit purees, yogurt, cottage cheese (paneer), scrambled eggs, khichdi, and lukewarm soups.",
+        "- Weeks 2 to 8: Soft chewable diet (pasta, soft rice, steamed fish, bananas, boiled vegetables). Avoid biting hard bread crusts, raw carrots, or nuts directly on the implant site.",
+        "- Temperature Caution: Avoid piping-hot tea, coffee, or spicy gravies during the first 48 hours to prevent vascular dilation and bleeding."
+      ]
+    },
+    {
+      "heading": "Oral Hygiene Protocols for Dental Implants",
+      "paragraphs": [
+        "Maintaining a clean, plaque-free oral environment is paramount to avoid peri-implant mucositis:",
+        "- Days 1 to 2: Do not vigorously swish. Gently rinse with warm salt water starting 24 hours after surgery.",
+        "- Chlorhexidine Mouthwash: Use the prescribed 0.2% chlorhexidine anti-bacterial rinse twice daily for 7 days to eliminate oral pathogens around the surgical collar.",
+        "- Gentle Brushing: Brush your natural teeth normally, but use an ultra-soft surgical brush around the implant site with gentle circular motions.",
+        "- Long-Term Hygiene: Once your permanent crown is fitted, adopt daily water flossing or specialized interdental brushes to keep the gum cuff pristine."
+      ]
+    },
+    {
+      "heading": "Warning Signs: When to Contact Aureva Dental",
+      "paragraphs": [
+        "Contact our clinical team promptly if you experience any of the following:",
+        "- Persistent bleeding that does not stop after firm gauze pressure.",
+        "- Severe, throbbing pain that is not alleviated by prescribed painkillers.",
+        "- Numbness in your lip, chin, or tongue that persists 12 hours after surgery.",
+        "- Feeling that the implant fixture or healing abutment has loosened."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long does a dental implant take to heal before the crown is placed?",
+      "answer": "In most cases, initial bone osseointegration takes 8 to 12 weeks for the lower jaw and 12 to 16 weeks for the upper jaw. Once solid bone fusion is confirmed via digital RVG imaging, your permanent custom Zirconia crown is cemented or screw-retained."
+    },
+    {
+      "question": "Can dental implants fail or get rejected by the body?",
+      "answer": "Titanium is completely biocompatible and cannot be 'rejected' by the immune system in the way an organ transplant might be. Failures are extremely rare (under 2%) and are almost always caused by poor oral hygiene (peri-implantitis), heavy smoking, or uncontrolled diabetes."
+    },
+    {
+      "question": "Is smoking permitted after dental implant placement?",
+      "answer": "Smoking significantly compromises peripheral micro-circulation and is the leading cause of early implant failure. We strongly advise abstaining from all tobacco and vaping products for at least 2 weeks before and 4 weeks after implant placement."
+    }
+  ],
+  "conclusion": "With proper post-operative care and regular dental checkups, your dental implant can last a lifetime. Reach out to Aureva Dental for any questions during your recovery.",
+  "ctaHeadline": "Dedicated Dental Implant Care in Hennur",
+  "ctaText": "Aureva Dental is located on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp us for post-op guidance."
+},
+{
+  "slug": "scaling-aftercare",
+  "title": "Teeth Cleaning & Scaling Aftercare: What to Expect, Diet & Sensitivity | Aureva Dental",
+  "headline": "Teeth Cleaning & Scaling Aftercare: Sensitivity Management & Gum Care Guide",
+  "metaDescription": "What to expect after ultrasonic scaling and teeth cleaning. Understanding normal sensitivity, gum healing, foods to avoid, and flossing tips by Aureva Dental Bangalore.",
+  "author": "Dr. Agniss Mishra, BDS",
+  "authorRole": "Dental Surgeon & Preventive Care Lead",
+  "authorCredentials": "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "date": "September 2026",
+  "datePublished": "2026-09-28",
+  "dateModified": "2026-09-28",
+  "category": "Patient Aftercare Guides",
+  "readTime": "6 min read",
+  "excerpt": "What to expect after professional ultrasonic teeth cleaning: debunking the myth that scaling loosens teeth, managing temporary cold sensitivity, and daily home oral hygiene.",
+  "relatedTreatmentUrl": "/treatments/scaling-and-polishing",
+  "relatedTreatmentName": "Scaling & Polishing",
+  "introParagraphs": [
+    "You have just invested in the foundational health of your smile with professional ultrasonic scaling and polishing at Aureva Dental! By removing calcified calculus (tartar) and stubborn stain films, you have eliminated billions of periodontal bacteria that cause bleeding gums, bad breath, and bone loss.",
+    "Your teeth and gums may feel slightly different right now. This concise aftercare guide explains what to expect over the next few days, how to handle mild sensitivity, and how to maintain that crisp, clean feeling long-term."
+  ],
+  "sections": [
+    {
+      "heading": "What to Expect Right After Teeth Cleaning",
+      "paragraphs": [
+        "It is completely normal to notice the following sensations following ultrasonic scaling:",
+        "- Smooth, 'Spacier' Feeling: Your tongue may notice slight gaps between your lower front teeth. This is completely natural! Those spaces were previously blocked by rock-hard calculus bridges that had pushed your gum tissue downward.",
+        "- Mild Temperature Sensitivity: For 24 to 48 hours, teeth may feel momentarily sensitive to cold drinks or cold air. When thick tartar shields are removed, previously covered root dentin is briefly exposed to oral temperatures until saliva remineralizes the surface.",
+        "- Minor Gum Tenderness or Oozing: If your gums were inflamed (gingivitis), slight bleeding when brushing on the first evening is normal and will vanish within 48 hours as gum tissues tighten."
+      ],
+      "callout": {
+        "type": "info",
+        "title": "Debunking the Common Myth",
+        "text": "Scaling does NOT remove enamel, weaken teeth, or create unnatural gaps. It simply removes harmful calcified bacterial debris, allowing swollen gums to heal and adhere tightly back to clean tooth surfaces."
+      }
+    },
+    {
+      "heading": "Managing Sensitivity: Quick Tips",
+      "paragraphs": [
+        "If you experience mild sensitivity to cold or hot liquids:",
+        "1. Desensitizing Toothpaste: Use an arginine or potassium-nitrate toothpaste for one week. Dab a tiny bit directly on sensitive root margins with your fingertip before bed.",
+        "2. Lukewarm Beverages: Drink room-temperature or lukewarm water for the first 24 to 48 hours. Avoid ice-cold sodas or steaming hot coffee.",
+        "3. Soft-Bristled Brush: Always use an ultra-soft toothbrush and avoid scrubbing back and forth aggressively."
+      ]
+    },
+    {
+      "heading": "Dietary Recommendations for the First 24 Hours",
+      "paragraphs": [
+        "If your scaling session included stain polishing or air-polishing, your teeth's microscopic pellicle layer takes a few hours to regenerate:",
+        "- Avoid Deeply Pigmented Foods: Stay away from strong stain-causing foods and beverages for 24 hours—such as black coffee, turmeric-heavy curries, red wine, soy sauce, and cola.",
+        "- Avoid Acidic Foods: Citrus fruits, tomatoes, and vinegar can irritate slightly tender gingival margins.",
+        "- No Tobacco: Avoid smoking or chewing tobacco, which severely irritates recovering gum tissues and quickly re-stains freshly polished enamel."
+      ]
+    },
+    {
+      "heading": "Your Daily Home Care Regimen",
+      "paragraphs": [
+        "To keep your smile fresh and plaque-free until your next checkup:",
+        "1. 2x2 Brushing Rule: Brush twice daily for two full minutes using fluoridated toothpaste and a soft-bristled brush angled at 45 degrees towards the gumline.",
+        "2. Daily Flossing: Floss once every evening before bed to dislodge interdental food particles that toothbrush bristles cannot reach.",
+        "3. Six-Month Recall: Schedule routine ultrasonic cleanings every 6 months at Aureva Dental to prevent hard calculus re-accumulation and keep your breath permanently fresh."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does scaling weaken tooth enamel or make teeth loose?",
+      "answer": "No! Ultrasonic scalers operate using micro-vibrations and water irrigation specifically calibrated to shatter brittle calculus without scratching human enamel. In fact, skipping scaling allows tartar to continuously destroy bone support, which is what actually causes tooth mobility and tooth loss."
+    },
+    {
+      "question": "How long does sensitivity last after teeth cleaning?",
+      "answer": "Mild sensitivity typically resolves within 24 to 72 hours as natural minerals in your saliva seal the exposed microscopic dentinal tubules. Using a desensitizing toothpaste accelerates this process."
+    },
+    {
+      "question": "How often should I get my teeth professionally cleaned in Bangalore?",
+      "answer": "The Indian Dental Association and global dental authorities recommend professional cleaning every 6 months. For patients prone to heavy tea/coffee stains, smoking, or history of periodontitis, cleanings every 3 to 4 months are recommended."
+    }
+  ],
+  "conclusion": "Clean teeth and healthy pink gums are the cornerstone of a vibrant, confident smile. Keep up your daily brushing, and see you at Aureva Dental for your next six-month checkup!",
+  "ctaHeadline": "Keep Your Smile Fresh & Healthy in Hennur",
+  "ctaText": "Aureva Dental is conveniently located on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp to book your preventive cleaning visit."
+}
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
