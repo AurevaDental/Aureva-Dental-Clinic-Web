@@ -38,8 +38,8 @@
 - **Complete Physical Address**: 2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043, India.
 - **Prominent Landmarks**: Located on Horamavu Agara Road directly opposite/adjacent to the Nayara Petrol Bunk at Hennur Bande junction.
 - **Geographic Coordinates**:
-  - Latitude: 13.0336° N
-  - Longitude: 77.6534° E
+  - Latitude: 13.0381741° N
+  - Longitude: 77.6416031° E
   - Postal Code: 560043
 - **Primary Areas & Neighborhoods Served (areaServed)**:
   - Hennur (including Hennur Bande, Hennur Cross, Hennur Gardens, Geddalahalli)

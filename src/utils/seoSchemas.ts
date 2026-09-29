@@ -384,7 +384,7 @@ export function generateDentistSchema(config: any = {}) {
         "medicalSpecialty": [
           "Dentistry"
         ],
-        "description": "Dental Surgeon (BDS, The Oxford Dental College) providing gentle preventive and restorative dental care at Aureva Dental.",
+        "description": "Dental Surgeon providing gentle preventive and restorative dental care at Aureva Dental.",
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }

@@ -18,6 +18,7 @@ interface Props {
   description?: string;
   keywords?: string;
   canonical?: string;
+  robots?: string;
   ogType?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -38,6 +39,7 @@ const {
   description = config.site_meta.description,
   keywords = "dentist in hennur, dental clinic horamavu, root canal treatment bengaluru, clear aligners hennur, dental implants, teeth whitening, best dentist near me, kalyan nagar dentist",
   canonical = currentUrl,
+  robots = "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   ogType = "website",
   ogTitle = title,
   ogDescription = description,
@@ -247,7 +249,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<meta name="description" content={description} />
 		{keywords && <meta name="keywords" content={keywords} />}
 		{canonical && <link rel="canonical" href={canonical} />}
-		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<meta name="robots" content={robots} />
 
 		<!-- Local Geo Meta Tags for Google Local Search & Maps -->
 		<meta name="geo.region" content="IN-KA" />
