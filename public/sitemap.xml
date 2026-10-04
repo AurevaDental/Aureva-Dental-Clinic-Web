@@ -456,4 +456,44 @@
       <image:title>Aureva Dental Blog</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://aurevadental.com/international-patients</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/assets/og/international-patients.svg</image:loc>
+      <image:title>International Patient Dental Care in North Bangalore</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://aurevadental.com/emergency-dental-care-for-travelers</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/assets/og/emergency-travelers.svg</image:loc>
+      <image:title>Emergency Dental Care for Travelers in Bangalore</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://aurevadental.com/blog/dental-cost-india-vs-uk</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/assets/og/dental-cost-india-vs-uk.svg</image:loc>
+      <image:title>Dental Treatment Cost: India vs UK Comparison</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://aurevadental.com/blog/dental-cost-india-vs-usa</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aurevadental.com/assets/og/dental-cost-india-vs-usa.svg</image:loc>
+      <image:title>Dental Treatment Cost: India vs USA Comparison</image:title>
+    </image:image>
+  </url>
 </urlset>

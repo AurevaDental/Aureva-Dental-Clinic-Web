@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F2EB"/>
+      <stop offset="100%" stop-color="#E8E2D5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <rect x="30" y="30" width="1140" height="570" rx="24" fill="none" stroke="#D3C7B5" stroke-width="2"/>
+
+  <!-- Top Badges -->
+  <g transform="translate(80, 80)">
+    <rect width="360" height="44" rx="22" fill="#4A5844" opacity="0.1"/>
+    <text x="24" y="27" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="#4A5844" letter-spacing="2">AUREVA DENTAL CLINICAL JOURNAL</text>
+  </g>
+
+  <g transform="translate(810, 80)">
+    <rect width="310" height="44" rx="22" fill="#4A5844"/>
+    <text x="28" y="27" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="600" fill="#F5F2EB" letter-spacing="1">2026 EDUCATIONAL GUIDE</text>
+  </g>
+
+  <!-- Headline -->
+  <text x="80" y="235" font-family="'Playfair Display', Georgia, serif" font-size="48" font-weight="600" fill="#2B2C28" letter-spacing="-1">
+    Dental Treatment Costs:
+  </text>
+  <text x="80" y="300" font-family="'Playfair Display', Georgia, serif" font-size="48" font-style="italic" font-weight="500" fill="#4A5844" letter-spacing="-1">
+    India vs UK
+  </text>
+
+  <!-- Subheadline -->
+  <text x="80" y="370" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="21" font-weight="400" fill="#4A5844">
+    Data-Backed Comparison: Implants, Root Canals, Ceramic Crowns &amp; Aligners
+  </text>
+  <text x="80" y="410" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="17" font-weight="300" fill="#6A685F">
+    Published INR Treatment Fees vs. Private UK Benchmarks &bull; Indicative Cost Analysis
+  </text>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(80, 480)">
+    <rect x="0" y="0" width="300" height="50" rx="25" fill="#EAE3D2" stroke="#D3C7B5" stroke-width="1.5"/>
+    <text x="24" y="31" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#2B2C28">✓ Published INR Pricing</text>
+
+    <rect x="320" y="0" width="310" height="50" rx="25" fill="#EAE3D2" stroke="#D3C7B5" stroke-width="1.5"/>
+    <text x="24" y="31" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#2B2C28">✓ CAD/CAM Zirconia Crowns</text>
+
+    <rect x="650" y="0" width="320" height="50" rx="25" fill="#EAE3D2" stroke="#D3C7B5" stroke-width="1.5"/>
+    <text x="24" y="31" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#2B2C28">✓ Transparent Itemized Estimates</text>
+  </g>
+</svg>

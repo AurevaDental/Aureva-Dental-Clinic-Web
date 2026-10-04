@@ -28,6 +28,7 @@ export interface ServiceItem {
 
 export interface ServiceCategory {
   title: string;
+  description?: string;
   items: ServiceItem[];
 }
 
@@ -146,5 +147,7 @@ export interface AppConfig {
   social_proof: SocialProof;
   google_reviews?: GoogleReview[];
   show_stats_section?: boolean;
+  show_gallery_slider?: boolean;
+  gallery_slider?: string[];
   [key: string]: any;
 }

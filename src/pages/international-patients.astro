@@ -1,0 +1,682 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas';
+
+export const prerender = false;
+
+const pageTitle = "International Patient Dental Care in North Bangalore | Aureva Dental";
+const pageDescription = "Restorative, implant, and smile dentistry for international patients, NRIs, and travelers in North Bangalore. Conveniently accessible from Kempegowda International Airport.";
+const canonicalUrl = "https://aurevadental.com/international-patients";
+const phoneCallUrl = "tel:+917349701002";
+const whatsappUrl = `https://wa.me/917349701002?text=${encodeURIComponent("Hello Aureva Dental, I am an international patient / NRI planning dental care in Bangalore and would like to arrange a preliminary consultation.")}`;
+
+const breadcrumbs = [
+  { name: "Home", url: "https://aurevadental.com/" },
+  { name: "International Patients", url: canonicalUrl }
+];
+
+const faqs = [
+  {
+    question: "Where is Aureva Dental located and how accessible is it from the airport?",
+    answer: "Aureva Dental is located in Hennur, North Bangalore, approximately 24 to 31 km from Kempegowda International Airport (BLR). Under typical road traffic conditions, travel time by cab or private vehicle is approximately 42 to 52 minutes via NH 44 (Bellary Road) or the Hennur–Bagalur link road. Travel time varies with traffic, route, and time of day."
+  },
+  {
+    question: "Can international patients discuss an estimated treatment plan before travel?",
+    answer: "Yes. Patients can share current digital panoramic X-rays (OPGs), CBCT scans, or clear clinical photographs via WhatsApp (+91 73497 01002) or email before booking travel. Based on the clinical information available, our clinical team will review the records and discuss an estimated treatment timeline, provisional options, and published pricing."
+  },
+  {
+    question: "Do dentists and staff at Aureva Dental speak English?",
+    answer: "Yes, English is the primary language used for patient consultations and clinical care at Aureva Dental. Consultations are conducted with transparent, clear explanations of all findings and recommended procedures."
+  },
+  {
+    question: "What payment methods are accepted for overseas patients?",
+    answer: "International card payments are accepted through our available payment methods, including major credit and debit cards (Visa, MasterCard, American Express). Standard domestic electronic payment options (UPI, Net Banking) and cash in Indian Rupees are also supported. All treatment invoices are issued in Indian Rupees (INR) with itemized receipts."
+  },
+  {
+    question: "Is there a separate foreign-patient surcharge?",
+    answer: "No separate foreign-patient surcharge is applied. International patients, NRIs, and local residents are billed according to the same transparent published treatment fees."
+  },
+  {
+    question: "How long should I plan to stay in Bangalore for dental treatment?",
+    answer: "Treatment timelines vary depending on clinical requirements. Single-visit procedures such as routine fillings, cleanings, or urgent pain relief can typically be handled in 1 day. Root canals and custom CAD/CAM ceramic crowns generally require 3 to 7 days to accommodate laboratory fabrication. Two-stage dental implants typically involve an initial surgical placement of 3 to 5 days, followed by final crown placement after an osseointegration period of 3 to 4 months."
+  },
+  {
+    question: "What implant and restorative materials are used?",
+    answer: "We utilize internationally standardized grade-4 titanium and biocompatible zirconia implant systems, alongside high-strength monolithic zirconia and ceramic restorations fabricated with computerized CAD/CAM technology."
+  },
+  {
+    question: "Are emergency appointments available for travelers?",
+    answer: "Yes. Same-day emergency appointments may be available, subject to clinical assessment and appointment availability. Aureva Dental is open 7 days a week, including Sundays."
+  }
+];
+
+const breadcrumbSchema = JSON.stringify(generateBreadcrumbSchema(breadcrumbs));
+const faqSchema = JSON.stringify(generateFaqSchema(faqs));
+
+const seoProps = {
+  title: pageTitle,
+  description: pageDescription,
+  canonical: canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: canonicalUrl,
+  ogImage: "https://aurevadental.com/assets/og/international-patients.svg",
+  schemaMarkup: [breadcrumbSchema, faqSchema]
+};
+
+const treatmentTimelines = [
+  {
+    procedure: "Emergency Pain Relief & Assessment",
+    duration: "1 Day (Same-Day)",
+    trips: "1 Visit",
+    notes: "Clinical triage, digital X-rays, pulpal stabilization, or emergency dressings for acute discomfort."
+  },
+  {
+    procedure: "Root Canal Treatment + Ceramic / Zirconia Crown",
+    duration: "3 – 5 Days",
+    trips: "1 Trip",
+    notes: "Rotary root canal therapy followed by digital intraoral scanning, custom laboratory milling, and crown cementation."
+  },
+  {
+    procedure: "Porcelain Veneers & Aesthetic Restorations",
+    duration: "5 – 7 Days",
+    trips: "1 Trip",
+    notes: "Clinical consultation, conservative preparation, digital scanning, custom laboratory fabrication, and permanent bonding."
+  },
+  {
+    procedure: "Dental Implants (Staged Protocol)",
+    duration: "Trip 1: 3–5 Days | Trip 2: 5–7 Days (3–4 months later)",
+    trips: "2 Trips",
+    notes: "Stage 1: 3D surgical placement of titanium implant fixture. Stage 2: Abutment connection and final crown restoration after osseointegration."
+  },
+  {
+    procedure: "Dental Crowns & Bridges (CAD/CAM Restorations)",
+    duration: "3 – 5 Days",
+    trips: "1 Trip",
+    notes: "Tooth preparation, optical digital impressions, computerized crown milling, and final cementation."
+  },
+  {
+    procedure: "Clear Aligners Planning",
+    duration: "2 – 3 Days in Clinic",
+    trips: "1 Trip + Aligner Dispatch",
+    notes: "Intraoral digital scanning, 3D orthodontic planning, and aligner series manufacture for pickup or scheduled dispatch."
+  }
+];
+
+const publishedPricing = [
+  { service: "New Patient Consultation (Incl. RVG Digital X-ray)", fee: "₹600", note: "Comprehensive oral examination and low-radiation digital radiography." },
+  { service: "Routine Scaling & Polishing", fee: "₹2,000 – ₹5,000", note: "Ultrasonic scaling and prophylactic polishing." },
+  { service: "Tooth Filling (Composite / Glass Ionomer)", fee: "₹1,500 – ₹4,000", note: "Tooth-colored direct restoration depending on cavity size." },
+  { service: "Root Canal Treatment — Anterior Tooth", fee: "₹4,000 – ₹6,000", note: "Single-root endodontic therapy." },
+  { service: "Root Canal Treatment — Premolar", fee: "₹5,000 – ₹8,000", note: "Intermediate canal endodontic treatment." },
+  { service: "Root Canal Treatment — Molar", fee: "₹6,000 – ₹10,000", note: "Multi-canal posterior endodontic treatment." },
+  { service: "Re-Root Canal Treatment", fee: "₹8,000 onwards", note: "Retreatment of previously failing root canals." },
+  { service: "Dental Crown — Ceramic / PFM", fee: "₹5,000 – ₹10,000", note: "PFM (₹5,000–₹8,000) or All-Ceramic (₹6,000–₹10,000)." },
+  { service: "Dental Crown — Monolithic Zirconia", fee: "₹10,000 – ₹18,000", note: "High-strength, metal-free CAD/CAM zirconia crown." },
+  { service: "Dental Implant (Per Fixture)", fee: "₹25,000 – ₹60,000", note: "Surgical placement of grade-4 titanium or zirconia fixture." },
+  { service: "Dental Implant with Final Crown", fee: "₹45,000 – ₹80,000", note: "Complete single-tooth implant fixture, abutment, and crown." },
+  { service: "Tooth Extraction (Simple to Surgical)", fee: "₹1,500 – ₹7,000", note: "Routine extraction to surgical / impacted wisdom tooth removal." },
+  { service: "Clear Aligners (Full Arch Series)", fee: "₹80,000 – ₹2,50,000", note: "Custom transparent aligner series based on case complexity." },
+  { service: "Porcelain Veneers (Per Tooth)", fee: "₹8,000 – ₹25,000", note: "Custom aesthetic porcelain restoration per unit." }
+];
+---
+
+<Layout {...seoProps}>
+  <!-- Breadcrumb Navigation -->
+  <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto flex items-center gap-2">
+      <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-japandi-charcoal font-medium">International Patients</span>
+    </div>
+  </nav>
+
+  <!-- Section 1: International Dental Care in North Bangalore -->
+  <section class="py-16 md:py-24 px-6 lg:px-24 bg-transparent relative overflow-hidden border-b border-japandi-clay/20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-japandi-clay/60 bg-japandi-sand/70 text-[11px] font-semibold text-japandi-moss uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-japandi-moss animate-pulse"></span>
+          Clinical Care for International Visitors &bull; North Bangalore
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-japandi-charcoal font-medium tracking-tight leading-[1.15]">
+          International Patient <span class="italic text-japandi-moss">Dental Care</span> in North Bangalore.
+        </h1>
+
+        <p class="text-base sm:text-lg text-japandi-earth font-light leading-relaxed max-w-2xl">
+          Located in Hennur, North Bangalore, Aureva Dental provides modern restorative, endodontic, and dental implant care for international patients, Non-Resident Indians (NRIs), and corporate travelers. We offer transparent published pricing, pre-travel case reviews, and convenient road access from Kempegowda International Airport.
+        </p>
+
+        <!-- Positioning Banner -->
+        <div class="p-4 sm:p-5 rounded-2xl bg-japandi-sand/55 border border-japandi-clay/50 flex flex-col sm:flex-row items-start sm:items-center gap-4 text-xs text-japandi-charcoal">
+          <div class="w-10 h-10 rounded-full bg-japandi-moss/10 text-japandi-moss flex items-center justify-center shrink-0 font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+          </div>
+          <div class="space-y-0.5">
+            <strong class="font-medium text-japandi-charcoal block">Location &amp; Airport Accessibility:</strong>
+            <span class="text-japandi-earth font-light leading-relaxed block">
+              Located in Hennur, North Bangalore, with convenient road access from Kempegowda International Airport (approximately 24–31 km; about 42–52 minutes by car/cab). Travel time from the airport varies with traffic, route, and time of day.
+            </span>
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+          <a 
+            href={whatsappUrl}
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-md shadow-japandi-moss/10"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>WhatsApp Consultation</span>
+          </a>
+          <a 
+            href="#pricing"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-japandi-clay bg-japandi-sand/30 hover:bg-japandi-sand text-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all duration-300"
+          >
+            <span>View Published Pricing</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 space-y-4">
+        <div class="rounded-3xl border border-japandi-clay/50 bg-japandi-sand/40 p-6 sm:p-8 space-y-5">
+          <h3 class="font-serif text-xl text-japandi-charcoal font-medium">Core Clinical Commitments</h3>
+          <ul class="space-y-3.5 text-xs sm:text-sm text-japandi-earth font-light">
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-japandi-moss/10 text-japandi-moss flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+              <span><strong>Pre-Travel Record Review:</strong> Share your X-rays or photos for preliminary clinical review before booking your travel.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-japandi-moss/10 text-japandi-moss flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+              <span><strong>No Separate Foreigner Surcharge:</strong> Uniform pricing for all patients based on published INR treatment fees.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-japandi-moss/10 text-japandi-moss flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+              <span><strong>Fluent English Communication:</strong> Consultations conducted in clear English by experienced clinicians.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-japandi-moss/10 text-japandi-moss flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+              <span><strong>Open 7 Days Including Sundays:</strong> Convenient weekend scheduling for busy itineraries and traveling guests.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Why Patients Consider Bangalore for Dental Care -->
+  <section class="py-20 px-6 lg:px-24 bg-japandi-sand/20 border-b border-japandi-clay/20">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="max-w-3xl space-y-4">
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Clinical Environment</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium">Why Patients Consider Bangalore for Dental Care</h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Bangalore is one of India's major medical and educational centers, with well-established dental institutions, digital laboratories, and experienced clinicians. For patients traveling from overseas, the city offers high-standard dental care with modern diagnostic technology at clear, transparent treatment fees.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-japandi-sand flex items-center justify-center text-japandi-moss font-serif font-bold text-lg">01</div>
+          <h3 class="font-serif text-lg font-medium text-japandi-charcoal">Established Clinical Training</h3>
+          <p class="text-xs text-japandi-earth font-light leading-relaxed">
+            Clinicians in Bangalore complete standardized multi-year dental degrees with extensive clinical training across restorative, surgical, and endodontic disciplines.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-japandi-sand flex items-center justify-center text-japandi-moss font-serif font-bold text-lg">02</div>
+          <h3 class="font-serif text-lg font-medium text-japandi-charcoal">Digital Laboratory Infrastructure</h3>
+          <p class="text-xs text-japandi-earth font-light leading-relaxed">
+            Bangalore is home to specialized computerized dental laboratories providing precision CAD/CAM crown milling, monolithic zirconia sintering, and digital orthodontics.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-japandi-sand flex items-center justify-center text-japandi-moss font-serif font-bold text-lg">03</div>
+          <h3 class="font-serif text-lg font-medium text-japandi-charcoal">Cosmopolitan &amp; English Communication</h3>
+          <p class="text-xs text-japandi-earth font-light leading-relaxed">
+            As a global business center, Bangalore provides ease of communication for overseas visitors, with English widely spoken across medical clinics, hospitality, and transit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 & 4: Why North Bangalore Can Be Convenient & Access From Kempegowda Airport -->
+  <section class="py-20 px-6 lg:px-24 bg-transparent border-b border-japandi-clay/20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-6 space-y-6">
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Regional Accessibility</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium">Why North Bangalore Can Be Convenient</h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Located in Hennur, North Bangalore, Aureva Dental is positioned along the city's northern growth corridor, providing accessible road connectivity to Kempegowda International Airport without requiring travel through the denser inner-city traffic of Central or South Bangalore.
+        </p>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl bg-japandi-sand/35 border border-japandi-clay/40">
+            <h4 class="font-serif text-sm font-medium text-japandi-charcoal mb-1">Kempegowda International Airport (BLR) Route Information</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs pt-1">
+              <div>
+                <span class="text-japandi-earth block">Distance:</span>
+                <span class="font-semibold text-japandi-moss text-sm">~24 – 31 km</span>
+              </div>
+              <div>
+                <span class="text-japandi-earth block">Road / Cab:</span>
+                <span class="font-semibold text-japandi-moss text-sm">~42 – 52 mins</span>
+              </div>
+              <div>
+                <span class="text-japandi-earth block">Public Bus:</span>
+                <span class="font-semibold text-japandi-moss text-sm">~1h 30m – 1h 45m</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-japandi-earth/80 mt-2 font-light italic">
+              Note: Travel time varies with traffic, chosen route, and time of day.
+            </p>
+          </div>
+
+          <p class="text-xs text-japandi-earth font-light leading-relaxed">
+            Our clinic is situated on Horamavu Agara Road (near Nayara Petrol Bunk, Hennur Bande) with straightforward connectivity via the NH 44 (Bellary Road) corridor and the Hennur–Bagalur Airport road.
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6">
+        <div class="rounded-3xl border border-japandi-clay/50 bg-japandi-sand/45 p-6 sm:p-8 space-y-6">
+          <h3 class="font-serif text-xl font-medium text-japandi-charcoal">Access Options From BLR Airport to the Clinic</h3>
+          
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div class="flex items-start gap-3.5 pb-4 border-b border-japandi-clay/30">
+              <span class="w-8 h-8 rounded-full bg-japandi-moss text-japandi-cream flex items-center justify-center font-bold text-xs shrink-0">1</span>
+              <div>
+                <strong class="text-japandi-charcoal block font-medium">App-Based Cabs (Uber &amp; Ola)</strong>
+                <p class="text-japandi-earth font-light mt-0.5">Available 24/7 at designated airport pickup bays. Typical fares to North Bangalore range between ₹800 and ₹1,200 depending on peak travel hours and demand.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 pb-4 border-b border-japandi-clay/30">
+              <span class="w-8 h-8 rounded-full bg-japandi-moss text-japandi-cream flex items-center justify-center font-bold text-xs shrink-0">2</span>
+              <div>
+                <strong class="text-japandi-charcoal block font-medium">Pre-Paid Airport Taxis</strong>
+                <p class="text-japandi-earth font-light mt-0.5">Authorized taxi counters are available inside the arrivals terminal with metered or fixed-fare pricing.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <span class="w-8 h-8 rounded-full bg-japandi-moss text-japandi-cream flex items-center justify-center font-bold text-xs shrink-0">3</span>
+              <div>
+                <strong class="text-japandi-charcoal block font-medium">BMTC Airport Vayu Vajra Buses</strong>
+                <p class="text-japandi-earth font-light mt-0.5">Air-conditioned public transit buses connect the airport to major transit hubs including Hebbal and surrounding North Bangalore junctions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5, 6, 7: Planning a Dental Visit, Pre-Travel Consultation & Sharing Photos/X-rays -->
+  <section id="pre-travel" class="py-20 px-6 lg:px-24 bg-japandi-sand/25 border-b border-japandi-clay/20">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="max-w-3xl space-y-4">
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Trip Preparation</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium">Planning Your Dental Visit Before Travel</h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Planning dental care before traveling allows you to organize your schedule effectively. We encourage patients to share clinical information in advance so that provisional treatment steps and expected timelines can be discussed prior to arrival.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-3xl bg-japandi-cream border border-japandi-clay/40 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-japandi-sand flex items-center justify-center text-japandi-moss font-bold text-lg">Step 1</div>
+          <h3 class="font-serif text-lg font-medium text-japandi-charcoal">Share Photos &amp; Radiographs</h3>
+          <p class="text-xs text-japandi-earth font-light leading-relaxed">
+            You can share recent panoramic X-rays (OPGs), CBCT scans, or well-lit smartphone photos of your teeth via WhatsApp or email. This helps our clinical team understand your starting situation.
+          </p>
+          <div class="pt-2">
+            <span class="text-[11px] font-medium text-japandi-moss block">Accepted Formats:</span>
+            <span class="text-[11px] text-japandi-earth font-light">JPEG, PNG, PDF, DICOM links</span>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-japandi-cream border border-japandi-clay/40 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-japandi-sand flex items-center justify-center text-japandi-moss font-bold text-lg">Step 2</div>
+          <h3 class="font-serif text-lg font-medium text-japandi-charcoal">Preliminary Clinical Review</h3>
+          <p class="text-xs text-japandi-earth font-light leading-relaxed">
+            Our clinical team reviews the available records and provides an itemized provisional estimate based on our published INR pricing, along with estimated visit counts and timelines.
+          </p>
+          <div class="pt-2">
+            <span class="text-[11px] font-medium text-japandi-moss block">Response Time:</span>
+            <span class="text-[11px] text-japandi-earth font-light">Typically within 24 to 48 hours</span>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-japandi-cream border border-japandi-clay/40 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-japandi-sand flex items-center justify-center text-japandi-moss font-bold text-lg">Step 3</div>
+          <h3 class="font-serif text-lg font-medium text-japandi-charcoal">Confirm Travel &amp; Appointments</h3>
+          <p class="text-xs text-japandi-earth font-light leading-relaxed">
+            Once you confirm your travel dates, we coordinate appointment slots to ensure your treatment visits are organized conveniently around your stay.
+          </p>
+          <div class="pt-2">
+            <span class="text-[11px] font-medium text-japandi-moss block">Clinical Confirmation:</span>
+            <span class="text-[11px] text-japandi-earth font-light">Final treatment plan confirmed after clinical assessment</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-japandi-moss/10 border border-japandi-moss/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h4 class="font-serif text-base font-medium text-japandi-charcoal">Want to share your records for a preliminary discussion?</h4>
+          <p class="text-xs text-japandi-earth font-light mt-0.5">Reach out directly via our WhatsApp clinical coordination desk.</p>
+        </div>
+        <a 
+          href={whatsappUrl}
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all"
+        >
+          <span>Message +91 73497 01002</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8, 9, 10, 11, 12: Treatment Planning (Implants, RCT, Crowns & Cosmetic) -->
+  <section class="py-20 px-6 lg:px-24 bg-transparent border-b border-japandi-clay/20">
+    <div class="max-w-7xl mx-auto space-y-16">
+      <div class="max-w-3xl space-y-4">
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Clinical Care Pathways</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium">Treatment Planning for International Patients</h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Planning restorative and rehabilitative care for traveling patients requires realistic clinical timelines and predictable biological staging. Here is how core procedures are planned:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Section 9: Dental Implant Planning -->
+        <div class="p-7 rounded-3xl bg-japandi-sand/35 border border-japandi-clay/50 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="text-[10px] font-semibold text-japandi-moss uppercase tracking-wider block">Tooth Replacement</span>
+            <h3 class="font-serif text-lg font-medium text-japandi-charcoal">Dental Implant Planning</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              We plan dental implant cases using 3D radiographic assessment to evaluate bone density and anatomical structures. Staged protocols allow proper bone integration before placing the final crown.
+            </p>
+          </div>
+          <a href="/treatments/dental-implants" class="text-xs font-semibold text-japandi-moss hover:text-japandi-charcoal transition-colors underline underline-offset-4">
+            Dental Implants Guide &rarr;
+          </a>
+        </div>
+
+        <!-- Section 10: Root Canal Treatment Planning -->
+        <div class="p-7 rounded-3xl bg-japandi-sand/35 border border-japandi-clay/50 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="text-[10px] font-semibold text-japandi-moss uppercase tracking-wider block">Endodontic Care</span>
+            <h3 class="font-serif text-lg font-medium text-japandi-charcoal">Root Canal Treatment</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              Rotary endodontic therapy is planned to cleanse and seal infected canals effectively. Single-sitting or staged treatment is determined based on individual pulpal infection levels.
+            </p>
+          </div>
+          <a href="/treatments/root-canal-treatment" class="text-xs font-semibold text-japandi-moss hover:text-japandi-charcoal transition-colors underline underline-offset-4">
+            Root Canal Treatment &rarr;
+          </a>
+        </div>
+
+        <!-- Section 11: Crown and Restorative Planning -->
+        <div class="p-7 rounded-3xl bg-japandi-sand/35 border border-japandi-clay/50 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="text-[10px] font-semibold text-japandi-moss uppercase tracking-wider block">Prosthodontics</span>
+            <h3 class="font-serif text-lg font-medium text-japandi-charcoal">Crowns &amp; Restorations</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              High-strength monolithic zirconia and ceramic crowns are fabricated using digital optical scans and precision CAD/CAM laboratory milling for accurate fit and natural aesthetics.
+            </p>
+          </div>
+          <a href="/treatments/dental-crowns" class="text-xs font-semibold text-japandi-moss hover:text-japandi-charcoal transition-colors underline underline-offset-4">
+            Dental Crowns Guide &rarr;
+          </a>
+        </div>
+
+        <!-- Section 12: Cosmetic / Smile Treatment Planning -->
+        <div class="p-7 rounded-3xl bg-japandi-sand/35 border border-japandi-clay/50 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="text-[10px] font-semibold text-japandi-moss uppercase tracking-wider block">Cosmetic Care</span>
+            <h3 class="font-serif text-lg font-medium text-japandi-charcoal">Cosmetic &amp; Smile Planning</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              Where clinically appropriate, porcelain veneers, composite bonding, and professional teeth whitening can be organized within a structured 5 to 7-day visit.
+            </p>
+          </div>
+          <a href="/treatments/cosmetic-dentistry" class="text-xs font-semibold text-japandi-moss hover:text-japandi-charcoal transition-colors underline underline-offset-4">
+            Cosmetic Dentistry &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 13 & 14: Treatment Timelines & Stays -->
+  <section class="py-20 px-6 lg:px-24 bg-japandi-sand/20 border-b border-japandi-clay/20">
+    <div class="max-w-7xl mx-auto space-y-10">
+      <div class="max-w-3xl space-y-4">
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Itinerary Planning</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium">Estimated Treatment Timelines for Travelers</h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          We can discuss an estimated treatment timeline before your visit based on the clinical information and records available. Here are typical clinical staging windows:
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-cream">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-japandi-clay/40 bg-japandi-sand/60">
+              <th class="py-4 px-6 font-serif font-medium text-japandi-charcoal">Procedure</th>
+              <th class="py-4 px-6 font-serif font-medium text-japandi-moss">Estimated Duration</th>
+              <th class="py-4 px-6 font-serif font-medium text-japandi-charcoal">Visits / Trips</th>
+              <th class="py-4 px-6 font-serif font-medium text-japandi-earth">Clinical Staging &amp; Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-japandi-clay/20 text-japandi-charcoal font-light">
+            {treatmentTimelines.map((item) => (
+              <tr class="hover:bg-japandi-sand/30 transition-colors">
+                <td class="py-4 px-6 font-medium text-japandi-charcoal">{item.procedure}</td>
+                <td class="py-4 px-6 font-semibold text-japandi-moss whitespace-nowrap">{item.duration}</td>
+                <td class="py-4 px-6 text-japandi-charcoal whitespace-nowrap">{item.trips}</td>
+                <td class="py-4 px-6 text-japandi-earth leading-relaxed">{item.notes}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-[11px] text-japandi-earth font-light italic">
+        * Timelines are clinical estimates and depend on individual healing, bone quality, and procedural complexity. Final plans are confirmed following in-person clinical assessment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 15, 16, 17: Pricing Transparency, International Payments & No Surcharge -->
+  <section id="pricing" class="py-20 px-6 lg:px-24 bg-transparent border-b border-japandi-clay/20">
+    <div class="max-w-7xl mx-auto space-y-12">
+      <div class="max-w-3xl space-y-4">
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Cost Transparency</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium">Published Treatment Pricing &amp; Payment Details</h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Aureva Dental maintains transparent, published Indian Rupee (INR) treatment pricing. No separate foreign-patient surcharge is applied—fees remain identical for local and overseas patients alike.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-sand/30">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-japandi-clay/40 bg-japandi-sand/70">
+              <th class="py-4 px-6 font-serif font-medium text-japandi-charcoal">Treatment Service</th>
+              <th class="py-4 px-6 font-serif font-medium text-japandi-moss">Published Fee (INR ₹)</th>
+              <th class="py-4 px-6 font-serif font-medium text-japandi-earth">Clinical Scope &amp; Inclusions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-japandi-clay/20 text-japandi-charcoal font-light">
+            {publishedPricing.map((item) => (
+              <tr class="hover:bg-japandi-sand/40 transition-colors">
+                <td class="py-4 px-6 font-medium text-japandi-charcoal">{item.service}</td>
+                <td class="py-4 px-6 font-semibold text-japandi-moss whitespace-nowrap">{item.fee}</td>
+                <td class="py-4 px-6 text-japandi-earth leading-relaxed">{item.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Payment & Policy Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+        <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2">
+          <h3 class="font-serif text-base font-medium text-japandi-charcoal">International Card Payments</h3>
+          <p class="text-xs text-japandi-earth font-light leading-relaxed">
+            International card payments are accepted through our available payment methods, including major credit and debit cards (Visa, MasterCard, American Express).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2">
+          <h3 class="font-serif text-base font-medium text-japandi-charcoal">No Foreigner Surcharge</h3>
+          <p class="text-xs text-japandi-earth font-light leading-relaxed">
+            No separate foreign-patient surcharge is applied. You pay the exact published INR treatment fee confirmed during your clinical consultation.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2">
+          <h3 class="font-serif text-base font-medium text-japandi-charcoal">Itemized Receipts</h3>
+          <p class="text-xs text-japandi-earth font-light leading-relaxed">
+            We provide itemized clinical notes and tax invoices in English specifying treatments and diagnostic codes for personal records or insurance claims.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/40 text-xs text-japandi-earth font-light leading-relaxed">
+        <strong>Price Disclaimer:</strong> Published fees reflect standard clinic ranges. Exact procedure costs depend on clinical findings, anatomical complexity, materials chosen, and any necessary preparatory procedures (such as bone grafting or diagnostic imaging). Final fees are confirmed in a written treatment plan following in-person clinical assessment. Aureva Dental's published prices are in INR. Foreign-currency conversions are illustrative and may change with exchange rates.
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 18 & 19: 7-Day Availability & Emergency Care for Travelers -->
+  <section class="py-20 px-6 lg:px-24 bg-japandi-sand/20 border-b border-japandi-clay/20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-6 space-y-6">
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Operational Availability</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium">Open 7 Days, Including Sundays</h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Dental emergencies and tight travel schedules do not always align with standard office hours. Aureva Dental is open 7 days a week to provide clinical continuity:
+        </p>
+
+        <div class="p-5 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2 text-xs text-japandi-charcoal">
+          <div class="flex justify-between py-1 border-b border-japandi-clay/20">
+            <span>Tuesday – Saturday:</span>
+            <span class="font-medium text-japandi-moss">9:30 AM – 9:00 PM</span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-japandi-clay/20">
+            <span>Sunday:</span>
+            <span class="font-medium text-japandi-moss">9:30 AM – 9:00 PM (Appointments Available)</span>
+          </div>
+          <div class="flex justify-between py-1">
+            <span>Monday:</span>
+            <span class="font-medium text-japandi-moss">4:00 PM – 9:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 space-y-6">
+        <div class="p-8 rounded-3xl bg-japandi-cream border border-japandi-clay/50 space-y-4">
+          <span class="text-xs font-semibold text-red-700 uppercase tracking-widest block">Urgent Care</span>
+          <h3 class="font-serif text-xl font-medium text-japandi-charcoal">Emergency Dental Care for Travelers</h3>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+            If you experience an acute toothache, broken restoration, or dental trauma while traveling in Bangalore, contact the clinic as soon as practical. Same-day emergency appointments may be available, subject to clinical assessment and appointment availability.
+          </p>
+          <div class="pt-2">
+            <a href="/emergency-dental-care-for-travelers" class="inline-flex items-center gap-1.5 text-xs font-semibold text-red-700 hover:text-japandi-charcoal transition-colors underline underline-offset-4">
+              <span>Read Traveler Emergency Dental Care Guide &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 20: Frequently Asked Questions -->
+  <section class="py-20 px-6 lg:px-24 bg-transparent border-b border-japandi-clay/20">
+    <div class="max-w-4xl mx-auto space-y-10">
+      <div class="text-center space-y-3">
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Patient Guidance</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        {faqs.map((faq) => (
+          <details class="group rounded-2xl bg-japandi-cream border border-japandi-clay/50 p-5 open:bg-japandi-sand/30 transition-colors">
+            <summary class="flex items-center justify-between font-serif text-base font-medium text-japandi-charcoal cursor-pointer list-none">
+              <span>{faq.question}</span>
+              <span class="text-japandi-moss text-xl group-open:rotate-45 transition-transform duration-200">+</span>
+            </summary>
+            <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed mt-3 pt-3 border-t border-japandi-clay/30">
+              {faq.answer}
+            </p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 21: WhatsApp / Contact CTA & Internal Links -->
+  <section class="py-20 px-6 lg:px-24 bg-japandi-sand/60 text-center">
+    <div class="max-w-3xl mx-auto space-y-6">
+      <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Get in Touch</span>
+      <h2 class="text-3xl sm:text-5xl font-serif text-japandi-charcoal font-medium leading-tight">
+        Plan Your Dental Visit in North Bangalore.
+      </h2>
+      <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+        Contact our clinical team today via WhatsApp or phone. Transmit your clinical photographs or radiographs for preliminary review and an estimated treatment timeline before your visit.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <a 
+          href={whatsappUrl}
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-lg shadow-japandi-moss/20"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <span>Chat on WhatsApp: +91 73497 01002</span>
+        </a>
+        <a 
+          href={phoneCallUrl}
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-japandi-clay bg-japandi-sand/30 hover:bg-japandi-sand text-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all"
+        >
+          <span>Call: +91 73497 01002</span>
+        </a>
+      </div>
+
+      <!-- Internal Navigation Links -->
+      <div class="pt-8 border-t border-japandi-clay/30 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-japandi-earth font-light">
+        <a href="/treatments/dental-implants" class="hover:text-japandi-moss transition-colors">Dental Implants</a>
+        <span>&bull;</span>
+        <a href="/treatments/root-canal-treatment" class="hover:text-japandi-moss transition-colors">Root Canal Treatment</a>
+        <span>&bull;</span>
+        <a href="/treatments/dental-crowns" class="hover:text-japandi-moss transition-colors">Dental Crowns</a>
+        <span>&bull;</span>
+        <a href="/treatments/emergency-dentist" class="hover:text-japandi-moss transition-colors">Emergency Dentist</a>
+        <span>&bull;</span>
+        <a href="/emergency-dental-care-for-travelers" class="hover:text-japandi-moss transition-colors">Emergency Care for Travelers</a>
+        <span>&bull;</span>
+        <a href="/blog/dental-cost-india-vs-uk" class="hover:text-japandi-moss transition-colors">Dental Cost: India vs UK</a>
+        <span>&bull;</span>
+        <a href="/blog/dental-cost-india-vs-usa" class="hover:text-japandi-moss transition-colors">Dental Cost: India vs USA</a>
+        <span>&bull;</span>
+        <a href="/contact" class="hover:text-japandi-moss transition-colors">Contact &amp; Location</a>
+      </div>
+    </div>
+  </section>
+</Layout>

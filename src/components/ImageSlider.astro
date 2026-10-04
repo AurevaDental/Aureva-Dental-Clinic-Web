@@ -2,7 +2,7 @@
 import { getConfig } from '../utils/getConfig';
 
 const config = getConfig();
-const { gallery_slider } = config;
+const gallery_slider: string[] = config.gallery_slider || [];
 ---
 
 <section class="py-24 px-6 lg:px-24 bg-japandi-cream border-t border-japandi-clay/40 overflow-hidden">
@@ -14,7 +14,7 @@ const { gallery_slider } = config;
       class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-4 pb-8"
       style="scrollbar-width: none; -ms-overflow-style: none;"
     >
-      {gallery_slider.map((imgUrl, index) => (
+      {gallery_slider.map((imgUrl: string, index: number) => (
         <div class="snap-center shrink-0 w-full md:w-[85%] aspect-[16/9] md:aspect-[21/9] rounded-[2.5rem] overflow-hidden border border-japandi-clay/40">
           <img 
             src={imgUrl} 
@@ -41,7 +41,7 @@ const { gallery_slider } = config;
       </button>
       
       <div id="slide-indicators" class="flex gap-2">
-        {gallery_slider.map((_, idx) => (
+        {gallery_slider.map((_: string, idx: number) => (
           <div class={`w-2 h-2 rounded-full transition-all duration-300 indicator-dot ${idx === 0 ? 'bg-japandi-moss scale-125' : 'bg-japandi-clay'}`} data-index={idx}></div>
         ))}
       </div>

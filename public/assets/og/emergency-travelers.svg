@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCF9F7"/>
+      <stop offset="100%" stop-color="#F2E6E1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <rect x="30" y="30" width="1140" height="570" rx="24" fill="none" stroke="#E5C7BE" stroke-width="2"/>
+
+  <!-- Top Badges -->
+  <g transform="translate(80, 80)">
+    <rect width="360" height="44" rx="22" fill="#B91C1C" opacity="0.1"/>
+    <text x="24" y="27" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="#B91C1C" letter-spacing="2">AUREVA DENTAL • TRAVEL CARE</text>
+  </g>
+
+  <g transform="translate(770, 80)">
+    <rect width="350" height="44" rx="22" fill="#B91C1C"/>
+    <text x="32" y="27" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" letter-spacing="1">📍 HENNUR, NORTH BANGALORE</text>
+  </g>
+
+  <!-- Headline -->
+  <text x="80" y="235" font-family="'Playfair Display', Georgia, serif" font-size="48" font-weight="600" fill="#2B2C28" letter-spacing="-1">
+    Emergency Dental Care
+  </text>
+  <text x="80" y="300" font-family="'Playfair Display', Georgia, serif" font-size="48" font-style="italic" font-weight="500" fill="#B91C1C" letter-spacing="-1">
+    for Travelers in Bangalore
+  </text>
+
+  <!-- Subheadline -->
+  <text x="80" y="370" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="500" fill="#B91C1C">
+    Open 7 Days &bull; Same-Day Emergency Appointments May Be Available
+  </text>
+  <text x="80" y="410" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="17" font-weight="300" fill="#6A685F">
+    Care for Acute Toothache, Broken Teeth, Lost Crowns &amp; Dental Infection in North Bangalore
+  </text>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(80, 480)">
+    <rect x="0" y="0" width="300" height="50" rx="25" fill="#FCEAE6" stroke="#E5C7BE" stroke-width="1.5"/>
+    <text x="20" y="31" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#B91C1C">✓ Urgent Dental Assessment</text>
+
+    <rect x="320" y="0" width="300" height="50" rx="25" fill="#FCEAE6" stroke="#E5C7BE" stroke-width="1.5"/>
+    <text x="20" y="31" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#B91C1C">✓ Open 7 Days &bull; Sundays Open</text>
+
+    <rect x="640" y="0" width="340" height="50" rx="25" fill="#FCEAE6" stroke="#E5C7BE" stroke-width="1.5"/>
+    <text x="20" y="31" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#B91C1C">✓ Travel Insurance Documentation</text>
+  </g>
+</svg>

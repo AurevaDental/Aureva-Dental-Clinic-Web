@@ -1,0 +1,465 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { generateBreadcrumbSchema, generateBlogPostSchema, generateFaqSchema } from '../../utils/seoSchemas';
+
+export const prerender = false;
+
+const pageTitle = "Dental Treatment Costs: India vs UK (2026 Benchmark Comparison) | Aureva Dental";
+const pageDescription = "An educational comparison of dental treatment costs between India and the UK for implants, root canals, crowns, aligners, and extractions using published benchmarks.";
+const canonicalUrl = "https://aurevadental.com/blog/dental-cost-india-vs-uk";
+const phoneCallUrl = "tel:+917349701002";
+const whatsappUrl = `https://wa.me/917349701002?text=${encodeURIComponent("Hello Aureva Dental, I read your India vs UK dental cost guide and would like to consult regarding my dental treatment.")}`;
+
+const breadcrumbs = [
+  { name: "Home", url: "https://aurevadental.com/" },
+  { name: "Blog", url: "https://aurevadental.com/blog" },
+  { name: "Dental Cost: India vs UK", url: canonicalUrl }
+];
+
+const faqs = [
+  {
+    question: "Why do private dental treatment fees differ between India and the UK?",
+    answer: "The price variance between private dental care in the UK and Bangalore is driven primarily by macro-economic factors: clinical facility operating leases, laboratory technician wage benchmarks, medical indemnity insurance structures, and educational debt burdens. Restorative materials, including titanium implant fixtures and computerized CAD/CAM zirconia ceramics, meet international technical standards in both regions."
+  },
+  {
+    question: "How do NHS dental fees in the UK compare to private benchmarks?",
+    answer: "In the UK, NHS dental charges are tiered in England into Band 1 (£26.80), Band 2 (£73.50), and Band 3 (£319.10 for crowns/dentures). However, dental implants are rarely provided under NHS treatment, and long NHS appointment waiting times lead many patients to seek private care. Private UK fees are set independently by clinics and typically range much higher than statutory NHS bands."
+  },
+  {
+    question: "What does Aureva Dental's published pricing include?",
+    answer: "Aureva Dental publishes transparent treatment fee ranges in Indian Rupees (INR). For example, a single molar root canal is ₹6,000 to ₹10,000, and a monolithic zirconia crown is ₹10,000 to ₹18,000. Fees are confirmed in a written clinical plan following in-person clinical assessment and diagnostic radiographs."
+  },
+  {
+    question: "Can UK travelers receive an itemized receipt for insurance or reimbursement?",
+    answer: "Yes. Aureva Dental provides itemized clinical summaries, diagnostic digital X-rays, and official tax invoices in English specifying procedures, which patients can submit to private international health insurers or cash-plan providers."
+  },
+  {
+    question: "How many days should an overseas patient plan to stay in Bangalore?",
+    answer: "A single-sitting root canal and CAD/CAM ceramic crown generally requires 3 to 5 business days to accommodate digital scanning, custom laboratory sintering, and final cementation. Staged dental implants involve an initial 3 to 5-day surgical visit, followed by a second visit 3 to 4 months later for final restoration."
+  }
+];
+
+const breadcrumbSchema = JSON.stringify(generateBreadcrumbSchema(breadcrumbs));
+const blogPostSchema = JSON.stringify(generateBlogPostSchema({
+  headline: "Dental Treatment Costs in India vs. the UK: An Educational Breakdown of Pricing, Materials, and Clinical Care",
+  description: pageDescription,
+  url: canonicalUrl,
+  authorName: "Dr. Shweta Singh, BDS",
+  authorJobTitle: "Clinical Director & Dental Surgeon (Alumna, The Oxford Dental College)",
+  datePublished: "2026-09-15",
+  dateModified: "2026-10-04",
+  image: "https://aurevadental.com/assets/og/dental-cost-india-vs-uk.svg"
+}));
+const faqSchema = JSON.stringify(generateFaqSchema(faqs));
+
+const seoProps = {
+  title: pageTitle,
+  description: pageDescription,
+  canonical: canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: canonicalUrl,
+  ogImage: "https://aurevadental.com/assets/og/dental-cost-india-vs-uk.svg",
+  schemaMarkup: [breadcrumbSchema, blogPostSchema, faqSchema]
+};
+
+// Data comparison table using exact published Aureva pricing & verified UK private benchmarks
+// Exchange rate snapshot date: October 4, 2026 (£1 GBP ≈ ₹127 INR)
+const articleUpdateDate = "October 4, 2026";
+const exchangeRateSnapshot = "£1 GBP ≈ ₹127 INR";
+
+const costComparisons = [
+  {
+    treatment: "Dental Implant with Crown (Complete Single Tooth)",
+    aurevaPriceInr: "₹45,000 – ₹80,000",
+    foreignBenchmark: "£2,095 – £3,700",
+    currency: "GBP (£)",
+    illustrativeInr: "₹2,66,065 – ₹4,69,900",
+    approxDifference: "~83% lower (Midpoint: ~83.0%)",
+    sourceAndType: "UK private-practice range",
+    sourceLabel: "Dental Art Implant Clinic (£2,095–£2,970) & Bow Lane Dental Group (£3,700)",
+    sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
+    inclusions: "Grade-4 titanium implant fixture, custom abutment, and final crown. Bone grafting or sinus lifts, if required, are separate."
+  },
+  {
+    treatment: "Dental Implant (Fixture Only)",
+    aurevaPriceInr: "₹25,000 – ₹60,000",
+    foreignBenchmark: "£990 – £1,800",
+    currency: "GBP (£)",
+    illustrativeInr: "₹1,25,730 – ₹2,28,600",
+    approxDifference: "~74% – 80% lower (Midpoint: ~76.0%)",
+    sourceAndType: "UK private-practice range",
+    sourceLabel: "Dental Art Implant Clinic (£990 fixture) & illustrative Bupa Dental Care practice guides (£1,200–£1,800)",
+    sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
+    inclusions: "Surgical placement of titanium or zirconia fixture. Abutment and final crown billed separately based on material choice."
+  },
+  {
+    treatment: "Root Canal Treatment — Molar (Posterior)",
+    aurevaPriceInr: "₹6,000 – ₹10,000",
+    foreignBenchmark: "£645 – £1,060",
+    currency: "GBP (£)",
+    illustrativeInr: "₹81,915 – ₹1,34,620",
+    approxDifference: "~93% lower (Midpoint: ~92.6%)",
+    sourceAndType: "UK private-practice range",
+    sourceLabel: "Bupa Dental Care Manchester St Ann's Square (£645) & Bow Lane Dental Group specialist endodontics (£1,060)",
+    sourceUrl: "https://www.bupa.co.uk/dental/dental-care/practices/manchester-st-anns-square/treatment-and-prices",
+    inclusions: "Multi-canal rotary endodontic therapy, apex locator verification, and bio-ceramic seal. Final protective crown is separate."
+  },
+  {
+    treatment: "Monolithic Zirconia Crown (CAD/CAM Milled)",
+    aurevaPriceInr: "₹10,000 – ₹18,000",
+    foreignBenchmark: "£850 – £1,337",
+    currency: "GBP (£)",
+    illustrativeInr: "₹1,07,950 – ₹1,69,799",
+    approxDifference: "~89% – 91% lower (Midpoint: ~89.9%)",
+    sourceAndType: "UK private-practice range",
+    sourceLabel: "Dental Art Implant Clinic (£850 zirconium) & Bow Lane Dental Group (£1,337 crown)",
+    sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
+    inclusions: "High-translucency CAD/CAM monolithic zirconia crown. Core buildup or post-and-core, if clinically required, billed separately."
+  },
+  {
+    treatment: "All-Ceramic / PFM Crown",
+    aurevaPriceInr: "₹5,000 – ₹10,000",
+    foreignBenchmark: "£720 – £1,100",
+    currency: "GBP (£)",
+    illustrativeInr: "₹91,440 – ₹1,39,700",
+    approxDifference: "~93% – 95% lower (Midpoint: ~93.5%)",
+    sourceAndType: "UK private-practice range",
+    sourceLabel: "Dental Art Implant Clinic (£720 PFM) & Bupa Dental Care practice illustrative ceramic guides (£1,100)",
+    sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
+    inclusions: "Custom ceramic restoration or PFM crown including digital impressions and precision laboratory sintering."
+  },
+  {
+    treatment: "Tooth Extraction (Simple to Surgical / Impacted)",
+    aurevaPriceInr: "₹1,500 – ₹7,000",
+    foreignBenchmark: "£250 – £540",
+    currency: "GBP (£)",
+    illustrativeInr: "₹31,750 – ₹68,580",
+    approxDifference: "~90% – 95% lower (Midpoint: ~91.5%)",
+    sourceAndType: "UK private-practice example",
+    sourceLabel: "Bupa Dental Care Manchester St Ann's Square (£250 simple, £540 surgical)",
+    sourceUrl: "https://www.bupa.co.uk/dental/dental-care/practices/manchester-st-anns-square/treatment-and-prices",
+    inclusions: "Local anesthesia, clinical extraction, and sutures. Range covers routine extractions (₹1,500) to surgical/impacted wisdom teeth (up to ₹7,000)."
+  },
+  {
+    treatment: "Comprehensive Clear Aligners (Full Arch Series)",
+    aurevaPriceInr: "₹80,000 – ₹2,50,000",
+    foreignBenchmark: "£2,500 – £4,500",
+    currency: "GBP (£)",
+    illustrativeInr: "₹3,17,500 – ₹5,71,500",
+    approxDifference: "~56% – 75% lower (Midpoint: ~62.9%)",
+    sourceAndType: "UK private-practice range",
+    sourceLabel: "MiSmile UK Network (£2,500–£4,500) & Sensu London (£2,700–£3,300+)",
+    sourceUrl: "https://mismile.co.uk",
+    inclusions: "Intraoral digital scan, treatment simulation, and full aligner tray series based on mild, moderate, or complex malocclusion."
+  },
+  {
+    treatment: "Porcelain Veneer (Per Tooth)",
+    aurevaPriceInr: "₹8,000 – ₹25,000",
+    foreignBenchmark: "£650 – £1,200",
+    currency: "GBP (£)",
+    illustrativeInr: "₹82,550 – ₹1,52,400",
+    approxDifference: "~84% – 90% lower (Midpoint: ~86.0%)",
+    sourceAndType: "UK private-practice range",
+    sourceLabel: "Tooth Club UK & UK private cosmetic dentistry fee guides (£650–£1,200)",
+    sourceUrl: "https://www.toothclub.co.uk",
+    inclusions: "Custom aesthetic porcelain veneer per unit including conservative preparation and clinical bonding."
+  }
+];
+---
+
+<Layout {...seoProps}>
+  <!-- Breadcrumbs -->
+  <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
+    <div class="max-w-4xl mx-auto flex items-center gap-2 flex-wrap">
+      <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
+      <span>/</span>
+      <a href="/blog" class="hover:text-japandi-moss transition-colors">Blog</a>
+      <span>/</span>
+      <span class="text-japandi-charcoal font-medium">Dental Cost: India vs UK</span>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="py-16 md:py-20 px-6 lg:px-24 bg-transparent border-b border-japandi-clay/20">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="flex items-center gap-3 flex-wrap text-xs">
+        <span class="px-3 py-1 rounded-full bg-japandi-moss/10 text-japandi-moss font-semibold uppercase tracking-wider">
+          Dental Economics &amp; Pricing
+        </span>
+        <span class="text-japandi-earth font-light">&bull;</span>
+        <span class="text-japandi-earth font-light">10 min read</span>
+        <span class="text-japandi-earth font-light">&bull;</span>
+        <span class="text-japandi-earth font-light">Updated: October 2026</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-japandi-charcoal font-medium tracking-tight leading-[1.2]">
+        Dental Treatment Costs: India vs. United Kingdom (UK)
+      </h1>
+
+      <p class="text-base sm:text-lg text-japandi-earth font-light leading-relaxed">
+        An educational analysis comparing private UK dental benchmarks with published restorative dental fees at Aureva Dental in Bangalore, India—and the underlying economic factors explaining the differences.
+      </p>
+
+      <!-- Author Byline -->
+      <div class="pt-4 border-t border-japandi-clay/30 flex items-center gap-4 text-xs text-japandi-earth">
+        <div class="w-11 h-11 rounded-full bg-japandi-sand border border-japandi-clay flex items-center justify-center font-serif text-japandi-moss font-semibold text-sm">
+          SS
+        </div>
+        <div>
+          <span class="font-medium text-japandi-charcoal block">Dr. Shweta Singh, BDS</span>
+          <span class="font-light">Clinical Director &amp; Dental Surgeon &bull; Alumna, The Oxford Dental College, Bangalore</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Body -->
+  <main class="py-16 px-6 lg:px-24 bg-transparent">
+    <article class="max-w-4xl mx-auto space-y-12 text-sm sm:text-base text-japandi-charcoal font-light leading-relaxed">
+      
+      <!-- Mandatory Cost Disclaimer -->
+      <div class="p-6 rounded-3xl bg-japandi-sand/35 border border-japandi-clay/50 space-y-3">
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Important Price Disclaimer</span>
+        <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+          Prices shown are indicative comparisons, not quotations. Dental fees vary by country, city, provider, treatment complexity, materials, laboratory charges, imaging, insurance/coverage and what is included in the quoted treatment. Aureva Dental's published fees may change and the final treatment plan and fee are confirmed after clinical assessment. Aureva Dental's published prices are in INR. Foreign-currency conversions are illustrative and may change with exchange rates.
+        </p>
+        <p class="text-[11px] text-japandi-earth/80 font-light">
+          Illustrative INR conversion based on the exchange rate on the article's update date ({articleUpdateDate}: {exchangeRateSnapshot}). Conversions are illustrative and not fixed prices.
+        </p>
+      </div>
+
+      <!-- Section 1: UK Dental Context -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">1. Dental Care Access and Pricing in the UK</h2>
+        <p>
+          In the United Kingdom, dental care is delivered through two distinct avenues: the National Health Service (NHS) and independent private dental practices. It is critical to separate NHS statutory charges from private dental fees:
+        </p>
+        <div class="p-5 rounded-2xl bg-japandi-sand/25 border border-japandi-clay/35 space-y-2 text-xs sm:text-sm text-japandi-earth">
+          <strong class="text-japandi-charcoal font-medium block">UK NHS charges are not directly comparable with private dental fees:</strong>
+          <ul class="space-y-1 list-disc pl-4 font-light">
+            <li><strong>Band 1 (£27.90):</strong> Clinical examinations, diagnostic digital radiographs, advice, and urgent dental care.</li>
+            <li><strong>Band 2 (£76.60):</strong> Simple tooth extractions, basic fillings, and standard root canal therapy.</li>
+            <li><strong>Band 3 (£332.10):</strong> Complex laboratory-fabricated restorations including crowns, inlays, and dentures.</li>
+          </ul>
+          <p class="pt-1 text-[11px] italic">
+            Note: Dental implants are not available under routine NHS contracts except in exceptional medical trauma cases. Furthermore, extended NHS waitlists and regional contract constraints lead millions of UK residents to seek private dental care.
+          </p>
+        </div>
+        <p>
+          Private UK dental fees are set independently by individual clinics and corporate dental providers. Private treatment costs vary by practice location, clinician specialization, and laboratory tier. The figures presented below reflect examples of current private dental pricing and illustrative private-practice benchmarks from reputable UK clinics, rather than a single guaranteed national price.
+        </p>
+        <p>
+          For international patients, Non-Resident Indians (NRIs), and corporate travelers, scheduling planned dental care during travel to Bangalore, India provides an opportunity to receive quality care at transparent Indian market fees.
+        </p>
+      </section>
+
+      <!-- Section 2: Side-by-Side Comparison Table -->
+      <section class="space-y-6">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">2. Procedure Cost Comparison: UK Private Benchmarks vs. Aureva Dental</h2>
+        <p>
+          The table below compares referenced private dental benchmarks in the UK with Aureva Dental's published treatment fees in Bangalore. All INR conversions use the illustrative snapshot rate of £1 GBP ≈ ₹127 INR as of {articleUpdateDate}. Treatment packages and inclusions can differ between countries and providers, so these comparisons are illustrative rather than like-for-like quotations:
+        </p>
+
+        <div class="overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-sand/30 my-6">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead>
+              <tr class="border-b border-japandi-clay/40 bg-japandi-sand/70">
+                <th class="py-4 px-4 font-serif font-medium text-japandi-charcoal">Treatment</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-moss">Aureva Published Price</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-earth">Foreign Benchmark</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-charcoal">Foreign Currency</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-earth">Illustrative INR Conversion</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-charcoal">Approximate Difference</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-earth">Benchmark Type &amp; Source</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-japandi-clay/20 text-japandi-charcoal font-light">
+              {costComparisons.map((row) => (
+                <tr class="hover:bg-japandi-sand/40 transition-colors">
+                  <td class="py-4 px-4 font-medium text-japandi-charcoal">
+                    {row.treatment}
+                    <span class="block text-[11px] text-japandi-earth font-light mt-0.5">{row.inclusions}</span>
+                  </td>
+                  <td class="py-4 px-4 font-semibold text-japandi-moss whitespace-nowrap">{row.aurevaPriceInr}</td>
+                  <td class="py-4 px-4 text-japandi-earth whitespace-nowrap">{row.foreignBenchmark}</td>
+                  <td class="py-4 px-4 text-japandi-charcoal whitespace-nowrap">{row.currency}</td>
+                  <td class="py-4 px-4 text-japandi-earth whitespace-nowrap">{row.illustrativeInr}</td>
+                  <td class="py-4 px-4 text-japandi-charcoal whitespace-nowrap">{row.approxDifference}</td>
+                  <td class="py-4 px-4 text-japandi-earth text-xs">
+                    <span class="font-medium text-japandi-charcoal block">{row.sourceAndType}</span>
+                    <a href={row.sourceUrl} target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal block mt-0.5">
+                      {row.sourceLabel}
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Understanding the Calculations & Percentage Differences -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">3. Transparent Calculation Breakdown</h2>
+        <p>
+          For selected dental procedures, Aureva Dental's published fees can be 70% or more below the referenced private-dental benchmarks in the UK or US. Every percentage difference is calculated using the standard formula:
+        </p>
+        <div class="p-4 rounded-xl bg-japandi-sand/40 border border-japandi-clay/40 font-mono text-xs text-japandi-charcoal">
+          Percentage Difference = ((Foreign Benchmark in INR - Aureva Published Price) / Foreign Benchmark in INR) &times; 100
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
+          <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2 text-xs">
+            <strong class="font-medium text-japandi-charcoal block text-sm">Example A: Dental Implant with Crown</strong>
+            <p><strong>UK Private Benchmark Range:</strong> £2,095 – £3,700 (Midpoint: £2,897.50 = ₹3,67,982.50 INR illustrative equivalent at £1 = ₹127).</p>
+            <p><strong>Aureva Published Range:</strong> ₹45,000 – ₹80,000 (Midpoint: ₹62,500 INR).</p>
+            <p><strong>Lower Endpoint Calculation:</strong> ((₹2,66,065 - ₹45,000) / ₹2,66,065) &times; 100 = <strong>~83.1% difference</strong>.</p>
+            <p><strong>Upper Endpoint Calculation:</strong> ((₹4,69,900 - ₹80,000) / ₹4,69,900) &times; 100 = <strong>~83.0% difference</strong>.</p>
+            <p><strong>Midpoint Calculation:</strong> ((₹3,67,982.50 - ₹62,500) / ₹3,67,982.50) &times; 100 = <strong>~83.0% difference</strong>.</p>
+            <p class="text-japandi-earth font-light italic">Supports 70%+ claim: YES. Indicative comparison. Bone grafting, if clinically required, is separate.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2 text-xs">
+            <strong class="font-medium text-japandi-charcoal block text-sm">Example B: Molar Root Canal Treatment</strong>
+            <p><strong>UK Private Benchmark Range:</strong> £645 – £1,060 (Midpoint: £852.50 = ₹1,08,267.50 INR illustrative equivalent at £1 = ₹127).</p>
+            <p><strong>Aureva Published Range:</strong> ₹6,000 – ₹10,000 (Midpoint: ₹8,000 INR).</p>
+            <p><strong>Lower Endpoint Calculation:</strong> ((₹81,915 - ₹6,000) / ₹81,915) &times; 100 = <strong>~92.7% difference</strong>.</p>
+            <p><strong>Upper Endpoint Calculation:</strong> ((₹1,34,620 - ₹10,000) / ₹1,34,620) &times; 100 = <strong>~92.6% difference</strong>.</p>
+            <p><strong>Midpoint Calculation:</strong> ((₹1,08,267.50 - ₹8,000) / ₹1,08,267.50) &times; 100 = <strong>~92.6% difference</strong>.</p>
+            <p class="text-japandi-earth font-light italic">Supports 70%+ claim: YES. Multi-canal posterior endodontic treatment. Crown billed separately.</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-japandi-sand/20 border border-japandi-clay/35 space-y-2 text-xs text-japandi-earth">
+          <strong class="font-medium text-japandi-charcoal block text-xs">Procedures That Do NOT Universally Support the 70% Claim:</strong>
+          <p>
+            We do not claim arbitrary 70% savings across all treatments. For instance, in <strong>Comprehensive Clear Aligners</strong>:
+          </p>
+          <ul class="list-disc pl-4 space-y-1 font-light">
+            <li>UK private aligner benchmark range: £2,500 – £4,500 (Illustrative INR: ₹3,17,500 – ₹5,71,500; Midpoint: £3,500 = ₹4,44,500).</li>
+            <li>Aureva published fee range: ₹80,000 – ₹2,50,000 (Midpoint: ₹1,65,000).</li>
+            <li><strong>Lower Endpoint Calculation (Mild):</strong> ((₹3,17,500 - ₹80,000) / ₹3,17,500) &times; 100 = <strong>~74.8% difference</strong>.</li>
+            <li><strong>Upper Endpoint Calculation (Complex Full-Arch):</strong> ((₹5,71,500 - ₹2,50,000) / ₹5,71,500) &times; 100 = <strong>~56.3% difference</strong> (Falls below 70%).</li>
+            <li><strong>Midpoint Calculation:</strong> ((₹4,44,500 - ₹1,65,000) / ₹4,44,500) &times; 100 = <strong>~62.9% difference</strong> (Falls below 70%).</li>
+          </ul>
+          <p class="font-light">
+            Because complex aligner cases fall below 70%, the 70% threshold applies strictly to selected restorative procedures (implants, root canals, crowns, extractions, veneers) and is not a blanket discount on all dentistry.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: What Aureva's Pricing Includes & What Affects Final Cost -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">4. What Influences the Final Treatment Plan and Fee?</h2>
+        <p>
+          At Aureva Dental, all treatment pricing is published as clear ranges. The final fee for any clinical case depends on several factors:
+        </p>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-japandi-earth pl-2">
+          <li class="flex items-start gap-2.5">
+            <span class="text-japandi-moss font-bold">&bull;</span>
+            <span><strong>Clinical Complexity &amp; Canal Count:</strong> In endodontics, anterior teeth (1 canal) are ₹4,000–₹6,000, while multi-canal molars are ₹6,000–₹10,000. Retreatment of previous root canals starts from ₹8,000.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-japandi-moss font-bold">&bull;</span>
+            <span><strong>Material Selection:</strong> Dental crowns range from Metal (₹3,000–₹5,000) and PFM (₹5,000–₹8,000) to all-ceramic (₹6,000–₹10,000) and monolithic CAD/CAM zirconia (₹10,000–₹18,000).</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-japandi-moss font-bold">&bull;</span>
+            <span><strong>Ancillary &amp; Preparatory Procedures:</strong> Diagnostic 3D CBCT scans, bone grafting, sinus lifts, core buildups, and temporary crowns are evaluated and billed where clinically necessary.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-japandi-moss font-bold">&bull;</span>
+            <span><strong>No Foreign-Patient Surcharge:</strong> The same published fee schedule applies equally to all patients.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 5: Sources and Methodology -->
+      <section class="space-y-4 pt-6 border-t border-japandi-clay/30">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">5. Sources &amp; Methodology</h2>
+        <p class="text-xs sm:text-sm text-japandi-earth font-light">
+          To maintain transparency and allow full verification, every UK numerical benchmark in this article is linked directly to published clinical fee guides or authorized health resources. Treatment packages and inclusions can differ between countries and providers, so these comparisons are illustrative rather than like-for-like quotations:
+        </p>
+        <ul class="space-y-2 text-xs text-japandi-earth font-light pl-2">
+          <li>
+            &bull; <strong>Dental Art Implant Clinic (East Finchley &amp; Balham, London):</strong> Published price list (<a href="https://www.dentalartimplantclinic.co.uk/fees/" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">dentalartimplantclinic.co.uk/fees</a>). Supports dental implant packages (£2,095–£2,970), implant fixture alone (£990), monolithic zirconium crown (£850), and PFM crown (£720). Benchmark type: <em>UK private-practice range</em>.
+          </li>
+          <li>
+            &bull; <strong>Bupa Dental Care (Manchester St Ann's Square):</strong> Published practice treatment and prices (<a href="https://www.bupa.co.uk/dental/dental-care/practices/manchester-st-anns-square/treatment-and-prices" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">bupa.co.uk/.../manchester-st-anns-square</a>). Supports back tooth/molar root canal (from £645), simple extraction (from £250), and surgical extraction (from £540). Benchmark type: <em>Illustrative price from a Bupa Dental Care practice</em> (not presented as a national UK average).
+          </li>
+          <li>
+            &bull; <strong>Bow Lane Dental Group (London):</strong> Published fee schedule (<a href="https://www.bowlanedental.com/fees/" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">bowlanedental.com/fees</a>). Supports specialist root canal (from £1,060), crowns (from £1,337), and single dental implant with crown (from £3,700). Benchmark type: <em>UK private-practice range</em>.
+          </li>
+          <li>
+            &bull; <strong>MiSmile Network &amp; Sensu Orthodontics:</strong> Published clear aligner fee guides (<a href="https://mismile.co.uk" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">mismile.co.uk</a> / <a href="https://sensu.co.uk" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">sensu.co.uk</a>). Supports typical Invisalign and clear aligner packages (£2,500–£4,500; complex cases £6,000+). Benchmark type: <em>UK private-practice range</em>.
+          </li>
+          <li>
+            &bull; <strong>Tooth Club UK:</strong> Published cosmetic dentistry fee schedule (<a href="https://www.toothclub.co.uk" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">toothclub.co.uk</a>). Supports aesthetic porcelain veneers (£650–£1,200 per tooth). Benchmark type: <em>UK private-practice range</em>.
+          </li>
+          <li>
+            &bull; <strong>NHS Business Services Authority &amp; Which? Health (2026):</strong> Statutory NHS dental charges in England (<a href="https://www.nhs.uk/nhs-services/dentists/dental-costs" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">nhs.uk/nhs-services/dentists/dental-costs</a> &amp; <a href="https://www.which.co.uk/reviews/dentists" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">which.co.uk/reviews/dentists</a>). Confirms statutory Band 1 (£27.90), Band 2 (£76.60), and Band 3 (£332.10) charges as distinct statutory prices, kept separate from private dental benchmarks.
+          </li>
+          <li>
+            &bull; <strong>British Dental Association (BDA):</strong> Clinical economics and workforce publications (<a href="https://www.bda.org" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">bda.org</a>). Cited for market context on private treatment cost variations, without attributing unverified treatment prices.
+          </li>
+        </ul>
+        <p class="text-[11px] text-japandi-earth/80 font-light italic">
+          Illustrative INR conversion based on the exchange rate on the article's update date ({articleUpdateDate}: {exchangeRateSnapshot}). Foreign-currency conversions are illustrative and subject to currency market fluctuations.
+        </p>
+      </section>
+
+      <!-- Section 6: FAQs -->
+      <section class="space-y-6 pt-6 border-t border-japandi-clay/30">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <div class="p-5 rounded-2xl bg-japandi-sand/30 border border-japandi-clay/40 space-y-2">
+              <h3 class="font-serif text-base font-medium text-japandi-charcoal">{faq.question}</h3>
+              <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Conclusion & CTA -->
+      <section class="p-8 rounded-3xl bg-japandi-sand/55 border border-japandi-clay/50 text-center space-y-5">
+        <h3 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Discuss Your Estimated Treatment Timeline
+        </h3>
+        <p class="text-xs sm:text-sm text-japandi-earth font-light max-w-2xl mx-auto leading-relaxed">
+          Send your panoramic OPG X-ray or treatment requirements to our clinical desk via WhatsApp for preliminary discussion based on our published INR treatment fees.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <a 
+            href={whatsappUrl}
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="px-7 py-3 rounded-full bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all"
+          >
+            <span>WhatsApp Consultation (+91 73497 01002)</span>
+          </a>
+          <a 
+            href="/international-patients"
+            class="px-7 py-3 rounded-full border border-japandi-clay bg-japandi-cream hover:bg-japandi-sand text-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all"
+          >
+            <span>Explore International Patients Hub</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Required Internal Links -->
+      <div class="pt-6 border-t border-japandi-clay/30 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-japandi-earth font-light">
+        <a href="/international-patients" class="hover:text-japandi-moss transition-colors">International Patients Hub</a>
+        <span>&bull;</span>
+        <a href="/treatments/dental-implants" class="hover:text-japandi-moss transition-colors">Dental Implants</a>
+        <span>&bull;</span>
+        <a href="/treatments/root-canal-treatment" class="hover:text-japandi-moss transition-colors">Root Canal Treatment</a>
+        <span>&bull;</span>
+        <a href="/treatments/dental-crowns" class="hover:text-japandi-moss transition-colors">Dental Crowns</a>
+        <span>&bull;</span>
+        <a href="/contact" class="hover:text-japandi-moss transition-colors">Contact &amp; Location</a>
+      </div>
+    </article>
+  </main>
+</Layout>

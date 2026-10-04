@@ -47,7 +47,11 @@ const STATIC_ROUTES: StaticRoute[] = [
   { url: 'https://aurevadental.com/treatments/smile-makeover', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Digital Smile Makeover in Bangalore' },
   { url: 'https://aurevadental.com/treatments/teeth-whitening', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Laser Teeth Whitening in Bangalore' },
   { url: 'https://aurevadental.com/treatments/tooth-extraction', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Painless Tooth Extraction in Bangalore' },
-  { url: 'https://aurevadental.com/treatments/wisdom-tooth-removal', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Painless Wisdom Tooth Removal in Bangalore' }
+  { url: 'https://aurevadental.com/treatments/wisdom-tooth-removal', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Painless Wisdom Tooth Removal in Bangalore' },
+
+  // International Patient & Traveler Pages
+  { url: 'https://aurevadental.com/international-patients', changefreq: 'weekly', priority: '0.9', lastmod: '2026-10-04', title: 'International Patient Dental Care in North Bangalore' },
+  { url: 'https://aurevadental.com/emergency-dental-care-for-travelers', changefreq: 'weekly', priority: '0.9', lastmod: '2026-10-04', title: 'Emergency Dental Care for Travelers in Bangalore' }
 ];
 
 export const GET: APIRoute = async () => {

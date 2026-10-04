@@ -1,0 +1,453 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { generateBreadcrumbSchema, generateBlogPostSchema, generateFaqSchema } from '../../utils/seoSchemas';
+
+export const prerender = false;
+
+const pageTitle = "Dental Treatment Costs: India vs USA (2026 Benchmark Comparison) | Aureva Dental";
+const pageDescription = "An educational analysis comparing private US self-pay dental costs with published restorative treatment fees at Aureva Dental in Bangalore, India.";
+const canonicalUrl = "https://aurevadental.com/blog/dental-cost-india-vs-usa";
+const phoneCallUrl = "tel:+917349701002";
+const whatsappUrl = `https://wa.me/917349701002?text=${encodeURIComponent("Hello Aureva Dental, I read your India vs USA dental cost guide and would like to arrange a consultation regarding my treatment.")}`;
+
+const breadcrumbs = [
+  { name: "Home", url: "https://aurevadental.com/" },
+  { name: "Blog", url: "https://aurevadental.com/blog" },
+  { name: "Dental Cost: India vs USA", url: canonicalUrl }
+];
+
+const faqs = [
+  {
+    question: "Why do private dental treatment fees differ between India and the United States?",
+    answer: "In the United States, dental practices operate with significant overhead structures: clinical facility commercial leases, malpractice insurance underwriting premiums, staff wages, and third-party administrative costs associated with insurance billing. In India, clinical operating and laboratory labor expenses are structured within the domestic economy, allowing experienced clinicians to deliver restorative care at fair published INR treatment rates."
+  },
+  {
+    question: "How do US dental insurance caps affect out-of-pocket costs?",
+    answer: "In the US, most commercial dental insurance policies feature annual maximum benefit limits—often capped between $1,000 and $2,000 per year. For major procedures such as multiple dental implants, root canal therapy, or multiple crowns, insurance limits are quickly reached, leaving patients responsible for the remainder as self-pay out-of-pocket expenses."
+  },
+  {
+    question: "Can overseas patients submit invoices to US insurance or HSA/FSA plans?",
+    answer: "Many international or premium US health insurance policies, as well as Health Savings Accounts (HSA) and Flexible Spending Accounts (FSA), allow reimbursement for eligible restorative dental procedures. Aureva Dental provides itemized clinical summaries and official tax invoices in English specifying standard diagnostic descriptions."
+  },
+  {
+    question: "How long should a traveler from North America plan to stay in Bangalore?",
+    answer: "For single-sitting root canals and CAD/CAM ceramic crowns, plan for approximately 3 to 7 business days. For two-stage dental implants, the initial surgical fixture placement takes 3 to 5 days, followed by a second visit 3 to 4 months later for abutment placement and final crown restoration."
+  },
+  {
+    question: "Is there a separate foreign-patient surcharge at Aureva Dental?",
+    answer: "No. Aureva Dental applies no separate foreign-patient surcharge. All patients are billed according to our published INR treatment pricing schedule."
+  }
+];
+
+const breadcrumbSchema = JSON.stringify(generateBreadcrumbSchema(breadcrumbs));
+const blogPostSchema = JSON.stringify(generateBlogPostSchema({
+  headline: "Dental Treatment Costs in India vs. the USA: An Educational Analysis of Fees, Materials & Standards of Care",
+  description: pageDescription,
+  url: canonicalUrl,
+  authorName: "Dr. Shweta Singh, BDS",
+  authorJobTitle: "Clinical Director & Dental Surgeon (Alumna, The Oxford Dental College)",
+  datePublished: "2026-09-18",
+  dateModified: "2026-10-04",
+  image: "https://aurevadental.com/assets/og/dental-cost-india-vs-usa.svg"
+}));
+const faqSchema = JSON.stringify(generateFaqSchema(faqs));
+
+const seoProps = {
+  title: pageTitle,
+  description: pageDescription,
+  canonical: canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: canonicalUrl,
+  ogImage: "https://aurevadental.com/assets/og/dental-cost-india-vs-usa.svg",
+  schemaMarkup: [breadcrumbSchema, blogPostSchema, faqSchema]
+};
+
+// Data comparison table using exact published Aureva pricing & verified US private benchmarks
+// Exchange rate snapshot date: October 4, 2026 ($1 USD ≈ ₹96 INR)
+const articleUpdateDate = "October 4, 2026";
+const exchangeRateSnapshot = "$1 USD ≈ ₹96 INR";
+
+const costComparisons = [
+  {
+    treatment: "Dental Implant with Crown (Complete Single Tooth)",
+    aurevaPriceInr: "₹45,000 – ₹80,000",
+    foreignBenchmark: "$3,000 – $5,500",
+    currency: "USD ($)",
+    illustrativeInr: "₹2,88,000 – ₹5,28,000",
+    approxDifference: "~84% – 85% lower (Midpoint: ~84.7%)",
+    sourceAndType: "US private-practice range",
+    sourceLabel: "CareCredit Dental Implant Cost Guide ($3,000–$5,500)",
+    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-implant-cost/",
+    inclusions: "Grade-4 titanium implant fixture, custom abutment, and final crown. Bone grafting or sinus lifts, if required, are separate."
+  },
+  {
+    treatment: "Dental Implant (Fixture Only)",
+    aurevaPriceInr: "₹25,000 – ₹60,000",
+    foreignBenchmark: "$1,646 – $2,800",
+    currency: "USD ($)",
+    illustrativeInr: "₹1,58,016 – ₹2,68,800",
+    approxDifference: "~78% – 84% lower (Midpoint: ~80.1%)",
+    sourceAndType: "US private-practice range",
+    sourceLabel: "CareCredit Single Implant Guide ($1,646–$2,800) & FAIR Health Consumer (CDT D6010)",
+    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-implant-cost/",
+    inclusions: "Surgical placement of titanium or zirconia fixture. Abutment and final crown billed separately based on material choice."
+  },
+  {
+    treatment: "Root Canal Treatment — Molar (Posterior)",
+    aurevaPriceInr: "₹6,000 – ₹10,000",
+    foreignBenchmark: "$1,030 – $2,471",
+    currency: "USD ($)",
+    illustrativeInr: "₹98,880 – ₹2,37,216",
+    approxDifference: "~94% – 96% lower (Midpoint: ~95.2%)",
+    sourceAndType: "US private-practice range",
+    sourceLabel: "CareCredit Root Canal Guide ($1,030–$2,471) & FAIR Health Consumer (CDT D3330)",
+    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/root-canal-cost/",
+    inclusions: "Multi-canal rotary endodontic therapy, apex locator verification, and bio-ceramic seal. Final protective crown is separate."
+  },
+  {
+    treatment: "Monolithic Zirconia Crown (CAD/CAM Milled)",
+    aurevaPriceInr: "₹10,000 – ₹18,000",
+    foreignBenchmark: "$915 – $2,500",
+    currency: "USD ($)",
+    illustrativeInr: "₹87,840 – ₹2,40,000",
+    approxDifference: "~89% – 93% lower (Midpoint: ~91.5%)",
+    sourceAndType: "US private-practice range",
+    sourceLabel: "CareCredit Dental Crown Guide ($915–$2,500) & FAIR Health Consumer (CDT D2740)",
+    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-crown-cost/",
+    inclusions: "High-translucency CAD/CAM monolithic zirconia crown. Core buildup or post-and-core, if clinically required, billed separately."
+  },
+  {
+    treatment: "All-Ceramic / Porcelain Crown",
+    aurevaPriceInr: "₹6,000 – ₹10,000",
+    foreignBenchmark: "$915 – $2,000",
+    currency: "USD ($)",
+    illustrativeInr: "₹87,840 – ₹1,92,000",
+    approxDifference: "~93% – 95% lower (Midpoint: ~94.3%)",
+    sourceAndType: "US private-practice range",
+    sourceLabel: "CareCredit Crown Guide ($915–$2,000) & FAIR Health Consumer (CDT D2740)",
+    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-crown-cost/",
+    inclusions: "Custom ceramic restoration including digital optical impressions and precision laboratory sintering."
+  },
+  {
+    treatment: "Tooth Extraction (Simple to Surgical / Impacted)",
+    aurevaPriceInr: "₹1,500 – ₹7,000",
+    foreignBenchmark: "$150 – $702",
+    currency: "USD ($)",
+    illustrativeInr: "₹14,400 – ₹67,392",
+    approxDifference: "~90% lower (Midpoint: ~89.6%)",
+    sourceAndType: "US private-practice range",
+    sourceLabel: "CareCredit Extraction Guide ($150–$702) & FAIR Health Consumer (CDT D7140/D7210)",
+    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/tooth-extraction-cost/",
+    inclusions: "Local anesthesia, clinical extraction, and sutures. Covers routine extractions (₹1,500) to surgical wisdom teeth (up to ₹7,000)."
+  },
+  {
+    treatment: "Comprehensive Clear Aligners (Full Arch Series)",
+    aurevaPriceInr: "₹80,000 – ₹2,50,000",
+    foreignBenchmark: "$3,500 – $7,500",
+    currency: "USD ($)",
+    illustrativeInr: "₹3,36,000 – ₹7,20,000",
+    approxDifference: "~65% – 76% lower (Midpoint: ~68.8%)",
+    sourceAndType: "US private-practice range",
+    sourceLabel: "CareCredit Clear Aligners Cost Guide ($3,500–$7,500)",
+    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/clear-aligners-cost/",
+    inclusions: "Intraoral 3D scan, digital orthodontic planning, and custom aligner tray sequence based on mild, moderate, or complex malocclusion."
+  },
+  {
+    treatment: "Porcelain Veneer (Per Tooth)",
+    aurevaPriceInr: "₹8,000 – ₹25,000",
+    foreignBenchmark: "$1,020 – $2,506",
+    currency: "USD ($)",
+    illustrativeInr: "₹97,920 – ₹2,40,576",
+    approxDifference: "~90% – 92% lower (Midpoint: ~90.3%)",
+    sourceAndType: "US private-practice range",
+    sourceLabel: "CareCredit Veneers Cost Guide ($1,020–$2,506 per tooth)",
+    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/how-much-do-veneers-cost/",
+    inclusions: "Custom aesthetic porcelain veneer per unit including conservative preparation and clinical bonding."
+  }
+];
+---
+
+<Layout {...seoProps}>
+  <!-- Breadcrumbs -->
+  <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
+    <div class="max-w-4xl mx-auto flex items-center gap-2 flex-wrap">
+      <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
+      <span>/</span>
+      <a href="/blog" class="hover:text-japandi-moss transition-colors">Blog</a>
+      <span>/</span>
+      <span class="text-japandi-charcoal font-medium">Dental Cost: India vs USA</span>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <header class="py-16 md:py-20 px-6 lg:px-24 bg-transparent border-b border-japandi-clay/20">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="flex items-center gap-3 flex-wrap text-xs">
+        <span class="px-3 py-1 rounded-full bg-japandi-moss/10 text-japandi-moss font-semibold uppercase tracking-wider">
+          Healthcare Economics &amp; Pricing
+        </span>
+        <span class="text-japandi-earth font-light">&bull;</span>
+        <span class="text-japandi-earth font-light">11 min read</span>
+        <span class="text-japandi-earth font-light">&bull;</span>
+        <span class="text-japandi-earth font-light">Updated: October 2026</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-japandi-charcoal font-medium tracking-tight leading-[1.2]">
+        Dental Treatment Costs: India vs. United States (USA)
+      </h1>
+
+      <p class="text-base sm:text-lg text-japandi-earth font-light leading-relaxed">
+        An educational analysis examining US self-pay dental fee benchmarks against published treatment pricing at Aureva Dental in Bangalore, India—and why structural operating overheads explain the differences.
+      </p>
+
+      <!-- Author Byline -->
+      <div class="pt-4 border-t border-japandi-clay/30 flex items-center gap-4 text-xs text-japandi-earth">
+        <div class="w-11 h-11 rounded-full bg-japandi-sand border border-japandi-clay flex items-center justify-center font-serif text-japandi-moss font-semibold text-sm">
+          SS
+        </div>
+        <div>
+          <span class="font-medium text-japandi-charcoal block">Dr. Shweta Singh, BDS</span>
+          <span class="font-light">Clinical Director &amp; Dental Surgeon &bull; Alumna, The Oxford Dental College, Bangalore</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article Body -->
+  <main class="py-16 px-6 lg:px-24 bg-transparent">
+    <article class="max-w-4xl mx-auto space-y-12 text-sm sm:text-base text-japandi-charcoal font-light leading-relaxed">
+      
+      <!-- Mandatory Cost Disclaimer -->
+      <div class="p-6 rounded-3xl bg-japandi-sand/35 border border-japandi-clay/50 space-y-3">
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block">Important Price Disclaimer</span>
+        <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+          Prices shown are indicative comparisons, not quotations. Dental fees vary by country, city, provider, treatment complexity, materials, laboratory charges, imaging, insurance/coverage and what is included in the quoted treatment. Aureva Dental's published fees may change and the final treatment plan and fee are confirmed after clinical assessment. Aureva Dental's published prices are in INR. Foreign-currency conversions are illustrative and may change with exchange rates.
+        </p>
+        <p class="text-[11px] text-japandi-earth/80 font-light">
+          Illustrative INR conversion based on the exchange rate on the article's update date ({articleUpdateDate}: {exchangeRateSnapshot}). Conversions are illustrative and not fixed prices.
+        </p>
+      </div>
+
+      <!-- Section 1: US Dental Landscape -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">1. Dental Care Access and Out-of-Pocket Expenses in the US</h2>
+        <p>
+          In the United States, commercial dental insurance operates differently from general medical coverage. Most employer-sponsored dental plans impose annual benefit maximums—often capped between $1,000 and $2,000 per year. When an individual requires multi-tooth restorative procedures such as <a href="/treatments/dental-implants" class="text-japandi-moss font-medium underline underline-offset-4 hover:text-japandi-charcoal">dental implants</a>, a molar <a href="/treatments/root-canal-treatment" class="text-japandi-moss font-medium underline underline-offset-4 hover:text-japandi-charcoal">root canal</a>, or multiple <a href="/treatments/dental-crowns" class="text-japandi-moss font-medium underline underline-offset-4 hover:text-japandi-charcoal">crowns</a>, insurance caps are quickly exhausted.
+        </p>
+        <p>
+          As a result, patients without comprehensive insurance coverage or those who exceed annual caps face self-pay, out-of-pocket expenses that can total thousands of dollars. Private US fees vary widely across metropolitan regions, specialist credentials, and practice settings; figures presented below represent illustrative private-practice benchmarks and national self-pay ranges, not a guaranteed uniform national price.
+        </p>
+        <p>
+          For Non-Resident Indians (NRIs), American business travelers, and overseas visitors, planning major dental care during a trip to Bangalore, India provides an opportunity to receive quality care at transparent Indian market fees.
+        </p>
+      </section>
+
+      <!-- Section 2: Side-by-Side Comparison Table -->
+      <section class="space-y-6">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">2. Procedure Fee Comparison: US Benchmarks vs. Aureva Dental</h2>
+        <p>
+          The table below compares referenced self-pay dental fee benchmarks in the United States with Aureva Dental's published treatment fees in Bangalore. All INR conversions use the illustrative snapshot rate of $1 USD ≈ ₹96 INR as of {articleUpdateDate}. Treatment packages and inclusions can differ between countries and providers, so these comparisons are illustrative rather than like-for-like quotations:
+        </p>
+
+        <div class="overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-sand/30 my-6">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead>
+              <tr class="border-b border-japandi-clay/40 bg-japandi-sand/70">
+                <th class="py-4 px-4 font-serif font-medium text-japandi-charcoal">Treatment</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-moss">Aureva Published Price</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-earth">Foreign Benchmark</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-charcoal">Foreign Currency</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-earth">Illustrative INR Conversion</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-charcoal">Approximate Difference</th>
+                <th class="py-4 px-4 font-serif font-medium text-japandi-earth">Benchmark Type &amp; Source</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-japandi-clay/20 text-japandi-charcoal font-light">
+              {costComparisons.map((row) => (
+                <tr class="hover:bg-japandi-sand/40 transition-colors">
+                  <td class="py-4 px-4 font-medium text-japandi-charcoal">
+                    {row.treatment}
+                    <span class="block text-[11px] text-japandi-earth font-light mt-0.5">{row.inclusions}</span>
+                  </td>
+                  <td class="py-4 px-4 font-semibold text-japandi-moss whitespace-nowrap">{row.aurevaPriceInr}</td>
+                  <td class="py-4 px-4 text-japandi-earth whitespace-nowrap">{row.foreignBenchmark}</td>
+                  <td class="py-4 px-4 text-japandi-charcoal whitespace-nowrap">{row.currency}</td>
+                  <td class="py-4 px-4 text-japandi-earth whitespace-nowrap">{row.illustrativeInr}</td>
+                  <td class="py-4 px-4 text-japandi-charcoal whitespace-nowrap">{row.approxDifference}</td>
+                  <td class="py-4 px-4 text-japandi-earth text-xs">
+                    <span class="font-medium text-japandi-charcoal block">{row.sourceAndType}</span>
+                    <a href={row.sourceUrl} target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal block mt-0.5">
+                      {row.sourceLabel}
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: Calculation Breakdown -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">3. Transparent Calculation Breakdown</h2>
+        <p>
+          For selected dental procedures, Aureva Dental's published fees can be 70% or more below the referenced private-dental benchmarks in the UK or US. Every percentage difference is calculated using the standard formula:
+        </p>
+        <div class="p-4 rounded-xl bg-japandi-sand/40 border border-japandi-clay/40 font-mono text-xs text-japandi-charcoal">
+          Percentage Difference = ((Foreign Benchmark in INR - Aureva Published Price) / Foreign Benchmark in INR) &times; 100
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
+          <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2 text-xs">
+            <strong class="font-medium text-japandi-charcoal block text-sm">Example A: Dental Implant with Crown</strong>
+            <p><strong>US Private Benchmark Range:</strong> $3,000 – $5,500 (Midpoint: $4,250 = ₹4,08,000 INR illustrative equivalent at $1 = ₹96).</p>
+            <p><strong>Aureva Published Range:</strong> ₹45,000 – ₹80,000 (Midpoint: ₹62,500 INR).</p>
+            <p><strong>Lower Endpoint Calculation:</strong> ((₹2,88,000 - ₹45,000) / ₹2,88,000) &times; 100 = <strong>~84.4% difference</strong>.</p>
+            <p><strong>Upper Endpoint Calculation:</strong> ((₹5,28,000 - ₹80,000) / ₹5,28,000) &times; 100 = <strong>~84.8% difference</strong>.</p>
+            <p><strong>Midpoint Calculation:</strong> ((₹4,08,000 - ₹62,500) / ₹4,08,000) &times; 100 = <strong>~84.7% difference</strong>.</p>
+            <p class="text-japandi-earth font-light italic">Supports 70%+ claim: YES. Indicative comparison. Bone grafting, if clinically required, is separate.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2 text-xs">
+            <strong class="font-medium text-japandi-charcoal block text-sm">Example B: Molar Root Canal Treatment</strong>
+            <p><strong>US Private Benchmark Range:</strong> $1,030 – $2,471 (Midpoint: $1,750.50 = ₹1,68,048 INR illustrative equivalent at $1 = ₹96).</p>
+            <p><strong>Aureva Published Range:</strong> ₹6,000 – ₹10,000 (Midpoint: ₹8,000 INR).</p>
+            <p><strong>Lower Endpoint Calculation:</strong> ((₹98,880 - ₹6,000) / ₹98,880) &times; 100 = <strong>~93.9% difference</strong>.</p>
+            <p><strong>Upper Endpoint Calculation:</strong> ((₹2,37,216 - ₹10,000) / ₹2,37,216) &times; 100 = <strong>~95.8% difference</strong>.</p>
+            <p><strong>Midpoint Calculation:</strong> ((₹1,68,048 - ₹8,000) / ₹1,68,048) &times; 100 = <strong>~95.2% difference</strong>.</p>
+            <p class="text-japandi-earth font-light italic">Supports 70%+ claim: YES. Multi-canal posterior endodontic treatment. Crown billed separately.</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-japandi-sand/20 border border-japandi-clay/35 space-y-2 text-xs text-japandi-earth">
+          <strong class="font-medium text-japandi-charcoal block text-xs">Procedures That Do NOT Universally Support the 70% Claim:</strong>
+          <p>
+            We do not claim arbitrary 70% savings across all treatments. For instance, in <strong>Comprehensive Clear Aligners</strong>:
+          </p>
+          <ul class="list-disc pl-4 space-y-1 font-light">
+            <li>US private aligner benchmark range: $3,500 – $7,500 (Illustrative INR: ₹3,36,000 – ₹7,20,000; Midpoint: $5,500 = ₹5,28,000).</li>
+            <li>Aureva published fee range: ₹80,000 – ₹2,50,000 (Midpoint: ₹1,65,000).</li>
+            <li><strong>Lower Endpoint Calculation (Mild):</strong> ((₹3,36,000 - ₹80,000) / ₹3,36,000) &times; 100 = <strong>~76.2% difference</strong>.</li>
+            <li><strong>Upper Endpoint Calculation (Complex Full-Arch):</strong> ((₹7,20,000 - ₹2,50,000) / ₹7,20,000) &times; 100 = <strong>~65.3% difference</strong> (Falls below 70%).</li>
+            <li><strong>Midpoint Calculation:</strong> ((₹5,28,000 - ₹1,65,000) / ₹5,28,000) &times; 100 = <strong>~68.8% difference</strong> (Falls below 70%).</li>
+          </ul>
+          <p class="font-light">
+            Because complex aligner cases fall below 70%, the 70% threshold applies strictly to selected restorative procedures (implants, root canals, crowns, extractions, veneers) and is not a blanket discount on all dentistry.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: What Aureva's Pricing Includes & Factors That Change Fees -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">4. What Influences the Final Treatment Plan and Fee?</h2>
+        <p>
+          At Aureva Dental, all treatment pricing is published as clear ranges. The final fee for any clinical case depends on several factors:
+        </p>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-japandi-earth pl-2">
+          <li class="flex items-start gap-2.5">
+            <span class="text-japandi-moss font-bold">&bull;</span>
+            <span><strong>Clinical Complexity &amp; Canal Count:</strong> In endodontics, anterior teeth are ₹4,000–₹6,000, while multi-canal molars are ₹6,000–₹10,000. Retreatment of previous root canals starts from ₹8,000.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-japandi-moss font-bold">&bull;</span>
+            <span><strong>Material Selection:</strong> Dental crowns range from Metal (₹3,000–₹5,000) and PFM (₹5,000–₹8,000) to all-ceramic (₹6,000–₹10,000) and monolithic CAD/CAM zirconia (₹10,000–₹18,000).</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-japandi-moss font-bold">&bull;</span>
+            <span><strong>Preparatory Procedures:</strong> Diagnostic CBCT imaging, bone grafting, sinus lifts, core buildups, and provisional restorations are evaluated and billed where clinically indicated.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-japandi-moss font-bold">&bull;</span>
+            <span><strong>No Foreign-Patient Surcharge:</strong> The same published fee schedule applies equally to all patients.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 5: Sources & Methodology -->
+      <section class="space-y-4 pt-6 border-t border-japandi-clay/30">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">5. Sources &amp; Methodology</h2>
+        <p class="text-xs sm:text-sm text-japandi-earth font-light">
+          To ensure factual integrity and avoid presenting single regional numbers as uniform national prices, every US private dental benchmark in this article is derived directly from publicly verifiable healthcare cost datasets. Treatment packages and inclusions can differ between countries and providers, so these comparisons are illustrative rather than like-for-like quotations:
+        </p>
+        <ul class="space-y-2 text-xs text-japandi-earth font-light pl-2">
+          <li>
+            &bull; <strong>CareCredit Dental Implant Cost Guide:</strong> Published national fee guide (<a href="https://www.carecredit.com/well-u/health-wellness/dental-implant-cost/" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">carecredit.com/.../dental-implant-cost</a>). Supports complete single tooth dental implant ($3,000–$5,500) and surgical implant fixture alone ($1,646–$2,800). Benchmark type: <em>US private-practice range</em>.
+          </li>
+          <li>
+            &bull; <strong>CareCredit Root Canal Cost Guide:</strong> Published national fee guide (<a href="https://www.carecredit.com/well-u/health-wellness/root-canal-cost/" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">carecredit.com/.../root-canal-cost</a>). Supports molar root canal average of $1,337 with a national self-pay range of $1,030 to $2,471. Benchmark type: <em>US private-practice range</em>.
+          </li>
+          <li>
+            &bull; <strong>CareCredit Dental Crown Cost Guide:</strong> Published national fee guide (<a href="https://www.carecredit.com/well-u/health-wellness/dental-crown-cost/" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">carecredit.com/.../dental-crown-cost</a>). Supports monolithic zirconia and ceramic crown ranges of $915 to $2,500. Benchmark type: <em>US private-practice range</em>.
+          </li>
+          <li>
+            &bull; <strong>CareCredit Tooth Extraction Cost Guide:</strong> Published national fee guide (<a href="https://www.carecredit.com/well-u/health-wellness/tooth-extraction-cost/" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">carecredit.com/.../tooth-extraction-cost</a>). Supports simple extractions ($150–$300) and surgical or impacted wisdom teeth ($281–$702 per tooth). Benchmark type: <em>US private-practice range</em>.
+          </li>
+          <li>
+            &bull; <strong>CareCredit Clear Aligners Cost Guide:</strong> Published national fee guide (<a href="https://www.carecredit.com/well-u/health-wellness/clear-aligners-cost/" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">carecredit.com/.../clear-aligners-cost</a>). Supports comprehensive clear aligners ($3,500–$7,500; national average $5,108). Benchmark type: <em>US private-practice range</em>.
+          </li>
+          <li>
+            &bull; <strong>CareCredit Veneers Cost Guide:</strong> Published national cosmetic dentistry guide (<a href="https://www.carecredit.com/well-u/health-wellness/how-much-do-veneers-cost/" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">carecredit.com/.../how-much-do-veneers-cost</a>). Supports custom porcelain veneers ($1,020–$2,506 per tooth; national average $1,455). Benchmark type: <em>US private-practice range</em>.
+          </li>
+          <li>
+            &bull; <strong>FAIR Health Consumer:</strong> Independent non-profit healthcare pricing database (<a href="https://www.fairhealthconsumer.org" target="_blank" rel="noopener noreferrer" class="text-japandi-moss underline hover:text-japandi-charcoal">fairhealthconsumer.org</a>). Referencing standard CDT procedure codes: D6010 (surgical implant placement), D3330 (molar endodontics), D2740 (ceramic/zirconia crown), and D7140/D7210 (extractions) for self-pay benchmark validation.
+          </li>
+        </ul>
+        <p class="text-[11px] text-japandi-earth/80 font-light italic">
+          CareCredit and FAIR Health Consumer benchmarks are independent consumer healthcare cost datasets and are not attributed to the American Dental Association (ADA). Illustrative INR conversion based on the exchange rate on the article's update date ({articleUpdateDate}: {exchangeRateSnapshot}). Foreign-currency conversions are illustrative and subject to currency market fluctuations.
+      </section>
+
+      <!-- Section 6: FAQs -->
+      <section class="space-y-6 pt-6 border-t border-japandi-clay/30">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          {faqs.map((faq) => (
+            <div class="p-5 rounded-2xl bg-japandi-sand/30 border border-japandi-clay/40 space-y-2">
+              <h3 class="font-serif text-base font-medium text-japandi-charcoal">{faq.question}</h3>
+              <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Conclusion & CTA -->
+      <section class="p-8 rounded-3xl bg-japandi-sand/55 border border-japandi-clay/50 text-center space-y-5">
+        <h3 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Discuss Your Estimated Treatment Plan
+        </h3>
+        <p class="text-xs sm:text-sm text-japandi-earth font-light max-w-2xl mx-auto leading-relaxed">
+          Send your panoramic OPG X-ray, clinical photographs, or treatment questions to our clinical team via WhatsApp for preliminary discussion based on our published INR treatment fees.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <a 
+            href={whatsappUrl}
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="px-7 py-3 rounded-full bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all"
+          >
+            <span>WhatsApp Consultation (+91 73497 01002)</span>
+          </a>
+          <a 
+            href="/international-patients"
+            class="px-7 py-3 rounded-full border border-japandi-clay bg-japandi-cream hover:bg-japandi-sand text-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all"
+          >
+            <span>Explore International Patients Hub</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Required Internal Links -->
+      <div class="pt-6 border-t border-japandi-clay/30 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-japandi-earth font-light">
+        <a href="/international-patients" class="hover:text-japandi-moss transition-colors">International Patients Hub</a>
+        <span>&bull;</span>
+        <a href="/treatments/dental-implants" class="hover:text-japandi-moss transition-colors">Dental Implants</a>
+        <span>&bull;</span>
+        <a href="/treatments/root-canal-treatment" class="hover:text-japandi-moss transition-colors">Root Canal Treatment</a>
+        <span>&bull;</span>
+        <a href="/treatments/dental-crowns" class="hover:text-japandi-moss transition-colors">Dental Crowns</a>
+        <span>&bull;</span>
+        <a href="/contact" class="hover:text-japandi-moss transition-colors">Contact &amp; Location</a>
+      </div>
+    </article>
+  </main>
+</Layout>
