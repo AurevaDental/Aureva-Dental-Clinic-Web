@@ -395,7 +395,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": config.site_meta?.rating_value?.toString() || "5.0",
-      "reviewCount": config.site_meta?.review_count?.toString() || "29",
+      "reviewCount": config.site_meta?.review_count?.toString() || "35",
       "bestRating": "5",
       "worstRating": "1"
     },

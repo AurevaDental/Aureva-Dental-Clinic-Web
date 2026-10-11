@@ -105,7 +105,7 @@ const configuredReviews = google_reviews && google_reviews.length > 0
 const displayReviews = reviews && reviews.length > 0 ? reviews : configuredReviews;
 
 const googleRating = social_proof?.google_rating || config.site_meta?.rating_value || 5.0;
-const reviewCount = social_proof?.review_count || config.site_meta?.review_count || 29;
+const reviewCount = social_proof?.review_count || config.site_meta?.review_count || 35;
 const googleMapsReviewUrl = social_proof?.google_maps_url || locations_section.locations_list[0]?.google_maps_url || "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA";
 ---
 
@@ -304,7 +304,7 @@ const googleMapsReviewUrl = social_proof?.google_maps_url || locations_section.l
             href={googleMapsReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            title={`Read ${reviewCount} 5-star Google Reviews for Aureva Dental`}
+            title={`Read ${reviewCount}+ 5-star Google Reviews for Aureva Dental`}
             class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-japandi-sand/70 hover:bg-japandi-sand border border-japandi-clay/60 hover:border-japandi-moss/40 text-xs text-japandi-charcoal transition-all duration-300 group shadow-sm shrink-0"
           >
             <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
