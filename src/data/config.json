@@ -108,7 +108,7 @@
       {
         "title": "Kids Dentistry",
         "items": [
-          { "name": "Kids Dental Check-up", "price": "Rs. 500" },
+          { "name": "Kids Dental Check-up", "price": "Rs. 600" },
           { "name": "Fluoride Application", "price": "Rs. 800 - Rs. 1,500" },
           { "name": "Pit and Fissure Sealant", "price": "Rs. 1,500 - Rs. 2,500" }
         ]
@@ -143,7 +143,7 @@
       {
         "title": "Smile Design & Cosmetic Dentistry",
         "items": [
-          { "name": "Smile Consultation", "price": "Rs. 500" },
+          { "name": "Smile Consultation", "price": "Rs. 600" },
           { "name": "Digital Smile Design", "price": "Rs. 3,000 - Rs. 7,000" },
           { "name": "Teeth Whitening (Advanced)", "price": "Rs. 6,000 - Rs. 15,000" },
           { "name": "Veneers (Per Tooth)", "price": "Rs. 8,000 - Rs. 25,000" },
