@@ -22,7 +22,7 @@ export const LOCAL_FAQS: FaqItem[] = [
   },
   {
     question: "Who is the lead dentist at Aureva Dental Hennur?",
-    answer: "Dr. Shweta Singh, BDS (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. Our clinical team also includes Dr. Agniss Mishra, BDS (The Oxford Dental College, Bangalore), Dental Surgeon providing gentle preventive and restorative dental care."
+    answer: "Dr. Shweta Singh, BDS (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. Our clinical team also includes Co-Founder Dr. Agniss Mishra, BDS (The Oxford Dental College, Bangalore), Dental Surgeon providing gentle preventive and restorative dental care."
   },
   {
     question: "Does Aureva Dental accept walk-ins or emergency appointments on Sundays?",
@@ -371,7 +371,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       {
         "@type": "Dentist",
         "name": "Dr. Agniss Mishra, BDS",
-        "jobTitle": "Dental Surgeon",
+        "jobTitle": "Dental Surgeon & Co-Founder",
         "alumniOf": {
           "@type": "EducationalOrganization",
           "name": "The Oxford Dental College, Bangalore"
@@ -386,37 +386,12 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
         "medicalSpecialty": [
           "Dentistry"
         ],
-        "description": "Dental Surgeon providing gentle preventive and restorative dental care at Aureva Dental.",
+        "description": "Co-Founder and Dental Surgeon providing gentle preventive and restorative dental care at Aureva Dental.",
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }
       }
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": config.site_meta?.rating_value?.toString() || "5.0",
-      "reviewCount": config.site_meta?.review_count?.toString() || "35",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": ((config.google_reviews as any[]) || []).slice(0, 5).map((r: any) => ({
-      "@type": "Review",
-      "itemReviewed": {
-        "@type": "Dentist",
-        "@id": "https://aurevadental.com/#dentist",
-        "name": "Aureva Dental"
-      },
-      "author": {
-        "@type": "Person",
-        "name": r.name
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": (r.rating || 5).toString(),
-        "bestRating": "5"
-      },
-      "reviewBody": r.text
-    })),
     "sameAs": allProfiles
   };
 }
