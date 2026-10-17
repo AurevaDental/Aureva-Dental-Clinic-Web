@@ -345,9 +345,9 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
     } : {}),
     "employee": [
       {
-        "@type": "Dentist",
+        "@type": "Person",
         "name": "Dr. Shweta Singh, BDS",
-        "jobTitle": "Lead Aesthetic Architect & Founder",
+        "jobTitle": "Co-founder & Clinical Head",
         "alumniOf": {
           "@type": "EducationalOrganization",
           "name": "The Oxford Dental College, Bangalore"
@@ -360,18 +360,17 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
           }
         ],
         "medicalSpecialty": [
-          "CosmeticDentistry",
-          "Orthodontics"
+          "Dentistry"
         ],
-        "description": "Specialist in cosmetic smile design, clear aligners, and aesthetic restorative dentistry. Registered with Karnataka State Dental Council.",
+        "description": "Dental surgeon (BDS) focused on smile design, clear aligners and aesthetic restorative dentistry. Registered with the Karnataka State Dental Council.",
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }
       },
       {
-        "@type": "Dentist",
+        "@type": "Person",
         "name": "Dr. Agniss Mishra, BDS",
-        "jobTitle": "Dental Surgeon & Co-Founder",
+        "jobTitle": "Co-founder & Chief Executive",
         "alumniOf": {
           "@type": "EducationalOrganization",
           "name": "The Oxford Dental College, Bangalore"
