@@ -4,8 +4,8 @@ import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSc
 
 export const prerender = false;
 
-const pageTitle = "Pediatric Dentistry in Bangalore | Gentle Kids Dental Care | Aureva Dental";
-const pageDescription = "Gentle kids & pediatric dentistry in Bangalore at Aureva Dental. Painless cavity care, fluoride treatment & friendly visits for young smiles.";
+const pageTitle = "Kids Dentist in Hennur Bangalore | Aureva Dental";
+const pageDescription = "Gentle kids dentist in Hennur, Bangalore at Aureva Dental. Child-friendly pediatric dentistry, cavity prevention, fluoride & gentle care. Call +91 73497 01002.";
 const canonicalUrl = "https://aurevadental.com/treatments/pediatric-dentistry";
 const phoneCallUrl = "tel:+917349701002";
 const whatsappUrl = "https://wa.me/917349701002?text=Hello%2C%20I%20would%20like%20to%20consult%20for%20Kids%20Dentistry%20at%20Aureva%20Dental.";
@@ -56,56 +56,81 @@ const seoProps = {
 ---
 
 <Layout {...seoProps}>
+  <!-- Preload Critical Above-the-fold Hero Image -->
+  <link rel="preload" as="image" href="/assets/clinic-exterior-800.webp" type="image/webp" slot="head" />
+
   <!-- Breadcrumb Navigation -->
   <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
-    <div class="max-w-7xl mx-auto flex items-center gap-2">
-      <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
-      <span>/</span>
-      <a href="/#services" class="hover:text-japandi-moss transition-colors">Treatments</a>
-      <span>/</span>
-      <span class="text-japandi-charcoal font-medium">Pediatric Dentistry</span>
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
+        <span>/</span>
+        <a href="/#services" class="hover:text-japandi-moss transition-colors">Treatments</a>
+        <span>/</span>
+        <span class="text-japandi-charcoal font-medium">Kids Dentist in Hennur</span>
+      </div>
+      <!-- Near the top Prices quick link -->
+      <a href="#pricing" class="inline-flex items-center gap-1 text-xs font-semibold text-japandi-moss hover:underline">
+        Prices &darr;
+      </a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="py-16 md:py-24 px-6 lg:px-24 bg-transparent relative overflow-hidden">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <div class="lg:col-span-7 flex flex-col items-start space-y-6 animate-slow-fade">
+  <section class="py-12 md:py-20 px-6 lg:px-24 bg-transparent relative overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 flex flex-col items-start space-y-4 animate-slow-fade">
         <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-japandi-clay/60 bg-japandi-sand/70 text-[10px] font-semibold text-japandi-moss uppercase tracking-widest">
           Gentle Child Care &bull; Hennur, Bengaluru
         </div>
         
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-japandi-charcoal leading-tight font-medium tracking-tight">
-          Gentle, Fear-Free <br class="hidden sm:inline"/>
-          <span class="italic text-japandi-moss">Kids Dentistry.</span>
+          Kids Dentist in Hennur
         </h1>
 
-        <p class="text-base sm:text-lg text-japandi-earth font-light leading-relaxed max-w-2xl">
+        <!-- Above the fold mobile lines for clinic hours and address -->
+        <div class="w-full bg-japandi-sand/40 border border-japandi-clay/30 rounded-2xl p-3.5 space-y-1.5 text-xs text-japandi-earth">
+          <p class="flex items-center gap-2 font-medium text-japandi-charcoal">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-japandi-moss shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Open Tue–Sun 9:30 AM–9 PM &middot; Mon 4–9 PM &middot; Sundays open</span>
+          </p>
+          <p class="flex items-start gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-japandi-moss shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span>2nd Floor, SLV Nilaya, Horamavu Agara Road, near Nayara Petrol Bunk, Hennur Bande</span>
+          </p>
+        </div>
+
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed max-w-2xl">
           Nurturing healthy childhood smiles through kindness, patience, and prevention. Our calm Japandi sanctuary transforms dental checkups into positive, tear-free adventures for toddlers, children, and teens.
         </p>
 
-        <!-- Direct Action CTA Buttons -->
-        <div class="pt-2 flex flex-wrap items-center gap-4 w-full sm:w-auto">
-          <button 
-            type="button"
-            data-open-booking
-            data-treatment="Kids & Pediatric Dentistry"
-            class="inline-flex items-center justify-center gap-2 px-7 py-4 bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 shadow-md shadow-japandi-moss/15 cursor-none"
+        <!-- Direct Action CTA Buttons (plain <a> tags for GTM tracking) -->
+        <div class="pt-2 flex flex-wrap items-center gap-3 w-full sm:w-auto">
+          <a 
+            href="tel:+917349701002"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 shadow-sm"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z" />
             </svg>
-            <span>Book Kids Checkup</span>
-          </button>
+            <span>Call: +91 73497 01002</span>
+          </a>
 
           <a 
-            href={phoneCallUrl}
-            class="inline-flex items-center justify-center gap-2 px-7 py-4 border border-japandi-clay bg-japandi-sand/50 hover:bg-japandi-sand text-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 cursor-none"
+            href="https://wa.me/917349701002"
+            target="_blank" 
+            rel="noopener"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-emerald-600 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 shadow-sm"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-japandi-moss">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4 text-emerald-600">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
-            <span>Call +91 73497 01002</span>
+            <span>WhatsApp Us</span>
           </a>
         </div>
 
@@ -126,16 +151,27 @@ const seoProps = {
       </div>
 
       <!-- Hero Visual Card -->
-      <div class="lg:col-span-5 animate-slow-fade" style="animation-delay: 0.2s;">
-        <div class="bg-japandi-sand/60 border border-japandi-clay/50 rounded-[2.5rem] p-8 sm:p-10 shadow-lg shadow-japandi-charcoal/5 relative overflow-hidden">
+      <div class="lg:col-span-5 space-y-4">
+        <!-- Real clinic photo -->
+        <img 
+          src="/assets/clinic-exterior-800.webp" 
+          alt="Aureva Dental Clinic Hennur Exterior" 
+          width="800" 
+          height="447" 
+          class="rounded-3xl shadow-sm border border-japandi-clay/40 object-cover w-full h-auto aspect-video"
+          loading="eager"
+          fetchpriority="high"
+        />
+
+        <div class="bg-japandi-sand/60 border border-japandi-clay/50 rounded-[2.5rem] p-6 sm:p-8 shadow-sm relative overflow-hidden">
           <div class="absolute -top-12 -right-12 w-40 h-40 bg-japandi-moss/10 rounded-full blur-2xl pointer-events-none"></div>
           
-          <h3 class="text-xl font-serif text-japandi-charcoal font-medium mb-4">Our Child-First Philosophy</h3>
+          <h3 class="text-lg font-serif text-japandi-charcoal font-medium mb-3">Our Child-First Philosophy</h3>
           
-          <ul class="space-y-4 text-xs sm:text-sm text-japandi-earth font-light">
+          <ul class="space-y-3 text-xs text-japandi-earth font-light">
             <li class="flex items-start gap-3">
               <div class="w-5 h-5 rounded-full bg-japandi-moss/15 text-japandi-moss flex items-center justify-center shrink-0 mt-0.5 font-semibold text-[10px]">&check;</div>
-              <div><strong class="text-japandi-charcoal font-medium">Painless Preventive Care:</strong> We emphasize sealants, fluoride shields, and early checkups to prevent cavities before they hurt.</div>
+              <div><strong class="text-japandi-charcoal font-medium">Comfortable Preventive Care:</strong> We emphasize sealants, fluoride shields, and early checkups to prevent cavities before they hurt.</div>
             </li>
             <li class="flex items-start gap-3">
               <div class="w-5 h-5 rounded-full bg-japandi-moss/15 text-japandi-moss flex items-center justify-center shrink-0 mt-0.5 font-semibold text-[10px]">&check;</div>
@@ -151,9 +187,9 @@ const seoProps = {
             </li>
           </ul>
 
-          <div class="mt-8 pt-6 border-t border-japandi-clay/40 flex items-center justify-between text-xs">
+          <div class="mt-6 pt-4 border-t border-japandi-clay/40 flex items-center justify-between text-xs">
             <span class="text-japandi-earth">Ages Welcome</span>
-            <span class="font-serif text-base font-semibold text-japandi-charcoal">1 to 16 Years</span>
+            <span class="font-serif text-sm font-semibold text-japandi-charcoal">1 to 16 Years</span>
           </div>
         </div>
       </div>
@@ -260,7 +296,7 @@ const seoProps = {
   </section>
 
   <!-- Pricing Transparency -->
-  <section class="py-20 px-6 lg:px-24 bg-japandi-sand/30 border-t border-japandi-clay/30">
+  <section id="pricing" class="py-20 px-6 lg:px-24 bg-japandi-sand/30 border-t border-japandi-clay/30">
     <div class="max-w-5xl mx-auto bg-japandi-sand/50 border border-japandi-clay/50 rounded-[2.5rem] p-8 sm:p-12">
       <div class="max-w-2xl mb-8">
         <p class="text-xs font-semibold text-japandi-earth uppercase tracking-widest mb-2">Honest Pricing</p>
@@ -353,7 +389,7 @@ const seoProps = {
         </a>
         <a href="/dentist-in-hennur" class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 hover:border-japandi-moss transition-all group">
           <span class="font-medium text-japandi-charcoal group-hover:text-japandi-moss block mb-1">Dentist in Hennur &rarr;</span>
-          <span class="text-japandi-earth text-[11px]">Meet our family dental surgeons Dr. Shweta &amp; Dr. Agniss.</span>
+          <span class="text-japandi-earth text-[11px]">Meet Dr. Shweta and Agniss Mishra at our Hennur studio.</span>
         </a>
         <a href="/dental-clinic-in-hennur" class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 hover:border-japandi-moss transition-all group">
           <span class="font-medium text-japandi-charcoal group-hover:text-japandi-moss block mb-1">Hennur Dental Studio &rarr;</span>

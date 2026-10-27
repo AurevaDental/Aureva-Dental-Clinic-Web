@@ -22,7 +22,7 @@ const STATIC_ROUTES: StaticRoute[] = [
   { url: 'https://aurevadental.com/blog', changefreq: 'daily', priority: '0.8', lastmod: '2026-09-29', title: 'Dental Health Blog & Clinical Guides' },
 
   // Local Catchment Pages
-  { url: 'https://aurevadental.com/dentist-in-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Best Dentist in Hennur Bangalore' },
+  { url: 'https://aurevadental.com/dentist-in-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Dentist in Hennur Bangalore' },
   { url: 'https://aurevadental.com/dental-clinic-in-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Dental Clinic in Hennur Bangalore' },
   { url: 'https://aurevadental.com/emergency-dentist-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Emergency Dentist in Hennur Bangalore' },
   { url: 'https://aurevadental.com/root-canal-treatment-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Root Canal Treatment in Hennur' },
@@ -46,8 +46,8 @@ const STATIC_ROUTES: StaticRoute[] = [
   { url: 'https://aurevadental.com/treatments/scaling-and-polishing', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Teeth Cleaning & Scaling in Bangalore' },
   { url: 'https://aurevadental.com/treatments/smile-makeover', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Digital Smile Makeover in Bangalore' },
   { url: 'https://aurevadental.com/treatments/teeth-whitening', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Laser Teeth Whitening in Bangalore' },
-  { url: 'https://aurevadental.com/treatments/tooth-extraction', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Painless Tooth Extraction in Bangalore' },
-  { url: 'https://aurevadental.com/treatments/wisdom-tooth-removal', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Painless Wisdom Tooth Removal in Bangalore' },
+  { url: 'https://aurevadental.com/treatments/tooth-extraction', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Comfortable Tooth Extraction in Bangalore' },
+  { url: 'https://aurevadental.com/treatments/wisdom-tooth-removal', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Comfortable Wisdom Tooth Removal in Bangalore' },
 
   // International Patient & Traveler Pages
   { url: 'https://aurevadental.com/international-patients', changefreq: 'weekly', priority: '0.9', lastmod: '2026-10-04', title: 'International Patient Dental Care in North Bangalore' },

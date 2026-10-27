@@ -103,13 +103,13 @@ export default function BookingModal() {
 
     const whatsappUrl = `https://wa.me/917349701002?text=${encodeURIComponent(message)}`;
 
-    // Trigger Google Ads conversion tracking if available
-    if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
-      try {
-        window.gtag_report_conversion(whatsappUrl);
-      } catch (err) {
-        console.warn("Conversion reporting error:", err);
-      }
+    // Push booking submit event to GTM dataLayer
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'booking_submit',
+        treatment: selectedTreatment,
+        slot: selectedSlot
+      });
     }
 
     // Open WhatsApp

@@ -22,7 +22,7 @@ export const LOCAL_FAQS: FaqItem[] = [
   },
   {
     question: "Who is the lead dentist at Aureva Dental Hennur?",
-    answer: "Dr. Shweta Singh, BDS (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. Our clinical team also includes Co-Founder Dr. Agniss Mishra, BDS (The Oxford Dental College, Bangalore), Dental Surgeon providing gentle preventive and restorative dental care."
+    answer: "Dr. Shweta Singh (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. Our clinical team also includes Co-Founder Agniss Mishra (The Oxford Dental College, Bangalore), Dental Surgeon providing gentle preventive and restorative dental care."
   },
   {
     question: "Does Aureva Dental accept walk-ins or emergency appointments on Sundays?",
@@ -30,7 +30,7 @@ export const LOCAL_FAQS: FaqItem[] = [
   },
   {
     question: "What dental treatments and specialities do you provide?",
-    answer: "We offer comprehensive holistic and specialized dental care, including painless Root Canal Treatments (RCT), Clear Aligners and Invisible Braces, Dental Implants, Digital Smile Design, Ceramic & Zirconia Crowns, Advanced Teeth Whitening, Kids Dentistry, and preventative Scaling & Polishing in a calm, Japandi-inspired studio environment."
+    answer: "We offer comprehensive holistic and specialized dental care, including gentle Root Canal Treatments (RCT), Clear Aligners and Invisible Braces, Dental Implants, Digital Smile Design, Ceramic & Zirconia Crowns, Advanced Teeth Whitening, Kids Dentistry, and preventative Scaling & Polishing in a calm, Japandi-inspired studio environment."
   },
   {
     question: "How much does a Root Canal Treatment (RCT) or Consultation cost?",
@@ -150,7 +150,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       "https://aurevadental.com/og-image.jpg",
       "https://aurevadental.com/logo.png"
     ],
-    "description": "Aureva Dental is a modern dental clinic & smile studio at SLV Nilaya, Hennur Bande, Horamavu Agara Road, Bengaluru. Painless root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
+    "description": "Aureva Dental is a modern dental clinic & smile studio at SLV Nilaya, Hennur Bande, Horamavu Agara Road, Bengaluru. Gentle root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
     "telephone": "+917349701002",
     "email": "aurevadentalclinic@gmail.com",
     "priceRange": "₹₹",
@@ -333,7 +333,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       {
         "@type": "MedicalProcedure",
         "name": "Wisdom Tooth Removal & Oral Surgery",
-        "description": "Painless extraction of impacted wisdom teeth using digital low-radiation RVG imaging and gentle surgical technique."
+        "description": "Comfortable extraction of impacted wisdom teeth using digital low-radiation RVG imaging and gentle surgical technique."
       }
     ],
     ...(includeFullCatalog ? {
@@ -346,7 +346,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
     "employee": [
       {
         "@type": "Person",
-        "name": "Dr. Shweta Singh, BDS",
+        "name": "Dr. Shweta Singh",
         "jobTitle": "Co-founder & Clinical Head",
         "alumniOf": {
           "@type": "EducationalOrganization",
@@ -362,14 +362,14 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
         "medicalSpecialty": [
           "Dentistry"
         ],
-        "description": "Dental surgeon (BDS) focused on smile design, clear aligners and aesthetic restorative dentistry. Registered with the Karnataka State Dental Council.",
+        "description": "Dental surgeon focused on smile design, clear aligners and aesthetic restorative dentistry. Registered with the Karnataka State Dental Council.",
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }
       },
       {
         "@type": "Person",
-        "name": "Dr. Agniss Mishra, BDS",
+        "name": "Agniss Mishra",
         "jobTitle": "Co-founder & Chief Executive",
         "alumniOf": {
           "@type": "EducationalOrganization",

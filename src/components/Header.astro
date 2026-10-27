@@ -22,9 +22,9 @@ const treatments = [
   },
   {
     name: "Root Canal Treatment",
-    desc: "Single-sitting painless rotary RCT",
+    desc: "Single-sitting gentle rotary RCT",
     url: "/treatments/root-canal-treatment",
-    tag: "Painless"
+    tag: "Gentle"
   },
   {
     name: "Cosmetic Dentistry",
@@ -46,7 +46,7 @@ const treatments = [
   },
   {
     name: "Wisdom Tooth Removal",
-    desc: "Painless oral surgery & pain relief",
+    desc: "Comfortable oral surgery & pain relief",
     url: "/treatments/wisdom-tooth-removal",
     tag: "Surgical"
   }
@@ -124,7 +124,6 @@ const treatments = [
         <!-- Direct Phone Link on Desktop / Tablet -->
         <a 
           href={phoneCallUrl}
-          onclick="return typeof gtag_report_conversion === 'function' ? gtag_report_conversion('tel:+917349701002') : true;"
           class="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-japandi-clay/60 hover:border-japandi-moss text-japandi-charcoal text-xs font-semibold tracking-wider transition-all duration-300 cursor-none"
           title="Call Aureva Dental Reception"
           aria-label="Call Aureva Dental Clinic"
@@ -219,7 +218,6 @@ const treatments = [
       <div class="pt-2 grid grid-cols-3 gap-2">
         <a 
           href={phoneCallUrl}
-          onclick="return typeof gtag_report_conversion === 'function' ? gtag_report_conversion('tel:+917349701002') : true;"
           aria-label="Call Aureva Dental Reception Desk"
           class="text-center py-2 rounded-full border border-japandi-moss text-japandi-moss text-xs font-semibold"
         >
