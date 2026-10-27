@@ -402,9 +402,9 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Tooth Extraction Cost in Bangalore | Aureva Dental",
     headline: "Tooth Extraction Cost in Bangalore: Simple vs Surgical & Wisdom Teeth (2026)",
     metaDescription: "Transparent tooth extraction cost in Bangalore (₹1,500 to ₹9,000), simple vs surgical removal, wisdom tooth care & comfortable oral surgery at Aureva Dental.",
-    author: "Agniss Mishra, BDS",
+    author: "Dr. Agniss Mishra, BDS",
     authorRole: "Dental Surgeon",
-    authorCredentials: "Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+    authorCredentials: "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
     date: "September 2026",
     datePublished: "2026-09-15",
     dateModified: "2026-09-23",
@@ -416,7 +416,7 @@ export const BLOG_POSTS: BlogPost[] = [
     introParagraphs: [
       "At Aureva Dental, our fundamental clinical philosophy is conservative tooth preservation. We exhaust every available restorative modality—including rotary root canals, periodontal therapy, and protective ceramic crowns—to keep your natural tooth healthy in your mouth. However, when a tooth suffers severe vertical root fractures, catastrophic subgingival decay, advanced periodontitis bone loss, or painful wisdom tooth impaction, extraction becomes the safest biological necessity.",
       "Many patients facing tooth extraction are anxious about surgical pain, recovery timelines, and procedural costs across Bangalore dental clinics.",
-      "In this guide authored by Agniss Mishra, we provide a transparent price breakdown for simple and surgical extractions, explain atraumatic socket-preservation protocols, and provide practical instructions for a speedy, complications-free recovery."
+      "In this guide authored by Dr. Agniss Mishra, we provide a transparent price breakdown for simple and surgical extractions, explain atraumatic socket-preservation protocols, and provide practical instructions for a speedy, complications-free recovery."
     ],
     sections: [
       {
@@ -481,7 +481,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Immediate implant placement can often be performed during the same extraction visit",
           "Ridge preservation bone grafting keeps your jaw foundation stable for future restorations",
           "Never leave an extraction gap unaddressed for years to avoid bite collapse and facial sagging",
-          "Consult Agniss Mishra at Aureva Dental in Hennur to customize your post-extraction plan"
+          "Consult Dr. Agniss Mishra at Aureva Dental in Hennur to customize your post-extraction plan"
         ]
       }
     ],
@@ -894,9 +894,9 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Wisdom Tooth Pain Radiating to Jaw and Ear: Symptoms, Pericoronitis & Treatment | Aureva Dental",
   "headline": "Wisdom Tooth Pain Radiating to Jaw, Ear & Neck: Causes, Relief & Gentle Removal",
   "metaDescription": "Experiencing shooting wisdom tooth pain radiating to your ear and jaw? Learn why pericoronitis and impaction cause nerve pain and how gentle removal at Aureva Dental helps.",
-  "author": "Agniss Mishra, BDS",
+  "author": "Dr. Agniss Mishra, BDS",
   "authorRole": "Dental Surgeon & Oral Surgery Lead",
-  "authorCredentials": "Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "authorCredentials": "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
   "date": "September 2026",
   "datePublished": "2026-09-26",
   "dateModified": "2026-09-28",
@@ -1235,7 +1235,7 @@ export const BLOG_POSTS: BlogPost[] = [
     {
       "heading": "Pain Management & Medication Protocol",
       "paragraphs": [
-        "Take all prescribed anti-inflammatory and pain medications exactly as directed by Dr. Shweta Singh or Agniss Mishra:",
+        "Take all prescribed anti-inflammatory and pain medications exactly as directed by Dr. Shweta Singh or Dr. Agniss Mishra:",
         "1. Scheduled Analgesics: If prescribed an NSAID (such as Ibuprofen or Paracetamol), taking the first dose before the numbness completely wears off significantly minimizes discomfort.",
         "2. Antibiotic Course: If antibiotics were prescribed due to pre-existing swelling or bone infection, complete the full course even if you feel completely fine after two days. Stopping early can breed resistant bacteria.",
         "3. Avoid Home Poking: Do not poke the treated tooth with your tongue, fingers, or toothpicks."
@@ -1292,9 +1292,9 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Wisdom Tooth Extraction Aftercare: Preventing Dry Socket & Fast Healing | Aureva Dental",
   "headline": "Wisdom Tooth Extraction Aftercare: Days 1 to 7 Recovery & How to Prevent Dry Socket",
   "metaDescription": "Essential wisdom tooth removal aftercare instructions. Swelling management, bleeding control, soft food list, and vital tips to prevent dry socket by Aureva Dental.",
-  "author": "Agniss Mishra, BDS",
+  "author": "Dr. Agniss Mishra, BDS",
   "authorRole": "Dental Surgeon & Oral Surgery Lead",
-  "authorCredentials": "Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "authorCredentials": "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
   "date": "September 2026",
   "datePublished": "2026-09-27",
   "dateModified": "2026-09-28",
@@ -1455,9 +1455,9 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Teeth Cleaning & Scaling Aftercare: What to Expect, Diet & Sensitivity | Aureva Dental",
   "headline": "Teeth Cleaning & Scaling Aftercare: Sensitivity Management & Gum Care Guide",
   "metaDescription": "What to expect after ultrasonic scaling and teeth cleaning. Understanding normal sensitivity, gum healing, foods to avoid, and flossing tips by Aureva Dental Bangalore.",
-  "author": "Agniss Mishra, BDS",
+  "author": "Dr. Agniss Mishra, BDS",
   "authorRole": "Dental Surgeon & Preventive Care Lead",
-  "authorCredentials": "Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "authorCredentials": "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
   "date": "September 2026",
   "datePublished": "2026-09-28",
   "dateModified": "2026-09-28",

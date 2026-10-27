@@ -256,13 +256,74 @@
       },
       {
         "id": "agniss",
-        "name": "Agniss Mishra",
+        "name": "Dr. Agniss Mishra",
         "role": "Dental Surgeon & Co-Founder",
         "qualifications": "Dental Surgeon",
         "image_url": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600&h=800",
         "philosophy": "Treating the mouth is treating the gateway to the entire body's wellness."
       }
-    ]
+    ],
+    "visiting_specialists_section": {
+      "title": "Consultant Specialists Panel",
+      "subtitle": "Multidisciplinary super-specialists available on a scheduled case-to-case basis.",
+      "badge": "On-Call / Case Basis",
+      "specialists": [
+        {
+          "code": "ortho",
+          "tag": "Ortho",
+          "specialty": "Orthodontics & Dentofacial Orthopedics",
+          "role": "Consultant Orthodontist",
+          "degree": "MDS (Orthodontics)",
+          "focus": "Clear Aligners, Ceramic & Self-Ligating Braces, Complex Bite Correction",
+          "availability": "Case-to-Case Scheduled Appointments"
+        },
+        {
+          "code": "endo",
+          "tag": "Endo",
+          "specialty": "Conservative Dentistry & Endodontics",
+          "role": "Consultant Endodontist",
+          "degree": "MDS (Endodontics)",
+          "focus": "Microscopic Rotary Root Canal Therapy, Complex Re-RCT & Apicoectomy",
+          "availability": "Case-to-Case Scheduled Appointments"
+        },
+        {
+          "code": "omfs",
+          "tag": "OMFS",
+          "specialty": "Oral & Maxillofacial Surgery",
+          "role": "Consultant Maxillofacial Surgeon",
+          "degree": "MDS (Oral & Maxillofacial Surgery)",
+          "focus": "Deep Impacted Wisdom Teeth, Surgical Tooth Removal & Jaw Minor Surgeries",
+          "availability": "Case-to-Case Scheduled Appointments"
+        },
+        {
+          "code": "perio",
+          "tag": "Perio",
+          "specialty": "Periodontology & Oral Implantology",
+          "role": "Consultant Periodontist",
+          "degree": "MDS (Periodontics)",
+          "focus": "Laser Gum Therapy, Bone Grafting, Pocket Reduction & Implant Site Development",
+          "availability": "Case-to-Case Scheduled Appointments"
+        },
+        {
+          "code": "prostho",
+          "tag": "Prostho",
+          "specialty": "Prosthodontics & Crown/Bridge",
+          "role": "Consultant Prosthodontist",
+          "degree": "MDS (Prosthodontics)",
+          "focus": "Full Mouth Rehabilitation, Precision Ceramic Bridges & Full Arch Implant Restorations",
+          "availability": "Case-to-Case Scheduled Appointments"
+        },
+        {
+          "code": "pedo",
+          "tag": "Pedo",
+          "specialty": "Pediatric & Preventive Dentistry",
+          "role": "Consultant Pedodontist",
+          "degree": "MDS (Pediatric Dentistry)",
+          "focus": "Gentle Child Dentistry, Early Interceptive Orthodontics, Habit Appliances & Fluoride Care",
+          "availability": "Case-to-Case Scheduled Appointments"
+        }
+      ]
+    }
   },
   "locations_section": {
     "title": "Serene Sanctuaries",

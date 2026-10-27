@@ -22,7 +22,7 @@ export const LOCAL_FAQS: FaqItem[] = [
   },
   {
     question: "Who is the lead dentist at Aureva Dental Hennur?",
-    answer: "Dr. Shweta Singh (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. Our clinical team also includes Co-Founder Agniss Mishra (The Oxford Dental College, Bangalore), Dental Surgeon providing gentle preventive and restorative dental care."
+    answer: "Dr. Shweta Singh (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. Our clinical team also includes Co-Founder Dr. Agniss Mishra (The Oxford Dental College, Bangalore), Dental Surgeon providing gentle preventive and restorative dental care."
   },
   {
     question: "Does Aureva Dental accept walk-ins or emergency appointments on Sundays?",
@@ -369,7 +369,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       },
       {
         "@type": "Person",
-        "name": "Agniss Mishra",
+        "name": "Dr. Agniss Mishra",
         "jobTitle": "Co-founder & Chief Executive",
         "alumniOf": {
           "@type": "EducationalOrganization",

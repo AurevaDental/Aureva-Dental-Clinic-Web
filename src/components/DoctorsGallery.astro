@@ -80,6 +80,75 @@ const { doctors_section, show_doctor_images } = config;
         </div>
       ))}
     </div>
+
+    <!-- Visiting Specialists Panel (On-Call / Case Basis) -->
+    {doctors_section.visiting_specialists_section && (
+      <div class="mt-16 pt-12 border-t border-japandi-clay/35">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-japandi-clay/60 bg-japandi-sand/70 text-[10px] font-semibold text-japandi-moss uppercase tracking-widest mb-2.5">
+              <span>{doctors_section.visiting_specialists_section.badge}</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+              {doctors_section.visiting_specialists_section.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-japandi-earth font-light mt-1">
+              {doctors_section.visiting_specialists_section.subtitle}
+            </p>
+          </div>
+          <button 
+            type="button" 
+            data-open-booking 
+            class="self-start sm:self-auto px-5 py-2.5 rounded-full bg-japandi-moss hover:bg-japandi-charcoal text-japandi-cream text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm cursor-none shrink-0"
+          >
+            Request Specialist Appointment
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {doctors_section.visiting_specialists_section.specialists.map((spec) => (
+            <div class="p-6 rounded-3xl bg-japandi-sand/45 border border-japandi-clay/45 hover:border-japandi-moss/60 hover:bg-japandi-sand transition-all duration-300 flex flex-col justify-between group">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-japandi-moss/10 text-japandi-moss border border-japandi-moss/20">
+                    {spec.tag}
+                  </span>
+                  <span class="text-[10px] text-japandi-earth font-medium">
+                    {spec.degree}
+                  </span>
+                </div>
+                <div>
+                  <h4 class="font-serif text-lg text-japandi-charcoal font-medium group-hover:text-japandi-moss transition-colors">
+                    {spec.role}
+                  </h4>
+                  <span class="text-[11px] text-japandi-earth font-medium block mt-0.5">
+                    {spec.specialty}
+                  </span>
+                </div>
+                <p class="text-xs text-japandi-earth font-light leading-relaxed">
+                  {spec.focus}
+                </p>
+              </div>
+
+              <div class="mt-5 pt-4 border-t border-japandi-clay/30 flex items-center justify-between text-[11px]">
+                <span class="text-japandi-moss font-medium flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  {spec.availability}
+                </span>
+                <button
+                  type="button"
+                  data-open-booking
+                  data-treatment={spec.role}
+                  class="text-japandi-charcoal hover:text-japandi-moss font-medium underline underline-offset-2 transition-colors cursor-none"
+                >
+                  Consult &rarr;
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
   </div>
 </section>
 

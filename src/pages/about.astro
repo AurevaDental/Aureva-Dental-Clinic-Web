@@ -5,7 +5,7 @@ import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas
 export const prerender = false;
 
 const pageTitle = "About Us | Dental Clinic in Hennur | Aureva Dental";
-const pageDescription = "Learn about Aureva Dental in Hennur, Bangalore. Led by Founder Dr. Shweta Singh and Co-Founder Agniss Mishra, offering gentle, hospital-grade modern dental treatments.";
+const pageDescription = "Learn about Aureva Dental in Hennur, Bangalore. Led by Founder Dr. Shweta Singh and Co-Founder Dr. Agniss Mishra, offering gentle, hospital-grade modern dental treatments.";
 const canonicalUrl = "https://aurevadental.com/about";
 const phoneCallUrl = "tel:+917349701002";
 const whatsappUrl = "https://wa.me/917349701002?text=Hello%20Aureva%20Dental%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20clinic%20and%20doctors.";
@@ -18,7 +18,7 @@ const breadcrumbs = [
 const faqs = [
   {
     question: "Who founded Aureva Dental?",
-    answer: "Aureva Dental is founded and led by Dr. Shweta Singh (Lead Aesthetic Architect & Clinical Director, Founder) and Agniss Mishra (Dental Surgeon & Co-Founder), alumni of The Oxford Dental College, Bangalore."
+    answer: "Aureva Dental is founded and led by Dr. Shweta Singh (Lead Aesthetic Architect & Clinical Director, Founder) and Dr. Agniss Mishra (Dental Surgeon & Co-Founder), alumni of The Oxford Dental College, Bangalore."
   },
   {
     question: "What is the Japandi dental concept at Aureva Dental?",
@@ -102,7 +102,7 @@ const seoProps = {
       <div class="lg:col-span-5 relative">
         <div class="relative rounded-3xl overflow-hidden border border-japandi-clay/60 shadow-xl bg-japandi-sand/30 p-8 space-y-6">
           <span class="text-xs font-semibold uppercase tracking-widest text-japandi-moss">Clinical Leadership</span>
-          <h3 class="text-2xl font-serif text-japandi-charcoal font-medium">Dr. Shweta Singh &amp; Agniss Mishra</h3>
+          <h3 class="text-2xl font-serif text-japandi-charcoal font-medium">Dr. Shweta Singh &amp; Dr. Agniss Mishra</h3>
           <p class="text-xs text-japandi-earth leading-relaxed font-light">
             Alumni of The Oxford Dental College, Bangalore, bringing dedicated clinical focus to aesthetic architecture, preventive care, and family dental wellness.
           </p>
@@ -157,11 +157,63 @@ const seoProps = {
           </div>
 
           <div class="p-6 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-3">
-            <h3 class="font-serif text-xl text-japandi-charcoal font-medium">Agniss Mishra</h3>
+            <h3 class="font-serif text-xl text-japandi-charcoal font-medium">Dr. Agniss Mishra</h3>
             <span class="text-xs font-semibold text-japandi-moss uppercase tracking-wider block">Dental Surgeon &bull; Co-Founder</span>
             <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
-              Agniss graduated from The Oxford Dental College, Bangalore. As Co-Founder and Dental Surgeon dedicated to gentle, communicative chairside care, he focuses on preventive dentistry, restorative care, and patient wellness in our serene studio environment.
+              Dr. Agniss graduated from The Oxford Dental College, Bangalore. As Co-Founder and Dental Surgeon dedicated to gentle, communicative chairside care, he focuses on preventive dentistry, restorative care, and patient wellness in our serene studio environment.
             </p>
+          </div>
+        </div>
+
+        <!-- Visiting Consultant Specialists Panel (Case Basis) -->
+        <div class="mt-10 p-8 rounded-3xl bg-japandi-sand/40 border border-japandi-clay/40 space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="text-[10px] font-semibold text-japandi-moss uppercase tracking-widest block mb-1">Collaborative Care</span>
+              <h3 class="text-xl font-serif text-japandi-charcoal font-medium">Multidisciplinary Consultant Specialists</h3>
+              <p class="text-xs text-japandi-earth font-light">Super-specialist dental surgeons visiting on a scheduled case-to-case basis:</p>
+            </div>
+            <span class="self-start sm:self-auto text-[10px] font-semibold text-emerald-800 bg-emerald-100/80 px-3 py-1 rounded-full border border-emerald-200">
+              Case-to-Case Appointments
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+            <div class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/35 space-y-1.5">
+              <span class="text-[9px] font-bold text-japandi-moss uppercase tracking-wider px-2 py-0.5 rounded bg-japandi-moss/10 inline-block">Ortho</span>
+              <h4 class="font-serif text-sm text-japandi-charcoal font-medium">Consultant Orthodontist</h4>
+              <p class="text-japandi-earth font-light text-[11px] leading-relaxed">Invisible aligners, metallic & ceramic self-ligating braces, complex bite correction.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/35 space-y-1.5">
+              <span class="text-[9px] font-bold text-japandi-moss uppercase tracking-wider px-2 py-0.5 rounded bg-japandi-moss/10 inline-block">Endo</span>
+              <h4 class="font-serif text-sm text-japandi-charcoal font-medium">Consultant Endodontist</h4>
+              <p class="text-japandi-earth font-light text-[11px] leading-relaxed">Microscopic root canal treatment, re-RCT, curved canal endodontics.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/35 space-y-1.5">
+              <span class="text-[9px] font-bold text-japandi-moss uppercase tracking-wider px-2 py-0.5 rounded bg-japandi-moss/10 inline-block">OMFS</span>
+              <h4 class="font-serif text-sm text-japandi-charcoal font-medium">Consultant Maxillofacial Surgeon</h4>
+              <p class="text-japandi-earth font-light text-[11px] leading-relaxed">Surgical impacted wisdom tooth extraction, minor oral surgeries, jaw trauma.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/35 space-y-1.5">
+              <span class="text-[9px] font-bold text-japandi-moss uppercase tracking-wider px-2 py-0.5 rounded bg-japandi-moss/10 inline-block">Perio</span>
+              <h4 class="font-serif text-sm text-japandi-charcoal font-medium">Consultant Periodontist</h4>
+              <p class="text-japandi-earth font-light text-[11px] leading-relaxed">Laser gum sculpting, flap therapy, bone grafting & advanced dental implants.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/35 space-y-1.5">
+              <span class="text-[9px] font-bold text-japandi-moss uppercase tracking-wider px-2 py-0.5 rounded bg-japandi-moss/10 inline-block">Prostho</span>
+              <h4 class="font-serif text-sm text-japandi-charcoal font-medium">Consultant Prosthodontist</h4>
+              <p class="text-japandi-earth font-light text-[11px] leading-relaxed">Full mouth rehabilitation, CAD/CAM crowns, bridges & full arch prosthetics.</p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/35 space-y-1.5">
+              <span class="text-[9px] font-bold text-japandi-moss uppercase tracking-wider px-2 py-0.5 rounded bg-japandi-moss/10 inline-block">Pedo</span>
+              <h4 class="font-serif text-sm text-japandi-charcoal font-medium">Consultant Pedodontist</h4>
+              <p class="text-japandi-earth font-light text-[11px] leading-relaxed">Child dentistry, habit breaking appliances, space maintainers & cavity prevention.</p>
+            </div>
           </div>
         </div>
       </div>
