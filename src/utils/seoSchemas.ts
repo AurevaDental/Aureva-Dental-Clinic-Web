@@ -34,11 +34,11 @@ export const LOCAL_FAQS: FaqItem[] = [
   },
   {
     question: "How much does a Root Canal Treatment (RCT) or Consultation cost?",
-    answer: "Our new patient consultation (including digital RVG low-radiation X-ray) is Rs. 600. Single-sitting and specialized Root Canal Treatments start from Rs. 4,000 to Rs. 10,000 depending on tooth location (anterior, premolar, or molar). Transparent pricing is shared upfront before every procedure with no surprise fees."
+    answer: "Our new patient consultation (including digital RVG low-radiation X-ray) is ₹600. Single-sitting and specialized Root Canal Treatments start from ₹4,000 to ₹10,000 depending on tooth location (anterior, premolar, or molar). Transparent pricing is shared upfront before every procedure with no surprise fees."
   },
   {
     question: "Do you offer Clear Aligners and Smile Makeovers?",
-    answer: "Yes, we specialize in Digital Smile Design, customized porcelain/ceramic veneers, and Clear Aligners (ranging from Rs. 80,000 to Rs. 2,50,000). We also offer curated Bridal & Groom smile radiance packages for upcoming weddings and events."
+    answer: "Yes, we specialize in Digital Smile Design, customized porcelain/ceramic veneers, and Clear Aligners (ranging from ₹80,000 to ₹2,50,000). We also offer curated Bridal & Groom smile radiance packages for upcoming weddings and events."
   },
   {
     question: "How can I book an appointment at Aureva Dental?",
