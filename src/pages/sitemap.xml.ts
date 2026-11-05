@@ -30,6 +30,8 @@ const STATIC_ROUTES: StaticRoute[] = [
   { url: 'https://aurevadental.com/invisible-aligners-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Invisible Aligners in Hennur' },
   { url: 'https://aurevadental.com/teeth-whitening-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Teeth Whitening in Hennur' },
   { url: 'https://aurevadental.com/wisdom-tooth-removal-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Wisdom Tooth Removal in Hennur' },
+  { url: 'https://aurevadental.com/gum-treatment-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-11-05', title: 'Gum Treatment in Hennur' },
+  { url: 'https://aurevadental.com/dental-crowns-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-11-05', title: 'Dental Crowns & Caps in Hennur' },
   { url: 'https://aurevadental.com/dentist-in-horamavu', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Dentist in Horamavu Bangalore' },
   { url: 'https://aurevadental.com/dentist-near-manyata-tech-park', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Dentist Near Manyata Tech Park' },
 
