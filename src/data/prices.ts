@@ -113,7 +113,7 @@ export const CANONICAL_PRICES = {
   smile_makeover: formatStartingPrice(80000),
 
   // Bridal & Membership
-  bridal_checkup: formatExactPrice(1000),
+  bridal_couple_consultation: "₹1,000 (₹600 individual)",
   luxury_couture_smile: formatPriceRange(120000, 180000),
   membership_essential: `${formatExactPrice(7000)} per year`,
   membership_privilege: `${formatExactPrice(18000)} per year`,

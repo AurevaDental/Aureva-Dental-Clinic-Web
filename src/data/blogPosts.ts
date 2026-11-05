@@ -60,7 +60,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedTreatmentUrl: "/treatments/clear-aligners",
     relatedTreatmentName: "Clear Aligners & Invisible Braces",
     introParagraphs: [
-      "If you have been considering straightening your teeth or correcting minor crowding, traditional metal brackets and wires are no longer your only choice. Over the past few years, clear aligners (invisible braces) have become the premier orthodontic solution for working professionals, college students, and adults across Bangalore who desire a discreet, comfortable smile transformation.",
+      "If you have been considering straightening your teeth or correcting minor crowding, traditional metal brackets and wires are no longer your only choice. Over the past few years, clear aligners (invisible braces) have become the leading orthodontic solution for working professionals, college students, and adults across Bangalore who desire a discreet, comfortable smile transformation.",
       "However, the single most common question patients ask us during their first consultation at Aureva Dental in Hennur is: 'How much do clear aligners actually cost in Bangalore, and why is there such a wide price range?'",
       "In this comprehensive clinical guide, we break down transparent pricing, the anatomical and engineering factors that determine your investment, and how modern 3D digital orthodontics functions from your initial digital scan to your final retainer."
     ],
@@ -430,8 +430,10 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Simple Front Tooth / Loose Tooth Extraction", "₹1,500 – ₹2,000", "Single straight root, minimal bone resistance, comfortable local anesthesia"],
             ["Firm Posterior Molar Extraction", "₹3,000 – ₹4,000", "Multi-rooted firm tooth requiring gentle periotome elevation and luxation"],
             ["Surgical Extraction / Fractured Root Retrieval", "₹3,500 – ₹5,000", "Tooth broken at gum line; requires micro-flap elevation and bone troughing"],
+            ["Wisdom Tooth — Simple Erupted Extraction", "₹4,000 – ₹5,000", "Non-impacted third molar extraction under profound local anesthesia"],
             ["Impacted Wisdom Tooth (Soft Tissue Impaction)", "₹5,000 – ₹7,000", "Third molar covered by gum flap; requires incision, elevation, and dissolvable sutures"],
-            ["Impacted Wisdom Tooth (Bony / Angular Impaction)", "₹6,000 – ₹10,000", "Deeply embedded in mandibular bone; requires crown sectioning and oral surgeon expertise"]
+            ["Impacted Wisdom Tooth (Partial Bony Impaction)", "₹6,000 – ₹8,000", "Partially enclosed in bone; requires bone troughing and gentle tooth sectioning"],
+            ["Impacted Wisdom Tooth (Deep Bony / Fully Horizontal)", "₹7,000 – ₹10,000", "Deeply embedded in mandibular bone; requires crown sectioning and oral surgeon expertise"]
           ]
         },
         callout: {
@@ -1557,7 +1559,7 @@ export const BLOG_POSTS: BlogPost[] = [
       heading: "1. The Context of Dental Care: UK vs. India",
       paragraphs: [
         "In the UK, Band 3 NHS dental care (crowns, dentures, bridges) can involve waiting lists ranging from months to over two years in many NHS trusts. Private UK dental fees, meanwhile, have escalated alongside energy, real estate, and clinical staff wage inflation.",
-        "Bangalore, India has emerged as a premier healthcare destination. With leading institutions like The Oxford Dental College, Bangalore combines clinical expertise with state-of-the-art CAD/CAM milling laboratories, strict autoclave sterilization protocols, and low-radiation digital RVG diagnostics."
+        "Bangalore, India has emerged as a major healthcare destination. With leading institutions like The Oxford Dental College, Bangalore combines clinical expertise with state-of-the-art CAD/CAM milling laboratories, strict autoclave sterilization protocols, and low-radiation digital RVG diagnostics."
       ]
     },
     {
@@ -1650,7 +1652,8 @@ export const BLOG_POSTS: BlogPost[] = [
           ["Full Implant + Abutment + Crown", "$3,000 – $5,500", "₹45,000 – ₹80,000", "~$469 – $833", "~84% – 85% lower (Midpoint: ~84.7%)"],
           ["Molar Root Canal (Rotary Endodontics)", "$1,030 – $2,471", "₹6,000 – ₹10,000", "~$63 – $104", "~94% – 96% lower (Midpoint: ~95.2%)"],
           ["Monolithic Zirconia Crown (CAD/CAM)", "$915 – $2,500", "₹10,000 – ₹18,000", "~$104 – $188", "~89% – 93% lower (Midpoint: ~91.5%)"],
-          ["All-Ceramic / Porcelain Crown", "$915 – $2,000", "₹6,000 – ₹10,000", "~$63 – $104", "~93% – 95% lower (Midpoint: ~94.3%)"],
+          ["Dental Crown — PFM", "$915 – $2,000", "₹4,000 – ₹6,000", "~$42 – $63", "~95% – 97% lower (Midpoint: ~96.5%)"],
+          ["Dental Crown — Ceramic", "$915 – $2,000", "₹6,000 – ₹10,000", "~$63 – $104", "~93% – 95% lower (Midpoint: ~94.3%)"],
           ["Tooth Extraction (Simple to Surgical)", "$150 – $702", "₹1,500 – ₹10,000", "~$16 – $104", "~85% – 90% lower (Midpoint: ~86.0%)"],
           ["Comprehensive Clear Aligners", "$3,500 – $7,500", "₹80,000 – ₹2,50,000", "~$833 – $2,604", "~65% – 76% lower (Midpoint: ~68.8%)"],
           ["Porcelain Veneer (Per Tooth)", "$1,020 – $2,506", "₹8,000 – ₹24,000", "~$83 – $250", "~90% – 92% lower (Midpoint: ~90.5%)"]
