@@ -5,6 +5,7 @@
  */
 
 import { DENTAL_OFFER_CATALOG } from '../data/dentalServiceCatalog.ts';
+import { clinicConfig } from '../config/clinic.ts';
 
 export interface FaqItem {
   question: string;
@@ -56,6 +57,13 @@ export function generateDentalClinicSchema() {
     "url": "https://aurevadental.com/",
     "telephone": "+917349701002",
     "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": clinicConfig.ratingValue.toFixed(1),
+      "reviewCount": clinicConfig.googleReviewsCount.toString(),
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
@@ -377,6 +385,13 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
         }
       }
     ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": clinicConfig.ratingValue.toFixed(1),
+      "reviewCount": clinicConfig.googleReviewsCount.toString(),
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "sameAs": allProfiles
   };
 }
