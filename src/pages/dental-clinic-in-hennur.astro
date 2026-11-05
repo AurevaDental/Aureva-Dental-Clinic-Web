@@ -5,7 +5,7 @@ import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas
 export const prerender = false;
 
 const pageTitle = "Dental Clinic in Hennur Bangalore | Aureva Dental";
-const pageDescription = "Visit Aureva Dental, a modern dental clinic in Hennur, Bangalore. Advanced digital X-rays, gentle root canals, dental implants & family dentistry. Call +91 73497 01002.";
+const pageDescription = "Visit Aureva Dental clinic in Hennur, Bangalore. Digital X-rays, gentle root canals, dental implants & family dentistry. Call +91 73497 01002.";
 const canonicalUrl = "https://aurevadental.com/dental-clinic-in-hennur";
 const phoneCallUrl = "tel:+917349701002";
 const whatsappUrl = "https://wa.me/917349701002";
@@ -58,7 +58,7 @@ const seoProps = {
 
 <Layout {...seoProps}>
   <!-- Preload Critical Above-the-fold Hero Image -->
-  <link rel="preload" as="image" href="/assets/clinic-exterior-800.webp" type="image/webp" slot="head" />
+  <link rel="preload" as="image" href="/assets/hero-card-800.webp" imagesrcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w" imagesizes="(max-width: 640px) 400px, 800px" type="image/webp" fetchpriority="high" slot="head" />
 
   <!-- Breadcrumb Navigation -->
   <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
@@ -146,16 +146,19 @@ const seoProps = {
       <div class="lg:col-span-5 relative">
         <div class="relative rounded-3xl overflow-hidden border border-japandi-clay/60 shadow-xl bg-japandi-sand/30">
           <img 
-            src="/assets/clinic-exterior-800.webp" 
-            alt="Aureva Dental Clinic in Hennur" 
+            src="/assets/hero-card-800.webp" 
+            srcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w, /assets/hero-card.webp 1376w" 
+            sizes="(max-width: 640px) 400px, 800px" 
+            alt="Aureva Dental - Calm Mind. Healthy Smile." 
             width="800" 
             height="447" 
-            fetchpriority="high"
-            class="w-full h-auto object-cover"
+            fetchpriority="high" 
+            decoding="async" 
+            class="w-full h-auto object-cover" 
           />
           <div class="p-5 space-y-2">
-            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">Studio Infrastructure</span>
-            <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Aureva Dental, Hennur</h3>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">5.0 (40+ Google Reviews)</span>
+            <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Aureva Dental Clinic &amp; Studio, Hennur</h3>
             <p class="text-xs text-japandi-earth font-light leading-relaxed">
               Modern dental care in SLV Nilaya on Horamavu Agara Road with low-radiation digital RVG diagnostics and on-site parking.
             </p>
@@ -402,39 +405,106 @@ const seoProps = {
         </div>
       </div>
 
-      <!-- Locality Catchment, Transit & Directions -->
+      <!-- Step 6 H2 #1: Dentist Near Nayara Petrol Bunk, Hennur Bande -->
       <div class="space-y-4">
-        <h3 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
-          Strategic Hennur Location: Effortless Access &amp; Parking
-        </h3>
+        <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
+          Dentist Near Nayara Petrol Bunk, Hennur Bande
+        </h2>
         <p class="text-sm text-japandi-earth font-light leading-relaxed">
-          Located on the 2nd Floor of SLV Nilaya on Horamavu Agara Road (right beside Nayara Petrol Bunk), our dental clinic offers direct transit convenience:
+          Reaching Aureva Dental is straightforward from any part of Hennur. Our studio is situated on the 2nd floor of SLV Nilaya, Horamavu Agara Road, directly adjacent to the Nayara Petrol Bunk at Hennur Bande. The premises feature modern lift access directly to our clinic entrance, ensuring smooth visits for senior patients and families with strollers. Dedicated, free parking downstairs accommodates 2 cars and 5 to 8 two-wheelers, eliminating any parking hassle.
         </p>
-        <ul class="list-disc list-inside text-xs sm:text-sm text-japandi-earth space-y-1.5 font-light">
-          <li><strong>Hennur Bande &amp; Geddalahalli:</strong> Under 3 minutes by car or two-wheeler.</li>
-          <li><strong>Horamavu &amp; Babusapalya:</strong> Direct access without battling Outer Ring Road ring junctions.</li>
-          <li><strong>Kalyan Nagar &amp; HRBR Layout:</strong> A quick 10-minute commute along Hennur Road.</li>
-          <li><strong>Kothanur, Byrathi, Thanisandra &amp; Bagalur Road:</strong> Direct, smooth connectivity for North Bengaluru tech corridors.</li>
-        </ul>
-        <p class="text-sm text-japandi-earth font-light leading-relaxed pt-2">
-          Free parking downstairs for 2 cars and 5 to 8 bikes is maintained on the property, providing convenient parking even during peak evening hours.
+        <div>
+          <a 
+            href="https://maps.app.goo.gl/dhU4UySs9WFkHAzYA" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-2 text-xs font-semibold text-japandi-moss hover:underline"
+          >
+            <span>Get directions on Google Maps &rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Step 6 H2 #2: Open Sunday Dentist in Hennur -->
+      <div class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
+          Open Sunday Dentist in Hennur
+        </h2>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed">
+          Dental needs don't pause for the weekend. Aureva Dental is open on Sundays from 9:30 AM to 9:00 PM, and Monday through Saturday with evening consultations available until 9:00 PM. Whether you need planned treatment around a demanding workday or seek relief for sudden toothache, walk-ins are welcome till 9 PM.
         </p>
       </div>
 
-      <!-- Local Guide Internal Links Cluster -->
-      <div class="p-6 rounded-3xl bg-japandi-sand/50 border border-japandi-clay/50 space-y-4">
-        <h4 class="font-serif text-base text-japandi-charcoal font-medium">
-          Browse Our Local Hennur Dental Specialty Portals:
-        </h4>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-japandi-moss font-medium">
-          <a href="/dentist-in-hennur" class="hover:underline">&bull; Dentist in Hennur - Doctor Profiles &amp; Care</a>
-          <a href="/root-canal-treatment-hennur" class="hover:underline">&bull; Root Canal Treatment in Hennur</a>
-          <a href="/dental-implants-hennur" class="hover:underline">&bull; Dental Implants in Hennur</a>
-          <a href="/invisible-aligners-hennur" class="hover:underline">&bull; Invisible Clear Aligners in Hennur</a>
-          <a href="/teeth-whitening-hennur" class="hover:underline">&bull; Professional Teeth Whitening in Hennur</a>
-          <a href="/wisdom-tooth-removal-hennur" class="hover:underline">&bull; Wisdom Tooth Extraction in Hennur</a>
-          <a href="/contact" class="hover:underline">&bull; Contact &amp; Schedule Appointments</a>
-          <a href="/blog" class="hover:underline">&bull; Oral Health &amp; Dental Journal</a>
+      <!-- Step 6 H2 #3: Dentist Near Kalyan Nagar, HRBR Layout, Horamavu, Kothanur, Banaswadi and Manyata Tech Park -->
+      <div class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
+          Dentist Near Kalyan Nagar, HRBR Layout, Horamavu, Kothanur, Banaswadi and Manyata Tech Park
+        </h2>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed">
+          If you are searching for a trusted dental clinic near me or a gentle dentist near you in North-East Bengaluru, our Hennur location offers quick commute times. We regularly welcome patients from Kalyan Nagar and HRBR Layout (10 minutes via Hennur Road), Horamavu and Babusapalya (5 to 8 minutes avoiding Ring Road congestion), Kothanur, Byrathi, and Banaswadi, as well as professionals working across Manyata Tech Park seeking evening appointments after office hours.
+        </p>
+      </div>
+
+      <!-- Step 6 H2 #4: Treatments and Prices -->
+      <div id="pricing" class="space-y-6 pt-6 border-t border-japandi-clay/30">
+        <div class="space-y-2">
+          <span class="text-xs font-semibold uppercase tracking-widest text-japandi-moss">Transparent Care</span>
+          <h2 class="text-xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+            Treatments and Prices
+          </h2>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+            Every procedure at Aureva Dental is preceded by a thorough clinical assessment with transparent published fees:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+          <div class="p-5 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base text-japandi-charcoal font-medium">
+              <a href="/root-canal-treatment-hennur" class="hover:text-japandi-moss hover:underline">Root Canal Treatment &rarr;</a>
+            </h3>
+            <p class="text-japandi-earth font-light">Single-sitting rotary endodontics with digital RVG sensor mapping.</p>
+            <p class="text-japandi-moss font-semibold pt-1">₹4,500 – ₹8,500 <span class="text-[11px] font-normal text-japandi-earth">(Re-RCT: ₹8,000 – ₹10,000)</span></p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base text-japandi-charcoal font-medium">
+              <a href="/dental-crowns-hennur" class="hover:text-japandi-moss hover:underline">Dental Crowns &amp; Caps &rarr;</a>
+            </h3>
+            <p class="text-japandi-earth font-light">CAD/CAM Zirconia, E-max &amp; PFM precision dental crowns.</p>
+            <p class="text-japandi-moss font-semibold pt-1">₹4,000 – ₹18,000 <span class="text-[11px] font-normal text-japandi-earth">(Zirconia: ₹10,000 – ₹18,000)</span></p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base text-japandi-charcoal font-medium">
+              <a href="/gum-treatment-hennur" class="hover:text-japandi-moss hover:underline">Gum Treatment &rarr;</a>
+            </h3>
+            <p class="text-japandi-earth font-light">Periodontal scaling, deep root planing &amp; laser decontamination.</p>
+            <p class="text-japandi-moss font-semibold pt-1">Routine: ₹2,000 – ₹5,000 <span class="text-[11px] font-normal text-japandi-earth">(Deep: ₹8,000 – ₹15,000)</span></p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base text-japandi-charcoal font-medium">
+              <a href="/teeth-whitening-hennur" class="hover:text-japandi-moss hover:underline">Teeth Whitening &rarr;</a>
+            </h3>
+            <p class="text-japandi-earth font-light">LED/Laser in-office teeth whitening and bridal brightening.</p>
+            <p class="text-japandi-moss font-semibold pt-1">₹8,000 – ₹15,000 <span class="text-[11px] font-normal text-japandi-earth">(Bridal: ₹12,000 – ₹18,000)</span></p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base text-japandi-charcoal font-medium">
+              <a href="/wisdom-tooth-removal-hennur" class="hover:text-japandi-moss hover:underline">Wisdom Tooth Removal &rarr;</a>
+            </h3>
+            <p class="text-japandi-earth font-light">Careful extraction of erupted, soft-tissue &amp; bony impacted molars.</p>
+            <p class="text-japandi-moss font-semibold pt-1">₹4,000 – ₹10,000 <span class="text-[11px] font-normal text-japandi-earth">(by impaction depth)</span></p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base text-japandi-charcoal font-medium">
+              <a href="/treatments/pediatric-dentistry" class="hover:text-japandi-moss hover:underline">Kids Dentistry &rarr;</a>
+            </h3>
+            <p class="text-japandi-earth font-light">Gentle pediatric cavity care, fluoride treatments &amp; pulpectomy.</p>
+            <p class="text-japandi-moss font-semibold pt-1">Pulpectomy: ₹3,500 – ₹6,000 <span class="text-[11px] font-normal text-japandi-earth">(Consult: ₹600)</span></p>
+          </div>
         </div>
       </div>
 
