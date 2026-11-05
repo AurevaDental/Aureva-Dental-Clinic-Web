@@ -1445,7 +1445,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       "question": "Is smoking permitted after dental implant placement?",
-      "answer": "Smoking significantly compromises peripheral micro-circulation and is the leading cause of early implant failure. We strongly advise abstaining from all tobacco and vaping products for at least 2 weeks before and 4 weeks after implant placement."
+      "answer": "Smoking significantly compromises peripheral micro-circulation and is a primary cause of early implant failure. We strongly advise abstaining from all tobacco and vaping products for at least 2 weeks before and 4 weeks after implant placement."
     }
   ],
   "conclusion": "With proper post-operative care and regular dental checkups, your dental implant can last a lifetime. Reach out to Aureva Dental for any questions during your recovery.",
