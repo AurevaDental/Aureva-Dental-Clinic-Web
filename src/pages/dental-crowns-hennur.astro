@@ -1,0 +1,480 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../utils/seoSchemas';
+
+export const prerender = false;
+
+const pageTitle = "Dental Crowns & Caps in Hennur Bangalore | Aureva Dental";
+const pageDescription = "Custom dental crowns & caps in Hennur, Bangalore at Aureva Dental. High-strength zirconia, E-max & ceramic crowns with digital scans. Call +91 73497 01002.";
+const canonicalUrl = "https://aurevadental.com/dental-crowns-hennur";
+const phoneCallUrl = "tel:+917349701002";
+const whatsappUrl = "https://wa.me/917349701002?text=Hello%20Aureva%20Dental%2C%20I%20would%20like%20to%20consult%20for%20Dental%20Crowns%20or%20Caps%20in%20Hennur.";
+
+const breadcrumbs = [
+  { name: "Home", url: "https://aurevadental.com/" },
+  { name: "Treatments", url: "https://aurevadental.com/treatments/dental-crowns" },
+  { name: "Dental Crowns Hennur", url: canonicalUrl }
+];
+
+const faqs = [
+  {
+    question: "What is the primary difference between a dental crown and a cap?",
+    answer: "There is no clinical difference between a dental crown and a dental cap. 'Cap' is simply the familiar layperson term, while 'crown' is the professional dental term. Both refer to a custom-crafted restorative covering that completely encapsulates a damaged, root-treated, or worn tooth to restore its original shape, strength, and appearance."
+  },
+  {
+    question: "Why is a crown strongly advised following a root canal treatment?",
+    answer: "A root canal treatment removes the inflamed or infected pulp tissue from inside the tooth, which stops the blood supply to the tooth structure. Over time, the remaining tooth enamel and dentin become dehydrated and brittle. Chewing normal foods without a protective crown places extreme stress on the hollowed tooth walls, leading to vertical root fractures that often cannot be saved. A custom zirconia or ceramic crown encases the tooth and absorbs chewing forces safely."
+  },
+  {
+    question: "How long does a monolithic zirconia or E-max crown typically last?",
+    answer: "With consistent twice-daily brushing, daily flossing around the crown margins, and routine biannual checkups, monolithic zirconia and E-max lithium disilicate crowns routinely last 10 to 15 years or longer. Zirconia is exceptionally chip-resistant and withstands heavy posterior grinding pressures."
+  },
+  {
+    question: "How much do dental crowns and caps cost in Hennur?",
+    answer: "At Aureva Dental, a new patient clinical consultation including digital RVG X-ray assessment is ₹600. PFM (porcelain-fused-to-metal) crowns range from ₹4,000 to ₹6,000, all-ceramic crowns range from ₹6,000 to ₹10,000, and premium monolithic CAD/CAM Zirconia or E-max lithium disilicate crowns range from ₹10,000 to ₹18,000. Transparent written pricing is provided before any tooth preparation begins."
+  },
+  {
+    question: "Can a chipped or broken front tooth be repaired without a full crown?",
+    answer: "Yes. For minor to moderate superficial chips where the tooth pulp is unharmed, direct composite bonding (₹1,500 – ₹4,000) can restore natural contours in a single visit. However, if the fracture extends across more than half of the tooth or involves the biting edge under heavy occlusal load, a full coverage ceramic or E-max crown is recommended for long-term structural durability."
+  },
+  {
+    question: "What is the difference between a single dental crown and a dental bridge?",
+    answer: "A single crown restores an existing natural tooth that is damaged or weakened. A dental bridge replaces one or more completely missing teeth by anchoring an artificial prosthetic tooth (pontic) to the adjacent crowned natural teeth (abutments). Pricing for a dental bridge is calculated per unit, exactly matching the crown fee of the selected material."
+  }
+];
+
+const breadcrumbSchema = JSON.stringify(generateBreadcrumbSchema(breadcrumbs));
+const faqSchema = JSON.stringify(generateFaqSchema(faqs));
+const serviceSchema = JSON.stringify(generateTreatmentServiceSchema({
+  name: "Dental Crowns & Caps in Hennur",
+  description: pageDescription,
+  url: canonicalUrl,
+  medicalSpecialty: "Prosthodontics"
+}));
+
+const seoProps = {
+  title: pageTitle,
+  description: pageDescription,
+  canonical: canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: canonicalUrl,
+  schemaMarkup: [breadcrumbSchema, faqSchema, serviceSchema]
+};
+---
+
+<Layout {...seoProps}>
+  <!-- Preload Critical Above-the-fold Hero Image -->
+  <link rel="preload" as="image" href="/assets/hero-card-800.webp" imagesrcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w" imagesizes="(max-width: 640px) 400px, 800px" type="image/webp" fetchpriority="high" slot="head" />
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
+        <span>/</span>
+        <a href="/treatments/dental-crowns" class="hover:text-japandi-moss transition-colors">Treatments</a>
+        <span>/</span>
+        <span class="text-japandi-charcoal font-medium">Dental Crowns &amp; Caps Hennur</span>
+      </div>
+      <!-- Near the top Prices quick link -->
+      <a href="#pricing" class="inline-flex items-center gap-1 text-xs font-semibold text-japandi-moss hover:underline">
+        Prices &darr;
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="py-12 md:py-20 px-6 lg:px-24 bg-transparent relative overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div class="lg:col-span-7 flex flex-col items-start space-y-4 md:space-y-6 animate-slow-fade">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-japandi-clay/60 bg-japandi-sand/70 text-[10px] font-semibold text-japandi-moss uppercase tracking-widest">
+            Restorative Care &bull; Hennur Bande, Bangalore
+          </span>
+          <a href="#pricing" class="inline-flex items-center gap-1 px-3 py-1 rounded-full border border-japandi-moss/40 bg-japandi-moss/10 hover:bg-japandi-moss/20 text-[10px] font-semibold text-japandi-moss uppercase tracking-wider transition-colors">
+            View Crown Fees &darr;
+          </a>
+        </div>
+        
+        <!-- Primary Search H1 -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-japandi-charcoal leading-tight font-medium tracking-tight">
+          Dental Crowns &amp; Caps in Hennur
+        </h1>
+
+        <!-- One Line on Hours (Above fold on mobile) -->
+        <p class="text-xs sm:text-sm font-medium text-japandi-moss flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 shrink-0">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          <span>Open Tue–Sun 9:30 AM–9 PM · Mon 4–9 PM · Sundays open</span>
+        </p>
+
+        <!-- One Line on Address (Above fold on mobile) -->
+        <p class="text-xs sm:text-sm text-japandi-earth font-light flex items-start gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-japandi-moss shrink-0 mt-0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+          </svg>
+          <span>2nd Floor, SLV Nilaya, Horamavu Agara Road, near Nayara Petrol Bunk, Hennur Bande</span>
+        </p>
+
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed max-w-2xl">
+          Restore broken, worn, or root-treated teeth with precision CAD/CAM zirconia, E-max, and ceramic dental crowns. At Aureva Dental on Horamavu Agara Road, our clinicians craft customized dental caps that deliver natural aesthetics, comfortable occlusion, and long-lasting durability.
+        </p>
+
+        <!-- Action Call and WhatsApp Buttons (Plain <a> tags for GTM tracking) -->
+        <div class="pt-2 flex flex-row items-center gap-3 w-full sm:w-auto">
+          <a 
+            href={phoneCallUrl}
+            class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 shadow-md shadow-japandi-moss/15"
+            aria-label="Call Aureva Dental Reception Desk"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+            </svg>
+            <span>Call +91 73497 01002</span>
+          </a>
+
+          <a 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 shadow-md shadow-emerald-600/20"
+            aria-label="Chat with Aureva Dental on WhatsApp"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="pt-2 flex flex-wrap items-center gap-4 text-xs text-japandi-earth border-t border-japandi-clay/30 w-full">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-japandi-moss"></span>
+            <span>CAD/CAM Monolithic Zirconia</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-japandi-moss"></span>
+            <span>E-Max Lithium Disilicate</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-japandi-moss"></span>
+            <span>Digital RVG Fit Verification</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Clinic Photo (Hero Image) -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl overflow-hidden border border-japandi-clay/60 shadow-xl bg-japandi-sand/30">
+          <img 
+            src="/assets/hero-card-800.webp" 
+            srcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w, /assets/hero-card.webp 1376w" 
+            sizes="(max-width: 640px) 400px, 800px" 
+            alt="Aureva Dental - Calm Mind. Healthy Smile." 
+            width="800" 
+            height="447" 
+            fetchpriority="high" 
+            decoding="async" 
+            class="w-full h-auto object-cover" 
+          />
+          <div class="p-5 space-y-2">
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">5.0 (40+ Google Reviews)</span>
+            <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Aureva Dental Clinic &amp; Studio, Hennur</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              Custom crown restorations and digital RVG diagnostics at SLV Nilaya, Horamavu Agara Road.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- In-Depth Clinical Guide: Dental Crowns & Caps in Hennur -->
+  <section class="py-16 px-6 lg:px-24 bg-japandi-sand/25 border-y border-japandi-clay/30">
+    <div class="max-w-4xl mx-auto space-y-12">
+      
+      <!-- H2 #1: Crown vs Cap -->
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Crown vs Cap: Understanding the Terms
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Patients frequently ask whether a dental cap is different from a dental crown. Clinically, they are exactly the same treatment. "Dental cap" is the traditional, colloquial term popularized because the restoration literally caps or covers the visible portion of a tooth. In modern restorative dentistry, clinicians use the term "dental crown" to describe a precision-engineered prosthetic restoration that covers 360 degrees of the prepared tooth down to the gum margin.
+        </p>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Unlike simple surface fillings that sit inside an existing tooth cavity, a crown acts as a continuous structural helmet. It shields the underlying tooth structure from horizontal shear forces, biting pressure, and bacterial micro-leakage. Crowns are indicated when more than half of the natural tooth enamel has been lost to deep decay, repeated fillings, trauma, or endodontic intervention.
+        </p>
+      </div>
+
+      <!-- H2 #2: Crown After Root Canal -->
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Crown After Root Canal: Protecting Weakened Teeth
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Undergoing a root canal treatment removes the diseased nerve, blood supply, and lymphatics from within the pulp chamber. While this resolves infection and relieves pain, it leaves the remaining natural tooth dehydrated, brittle, and hollowed out. Chewing forces on molars and premolars regularly exceed 500 Newtons, which can easily cause an unprotected, root-treated tooth to split vertically down the middle.
+        </p>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          When a tooth fractures vertically below the bone level, it cannot be saved and requires extraction. Placing a high-strength CAD/CAM crown after root canal treatment distributes occlusal forces evenly across the entire root surface, preventing catastrophic breakage and ensuring your natural tooth foundation remains functional for decades. At Aureva Dental, we reinforce the tooth core with a bonded composite buildup before taking precision impressions for crown fabrication.
+        </p>
+      </div>
+
+      <!-- H2 #3: Broken or Chipped Tooth Repair -->
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Broken or Chipped Tooth Repair: Bonding vs Full Crowns
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Dental trauma, accidental biting on olive pits, or sports impacts often lead to chipped or broken teeth. The appropriate restorative strategy depends directly on the extent of tooth structure involved:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm text-japandi-earth font-light pt-2">
+          <div class="p-6 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-3">
+            <h4 class="font-serif text-base text-japandi-charcoal font-medium">Composite Tooth Bonding (₹1,500 – ₹4,000)</h4>
+            <p class="leading-relaxed">
+              Ideal for minor chips, enamel fractures, and slight corner breaks on incisors where more than 70% of natural tooth structure remains intact. Nano-hybrid composite resin is color-matched, sculpted directly chairside, and cured with high-intensity LED light in a single 45-minute visit.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-3">
+            <h4 class="font-serif text-base text-japandi-charcoal font-medium">Full Coverage Crown (₹4,000 – ₹18,000)</h4>
+            <p class="leading-relaxed">
+              Recommended when a fracture compromises a tooth cusp, extends near the gumline, or affects structural integrity under chewing loads. A customized crown encases the entire tooth, providing permanent protection against further cracking or nerve exposure.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- H2 #4: Dental Crown Materials -->
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Dental Crown Materials: Zirconia, E-Max &amp; PFM
+        </h2>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed">
+          Selecting the ideal crown material depends on tooth location, biting load, aesthetic expectations, and opposing enamel contact. Aureva Dental offers biocompatible, clinically proven crown systems:
+        </p>
+
+        <div class="space-y-4 text-xs sm:text-sm text-japandi-earth font-light">
+          <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
+            <div class="flex items-center justify-between">
+              <h4 class="font-serif text-base text-japandi-charcoal font-medium">Monolithic CAD/CAM Zirconia Crowns</h4>
+              <span class="text-xs font-semibold text-japandi-moss">₹10,000 – ₹18,000</span>
+            </div>
+            <p class="leading-relaxed">
+              Milled from solid blocks of medical-grade zirconium dioxide, monolithic zirconia offers unmatched fracture resistance (over 1,100 MPa). It is completely metal-free, gentle on opposing enamel when polished, and immune to chipping. Highly recommended for posterior molars where heavy chewing forces occur.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
+            <div class="flex items-center justify-between">
+              <h4 class="font-serif text-base text-japandi-charcoal font-medium">IPS E-Max Lithium Disilicate Crowns</h4>
+              <span class="text-xs font-semibold text-japandi-moss">₹10,000 – ₹18,000</span>
+            </div>
+            <p class="leading-relaxed">
+              E-max is renowned for lifelike optical translucency, mimicking natural tooth enamel light refraction. Ideal for front teeth (incisors and canines) and premolars visible in your smile line. Biocompatible and bonded adhesive to tooth structure.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
+            <div class="flex items-center justify-between">
+              <h4 class="font-serif text-base text-japandi-charcoal font-medium">All-Ceramic Aesthetic Crowns</h4>
+              <span class="text-xs font-semibold text-japandi-moss">₹6,000 – ₹10,000</span>
+            </div>
+            <p class="leading-relaxed">
+              Metal-free ceramic crowns that provide natural tooth coloration without the dark metal margin at the gumline seen with older restorations. Excellent tissue compatibility for patients with mild metal sensitivities.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
+            <div class="flex items-center justify-between">
+              <h4 class="font-serif text-base text-japandi-charcoal font-medium">Porcelain-Fused-to-Metal (PFM) Crowns</h4>
+              <span class="text-xs font-semibold text-japandi-moss">₹4,000 – ₹6,000</span>
+            </div>
+            <p class="leading-relaxed">
+              A time-tested restorative solution featuring a durable cast metal framework veneered with tooth-colored porcelain. PFM provides reliable strength for posterior teeth at an accessible fee structure.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- H2 #5: Dental Crown Cost in Hennur Table Section -->
+      <div id="pricing" class="space-y-6 pt-6 border-t border-japandi-clay/30">
+        <div class="space-y-2">
+          <span class="text-xs font-semibold uppercase tracking-widest text-japandi-moss">Transparent Pricing</span>
+          <h2 class="text-xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+            Dental Crown Cost in Hennur
+          </h2>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+            All restorative fees are transparently published with complete clarity before beginning any procedure:
+          </p>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-japandi-clay/40 bg-japandi-sand/30">
+          <table class="w-full text-left text-xs sm:text-sm text-japandi-earth font-light">
+            <thead class="bg-japandi-sand/80 text-japandi-charcoal font-medium border-b border-japandi-clay/40">
+              <tr>
+                <th class="p-4">Restorative Treatment</th>
+                <th class="p-4">Material &amp; Inclusions</th>
+                <th class="p-4">Published Fee (INR)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-japandi-clay/20">
+              <tr>
+                <td class="p-4 font-medium text-japandi-charcoal">New Patient Consultation</td>
+                <td class="p-4">Full clinical dental exam, shade evaluation &amp; digital RVG radiograph</td>
+                <td class="p-4 text-japandi-moss font-semibold">₹600</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-japandi-charcoal">Broken / Chipped Tooth Composite Repair</td>
+                <td class="p-4">Direct nano-hybrid resin layering, bonding &amp; anatomical polish</td>
+                <td class="p-4 text-japandi-moss font-semibold">₹1,500 – ₹4,000</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — PFM</td>
+                <td class="p-4">Porcelain-fused-to-metal crown with custom shade matching</td>
+                <td class="p-4 text-japandi-moss font-semibold">₹4,000 – ₹6,000</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — Ceramic</td>
+                <td class="p-4">Metal-free ceramic crown with natural tooth shade gradation</td>
+                <td class="p-4 text-japandi-moss font-semibold">₹6,000 – ₹10,000</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — Monolithic Zirconia</td>
+                <td class="p-4">High-strength CAD/CAM monolithic zirconia crown (1,100+ MPa)</td>
+                <td class="p-4 text-japandi-moss font-semibold">₹10,000 – ₹18,000</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — E-Max</td>
+                <td class="p-4">Lithium disilicate all-ceramic crown with lifelike enamel translucency</td>
+                <td class="p-4 text-japandi-moss font-semibold">₹10,000 – ₹18,000</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-japandi-charcoal">Dental Bridge (Per Unit)</td>
+                <td class="p-4">Multi-unit fixed bridge (calculated per crown unit of chosen material)</td>
+                <td class="p-4 text-japandi-moss font-semibold">PFM: ₹4k–₹6k | Ceramic: ₹6k–₹10k | Zirconia / E-max: ₹10k–₹18k</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- H2 #6: Dental Bridges for Missing Teeth -->
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Dental Bridges for Missing Teeth: Per-Unit Precision
+        </h2>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed">
+          When one or two consecutive teeth are missing, a fixed dental bridge offers a stable, non-removable restorative option without needing surgical implant placement. A bridge consists of two anchoring crowns placed over the natural teeth on either side of the space (abutments), connected to an artificial suspended prosthetic tooth in the middle (pontic).
+        </p>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed">
+          At Aureva Dental, pricing for dental bridges is completely straightforward: it is calculated per unit, exactly matching the individual crown price of your chosen material. For instance, a 3-unit monolithic zirconia bridge replacing one missing molar consists of 3 crown units (₹10,000 – ₹18,000 per unit). Our clinicians verify perfect bite balance and seamless margin adaptation using digital RVG imaging so your bridge feels natural from day one.
+        </p>
+      </div>
+
+      <!-- Transit & Accessibility -->
+      <div class="space-y-4">
+        <h3 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
+          Visiting Aureva Dental for Crowns &amp; Caps in Hennur
+        </h3>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed">
+          Located on the 2nd Floor of SLV Nilaya on Horamavu Agara Road (beside Nayara Petrol Bunk), Aureva Dental is conveniently accessible for residents across North-East Bangalore:
+        </p>
+        <ul class="list-disc list-inside text-xs sm:text-sm text-japandi-earth space-y-1.5 font-light">
+          <li><strong>Hennur Bande &amp; Horamavu Agara Road:</strong> Less than 2 minutes away.</li>
+          <li><strong>Hennur Main Road &amp; Geddalahalli:</strong> 5 minutes via Hennur Bande Road.</li>
+          <li><strong>Horamavu, Babusapalya &amp; Kalkere:</strong> 6 to 8 minutes.</li>
+          <li><strong>Kalyan Nagar, HRBR Layout &amp; Kammanahalli:</strong> 10 minutes via Hennur Cross.</li>
+          <li><strong>Manyata Tech Park &amp; Thanisandra:</strong> 12 to 15 minutes.</li>
+        </ul>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed pt-2">
+          Our studio features dedicated lift access directly to the 2nd floor, free downstairs parking for 2 cars and 5 to 8 two-wheelers, and open slots on Sundays for convenient appointments.
+        </p>
+      </div>
+
+      <!-- Internal Links to Related Treatment & Local Pages -->
+      <div class="p-6 rounded-3xl bg-japandi-sand/50 border border-japandi-clay/50 space-y-4">
+        <h4 class="font-serif text-base text-japandi-charcoal font-medium">
+          Explore Related Specialty Treatments &amp; Local Care Guides:
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-japandi-moss font-medium">
+          <a href="/root-canal-treatment-hennur" class="hover:underline">&bull; Root Canal Treatment in Hennur</a>
+          <a href="/treatments/dental-crowns" class="hover:underline">&bull; Dental Crowns Bangalore Overview</a>
+          <a href="/treatments/dental-bridges" class="hover:underline">&bull; Fixed Dental Bridges Guide</a>
+          <a href="/dental-implants-hennur" class="hover:underline">&bull; Dental Implants in Hennur</a>
+          <a href="/gum-treatment-hennur" class="hover:underline">&bull; Gum Treatment in Hennur</a>
+          <a href="/teeth-whitening-hennur" class="hover:underline">&bull; Teeth Whitening in Hennur</a>
+          <a href="/dentist-in-hennur" class="hover:underline">&bull; Dentist in Hennur Consultation</a>
+          <a href="/dental-clinic-in-hennur" class="hover:underline">&bull; Dental Clinic in Hennur Facility Guide</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section (H2 #7) -->
+  <section class="py-20 px-6 lg:px-24 bg-transparent">
+    <div class="max-w-4xl mx-auto space-y-10">
+      <div class="text-center space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-widest text-japandi-moss">Patient Clarity</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-japandi-charcoal font-medium">
+          Frequently Asked Questions About Dental Crowns in Hennur
+        </h2>
+        <p class="text-xs sm:text-sm text-japandi-earth font-light max-w-xl mx-auto">
+          Clear, medically accurate answers regarding dental crown procedures, materials, longevity, and aftercare.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        {faqs.map((faq) => (
+          <div class="bg-japandi-sand/40 border border-japandi-clay/40 rounded-2xl p-6 space-y-2">
+            <h3 class="font-serif text-base sm:text-lg text-japandi-charcoal font-medium">
+              {faq.question}
+            </h3>
+            <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+              {faq.answer}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="pb-24 px-6 lg:px-24">
+    <div class="max-w-4xl mx-auto rounded-3xl bg-japandi-moss text-japandi-cream p-8 sm:p-12 text-center space-y-6 shadow-xl">
+      <h2 class="text-2xl sm:text-4xl font-serif font-medium">
+        Strong Teeth. A Confident Smile.
+      </h2>
+      <p class="text-xs sm:text-sm text-japandi-cream/90 font-light max-w-xl mx-auto leading-relaxed">
+        Schedule your dental crown consultation at Aureva Dental in Hennur. Careful tooth preparation, precision digital impressions, and natural aesthetic results.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <button
+          type="button"
+          data-open-booking
+          data-treatment="Dental Crown Consultation"
+          class="px-8 py-3.5 rounded-full bg-japandi-cream text-japandi-charcoal hover:bg-japandi-sand text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow"
+        >
+          Book Crown Consultation
+        </button>
+
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-japandi-cream/40 hover:border-japandi-cream text-japandi-cream text-xs font-semibold uppercase tracking-wider transition-all duration-300"
+        >
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+
+      <p class="text-[11px] text-japandi-cream/70 font-light pt-2">
+        Aureva Dental &bull; 2nd Floor, SLV Nilaya, Horamavu Agara Road, Hennur Bande, Bangalore 560043 &bull; Phone: +91 73497 01002
+      </p>
+    </div>
+  </section>
+</Layout>
