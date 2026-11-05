@@ -225,8 +225,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<!-- Soothing Background UI Animation -->
 		<BackgroundAnimation />
 
-		<!-- Custom Interactive Cursor Component -->
-		<CustomCursor client:only="react" />
+		<!-- Custom Interactive Cursor Component (Only on hover/pointer-fine desktop devices, never phones) -->
+		<CustomCursor client:media="(hover: hover) and (pointer: fine)" />
 		
 		<!-- Sticky Header Component -->
 		{!hideHeader && <Header />}

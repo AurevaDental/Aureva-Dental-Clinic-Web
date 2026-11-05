@@ -65,7 +65,7 @@ const seoProps = {
 
 <Layout {...seoProps}>
   <!-- Preload Critical Above-the-fold Hero Image -->
-  <link rel="preload" as="image" href="/assets/clinic-exterior-800.webp" type="image/webp" slot="head" />
+  <link rel="preload" as="image" href="/assets/hero-card-800.webp" imagesrcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w" imagesizes="(max-width: 640px) 400px, 800px" type="image/webp" fetchpriority="high" slot="head" />
 
   <!-- Breadcrumb Navigation -->
   <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
@@ -171,8 +171,10 @@ const seoProps = {
       <div class="lg:col-span-5 relative">
         <div class="relative rounded-3xl overflow-hidden border border-japandi-clay/60 shadow-xl bg-japandi-sand/30">
           <img 
-            src="/assets/clinic-exterior-800.webp" 
-            alt="Aureva Dental Clinic in Hennur" 
+            src="/assets/hero-card-800.webp" 
+            srcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w, /assets/hero-card.webp 1376w"
+            sizes="(max-width: 640px) 400px, 800px" 
+            alt="Aureva Dental - Calm Mind. Healthy Smile." 
             width="800" 
             height="447" 
             decoding="async"
@@ -180,8 +182,8 @@ const seoProps = {
             class="w-full h-auto object-cover"
           />
           <div class="p-5 space-y-2">
-            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">Endodontic Care</span>
-            <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Save Your Natural Tooth</h3>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">5.0 (40+ Google Reviews)</span>
+            <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Aureva Dental Clinic &amp; Studio, Hennur</h3>
             <p class="text-xs text-japandi-earth font-light leading-relaxed">
               Rotary endodontics with digital RVG sensor imaging at SLV Nilaya, Horamavu Agara Road.
             </p>
@@ -248,7 +250,7 @@ const seoProps = {
           <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
             <h4 class="font-serif text-base text-japandi-charcoal font-medium">Stage 5: Core Rebuild &amp; High-Strength Zirconia Crown</h4>
             <p class="leading-relaxed">
-              A high-strength composite core buildup is bonded inside the tooth to restore structural integrity. We then custom-design a precision CAD/CAM Zirconia or ceramic crown to encase the tooth, ensuring it withstands normal biting pressure without cracking.
+              A high-strength composite core buildup is bonded inside the tooth to restore structural integrity. We then custom-design a precision CAD/CAM Zirconia or ceramic crown to encase the tooth, ensuring it withstands normal biting pressure without cracking. Learn more about choosing a <a href="/dental-crowns-hennur" class="text-japandi-moss font-medium underline">crown after root canal</a> for durable tooth protection.
             </p>
           </div>
         </div>

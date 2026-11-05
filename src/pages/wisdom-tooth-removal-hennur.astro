@@ -66,7 +66,7 @@ const seoProps = {
 
 <Layout {...seoProps}>
   <!-- Preload Critical Above-the-fold Hero Image -->
-  <link rel="preload" as="image" href="/assets/clinic-exterior-800.webp" type="image/webp" slot="head" />
+  <link rel="preload" as="image" href="/assets/hero-card-800.webp" imagesrcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w" imagesizes="(max-width: 640px) 400px, 800px" type="image/webp" fetchpriority="high" slot="head" />
 
   <!-- Breadcrumb Navigation -->
   <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
@@ -164,20 +164,21 @@ const seoProps = {
       <div class="lg:col-span-5 relative space-y-4">
         <!-- Real clinic photo -->
         <img 
-          src="/assets/clinic-exterior-800.webp" 
-          alt="Aureva Dental Clinic Hennur Exterior" 
+          src="/assets/hero-card-800.webp" 
+          srcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w, /assets/hero-card.webp 1376w" 
+          sizes="(max-width: 640px) 400px, 800px" 
+          alt="Aureva Dental - Calm Mind. Healthy Smile." 
           width="800" 
           height="447" 
           class="rounded-3xl shadow-sm border border-japandi-clay/40 object-cover w-full h-auto aspect-video"
-          loading="eager"
           decoding="async"
           fetchpriority="high"
         />
 
         <div class="relative rounded-3xl overflow-hidden border border-japandi-clay/60 shadow-xl bg-japandi-sand/30 p-8 space-y-6">
           <div class="space-y-2">
-            <span class="text-xs font-semibold uppercase tracking-widest text-japandi-moss">Surgical Care</span>
-            <h3 class="text-2xl font-serif text-japandi-charcoal font-medium">Relieve Impaction &amp; Pain</h3>
+            <span class="text-xs font-semibold uppercase tracking-widest text-japandi-moss">5.0 (40+ Google Reviews)</span>
+            <h3 class="text-2xl font-serif text-japandi-charcoal font-medium">Aureva Dental Clinic &amp; Studio, Hennur</h3>
             <p class="text-xs text-japandi-earth leading-relaxed font-light">
               Impacted wisdom teeth often push against healthy adjacent second molars, causing root decay, gum pocketing, and severe cheek bite ulcers. Early extraction protects your dental arch permanently.
             </p>

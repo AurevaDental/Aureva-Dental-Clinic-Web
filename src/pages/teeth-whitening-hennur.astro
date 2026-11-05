@@ -5,7 +5,7 @@ import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSc
 export const prerender = false;
 
 const pageTitle = "Teeth Whitening in Hennur Bangalore | Aureva Dental";
-const pageDescription = "Professional LED/Laser whitening in Hennur, Bangalore at Aureva Dental (LED as standard, laser available depending on the case). 4 to 8 shades lighter in 45 minutes with gentle enamel care. Call +91 73497 01002.";
+const pageDescription = "Professional LED/Laser teeth whitening in Hennur, Bangalore at Aureva Dental. Gentle enamel care and visible shade brightening. Call +91 73497 01002.";
 const canonicalUrl = "https://aurevadental.com/teeth-whitening-hennur";
 const phoneCallUrl = "tel:+917349701002";
 const whatsappUrl = "https://wa.me/917349701002?text=Hello%20Aureva%20Dental%2C%20I%20would%20like%20to%20book%20a%20consultation%20for%20Teeth%20Whitening%20in%20Hennur.";
@@ -65,7 +65,7 @@ const seoProps = {
 
 <Layout {...seoProps}>
   <!-- Preload Critical Above-the-fold Hero Image -->
-  <link rel="preload" as="image" href="/assets/clinic-exterior-800.webp" type="image/webp" slot="head" />
+  <link rel="preload" as="image" href="/assets/hero-card-800.webp" imagesrcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w" imagesizes="(max-width: 640px) 400px, 800px" type="image/webp" fetchpriority="high" slot="head" />
 
   <!-- Breadcrumb Navigation -->
   <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
@@ -171,8 +171,10 @@ const seoProps = {
       <div class="lg:col-span-5 relative">
         <div class="relative rounded-3xl overflow-hidden border border-japandi-clay/60 shadow-xl bg-japandi-sand/30">
           <img 
-            src="/assets/clinic-exterior-800.webp" 
-            alt="Aureva Dental Clinic in Hennur" 
+            src="/assets/hero-card-800.webp" 
+            srcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w, /assets/hero-card.webp 1376w"
+            sizes="(max-width: 640px) 400px, 800px" 
+            alt="Aureva Dental - Calm Mind. Healthy Smile." 
             width="800" 
             height="447" 
             decoding="async"
@@ -180,8 +182,8 @@ const seoProps = {
             class="w-full h-auto object-cover"
           />
           <div class="p-5 space-y-2">
-            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">Cosmetic Dentistry</span>
-            <h3 class="text-lg font-serif text-japandi-charcoal font-medium">In-Office Laser Radiance</h3>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">5.0 (40+ Google Reviews)</span>
+            <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Aureva Dental Clinic &amp; Studio, Hennur</h3>
             <p class="text-xs text-japandi-earth font-light leading-relaxed">
               Safe, pH-neutral laser teeth brightening with gingival barrier isolation on Horamavu Agara Road.
             </p>
