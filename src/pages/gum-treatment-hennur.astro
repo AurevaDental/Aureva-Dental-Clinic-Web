@@ -65,7 +65,7 @@ const seoProps = {
 
 <Layout {...seoProps}>
   <!-- Preload Critical Above-the-fold Hero Image -->
-  <link rel="preload" as="image" href="/assets/clinic-exterior-800.webp" type="image/webp" slot="head" />
+  <link rel="preload" as="image" href="/assets/hero-card-800.webp" imagesrcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w" imagesizes="(max-width: 640px) 400px, 800px" type="image/webp" fetchpriority="high" slot="head" />
 
   <!-- Breadcrumb Navigation -->
   <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
@@ -171,8 +171,10 @@ const seoProps = {
       <div class="lg:col-span-5 relative">
         <div class="relative rounded-3xl overflow-hidden border border-japandi-clay/60 shadow-xl bg-japandi-sand/30">
           <img 
-            src="/assets/clinic-exterior-800.webp" 
-            alt="Aureva Dental Clinic in Hennur" 
+            src="/assets/hero-card-800.webp" 
+            srcset="/assets/hero-card-400.webp 400w, /assets/hero-card-800.webp 800w, /assets/hero-card.webp 1376w"
+            sizes="(max-width: 640px) 400px, 800px" 
+            alt="Aureva Dental - Calm Mind. Healthy Smile." 
             width="800" 
             height="447" 
             decoding="async"
@@ -180,8 +182,8 @@ const seoProps = {
             class="w-full h-auto object-cover"
           />
           <div class="p-5 space-y-2">
-            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">Periodontal Care</span>
-            <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Protect Your Natural Gum Foundation</h3>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">5.0 (40+ Google Reviews)</span>
+            <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Aureva Dental Clinic &amp; Studio, Hennur</h3>
             <p class="text-xs text-japandi-earth font-light leading-relaxed">
               Targeted gum care and digital RVG diagnostics at SLV Nilaya, Horamavu Agara Road.
             </p>
@@ -195,65 +197,76 @@ const seoProps = {
   <section class="py-16 px-6 lg:px-24 bg-japandi-sand/25 border-y border-japandi-clay/30">
     <div class="max-w-4xl mx-auto space-y-12">
       
+      <!-- Step 4 H2 #1: Bleeding Gums, Swollen Gums & Early Gingivitis -->
       <div class="space-y-4">
         <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium tracking-tight">
-          Understanding Gum Disease &amp; Pyorrhea in Hennur
+          Bleeding Gums &amp; Swollen Gums: Early Signs of Gum Disease
         </h2>
         <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
           Gums and surrounding bone form the foundation that keeps your natural teeth anchored in your jaw. When bacterial plaque and mineralized tartar (calculus) accumulate along and below the gum margin, bacteria trigger chronic inflammation.
         </p>
         <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
-          In its early stage, known as <strong>gingivitis</strong>, gums become swollen, tender, and bleed easily during brushing. If left untreated, bacteria migrate deep beneath the gum line, forming infected pockets. This progressive condition, commonly called <strong>pyorrhea</strong> or <strong>periodontitis</strong>, gradually erodes the underlying alveolar bone and connective fibers, causing teeth to become loose and eventually leading to tooth loss.
+          In its early stage, known as <strong>gingivitis</strong>, gums become swollen, tender, and bleed easily during brushing or flossing. Because gingivitis is confined to the soft tissues and has not yet damaged the underlying bone, it remains fully reversible with professional ultrasonic scaling, antibacterial rinses, and meticulous home care.
         </p>
       </div>
 
-      <!-- Key Clinical Interventions -->
-      <div class="space-y-6">
-        <h3 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
-          Comprehensive Gum Treatment Modalities at Aureva Dental Hennur
-        </h3>
-        <p class="text-sm text-japandi-earth font-light leading-relaxed">
-          We combine gentle clinical care with modern technology to stop active gum infection and restore periodontal health:
+      <!-- Step 4 H2 #2: Gum Disease and Pyorrhea (Periodontitis) -->
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Understanding Gum Disease and Pyorrhea (Periodontitis)
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          If gingivitis is left unaddressed, bacteria migrate deeper beneath the gumline, triggering an aggressive inflammatory response. This advanced condition, commonly known as <strong>pyorrhea</strong> or <strong>periodontitis</strong>, creates infected periodontal pockets. The bacterial toxins gradually dissolve the alveolar bone and periodontal connective fibers that secure the tooth root. Left untreated, progressive bone destruction leads to gum recession, chronic bad breath, tooth mobility, and eventual tooth loss.
         </p>
+      </div>
 
-        <div class="space-y-4 text-xs sm:text-sm text-japandi-earth font-light">
+      <!-- Step 4 H2 #3: Modern Laser Gum Treatment in Hennur -->
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Modern Laser Gum Treatment in Hennur
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          At Aureva Dental, we utilize modern dental laser therapy for targeted, comfortable decontamination of periodontal pockets. The focused laser energy selectively eliminates harmful anaerobic bacteria and vaporizes infected pocket lining while leaving healthy connective tissue unharmed. Because the laser simultaneously seals microscopic blood vessels, treatment involves minimal bleeding, no scalpels or surgical incisions, no sutures, and significantly faster recovery times compared to conventional periodontal surgery.
+        </p>
+      </div>
+
+      <!-- Step 4 H2 #4: How a Periodontist Plans Treatment -->
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          How a Periodontist Plans Treatment
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          Effective periodontal therapy requires systematic diagnosis rather than guesswork. For patients presenting with moderate to advanced periodontitis, our resident dental surgeons work alongside experienced visiting periodontists (gum specialists) on call. Periodontist treatment planning follows a structured protocol:
+        </p>
+        <div class="space-y-4 text-xs sm:text-sm text-japandi-earth font-light pt-2">
           <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
-            <h4 class="font-serif text-base text-japandi-charcoal font-medium">Digital RVG Radiographic Diagnosis</h4>
+            <h4 class="font-serif text-base text-japandi-charcoal font-medium">1. Periodontal Pocket Charting &amp; Digital RVG Bone Assessment</h4>
             <p class="leading-relaxed">
-              Every gum assessment begins with high-resolution digital RVG radiography. This allows our clinicians to clearly evaluate alveolar bone levels around each tooth, locate hidden tartar deposits below the gum line, and establish an accurate treatment baseline.
+              We measure pocket depths around every individual tooth using a calibrated periodontal probe and acquire low-radiation digital RVG radiographs to map horizontal and vertical bone loss accurately.
             </p>
           </div>
-
           <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
-            <h4 class="font-serif text-base text-japandi-charcoal font-medium">Deep Periodontal Scaling &amp; Root Planing</h4>
+            <h4 class="font-serif text-base text-japandi-charcoal font-medium">2. Deep Periodontal Scaling &amp; Root Planing</h4>
             <p class="leading-relaxed">
-              For patients with periodontal pockets exceeding 4 mm, routine cleaning is insufficient. Deep scaling meticulously removes bacterial calculus and toxins embedded deep beneath the gum line. Root planing then smooths rough root surfaces, discouraging future bacterial colonization and allowing gum tissue to reattach firmly to the tooth.
+              Ultrasonic instruments meticulously remove subgingival calculus and bacterial colonies from root surfaces. Root planing then smooths the microscopic root contours, enabling the gum tissue to readapt and heal tightly around the tooth.
             </p>
           </div>
-
           <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
-            <h4 class="font-serif text-base text-japandi-charcoal font-medium">Laser Gum Treatment</h4>
+            <h4 class="font-serif text-base text-japandi-charcoal font-medium">3. Laser Pocket Decontamination &amp; Maintenance Protocol</h4>
             <p class="leading-relaxed">
-              We employ dental laser technology for precise, comfortable decontamination of infected gum pockets. The laser energy vaporizes harmful anaerobic bacteria and selectively removes diseased tissue lining without incisions or sutures, resulting in faster healing and minimal discomfort.
-            </p>
-          </div>
-
-          <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
-            <h4 class="font-serif text-base text-japandi-charcoal font-medium">Periodontist On Call for Advanced Cases</h4>
-            <p class="leading-relaxed">
-              For complex cases involving severe bone loss, deep infrabony defects, or gum recession, our clinic collaborates with experienced visiting periodontists (gum specialists) on call to deliver targeted regenerative and surgical care.
+              Deep pockets receive targeted laser therapy to sterilize subgingival flora, followed by a personalized 3-month or 6-month periodontal maintenance schedule to ensure long-term clinical stability.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Transparent Gum Treatment Cost in Hennur Table Section -->
+      <!-- Step 4 H2 #5: Gum Treatment Cost in Hennur Table Section -->
       <div id="pricing" class="space-y-6 pt-6 border-t border-japandi-clay/30">
         <div class="space-y-2">
           <span class="text-xs font-semibold uppercase tracking-widest text-japandi-moss">Transparent Pricing</span>
-          <h3 class="text-xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          <h2 class="text-xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
             Gum Treatment Cost in Hennur
-          </h3>
+          </h2>
           <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
             Straightforward pricing with complete clarity before beginning any procedure.
           </p>
@@ -275,9 +288,19 @@ const seoProps = {
                 <td class="p-4 text-japandi-moss font-semibold">₹600</td>
               </tr>
               <tr>
+                <td class="p-4 font-medium text-japandi-charcoal">Routine Ultrasonic Scaling and Polishing</td>
+                <td class="p-4">Supragingival plaque &amp; tartar removal and airflow polishing</td>
+                <td class="p-4 text-japandi-moss font-semibold">₹2,000 – ₹5,000</td>
+              </tr>
+              <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Deep Periodontal Scaling / Root Planing</td>
                 <td class="p-4">Subgingival ultrasonic debridement, root planing &amp; antiseptic irrigation</td>
                 <td class="p-4 text-japandi-moss font-semibold">₹8,000 – ₹15,000</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium text-japandi-charcoal">Laser Gum Treatment</td>
+                <td class="p-4">Targeted laser pocket sterilization &amp; soft-tissue decontamination</td>
+                <td class="p-4 text-japandi-moss font-semibold">Price depends on the case. Consultation Rs 600.</td>
               </tr>
             </tbody>
           </table>
