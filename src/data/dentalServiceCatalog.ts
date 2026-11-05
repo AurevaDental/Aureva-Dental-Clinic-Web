@@ -188,7 +188,7 @@ export const DENTAL_OFFER_CATALOG: ServiceCategoryCatalog[] = [
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "In-Office Laser Teeth Whitening",
+          name: "In-Office LED/Laser Teeth Whitening",
           description: "High-intensity light-activated dental bleaching for immediate smile shade enhancement."
         }
       },

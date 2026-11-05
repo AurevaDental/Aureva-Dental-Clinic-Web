@@ -45,7 +45,7 @@ const STATIC_ROUTES: StaticRoute[] = [
   { url: 'https://aurevadental.com/treatments/root-canal-treatment', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Root Canal Treatment in Bangalore' },
   { url: 'https://aurevadental.com/treatments/scaling-and-polishing', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Teeth Cleaning & Scaling in Bangalore' },
   { url: 'https://aurevadental.com/treatments/smile-makeover', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Digital Smile Makeover in Bangalore' },
-  { url: 'https://aurevadental.com/treatments/teeth-whitening', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Laser Teeth Whitening in Bangalore' },
+  { url: 'https://aurevadental.com/treatments/teeth-whitening', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'LED/Laser Teeth Whitening in Bangalore' },
   { url: 'https://aurevadental.com/treatments/tooth-extraction', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Comfortable Tooth Extraction in Bangalore' },
   { url: 'https://aurevadental.com/treatments/wisdom-tooth-removal', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Comfortable Wisdom Tooth Removal in Bangalore' },
 

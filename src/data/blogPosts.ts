@@ -60,7 +60,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedTreatmentUrl: "/treatments/clear-aligners",
     relatedTreatmentName: "Clear Aligners & Invisible Braces",
     introParagraphs: [
-      "If you have been considering straightening your teeth or correcting minor crowding, traditional metal brackets and wires are no longer your only choice. Over the past few years, clear aligners (invisible braces) have become the leading orthodontic solution for working professionals, college students, and adults across Bangalore who desire a discreet, comfortable smile transformation.",
+      "If you have been considering straightening your teeth or correcting minor crowding, traditional metal brackets and wires are no longer your only choice. Over the past few years, clear aligners (invisible braces) have become a modern orthodontic option for working professionals, college students, and adults across Bangalore who desire a discreet, comfortable smile transformation.",
       "However, the single most common question patients ask us during their first consultation at Aureva Dental in Hennur is: 'How much do clear aligners actually cost in Bangalore, and why is there such a wide price range?'",
       "In this comprehensive clinical guide, we break down transparent pricing, the anatomical and engineering factors that determine your investment, and how modern 3D digital orthodontics functions from your initial digital scan to your final retainer."
     ],
@@ -90,7 +90,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "When you visit Aureva Dental on Horamavu Agara Road in Hennur Bande, your personalized treatment estimate is based on three scientific and anatomical factors:",
           "First, the total number of aligner trays: Mild anterior corrections may require only 12 to 16 sets of trays over 4 to 6 months, whereas complex molar movements require 35 to 50+ stages spanning 12 to 18 months.",
           "Second, material engineering and manufacturing: Premium multi-layer elastomeric materials provide gentle, constant biological force, ensuring efficient tooth movement with minimal discomfort.",
-          "Third, digital 3D planning and smile simulations: State-of-the-art optical intraoral scanners capture thousands of 3D data points per second, eliminating uncomfortable putty impressions and allowing you to visualize your finished smile before wearing Tray #1."
+          "Third, digital 3D planning and smile simulations: Modern optical intraoral scanners capture thousands of 3D data points per second, eliminating uncomfortable putty impressions and allowing you to visualize your finished smile before wearing Tray #1."
         ],
         bulletPoints: [
           "Number of custom aligner stages required for upper and lower arches",
@@ -284,7 +284,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "dental-implant-cost-bangalore",
     title: "Dental Implant Cost in Bangalore | Aureva Dental",
     headline: "Dental Implant Cost in Bangalore (2026 Guide): Titanium vs Zirconia Pricing",
-    metaDescription: "Detailed dental implant cost in Bangalore (₹45,000 to ₹80,000), bone grafting, full-mouth implants, leading implant brands & transparent pricing in Hennur.",
+    metaDescription: "Detailed dental implant cost in Bangalore (₹45,000 to ₹80,000), bone grafting, full-mouth implants, established implant brands & transparent pricing in Hennur.",
     author: "Dr. Shweta Singh",
     authorRole: "Clinical Director & Dental Surgeon",
     authorCredentials: "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
@@ -641,7 +641,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "teeth-whitening-cost-bangalore",
     title: "Teeth Whitening Cost in Bangalore | Aureva Dental",
     headline: "Teeth Whitening Cost in Bangalore (2026): In-Office Laser vs Home Trays",
-    metaDescription: "Transparent teeth whitening cost in Bangalore (₹8,000 to ₹15,000), professional laser bleaching vs home trays, safety & shade improvement in Hennur.",
+    metaDescription: "Transparent teeth whitening cost in Bangalore (₹8,000 to ₹15,000), professional LED/Laser whitening vs home trays, safety & shade improvement in Hennur.",
     author: "Dr. Shweta Singh",
     authorRole: "Clinical Director & Dental Surgeon",
     authorCredentials: "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
@@ -650,13 +650,13 @@ export const BLOG_POSTS: BlogPost[] = [
     dateModified: "2026-09-23",
     category: "Cosmetic Dentistry & Smile Enhancement",
     readTime: "8 min read",
-    excerpt: "A complete price guide to professional teeth whitening in Bangalore (₹8,000 to ₹15,000), comparing chairside laser whitening, custom take-home trays, OTC kits, and safety protocols.",
+    excerpt: "A complete price guide to professional teeth whitening in Bangalore (₹8,000 to ₹15,000), comparing chairside LED/Laser whitening, custom take-home trays, OTC kits, and safety protocols.",
     relatedTreatmentUrl: "/treatments/teeth-whitening",
     relatedTreatmentName: "Teeth Whitening",
     introParagraphs: [
       "A bright, radiant smile conveys youthfulness, health, and vitality. However, daily consumption of coffee, South Indian filter coffee, tea, red wine, turmeric-rich curries, and natural aging gradually deposits stubborn chromogen stains within the microscopic porous tubules of your tooth enamel.",
       "If you are preparing for a wedding, graduation, job interview, or simply want to refresh your personal aesthetic, professional teeth whitening is the fastest, least invasive cosmetic dental treatment available.",
-      "In this guide from Aureva Dental in Hennur, Bangalore, Dr. Shweta Singh breaks down the true cost of in-office laser whitening versus take-home trays, explains how medical-grade bleaching works safely without damaging enamel, and shares guidelines to keep your smile glowing for years."
+      "In this guide from Aureva Dental in Hennur, Bangalore, Dr. Shweta Singh breaks down the true cost of in-office LED/Laser whitening versus take-home trays, explains how medical-grade bleaching works safely without damaging enamel, and shares guidelines to keep your smile glowing for years."
     ],
     sections: [
       {
@@ -667,7 +667,7 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Whitening Method", "Typical Cost Range (INR)", "Expected Results & Timeline"],
           rows: [
-            ["In-Office Advanced Laser Teeth Whitening", "₹8,000 – ₹15,000", "4 to 8 shades brighter in a single 45 to 60-minute session; immediate results"],
+            ["In-Office Advanced LED/Laser Teeth Whitening", "₹8,000 – ₹15,000", "4 to 8 shades brighter in a single 45 to 60-minute session; immediate results"],
             ["Customized Dentist Take-Home Trays", "₹5,000 – ₹9,000", "Custom lab-made trays + medical gel; gradual 3 to 6-shade lift over 10 to 14 days"],
             ["Combination Package (In-Office + Take-Home Kit)", "₹12,000 – ₹18,000", "Maximum radiance: Immediate laser lift plus home maintenance kit for annual touch-ups"],
             ["Over-the-Counter Strips & Charcoal Pastes", "₹500 – ₹2,500", "Minimal 1 to 2 shades lift; abrasive pastes frequently strip protective enamel"]
@@ -680,7 +680,7 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       },
       {
-        heading: "2. In-Office Laser Whitening vs Over-the-Counter Products",
+        heading: "2. In-Office LED/Laser Whitening vs Over-the-Counter Products",
         paragraphs: [
           "Supermarkets and online pharmacies are flooded with charcoal toothpastes, whitening pens, and generic LED mouthpieces. Why do dental clinics charge more, and what makes professional treatment vastly superior?",
           "Concentration of Active Agent: Commercial OTC products are legally limited to less than 3% to 6% hydrogen peroxide, which only scrubs surface superficial stains. In-office clinical whitening uses 25% to 35% medical-grade hydrogen peroxide that penetrates deep into dentinal tubules to oxidize embedded molecular pigments.",
@@ -689,7 +689,7 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        heading: "3. Step-by-Step In-Office Laser Whitening at Aureva Dental Hennur",
+        heading: "3. Step-by-Step In-Office LED/Laser Whitening at Aureva Dental Hennur",
         paragraphs: [
           "Our in-office whitening procedure takes approximately 60 minutes from start to finish:",
           "Step 1: Shade Assessment — We measure your initial tooth shade using a Vita digital shade guide and capture baseline photographs.",
@@ -717,7 +717,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "To understand why medical whitening is both safe and effective, one must examine enamel anatomy. Natural tooth enamel consists of tightly packed hydroxyapatite mineral crystals interwoven with organic protein matrices and microscopic fluid channels called enamel rods.",
           "Chromogens from food, beverages, and tobacco lodge deep within these enamel rods, absorbing light and causing dark, yellow, or grayish discoloration. Medical-grade bleaching gels produce free oxygen radicals that penetrate these microscopic tubules, breaking the complex double carbon bonds of chromogen molecules into smaller, colorless compounds without stripping enamel minerals.",
-          "At Aureva Dental in Hennur, we pair our laser whitening protocols with amorphous calcium phosphate (ACP) and fluoride remineralization therapy. This immediately re-hardens the enamel surface and seals the dentinal tubules, eliminating post-operative sensitivity while imparting a high-gloss, glass-smooth finish."
+          "At Aureva Dental in Hennur, we pair our LED/Laser whitening protocols with amorphous calcium phosphate (ACP) and fluoride remineralization therapy. This immediately re-hardens the enamel surface and seals the dentinal tubules, eliminating post-operative sensitivity while imparting a high-gloss, glass-smooth finish."
         ],
         bulletPoints: [
           "Peroxide oxidation targets organic chromogens without dissolving inorganic mineral enamel",
@@ -750,12 +750,12 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         question: "How frequently can I safely whiten my teeth in Bangalore?",
-        answer: "Professional in-office laser whitening can be performed safely once every 12 to 18 months without risking enamel erosion or micro-hardness changes. For patients who consume regular filter coffee or tea, we provide custom take-home touch-up trays with mild 10% carbamide peroxide gel, which can be applied for 1 to 2 evenings every six months following your routine ultrasonic scaling visit at Aureva Dental in Hennur."
+        answer: "Professional in-office LED/Laser whitening can be performed safely once every 12 to 18 months without risking enamel erosion or micro-hardness changes. For patients who consume regular filter coffee or tea, we provide custom take-home touch-up trays with mild 10% carbamide peroxide gel, which can be applied for 1 to 2 evenings every six months following your routine ultrasonic scaling visit at Aureva Dental in Hennur."
       }
     ],
-    conclusion: "Transform your smile in under an hour with safe, advanced in-office laser whitening at Aureva Dental in Hennur. Book your consultation today to reveal your brightest, most confident smile.",
+    conclusion: "Transform your smile in under an hour with safe, advanced in-office LED/Laser whitening at Aureva Dental in Hennur. Book your consultation today to reveal your brightest, most confident smile.",
     ctaHeadline: "Get a Radiant, Camera-Ready Smile in Hennur",
-    ctaText: "Visit Aureva Dental on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp to book your laser teeth whitening session."
+    ctaText: "Visit Aureva Dental on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp to book your LED/Laser teeth whitening session."
   }
 ,
 {
@@ -793,7 +793,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     },
     {
-      "heading": "Leading Causes of Severe Nighttime Tooth Pain",
+      "heading": "Common Causes of Severe Nighttime Tooth Pain",
       "paragraphs": [
         "Understanding the underlying etiology is crucial because different clinical conditions require specific medical and dental therapies:"
       ],
@@ -1127,7 +1127,7 @@ export const BLOG_POSTS: BlogPost[] = [
       ]
     },
     {
-      "heading": "Leading Restorative Options for Chipped Front Teeth",
+      "heading": "Modern Restorative Options for Chipped Front Teeth",
       "paragraphs": [
         "Depending on fracture size, aesthetic expectations, and budget, we offer three primary clinical solutions:"
       ],
@@ -1559,7 +1559,7 @@ export const BLOG_POSTS: BlogPost[] = [
       heading: "1. The Context of Dental Care: UK vs. India",
       paragraphs: [
         "In the UK, Band 3 NHS dental care (crowns, dentures, bridges) can involve waiting lists ranging from months to over two years in many NHS trusts. Private UK dental fees, meanwhile, have escalated alongside energy, real estate, and clinical staff wage inflation.",
-        "Bangalore, India has emerged as a major healthcare destination. With leading institutions like The Oxford Dental College, Bangalore combines clinical expertise with state-of-the-art CAD/CAM milling laboratories, strict autoclave sterilization protocols, and low-radiation digital RVG diagnostics."
+        "Bangalore is home to well-established healthcare and dental institutions like The Oxford Dental College, combining clinical education with modern CAD/CAM milling laboratories, strict autoclave sterilization protocols, and low-radiation digital RVG diagnostics."
       ]
     },
     {

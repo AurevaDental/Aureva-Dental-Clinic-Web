@@ -323,7 +323,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       {
         "@type": "MedicalProcedure",
         "name": "Teeth Whitening and Polishing",
-        "description": "Advanced gentle in-office laser whitening and stain removal for radiant smiles."
+        "description": "Advanced gentle in-office LED/Laser whitening and stain removal for radiant smiles."
       },
       {
         "@type": "MedicalProcedure",
