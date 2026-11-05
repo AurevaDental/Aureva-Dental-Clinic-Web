@@ -261,7 +261,7 @@ export const DENTAL_OFFER_CATALOG: ServiceCategoryCatalog[] = [
         itemOffered: {
           "@type": "Service",
           name: "Gingival Laser Depigmentation",
-          description: "Painless cosmetic laser vaporization of dark melanin pigmentation on gum tissues."
+          description: "Gentle cosmetic laser vaporization of dark melanin pigmentation on gum tissues."
         }
       },
       {
@@ -669,7 +669,7 @@ export const DENTAL_OFFER_CATALOG: ServiceCategoryCatalog[] = [
         itemOffered: {
           "@type": "Service",
           name: "Single-Sitting Rotary Root Canal Treatment",
-          description: "Painless root canal disinfection and obturation completed in a single comfortable visit."
+          description: "Gentle root canal disinfection and obturation completed in a single comfortable visit."
         }
       },
       {

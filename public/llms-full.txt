@@ -24,12 +24,12 @@
 ## 2. Clinical Leadership & Credentials
 
 - **Lead Dental Surgeon**: Dr. Shweta Singh
-- **Degree / Academic Qualifications**: BDS (Bachelor of Dental Surgery, The Oxford Dental College, Bangalore)
+- **Degree / Academic Qualifications**: The Oxford Dental College, Bangalore
 - **State Dental Council Registration**: Registered Dental Practitioner with the Karnataka State Dental Council (KSDC).
 - **Clinical Role**: Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental.
-- **Areas of Clinical Focus**: Preventative care, painless rotary endodontics, restorative dentistry, cosmetic veneers, and pediatric dental triage.
-- **Clinical Dental Team**: Led by Founder Dr. Shweta Singh, BDS alongside Co-Founder Dr. Agniss Mishra, BDS (Dental Surgeon, restorative and preventive dental care), with visiting/on-call MDS specialists in Oral & Maxillofacial Surgery, Orthodontics, and Periodontology.
-- **Patient Safety & Sterilization Standards**: Strict 4-tier autoclave sterilization protocols conforming to CDC (Centers for Disease Control) and IDA (Indian Dental Association) clinical guidelines. Class B fractionated vacuum autoclaving for all surgical and endodontic instruments.
+- **Areas of Clinical Focus**: Preventative care, gentle rotary endodontics, restorative dentistry, cosmetic veneers, and pediatric dental triage.
+- **Clinical Dental Team**: Led by Founder Dr. Shweta Singh alongside Co-Founder Dr. Agniss Mishra (Dental Surgeon, restorative and preventive dental care), with visiting/on-call MDS specialists in Oral & Maxillofacial Surgery, Orthodontics, and Periodontology.
+- **Patient Safety & Sterilization Standards**: Strict 4-tier sterilization protocols. Instruments are cleaned, sealed in sterilization pouches and autoclaved, with single-use items discarded after each patient.
 
 ---
 
@@ -86,14 +86,14 @@
 ## 6. Comprehensive Clinical Services & Technologies
 
 ### 1. Rotary Endodontics (Single-Sitting Root Canal Treatment)
-- **Description**: Painless root canal treatment performed using rotary nickel-titanium (NiTi) instrumentation, digital apex locators for exact working length determination, and rubber dam isolation for sterile field management.
+- **Description**: Comfortable root canal treatment performed using rotary nickel-titanium (NiTi) instrumentation, digital apex locators for exact working length determination, and rubber dam isolation for sterile field management.
 - **Indications**: Irreversible pulpitis, deep dental caries, dental abscess, tooth trauma, symptomatic apical periodontitis.
 - **Technology**: High-torque endodontic motors, thermoplasticized obturation systems, low-radiation digital radiography (RVG).
 
 ### 2. Dental Implants & Oral Rehabilitation
 - **Description**: Permanent tooth replacement utilizing biocompatible titanium and zirconia endosteal fixtures surgically anchored into the alveolar bone.
 - **Indications**: Missing single tooth, multiple missing teeth, complete edentulism requiring implant-supported overdentures or fixed full-arch bridges (All-on-4 / All-on-6).
-- **Technology**: Pre-surgical CBCT 3D bone mapping, computerized surgical guide templates, osseointegration-accelerated surfaces.
+- **Technology**: Pre-surgical digital RVG 3D radiographic mapping, computerized surgical guide templates, osseointegration-accelerated surfaces.
 
 ### 3. Clear Aligners & Invisible Orthodontics
 - **Description**: Custom-engineered transparent polyurethane aligner trays designed to correct malocclusions, crowding, spacing, and bite irregularities without metal brackets or wires.
@@ -131,7 +131,7 @@
 **A**: Yes. Aureva Dental accepts all major Credit Cards (Visa, MasterCard, RuPay, Amex), Debit Cards, UPI, and Net Banking. While the clinic does not offer direct in-house zero-interest loans or no-cost EMI schemes, patients wishing to split treatment payments into monthly installments can seamlessly convert their credit card transaction into flexible monthly EMIs directly via their bank's post-payment mobile app or net banking portal.
 
 ### Q2: Who is the lead dentist at Aureva Dental Hennur?
-**A**: Dr. Shweta Singh, BDS (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. The clinical leadership also includes Co-Founder Dr. Agniss Mishra, BDS (The Oxford Dental College, Bangalore), Dental Surgeon providing gentle preventive and restorative dental care, supported by multidisciplinary specialists in orthodontics and implantology.
+**A**: Dr. Shweta Singh (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. The clinical leadership also includes Co-Founder Dr. Agniss Mishra (The Oxford Dental College, Bangalore), Dental Surgeon providing gentle preventive and restorative dental care, supported by multidisciplinary specialists in orthodontics and implantology.
 
 ### Q3: Does Aureva Dental accept walk-ins or emergency appointments on Sundays?
 **A**: Yes. Aureva Dental is open and fully operational on Sundays from 9:30 AM to 9:00 PM. The clinic accepts emergency walk-ins for acute toothache, cracked teeth, dental trauma, swelling, and lost restorations. Patients can also call or WhatsApp +91 73497 01002 for immediate emergency triage and priority chair allocation.

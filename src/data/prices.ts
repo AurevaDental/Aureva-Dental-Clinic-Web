@@ -60,12 +60,11 @@ export const CANONICAL_PRICES = {
   emergency_single_sitting_rct: formatPriceRange(4000, 10000),
 
   // Crowns & Bridges
-  crown_metal: formatPriceRange(3000, 5000),
-  crown_pfm: formatPriceRange(5000, 8000),
+    crown_pfm: formatPriceRange(4000, 6000),
   crown_ceramic: formatPriceRange(6000, 10000),
   crown_pfm_ceramic_combined: formatPriceRange(5000, 10000),
   crown_zirconia: formatPriceRange(10000, 18000),
-  crown_emax: formatPriceRange(12000, 18000),
+  crown_emax: formatPriceRange(10000, 18000),
   bridge_unit_zirconia: formatPriceRange(10000, 18000, 'per unit'),
   crown_bridge_recementation: formatPriceRange(800, 2000),
   broken_tooth_composite_repair: formatPriceRange(1500, 4000),

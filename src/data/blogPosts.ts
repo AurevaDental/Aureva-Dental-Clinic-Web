@@ -192,7 +192,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Anterior Teeth (Front Incisors & Canines)", "₹4,000 – ₹6,000", "Single straight root canal; straightforward access and rapid instrumentation"],
             ["Premolar Teeth (Bicuspids)", "₹5,000 – ₹8,000", "1 to 2 root canals; intermediate anatomical complexity"],
             ["Molar Teeth (Back Chewing Teeth)", "₹6,000 – ₹10,000", "3 to 4 curved root canals; complex posterior access requiring rotary endodontics"],
-            ["Re-Root Canal Treatment (Re-RCT)", "₹8,000 – ₹14,000", "Removal of failed previous filling materials, bypass of ledges, ultrasonic disinfection"]
+            ["Re-Root Canal Treatment (Re-RCT)", "₹8,000 – ₹10,000", "Removal of failed previous filling materials, bypass of ledges, ultrasonic disinfection"]
           ]
         },
         callout: {
@@ -226,9 +226,9 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Crown Type", "Typical Price (INR)", "Aesthetic & Structural Properties"],
           rows: [
-            ["Porcelain-Fused-to-Metal (PFM)", "₹5,000 – ₹8,000", "Strong metal core with ceramic outer layer; good for back molars on a budget"],
+            ["Porcelain-Fused-to-Metal (PFM)", "₹4,000 – ₹6,000", "Strong metal core with ceramic outer layer; good for back molars on a budget"],
             ["CAD/CAM Monolithic Zirconia", "₹10,000 – ₹18,000", "Virtually indestructible digital milling; fully biocompatible with natural tooth shade"],
-            ["E-Max Lithium Disilicate Ceramic", "₹12,000 – ₹18,000", "Exceptional lifelike translucency and light transmission; ideal for premolars and front teeth"]
+            ["E-Max Lithium Disilicate Ceramic", "₹10,000 – ₹18,000", "Exceptional lifelike translucency and light transmission; ideal for premolars and front teeth"]
           ]
         }
       },
@@ -340,7 +340,7 @@ export const BLOG_POSTS: BlogPost[] = [
           headers: ["Ancillary Procedure", "Typical Cost Range (INR)", "When It Is Medically Required"],
           rows: [
             ["Pre-Surgical Digital Radiographic Assessment", "₹2,500 – ₹4,000", "Pre-surgical radiographic assessment to measure exact bone height, width, and nerve canals"],
-            ["Bone Grafting (Bio-Oss / Synthetic)", "₹8,000 – ₹18,000", "Required when bone width or density is insufficient to encapsulate the implant"],
+            ["Bone Grafting (Bio-Oss / Synthetic)", "₹15,000 – ₹20,000", "Required when bone width or density is insufficient to encapsulate the implant"],
             ["Direct / Indirect Sinus Lift", "₹15,000 – ₹20,000", "Required in upper back molars when the maxillary sinus cavity has expanded downward"],
             ["PRP / PRF Growth Factor Therapy", "₹3,000 – ₹6,000", "Concentrated patient platelets applied to surgical site to accelerate soft-tissue healing"]
           ]
@@ -402,9 +402,9 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Tooth Extraction Cost in Bangalore | Aureva Dental",
     headline: "Tooth Extraction Cost in Bangalore: Simple vs Surgical & Wisdom Teeth (2026)",
     metaDescription: "Transparent tooth extraction cost in Bangalore (₹1,500 to ₹10,000), simple vs surgical removal, wisdom tooth care & comfortable oral surgery at Aureva Dental.",
-    author: "Dr. Agniss Mishra, BDS",
+    author: "Dr. Agniss Mishra",
     authorRole: "Dental Surgeon",
-    authorCredentials: "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+    authorCredentials: "Dr. Agniss Mishra — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
     date: "September 2026",
     datePublished: "2026-09-15",
     dateModified: "2026-09-23",
@@ -428,8 +428,8 @@ export const BLOG_POSTS: BlogPost[] = [
           headers: ["Extraction Category / Procedure", "Typical Cost Range (INR)", "Clinical Inclusions & Complexity"],
           rows: [
             ["Simple Front Tooth / Loose Tooth Extraction", "₹1,500 – ₹2,000", "Single straight root, minimal bone resistance, comfortable local anesthesia"],
-            ["Firm Posterior Molar Extraction", "₹1,500 – ₹4,000", "Multi-rooted firm tooth requiring gentle periotome elevation and luxation"],
-            ["Surgical Extraction / Fractured Root Retrieval", "₹3,500 – ₹5,500", "Tooth broken at gum line; requires micro-flap elevation and bone troughing"],
+            ["Firm Posterior Molar Extraction", "₹3,000 – ₹4,000", "Multi-rooted firm tooth requiring gentle periotome elevation and luxation"],
+            ["Surgical Extraction / Fractured Root Retrieval", "₹3,500 – ₹5,000", "Tooth broken at gum line; requires micro-flap elevation and bone troughing"],
             ["Impacted Wisdom Tooth (Soft Tissue Impaction)", "₹5,000 – ₹7,000", "Third molar covered by gum flap; requires incision, elevation, and dissolvable sutures"],
             ["Impacted Wisdom Tooth (Bony / Angular Impaction)", "₹6,000 – ₹10,000", "Deeply embedded in mandibular bone; requires crown sectioning and oral surgeon expertise"]
           ]
@@ -474,8 +474,8 @@ export const BLOG_POSTS: BlogPost[] = [
           "Leaving an empty space after extracting a permanent chewing molar triggers long-term dental complications. Over several months, adjacent teeth tilt toward the gap, while the opposing tooth in the opposite jaw over-erupts into the vacant space, disrupting your bite and causing TMJ stress.",
           "At Aureva Dental, we discuss replacement alternatives before performing the extraction:",
           "Dental Implants (₹45,000 to ₹80,000): The gold standard biological replacement. A titanium root screw stimulates the jawbone, preventing atrophy, while a custom zirconia crown restores full chewing efficiency without touching neighboring teeth.",
-          "Fixed Zirconia Dental Bridges (₹18,000 to ₹35,000): A non-surgical, fixed 3-unit restoration where adjacent healthy teeth are contoured to anchor the replacement tooth.",
-          "Flexible Removable Partial Dentures (₹8,000 to ₹18,000): An economical, removable option suitable when multiple teeth are missing in an arch."
+          "Fixed Dental Bridges (₹4,000 to ₹18,000 per unit depending on material — PFM ₹4,000 – ₹6,000, Ceramic ₹6,000 – ₹10,000, Zirconia ₹10,000 – ₹18,000 per unit): A non-surgical, fixed restoration where adjacent healthy teeth anchor the replacement tooth.",
+          "Flexible Removable Partial Dentures (Valplast ₹8,000 to ₹22,000): A removable option suitable when multiple teeth are missing in an arch."
         ],
         bulletPoints: [
           "Immediate implant placement can often be performed during the same extraction visit",
@@ -674,7 +674,7 @@ export const BLOG_POSTS: BlogPost[] = [
         callout: {
           type: "tip",
           title: "Pre-Whitening Cleaning Requirement",
-          text: "Professional teeth whitening must be preceded by an ultrasonic Scaling & Polishing (₹2,000 – ₹2,500) to eliminate surface plaque, calculus, and external tobacco/tea stains. Bleaching gel applied over calcified tartar cannot penetrate enamel pores evenly."
+          text: "Professional teeth whitening must be preceded by an ultrasonic Scaling & Polishing (₹2,000 – ₹5,000) to eliminate surface plaque, calculus, and external tobacco/tea stains. Bleaching gel applied over calcified tartar cannot penetrate enamel pores evenly."
         }
       },
       {
@@ -894,9 +894,9 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Wisdom Tooth Pain Radiating to Jaw and Ear: Symptoms, Pericoronitis & Treatment | Aureva Dental",
   "headline": "Wisdom Tooth Pain Radiating to Jaw, Ear & Neck: Causes, Relief & Gentle Removal",
   "metaDescription": "Experiencing shooting wisdom tooth pain radiating to your ear and jaw? Learn why pericoronitis and impaction cause nerve pain and how gentle removal at Aureva Dental helps.",
-  "author": "Dr. Agniss Mishra, BDS",
+  "author": "Dr. Agniss Mishra",
   "authorRole": "Dental Surgeon & Oral Surgery Lead",
-  "authorCredentials": "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "authorCredentials": "Dr. Agniss Mishra — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
   "date": "September 2026",
   "datePublished": "2026-09-26",
   "dateModified": "2026-09-28",
@@ -1292,9 +1292,9 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Wisdom Tooth Extraction Aftercare: Preventing Dry Socket & Fast Healing | Aureva Dental",
   "headline": "Wisdom Tooth Extraction Aftercare: Days 1 to 7 Recovery & How to Prevent Dry Socket",
   "metaDescription": "Essential wisdom tooth removal aftercare instructions. Swelling management, bleeding control, soft food list, and vital tips to prevent dry socket by Aureva Dental.",
-  "author": "Dr. Agniss Mishra, BDS",
+  "author": "Dr. Agniss Mishra",
   "authorRole": "Dental Surgeon & Oral Surgery Lead",
-  "authorCredentials": "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "authorCredentials": "Dr. Agniss Mishra — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
   "date": "September 2026",
   "datePublished": "2026-09-27",
   "dateModified": "2026-09-28",
@@ -1455,9 +1455,9 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Teeth Cleaning & Scaling Aftercare: What to Expect, Diet & Sensitivity | Aureva Dental",
   "headline": "Teeth Cleaning & Scaling Aftercare: Sensitivity Management & Gum Care Guide",
   "metaDescription": "What to expect after ultrasonic scaling and teeth cleaning. Understanding normal sensitivity, gum healing, foods to avoid, and flossing tips by Aureva Dental Bangalore.",
-  "author": "Dr. Agniss Mishra, BDS",
+  "author": "Dr. Agniss Mishra",
   "authorRole": "Dental Surgeon & Preventive Care Lead",
-  "authorCredentials": "Dr. Agniss Mishra, BDS — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "authorCredentials": "Dr. Agniss Mishra — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
   "date": "September 2026",
   "datePublished": "2026-09-28",
   "dateModified": "2026-09-28",
@@ -1557,7 +1557,7 @@ export const BLOG_POSTS: BlogPost[] = [
       heading: "1. The Context of Dental Care: UK vs. India",
       paragraphs: [
         "In the UK, Band 3 NHS dental care (crowns, dentures, bridges) can involve waiting lists ranging from months to over two years in many NHS trusts. Private UK dental fees, meanwhile, have escalated alongside energy, real estate, and clinical staff wage inflation.",
-        "Bangalore, India has emerged as Asia's premier healthcare destination. With leading institutions like The Oxford Dental College, Bangalore combines world-class clinical expertise with state-of-the-art German CAD/CAM milling laboratories, hospital-grade Class-B autoclaves, and low-radiation digital RVG diagnostics."
+        "Bangalore, India has emerged as a premier healthcare destination. With leading institutions like The Oxford Dental College, Bangalore combines clinical expertise with state-of-the-art CAD/CAM milling laboratories, strict autoclave sterilization protocols, and low-radiation digital RVG diagnostics."
       ]
     },
     {
@@ -1572,10 +1572,11 @@ export const BLOG_POSTS: BlogPost[] = [
           ["Complete Implant with Abutment & Crown", "£2,095 – £3,700", "₹45,000 – ₹80,000", "~£354 – £630", "~83% lower (Midpoint: ~83.0%)"],
           ["Molar Root Canal (Rotary Endodontics)", "£645 – £1,060", "₹6,000 – ₹10,000", "~£47 – £79", "~93% lower (Midpoint: ~92.6%)"],
           ["Monolithic Zirconia Crown (CAD/CAM)", "£850 – £1,337", "₹10,000 – ₹18,000", "~£79 – £142", "~89% – 91% lower (Midpoint: ~89.9%)"],
-          ["All-Ceramic / PFM Crown", "£720 – £1,100", "₹5,000 – ₹10,000", "~£39 – £79", "~93% – 95% lower (Midpoint: ~93.5%)"],
+          ["Dental Crown — PFM", "£720 – £1,100", "₹4,000 – ₹6,000", "~£31 – £47", "~95% – 96% lower (Midpoint: ~95.7%)"],
+          ["Dental Crown — Ceramic", "£720 – £1,100", "₹6,000 – ₹10,000", "~£47 – £79", "~93% lower (Midpoint: ~93.1%)"],
           ["Tooth Extraction (Simple to Surgical)", "£250 – £540", "₹1,500 – ₹10,000", "~£12 – £79", "~85% – 95% lower (Midpoint: ~88.5%)"],
           ["Comprehensive Clear Aligners", "£2,500 – £4,500", "₹80,000 – ₹2,50,000", "~£630 – £1,969", "~56% – 75% lower (Midpoint: ~62.9%)"],
-          ["Porcelain Veneer (Per Tooth)", "£650 – £1,200", "₹8,000 – ₹25,000", "~£63 – £197", "~84% – 90% lower (Midpoint: ~86.0%)"]
+          ["Porcelain Veneer (Per Tooth)", "£650 – £1,200", "₹8,000 – ₹24,000", "~£63 – £189", "~84% – 90% lower (Midpoint: ~86.4%)"]
         ]
       }
     },
@@ -1652,7 +1653,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ["All-Ceramic / Porcelain Crown", "$915 – $2,000", "₹6,000 – ₹10,000", "~$63 – $104", "~93% – 95% lower (Midpoint: ~94.3%)"],
           ["Tooth Extraction (Simple to Surgical)", "$150 – $702", "₹1,500 – ₹10,000", "~$16 – $104", "~85% – 90% lower (Midpoint: ~86.0%)"],
           ["Comprehensive Clear Aligners", "$3,500 – $7,500", "₹80,000 – ₹2,50,000", "~$833 – $2,604", "~65% – 76% lower (Midpoint: ~68.8%)"],
-          ["Porcelain Veneer (Per Tooth)", "$1,020 – $2,506", "₹8,000 – ₹25,000", "~$83 – $260", "~90% – 92% lower (Midpoint: ~90.3%)"]
+          ["Porcelain Veneer (Per Tooth)", "$1,020 – $2,506", "₹8,000 – ₹24,000", "~$83 – $250", "~90% – 92% lower (Midpoint: ~90.5%)"]
         ]
       }
     },
@@ -1663,7 +1664,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Administrative Overhead: US dental practices employ extensive administrative staff solely to handle insurance pre-authorizations, claims processing, and denials.",
         "Facility & Lease Expenses: Rent for clinical premises in North Bangalore is significantly lower than equivalent real estate in major US metropolitan areas.",
         "Medical Education Financing: Indian dentists train under merit-based university systems without incurring massive private student debts.",
-        "Quality Medical Hardware: Low-radiation digital RVG sensors, Class-B vacuum autoclaves, and CAD/CAM software adhere to international clinical standards."
+        "Quality Medical Hardware: Low-radiation digital RVG sensors, sealed pouch autoclave sterilization, and CAD/CAM software adhere to rigorous clinical standards."
       ]
     }
   ],

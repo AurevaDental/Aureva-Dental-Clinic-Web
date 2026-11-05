@@ -12,7 +12,7 @@ Aureva Dental is a premier dental practice located in Hennur Bande / Horamavu Ag
 
 ## Key Entity Details
 
-- **Lead Dental Surgeon**: Dr. Shweta Singh, BDS (The Oxford Dental College, Bangalore), Registered with Karnataka State Dental Council (KSDC).
+- **Lead Dental Surgeon**: Dr. Shweta Singh (The Oxford Dental College, Bangalore), Registered with Karnataka State Dental Council (KSDC).
 - **Physical Address**: 2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043, India.
 - **Landmark**: Directly opposite/near Nayara Petrol Bunk on Horamavu Agara Road.
 - **Catchment Areas Served**: Hennur, Horamavu, Manyata Tech Park, Kalyan Nagar, HRBR Layout, Kothanur, Kammanahalli, Banaswadi, Babusapalya, Geddalahalli, Chelekere, Bengaluru PIN 560043.
@@ -29,7 +29,7 @@ Aureva Dental is a premier dental practice located in Hennur Bande / Horamavu Ag
 - **Rotary Endodontics**: Single-visit root canal treatments (RCT) utilizing digital apex locators, nickel-titanium rotary files, and rubber dam isolation.
 - **Dental Implants**: Single-tooth, multiple-teeth, and full-arch osseointegrated titanium and zirconia implants with digital treatment planning.
 - **Clear Aligners**: Removable invisible orthodontics and custom digital alignment trays for mild to complex malocclusions.
-- **Pediatric Dentistry**: Child-friendly dental care, fluoride therapy, pit & fissure sealants, space maintainers, and painless restorations.
+- **Pediatric Dentistry**: Child-friendly dental care, fluoride therapy, pit & fissure sealants, space maintainers, and gentle restorations.
 - **Laser Gum Therapy**: Diode laser-assisted periodontal decontamination, gingivectomy, frenectomy, and aesthetic gum recontouring.
 - **Aesthetic Veneers & Smile Makeovers**: Ultra-thin porcelain/ceramic (E-max) veneers, composite bonding, and diastema closure.
 - **Wisdom Tooth & Oral Surgery**: Atraumatic surgical extractions of impacted mandibular third molars under local anesthesia.

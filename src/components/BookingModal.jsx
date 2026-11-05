@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const TREATMENTS = [
   "Clear Aligners & 3D Scan",
   "Dental Implants & Tooth Replacement",
-  "Root Canal Treatment (Painless Rotary RCT)",
+  "Root Canal Treatment (Rotary RCT)",
   "Consultation & Digital RVG X-Ray",
   "Professional Teeth Whitening",
   "Kids & Pediatric Dentistry",

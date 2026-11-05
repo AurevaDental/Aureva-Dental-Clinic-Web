@@ -14,7 +14,7 @@ export interface FaqItem {
 export const LOCAL_FAQS: FaqItem[] = [
   {
     question: "Where is Aureva Dental located?",
-    answer: "Aureva Dental is conveniently located at 2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Kothanur, and North Bengaluru with dedicated patient parking."
+    answer: "Aureva Dental is conveniently located at 2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Kothanur, and North Bengaluru with free parking downstairs for 2 cars and 5 to 8 bikes."
   },
   {
     question: "Can I pay with credit card or EMI at Aureva Dental?",
@@ -352,13 +352,6 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
           "@type": "EducationalOrganization",
           "name": "The Oxford Dental College, Bangalore"
         },
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "name": "Bachelor of Dental Surgery (BDS)"
-          }
-        ],
         "medicalSpecialty": [
           "Dentistry"
         ],
@@ -375,13 +368,6 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
           "@type": "EducationalOrganization",
           "name": "The Oxford Dental College, Bangalore"
         },
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "name": "Bachelor of Dental Surgery (BDS)"
-          }
-        ],
         "medicalSpecialty": [
           "Dentistry"
         ],

@@ -12,7 +12,7 @@
     "google_analytics_id": "G-7N3BPH5397",
     "google_tag_manager_id": "GTM-WRVN4QWK",
     "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
-    "rating_value": 5.0,
+    "rating_value": 5,
     "review_count": 35,
     "local_areas_served": [
       "Hennur",
@@ -156,12 +156,8 @@
         "title": "Crowns & Bridges",
         "items": [
           {
-            "name": "Metal Crown",
-            "price": "₹3,000 – ₹5,000"
-          },
-          {
             "name": "PFM Crown",
-            "price": "₹5,000 – ₹8,000"
+            "price": "₹4,000 – ₹6,000"
           },
           {
             "name": "Ceramic Crown",
@@ -172,8 +168,12 @@
             "price": "₹10,000 – ₹18,000"
           },
           {
-            "name": "Bridge (Per Unit)",
-            "price": "₹6,000 onwards"
+            "name": "Bridge (Per Unit, by material)",
+            "price": "₹4,000 – ₹18,000"
+          },
+          {
+            "name": "E-Max Crown",
+            "price": "₹10,000 – ₹18,000"
           }
         ]
       },
@@ -223,7 +223,7 @@
           },
           {
             "name": "Veneers (Per Tooth)",
-            "price": "₹8,000 – ₹25,000"
+            "price": "₹8,000 – ₹24,000"
           },
           {
             "name": "Smile Makeover",
@@ -235,8 +235,8 @@
         "title": "Bridal & Groom Smile Packages",
         "items": [
           {
-            "name": "Dental Check-up",
-            "price": "₹1,000"
+            "name": "Couple Consultation (Bride & Groom Together)",
+            "price": "₹1,000 (₹600 individual)"
           },
           {
             "name": "The Express Glow (Whitening + Polish)",
@@ -301,7 +301,7 @@
     "title": "Dentistry elevated<br/>into <span class=\"italic text-japandi-moss\">art.</span>",
     "paragraphs": [
       "At Aureva Dental, we believe your smile is the first thing the world notices about you - and the last thing you should leave to chance. We've built a studio, not a clinic. A space where precision meets aesthetics, and where every treatment is planned around your face, your goals, and your life.",
-      "Our philosophy is simple: beautiful dentistry begins with listening. We take the time to understand what you truly want, craft a plan unique to you, and walk alongside you every step of the way - with warmth, transparency, and clinical excellence."
+      "Our philosophy is simple: beautiful dentistry begins with listening. We take the time to understand what you truly want, craft a plan unique to you, and walk alongside you every step of the way - with warmth, transparency, and careful clinical attention."
     ],
     "quote": "\"A smile is the most powerful thing you wear. We make sure yours is perfectly designed.\"",
     "button_text": "Begin Your Journey",
@@ -340,7 +340,7 @@
   },
   "doctors_section": {
     "title": "Our Artisans",
-    "subtitle": "Meet the practitioners who blend clinical excellence with artistic care.",
+    "subtitle": "Meet the practitioners who blend careful clinical attention with artistic care.",
     "team": [
       {
         "id": "shweta",
@@ -442,7 +442,7 @@
   "social_proof": {
     "title": "Serene Experiences & Google Reviews",
     "subtitle": "VERIFIED PATIENT STORIES",
-    "google_rating": 5.0,
+    "google_rating": 5,
     "review_count": 35,
     "badge_text": "Verified 5.0★ on Google Maps",
     "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
