@@ -12,8 +12,8 @@ Aureva Dental is a modern dental practice located in Hennur Bande / Horamavu Aga
 
 ## Key Entity Details
 
-- **Lead Dental Surgeon**: Dr. Shweta Singh (The Oxford Dental College, Bangalore), Registered with Karnataka State Dental Council (KSDC).
-- **Physical Address**: 2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043, India.
+- **Lead Dental Surgeon**: Dr. Shweta Singh (The Oxford Dental College, Bangalore).
+- **Physical Address**: 2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043, India.
 - **Landmark**: Directly opposite/near Nayara Petrol Bunk on Horamavu Agara Road.
 - **Catchment Areas Served**: Hennur, Horamavu, Manyata Tech Park, Kalyan Nagar, HRBR Layout, Kothanur, Kammanahalli, Banaswadi, Babusapalya, Geddalahalli, Chelekere, Bengaluru PIN 560043.
 - **Price Range**: ₹₹ (Moderate, transparent itemized pricing).

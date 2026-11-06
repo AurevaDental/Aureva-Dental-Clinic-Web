@@ -15,7 +15,7 @@ export interface FaqItem {
 export const LOCAL_FAQS: FaqItem[] = [
   {
     question: "Where is Aureva Dental located?",
-    answer: "Aureva Dental is conveniently located at 2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Kothanur, and North Bengaluru with free parking downstairs for 2 cars and 5 to 8 bikes."
+    answer: "Aureva Dental is conveniently located at 2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Kothanur, and North Bengaluru with free parking downstairs for 2 cars and 5 to 8 bikes."
   },
   {
     question: "Can I pay with credit card or EMI at Aureva Dental?",
@@ -66,7 +66,7 @@ export function generateDentalClinicSchema() {
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
+      "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
       "addressLocality": "Bengaluru",
       "addressRegion": "Karnataka",
       "postalCode": "560043",
@@ -136,7 +136,6 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
     "https://www.google.com/maps?cid=10332859477033504351",
     "https://www.instagram.com/aurevadental",
     "https://www.facebook.com/aurevadental",
-    "https://www.practo.com/bangalore/clinic/aureva-dental-clinic-hennur",
     ...socialLinks
   ].filter((v, i, a) => typeof v === 'string' && v.length > 0 && a.indexOf(v) === i);
 
@@ -145,7 +144,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
     "@type": ["Dentist", "MedicalBusiness", "DentalClinic", "LocalBusiness"],
     "@id": "https://aurevadental.com/#dentist",
     "name": "Aureva Dental",
-    "legalName": "Aureva Dental Clinic",
+    "legalName": "Aureva Dental",
     "alternateName": [
       "Aureva Dental",
       "Aureva Dental Hennur",
@@ -158,7 +157,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       "https://aurevadental.com/og-image.jpg",
       "https://aurevadental.com/logo.png"
     ],
-    "description": "Aureva Dental is a modern dental clinic & smile studio at SLV Nilaya, Hennur Bande, Horamavu Agara Road, Bengaluru. Gentle root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
+    "description": "Aureva Dental is a modern dental clinic & smile studio at Horamavu Agara Road, Hennur Bande, Bengaluru. Gentle root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
     "telephone": "+917349701002",
     "email": "aurevadentalclinic@gmail.com",
     "priceRange": "₹₹",
@@ -179,7 +178,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
     "isAccessibleForFree": false,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
+      "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
       "addressLocality": "Bengaluru",
       "addressRegion": "Karnataka",
       "postalCode": "560043",
@@ -450,7 +449,7 @@ export function generateTreatmentServiceSchema(params: {
       "image": "https://aurevadental.com/og-image.jpg",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
+        "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
         "addressLocality": "Bengaluru",
         "addressRegion": "Karnataka",
         "postalCode": "560043",

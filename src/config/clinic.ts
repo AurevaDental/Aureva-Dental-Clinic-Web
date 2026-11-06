@@ -18,7 +18,7 @@ export const clinicConfig = {
   phone: "+91 73497 01002",
   phoneUrl: "tel:+917349701002",
   whatsappUrl: "https://wa.me/917349701002",
-  fullAddress: "2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043",
+  fullAddress: "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043",
   operatingHours: "Mon 4:00-9:00 PM; Tue-Sun 9:30 AM-9:00 PM (open Sundays)",
 };
 

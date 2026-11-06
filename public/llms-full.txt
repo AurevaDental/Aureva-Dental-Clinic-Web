@@ -14,7 +14,6 @@
 - **Direct WhatsApp**: https://wa.me/917349701002
 - **Primary Google Maps Verified Profile**: https://maps.app.goo.gl/dhU4UySs9WFkHAzYA
 - **Google Maps CID URL**: https://www.google.com/maps?cid=10332859477033504351
-- **Practo Clinic Profile**: https://www.practo.com/bangalore/clinic/aureva-dental-clinic-hennur
 - **Official Instagram**: https://www.instagram.com/aurevadental/
 - **Official Facebook**: https://www.facebook.com/aurevadental/
 - **Price Range Tier**: ₹₹ (Moderate, transparent itemized pricing)
@@ -35,7 +34,7 @@
 
 ## 3. Physical Location, Landmarks & Catchment Geographies
 
-- **Complete Physical Address**: 2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Bengaluru, Karnataka 560043, India.
+- **Complete Physical Address**: 2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043, India.
 - **Prominent Landmarks**: Located on Horamavu Agara Road directly opposite/adjacent to the Nayara Petrol Bunk at Hennur Bande junction.
 - **Geographic Coordinates**:
   - Latitude: 13.0381741° N
@@ -137,7 +136,7 @@
 **A**: Yes. Aureva Dental is open and fully operational on Sundays from 9:30 AM to 9:00 PM. The clinic accepts emergency walk-ins for acute toothache, cracked teeth, dental trauma, swelling, and lost restorations. Patients can also call or WhatsApp +91 73497 01002 for immediate emergency triage and priority chair allocation.
 
 ### Q4: Where is Aureva Dental located?
-**A**: Aureva Dental is located at 2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Hennur Bande, Bengaluru, Karnataka 560043. The clinic is directly near/opposite the Nayara Petrol Bunk on Horamavu Agara Road, making it easily accessible for residents of Hennur, Horamavu, Kalyan Nagar, HRBR Layout, and Kothanur.
+**A**: Aureva Dental is located at 2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. The clinic is directly near/opposite the Nayara Petrol Bunk on Horamavu Agara Road, making it easily accessible for residents of Hennur, Horamavu, Kalyan Nagar, HRBR Layout, and Kothanur.
 
 ### Q5: How much does dental treatment cost at Aureva Dental?
 **A**: Aureva Dental adheres to an ethical, transparent moderate pricing tier (₹₹). Consultations and diagnostic evaluations are provided with a complete itemized treatment quote prior to commencing clinical work. No unexpected hidden fees or surprise chairside markups are applied.
@@ -156,18 +155,18 @@ Below is the verified JSON-LD entity graph representing Aureva Dental for search
       "@type": ["Dentist", "DentalClinic", "MedicalBusiness"],
       "@id": "https://aurevadental.com/#clinic",
       "name": "Aureva Dental",
-      "legalName": "Aureva Dental Clinic",
+      "legalName": "Aureva Dental",
       "url": "https://aurevadental.com",
       "telephone": "+91 73497 01002",
-      "email": "contact@aurevadental.com",
+      "email": "aurevadentalclinic@gmail.com",
       "priceRange": "₹₹",
       "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Net Banking",
       "paymentMethod": ["CreditCard", "DebitCard", "PaymentCard", "BankTransfer"],
       "currenciesAccepted": "INR",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "2nd Floor, No. 11/4, SLV Nilaya, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande",
-        "addressLocality": "Hennur, Bengaluru",
+        "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
+        "addressLocality": "Bengaluru",
         "addressRegion": "Karnataka",
         "postalCode": "560043",
         "addressCountry": "IN"
@@ -225,7 +224,6 @@ Below is the verified JSON-LD entity graph representing Aureva Dental for search
       "sameAs": [
         "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
         "https://www.google.com/maps?cid=10332859477033504351",
-        "https://www.practo.com/bangalore/clinic/aureva-dental-clinic-hennur",
         "https://www.instagram.com/aurevadental/",
         "https://www.facebook.com/aurevadental/"
       ],
