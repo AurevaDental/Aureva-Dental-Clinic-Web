@@ -39,14 +39,14 @@ const { doctors_section, show_doctor_images } = config;
         >
           <!-- Image Container with warm tone filter -->
           <div class="relative aspect-[4/4.5] w-full bg-japandi-clay/30 overflow-hidden flex items-center justify-center">
-            {show_doctor_images !== false ? (
+            {doctor.image_url && !doctor.image_url.includes('unsplash') ? (
               <img 
                 src={doctor.image_url} 
-                alt={`${doctor.name} - ${doctor.role} at Aureva Dental Clinic`}
+                alt={`${doctor.name} - ${doctor.role} at Aureva Dental`}
                 loading="lazy"
                 width="600"
                 height="675"
-                class="w-full h-full object-cover filter sepia-[0.15] contrast-[0.98] transition-transform duration-700 hover:scale-105"
+                class="w-full h-full object-cover object-top filter contrast-[1.02] transition-transform duration-700 hover:scale-105"
               />
             ) : (
               <img src="/logo.webp" alt="Aureva Dental Clinic in Hennur Bangalore" width="96" height="96" class="h-24 w-auto object-contain opacity-30 dark:invert dark:brightness-125 dark:hue-rotate-180" />

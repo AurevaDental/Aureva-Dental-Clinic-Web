@@ -355,6 +355,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
         "@type": "Person",
         "name": "Dr. Shweta Singh",
         "jobTitle": "Co-founder & Clinical Head",
+        "image": "https://aurevadental.com/assets/dr-shweta-singh.webp",
         "alumniOf": {
           "@type": "EducationalOrganization",
           "name": "The Oxford Dental College, Bangalore"
