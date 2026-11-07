@@ -103,12 +103,14 @@ export default function BookingModal() {
 
     const whatsappUrl = `https://wa.me/917349701002?text=${encodeURIComponent(message)}`;
 
-    // Push booking submit event to GTM dataLayer
-    if (typeof window !== 'undefined' && window.dataLayer) {
+    // Push booking_whatsapp_submit event to GTM dataLayer
+    if (typeof window !== 'undefined') {
+      window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: 'booking_submit',
+        event: 'booking_whatsapp_submit',
         treatment: selectedTreatment,
-        slot: selectedSlot
+        page_path: window.location.pathname,
+        preferred_time: selectedSlot
       });
     }
 
