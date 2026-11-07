@@ -66,10 +66,29 @@ export interface TeamMember {
   philosophy: string;
 }
 
+export interface VisitingSpecialist {
+  code: string;
+  tag: string;
+  doctor_name?: string;
+  specialty: string;
+  role: string;
+  degree: string;
+  focus: string;
+  availability: string;
+}
+
+export interface VisitingSpecialistsSection {
+  title: string;
+  subtitle: string;
+  badge: string;
+  specialists: VisitingSpecialist[];
+}
+
 export interface DoctorsSection {
   title: string;
   subtitle: string;
   team: TeamMember[];
+  visiting_specialists_section?: VisitingSpecialistsSection;
 }
 
 export interface Location {

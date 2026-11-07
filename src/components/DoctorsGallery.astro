@@ -118,10 +118,15 @@ const { doctors_section, show_doctor_images } = config;
                   </span>
                 </div>
                 <div>
-                  <h4 class="font-serif text-lg text-japandi-charcoal font-medium group-hover:text-japandi-moss transition-colors">
+                  {spec.doctor_name && (
+                    <h4 class="font-serif text-lg text-japandi-charcoal font-medium group-hover:text-japandi-moss transition-colors">
+                      {spec.doctor_name}
+                    </h4>
+                  )}
+                  <div class={`font-serif ${spec.doctor_name ? 'text-xs text-japandi-moss font-semibold mt-0.5' : 'text-lg text-japandi-charcoal font-medium group-hover:text-japandi-moss'} transition-colors`}>
                     {spec.role}
-                  </h4>
-                  <span class="text-[11px] text-japandi-earth font-medium block mt-0.5">
+                  </div>
+                  <span class="text-[11px] text-japandi-earth font-light block mt-0.5">
                     {spec.specialty}
                   </span>
                 </div>

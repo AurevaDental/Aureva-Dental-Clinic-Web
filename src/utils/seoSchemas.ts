@@ -383,6 +383,30 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Pala Satya Sri",
+        "jobTitle": "Consultant Oral & Maxillofacial Surgeon",
+        "medicalSpecialty": [
+          "OralSurgery"
+        ],
+        "description": "Consultant oral and maxillofacial surgeon at Aureva Dental, specializing in surgical wisdom tooth removal and minor oral surgeries.",
+        "worksFor": {
+          "@id": "https://aurevadental.com/#dentist"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Panshul V Kharche",
+        "jobTitle": "Consultant Periodontist & Implantologist",
+        "medicalSpecialty": [
+          "Periodontics"
+        ],
+        "description": "Consultant periodontist and implantologist at Aureva Dental, specializing in laser gum therapy, regenerative periodontal procedures, and dental implants.",
+        "worksFor": {
+          "@id": "https://aurevadental.com/#dentist"
+        }
       }
     ],
     "aggregateRating": {

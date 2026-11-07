@@ -385,8 +385,9 @@
         {
           "code": "omfs",
           "tag": "OMFS",
+          "doctor_name": "Dr. Pala Satya Sri",
           "specialty": "Oral & Maxillofacial Surgery",
-          "role": "Consultant Maxillofacial Surgeon",
+          "role": "Consultant Oral & Maxillofacial Surgeon",
           "degree": "MDS (Oral & Maxillofacial Surgery)",
           "focus": "Deep Impacted Wisdom Teeth, Surgical Tooth Removal & Jaw Minor Surgeries",
           "availability": "Case-to-Case Scheduled Appointments"
@@ -394,9 +395,10 @@
         {
           "code": "perio",
           "tag": "Perio",
+          "doctor_name": "Dr. Panshul V Kharche",
           "specialty": "Periodontology & Oral Implantology",
-          "role": "Consultant Periodontist",
-          "degree": "MDS (Periodontics)",
+          "role": "Consultant Periodontist & Implantologist",
+          "degree": "MDS (Periodontics & Implantology)",
           "focus": "Laser Gum Therapy, Bone Grafting, Pocket Reduction & Implant Site Development",
           "availability": "Case-to-Case Scheduled Appointments"
         },
