@@ -18,9 +18,52 @@ const TIME_SLOTS = [
   "Evening (4:00 PM – 8:30 PM)"
 ];
 
+function getDefaultTreatmentForPath(pathname) {
+  if (!pathname) return "Consultation & Digital RVG X-Ray";
+  const path = pathname.toLowerCase();
+  if (path.includes('root-canal')) {
+    return "Root Canal Treatment (Rotary RCT)";
+  }
+  if (path.includes('teeth-whitening') || path.includes('whitening')) {
+    return "Professional Teeth Whitening";
+  }
+  if (path.includes('wisdom-tooth') || path.includes('tooth-extraction')) {
+    return "Wisdom Tooth Removal & Oral Surgery";
+  }
+  if (path.includes('pediatric-dentistry') || path.includes('kids')) {
+    return "Kids & Pediatric Dentistry";
+  }
+  if (path.includes('scaling-and-polishing') || path.includes('gum-treatment')) {
+    // Gap: No scaling or gum treatment option exists in TREATMENTS.
+    // Closest match: Consultation & Digital RVG X-Ray.
+    return "Consultation & Digital RVG X-Ray";
+  }
+  if (path.includes('clear-aligners') || path.includes('invisible-aligners')) {
+    return "Clear Aligners & 3D Scan";
+  }
+  if (path.includes('dental-implants')) {
+    return "Dental Implants & Tooth Replacement";
+  }
+  if (path.includes('emergency-dentist') || path.includes('emergency-dental')) {
+    return "Emergency Dental Care";
+  }
+  if (path.includes('cosmetic-dentistry') || path.includes('smile-makeover') || path.includes('dental-crowns')) {
+    return "Cosmetic Veneers & Smile Makeover";
+  }
+  return "Consultation & Digital RVG X-Ray";
+}
+
+function isMondayDate(dateStr) {
+  if (!dateStr) return false;
+  const parts = dateStr.split('-');
+  if (parts.length !== 3) return false;
+  const d = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+  return d.getDay() === 1;
+}
+
 export default function BookingModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedTreatment, setSelectedTreatment] = useState(TREATMENTS[0]);
+  const [selectedTreatment, setSelectedTreatment] = useState("Consultation & Digital RVG X-Ray");
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedSlot, setSelectedSlot] = useState(TIME_SLOTS[0]);
   const [fullName, setFullName] = useState('');
@@ -29,14 +72,23 @@ export default function BookingModal() {
   const [submitted, setSubmitted] = useState(false);
   const [lastWhatsappUrl, setLastWhatsappUrl] = useState('');
 
-  // Set default date to tomorrow
+  // Set default date to tomorrow and default treatment from page
   useEffect(() => {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     const yyyy = tomorrow.getFullYear();
     const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
     const dd = String(tomorrow.getDate()).padStart(2, '0');
-    setSelectedDate(`${yyyy}-${mm}-${dd}`);
+    const tomorrowStr = `${yyyy}-${mm}-${dd}`;
+    setSelectedDate(tomorrowStr);
+
+    if (isMondayDate(tomorrowStr)) {
+      setSelectedSlot(TIME_SLOTS[2]);
+    }
+
+    if (typeof window !== 'undefined') {
+      setSelectedTreatment(getDefaultTreatmentForPath(window.location.pathname));
+    }
   }, []);
 
   // Global event listener to open modal from anywhere in the Astro app
@@ -46,6 +98,8 @@ export default function BookingModal() {
       if (treatment) {
         const matched = TREATMENTS.find(t => t.toLowerCase().includes(treatment.toLowerCase()));
         if (matched) setSelectedTreatment(matched);
+      } else if (typeof window !== 'undefined') {
+        setSelectedTreatment(getDefaultTreatmentForPath(window.location.pathname));
       }
       setSubmitted(false);
       setIsOpen(true);
@@ -59,6 +113,8 @@ export default function BookingModal() {
         if (trt) {
           const match = TREATMENTS.find(t => t.toLowerCase().includes(trt.toLowerCase()));
           if (match) setSelectedTreatment(match);
+        } else if (typeof window !== 'undefined') {
+          setSelectedTreatment(getDefaultTreatmentForPath(window.location.pathname));
         }
         setSubmitted(false);
         setIsOpen(true);
@@ -159,7 +215,7 @@ export default function BookingModal() {
             Reserve Your Dental Visit
           </h2>
           <p className="text-xs sm:text-sm text-japandi-earth font-light mt-1.5">
-            Calm, unhurried care at our Japandi studio. No waiting queues.
+            Calm, unhurried care at our Hennur studio.
           </p>
         </div>
 
@@ -229,7 +285,13 @@ export default function BookingModal() {
                   <input
                     type="date"
                     value={selectedDate}
-                    onChange={(e) => setSelectedDate(e.target.value)}
+                    onChange={(e) => {
+                      const newDate = e.target.value;
+                      setSelectedDate(newDate);
+                      if (isMondayDate(newDate)) {
+                        setSelectedSlot(TIME_SLOTS[2]);
+                      }
+                    }}
                     min={new Date().toISOString().split('T')[0]}
                     required
                     className="w-full px-4 py-3 rounded-2xl border border-japandi-clay/60 bg-japandi-sand/40 text-xs sm:text-sm text-japandi-charcoal focus:border-japandi-moss focus:outline-none transition-colors"
@@ -245,10 +307,22 @@ export default function BookingModal() {
                     onChange={(e) => setSelectedSlot(e.target.value)}
                     className="w-full px-4 py-3 rounded-2xl border border-japandi-clay/60 bg-japandi-sand/40 text-xs sm:text-sm text-japandi-charcoal focus:border-japandi-moss focus:outline-none transition-colors"
                   >
-                    {TIME_SLOTS.map((s) => (
-                      <option key={s} value={s}>{s}</option>
-                    ))}
+                    {TIME_SLOTS.map((s, idx) => {
+                      const isMonday = isMondayDate(selectedDate);
+                      const isMorningOrAfternoon = idx === 0 || idx === 1;
+                      const disabled = isMonday && isMorningOrAfternoon;
+                      return (
+                        <option key={s} value={s} disabled={disabled}>
+                          {s} {disabled ? '(Unavailable on Monday)' : ''}
+                        </option>
+                      );
+                    })}
                   </select>
+                  {isMondayDate(selectedDate) && (
+                    <p className="text-[11px] text-amber-700 dark:text-amber-400 font-medium mt-1.5">
+                      Monday: evening slots only (4–9 PM)
+                    </p>
+                  )}
                 </div>
               </div>
 
