@@ -68,7 +68,7 @@
     },
     {
       "label": "Verified Reviews",
-      "value": 35,
+      "value": 40,
       "suffix": "+"
     },
     {
@@ -109,7 +109,7 @@
       },
       {
         "title": "Root Canal Treatment (RCT)",
-        "description": "Specialized Root Canal Treatments focusing on absolute disinfection, micro-precision cleaning, and long-term tooth preservation using multi-sitting specialized clinical protocols and digital imaging.",
+        "description": "Specialized Root Canal Treatments focusing on careful disinfection, micro-precision cleaning, and long-term tooth preservation using multi-sitting specialized clinical protocols and digital imaging.",
         "items": [
           {
             "name": "RCT (Anterior Tooth)",
@@ -323,7 +323,7 @@
       },
       {
         "title": "Transparent Pricing",
-        "description": "Full clarity before treatment. No surprise costs, ever.",
+        "description": "Transparent pricing: quoted before treatment.",
         "icon": "target"
       }
     ]
