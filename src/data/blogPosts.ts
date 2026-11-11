@@ -156,7 +156,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     conclusion: "Investing in clear aligners is an investment in your lifelong dental health, facial balance, and self-confidence. Schedule your 3D digital scan at Aureva Dental in Hennur to start your journey.",
-    ctaHeadline: "Ready to Explore Clear Aligners in North Bengaluru?",
+    ctaHeadline: "Ready to Explore Clear Aligners in North Bangalore?",
     ctaText: "Visit Aureva Dental on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp our clinical desk for your comprehensive 3D digital smile scan."
   },
   {
@@ -243,7 +243,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "5. Post-Endodontic Recovery & Long-Term Tooth Care Guidelines",
         paragraphs: [
           "Understanding the recovery timeline helps you protect your newly treated tooth while the surrounding periodontal tissues heal:",
-          "Immediate 24 to 48 Hours: While the internal dental nerve has been permanently removed, the microscopic ligament supporting the tooth root in the jawbone remains slightly sensitized from instrumentation. Mild tenderness when tapping or chewing is completely normal and dissipates within 48 to 72 hours with routine over-the-counter anti-inflammatories.",
+          "Immediate 24 to 48 Hours: While the internal dental nerve has been removed, the microscopic ligament supporting the tooth root in the jawbone remains slightly sensitized from instrumentation. Mild tenderness when tapping or chewing is completely normal and dissipates within 48 to 72 hours with routine over-the-counter anti-inflammatories.",
           "Temporary Seal Care: If your crown is scheduled for fabrication over the following week, avoid chewing hard foods (such as nuts, crusty bread, or hard candies) on the treated side. Once your custom-milled monolithic zirconia crown is securely cemented, your tooth is fully reinforced and capable of withstanding normal biting forces for decades."
         ],
         bulletPoints: [
@@ -439,7 +439,7 @@ export const BLOG_POSTS: BlogPost[] = [
         callout: {
           type: "info",
           title: "Pre-Extraction Diagnostic RVG Imaging",
-          text: "At Aureva Dental in Hennur, every extraction is preceded by high-resolution digital RVG radiography (consultation ₹600) to trace root proximity to the inferior alveolar nerve canal or maxillary sinus, eliminating clinical guesswork."
+          text: "At Aureva Dental in Hennur, every extraction is preceded by high-resolution digital RVG radiography (consultation ₹600) to trace root proximity to the inferior alveolar nerve canal or maxillary sinus, for precise clinical planning."
         }
       },
       {
@@ -667,7 +667,7 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Whitening Method", "Typical Cost Range (INR)", "Expected Results & Timeline"],
           rows: [
-            ["In-Office Advanced LED/Laser Teeth Whitening", "₹8,000 – ₹15,000", "4 to 8 shades brighter in a single 45 to 60-minute session; immediate results"],
+            ["In-Office Advanced LED/Laser Teeth Whitening", "₹8,000 – ₹15,000", "Single 45 to 60-minute session; results vary from person to person"],
             ["Customized Dentist Take-Home Trays", "₹5,000 – ₹9,000", "Custom lab-made trays + medical gel; gradual 3 to 6-shade lift over 10 to 14 days"],
             ["Combination Package (In-Office + Take-Home Kit)", "₹12,000 – ₹18,000", "Maximum radiance: Immediate laser lift plus home maintenance kit for annual touch-ups"],
             ["Over-the-Counter Strips & Charcoal Pastes", "₹500 – ₹2,500", "Minimal 1 to 2 shades lift; abrasive pastes frequently strip protective enamel"]
@@ -685,7 +685,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Supermarkets and online pharmacies are flooded with charcoal toothpastes, whitening pens, and generic LED mouthpieces. Why do dental clinics charge more, and what makes professional treatment vastly superior?",
           "Concentration of Active Agent: Commercial OTC products are legally limited to less than 3% to 6% hydrogen peroxide, which only scrubs surface superficial stains. In-office clinical whitening uses 25% to 35% medical-grade hydrogen peroxide that penetrates deep into dentinal tubules to oxidize embedded molecular pigments.",
           "Gingival Barrier Protection: At Aureva Dental, we apply a light-cured liquid rubber dam resin over your gums and mucosal tissues before applying the bleaching gel. This prevents chemical burns and gum blistering.",
-          "Desensitizing Formulations: Our whitening gels contain potassium nitrate and amorphous calcium phosphate (ACP) to occlude open dentinal tubules, reducing post-procedure sensitivity to near zero."
+          "Desensitizing Formulations: Our whitening gels contain potassium nitrate and amorphous calcium phosphate (ACP) to occlude open dentinal tubules, reducing post-procedure sensitivity."
         ]
       },
       {
@@ -717,7 +717,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "To understand why medical whitening is both safe and effective, one must examine enamel anatomy. Natural tooth enamel consists of tightly packed hydroxyapatite mineral crystals interwoven with organic protein matrices and microscopic fluid channels called enamel rods.",
           "Chromogens from food, beverages, and tobacco lodge deep within these enamel rods, absorbing light and causing dark, yellow, or grayish discoloration. Medical-grade bleaching gels produce free oxygen radicals that penetrate these microscopic tubules, breaking the complex double carbon bonds of chromogen molecules into smaller, colorless compounds without stripping enamel minerals.",
-          "At Aureva Dental in Hennur, we pair our LED/Laser whitening protocols with amorphous calcium phosphate (ACP) and fluoride remineralization therapy. This immediately re-hardens the enamel surface and seals the dentinal tubules, eliminating post-operative sensitivity while imparting a high-gloss, glass-smooth finish."
+          "At Aureva Dental in Hennur, we pair our LED/Laser whitening protocols with amorphous calcium phosphate (ACP) and fluoride remineralization therapy. This immediately re-hardens the enamel surface and seals the dentinal tubules, reducing post-operative sensitivity while imparting a high-gloss, glass-smooth finish."
         ],
         bulletPoints: [
           "Peroxide oxidation targets organic chromogens without dissolving inorganic mineral enamel",
@@ -742,7 +742,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         question: "Will I experience sensitive teeth after whitening?",
-        answer: "Some patients experience mild temperature sensitivity for 12 to 24 hours. At Aureva Dental, our specialized desensitizing protocols and post-procedure remineralizing agents ensure minimal to zero discomfort."
+        answer: "Some patients experience mild temperature sensitivity for 12 to 24 hours. At Aureva Dental, our specialized desensitizing protocols and post-procedure remineralizing agents ensure minimal discomfort."
       },
       {
         question: "Can pregnant or breastfeeding women undergo teeth whitening?",
