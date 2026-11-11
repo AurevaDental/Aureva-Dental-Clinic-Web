@@ -15,7 +15,7 @@ export interface FaqItem {
 export const LOCAL_FAQS: FaqItem[] = [
   {
     question: "Where is Aureva Dental located?",
-    answer: "Aureva Dental is conveniently located at 2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Kothanur, and North Bengaluru with free parking downstairs for 2 cars and 5 to 8 bikes."
+    answer: "Aureva Dental is conveniently located at 2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Kothanur, and North Bangalore with free parking downstairs for 2 cars and 5 to 8 bikes."
   },
   {
     question: "Can I pay with credit card or EMI at Aureva Dental?",
@@ -66,7 +66,7 @@ export function generateDentalClinicSchema() {
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
+      "streetAddress": "2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
       "addressLocality": "Bengaluru",
       "addressRegion": "Karnataka",
       "postalCode": "560043",
@@ -149,7 +149,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       "Aureva Dental",
       "Aureva Dental Hennur",
       "Aureva Dental Horamavu",
-      "Aureva Dental Clinic Bengaluru"
+      "Aureva Dental Clinic Bangalore"
     ],
     "url": "https://aurevadental.com/",
     "logo": "https://aurevadental.com/logo.png",
@@ -157,7 +157,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       "https://aurevadental.com/og-image.jpg",
       "https://aurevadental.com/logo.png"
     ],
-    "description": "Aureva Dental is a modern dental clinic & smile studio at Horamavu Agara Road, Hennur Bande, Bengaluru. Gentle root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
+    "description": "Aureva Dental is a modern dental clinic & smile studio at Horamavu Agara Road, Hennur Bande, Bangalore. Gentle root canal, dental implants, aligners & cosmetic dentistry. Call +91 73497 01002.",
     "telephone": "+917349701002",
     "email": "aurevadentalclinic@gmail.com",
     "priceRange": "₹₹",
@@ -178,7 +178,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
     "isAccessibleForFree": false,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
+      "streetAddress": "2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
       "addressLocality": "Bengaluru",
       "addressRegion": "Karnataka",
       "postalCode": "560043",
@@ -234,62 +234,62 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
     "areaServed": [
       {
         "@type": "AdministrativeArea",
-        "name": "Hennur, Bengaluru",
+        "name": "Hennur, Bangalore",
         "postalCode": "560043"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "Horamavu, Bengaluru",
+        "name": "Horamavu, Bangalore",
         "postalCode": "560043"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "Hennur Bande, Bengaluru",
+        "name": "Hennur Bande, Bangalore",
         "postalCode": "560043"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "Kalyan Nagar, Bengaluru"
+        "name": "Kalyan Nagar, Bangalore"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "HRBR Layout, Bengaluru"
+        "name": "HRBR Layout, Bangalore"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "Kothanur, Bengaluru"
+        "name": "Kothanur, Bangalore"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "Babusapalya, Bengaluru"
+        "name": "Babusapalya, Bangalore"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "Kammanahalli, Bengaluru"
+        "name": "Kammanahalli, Bangalore"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "Banaswadi, Bengaluru"
+        "name": "Banaswadi, Bangalore"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "Ramamurthy Nagar, Bengaluru"
+        "name": "Ramamurthy Nagar, Bangalore"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "Chelekere, Bengaluru"
+        "name": "Chelekere, Bangalore"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "Geddalahalli, Bengaluru"
+        "name": "Geddalahalli, Bangalore"
       },
       {
         "@type": "AdministrativeArea",
-        "name": "North Bengaluru"
+        "name": "North Bangalore"
       },
       {
         "@type": "City",
-        "name": "Bengaluru"
+        "name": "Bangalore"
       },
       {
         "@type": "GeoShape",
@@ -320,7 +320,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       {
         "@type": "MedicalProcedure",
         "name": "Dental Implants",
-        "description": "Permanent tooth replacement with biocompatible titanium implants and lifelike crowns."
+        "description": "Tooth replacement with biocompatible titanium implants and lifelike crowns."
       },
       {
         "@type": "MedicalProcedure",
@@ -474,7 +474,7 @@ export function generateTreatmentServiceSchema(params: {
       "image": "https://aurevadental.com/og-image.jpg",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
+        "streetAddress": "2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
         "addressLocality": "Bengaluru",
         "addressRegion": "Karnataka",
         "postalCode": "560043",

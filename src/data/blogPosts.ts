@@ -198,7 +198,7 @@ export const BLOG_POSTS: BlogPost[] = [
         callout: {
           type: "tip",
           title: "Consultation & Digital Imaging",
-          text: "At Aureva Dental, an emergency consultation including high-resolution low-radiation digital RVG X-rays is ₹600. Our dental surgeons assess apical bone health, root curvature, and canal calcification upfront so you receive an exact written quote with zero hidden surprises."
+          text: "At Aureva Dental, an emergency consultation including high-resolution low-radiation digital RVG X-rays is ₹600. Our dental surgeons assess apical bone health, root curvature, and canal calcification upfront so you receive an exact written quote with prices quoted before treatment."
         }
       },
       {
@@ -206,7 +206,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Several anatomical and technological factors influence the total investment required for an endodontic procedure:",
           "Anatomical Canal Curvature and Calcification: Molars frequently possess 3, 4, or even 5 fine, curved root canals. Calcified canals require specialized ultrasonic tips and micro-endodontic handpieces to navigate safely without instrument fracture.",
-          "Single-Sitting vs Multi-Sitting Protocols: When a tooth is acutely inflamed without active pus drainage, single-sitting RCT completes cleaning, shaping, and sealing in 45 to 60 minutes. Severely abscessed teeth require a two-visit protocol where antibacterial calcium hydroxide medication is sealed inside the canal for 7 days to eliminate bone infections before final obturation.",
+          "Single-Sitting vs Multi-Sitting Protocols: When a tooth is acutely inflamed without active pus drainage, single-sitting RCT completes cleaning, shaping, and sealing in 45 to 60 minutes. Severely abscessed teeth require a two-visit protocol where antibacterial calcium hydroxide medication is sealed inside the canal for 7 days to resolve bone infections before final obturation.",
           "Rotary Titanium Instrumentation vs Manual Hand Files: High-end clinics utilize motorized nickel-titanium (NiTi) rotary files with computerized apex locators. This technology ensures 98%+ measurement precision and minimizes post-operative soreness compared to older manual filing techniques."
         ],
         bulletPoints: [
@@ -227,7 +227,7 @@ export const BLOG_POSTS: BlogPost[] = [
           headers: ["Crown Type", "Typical Price (INR)", "Aesthetic & Structural Properties"],
           rows: [
             ["Porcelain-Fused-to-Metal (PFM)", "₹4,000 – ₹6,000", "Strong metal core with ceramic outer layer; good for back molars on a budget"],
-            ["CAD/CAM Monolithic Zirconia", "₹10,000 – ₹18,000", "Virtually indestructible digital milling; fully biocompatible with natural tooth shade"],
+            ["CAD/CAM Monolithic Zirconia", "₹10,000 – ₹18,000", "High-strength precision digital milling; fully biocompatible with natural tooth shade"],
             ["E-Max Lithium Disilicate Ceramic", "₹10,000 – ₹18,000", "Exceptional lifelike translucency and light transmission; ideal for premolars and front teeth"]
           ]
         }
@@ -244,10 +244,10 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Understanding the recovery timeline helps you protect your newly treated tooth while the surrounding periodontal tissues heal:",
           "Immediate 24 to 48 Hours: While the internal dental nerve has been permanently removed, the microscopic ligament supporting the tooth root in the jawbone remains slightly sensitized from instrumentation. Mild tenderness when tapping or chewing is completely normal and dissipates within 48 to 72 hours with routine over-the-counter anti-inflammatories.",
-          "Temporary Seal Care: If your crown is scheduled for fabrication over the following week, avoid chewing hard foods (such as nuts, crusty bread, or hard candies) on the treated side. Once your custom-milled monolithic zirconia crown is permanently cemented, your tooth is fully reinforced and capable of withstanding normal biting forces for decades."
+          "Temporary Seal Care: If your crown is scheduled for fabrication over the following week, avoid chewing hard foods (such as nuts, crusty bread, or hard candies) on the treated side. Once your custom-milled monolithic zirconia crown is securely cemented, your tooth is fully reinforced and capable of withstanding normal biting forces for decades."
         ],
         bulletPoints: [
-          "Avoid eating hard or crunchy foods until your permanent crown is bonded",
+          "Avoid eating hard or crunchy foods until your custom crown is bonded",
           "Continue normal brushing and flossing right up to the gumline without hesitation",
           "Attend routine 6-month check-ups with digital RVG monitoring to verify complete bone healing",
           "Contact our Hennur clinic immediately if you experience persistent bite discomfort or swelling"
@@ -473,7 +473,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "5. Tooth Replacement Options Following Extraction: Implants vs Bridges",
         paragraphs: [
-          "Leaving an empty space after extracting a permanent chewing molar triggers long-term dental complications. Over several months, adjacent teeth tilt toward the gap, while the opposing tooth in the opposite jaw over-erupts into the vacant space, disrupting your bite and causing TMJ stress.",
+          "Leaving an empty space after extracting an adult chewing molar triggers long-term dental complications. Over several months, adjacent teeth tilt toward the gap, while the opposing tooth in the opposite jaw over-erupts into the vacant space, disrupting your bite and causing TMJ stress.",
           "At Aureva Dental, we discuss replacement alternatives before performing the extraction:",
           "Dental Implants (₹45,000 to ₹80,000): The gold standard biological replacement. A titanium root screw stimulates the jawbone, preventing atrophy, while a custom zirconia crown restores full chewing efficiency without touching neighboring teeth.",
           "Fixed Dental Bridges (₹4,000 to ₹18,000 per unit depending on material — PFM ₹4,000 – ₹6,000, Ceramic ₹6,000 – ₹10,000, Zirconia ₹10,000 – ₹18,000 per unit): A non-surgical, fixed restoration where adjacent healthy teeth anchor the replacement tooth.",
@@ -490,7 +490,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         question: "Is tooth extraction painful at Aureva Dental?",
-        answer: "No. Our dental surgeons utilize profound computerized local anesthesia and topical numbing agents. You will feel mechanical pressure as the tooth is elevated, but zero sharp pain during the entire procedure."
+        answer: "No. Our dental surgeons utilize profound computerized local anesthesia and topical numbing agents. You will feel mechanical pressure as the tooth is elevated, and the area is numbed before treatment so you feel pressure but not sharp pain."
       },
       {
         question: "How long does it take for an extraction socket to heal?",
@@ -513,7 +513,7 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: "Yes. Routine extractions and surgical wisdom tooth removals at Aureva Dental are performed under targeted local anesthesia, which numbs only the specific jaw quadrant without impairing cognitive alertness or motor coordination. You are fully capable of driving or taking transit home across Hennur, Horamavu, Kalyan Nagar, or Babusapalya immediately following your visit."
       }
     ],
-    conclusion: "When a tooth cannot be saved, gentle atraumatic extraction at Aureva Dental provides immediate relief while preserving your alveolar bone for future restorative options.",
+    conclusion: "When a tooth cannot be saved, gentle atraumatic extraction at Aureva Dental provides prompt pain relief while preserving your alveolar bone for future restorative options.",
     ctaHeadline: "Need Gentle, Comfortable Tooth Extraction in Hennur?",
     ctaText: "Visit Aureva Dental on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp to schedule a consultation with our oral surgery team."
   },
@@ -676,7 +676,7 @@ export const BLOG_POSTS: BlogPost[] = [
         callout: {
           type: "tip",
           title: "Pre-Whitening Cleaning Requirement",
-          text: "Professional teeth whitening must be preceded by an ultrasonic Scaling & Polishing (₹2,000 – ₹5,000) to eliminate surface plaque, calculus, and external tobacco/tea stains. Bleaching gel applied over calcified tartar cannot penetrate enamel pores evenly."
+          text: "Professional teeth whitening must be preceded by an ultrasonic Scaling & Polishing (₹2,000 – ₹5,000) to remove surface plaque, calculus, and external tobacco/tea stains. Bleaching gel applied over calcified tartar cannot penetrate enamel pores evenly."
         }
       },
       {
@@ -1600,7 +1600,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       question: "How long should a UK patient plan to spend in Bangalore for a root canal and crown?",
-      answer: "A complete endodontic restoration typically requires 3 to 5 business days in Bangalore for single-sitting rotary root canal treatment, digital scanning, CAD/CAM zirconia crown milling, and permanent cementation."
+      answer: "A complete endodontic restoration typically requires 3 to 5 business days in Bangalore for single-sitting rotary root canal treatment, digital scanning, CAD/CAM zirconia crown milling, and final cementation."
     },
     {
       question: "Can I claim treatment done at Aureva Dental on my UK private dental insurance?",
@@ -1637,7 +1637,7 @@ export const BLOG_POSTS: BlogPost[] = [
       heading: "1. The American Dental Reality: Insurance Caps & Out-of-Pocket Burden",
       paragraphs: [
         "In the US, complex restorative care frequently costs multiple thousands of dollars per quadrant. Many dental insurance plans exclude cosmetic dentistry entirely and provide only 50% coverage for major procedures like implants or crowns up to their annual maximum.",
-        "Bangalore has established itself as an international healthcare hub with direct access to Kempegowda International Airport (BLR). Clinics like Aureva Dental offer high-end restorative dentistry in a peaceful, hospital-grade environment with zero insurance paperwork hurdles."
+        "Bangalore has established itself as an international healthcare hub with direct access to Kempegowda International Airport (BLR). Clinics like Aureva Dental offer high-end restorative dentistry in a peaceful clinical environment without insurance paperwork hurdles."
       ]
     },
     {

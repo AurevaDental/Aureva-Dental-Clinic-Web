@@ -36,7 +36,8 @@ const configuredReviews = google_reviews && google_reviews.length > 0
 const displayReviews = reviews && reviews.length > 0 ? reviews : configuredReviews;
 
 const googleRating = clinicConfig.ratingValue;
-const reviewCount = clinicConfig.googleReviewsLabel;
+const reviewCount = clinicConfig.googleRating.count;
+const reviewLabel = clinicConfig.googleRating.label;
 const googleMapsReviewUrl = social_proof?.google_maps_url || locations_section.locations_list[0]?.google_maps_url || "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA";
 ---
 
@@ -68,7 +69,7 @@ const googleMapsReviewUrl = social_proof?.google_maps_url || locations_section.l
                 <h3 class="text-xl font-serif text-japandi-charcoal font-medium">{loc.name}</h3>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-japandi-moss/10 text-japandi-moss text-[10px] font-semibold uppercase tracking-wider">
                   <span class="w-1.5 h-1.5 rounded-full bg-japandi-moss"></span>
-                  Bengaluru Studio
+                  Bangalore Studio
                 </span>
               </div>
               
@@ -186,7 +187,7 @@ const googleMapsReviewUrl = social_proof?.google_maps_url || locations_section.l
                     "Banaswadi",
                     "Ramamurthy Nagar",
                     "Chelekere",
-                    "North Bengaluru"
+                    "North Bangalore"
                   ].map((area) => (
                     <span class="px-2.5 py-1 rounded-full bg-japandi-sand/80 border border-japandi-clay/60 text-[10px] text-japandi-charcoal">
                       {area}
