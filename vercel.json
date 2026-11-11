@@ -6,22 +6,22 @@
     {
       "source": "/treatments/root-canal-treatment",
       "destination": "/root-canal-treatment-hennur",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/treatments/dental-crowns",
       "destination": "/dental-crowns-hennur",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/treatments/wisdom-tooth-removal",
       "destination": "/wisdom-tooth-removal-hennur",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/treatments/teeth-whitening",
       "destination": "/teeth-whitening-hennur",
-      "permanent": true
+      "statusCode": 301
     }
   ]
 }
