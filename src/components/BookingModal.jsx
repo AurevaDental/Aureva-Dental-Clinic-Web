@@ -154,7 +154,7 @@ export default function BookingModal() {
       `• Preferred Date: ${selectedDate}`,
       `• Preferred Slot: ${selectedSlot}`,
       notes.trim() ? `• Notes/Symptoms: ${notes.trim()}` : null,
-      "• Studio: Hennur Bande, Bengaluru"
+      "• Studio: Hennur Bande, Bangalore"
     ].filter(Boolean).join("\n");
 
     const whatsappUrl = `https://wa.me/917349701002?text=${encodeURIComponent(message)}`;
@@ -209,7 +209,7 @@ export default function BookingModal() {
         <div className="p-6 sm:p-8 pb-4 border-b border-japandi-clay/30 bg-japandi-sand/30">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-japandi-moss/30 bg-japandi-moss/10 text-japandi-moss text-[10px] font-semibold uppercase tracking-widest mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-japandi-moss animate-pulse"></span>
-            Priority Slot Booking &bull; Hennur, Bengaluru
+            Priority Slot Booking &bull; Hennur, Bangalore
           </div>
           <h2 id="booking-modal-title" className="text-2xl sm:text-3xl font-serif font-medium text-japandi-charcoal tracking-tight">
             Reserve Your Dental Visit

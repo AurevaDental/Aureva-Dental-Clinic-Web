@@ -3,7 +3,7 @@
     "title": "Dental Clinic in Hennur Bangalore | Aureva Dental",
     "description": "Aureva Dental is a modern dental clinic in Hennur, Bangalore. Gentle root canals, dental implants, clear aligners & teeth whitening. Call +91 73497 01002.",
     "phone": "+91 73497 01002",
-    "address": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043",
+    "address": "2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043",
     "whatsapp_number": "917349701002",
     "whatsapp_default_message": "Hello, I would like to book an appointment at Aureva Dental.",
     "google_site_verification": "",
@@ -13,7 +13,7 @@
     "google_tag_manager_id": "GTM-WRVN4QWK",
     "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
     "rating_value": 5,
-    "review_count": 43,
+    "review_count": 47,
     "local_areas_served": [
       "Hennur",
       "Horamavu",
@@ -27,7 +27,7 @@
       "Chelekere",
       "Geddalahalli",
       "Kothanur",
-      "North Bengaluru"
+      "North Bangalore"
     ]
   },
   "theme_colors": {
@@ -68,8 +68,8 @@
     },
     {
       "label": "Verified Reviews",
-      "value": 40,
-      "suffix": "+"
+      "value": 47,
+      "suffix": ""
     },
     {
       "label": "Sterile Diagnostic Kits",
@@ -91,7 +91,7 @@
         "items": [
           {
             "name": "New Patient Consultation (Incl. RVG X-ray)",
-            "price": "₹600, valid for 6 months"
+            "price": "₹600 consultation · includes digital X-ray · valid for 6 months"
           },
           {
             "name": "Scaling & Polishing",
@@ -142,7 +142,7 @@
           },
           {
             "name": "Pit and Fissure Sealant",
-            "price": "₹1,500 – ₹2,500 per tooth"
+            "price": "₹1,500 per tooth"
           }
         ]
       }
@@ -211,7 +211,7 @@
         "items": [
           {
             "name": "Smile Consultation",
-            "price": "₹600"
+            "price": "₹600 consultation · includes digital X-ray · valid for 6 months"
           },
           {
             "name": "Digital Smile Design",
@@ -430,7 +430,7 @@
       {
         "id": "bengaluru",
         "name": "Aureva Dental",
-        "address": "2nd Floor, No. 11/4, Horamavu Agara Road, Near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043",
+        "address": "2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043",
         "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
         "latitude": 13.0381741,
         "longitude": 77.6416031,
@@ -445,8 +445,8 @@
     "title": "Serene Experiences & Google Reviews",
     "subtitle": "VERIFIED PATIENT STORIES",
     "google_rating": 5,
-    "review_count": 43,
-    "badge_text": "Verified 5.0★ on Google Maps",
+    "review_count": 47,
+    "badge_text": "5.0 (47 Google Reviews)",
     "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
   },
   "google_reviews": [],
