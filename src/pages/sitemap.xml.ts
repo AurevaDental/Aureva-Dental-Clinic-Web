@@ -39,17 +39,13 @@ const STATIC_ROUTES: StaticRoute[] = [
   { url: 'https://aurevadental.com/treatments/clear-aligners', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Clear Aligners & Invisible Braces in Bangalore' },
   { url: 'https://aurevadental.com/treatments/cosmetic-dentistry', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Cosmetic Dentistry in Bangalore' },
   { url: 'https://aurevadental.com/treatments/dental-bridges', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Dental Bridges in Bangalore' },
-  { url: 'https://aurevadental.com/treatments/dental-crowns', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Dental Crowns & Caps in Bangalore' },
   { url: 'https://aurevadental.com/treatments/dental-implants', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Dental Implants in Bangalore' },
   { url: 'https://aurevadental.com/treatments/dentures', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Custom Dentures in Bangalore' },
   { url: 'https://aurevadental.com/treatments/emergency-dentist', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Emergency Dentist in Bangalore' },
   { url: 'https://aurevadental.com/treatments/pediatric-dentistry', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Pediatric Dentistry in Bangalore' },
-  { url: 'https://aurevadental.com/treatments/root-canal-treatment', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Root Canal Treatment in Bangalore' },
   { url: 'https://aurevadental.com/treatments/scaling-and-polishing', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Teeth Cleaning & Scaling in Bangalore' },
   { url: 'https://aurevadental.com/treatments/smile-makeover', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Digital Smile Makeover in Bangalore' },
-  { url: 'https://aurevadental.com/treatments/teeth-whitening', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'LED/Laser Teeth Whitening in Bangalore' },
   { url: 'https://aurevadental.com/treatments/tooth-extraction', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Comfortable Tooth Extraction in Bangalore' },
-  { url: 'https://aurevadental.com/treatments/wisdom-tooth-removal', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Comfortable Wisdom Tooth Removal in Bangalore' },
 
   // International Patient & Traveler Pages
   { url: 'https://aurevadental.com/international-patients', changefreq: 'weekly', priority: '0.9', lastmod: '2026-10-04', title: 'International Patient Dental Care in North Bangalore' },

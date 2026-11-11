@@ -1,5 +1,27 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/treatments/root-canal-treatment",
+      "destination": "/root-canal-treatment-hennur",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/dental-crowns",
+      "destination": "/dental-crowns-hennur",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/wisdom-tooth-removal",
+      "destination": "/wisdom-tooth-removal-hennur",
+      "permanent": true
+    },
+    {
+      "source": "/treatments/teeth-whitening",
+      "destination": "/teeth-whitening-hennur",
+      "permanent": true
+    }
+  ]
 }

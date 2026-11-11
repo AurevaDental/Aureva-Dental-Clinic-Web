@@ -173,7 +173,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Endodontics & Restorative Dentistry",
     readTime: "8 min read",
     excerpt: "A transparent breakdown of root canal treatment cost in Hennur, Bangalore (₹4,000 to ₹10,000), factors determining single vs. multi-sitting RCT, crown types, and what to expect during gentle micro-endodontics.",
-    relatedTreatmentUrl: "/treatments/root-canal-treatment",
+    relatedTreatmentUrl: "/root-canal-treatment-hennur",
     relatedTreatmentName: "Root Canal Treatment (RCT)",
     introParagraphs: [
       "A severe, throbbing toothache is one of the most agonizing experiences a person can endure. When bacterial decay penetrates through hard enamel and dentin into the vascular dental pulp, the nerve becomes acutely inflamed or necrotic. The gold standard treatment to relieve this pain and save your natural tooth from extraction is a Root Canal Treatment (RCT).",
@@ -651,7 +651,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Cosmetic Dentistry & Smile Enhancement",
     readTime: "8 min read",
     excerpt: "A complete price guide to professional teeth whitening in Bangalore (₹8,000 to ₹15,000), comparing chairside LED/Laser whitening, custom take-home trays, OTC kits, and safety protocols.",
-    relatedTreatmentUrl: "/treatments/teeth-whitening",
+    relatedTreatmentUrl: "/teeth-whitening-hennur",
     relatedTreatmentName: "Teeth Whitening",
     introParagraphs: [
       "A bright, radiant smile conveys youthfulness, health, and vitality. However, daily consumption of coffee, South Indian filter coffee, tea, red wine, turmeric-rich curries, and natural aging gradually deposits stubborn chromogen stains within the microscopic porous tubules of your tooth enamel.",
@@ -772,7 +772,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "category": "Emergency Dental Care & Endodontics",
   "readTime": "7 min read",
   "excerpt": "Why toothaches throb violently at night, the clinical science of irreversible pulpitis, practical emergency steps to survive until morning, and definitive pain relief at Aureva Dental.",
-  "relatedTreatmentUrl": "/treatments/root-canal-treatment",
+  "relatedTreatmentUrl": "/root-canal-treatment-hennur",
   "relatedTreatmentName": "Single-Sitting Root Canal Treatment",
   "introParagraphs": [
     "There are few physical experiences as distressing as waking up in the dead of night to a severe, rhythmic, throbbing pain radiating through your jaw and temple. Nighttime toothaches are notoriously intense—pounding in sync with your heartbeat and resisting standard household painkillers.",
@@ -905,7 +905,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "category": "Oral Surgery & Wisdom Teeth",
   "readTime": "8 min read",
   "excerpt": "Understand the anatomical neural pathways behind referred ear and jaw pain from impacted wisdom teeth, pericoronitis treatment, and gentle oral surgical removal in Bangalore.",
-  "relatedTreatmentUrl": "/treatments/wisdom-tooth-removal",
+  "relatedTreatmentUrl": "/wisdom-tooth-removal-hennur",
   "relatedTreatmentName": "Comfortable Wisdom Tooth Removal",
   "introParagraphs": [
     "If you are suffering from a dull, persistent ache in the back of your mouth that radiates upward into your ear canal, temples, or downward along your jawline, you are likely dealing with an impacted third molar (wisdom tooth).",
@@ -1014,7 +1014,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "category": "Emergency Dental Care & Endodontics",
   "readTime": "7 min read",
   "excerpt": "Learn what a gum boil or parulis signifies, why bursting it provides deceptive relief while bone loss continues, and how root canals permanently eliminate dental fistulas.",
-  "relatedTreatmentUrl": "/treatments/root-canal-treatment",
+  "relatedTreatmentUrl": "/root-canal-treatment-hennur",
   "relatedTreatmentName": "Single-Sitting Root Canal Treatment",
   "introParagraphs": [
     "Discovering a small white, yellow, or reddish bump on your gums—often resembling an ordinary acne pimple—can be alarming. You might notice it periodically swells, bursts with a foul or salty taste, and then seemingly disappears, only to reappear weeks later.",
@@ -1215,7 +1215,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "category": "Patient Aftercare Guides",
   "readTime": "6 min read",
   "excerpt": "A patient-friendly guide to recovery after a root canal: managing mild tenderness, eating guidelines, temporary filling protection, and why crown placement is critical.",
-  "relatedTreatmentUrl": "/treatments/root-canal-treatment",
+  "relatedTreatmentUrl": "/root-canal-treatment-hennur",
   "relatedTreatmentName": "Root Canal Treatment",
   "introParagraphs": [
     "Congratulations on completing your Root Canal Treatment (RCT) at Aureva Dental! By removing the infected pulp from inside your tooth, we have saved your natural tooth from extraction and eliminated the source of severe dental infection.",
@@ -1303,7 +1303,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "category": "Patient Aftercare Guides",
   "readTime": "8 min read",
   "excerpt": "Complete recovery roadmap following wisdom tooth removal: stopping bleeding, ice pack protocols, day-by-day food suggestions, and preventing dry socket.",
-  "relatedTreatmentUrl": "/treatments/wisdom-tooth-removal",
+  "relatedTreatmentUrl": "/wisdom-tooth-removal-hennur",
   "relatedTreatmentName": "Wisdom Tooth Removal",
   "introParagraphs": [
     "Now that your wisdom tooth extraction is complete, your body's remarkable healing process has begun. The primary objective during the next week is to protect the delicate blood clot that forms inside the extraction socket.",

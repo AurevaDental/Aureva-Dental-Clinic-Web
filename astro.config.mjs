@@ -10,6 +10,12 @@ export default defineConfig({
   trailingSlash: 'never',
   output: 'server',
   adapter: vercel(),
+  redirects: {
+    '/treatments/root-canal-treatment': '/root-canal-treatment-hennur',
+    '/treatments/dental-crowns': '/dental-crowns-hennur',
+    '/treatments/wisdom-tooth-removal': '/wisdom-tooth-removal-hennur',
+    '/treatments/teeth-whitening': '/teeth-whitening-hennur'
+  },
 
   vite: {
     plugins: [tailwindcss()]
