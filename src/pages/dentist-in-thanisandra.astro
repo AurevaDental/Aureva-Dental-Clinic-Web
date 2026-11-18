@@ -1,324 +1,334 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas';
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_REVIEWS_LABEL } from '../config/clinic';
+import { CANONICAL_PRICES } from '../data/prices';
 
 const pageTitle = "Dentist in Thanisandra, Bengaluru | Aureva Dental, 3.7 km away";
-const pageDescription = "Dentist near Thanisandra & Nagawara, 3.7 km away. Open 7 days till 9 PM. Consultation ₹600 including digital X-ray. Walk-ins welcome.";
+const pageDescription = "Dentist near Thanisandra & Nagawara, 3.7 km away. Open 7 days with ₹600 consultation including digital X-ray. Walk in or call to book.";
 const canonicalUrl = "https://aurevadental.com/dentist-in-thanisandra";
 const phoneCallUrl = "tel:+917349701002";
-const whatsappUrl = "https://wa.me/917349701002?text=Hello%20Aureva%20Dental%2C%20I%20am%20visiting%20from%20Thanisandra%20and%20would%20like%20to%20consult.";
-const mapsDirectionsUrl = "https://www.google.com/maps/dir/?api=1&origin=Thanisandra,+Bengaluru&destination=Aureva+Dental+Hennur+Bande+Bengaluru";
+const whatsappUrl = "https://wa.me/917349701002?text=Hi%20Aureva%20Dental%2C%20I%20am%20visiting%20from%20Thanisandra%20and%20would%20like%20to%20consult.";
+const directionsUrl = "https://www.google.com/maps/dir/?api=1&origin=Thanisandra,+Bengaluru&destination=Aureva+Dental,+Horamavu+Agara+Rd,+Hennur+Bande,+Bengaluru";
 const canonicalAddress = "2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043";
-
-const breadcrumbs = [
-  { name: "Home", url: "https://aurevadental.com/" },
-  { name: "Dentist near Thanisandra", url: canonicalUrl }
-];
-
-const faqs = [
-  {
-    question: "How far is Aureva Dental from Thanisandra and Nagawara?",
-    answer: "We are located 3.7 km from Thanisandra (about 13 min drive), 3.6 km from Nagawara (about 16 min drive), and 3.5 km from Manyata Tech Park (about 15 min drive). Drive times change with traffic."
-  },
-  {
-    question: "Are you open for evening and Sunday appointments?",
-    answer: "Yes. We operate Tuesday to Sunday from 9:30 AM to 9 PM, and Monday from 4 PM to 9 PM. Late evening walk-ins are accepted until 9 PM."
-  },
-  {
-    question: "What is the clinic address and parking situation?",
-    answer: "We are at 2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. The clinic is on the 2nd floor with lift. Parking available for 4-wheelers and 2-wheelers."
-  },
-  {
-    question: "How much is the initial consultation?",
-    answer: "A new-patient consultation is ₹600, including digital RVG X-ray diagnostics, and is valid for 6 months. Written estimates are provided before treatment begins."
-  },
-  {
-    question: "Do visiting specialists handle complex dental cases?",
-    answer: "Yes. Visiting MDS specialists across oral surgery, orthodontics, endodontics, periodontics, paedodontics, and prosthodontics visit on a case basis."
-  }
-];
-
-const treatmentList = [
-  { name: "Consultation (incl. digital RVG X-ray, valid 6 months)", price: "₹600" },
-  { name: "Scaling & Polishing", price: "₹2,000 – ₹5,000" },
-  { name: "Tooth Filling", price: "₹1,500 – ₹4,000" },
-  { name: "Root Canal Treatment (RCT)", price: "₹4,000 – ₹10,000" },
-  { name: "Crowns & Caps (PFM, Ceramic, Zirconia)", price: "₹4,000 – ₹18,000" },
-  { name: "Wisdom Tooth Removal", price: "₹4,000 – ₹10,000" },
-  { name: "Teeth Whitening", price: "₹8,000 – ₹15,000" },
-  { name: "Gum Treatment (Deep Scaling)", price: "₹8,000 – ₹15,000" },
-  { name: "Dental Implants", price: "₹35,000 – ₹60,000" },
-  { name: "Clear Aligners", price: "₹80,000 – ₹2,50,000" }
-];
-
-const breadcrumbSchema = JSON.stringify(generateBreadcrumbSchema(breadcrumbs));
-const faqSchema = JSON.stringify(generateFaqSchema(faqs.map(f => ({ q: f.question, a: f.answer }))));
 
 const seoProps = {
   title: pageTitle,
   description: pageDescription,
   canonical: canonicalUrl,
-  ogTitle: pageTitle,
-  ogDescription: pageDescription,
-  ogUrl: canonicalUrl,
-  schemaMarkup: [breadcrumbSchema, faqSchema]
+  robots: "index, follow",
+  hideHeader: false,
+  hideFooter: false,
+  hideMobileBottomBar: false
+};
+
+const treatmentPricing = [
+  { name: "Consultation & Digital RVG X-Ray", price: CANONICAL_PRICES.consultation, note: "Valid for 6 months" },
+  { name: "Scaling & Polishing (Hygiene)", price: CANONICAL_PRICES.scaling_routine, note: "Ultrasonic tartar removal" },
+  { name: "Composite Tooth Filling", price: CANONICAL_PRICES.tooth_filling, note: "Tooth-colored biomimetic resin" },
+  { name: "Root Canal Treatment (Rotary RCT)", price: CANONICAL_PRICES.rct_overall, note: "Gentle single or multi-visit" },
+  { name: "Crowns & Caps (PFM, Ceramic, Zirconia)", price: CANONICAL_PRICES.crown_overall, note: "Custom laboratory fabricated" },
+  { name: "Wisdom Tooth Removal", price: CANONICAL_PRICES.wisdom_hennur_faq_overall, note: "Simple & surgical impactions" },
+  { name: "Teeth Whitening", price: CANONICAL_PRICES.whitening_laser, note: "In-office LED brightening" },
+  { name: "Kids Dentistry (Pediatric Care)", price: CANONICAL_PRICES.kids_dentistry_summary, note: "Gentle cavity care & sealants" },
+  { name: "Dental Implants", price: CANONICAL_PRICES.implant_single_fixture, note: "Titanium replacement tooth" },
+  { name: "Clear Aligners", price: CANONICAL_PRICES.clear_aligners_overall, note: "Custom 3D invisible trays" }
+];
+
+const faqs = [
+  {
+    q: "Is there a dental clinic near Manyata Tech Park open after office hours?",
+    a: "Yes. Aureva Dental is located just 3.5 km from Manyata Tech Park (about 15 minutes away) and stays open until 9:00 PM Tuesday through Sunday, as well as Monday from 4:00 PM to 9:00 PM. Many software engineers, managers, and corporate employees working in Manyata schedule late consultations after their work shifts to address dental health without taking leave during the day."
+  },
+  {
+    q: "Can I schedule a dental appointment on Sunday near Thanisandra?",
+    a: "Yes. We operate a full Sunday dental clinic from 9:30 AM to 9:00 PM every single week. This makes it effortless for residents in Thanisandra, Nagawara, and nearby residential societies to complete routine hygiene cleanings, orthodontic evaluations, and restorative procedures on weekends without rushing."
+  },
+  {
+    q: "How far is the clinic from Thanisandra and Nagawara?",
+    a: "Aureva Dental is 3.7 km from Thanisandra (about 13 minutes via Thanisandra Main Road and Hennur Main Road) and 3.6 km from Nagawara (about 16 minutes via Hennur Main Road). Drive times change with traffic. Our dental clinic is situated on the 2nd floor with lift access. Parking available for 4-wheelers and 2-wheelers."
+  },
+  {
+    q: "What is the teeth cleaning cost at Aureva Dental?",
+    a: "Routine ultrasonic scaling and prophy polishing ranges from ₹2,000 to ₹5,000, depending on the presence of stubborn tea, coffee, or smoke stains and calculus buildup. The procedure gently removes bacterial plaque and surface stains while preserving natural tooth enamel."
+  },
+  {
+    q: "What are your consultation fees and scheduling options?",
+    a: "Our comprehensive new-patient consultation is ₹600 and includes low-radiation digital RVG X-rays as clinically indicated, staying valid for 6 months. Walk-ins are welcomed until 9:00 PM, or you can reserve a prioritized slot by phone call or WhatsApp message."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
 };
 ---
 
-<Layout {...seoProps}>
-  <!-- Breadcrumb Navigation -->
-  <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3 px-4 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
-    <div class="max-w-7xl mx-auto flex items-center gap-2">
-      <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
-      <span>/</span>
-      <span class="text-japandi-charcoal font-medium">Dentist near Thanisandra</span>
-    </div>
-  </nav>
-
-  <!-- Hero Header Section -->
-  <section class="py-12 md:py-20 px-4 lg:px-24 bg-transparent relative overflow-hidden">
-    <div class="max-w-4xl mx-auto flex flex-col items-center text-center space-y-4">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-japandi-clay/60 bg-japandi-sand/70 text-[10px] font-semibold text-japandi-moss uppercase tracking-widest">
-        3.7 km from Thanisandra · about 13 min
+<Layout {...seoProps} schemaMarkup={[faqSchema]}>
+  <main class="min-h-screen bg-japandi-cream text-japandi-charcoal">
+    <!-- Hero Section -->
+    <section class="px-4 sm:px-6 lg:px-24 pt-12 pb-10 max-w-5xl mx-auto text-center space-y-5">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-japandi-moss/10 text-japandi-moss text-xs font-semibold uppercase tracking-wider">
+        <span>Convenient Dental Care &middot; 3.7 km from Thanisandra</span>
       </div>
 
-      <h1 class="text-3xl sm:text-5xl font-serif text-japandi-charcoal font-medium leading-tight tracking-tight">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-japandi-charcoal font-medium tracking-tight">
         Dentist near Thanisandra
       </h1>
 
-      <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed max-w-2xl">
-        Convenient for office-goers and residents in Thanisandra, Nagawara, and Manyata Tech Park. Located 3.7 km from Thanisandra (about 13 min drive). Open 7 days a week: Tuesday to Sunday 9:30 AM–9 PM and Monday 4–9 PM. Walk-ins welcome until 9 PM.
+      <p class="text-sm sm:text-base text-japandi-earth font-light max-w-2xl mx-auto leading-relaxed">
+        Modern, gentle dentistry for working professionals and families in Thanisandra, Nagawara, and Manyata Tech Park. Open late until 9 PM and full days on Sunday.
       </p>
 
-      <!-- CTA Buttons Row -->
-      <div class="pt-2 flex flex-wrap items-center justify-center gap-3 w-full sm:w-auto">
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
         <a 
           href={phoneCallUrl}
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all shadow-sm min-h-[44px]"
-          aria-label="Call Aureva Dental"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-japandi-moss hover:bg-japandi-charcoal text-japandi-cream font-medium text-xs uppercase tracking-wider transition-all shadow-sm"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z" />
-          </svg>
-          <span>Call Reception</span>
+          Call 073497 01002
         </a>
-
         <a 
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-semibold uppercase tracking-wider rounded-full transition-all shadow-sm min-h-[44px]"
-          aria-label="Chat on WhatsApp"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-japandi-clay bg-japandi-sand/80 hover:bg-japandi-sand text-japandi-charcoal font-medium text-xs uppercase tracking-wider transition-all"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          <span>WhatsApp</span>
+          WhatsApp Us
         </a>
-
         <a 
-          href={mapsDirectionsUrl}
+          href={directionsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-japandi-sand/80 hover:bg-japandi-sand border border-japandi-clay/60 text-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all shadow-sm min-h-[44px]"
-          aria-label="Directions from Thanisandra"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-japandi-clay bg-japandi-sand/80 hover:bg-japandi-sand text-japandi-charcoal font-medium text-xs uppercase tracking-wider transition-all"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-japandi-moss">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-          </svg>
-          <span>Directions</span>
+          Get Directions
         </a>
       </div>
 
-      <!-- Rating Display -->
       {GOOGLE_RATING > 0 && GOOGLE_REVIEW_COUNT > 0 && (
-        <div class="inline-flex items-center gap-2 pt-1 text-xs text-japandi-earth">
-          <div class="flex text-amber-500 text-xs tracking-tight" aria-hidden="true">★★★★★</div>
-          <span class="font-medium text-japandi-charcoal">{GOOGLE_REVIEWS_LABEL}</span>
+        <div class="pt-2 flex items-center justify-center gap-2 text-xs text-japandi-earth">
+          <span class="text-amber-500 tracking-tight">★ ★ ★ ★ ★</span>
+          <span class="font-semibold text-japandi-charcoal">{GOOGLE_RATING.toFixed(1)}</span>
+          <span>({GOOGLE_REVIEW_COUNT} Google Reviews)</span>
         </div>
       )}
-    </div>
-  </section>
+    </section>
 
-  <!-- Getting Here Section -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="p-6 sm:p-8 rounded-3xl bg-japandi-sand/40 border border-japandi-clay/40 space-y-4">
-      <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
-        Getting here from Thanisandra
-      </h2>
-      <div class="space-y-2 text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
-        <p>
-          <strong class="font-medium text-japandi-charcoal">Distance & Drive Time:</strong> 3.7 km (about 13 min drive) from Thanisandra, 3.6 km (about 16 min drive) from Nagawara, and 3.5 km (about 15 min drive) from Manyata Tech Park. Drive times change with traffic.
-        </p>
-        <p>
-          <strong class="font-medium text-japandi-charcoal">Location:</strong> 2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043.
-        </p>
-        <p>
-          <strong class="font-medium text-japandi-charcoal">Facility & Parking:</strong> 2nd floor with lift. Parking available for 4-wheelers and 2-wheelers.
-        </p>
-      </div>
-
-      <div class="pt-2">
-        <a 
-          href={mapsDirectionsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-japandi-charcoal hover:bg-japandi-moss text-japandi-cream text-xs font-semibold uppercase tracking-wider transition-colors min-h-[44px]"
-        >
-          <span>Open Google Maps Directions from Thanisandra</span>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Area Context Section -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="space-y-4">
-      <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium text-center">
-        When people from Thanisandra visit us
-      </h2>
-      <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed max-w-3xl mx-auto text-center">
-        Working professionals and residents from Thanisandra and Nagawara visit Aureva Dental for reliable dental consultations outside standard office hours. Located 3.7 km from Thanisandra (about 13 minutes drive), 3.6 km from Nagawara (about 16 minutes drive), and 3.5 km from Manyata Tech Park (about 15 minutes drive), the clinic is open Tuesday to Sunday from 9:30 AM to 9 PM and Monday from 4 PM to 9 PM. Office-goers frequently choose our late evening slots or Sunday appointments for check-ups, digital RVG X-rays, and intraoral camera evaluations. Visiting MDS specialists across oral surgery, orthodontics, endodontics, and periodontics evaluate advanced cases on a case basis, while walk-ins remain welcome until 9 PM.
-      </p>
-    </div>
-  </section>
-
-  <!-- Clinic Photos Gallery Section (Real clinic photos from /assets/near-me/ only) -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-      <div class="col-span-2 md:col-span-1 rounded-2xl overflow-hidden border border-japandi-clay/40 bg-japandi-sand/30 shadow-sm">
-        <img 
-          src="/assets/near-me/clinic_signage_exterior.webp" 
-          alt="Aureva Dental clinic exterior signage" 
-          width="900" 
-          height="506" 
-          loading="lazy" 
-          decoding="async"
-          class="w-full h-44 sm:h-52 object-cover" 
-        />
-      </div>
-
-      <div class="rounded-2xl overflow-hidden border border-japandi-clay/40 bg-japandi-sand/30 shadow-sm">
-        <img 
-          src="/assets/near-me/reception_desk_aureva.webp" 
-          alt="Aureva Dental reception desk" 
-          width="675" 
-          height="900" 
-          loading="lazy" 
-          decoding="async"
-          class="w-full h-44 sm:h-52 object-cover" 
-        />
-      </div>
-
-      <div class="rounded-2xl overflow-hidden border border-japandi-clay/40 bg-japandi-sand/30 shadow-sm">
-        <img 
-          src="/assets/near-me/treatment_operatory_chair.webp" 
-          alt="Dental operatory treatment chair at Aureva Dental" 
-          width="900" 
-          height="675" 
-          loading="lazy" 
-          decoding="async"
-          class="w-full h-44 sm:h-52 object-cover" 
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- Treatments and Prices Section -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="space-y-6">
-      <div class="text-center space-y-1">
-        <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
-          Treatments and prices
+    <!-- Route from Thanisandra and Nagawara -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Route from Thanisandra and Nagawara
         </h2>
-        <p class="text-xs text-japandi-earth font-light">
-          Written estimates provided before any treatment begins.
+        <div class="bg-japandi-sand/40 border border-japandi-clay/40 rounded-2xl p-6 sm:p-8 space-y-4">
+          <p class="text-sm sm:text-base text-japandi-charcoal font-normal leading-relaxed">
+            From Thanisandra, head southeast along Thanisandra Main Road and connect via Hennur Main Road towards Hennur Bande, turning onto Horamavu Agara Road near Nayara Petrol Bunk in about 13 minutes over 3.7 km. Patients traveling from Nagawara take Hennur Main Road directly for roughly 16 minutes across 3.6 km, while professionals departing Manyata Tech Park arrive within 15 minutes across 3.5 km. Drive times change with traffic. Our clinic is positioned on the 2nd floor with lift access. Parking available for 4-wheelers and 2-wheelers.
+          </p>
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-3 text-xs text-japandi-earth border-t border-japandi-clay/30">
+            <span>Thanisandra: 3.7 km &middot; about 13 min</span>
+            <span>Nagawara: 3.6 km &middot; about 16 min</span>
+            <span>Manyata Tech Park: 3.5 km &middot; about 15 min</span>
+            <a 
+              href={directionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-japandi-moss font-semibold hover:underline"
+            >
+              Open Google Maps Route &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- When people from Thanisandra visit us -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          When people from Thanisandra visit us
+        </h2>
+        <div class="space-y-4 text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          <p>
+            Working professionals and tech campus employees from Thanisandra, Nagawara, and Manyata Tech Park routinely choose our clinic because standard nine-to-five clinic hours conflict with corporate project sprints, team standups, and evening traffic. Taking leave for routine dental check-ups is inconvenient, which is why our late evening appointments until 9 PM and full-day Sunday scheduling provide a welcome alternative. Many corporate workers drop in right after logging off or after commuting from Manyata Gates 1 and 2, taking advantage of a calm Japandi lounge environment to unwind.
+          </p>
+          <p>
+            Apartment dwellers and young families residing across Thanisandra Main Road appreciate our commitment to punctual scheduling and complete treatment transparency. We respect professional calendars by avoiding long waiting room delays. In addition, our clinicians explain every procedure with intraoral imagery and provide written cost estimates beforehand, eliminating unexpected financial surprises and ensuring a predictable, relaxed experience.
+          </p>
+          <p>
+            Whether coming in for an evening consultation following a busy office shift or scheduling a relaxed Sunday family hygiene check-up, visitors from Nagawara and Thanisandra find our nearby location on Horamavu Agara Road exceptionally practical and easy to reach. By offering late consultations and Sunday slots, we ensure that comprehensive dental care fits naturally into intense tech work schedules without compromise.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Treatments people from Thanisandra often ask about -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Treatments people from Thanisandra often ask about
+        </h2>
+        <div class="space-y-4 text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          <p>
+            Tech employees and residents from Thanisandra and Nagawara frequently schedule appointments for comprehensive dental hygiene, aesthetic brightening, and durable crown restorations. Routine ultrasonic scaling and prophy polishing ranges from ₹2,000 to ₹5,000, effectively removing stubborn coffee, tea, and tobacco discoloration accumulated during long work hours. In-office laser teeth whitening sessions ranging from ₹8,000 to ₹15,000 are popular among professionals preparing for weddings, client presentations, or social milestones.
+          </p>
+          <p>
+            For fractured, cracked, or root-treated teeth, durable all-ceramic and zirconia crowns ranging from ₹4,000 to ₹18,000 provide lasting chewing stability and natural appearance. Working adults seeking teeth straightening without visible metal wires regularly consult our visiting orthodontist regarding removable clear aligners ranging from ₹80,000 to ₹2,50,000.
+          </p>
+          <p>
+            If sudden dental pain arises, our walk-in emergency protocols until 9:00 PM accommodate immediate clinical relief, single or two-visit rotary root canals ranging from ₹4,000 to ₹10,000, and tooth extractions starting at ₹1,500. New-patient consultations are ₹600, including digital RVG X-rays, and remain active for six months so you can review options on your own schedule. With clear written breakdowns provided before treatment starts, professionals can manage healthcare expenditures with full transparency.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clinic Standards & Diagnostic Equipment -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-5">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Modern technology and hygiene protocols
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-5 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal">Digital RVG Sensor</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              Provides instantaneous digital radiographic diagnostic images with minimal radiation exposure, displaying deep tooth structures directly on chairside screens.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal">Intraoral Video Camera</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              High-resolution intraoral optics stream live magnified views of tooth surfaces and margins so you inspect what needs treatment with complete transparency.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal">Rigorous Autoclaving</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              Complete multi-stage instrument sterilisation using medical autoclaves, single-use barriers, and hospital-grade sanitization between every consultation.
+            </p>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+          For specialized clinical interventions, visiting MDS specialists—spanning prosthodontics, endodontics, orthodontics, periodontics, oral and maxillofacial surgery, and paedodontics—visit our Horamavu Agara Road clinic on a case basis to deliver targeted multidisciplinary care. This visiting specialist model ensures that technical orthodontic adjustments, surgical impactions, or specialized gum therapies receive experienced clinical oversight in an environment designed around patient safety.
         </p>
       </div>
+    </section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
-        {treatmentList.map((item) => (
-          <div class="p-4 rounded-2xl bg-japandi-cream border border-japandi-clay/40 flex items-center justify-between">
-            <span class="text-xs font-medium text-japandi-charcoal pr-2">{item.name}</span>
-            <span class="text-xs font-semibold text-japandi-moss shrink-0">{item.price}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- How Your First Visit Works -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="space-y-6">
-      <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium text-center">
-        How your first visit works
-      </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="p-5 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2">
-          <div class="w-7 h-7 rounded-full bg-japandi-sand text-japandi-moss font-serif font-bold flex items-center justify-center text-xs">
-            1
-          </div>
-          <h3 class="font-serif text-sm font-medium text-japandi-charcoal">
-            Book or walk in
-          </h3>
-          <p class="text-xs text-japandi-earth font-light leading-relaxed">
-            Reserve a time by call or WhatsApp, or walk in directly until 9 PM.
+    <!-- Treatments and Prices -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-4">
+        <div class="text-center sm:text-left space-y-1">
+          <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+            Treatments and prices
+          </h2>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light">
+            Prices are published estimate ranges. You receive an itemized, written quote after clinical examination.
           </p>
         </div>
 
-        <div class="p-5 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2">
-          <div class="w-7 h-7 rounded-full bg-japandi-sand text-japandi-moss font-serif font-bold flex items-center justify-center text-xs">
-            2
-          </div>
-          <h3 class="font-serif text-sm font-medium text-japandi-charcoal">
-            Consultation (₹600)
-          </h3>
-          <p class="text-xs text-japandi-earth font-light leading-relaxed">
-            Comprehensive examination with digital RVG X-ray included, valid 6 months.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2">
-          <div class="w-7 h-7 rounded-full bg-japandi-sand text-japandi-moss font-serif font-bold flex items-center justify-center text-xs">
-            3
-          </div>
-          <h3 class="font-serif text-sm font-medium text-japandi-charcoal">
-            Written estimate
-          </h3>
-          <p class="text-xs text-japandi-earth font-light leading-relaxed">
-            Clear treatment outline and transparent pricing in writing before starting.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQs Section -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="space-y-6">
-      <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium text-center">
-        Frequently asked questions
-      </h2>
-
-      <div class="space-y-3 max-w-2xl mx-auto">
-        {faqs.map((faq) => (
-          <details class="group bg-japandi-cream border border-japandi-clay/40 rounded-2xl overflow-hidden transition-all duration-200">
-            <summary class="px-5 py-4 cursor-pointer text-xs sm:text-sm font-serif font-medium text-japandi-charcoal hover:text-japandi-moss flex items-center justify-between gap-3 select-none min-h-[48px]">
-              <span>{faq.question}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 shrink-0 text-japandi-moss group-open:rotate-180 transition-transform">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-              </svg>
-            </summary>
-            <div class="px-5 pb-4 text-xs sm:text-sm text-japandi-earth font-light leading-relaxed border-t border-japandi-clay/20 pt-3">
-              {faq.answer}
+        <div class="bg-japandi-cream border border-japandi-clay/40 rounded-2xl divide-y divide-japandi-clay/20 overflow-hidden shadow-sm">
+          {treatmentPricing.map((item) => (
+            <div class="p-4 sm:px-6 sm:py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs sm:text-sm">
+              <div>
+                <span class="font-medium text-japandi-charcoal block sm:inline">{item.name}</span>
+                <span class="text-[11px] text-japandi-earth font-light sm:ml-2">({item.note})</span>
+              </div>
+              <span class="font-semibold text-japandi-moss shrink-0">{item.price}</span>
             </div>
-          </details>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- How your first visit works -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-6">
+        <div class="text-center sm:text-left space-y-1">
+          <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+            How your first visit works
+          </h2>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light">
+            A structured, unhurried initial evaluation designed around your comfort and complete financial transparency.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">
+            <span class="w-7 h-7 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold flex items-center justify-center">1</span>
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal pt-1">Examination &amp; Digital X-Ray</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              We begin with a thorough examination of teeth, gums, and bite alignment. Low-radiation RVG digital X-rays are taken to inspect beneath the surface. Consultation is ₹600 and stays valid for 6 months.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">
+            <span class="w-7 h-7 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold flex items-center justify-center">2</span>
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal pt-1">Clear Explanation &amp; Written Plan</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              We review clinical findings on screen using intraoral camera photos and radiographs. You receive a clear, printed estimate detailing treatment steps, timelines, and exact pricing before anything starts.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">
+            <span class="w-7 h-7 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold flex items-center justify-center">3</span>
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal pt-1">Treatment at Your Pace</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              Begin necessary care on the same day if you wish, or schedule subsequent visits at times convenient for your calendar. There is never pressure to proceed until you feel fully prepared.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questions people in Thanisandra ask us -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Questions people in Thanisandra ask us
+        </h2>
+        <div class="divide-y divide-japandi-clay/30 border border-japandi-clay/40 rounded-2xl bg-japandi-cream overflow-hidden">
+          {faqs.map((faq) => (
+            <div class="p-5 sm:p-6 space-y-2">
+              <h3 class="font-serif text-base font-medium text-japandi-charcoal">
+                {faq.q}
+              </h3>
+              <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+                {faq.a}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Find Us / Contact Block -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="bg-japandi-sand/60 border border-japandi-clay/40 rounded-3xl p-6 sm:p-8 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
+          Find Aureva Dental
+        </h2>
+        <div class="space-y-1.5 text-xs sm:text-sm text-japandi-earth font-light">
+          <p><strong class="font-medium text-japandi-charcoal">Address:</strong> {canonicalAddress}</p>
+          <p><strong class="font-medium text-japandi-charcoal">Landmark:</strong> Horamavu Agara Road, near Nayara Petrol Bunk, Hennur Bande (2nd floor with lift access).</p>
+          <p><strong class="font-medium text-japandi-charcoal">Hours:</strong> Tuesday–Sunday 9:30 AM–9:00 PM &middot; Monday 4:00 PM–9:00 PM (Walk-ins welcome until 9 PM).</p>
+          <p><strong class="font-medium text-japandi-charcoal">Parking:</strong> Parking available for 4-wheelers and 2-wheelers.</p>
+        </div>
+        <div class="pt-2 flex flex-wrap gap-3">
+          <a href={phoneCallUrl} class="px-5 py-2.5 rounded-full bg-japandi-moss text-japandi-cream text-xs font-medium uppercase tracking-wider hover:bg-japandi-charcoal transition-colors">
+            Call 073497 01002
+          </a>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full border border-japandi-clay bg-japandi-sand text-japandi-charcoal text-xs font-medium uppercase tracking-wider hover:bg-japandi-cream transition-colors">
+            WhatsApp
+          </a>
+          <a href={directionsUrl} target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full border border-japandi-clay bg-japandi-sand text-japandi-charcoal text-xs font-medium uppercase tracking-wider hover:bg-japandi-cream transition-colors">
+            Google Maps Directions
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

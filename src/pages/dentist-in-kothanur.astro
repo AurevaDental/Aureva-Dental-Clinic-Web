@@ -1,324 +1,333 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas';
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_REVIEWS_LABEL } from '../config/clinic';
+import { CANONICAL_PRICES } from '../data/prices';
 
 const pageTitle = "Dentist in Kothanur, Bengaluru | Aureva Dental, 2.4 km away";
-const pageDescription = "Dentist near Kothanur & Hennur–Bagalur Road, 2.4 km away. Open 7 days with ₹600 consultation including digital X-ray. Walk-ins welcome till 9 PM.";
+const pageDescription = "Dentist near Kothanur & Hennur–Bagalur Road, 2.4 km away. Open 7 days with ₹600 consultation including digital X-ray. Walk in or call to book.";
 const canonicalUrl = "https://aurevadental.com/dentist-in-kothanur";
 const phoneCallUrl = "tel:+917349701002";
-const whatsappUrl = "https://wa.me/917349701002?text=Hello%20Aureva%20Dental%2C%20I%20am%20visiting%20from%20Kothanur%20and%20would%20like%20to%20consult.";
-const mapsDirectionsUrl = "https://www.google.com/maps/dir/?api=1&origin=Kothanur,+Bengaluru&destination=Aureva+Dental+Hennur+Bande+Bengaluru";
+const whatsappUrl = "https://wa.me/917349701002?text=Hi%20Aureva%20Dental%2C%20I%20am%20visiting%20from%20Kothanur%20and%20would%20like%20to%20consult.";
+const directionsUrl = "https://www.google.com/maps/dir/?api=1&origin=Kothanur,+Bengaluru&destination=Aureva+Dental,+Horamavu+Agara+Rd,+Hennur+Bande,+Bengaluru";
 const canonicalAddress = "2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043";
-
-const breadcrumbs = [
-  { name: "Home", url: "https://aurevadental.com/" },
-  { name: "Dentist near Kothanur", url: canonicalUrl }
-];
-
-const faqs = [
-  {
-    question: "How far is Aureva Dental from Kothanur?",
-    answer: "Aureva Dental is 2.4 km from Kothanur (about 14 min drive along the Hennur–Bagalur Road stretch). Drive times change with traffic."
-  },
-  {
-    question: "What are the operating hours?",
-    answer: "We are open Tuesday to Sunday 9:30 AM–9 PM and Monday 4–9 PM. Walk-ins are welcome until 9 PM."
-  },
-  {
-    question: "Where is the clinic and what parking is provided?",
-    answer: "Our clinic is at 2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. The clinic is on the 2nd floor with lift. Parking available for 4-wheelers and 2-wheelers."
-  },
-  {
-    question: "How much is a dental check-up?",
-    answer: "The consultation fee is ₹600, which includes a digital RVG X-ray and remains valid for 6 months."
-  },
-  {
-    question: "Can I walk in without an appointment?",
-    answer: "Yes, walk-ins are welcome until 9 PM daily. You can also call or message on WhatsApp to reserve your preferred timing."
-  }
-];
-
-const treatmentList = [
-  { name: "Consultation (incl. digital RVG X-ray, valid 6 months)", price: "₹600" },
-  { name: "Scaling & Polishing", price: "₹2,000 – ₹5,000" },
-  { name: "Tooth Filling", price: "₹1,500 – ₹4,000" },
-  { name: "Root Canal Treatment (RCT)", price: "₹4,000 – ₹10,000" },
-  { name: "Crowns & Caps (PFM, Ceramic, Zirconia)", price: "₹4,000 – ₹18,000" },
-  { name: "Wisdom Tooth Removal", price: "₹4,000 – ₹10,000" },
-  { name: "Teeth Whitening", price: "₹8,000 – ₹15,000" },
-  { name: "Gum Treatment (Deep Scaling)", price: "₹8,000 – ₹15,000" },
-  { name: "Dental Implants", price: "₹35,000 – ₹60,000" },
-  { name: "Clear Aligners", price: "₹80,000 – ₹2,50,000" }
-];
-
-const breadcrumbSchema = JSON.stringify(generateBreadcrumbSchema(breadcrumbs));
-const faqSchema = JSON.stringify(generateFaqSchema(faqs.map(f => ({ q: f.question, a: f.answer }))));
 
 const seoProps = {
   title: pageTitle,
   description: pageDescription,
   canonical: canonicalUrl,
-  ogTitle: pageTitle,
-  ogDescription: pageDescription,
-  ogUrl: canonicalUrl,
-  schemaMarkup: [breadcrumbSchema, faqSchema]
+  robots: "index, follow",
+  hideHeader: false,
+  hideFooter: false,
+  hideMobileBottomBar: false
+};
+
+const treatmentPricing = [
+  { name: "Consultation & Digital RVG X-Ray", price: CANONICAL_PRICES.consultation, note: "Valid for 6 months" },
+  { name: "Scaling & Polishing (Hygiene)", price: CANONICAL_PRICES.scaling_routine, note: "Ultrasonic tartar removal" },
+  { name: "Composite Tooth Filling", price: CANONICAL_PRICES.tooth_filling, note: "Tooth-colored biomimetic resin" },
+  { name: "Root Canal Treatment (Rotary RCT)", price: CANONICAL_PRICES.rct_overall, note: "Gentle single or multi-visit" },
+  { name: "Crowns & Caps (PFM, Ceramic, Zirconia)", price: CANONICAL_PRICES.crown_overall, note: "Custom laboratory fabricated" },
+  { name: "Wisdom Tooth Removal", price: CANONICAL_PRICES.wisdom_hennur_faq_overall, note: "Simple & surgical impactions" },
+  { name: "Teeth Whitening", price: CANONICAL_PRICES.whitening_laser, note: "In-office LED brightening" },
+  { name: "Kids Dentistry (Pediatric Care)", price: CANONICAL_PRICES.kids_dentistry_summary, note: "Gentle cavity care & sealants" },
+  { name: "Dental Implants", price: CANONICAL_PRICES.implant_single_fixture, note: "Titanium replacement tooth" },
+  { name: "Clear Aligners", price: CANONICAL_PRICES.clear_aligners_overall, note: "Custom 3D invisible trays" }
+];
+
+const faqs = [
+  {
+    q: "Is there a dentist open in the evening near Hennur–Bagalur Road?",
+    a: "Yes. Aureva Dental is open every evening until 9:00 PM from Tuesday through Sunday, as well as Monday afternoons from 4:00 PM to 9:00 PM. Residents commuting home along Hennur–Bagalur Road find our location just off the main road ideal for evening dental visits, emergency toothache evaluations, and routine procedures after regular work hours."
+  },
+  {
+    q: "How far is Aureva Dental from Kothanur Bengaluru?",
+    a: "Our clinic is 2.4 km from Kothanur, taking approximately 14 minutes by car or two-wheeler. Simply travel south along Hennur–Bagalur Main Road (New Airport Road) towards Hennur Bande, then branch onto Horamavu Agara Road until you see our building near Nayara Petrol Bunk. Drive times change with traffic. The clinic is on the 2nd floor with lift access. Parking available for 4-wheelers and 2-wheelers."
+  },
+  {
+    q: "Is there a kids dentist near Kothanur for children's dental care?",
+    a: "Yes. Aureva Dental provides child-focused dental check-ups for ₹600 including digital X-rays. For complex pediatric conditions, early interceptive alignment, or full-mouth cavity management, an MDS paedodontist visits our clinic on a scheduled case basis to provide attentive, gentle care in a non-threatening environment."
+  },
+  {
+    q: "How long does a root canal take to complete?",
+    a: "A root canal treatment is typically completed in 1 to 2 clinical sittings, depending on the severity of pulp infection, root canal curvature, and tooth location. Simple anterior single-canal teeth are often completed in a single sitting, whereas complex molars may require an interim medicated dressing to ensure infection clearance. A definitive timeline is outlined following your clinical examination and digital RVG radiograph."
+  },
+  {
+    q: "Can I walk in for immediate emergency tooth pain relief?",
+    a: "Yes. Walk-ins are welcomed until 9:00 PM across our regular operating days. If you experience severe throbbing pain, a cracked tooth, or facial swelling, you can arrive directly at our Horamavu Agara Road clinic for immediate evaluation, pain-relief dressing, or urgent drainage. Notifying us via phone or WhatsApp enables our clinical team to prepare an operatory promptly."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
 };
 ---
 
-<Layout {...seoProps}>
-  <!-- Breadcrumb Navigation -->
-  <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3 px-4 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
-    <div class="max-w-7xl mx-auto flex items-center gap-2">
-      <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
-      <span>/</span>
-      <span class="text-japandi-charcoal font-medium">Dentist near Kothanur</span>
-    </div>
-  </nav>
-
-  <!-- Hero Header Section -->
-  <section class="py-12 md:py-20 px-4 lg:px-24 bg-transparent relative overflow-hidden">
-    <div class="max-w-4xl mx-auto flex flex-col items-center text-center space-y-4">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-japandi-clay/60 bg-japandi-sand/70 text-[10px] font-semibold text-japandi-moss uppercase tracking-widest">
-        2.4 km from Kothanur · about 14 min
+<Layout {...seoProps} schemaMarkup={[faqSchema]}>
+  <main class="min-h-screen bg-japandi-cream text-japandi-charcoal">
+    <!-- Hero Section -->
+    <section class="px-4 sm:px-6 lg:px-24 pt-12 pb-10 max-w-5xl mx-auto text-center space-y-5">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-japandi-moss/10 text-japandi-moss text-xs font-semibold uppercase tracking-wider">
+        <span>Accessible Dental Care &middot; 2.4 km from Kothanur</span>
       </div>
 
-      <h1 class="text-3xl sm:text-5xl font-serif text-japandi-charcoal font-medium leading-tight tracking-tight">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-japandi-charcoal font-medium tracking-tight">
         Dentist near Kothanur
       </h1>
 
-      <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed max-w-2xl">
-        Conveniently located for residents of Kothanur and along Hennur–Bagalur Road, Aureva Dental is 2.4 km away (about 14 minutes drive). Open 7 days a week: Tuesday to Sunday 9:30 AM–9 PM and Monday 4–9 PM. Walk-ins welcome until 9 PM.
+      <p class="text-sm sm:text-base text-japandi-earth font-light max-w-2xl mx-auto leading-relaxed">
+        Providing reliable, conservative dentistry for Kothanur and the Hennur–Bagalur Road corridor. Conveniently situated on Horamavu Agara Road with evening walk-ins welcome until 9 PM.
       </p>
 
-      <!-- CTA Buttons Row -->
-      <div class="pt-2 flex flex-wrap items-center justify-center gap-3 w-full sm:w-auto">
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
         <a 
           href={phoneCallUrl}
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all shadow-sm min-h-[44px]"
-          aria-label="Call Aureva Dental"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-japandi-moss hover:bg-japandi-charcoal text-japandi-cream font-medium text-xs uppercase tracking-wider transition-all shadow-sm"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z" />
-          </svg>
-          <span>Call Reception</span>
+          Call 073497 01002
         </a>
-
         <a 
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-semibold uppercase tracking-wider rounded-full transition-all shadow-sm min-h-[44px]"
-          aria-label="Chat on WhatsApp"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-japandi-clay bg-japandi-sand/80 hover:bg-japandi-sand text-japandi-charcoal font-medium text-xs uppercase tracking-wider transition-all"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          <span>WhatsApp</span>
+          WhatsApp Us
         </a>
-
         <a 
-          href={mapsDirectionsUrl}
+          href={directionsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-japandi-sand/80 hover:bg-japandi-sand border border-japandi-clay/60 text-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all shadow-sm min-h-[44px]"
-          aria-label="Directions from Kothanur"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-japandi-clay bg-japandi-sand/80 hover:bg-japandi-sand text-japandi-charcoal font-medium text-xs uppercase tracking-wider transition-all"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-japandi-moss">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-          </svg>
-          <span>Directions</span>
+          Get Directions
         </a>
       </div>
 
-      <!-- Rating Display -->
       {GOOGLE_RATING > 0 && GOOGLE_REVIEW_COUNT > 0 && (
-        <div class="inline-flex items-center gap-2 pt-1 text-xs text-japandi-earth">
-          <div class="flex text-amber-500 text-xs tracking-tight" aria-hidden="true">★★★★★</div>
-          <span class="font-medium text-japandi-charcoal">{GOOGLE_REVIEWS_LABEL}</span>
+        <div class="pt-2 flex items-center justify-center gap-2 text-xs text-japandi-earth">
+          <span class="text-amber-500 tracking-tight">★ ★ ★ ★ ★</span>
+          <span class="font-semibold text-japandi-charcoal">{GOOGLE_RATING.toFixed(1)}</span>
+          <span>({GOOGLE_REVIEW_COUNT} Google Reviews)</span>
         </div>
       )}
-    </div>
-  </section>
+    </section>
 
-  <!-- Getting Here Section -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="p-6 sm:p-8 rounded-3xl bg-japandi-sand/40 border border-japandi-clay/40 space-y-4">
-      <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
-        Getting here from Kothanur
-      </h2>
-      <div class="space-y-2 text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
-        <p>
-          <strong class="font-medium text-japandi-charcoal">Distance & Drive Time:</strong> 2.4 km (about 14 min drive) along Hennur–Bagalur Road. Drive times change with traffic.
-        </p>
-        <p>
-          <strong class="font-medium text-japandi-charcoal">Location:</strong> 2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043.
-        </p>
-        <p>
-          <strong class="font-medium text-japandi-charcoal">Facility & Parking:</strong> 2nd floor with lift. Parking available for 4-wheelers and 2-wheelers.
-        </p>
-      </div>
-
-      <div class="pt-2">
-        <a 
-          href={mapsDirectionsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-japandi-charcoal hover:bg-japandi-moss text-japandi-cream text-xs font-semibold uppercase tracking-wider transition-colors min-h-[44px]"
-        >
-          <span>Open Google Maps Directions from Kothanur</span>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Area Context Section -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="space-y-4">
-      <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium text-center">
-        When people from Kothanur visit us
-      </h2>
-      <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed max-w-3xl mx-auto text-center">
-        Residents along Hennur–Bagalur Road and across Kothanur travel 2.4 km (about 14 minutes drive) to Aureva Dental for thorough oral examinations and planned dental treatments. With consultation at ₹600 including a digital RVG X-ray valid for 6 months, patients appreciate clear clinical discussions and written estimates prior to starting any treatment. Our clinic features intraoral cameras and autoclave sterilisation, providing a quiet setting for procedures ranging from scaling to restorative care. Visiting MDS specialists in orthodontics, endodontics, oral surgery, periodontics, paedodontics, and prosthodontics attend to complex treatments on a case basis. Being open Tuesday to Sunday until 9 PM and Monday evenings allows neighborhood residents to visit after work without rushing.
-      </p>
-    </div>
-  </section>
-
-  <!-- Clinic Photos Gallery Section (Real clinic photos from /assets/near-me/ only) -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-      <div class="col-span-2 md:col-span-1 rounded-2xl overflow-hidden border border-japandi-clay/40 bg-japandi-sand/30 shadow-sm">
-        <img 
-          src="/assets/near-me/clinic_signage_exterior.webp" 
-          alt="Aureva Dental clinic exterior signage" 
-          width="900" 
-          height="506" 
-          loading="lazy" 
-          decoding="async"
-          class="w-full h-44 sm:h-52 object-cover" 
-        />
-      </div>
-
-      <div class="rounded-2xl overflow-hidden border border-japandi-clay/40 bg-japandi-sand/30 shadow-sm">
-        <img 
-          src="/assets/near-me/reception_desk_aureva.webp" 
-          alt="Aureva Dental reception desk" 
-          width="675" 
-          height="900" 
-          loading="lazy" 
-          decoding="async"
-          class="w-full h-44 sm:h-52 object-cover" 
-        />
-      </div>
-
-      <div class="rounded-2xl overflow-hidden border border-japandi-clay/40 bg-japandi-sand/30 shadow-sm">
-        <img 
-          src="/assets/near-me/treatment_operatory_chair.webp" 
-          alt="Dental operatory treatment chair at Aureva Dental" 
-          width="900" 
-          height="675" 
-          loading="lazy" 
-          decoding="async"
-          class="w-full h-44 sm:h-52 object-cover" 
-        />
-      </div>
-    </div>
-  </section>
-
-  <!-- Treatments and Prices Section -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="space-y-6">
-      <div class="text-center space-y-1">
-        <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
-          Treatments and prices
+    <!-- Route from Kothanur -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Route from Kothanur and Hennur–Bagalur Road
         </h2>
-        <p class="text-xs text-japandi-earth font-light">
-          Written estimates provided before any treatment begins.
+        <div class="bg-japandi-sand/40 border border-japandi-clay/40 rounded-2xl p-6 sm:p-8 space-y-4">
+          <p class="text-sm sm:text-base text-japandi-charcoal font-normal leading-relaxed">
+            Reaching Aureva Dental from Kothanur is a brief drive along Hennur–Bagalur Main Road (New Airport Road) proceeding south towards Hennur Bande. Pass the local residential layouts and turn into Horamavu Agara Road, where our clinic is prominently located near Nayara Petrol Bunk, roughly 2.4 km away in about 14 minutes. Drive times change with traffic. Our dental clinic is located on the 2nd floor with lift access. Parking available for 4-wheelers and 2-wheelers.
+          </p>
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-3 text-xs text-japandi-earth border-t border-japandi-clay/30">
+            <span>Kothanur: 2.4 km &middot; about 14 min</span>
+            <span>Via Hennur–Bagalur Main Road</span>
+            <a 
+              href={directionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-japandi-moss font-semibold hover:underline"
+            >
+              Open Google Maps Route &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- When people from Kothanur visit us -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          When people from Kothanur visit us
+        </h2>
+        <div class="space-y-4 text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          <p>
+            Homeowners, apartment residents, and long-standing locals from Kothanur and the rapidly expanding Hennur–Bagalur Road sector frequently choose our practice to avoid the exhausting traffic of traveling deeper into central Bengaluru. Because suburban living often involves commuting toward airport zones or tech parks during peak hours, having a fully equipped modern dental clinic just 2.4 km down the road offers immense everyday convenience. Our extended clinic schedule running until 9 PM on weekdays and through Sundays allows neighborhood residents to address dental concerns without disrupting daytime work commitments.
+          </p>
+          <p>
+            Patients from Kothanur value the calm, personal nature of our clinical appointments. Rather than navigating a crowded hospital OPD, visitors step into a quiet, clean studio where doctors take adequate time to explain diagnoses thoroughly. We utilize digital imaging to illustrate clinical findings clearly, ensuring that all treatment recommendations are transparent, medically indicated, and accompanied by written price estimates.
+          </p>
+          <p>
+            For those experiencing unexpected toothaches, chipped restorations, or localized gum swelling, our willingness to accept walk-ins up to 9:00 PM provides reassurance that emergency care is always close at hand. Residents across the Hennur Bande and Kothanur corridor rely on our team for honest assessments and steady clinical support. Families appreciate that both routine treatments and complex specialist procedures are managed right here without requiring multiple hospital referrals across town.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Treatments people from Kothanur often ask about -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Treatments people from Kothanur often ask about
+        </h2>
+        <div class="space-y-4 text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+          <p>
+            Patients arriving from Kothanur commonly consult us for conservative root canal treatment, troublesome wisdom tooth discomfort, and immediate relief from acute toothache. Deep dental decay causing nighttime throbbing is evaluated using instant digital RVG radiography, allowing our clinicians to determine whether single-sitting or two-visit rotary endodontics is indicated, with root canal fees ranging from ₹4,000 to ₹10,000. Impacted or partially erupted third molars that create recurrent gum flap swelling are diagnosed accurately, with surgical removal fees ranging between ₹4,000 and ₹10,000.
+          </p>
+          <p>
+            Emergency walk-in patients seeking immediate relief from cracked teeth or lost fillings benefit from same-day soothing dressings and biomimetic composite restorations ranging from ₹1,500 to ₹4,000. For permanent tooth replacements, we provide titanium dental implants from ₹35,000 to ₹60,000 as well as full-coverage protective zirconia crowns from ₹10,000 to ₹18,000. Initial consultations are ₹600, include digital X-rays, and stay valid for six months so treatment can proceed at your chosen pace.
+          </p>
+          <p>
+            We also accommodate routine hygiene scaling and polishing ranging from ₹2,000 to ₹5,000 to resolve plaque retention and early gingivitis, ensuring long-term periodontal health for every patient who walks through our doors. Patients appreciate receiving straightforward advice on home hygiene practices that help prevent recurring dental troubles over time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clinic Standards & Diagnostic Equipment -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-5">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Diagnostic technology and safety standards
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-5 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal">Low-Dose Digital RVG</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              Equipped with high-sensitivity digital sensors that minimize X-ray exposure while producing crystal-clear diagnostic views of periapical infections and bone density.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal">High-Definition Camera</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              Chairside intraoral optics display magnified live views of fractured margins, micro-cracks, and soft tissue health directly onto patient monitors.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/40 space-y-2">
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal">Autoclave Sterilisation</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              Every surgical and restorative handpiece undergoes validated autoclave sterilisation cycles, ensuring absolute patient safety and strict infection control protocols.
+            </p>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+          To ensure comprehensive clinical breadth, visiting MDS specialists—including endodontists, oral and maxillofacial surgeons, orthodontists, periodontists, paedodontists, and prosthodontists—attend to specialized clinical treatments on a case-by-case basis at our Horamavu Agara Road clinic. These specialists coordinate closely with our resident team to oversee continuous post-operative healing and personalized follow-ups.
         </p>
       </div>
+    </section>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
-        {treatmentList.map((item) => (
-          <div class="p-4 rounded-2xl bg-japandi-cream border border-japandi-clay/40 flex items-center justify-between">
-            <span class="text-xs font-medium text-japandi-charcoal pr-2">{item.name}</span>
-            <span class="text-xs font-semibold text-japandi-moss shrink-0">{item.price}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- How Your First Visit Works -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="space-y-6">
-      <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium text-center">
-        How your first visit works
-      </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="p-5 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2">
-          <div class="w-7 h-7 rounded-full bg-japandi-sand text-japandi-moss font-serif font-bold flex items-center justify-center text-xs">
-            1
-          </div>
-          <h3 class="font-serif text-sm font-medium text-japandi-charcoal">
-            Book or walk in
-          </h3>
-          <p class="text-xs text-japandi-earth font-light leading-relaxed">
-            Reserve a time by call or WhatsApp, or walk in directly until 9 PM.
+    <!-- Treatments and Prices -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-4">
+        <div class="text-center sm:text-left space-y-1">
+          <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+            Treatments and prices
+          </h2>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light">
+            Prices are published estimate ranges. You receive an itemized, written quote after clinical examination.
           </p>
         </div>
 
-        <div class="p-5 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2">
-          <div class="w-7 h-7 rounded-full bg-japandi-sand text-japandi-moss font-serif font-bold flex items-center justify-center text-xs">
-            2
-          </div>
-          <h3 class="font-serif text-sm font-medium text-japandi-charcoal">
-            Consultation (₹600)
-          </h3>
-          <p class="text-xs text-japandi-earth font-light leading-relaxed">
-            Comprehensive examination with digital RVG X-ray included, valid 6 months.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2">
-          <div class="w-7 h-7 rounded-full bg-japandi-sand text-japandi-moss font-serif font-bold flex items-center justify-center text-xs">
-            3
-          </div>
-          <h3 class="font-serif text-sm font-medium text-japandi-charcoal">
-            Written estimate
-          </h3>
-          <p class="text-xs text-japandi-earth font-light leading-relaxed">
-            Clear treatment outline and transparent pricing in writing before starting.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQs Section -->
-  <section class="py-10 px-4 max-w-4xl mx-auto border-t border-japandi-clay/20">
-    <div class="space-y-6">
-      <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium text-center">
-        Frequently asked questions
-      </h2>
-
-      <div class="space-y-3 max-w-2xl mx-auto">
-        {faqs.map((faq) => (
-          <details class="group bg-japandi-cream border border-japandi-clay/40 rounded-2xl overflow-hidden transition-all duration-200">
-            <summary class="px-5 py-4 cursor-pointer text-xs sm:text-sm font-serif font-medium text-japandi-charcoal hover:text-japandi-moss flex items-center justify-between gap-3 select-none min-h-[48px]">
-              <span>{faq.question}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 shrink-0 text-japandi-moss group-open:rotate-180 transition-transform">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-              </svg>
-            </summary>
-            <div class="px-5 pb-4 text-xs sm:text-sm text-japandi-earth font-light leading-relaxed border-t border-japandi-clay/20 pt-3">
-              {faq.answer}
+        <div class="bg-japandi-cream border border-japandi-clay/40 rounded-2xl divide-y divide-japandi-clay/20 overflow-hidden shadow-sm">
+          {treatmentPricing.map((item) => (
+            <div class="p-4 sm:px-6 sm:py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs sm:text-sm">
+              <div>
+                <span class="font-medium text-japandi-charcoal block sm:inline">{item.name}</span>
+                <span class="text-[11px] text-japandi-earth font-light sm:ml-2">({item.note})</span>
+              </div>
+              <span class="font-semibold text-japandi-moss shrink-0">{item.price}</span>
             </div>
-          </details>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- How your first visit works -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-6">
+        <div class="text-center sm:text-left space-y-1">
+          <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+            How your first visit works
+          </h2>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light">
+            A structured, unhurried initial evaluation designed around your comfort and complete financial transparency.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">
+            <span class="w-7 h-7 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold flex items-center justify-center">1</span>
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal pt-1">Examination &amp; Digital X-Ray</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              We begin with a thorough examination of teeth, gums, and bite alignment. Low-radiation RVG digital X-rays are taken to inspect beneath the surface. Consultation is ₹600 and stays valid for 6 months.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">
+            <span class="w-7 h-7 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold flex items-center justify-center">2</span>
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal pt-1">Clear Explanation &amp; Written Plan</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              We review clinical findings on screen using intraoral camera photos and radiographs. You receive a clear, printed estimate detailing treatment steps, timelines, and exact pricing before anything starts.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">
+            <span class="w-7 h-7 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold flex items-center justify-center">3</span>
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal pt-1">Treatment at Your Pace</h3>
+            <p class="text-xs text-japandi-earth font-light leading-relaxed">
+              Begin necessary care on the same day if you wish, or schedule subsequent visits at times convenient for your calendar. There is never pressure to proceed until you feel fully prepared.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questions people in Kothanur ask us -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Questions people in Kothanur ask us
+        </h2>
+        <div class="divide-y divide-japandi-clay/30 border border-japandi-clay/40 rounded-2xl bg-japandi-cream overflow-hidden">
+          {faqs.map((faq) => (
+            <div class="p-5 sm:p-6 space-y-2">
+              <h3 class="font-serif text-base font-medium text-japandi-charcoal">
+                {faq.q}
+              </h3>
+              <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+                {faq.a}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Find Us / Contact Block -->
+    <section class="py-10 px-4 sm:px-6 lg:px-24 max-w-4xl mx-auto border-t border-japandi-clay/20">
+      <div class="bg-japandi-sand/60 border border-japandi-clay/40 rounded-3xl p-6 sm:p-8 space-y-4">
+        <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
+          Find Aureva Dental
+        </h2>
+        <div class="space-y-1.5 text-xs sm:text-sm text-japandi-earth font-light">
+          <p><strong class="font-medium text-japandi-charcoal">Address:</strong> {canonicalAddress}</p>
+          <p><strong class="font-medium text-japandi-charcoal">Landmark:</strong> Horamavu Agara Road, near Nayara Petrol Bunk, Hennur Bande (2nd floor with lift access).</p>
+          <p><strong class="font-medium text-japandi-charcoal">Hours:</strong> Tuesday–Sunday 9:30 AM–9:00 PM &middot; Monday 4:00 PM–9:00 PM (Walk-ins welcome until 9 PM).</p>
+          <p><strong class="font-medium text-japandi-charcoal">Parking:</strong> Parking available for 4-wheelers and 2-wheelers.</p>
+        </div>
+        <div class="pt-2 flex flex-wrap gap-3">
+          <a href={phoneCallUrl} class="px-5 py-2.5 rounded-full bg-japandi-moss text-japandi-cream text-xs font-medium uppercase tracking-wider hover:bg-japandi-charcoal transition-colors">
+            Call 073497 01002
+          </a>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full border border-japandi-clay bg-japandi-sand text-japandi-charcoal text-xs font-medium uppercase tracking-wider hover:bg-japandi-cream transition-colors">
+            WhatsApp
+          </a>
+          <a href={directionsUrl} target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full border border-japandi-clay bg-japandi-sand text-japandi-charcoal text-xs font-medium uppercase tracking-wider hover:bg-japandi-cream transition-colors">
+            Google Maps Directions
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

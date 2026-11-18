@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../../utils/seoSchemas';
 import { GOOGLE_REVIEWS_LABEL } from '../../config/clinic';
+import { CANONICAL_PRICES } from '../../data/prices';
 
 
 const pageTitle = "Kids Dentist in Hennur Bangalore | Aureva Dental";
@@ -25,7 +26,7 @@ const faqs = [
   },
   {
     question: "What is the cost of pediatric dental treatments at Aureva Dental?",
-    answer: "Kids' consultations are ₹600. Preventive fluoride varnishes range between ₹1,500 and ₹2,000 per arch. Pit and fissure sealants cost ₹1,500 to ₹2,500 per tooth. Complete cost outlines are provided upfront to parents before any treatment begins."
+    answer: `Kids' consultations are ${CANONICAL_PRICES.kids_checkup}. Preventive fluoride varnishes range between ${CANONICAL_PRICES.kids_fluoride}. Pit and fissure sealants cost ${CANONICAL_PRICES.kids_sealant}. Tooth fillings are ${CANONICAL_PRICES.kids_filling}. Complete cost outlines are provided upfront to parents before any treatment begins.`
   }
 ];
 
@@ -337,11 +338,11 @@ const seoProps = {
             We believe pediatric dentistry should be transparent, accessible, and prices are quoted upfront:
           </p>
           <ul class="space-y-2 list-disc pl-5">
-            <li><strong class="text-japandi-charcoal font-medium">Kids Check-up:</strong> ₹600 (valid 6 months)</li>
-            <li><strong class="text-japandi-charcoal font-medium">Fluoride:</strong> ₹1,500 – ₹2,000 per arch</li>
-            <li><strong class="text-japandi-charcoal font-medium">Pit and Fissure Sealant:</strong> ₹1,500 per tooth</li>
-            <li><strong class="text-japandi-charcoal font-medium">Kids Tooth Filling:</strong> ₹1,000 – ₹3,000</li>
-            <li><strong class="text-japandi-charcoal font-medium">Baby Tooth Pulpectomy:</strong> ₹3,500 – ₹6,000</li>
+            <li><strong class="text-japandi-charcoal font-medium">Kids Check-up:</strong> {CANONICAL_PRICES.kids_checkup} (valid 6 months)</li>
+            <li><strong class="text-japandi-charcoal font-medium">Fluoride:</strong> {CANONICAL_PRICES.kids_fluoride}</li>
+            <li><strong class="text-japandi-charcoal font-medium">Pit and Fissure Sealant:</strong> {CANONICAL_PRICES.kids_sealant}</li>
+            <li><strong class="text-japandi-charcoal font-medium">Kids Tooth Filling:</strong> {CANONICAL_PRICES.kids_filling}</li>
+            <li><strong class="text-japandi-charcoal font-medium">Baby Tooth Pulpectomy:</strong> {CANONICAL_PRICES.baby_tooth_pulpectomy}</li>
           </ul>
         </div>
 

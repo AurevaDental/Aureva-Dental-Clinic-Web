@@ -60,11 +60,12 @@ export const CANONICAL_PRICES = {
   emergency_single_sitting_rct: formatPriceRange(4000, 10000),
 
   // Crowns & Bridges
-    crown_pfm: formatPriceRange(4000, 6000),
+  crown_pfm: formatPriceRange(4000, 6000),
   crown_ceramic: formatPriceRange(6000, 10000),
   crown_pfm_ceramic_combined: formatPriceRange(5000, 10000),
   crown_zirconia: formatPriceRange(10000, 18000),
   crown_emax: formatPriceRange(10000, 18000),
+  crown_overall: formatPriceRange(4000, 18000),
   bridge_unit_zirconia: formatPriceRange(10000, 18000, 'per unit'),
   crown_bridge_recementation: formatPriceRange(800, 2000),
   broken_tooth_composite_repair: formatPriceRange(1500, 4000),
@@ -123,8 +124,9 @@ export const CANONICAL_PRICES = {
   kids_checkup: formatExactPrice(600),
   kids_fluoride: formatPriceRange(1500, 2000, 'per arch'),
   kids_sealant: formatPriceRange(1500, 2500, 'per tooth'),
-  kids_filling: formatPriceRange(1500, 3500),
-  baby_tooth_pulpectomy: formatPriceRange(3500, 6000)
+  kids_filling: formatPriceRange(1000, 3000),
+  baby_tooth_pulpectomy: formatPriceRange(3500, 6000),
+  kids_dentistry_summary: `Check-up ${formatExactPrice(600)} · fillings ${formatPriceRange(1000, 3000)}`
 } as const;
 
 export default CANONICAL_PRICES;

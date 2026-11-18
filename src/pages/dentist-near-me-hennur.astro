@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_REVIEWS_LABEL } from '../config/clinic';
+import { CANONICAL_PRICES } from '../data/prices';
 
 const pageTitle = "Dentist near you in Hennur Bande | Aureva Dental";
 const pageDescription = "Dental clinic on Horamavu Agara Road, Hennur Bande. Open 7 days, 2nd floor with lift. Consultation ₹600 includes digital X-ray. Walk in or book by call or WhatsApp.";
@@ -36,63 +37,63 @@ const distanceList = [
 const treatmentTiles = [
   {
     title: "Consultation",
-    fee: "₹600 · includes digital X-ray · valid 6 months",
+    fee: `${CANONICAL_PRICES.consultation} · includes digital X-ray · valid 6 months`,
     isModal: true,
     treatmentParam: "Consultation"
   },
   {
     title: "Scaling & Polishing",
-    fee: "₹2,000 – ₹5,000",
+    fee: CANONICAL_PRICES.scaling_routine,
     url: "/treatments/scaling-and-polishing"
   },
   {
     title: "Tooth Filling",
-    fee: "₹1,500 – ₹4,000",
+    fee: CANONICAL_PRICES.tooth_filling,
     url: "/treatments/tooth-extraction"
   },
   {
     title: "Root Canal Treatment",
-    fee: "₹4,000 – ₹10,000",
+    fee: CANONICAL_PRICES.rct_overall,
     url: "/root-canal-treatment-hennur"
   },
   {
     title: "Crowns & Caps",
-    fee: "₹4,000 – ₹18,000",
+    fee: CANONICAL_PRICES.crown_overall,
     url: "/dental-crowns-hennur"
   },
   {
     title: "Wisdom Tooth Removal",
-    fee: "₹4,000 – ₹10,000",
+    fee: CANONICAL_PRICES.wisdom_hennur_faq_overall,
     url: "/wisdom-tooth-removal-hennur"
   },
   {
     title: "Teeth Whitening",
-    fee: "₹8,000 – ₹15,000",
+    fee: CANONICAL_PRICES.whitening_laser,
     url: "/teeth-whitening-hennur"
   },
   {
     title: "Gum Treatment",
-    fee: "Deep scaling ₹8,000 – ₹15,000",
+    fee: `Deep scaling ${CANONICAL_PRICES.whitening_laser}`,
     url: "/gum-treatment-hennur"
   },
   {
     title: "Kids Dentistry",
-    fee: "Check-up ₹600 · fillings ₹1,500 – ₹3,500",
+    fee: `Check-up ${CANONICAL_PRICES.kids_checkup} · fillings ${CANONICAL_PRICES.kids_filling}`,
     url: "/treatments/pediatric-dentistry"
   },
   {
     title: "Dental Implants",
-    fee: "₹35,000 – ₹60,000",
+    fee: CANONICAL_PRICES.implant_single_fixture,
     url: "/dental-implants-hennur"
   },
   {
     title: "Clear Aligners",
-    fee: "₹80,000 – ₹2,50,000",
+    fee: CANONICAL_PRICES.clear_aligners_overall,
     url: "/invisible-aligners-hennur"
   },
   {
     title: "Tooth Pain / Emergency",
-    fee: "Consultation ₹600 + treatment · walk in till 9 PM",
+    fee: `Consultation ${CANONICAL_PRICES.consultation} + treatment · walk in till 9 PM`,
     url: "/treatments/emergency-dentist"
   }
 ];
@@ -108,7 +109,7 @@ const faqs = [
   },
   {
     q: "How much is a dental check-up?",
-    a: "The new-patient consultation is ₹600 and includes a digital X-ray. It stays valid for 6 months."
+    a: `The new-patient consultation is ${CANONICAL_PRICES.consultation} and includes a digital X-ray. It stays valid for 6 months.`
   },
   {
     q: "Is the clinic easy to reach?",
@@ -135,11 +136,14 @@ const faqs = [
     <div class="max-w-xl mx-auto px-4 py-2.5 flex items-center justify-between">
       <div class="flex items-center gap-2">
         <img 
-          src="/logo.webp" 
+          src="/logo-mobile.webp" 
           alt="Aureva Dental logo" 
-          width="120" 
-          height="32" 
-          class="h-7 w-auto object-contain" 
+          width="28" 
+          height="28" 
+          fetchpriority="high"
+          decoding="async"
+          style="inline-size: 28px; block-size: 28px; aspect-ratio: 1 / 1;"
+          class="h-7 w-7 object-contain" 
         />
       </div>
 
@@ -174,7 +178,7 @@ const faqs = [
         2nd floor with lift · Horamavu Agara Road, near Nayara Petrol Bunk
       </p>
       <p class="font-medium text-japandi-moss">
-        New-patient consultation ₹600 · includes digital X-ray · valid 6 months
+        New-patient consultation {CANONICAL_PRICES.consultation} · includes digital X-ray · valid 6 months
       </p>
     </div>
 
