@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas';
+import { GOOGLE_RATING, GOOGLE_REVIEWS_LABEL } from '../config/clinic';
 
 export const prerender = false;
 
@@ -112,8 +113,8 @@ const seoProps = {
               <span class="text-[11px] text-japandi-earth">Combined Experience</span>
             </div>
             <div class="p-3.5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40">
-              <span class="block text-xl font-serif text-japandi-moss font-semibold">5.0 ★</span>
-              <span class="text-[11px] text-japandi-earth">5.0 (47 Google Reviews)</span>
+              <span class="block text-xl font-serif text-japandi-moss font-semibold">{GOOGLE_RATING.toFixed(1)} ★</span>
+              <span class="text-[11px] text-japandi-earth">{GOOGLE_REVIEWS_LABEL}</span>
             </div>
           </div>
           <div class="p-4 rounded-2xl bg-japandi-sand/60 border border-japandi-clay/40 text-xs text-japandi-charcoal space-y-1">

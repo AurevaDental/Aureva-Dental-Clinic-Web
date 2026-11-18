@@ -12,8 +12,8 @@
     "google_analytics_id": "G-7N3BPH5397",
     "google_tag_manager_id": "GTM-WRVN4QWK",
     "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
-    "rating_value": 5,
-    "review_count": 47,
+    "rating_value": 5.0,
+    "review_count": 48,
     "local_areas_served": [
       "Hennur",
       "Horamavu",
@@ -68,7 +68,7 @@
     },
     {
       "label": "Verified Reviews",
-      "value": 47,
+      "value": 48,
       "suffix": ""
     },
     {
@@ -437,16 +437,16 @@
         "phone": "+91 73497 01002",
         "email": "aurevadentalclinic@gmail.com",
         "hours": "Monday: 4:00 PM – 9:00 PM | Tuesday – Sunday: 9:30 AM – 9:00 PM",
-        "parking": "Dedicated 2-wheeler and 4-wheeler parking available for patient convenience."
+        "parking": "Parking available for 4-wheelers and 2-wheelers."
       }
     ]
   },
   "social_proof": {
     "title": "Serene Experiences & Google Reviews",
     "subtitle": "VERIFIED PATIENT STORIES",
-    "google_rating": 5,
-    "review_count": 47,
-    "badge_text": "5.0 (47 Google Reviews)",
+    "google_rating": 5.0,
+    "review_count": 48,
+    "badge_text": "5.0 (48 Google Reviews)",
     "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
   },
   "google_reviews": [],

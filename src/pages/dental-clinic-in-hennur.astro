@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas';
+import { GOOGLE_REVIEWS_LABEL } from '../config/clinic';
 
 export const prerender = false;
 
@@ -30,7 +31,7 @@ const faqs = [
   },
   {
     question: "Do you offer parking at the clinic?",
-    answer: "Yes, free parking downstairs for 2 cars and 5 to 8 bikes is available directly within the building premises on Horamavu Agara Road. Our clinic is located on the 2nd floor with direct lift access."
+    answer: "Parking available for 4-wheelers and 2-wheelers."
   },
   {
     question: "What safety and sterilization guidelines are practiced?",
@@ -157,10 +158,10 @@ const seoProps = {
             class="w-full h-auto object-cover" 
           />
           <div class="p-5 space-y-2">
-            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">5.0 (47 Google Reviews)</span>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">{GOOGLE_REVIEWS_LABEL}</span>
             <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Aureva Dental Clinic &amp; Studio, Hennur</h3>
             <p class="text-xs text-japandi-earth font-light leading-relaxed">
-              Modern dental care on Horamavu Agara Road with low-radiation digital RVG diagnostics and on-site parking.
+              Modern dental care on Horamavu Agara Road with low-radiation digital RVG diagnostics. Parking available for 4-wheelers and 2-wheelers.
             </p>
           </div>
         </div>
@@ -411,7 +412,7 @@ const seoProps = {
           Dentist Near Nayara Petrol Bunk, Hennur Bande
         </h2>
         <p class="text-sm text-japandi-earth font-light leading-relaxed">
-          Reaching Aureva Dental is straightforward from any part of Hennur. Our studio is situated on the 2nd Floor on Horamavu Agara Road, directly adjacent to the Nayara Petrol Bunk at Hennur Bande. The premises feature modern lift access directly to our clinic entrance, ensuring smooth visits for senior patients and families with strollers. Dedicated parking accommodates 2 cars and 5 to 8 two-wheelers, free parking downstairs.
+          Reaching Aureva Dental is straightforward from any part of Hennur. Our studio is situated on the 2nd Floor on Horamavu Agara Road, directly adjacent to the Nayara Petrol Bunk at Hennur Bande. The premises feature modern lift access directly to our clinic entrance, ensuring smooth visits for senior patients and families with strollers. Parking available for 4-wheelers and 2-wheelers.
         </p>
         <div>
           <a 

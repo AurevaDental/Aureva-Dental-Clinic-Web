@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas';
+import { GOOGLE_RATING, GOOGLE_REVIEWS_LABEL } from '../config/clinic';
 
 export const prerender = false;
 
@@ -18,7 +19,7 @@ const breadcrumbs = [
 const faqs = [
   {
     question: "Where is Aureva Dental located near Horamavu?",
-    answer: "Aureva Dental is conveniently situated on Horamavu Agara Road itself (2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043). We are about 3 to 5 minutes from Horamavu Ring Road junction, Kalkere, and Jayanthi Nagar, offering free parking downstairs for 2 cars and 5 to 8 bikes on site."
+    answer: "Aureva Dental is conveniently situated on Horamavu Agara Road itself (2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043). We are about 3 to 5 minutes from Horamavu Ring Road junction, Kalkere, and Jayanthi Nagar. Parking available for 4-wheelers and 2-wheelers."
   },
   {
     question: "Do you have an emergency dentist for Horamavu residents?",
@@ -154,8 +155,8 @@ const seoProps = {
               <span class="text-[11px] text-japandi-earth">From Horamavu Junction</span>
             </div>
             <div class="p-3.5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40">
-              <span class="block text-xl font-serif text-japandi-moss font-semibold">5.0 ★</span>
-              <span class="text-[11px] text-japandi-earth">5.0 (47 Google Reviews)</span>
+              <span class="block text-xl font-serif text-japandi-moss font-semibold">{GOOGLE_RATING.toFixed(1)} ★</span>
+              <span class="text-[11px] text-japandi-earth">{GOOGLE_REVIEWS_LABEL}</span>
             </div>
           </div>
 
@@ -309,7 +310,7 @@ const seoProps = {
           </div>
           <div class="flex items-start gap-3">
             <span class="w-2 h-2 rounded-full bg-japandi-moss mt-1.5 shrink-0"></span>
-            <span><strong>From Kalkere / Jayanthi Nagar:</strong> Direct drive (about 3 to 5 minutes) via Horamavu Agara Main Road. Free parking downstairs for 2 cars and 5 to 8 bikes available.</span>
+            <span><strong>From Kalkere / Jayanthi Nagar:</strong> Direct drive (about 3 to 5 minutes) via Horamavu Agara Main Road. Parking available for 4-wheelers and 2-wheelers.</span>
           </div>
           <div class="flex items-start gap-3">
             <span class="w-2 h-2 rounded-full bg-japandi-moss mt-1.5 shrink-0"></span>

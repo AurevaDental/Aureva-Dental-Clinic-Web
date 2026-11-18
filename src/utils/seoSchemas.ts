@@ -5,7 +5,7 @@
  */
 
 import { DENTAL_OFFER_CATALOG } from '../data/dentalServiceCatalog.ts';
-import { clinicConfig } from '../config/clinic.ts';
+import { clinicConfig, GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from '../config/clinic.ts';
 
 export interface FaqItem {
   question: string;
@@ -15,7 +15,7 @@ export interface FaqItem {
 export const LOCAL_FAQS: FaqItem[] = [
   {
     question: "Where is Aureva Dental located?",
-    answer: "Aureva Dental is conveniently located at 2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Kothanur, and North Bangalore with free parking downstairs for 2 cars and 5 to 8 bikes."
+    answer: "Aureva Dental is conveniently located at 2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. We serve patients across Hennur, Horamavu, Babusapalya, Kalyan Nagar, HRBR Layout, Kammanahalli, Kothanur, and North Bangalore. Parking available for 4-wheelers and 2-wheelers."
   },
   {
     question: "Can I pay with credit card or EMI at Aureva Dental?",
@@ -57,13 +57,15 @@ export function generateDentalClinicSchema() {
     "url": "https://aurevadental.com/",
     "telephone": "+917349701002",
     "priceRange": "₹₹",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": clinicConfig.ratingValue.toFixed(1),
-      "reviewCount": clinicConfig.googleReviewsCount.toString(),
-      "bestRating": "5",
-      "worstRating": "1"
-    },
+    ...(GOOGLE_RATING > 0 && GOOGLE_REVIEW_COUNT > 0 ? {
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": GOOGLE_RATING.toFixed(1),
+        "reviewCount": GOOGLE_REVIEW_COUNT.toString(),
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    } : {}),
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens",
@@ -409,13 +411,15 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
         }
       }
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": clinicConfig.ratingValue.toFixed(1),
-      "reviewCount": clinicConfig.googleReviewsCount.toString(),
-      "bestRating": "5",
-      "worstRating": "1"
-    },
+    ...(GOOGLE_RATING > 0 && GOOGLE_REVIEW_COUNT > 0 ? {
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": GOOGLE_RATING.toFixed(1),
+        "reviewCount": GOOGLE_REVIEW_COUNT.toString(),
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    } : {}),
     "sameAs": allProfiles
   };
 }

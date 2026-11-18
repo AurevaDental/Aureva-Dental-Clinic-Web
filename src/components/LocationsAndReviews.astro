@@ -1,7 +1,7 @@
 ---
 import { getConfig } from '../utils/getConfig';
 import { supabase } from '../lib/supabase';
-import { clinicConfig } from '../config/clinic';
+import { clinicConfig, GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_REVIEWS_LABEL } from '../config/clinic';
 
 const config = getConfig();
 const { locations_section, social_proof, google_reviews } = config;
@@ -33,11 +33,24 @@ const configuredReviews = google_reviews && google_reviews.length > 0
   ? google_reviews 
   : (social_proof?.reviews && social_proof.reviews.length > 0 ? social_proof.reviews : defaultReviews);
 
-const displayReviews = reviews && reviews.length > 0 ? reviews : configuredReviews;
+const rawReviews = reviews && reviews.length > 0 ? reviews : configuredReviews;
 
-const googleRating = clinicConfig.ratingValue;
-const reviewCount = clinicConfig.googleRating.count;
-const reviewLabel = clinicConfig.googleRating.label;
+// Deduplicate reviews so each review appears only once.
+// If multiple reviews have the identical text (or if only 1 review was duplicated), show a single card.
+const seenTexts = new Set<string>();
+const displayReviews = rawReviews.filter((r: any) => {
+  const textKey = (r.text || r.content || r.reviewBody || '').trim().toLowerCase();
+  if (!textKey) return true;
+  if (seenTexts.has(textKey)) {
+    return false;
+  }
+  seenTexts.add(textKey);
+  return true;
+});
+
+const googleRating = GOOGLE_RATING;
+const reviewCount = GOOGLE_REVIEW_COUNT;
+const reviewLabel = GOOGLE_REVIEWS_LABEL;
 const googleMapsReviewUrl = social_proof?.google_maps_url || locations_section.locations_list[0]?.google_maps_url || "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA";
 ---
 
@@ -231,105 +244,111 @@ const googleMapsReviewUrl = social_proof?.google_maps_url || locations_section.l
           </div>
 
           <!-- Direct Link to Google Maps -->
-          <a
-            href={googleMapsReviewUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={`Read ${reviewCount} 5-star Google Reviews for Aureva Dental`}
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-japandi-sand/70 hover:bg-japandi-sand border border-japandi-clay/60 hover:border-japandi-moss/40 text-xs text-japandi-charcoal transition-all duration-300 group shadow-sm shrink-0"
-          >
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
-              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-            </svg>
-            <span class="font-bold">{googleRating.toFixed(1)}</span>
-            <div class="flex items-center text-amber-500 text-xs">
-              ★ ★ ★ ★ ★
-            </div>
-            <span class="text-japandi-earth text-[11px]">({reviewCount} Reviews)</span>
-          </a>
+          {googleRating > 0 && reviewCount > 0 && (
+            <a
+              href={googleMapsReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={`Read ${reviewCount} 5-star Google Reviews for Aureva Dental`}
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-japandi-sand/70 hover:bg-japandi-sand border border-japandi-clay/60 hover:border-japandi-moss/40 text-xs text-japandi-charcoal transition-all duration-300 group shadow-sm shrink-0"
+            >
+              <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+              </svg>
+              <span class="font-bold">{googleRating.toFixed(1)}</span>
+              <div class="flex items-center text-amber-500 text-xs">
+                ★ ★ ★ ★ ★
+              </div>
+              <span class="text-japandi-earth text-[11px]">({reviewCount} Reviews)</span>
+            </a>
+          )}
         </div>
 
         <!-- Google Overall Rating Summary Card -->
-        <div class="bg-japandi-sand/55 border border-japandi-clay/60 rounded-3xl p-6 sm:p-7 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:shadow-japandi-charcoal/5">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-            <div class="flex items-center gap-4">
-              <!-- Google G Logo Circle -->
-              <div class="w-14 h-14 rounded-2xl bg-white shadow-sm border border-japandi-clay/40 flex items-center justify-center shrink-0">
-                <svg class="w-7 h-7" viewBox="0 0 24 24">
-                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-                </svg>
-              </div>
-              
-              <div>
-                <div class="flex items-center gap-2 mb-1">
-                  <span class="text-2xl font-serif font-bold text-japandi-charcoal">{googleRating.toFixed(1)}</span>
-                  <div class="flex items-center text-amber-500 text-sm tracking-tight">
-                    ★ ★ ★ ★ ★
-                  </div>
-                  <span class="text-[11px] font-semibold text-japandi-moss bg-japandi-moss/10 px-2 py-0.5 rounded-full">
-                    Highly Recommended
-                  </span>
+        {googleRating > 0 && reviewCount > 0 && (
+          <div class="bg-japandi-sand/55 border border-japandi-clay/60 rounded-3xl p-6 sm:p-7 relative overflow-hidden transition-all duration-300 hover:shadow-md hover:shadow-japandi-charcoal/5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+              <div class="flex items-center gap-4">
+                <!-- Google G Logo Circle -->
+                <div class="w-14 h-14 rounded-2xl bg-white shadow-sm border border-japandi-clay/40 flex items-center justify-center shrink-0">
+                  <svg class="w-7 h-7" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                  </svg>
                 </div>
-                <p class="text-xs text-japandi-earth">
-                  All reviews verified by real patients on Google Maps • Hennur, Bangalore
-                </p>
+                
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="text-2xl font-serif font-bold text-japandi-charcoal">{googleRating.toFixed(1)}</span>
+                    <div class="flex items-center text-amber-500 text-sm tracking-tight">
+                      ★ ★ ★ ★ ★
+                    </div>
+                    <span class="text-[11px] font-semibold text-japandi-moss bg-japandi-moss/10 px-2 py-0.5 rounded-full">
+                      Highly Recommended
+                    </span>
+                  </div>
+                  <p class="text-xs text-japandi-earth">
+                    All reviews verified by real patients on Google Maps • Hennur, Bangalore
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <!-- CTA Actions -->
-            <div class="flex flex-wrap sm:flex-nowrap items-center gap-2.5 shrink-0">
-              <a
-                href={googleMapsReviewUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-japandi-moss text-japandi-cream text-xs font-semibold hover:bg-japandi-charcoal transition-all duration-300 shadow-sm group"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-                </svg>
-                <span>Write a Review</span>
-              </a>
-              <a
-                href={googleMapsReviewUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-japandi-sand/80 border border-japandi-clay text-xs font-medium text-japandi-charcoal hover:border-japandi-charcoal transition-all duration-300"
-              >
-                <span>Read All on Google</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5 text-japandi-earth">
-                  <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
-                </svg>
-              </a>
+              <!-- CTA Actions -->
+              <div class="flex flex-wrap sm:flex-nowrap items-center gap-2.5 shrink-0">
+                <a
+                  href={googleMapsReviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-japandi-moss text-japandi-cream text-xs font-semibold hover:bg-japandi-charcoal transition-all duration-300 shadow-sm group"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                  </svg>
+                  <span>Write a Review</span>
+                </a>
+                <a
+                  href={googleMapsReviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-japandi-sand/80 border border-japandi-clay text-xs font-medium text-japandi-charcoal hover:border-japandi-charcoal transition-all duration-300"
+                >
+                  <span>Read All on Google</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3.5 h-3.5 text-japandi-earth">
+                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         {displayReviews && displayReviews.length > 0 && (
           <!-- Treatment Filter Chips -->
-          <div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar text-xs" id="review-filters">
-            <button
-              type="button"
-              class="review-filter-btn px-3.5 py-1.5 rounded-full bg-japandi-charcoal text-japandi-cream font-medium transition-all duration-200 shrink-0 text-[11px]"
-              data-filter="all"
-            >
-              All Reviews ({displayReviews.length})
-            </button>
-            {Array.from(new Set(displayReviews.map((r: any) => r.treatment).filter(Boolean))).map((treatment: any) => (
+          {displayReviews.length > 1 && (
+            <div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar text-xs" id="review-filters">
               <button
                 type="button"
-                class="review-filter-btn px-3.5 py-1.5 rounded-full bg-japandi-sand/70 hover:bg-japandi-sand border border-japandi-clay/60 text-japandi-charcoal font-normal transition-all duration-200 shrink-0 text-[11px]"
-                data-filter={treatment}
+                class="review-filter-btn px-3.5 py-1.5 rounded-full bg-japandi-charcoal text-japandi-cream font-medium transition-all duration-200 shrink-0 text-[11px]"
+                data-filter="all"
               >
-                {treatment}
+                All Reviews ({displayReviews.length})
               </button>
-            ))}
-          </div>
+              {Array.from(new Set(displayReviews.map((r: any) => r.treatment).filter(Boolean))).map((treatment: any) => (
+                <button
+                  type="button"
+                  class="review-filter-btn px-3.5 py-1.5 rounded-full bg-japandi-sand/70 hover:bg-japandi-sand border border-japandi-clay/60 text-japandi-charcoal font-normal transition-all duration-200 shrink-0 text-[11px]"
+                  data-filter={treatment}
+                >
+                  {treatment}
+                </button>
+              ))}
+            </div>
+          )}
 
           <!-- Google Reviews Cards Grid/List -->
           <div class="flex flex-col gap-5" id="reviews-container">

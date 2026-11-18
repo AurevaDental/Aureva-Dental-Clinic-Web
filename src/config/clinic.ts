@@ -3,20 +3,24 @@
  * Single source of truth for dynamic clinic parameters like review count and ratings.
  */
 
+export const GOOGLE_RATING = 5.0;
+export const GOOGLE_REVIEW_COUNT = 48;
+export const GOOGLE_REVIEWS_LABEL = `${GOOGLE_RATING.toFixed(1)} (${GOOGLE_REVIEW_COUNT} Google Reviews)`;
+
 export const clinicConfig = {
   // Visible review badge label across website UI
-  googleReviewsLabel: "5.0 (47 Google Reviews)",
+  googleReviewsLabel: GOOGLE_REVIEWS_LABEL,
 
   // Numerical verified Google review count for JSON-LD schema
-  googleReviewsCount: 47,
+  googleReviewsCount: GOOGLE_REVIEW_COUNT,
 
   // Google review rating value
-  ratingValue: 5.0,
+  ratingValue: GOOGLE_RATING,
 
   googleRating: {
-    score: "5.0",
-    count: 47,
-    label: "5.0 (47 Google Reviews)"
+    score: GOOGLE_RATING.toFixed(1),
+    count: GOOGLE_REVIEW_COUNT,
+    label: GOOGLE_REVIEWS_LABEL
   },
 
   // NAP & Operational facts

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../utils/seoSchemas';
+import { GOOGLE_REVIEWS_LABEL } from '../config/clinic';
 
 export const prerender = false;
 
@@ -182,7 +183,7 @@ const seoProps = {
             class="w-full h-auto object-cover"
           />
           <div class="p-5 space-y-2">
-            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">5.0 (47 Google Reviews)</span>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">{GOOGLE_REVIEWS_LABEL}</span>
             <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Aureva Dental Clinic &amp; Studio, Hennur</h3>
             <p class="text-xs text-japandi-earth font-light leading-relaxed">
               pH-neutral LED teeth whitening with gingival barrier isolation on Horamavu Agara Road.
@@ -328,7 +329,7 @@ const seoProps = {
           <li><strong>Thanisandra, Kothanur &amp; Byrathi:</strong> Approx. 8 to 12 minutes depending on traffic.</li>
         </ul>
         <p class="text-sm text-japandi-earth font-light leading-relaxed pt-2">
-          Free parking downstairs for 2 cars and 5 to 8 bikes is provided on premise, and we are open on Sundays (9:30 AM to 9:00 PM) for weekend appointments.
+          Parking available for 4-wheelers and 2-wheelers. We are open on Sundays (9:30 AM to 9:00 PM) for weekend appointments.
         </p>
       </div>
 

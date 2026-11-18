@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import OpenStatusChip from '../components/OpenStatusChip';
-import { clinicConfig } from '../config/clinic';
+import { clinicConfig, GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_REVIEWS_LABEL } from '../config/clinic';
 
 export const prerender = false;
 
@@ -97,7 +97,7 @@ const faqs = [
   },
   {
     q: "Where do I park?",
-    a: "There is free parking downstairs (2 cars, 5–8 bikes). The clinic is on the 2nd floor with a lift."
+    a: "Parking available for 4-wheelers and 2-wheelers."
   },
   {
     q: "What if I need a specialist?",
@@ -144,7 +144,7 @@ const faqs = [
     </h1>
 
     <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed max-w-md">
-      Open till 9 PM, Sundays included. 2nd floor with lift, free parking downstairs, near Nayara Petrol Bunk.
+      Open till 9 PM, Sundays included. 2nd floor with lift, near Nayara Petrol Bunk. Parking available for 4-wheelers and 2-wheelers.
     </p>
 
     <!-- Open Status Chip (client island) -->
@@ -196,10 +196,12 @@ const faqs = [
     </div>
 
     <!-- Rating Label -->
-    <div class="inline-flex items-center gap-1.5 pt-0.5 text-xs text-japandi-earth">
-      <div class="flex text-amber-500 text-sm tracking-tight" aria-hidden="true">★★★★★</div>
-      <span class="font-medium text-japandi-charcoal">5.0 (47 Google Reviews)</span>
-    </div>
+    {GOOGLE_RATING > 0 && GOOGLE_REVIEW_COUNT > 0 && (
+      <div class="inline-flex items-center gap-1.5 pt-0.5 text-xs text-japandi-earth">
+        <div class="flex text-amber-500 text-sm tracking-tight" aria-hidden="true">★★★★★</div>
+        <span class="font-medium text-japandi-charcoal">{GOOGLE_REVIEWS_LABEL}</span>
+      </div>
+    )}
   </section>
 
   <!-- Treatments and Prices Grid Section -->
@@ -471,7 +473,7 @@ const faqs = [
             <strong class="text-japandi-charcoal font-medium">Hours:</strong> Monday 4–9 PM; Tuesday to Sunday 9:30 AM–9 PM; walk-ins till 9 PM.
           </p>
           <p>
-            2nd floor with lift. Free parking downstairs (2 cars, 5–8 bikes).
+            2nd floor with lift. Parking available for 4-wheelers and 2-wheelers.
           </p>
         </div>
 

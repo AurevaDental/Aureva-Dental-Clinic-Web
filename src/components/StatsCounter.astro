@@ -1,45 +1,99 @@
 ---
 import { getConfig } from '../utils/getConfig';
+import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT } from '../config/clinic';
 
 const config = getConfig();
-const { stats_section } = config;
+const rawStats = config.stats_section || [];
+
+interface StatItem {
+  label: string;
+  value: number;
+  displayValue: string;
+  suffix?: string;
+  isRating?: boolean;
+}
+
+const stats_section: StatItem[] = rawStats
+  .map((stat: any) => {
+    if (stat.label === "Google Rating") {
+      const val = GOOGLE_RATING;
+      return {
+        label: stat.label,
+        value: val,
+        displayValue: val && val > 0 ? `${val.toFixed(1)}★` : '',
+        suffix: '',
+        isRating: true
+      };
+    }
+    if (stat.label === "Verified Reviews") {
+      const val = GOOGLE_REVIEW_COUNT;
+      return {
+        label: stat.label,
+        value: val,
+        displayValue: val && val > 0 ? `${val}` : '',
+        suffix: stat.suffix || '',
+        isRating: false
+      };
+    }
+    return {
+      label: stat.label,
+      value: Number(stat.value),
+      displayValue: `${stat.value}`,
+      suffix: stat.suffix || '',
+      isRating: false
+    };
+  })
+  .filter((stat: StatItem) => stat.value && Number(stat.value) > 0);
 ---
 
-<section class="py-16 px-6 lg:px-24 bg-japandi-sand/30 border-t border-b border-japandi-clay/40">
-  <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
-      {stats_section.map((stat, index) => (
-        <div class="flex flex-col items-center justify-center space-y-2">
-          <div class="flex items-baseline text-4xl md:text-5xl font-serif font-medium text-japandi-moss">
-            <span 
-              class="stat-counter" 
-              data-target={stat.value}
-            >0</span>
-            <span>{stat.suffix}</span>
+{stats_section.length > 0 && (
+  <section class="py-16 px-6 lg:px-24 bg-japandi-sand/30 border-t border-b border-japandi-clay/40">
+    <div class="max-w-7xl mx-auto">
+      <div class={`grid grid-cols-2 ${stats_section.length === 3 ? 'md:grid-cols-3' : 'md:grid-cols-4'} gap-8 md:gap-12 text-center`}>
+        {stats_section.map((stat) => (
+          <div class="flex flex-col items-center justify-center space-y-2">
+            <div class="flex items-baseline text-4xl md:text-5xl font-serif font-medium text-japandi-moss">
+              {stat.isRating ? (
+                <span>{stat.displayValue}</span>
+              ) : (
+                <>
+                  <span 
+                    class="stat-counter" 
+                    data-target={stat.value}
+                  >{stat.displayValue}</span>
+                  {stat.suffix && <span>{stat.suffix}</span>}
+                </>
+              )}
+            </div>
+            <p class="text-xs md:text-sm text-japandi-earth uppercase tracking-widest font-semibold">{stat.label}</p>
           </div>
-          <p class="text-xs md:text-sm text-japandi-earth uppercase tracking-widest font-semibold">{stat.label}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+)}
 
 <script>
   function setupCounters() {
     const counters = document.querySelectorAll('.stat-counter');
-    const speed = 200; // The lower the slower
 
     const animate = (counter: Element) => {
       const target = +(counter.getAttribute('data-target') || '0');
-      const count = +(counter.textContent || '0');
-      const increment = target / speed;
+      if (target <= 0) return;
+      const initial = Math.max(1, Math.floor(target * 0.3));
+      let current = initial;
+      const increment = Math.max(1, Math.ceil((target - initial) / 25));
 
-      if (count < target) {
-        counter.textContent = Math.ceil(count + increment).toString();
-        setTimeout(() => animate(counter), 10);
-      } else {
-        counter.textContent = target.toString();
-      }
+      const step = () => {
+        current += increment;
+        if (current < target) {
+          counter.textContent = current.toString();
+          requestAnimationFrame(step);
+        } else {
+          counter.textContent = target.toString();
+        }
+      };
+      step();
     };
 
     const observer = new IntersectionObserver((entries) => {

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../utils/seoSchemas';
+import { GOOGLE_REVIEWS_LABEL } from '../config/clinic';
 
 export const prerender = false;
 
@@ -177,7 +178,7 @@ const seoProps = {
 
         <div class="relative rounded-3xl overflow-hidden border border-japandi-clay/60 shadow-xl bg-japandi-sand/30 p-8 space-y-6">
           <div class="space-y-2">
-            <span class="text-xs font-semibold uppercase tracking-widest text-japandi-moss">5.0 (47 Google Reviews)</span>
+            <span class="text-xs font-semibold uppercase tracking-widest text-japandi-moss">{GOOGLE_REVIEWS_LABEL}</span>
             <h3 class="text-2xl font-serif text-japandi-charcoal font-medium">Aureva Dental Clinic &amp; Studio, Hennur</h3>
             <p class="text-xs text-japandi-earth leading-relaxed font-light">
               Impacted wisdom teeth often push against healthy adjacent second molars, causing root decay, gum pocketing, and severe cheek bite ulcers. Early removal can help protect neighbouring teeth.
@@ -197,7 +198,7 @@ const seoProps = {
 
           <div class="p-4 rounded-2xl bg-japandi-sand/60 border border-japandi-clay/40 text-xs text-japandi-charcoal space-y-1">
             <p class="font-medium">Aureva Dental:</p>
-            <p class="text-japandi-earth font-light">2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. Free parking downstairs for 2 cars and 5 to 8 bikes.</p>
+            <p class="text-japandi-earth font-light">2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. Parking available for 4-wheelers and 2-wheelers.</p>
           </div>
         </div>
       </div>

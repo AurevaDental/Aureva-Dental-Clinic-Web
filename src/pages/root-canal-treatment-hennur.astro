@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../utils/seoSchemas';
+import { GOOGLE_REVIEWS_LABEL } from '../config/clinic';
 
 export const prerender = false;
 
@@ -189,7 +190,7 @@ const seoProps = {
             class="w-full h-auto object-cover"
           />
           <div class="p-5 space-y-2">
-            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">5.0 (47 Google Reviews)</span>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-japandi-moss block">{GOOGLE_REVIEWS_LABEL}</span>
             <h3 class="text-lg font-serif text-japandi-charcoal font-medium">Aureva Dental Clinic &amp; Studio, Hennur</h3>
             <p class="text-xs text-japandi-earth font-light leading-relaxed">
               Rotary endodontics with digital RVG sensor imaging on Horamavu Agara Road.
