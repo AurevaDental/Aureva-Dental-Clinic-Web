@@ -3,7 +3,14 @@ import Layout from '../../layouts/Layout.astro';
 import { getBlogPostBySlug, getAllBlogPosts } from '../../data/blogPosts';
 import { generateBreadcrumbSchema, generateBlogPostSchema, generateFaqSchema } from '../../utils/seoSchemas';
 
-export const prerender = false;
+export function getStaticPaths() {
+  const posts = getAllBlogPosts();
+  return posts
+    .filter((p) => p.slug !== 'dental-cost-india-vs-uk' && p.slug !== 'dental-cost-india-vs-usa')
+    .map((post) => ({
+      params: { slug: post.slug }
+    }));
+}
 
 const { slug } = Astro.params;
 const post = getBlogPostBySlug(slug as string);

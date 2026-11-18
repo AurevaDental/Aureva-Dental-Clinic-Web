@@ -1,6 +1,6 @@
 import { defineMiddleware } from 'astro:middleware';
 
-export const onRequest = defineMiddleware((context, next) => {
+export const onRequest = defineMiddleware(async (context, next) => {
   const url = new URL(context.request.url);
 
   // Enforce trailing slash removal (except root /)
@@ -9,5 +9,14 @@ export const onRequest = defineMiddleware((context, next) => {
     return context.redirect(`${cleanPath}${url.search}`, 301);
   }
 
-  return next();
+  const response = await next();
+
+  // For HTML responses, ensure optimal edge cache headers
+  if (response.headers.get('content-type')?.includes('text/html')) {
+    if (!response.headers.has('cache-control')) {
+      response.headers.set('cache-control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+    }
+  }
+
+  return response;
 });

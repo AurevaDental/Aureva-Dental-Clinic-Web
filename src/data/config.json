@@ -449,7 +449,18 @@
     "badge_text": "5.0 (48 Google Reviews)",
     "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
   },
-  "google_reviews": [],
+  "google_reviews": [
+    {
+      "name": "Abhishek Sundar",
+      "role": "Hennur Resident • Verified Google Review",
+      "date": "Recent",
+      "treatment": "General & Specialized Dental Care",
+      "rating": 5,
+      "text": "Finding a trustworthy clinic in Hennur, Bengaluru can be tough, but Aureva Dental is hands down the best! From the warm, welcoming hospitality at the front desk to the immaculate clinic environment, every detail is designed to put you at ease.\n\nThe specialized doctors are exceptionally experienced with complex cases, yet wonderfully gentle and empathetic. They listen carefully, explain everything clearly, and ensure a completely pain-free visit.\n\nIf you live in or around Hennur and need expert dental care with a compassionate touch, I cannot recommend Aureva Dental enough!",
+      "verified": true,
+      "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
+    }
+  ],
   "social_media": [
     {
       "platform": "Instagram",

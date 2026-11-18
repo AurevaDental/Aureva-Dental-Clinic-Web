@@ -1,7 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getAllBlogPosts } from '../data/blogPosts';
 
-export const prerender = false;
 
 interface StaticRoute {
   url: string;
@@ -34,6 +33,9 @@ const STATIC_ROUTES: StaticRoute[] = [
   { url: 'https://aurevadental.com/dental-crowns-hennur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-11-05', title: 'Dental Crowns & Caps in Hennur' },
   { url: 'https://aurevadental.com/dentist-in-horamavu', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Dentist in Horamavu Bangalore' },
   { url: 'https://aurevadental.com/dentist-near-manyata-tech-park', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Dentist Near Manyata Tech Park' },
+  { url: 'https://aurevadental.com/dentist-in-kalyan-nagar', changefreq: 'weekly', priority: '0.9', lastmod: '2026-11-18', title: 'Dentist in Kalyan Nagar Bangalore' },
+  { url: 'https://aurevadental.com/dentist-in-kothanur', changefreq: 'weekly', priority: '0.9', lastmod: '2026-11-18', title: 'Dentist in Kothanur Bangalore' },
+  { url: 'https://aurevadental.com/dentist-in-thanisandra', changefreq: 'weekly', priority: '0.9', lastmod: '2026-11-18', title: 'Dentist in Thanisandra Bangalore' },
 
   // Treatment Pages (Bangalore-wide intent)
   { url: 'https://aurevadental.com/treatments/clear-aligners', changefreq: 'weekly', priority: '0.9', lastmod: '2026-09-29', title: 'Clear Aligners & Invisible Braces in Bangalore' },

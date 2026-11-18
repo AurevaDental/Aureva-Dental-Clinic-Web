@@ -8,8 +8,10 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://aurevadental.com',
   trailingSlash: 'never',
-  output: 'server',
-  adapter: vercel(),
+  output: 'static',
+  adapter: vercel({
+    regions: ['bom1']
+  }),
   redirects: {
     '/treatments/root-canal-treatment': '/root-canal-treatment-hennur',
     '/treatments/dental-crowns': '/dental-crowns-hennur',

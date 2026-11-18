@@ -3,16 +3,17 @@ const phoneLink = "tel:+917349701002";
 const whatsappUrl = "https://wa.me/917349701002";
 ---
 
-<!-- Sticky Mobile Bottom Bar: Two Equal Tap-to-Call and WhatsApp Buttons -->
+<!-- Sticky Mobile Bottom Bar: Appears after user scrolls 300px -->
 <div 
-  class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-japandi-cream/95 backdrop-blur-md border-t border-japandi-clay/40 px-3 py-3 shadow-[0_-8px_30px_rgb(0,0,0,0.08)] flex items-center justify-between gap-3"
+  id="global-mobile-bottom-bar"
+  class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-japandi-cream/95 backdrop-blur-md border-t border-japandi-clay/40 px-3 py-3 shadow-[0_-8px_30px_rgb(0,0,0,0.08)] flex items-center justify-between gap-3 transform translate-y-full transition-transform duration-300 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
   role="region"
   aria-label="Mobile quick contact actions"
 >
   <!-- Call Button (Plain <a> element for GTM tel: tracking) -->
   <a 
     href={phoneLink}
-    class="flex-1 flex items-center justify-center gap-2 py-3 px-3 bg-japandi-moss hover:bg-japandi-charcoal active:bg-japandi-charcoal/90 text-japandi-cream font-semibold rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm"
+    class="flex-1 flex items-center justify-center gap-2 py-3 px-3 bg-japandi-moss hover:bg-japandi-charcoal active:bg-japandi-charcoal/90 text-japandi-cream font-semibold rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm min-h-[48px]"
     title="Call Aureva Dental Reception"
     aria-label="Call Aureva Dental Reception Desk"
   >
@@ -27,7 +28,7 @@ const whatsappUrl = "https://wa.me/917349701002";
     href={whatsappUrl}
     target="_blank"
     rel="noopener noreferrer"
-    class="flex-1 flex items-center justify-center gap-2 py-3 px-3 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-semibold rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm"
+    class="flex-1 flex items-center justify-center gap-2 py-3 px-3 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-semibold rounded-full text-xs uppercase tracking-wider transition-all duration-300 shadow-sm min-h-[48px]"
     title="Chat with Aureva Dental on WhatsApp"
     aria-label="Chat with Aureva Dental on WhatsApp"
   >
@@ -37,3 +38,31 @@ const whatsappUrl = "https://wa.me/917349701002";
     <span>WhatsApp</span>
   </a>
 </div>
+
+<script>
+  function setupGlobalBottomBar() {
+    const bar = document.getElementById('global-mobile-bottom-bar');
+    if (!bar) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 300) {
+            bar.classList.remove('translate-y-full');
+          } else {
+            bar.classList.add('translate-y-full');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  setupGlobalBottomBar();
+  document.addEventListener('astro:after-swap', setupGlobalBottomBar);
+</script>

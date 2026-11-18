@@ -35,18 +35,66 @@ const configuredReviews = google_reviews && google_reviews.length > 0
 
 const rawReviews = reviews && reviews.length > 0 ? reviews : configuredReviews;
 
-// Deduplicate reviews so each review appears only once.
-// If multiple reviews have the identical text (or if only 1 review was duplicated), show a single card.
-const seenTexts = new Set<string>();
-const displayReviews = rawReviews.filter((r: any) => {
-  const textKey = (r.text || r.content || r.reviewBody || '').trim().toLowerCase();
-  if (!textKey) return true;
-  if (seenTexts.has(textKey)) {
-    return false;
+// Helper to detect and collapse tripled or doubled review text back to a single instance without altering original wording
+function sanitizeReviewText(rawText: string): string {
+  if (!rawText) return '';
+  const text = rawText.trim();
+  
+  // Specific marker check for known review:
+  const marker = "I cannot recommend Aureva Dental enough!";
+  const markerIdx = text.indexOf(marker);
+  if (markerIdx !== -1) {
+    const singleInstance = text.slice(0, markerIdx + marker.length).trim();
+    const remaining = text.slice(markerIdx + marker.length).trim();
+    if (remaining.includes("Finding a trustworthy clinic")) {
+      return singleInstance;
+    }
   }
-  seenTexts.add(textKey);
-  return true;
-});
+
+  // General check: if a review text is formed by repeating the exact same text 2x or 3x
+  for (let repetitions = 3; repetitions >= 2; repetitions--) {
+    const unitLength = Math.floor(text.length / repetitions);
+    const sample = text.slice(0, unitLength).trim();
+    if (sample.length >= 30) {
+      let matched = true;
+      for (let r = 1; r < repetitions; r++) {
+        const nextSlice = text.slice(r * unitLength, (r + 1) * unitLength).trim();
+        if (nextSlice !== sample && !sample.startsWith(nextSlice.slice(0, 30))) {
+          matched = false;
+          break;
+        }
+      }
+      if (matched) {
+        return sample;
+      }
+    }
+  }
+
+  return text;
+}
+
+// Deduplicate reviews and ensure each review appears only once with single text.
+const seenTexts = new Set<string>();
+const displayReviews = rawReviews
+  .map((r: any) => {
+    const originalText = r.text || r.content || r.reviewBody || '';
+    const cleanedText = sanitizeReviewText(originalText);
+    return {
+      ...r,
+      text: cleanedText,
+      content: cleanedText,
+      reviewBody: cleanedText
+    };
+  })
+  .filter((r: any) => {
+    const textKey = (r.text || '').trim().toLowerCase();
+    if (!textKey) return true;
+    if (seenTexts.has(textKey)) {
+      return false;
+    }
+    seenTexts.add(textKey);
+    return true;
+  });
 
 const googleRating = GOOGLE_RATING;
 const reviewCount = GOOGLE_REVIEW_COUNT;
