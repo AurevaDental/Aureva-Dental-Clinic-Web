@@ -180,10 +180,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<script type="application/ld+json" set:html={JSON.stringify(generateDentistSchema(config, Astro.url.pathname === '/' || Astro.url.pathname === ''))} />
 		{Array.isArray(schemaMarkup) ? (
 			schemaMarkup.map((schema) => (
-				<script type="application/ld+json" set:html={schema} />
+				<script type="application/ld+json" set:html={typeof schema === 'string' ? schema : JSON.stringify(schema)} />
 			))
 		) : schemaMarkup ? (
-			<script type="application/ld+json" set:html={schemaMarkup} />
+			<script type="application/ld+json" set:html={typeof schemaMarkup === 'string' ? schemaMarkup : JSON.stringify(schemaMarkup)} />
 		) : null}
 
 		<!-- Preconnect to critical domains for lightning-fast loads -->

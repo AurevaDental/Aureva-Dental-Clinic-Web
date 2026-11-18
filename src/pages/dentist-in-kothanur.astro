@@ -71,7 +71,7 @@ const faqSchema = {
 };
 ---
 
-<Layout {...seoProps} schemaMarkup={[faqSchema]}>
+<Layout {...seoProps} schemaMarkup={[JSON.stringify(faqSchema)]}>
   <main class="min-h-screen bg-japandi-cream text-japandi-charcoal">
     <!-- Hero Section -->
     <section class="px-4 sm:px-6 lg:px-24 pt-12 pb-10 max-w-5xl mx-auto text-center space-y-5">
