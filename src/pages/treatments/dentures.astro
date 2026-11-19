@@ -6,7 +6,7 @@ import { CANONICAL_PRICES } from '../../data/prices';
 const denturePriceList = [
   { name: "Complete denture, one arch (upper or lower)", price: CANONICAL_PRICES.denture_complete_single_arch },
   { name: "Complete dentures, both arches", price: CANONICAL_PRICES.denture_complete_both_arches },
-  { name: "Partial denture, acrylic", price: CANONICAL_PRICES.denture_partial_acrylic },
+  { name: "Partial denture, acrylic", price: CANONICAL_PRICES.denture_partial_acrylic_table },
   { name: "Partial denture, cast metal framework", price: CANONICAL_PRICES.denture_partial_cast_metal },
   { name: "Flexible partial denture", price: CANONICAL_PRICES.denture_flexible_partial },
   { name: "Implant-supported overdenture (denture only; implants priced separately)", price: CANONICAL_PRICES.denture_implant_supported_overdenture },
@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     question: "What is the cost of dentures in Hennur, Bangalore?",
-    answer: "At Aureva Dental Hennur, standard acrylic complete dentures range from ₹20,000 to ₹35,000 per arch. Premium high-impact BPS (Biofunctional Prosthetic System) dentures range from ₹40,000 to ₹75,000 per arch. Flexible partial dentures (Valplast) start from ₹8,000 to ₹22,000 depending on the number of missing teeth. Transparent pricing is shared upfront."
+    answer: `At Aureva Dental Hennur, complete dentures cost ${CANONICAL_PRICES.denture_complete_single_arch} per arch, or ${CANONICAL_PRICES.denture_complete_both_arches} for both arches. Partial dentures cost ${CANONICAL_PRICES.denture_partial_acrylic} in acrylic, ${CANONICAL_PRICES.denture_flexible_partial} flexible, and ${CANONICAL_PRICES.denture_partial_cast_metal} with a cast metal framework, depending on how many teeth they replace. Implant-supported overdentures cost ${CANONICAL_PRICES.denture_implant_supported_overdenture}, with the implants priced separately. Prices are confirmed after your consultation.`
   }
 ];
 

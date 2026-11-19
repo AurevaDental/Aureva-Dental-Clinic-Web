@@ -436,7 +436,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedTreatmentUrl: "/treatments/tooth-extraction",
     relatedTreatmentName: "Tooth Extraction",
     introParagraphs: [
-      "At Aureva Dental, our fundamental clinical philosophy is conservative tooth preservation. We exhaust every available restorative modality—including rotary root canals, periodontal therapy, and protective ceramic crowns—to keep your natural tooth healthy in your mouth. However, when a tooth suffers severe vertical root fractures, catastrophic subgingival decay, advanced periodontitis bone loss, or painful wisdom tooth impaction, extraction becomes the safest biological necessity.",
+      "At Aureva Dental, our fundamental clinical philosophy is conservative tooth preservation. We exhaust every available restorative modality—including root canal treatment, gum treatment, and protective crowns—to keep your natural tooth healthy in your mouth. However, when a tooth suffers severe vertical root fractures, catastrophic subgingival decay, advanced periodontitis bone loss, or painful wisdom tooth impaction, extraction becomes the safest biological necessity.",
       "Many patients facing tooth extraction are anxious about surgical pain, recovery timelines, and procedural costs across Bangalore dental clinics.",
       "In this guide, clinically reviewed by Dr. Shweta, we provide a transparent price breakdown for simple and surgical extractions, explain atraumatic socket-preservation protocols, and provide practical instructions for a speedy, complications-free recovery."
     ],
@@ -497,9 +497,9 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Leaving an empty space after extracting an adult chewing molar triggers long-term dental complications. Over several months, adjacent teeth tilt toward the gap, while the opposing tooth in the opposite jaw over-erupts into the vacant space, disrupting your bite and causing TMJ stress.",
           "At Aureva Dental, we discuss replacement alternatives before performing the extraction:",
-          "Dental Implants (₹45,000 to ₹80,000): The gold standard biological replacement. A titanium root screw stimulates the jawbone, preventing atrophy, while a custom zirconia crown restores full chewing efficiency without touching neighboring teeth.",
+          "Dental Implants (₹45,000 to ₹80,000): A titanium root screw stimulates the jawbone, preventing atrophy, while a custom zirconia crown restores full chewing efficiency without touching neighboring teeth.",
           "Fixed Dental Bridges (₹4,000 to ₹18,000 per unit depending on material — PFM ₹4,000 – ₹6,000, Ceramic ₹6,000 – ₹10,000, Zirconia ₹10,000 – ₹18,000 per unit): A non-surgical, fixed restoration where adjacent healthy teeth anchor the replacement tooth.",
-          "Flexible Removable Partial Dentures (Valplast ₹8,000 to ₹22,000): A removable option suitable when multiple teeth are missing in an arch."
+          `Flexible Removable Partial Dentures (${CANONICAL_PRICES.denture_flexible_partial}): A removable option suitable when multiple teeth are missing in an arch.`
         ],
         bulletPoints: [
           "Immediate implant placement can often be performed during the same extraction visit",
@@ -2090,7 +2090,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["New-patient consultation + digital X-ray", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`],
             ["Complete denture, one arch (upper or lower)", CANONICAL_PRICES.denture_complete_single_arch],
             ["Complete dentures, both arches", CANONICAL_PRICES.denture_complete_both_arches],
-            ["Partial denture, acrylic", CANONICAL_PRICES.denture_partial_acrylic],
+            ["Partial denture, acrylic", CANONICAL_PRICES.denture_partial_acrylic_table],
             ["Partial denture, cast metal framework", CANONICAL_PRICES.denture_partial_cast_metal],
             ["Flexible partial denture", CANONICAL_PRICES.denture_flexible_partial],
             ["Implant-supported overdenture (denture only; implants priced separately)", CANONICAL_PRICES.denture_implant_supported_overdenture],
