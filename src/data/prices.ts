@@ -27,14 +27,61 @@ export function formatExactPrice(amount: number, suffix?: string): string {
   return suffix ? `${price} ${suffix}` : price;
 }
 
+export function addPriceRanges(rangeA: readonly [number, number], rangeB: readonly [number, number]): string {
+  return formatPriceRange(rangeA[0] + rangeB[0], rangeA[1] + rangeB[1]);
+}
+
+export function multiplyPriceRange(units: number, range: readonly [number, number]): string {
+  return formatPriceRange(units * range[0], units * range[1]);
+}
+
+export const PRICE_VALUES = {
+  consultation: 600,
+  rct_anterior: [4000, 6000] as const,
+  rct_premolar: [5000, 8000] as const,
+  rct_molar: [6000, 10000] as const,
+  rct_re_treatment: [8000, 10000] as const,
+  crown_pfm: [4000, 6000] as const,
+  crown_ceramic: [6000, 10000] as const,
+  crown_zirconia: [10000, 18000] as const,
+  crown_emax: [10000, 18000] as const,
+  denture_partial_acrylic: [3000, 25000] as const,
+  denture_partial_cast_metal: [10000, 40000] as const,
+  denture_flexible_partial: [5000, 25000] as const,
+} as const;
+
+export const CALCULATED_TOTALS = {
+  molar_pfm: addPriceRanges(PRICE_VALUES.rct_molar, PRICE_VALUES.crown_pfm),
+  molar_zirconia: addPriceRanges(PRICE_VALUES.rct_molar, PRICE_VALUES.crown_zirconia),
+  premolar_pfm: addPriceRanges(PRICE_VALUES.rct_premolar, PRICE_VALUES.crown_pfm),
+  premolar_emax: addPriceRanges(PRICE_VALUES.rct_premolar, PRICE_VALUES.crown_emax),
+  front_ceramic: addPriceRanges(PRICE_VALUES.rct_anterior, PRICE_VALUES.crown_ceramic),
+  bridge_3_unit_pfm: multiplyPriceRange(3, PRICE_VALUES.crown_pfm),
+  partial_dentures_overall: formatPriceRange(
+    Math.min(PRICE_VALUES.denture_partial_acrylic[0], PRICE_VALUES.denture_partial_cast_metal[0], PRICE_VALUES.denture_flexible_partial[0]),
+    Math.max(PRICE_VALUES.denture_partial_acrylic[1], PRICE_VALUES.denture_partial_cast_metal[1], PRICE_VALUES.denture_flexible_partial[1])
+  ),
+  rct_molar_pfm: addPriceRanges(PRICE_VALUES.rct_molar, PRICE_VALUES.crown_pfm),
+  rct_molar_zirconia: addPriceRanges(PRICE_VALUES.rct_molar, PRICE_VALUES.crown_zirconia),
+  rct_premolar_pfm: addPriceRanges(PRICE_VALUES.rct_premolar, PRICE_VALUES.crown_pfm),
+  rct_premolar_emax: addPriceRanges(PRICE_VALUES.rct_premolar, PRICE_VALUES.crown_emax),
+  rct_front_ceramic: addPriceRanges(PRICE_VALUES.rct_anterior, PRICE_VALUES.crown_ceramic),
+  bridge_3unit_pfm: multiplyPriceRange(3, PRICE_VALUES.crown_pfm),
+  denture_partial_overall: formatPriceRange(3000, 40000),
+} as const;
+
 export const CANONICAL_PRICES = {
   // Consultation & General
   consultation_home: `${formatExactPrice(600)}, valid for 6 months`,
   consultation: formatExactPrice(600),
+  consultation_general: formatExactPrice(600),
   smile_consultation: formatExactPrice(600),
   scaling_routine: formatPriceRange(2000, 5000),
+  scaling_polishing: formatPriceRange(2000, 5000),
+  scaling_deep: formatPriceRange(8000, 15000),
   scaling_pre_whitening: formatPriceRange(2000, 2500),
   tooth_filling: formatPriceRange(1500, 4000),
+  filling_composite: formatPriceRange(1500, 4000),
   emergency_temporary_filling: formatPriceRange(500, 1000),
 
   // Extraction & Wisdom Tooth
@@ -56,6 +103,7 @@ export const CANONICAL_PRICES = {
   rct_anterior: formatPriceRange(4000, 6000),
   rct_premolar: formatPriceRange(5000, 8000),
   rct_molar: formatPriceRange(6000, 10000),
+  rct_re_treatment: formatPriceRange(8000, 10000),
   rct_overall: formatPriceRange(4000, 10000),
   emergency_single_sitting_rct: formatPriceRange(4000, 10000),
 
@@ -71,11 +119,19 @@ export const CANONICAL_PRICES = {
   broken_tooth_composite_repair: formatPriceRange(1500, 4000),
 
   // Dentures
-  denture_acrylic_complete: formatPriceRange(20000, 35000, 'per arch'),
+  denture_complete_single_arch: formatPriceRange(15000, 25000),
+  denture_complete_both_arches: formatPriceRange(30000, 50000),
+  denture_partial_acrylic: `${formatPriceRange(3000, 25000)} (depends on number of teeth)`,
+  denture_partial_cast_metal: formatPriceRange(10000, 40000),
+  denture_flexible_partial: formatPriceRange(5000, 25000),
+  denture_implant_supported_overdenture: formatPriceRange(20000, 50000),
+  denture_reline_repair: formatPriceRange(1500, 6000),
+  denture_acrylic_complete: formatPriceRange(15000, 25000, 'per arch'),
   denture_bps_complete: formatPriceRange(40000, 75000, 'per arch'),
 
   // Implants
   implant_single_fixture: formatPriceRange(35000, 60000),
+  implants_per_tooth: formatPriceRange(35000, 60000, 'per implant'),
   implant_with_crown: formatPriceRange(45000, 80000),
   hennur_implant_standard: formatPriceRange(35000, 60000),
   hennur_cadcam_zirconia_crown_abutment: formatPriceRange(10000, 18000),
@@ -102,13 +158,15 @@ export const CANONICAL_PRICES = {
 
   // Cosmetic & Whitening
   whitening_laser: formatPriceRange(8000, 15000),
+  teeth_whitening: formatPriceRange(8000, 15000),
   whitening_trays: formatPriceRange(5000, 9000),
   whitening_combo: formatPriceRange(12000, 18000),
   whitening_otc: formatPriceRange(500, 2500),
   digital_smile_design: formatPriceRange(5000, 10000),
-  veneers_porcelain: formatPriceRange(8000, 25000, 'per tooth'),
+  veneers_porcelain: formatPriceRange(8000, 24000, 'per tooth'),
   veneers_direct_composite: formatPriceRange(4500, 8000, 'per tooth'),
   composite_edge_bonding: formatPriceRange(1500, 4000, 'per tooth'),
+  composite_bonding: formatPriceRange(1500, 4000, 'per tooth'),
   emax_veneers: formatPriceRange(10000, 18000),
   enamel_contouring: formatPriceRange(1000, 2000),
   smile_makeover: formatStartingPrice(80000),
@@ -126,6 +184,7 @@ export const CANONICAL_PRICES = {
   kids_sealant: formatPriceRange(1500, 2500, 'per tooth'),
   kids_filling: formatPriceRange(1000, 3000),
   baby_tooth_pulpectomy: formatPriceRange(3500, 6000),
+  kids_pulpectomy: formatPriceRange(3500, 6000),
   kids_dentistry_summary: `Check-up ${formatExactPrice(600)} · fillings ${formatPriceRange(1000, 3000)}`
 } as const;
 

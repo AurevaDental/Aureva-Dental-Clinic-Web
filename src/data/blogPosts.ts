@@ -1,3 +1,4 @@
+import { CANONICAL_PRICES, PRICE_VALUES, CALCULATED_TOTALS, formatPriceRange, formatINR } from './prices';
 export interface BlogFaq {
   question: string;
   answer: string;
@@ -37,7 +38,10 @@ export interface BlogPost {
   introParagraphs: string[];
   sections: BlogSection[];
   faqs: BlogFaq[];
-  conclusion: string;
+  conclusion?: string;
+  reviewedBy?: string;
+  relatedPosts?: Array<{ title: string; url: string }>;
+  sources?: string[];
   ctaHeadline: string;
   ctaText: string;
 }
@@ -161,124 +165,141 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "root-canal-treatment-cost-hennur",
-    title: "Root Canal Treatment Cost in Hennur | Aureva Dental",
-    headline: "Root Canal Treatment Cost in Hennur, Bangalore: Complete 2026 Price Guide",
-    metaDescription: "Comprehensive guide to root canal treatment cost in Hennur, Bangalore (₹4,000 to ₹10,000), single vs multi-sitting RCT, zirconia crowns & gentle care.",
-    author: "Dr. Shweta Singh",
-    authorRole: "Clinical Director & Dental Surgeon",
-    authorCredentials: "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
-    date: "September 2026",
+    title: "Root Canal Treatment Cost in Bangalore (2026) | Aureva Dental",
+    headline: "Root Canal Treatment Cost in Bangalore: 2026 Prices at Our Hennur Clinic",
+    metaDescription: "Root canal cost in Bangalore: ₹4,000–₹10,000 per tooth at our Hennur clinic, by tooth type. Crown prices, total cost examples and what affects the price.",
+    author: "Dr. Shweta",
+    authorRole: "Dental Surgeon",
+    authorCredentials: "Aureva Dental, Hennur",
+    reviewedBy: "Dr. Shweta",
+    date: "November 2026",
     datePublished: "2026-09-10",
-    dateModified: "2026-09-23",
-    category: "Endodontics & Restorative Dentistry",
-    readTime: "8 min read",
-    excerpt: "A transparent breakdown of root canal treatment cost in Hennur, Bangalore (₹4,000 to ₹10,000), factors determining single vs. multi-sitting RCT, crown types, and what to expect during gentle micro-endodontics.",
+    dateModified: "2026-11-20",
+    category: "Root Canal & Crowns",
+    readTime: "6 min read",
+    excerpt: "Root canal cost in Bangalore: ₹4,000–₹10,000 per tooth at our Hennur clinic, by tooth type. Crown prices, total cost examples and what affects the price.",
     relatedTreatmentUrl: "/root-canal-treatment-hennur",
-    relatedTreatmentName: "Root Canal Treatment (RCT)",
+    relatedTreatmentName: "Root Canal Treatment in Hennur",
     introParagraphs: [
-      "A severe, throbbing toothache is one of the most agonizing experiences a person can endure. When bacterial decay penetrates through hard enamel and dentin into the vascular dental pulp, the nerve becomes acutely inflamed or necrotic. The gold standard treatment to relieve this pain and save your natural tooth from extraction is a Root Canal Treatment (RCT).",
-      "Yet, many patients delay treatment out of two common concerns: fear of dental pain and uncertainty regarding the true cost of a root canal in Bangalore.",
-      "At Aureva Dental on Horamavu Agara Road in Hennur Bande, we believe in complete clinical transparency and gentle, anxiety-free dentistry. In this guide, we provide an exhaustive breakdown of root canal treatment costs in Hennur, explain why single-sitting micro-endodontics is designed to be gentle and comfortable, and examine which post-RCT crown is right for your smile."
+      "If you've been told you need a root canal, the first two questions are usually \"how much?\" and \"do I really need it?\" This guide answers the first one with our actual prices, and explains what changes the cost, so you can plan before you visit.",
+      `Quick answer: at Aureva Dental in Hennur, root canal treatment costs ${formatPriceRange(PRICE_VALUES.rct_anterior[0], PRICE_VALUES.rct_molar[1]).replace(' – ', ' to ')} per tooth, depending on which tooth it is. Most teeth also need a crown afterwards, which is priced separately. The ${CANONICAL_PRICES.consultation_general} new-patient consultation includes a digital X-ray and is valid for 6 months.`
     ],
     sections: [
       {
-        heading: "1. Root Canal Treatment Cost Breakdown in Hennur (2026 Pricing)",
+        heading: "Root canal price by tooth",
         paragraphs: [
-          "At modern dental clinics in Hennur and North Bangalore, the cost of a root canal treatment typically ranges between ₹4,000 and ₹10,000 per tooth. The price is determined primarily by the anatomical position of the tooth and the number of micro-canals requiring cleaning and sealing."
+          "Why back teeth cost more: a front tooth usually has one root canal. A molar typically has three or four, often curved and narrow, so it takes longer to clean and seal. A re-root canal means removing the old filling material first, which adds time."
         ],
         table: {
-          headers: ["Tooth Position / Anatomy", "Typical Cost Range (INR)", "Clinical Complexity Details"],
+          headers: ["Treatment", "Price at Aureva Dental"],
           rows: [
-            ["Anterior Teeth (Front Incisors & Canines)", "₹4,000 – ₹6,000", "Single straight root canal; straightforward access and rapid instrumentation"],
-            ["Premolar Teeth (Bicuspids)", "₹5,000 – ₹8,000", "1 to 2 root canals; intermediate anatomical complexity"],
-            ["Molar Teeth (Back Chewing Teeth)", "₹6,000 – ₹10,000", "3 to 4 curved root canals; complex posterior access requiring rotary endodontics"],
-            ["Re-Root Canal Treatment (Re-RCT)", "₹8,000 – ₹10,000", "Removal of failed previous filling materials, bypass of ledges, ultrasonic disinfection"]
-          ]
-        },
-        callout: {
-          type: "tip",
-          title: "Consultation & Digital Imaging",
-          text: "At Aureva Dental, an emergency consultation including high-resolution low-radiation digital RVG X-rays is ₹600. Our dental surgeons assess apical bone health, root curvature, and canal calcification upfront so you receive an exact written quote with prices quoted before treatment."
-        }
-      },
-      {
-        heading: "2. Key Factors That Influence Your Root Canal Treatment Cost",
-        paragraphs: [
-          "Several anatomical and technological factors influence the total investment required for an endodontic procedure:",
-          "Anatomical Canal Curvature and Calcification: Molars frequently possess 3, 4, or even 5 fine, curved root canals. Calcified canals require specialized ultrasonic tips and micro-endodontic handpieces to navigate safely without instrument fracture.",
-          "Single-Sitting vs Multi-Sitting Protocols: When a tooth is acutely inflamed without active pus drainage, single-sitting RCT completes cleaning, shaping, and sealing in 45 to 60 minutes. Severely abscessed teeth require a two-visit protocol where antibacterial calcium hydroxide medication is sealed inside the canal for 7 days to resolve bone infections before final obturation.",
-          "Rotary Titanium Instrumentation vs Manual Hand Files: High-end clinics utilize motorized nickel-titanium (NiTi) rotary files with computerized apex locators. This technology ensures 98%+ measurement precision and minimizes post-operative soreness compared to older manual filing techniques."
-        ],
-        bulletPoints: [
-          "Infection severity and presence of a periapical cyst or fistula",
-          "Need for computerized apex locator verification and digital RVG imaging",
-          "Use of sterile rubber dam isolation to prevent salivary contamination",
-          "Whether the tooth is undergoing initial treatment or complex retreatment"
-        ]
-      },
-      {
-        heading: "3. Why a Dental Crown is Essential After a Root Canal",
-        paragraphs: [
-          "Patients frequently ask: 'Do I really need a crown after my root canal is finished?'",
-          "The medical answer is an emphatic yes for all posterior premolars and molars. An endodontic procedure removes diseased pulp tissue, cutting off blood supply to the tooth. Over time, dehydrated natural enamel becomes brittle. Without a protective crown encapsulating the cusps, standard chewing forces (up to 70 kg/cm²) will inevitably cause catastrophic vertical root fractures that require tooth extraction.",
-          "At Aureva Dental, we offer three main crown options:"
-        ],
-        table: {
-          headers: ["Crown Type", "Typical Price (INR)", "Aesthetic & Structural Properties"],
-          rows: [
-            ["Porcelain-Fused-to-Metal (PFM)", "₹4,000 – ₹6,000", "Strong metal core with ceramic outer layer; good for back molars on a budget"],
-            ["CAD/CAM Monolithic Zirconia", "₹10,000 – ₹18,000", "High-strength precision digital milling; fully biocompatible with natural tooth shade"],
-            ["E-Max Lithium Disilicate Ceramic", "₹10,000 – ₹18,000", "Exceptional lifelike translucency and light transmission; ideal for premolars and front teeth"]
+            ["Front tooth (incisor or canine)", CANONICAL_PRICES.rct_anterior],
+            ["Premolar", CANONICAL_PRICES.rct_premolar],
+            ["Molar (back chewing tooth)", CANONICAL_PRICES.rct_molar],
+            ["Re-root canal (redoing an old one)", CANONICAL_PRICES.rct_re_treatment],
+            ["New-patient consultation with digital X-ray", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`]
           ]
         }
       },
       {
-        heading: "4. Is Modern Root Canal Treatment Painful?",
+        heading: "Why most teeth need a crown after a root canal",
         paragraphs: [
-          "The widespread myth that root canals are agonizing dates back to pre-digital dentistry decades ago. In reality, a root canal does not cause pain—it cures pain.",
-          "At Aureva Dental in Hennur, we employ computerized local anesthesia techniques and topical numbing gels. We verify total pulpal numbness with electric diagnostic tests before touching the tooth. Most patients report that receiving a rotary root canal feels no different than getting a standard composite filling, and many even doze off during the 50-minute appointment."
+          "After a root canal, the tooth no longer has its nerve and blood supply, and a large part of it has often been lost to decay. Without a crown covering it, the tooth is more likely to crack, and a crack below the gum can mean losing the tooth. Your dentist will tell you which crown suits your tooth."
+        ],
+        table: {
+          headers: ["Crown type", "Price", "Usually chosen for"],
+          rows: [
+            ["Porcelain-fused-to-metal (PFM)", CANONICAL_PRICES.crown_pfm, "Back teeth, on a budget"],
+            ["Ceramic (metal-free)", CANONICAL_PRICES.crown_ceramic, "Natural colour without a metal line"],
+            ["Zirconia", CANONICAL_PRICES.crown_zirconia, "Strength on back teeth, metal-free"],
+            ["E-max", CANONICAL_PRICES.crown_emax, "Front teeth and premolars where looks matter"]
+          ]
+        }
+      },
+      {
+        heading: "What the total usually comes to",
+        paragraphs: [
+          "Add the root canal and the crown. Examples using our price ranges:",
+          `Add the ${CANONICAL_PRICES.consultation_general} consultation on your first visit. You get a written quote after the X-ray, before any treatment starts.`
+        ],
+        table: {
+          headers: ["Tooth", "Root canal + crown", "Total range"],
+          rows: [
+            ["Molar", "+ PFM crown", CALCULATED_TOTALS.rct_molar_pfm],
+            ["Molar", "+ zirconia crown", CALCULATED_TOTALS.rct_molar_zirconia],
+            ["Premolar", "+ PFM crown", CALCULATED_TOTALS.rct_premolar_pfm],
+            ["Premolar", "+ E-max crown", CALCULATED_TOTALS.rct_premolar_emax],
+            ["Front tooth", "+ ceramic crown", CALCULATED_TOTALS.rct_front_ceramic]
+          ]
+        }
+      },
+      {
+        heading: "What moves the price within the range",
+        paragraphs: [],
+        bulletPoints: [
+          "Number and shape of canals. Curved, narrow or calcified canals take longer.",
+          "How bad the infection is. An active abscess may need medicine placed inside the tooth and a second visit before the canals are sealed.",
+          "First treatment or redo. Re-treatment costs more.",
+          "Your choice of crown. This is often the biggest difference in the total."
         ]
       },
       {
-        heading: "5. Post-Endodontic Recovery & Long-Term Tooth Care Guidelines",
+        heading: "One visit or two?",
         paragraphs: [
-          "Understanding the recovery timeline helps you protect your newly treated tooth while the surrounding periodontal tissues heal:",
-          "Immediate 24 to 48 Hours: While the internal dental nerve has been removed, the microscopic ligament supporting the tooth root in the jawbone remains slightly sensitized from instrumentation. Mild tenderness when tapping or chewing is completely normal and dissipates within 48 to 72 hours with routine over-the-counter anti-inflammatories.",
-          "Temporary Seal Care: If your crown is scheduled for fabrication over the following week, avoid chewing hard foods (such as nuts, crusty bread, or hard candies) on the treated side. Once your custom-milled monolithic zirconia crown is securely cemented, your tooth is fully reinforced and capable of withstanding normal biting forces for decades."
-        ],
+          "Many root canals are finished in a single visit. When there is active infection or swelling, it's usually done in two visits, with medicine sealed inside the tooth in between. Your dentist decides after seeing the X-ray."
+        ]
+      },
+      {
+        heading: "Does a root canal hurt?",
+        paragraphs: [
+          "The tooth is numbed with local anaesthetic before treatment, so most people feel pressure rather than pain during the procedure. It's normal for the tooth to feel tender when you bite for a few days afterwards. Your dentist will tell you which over-the-counter pain relief is suitable for you. Severe pain, or swelling that gets worse, needs a call to the clinic."
+        ]
+      },
+      {
+        heading: "What happens if you delay it",
+        paragraphs: [
+          "An infected tooth doesn't heal on its own. The infection can spread into the bone around the root and form an abscess. The tooth may then need to be removed, and replacing a missing tooth (with a bridge or implant) costs more than saving it. If the pain has stopped, that can mean the nerve has died, not that the problem has gone."
+        ]
+      },
+      {
+        heading: "After your root canal",
+        paragraphs: [],
         bulletPoints: [
-          "Avoid eating hard or crunchy foods until your custom crown is bonded",
-          "Continue normal brushing and flossing right up to the gumline without hesitation",
-          "Attend routine 6-month check-ups with digital RVG monitoring to verify complete bone healing",
-          "Contact our Hennur clinic immediately if you experience persistent bite discomfort or swelling"
+          "Avoid chewing hard food on that side until the permanent crown or filling is in place.",
+          "Brush and floss normally.",
+          "Come back for the crown on time. A temporary filling is not designed to last.",
+          "Keep your 6-month check-ups so we can confirm the area has healed on X-ray."
         ]
       }
     ],
     faqs: [
       {
-        question: "How long does a single-sitting root canal treatment take?",
-        answer: "A single-sitting root canal typically takes between 45 and 60 minutes for front teeth and premolars, and 60 to 75 minutes for multi-rooted molars. You leave the clinic with immediate relief from throbbing toothache."
+        question: "How much does a root canal cost in Bangalore at Aureva Dental?",
+        answer: `At Aureva Dental, root canal treatment costs ${CANONICAL_PRICES.rct_anterior} for a front tooth, ${CANONICAL_PRICES.rct_premolar} for a premolar, ${CANONICAL_PRICES.rct_molar} for a molar and ${CANONICAL_PRICES.rct_re_treatment} for a re-root canal. The crown is extra.`
       },
       {
-        question: "Can I go back to work immediately after a root canal?",
-        answer: "Yes. Most patients resume work or daily activities immediately following their appointment. Your mouth will remain numb for 2 to 3 hours, so we recommend avoiding chewing hot foods until the local anesthetic wears off."
+        question: "Is the crown included in the root canal price?",
+        answer: `No. Crowns are priced separately: ${CANONICAL_PRICES.crown_pfm} for PFM, ${CANONICAL_PRICES.crown_ceramic} for ceramic, and ${CANONICAL_PRICES.crown_zirconia} for zirconia or E-max.`
       },
       {
-        question: "What happens if I delay a needed root canal treatment?",
-        answer: "Delaying treatment allows bacterial infection to spread past the tooth root into the jawbone, forming a painful dental abscess, facial cellulitis, or bone loss that ultimately necessitates emergency tooth extraction."
+        question: "Can I go to work after a root canal?",
+        answer: "Most people go back to work the same day. Your mouth stays numb for a few hours, so avoid hot food and drinks until the feeling returns."
       },
       {
-        question: "How long does a root-canal-treated tooth last?",
-        answer: "With proper rotary endodontic sealing and a high-strength CAD/CAM zirconia crown, a root-canal-treated tooth can easily last 15 to 25+ years or even a lifetime with good oral hygiene and biannual cleanings."
+        question: "Is root canal treatment covered by insurance?",
+        answer: "It depends on your policy. We give you an itemised bill and X-ray report that you can submit to your insurer."
       },
       {
-        question: "Are root canal treatments covered by dental insurance in India?",
-        answer: "Many corporate dental insurance plans and dental wellness policies (such as MediBuddy, Bajaj Finserv Health, and corporate health covers) provide partial reimbursement for root canals and diagnostic X-rays. We provide detailed itemized bills for seamless claim processing."
+        question: "Can I just remove the tooth instead?",
+        answer: "You can, and extraction costs less on the day. But a missing back tooth lets the neighbouring teeth drift. Replacing it later with a bridge or implant usually costs more than a root canal and crown."
       }
     ],
-    conclusion: "Do not let tooth pain disrupt your life. Contact Aureva Dental in Hennur to save your natural tooth with gentle single-sitting endodontics and durable zirconia crown restorations.",
-    ctaHeadline: "Suffering from Acute Tooth Pain in Hennur?",
-    ctaText: "Aureva Dental is located on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp our emergency desk for immediate same-day pain relief."
+    ctaHeadline: "Book a consultation, or walk in any day until 9 PM.",
+    ctaText: "Tue–Sun 9:30 AM–9 PM, Mon 4–9 PM. 2nd floor with lift, Horamavu Agara Road, near Nayara Petrol Bunk, Hennur Bande. Parking available for 4-wheelers and 2-wheelers.",
+    relatedPosts: [
+      { title: "Dental crown cost in Bangalore", url: "/blog/dental-crown-cost-bangalore" },
+      { title: "Severe toothache at night", url: "/blog/severe-throbbing-toothache-at-night" }
+    ]
   },
   {
     slug: "dental-implant-cost-bangalore",
@@ -405,9 +426,10 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Dr. Agniss Mishra",
     authorRole: "Dental Surgeon",
     authorCredentials: "Dr. Agniss Mishra — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+    reviewedBy: "Dr. Shweta",
     date: "September 2026",
     datePublished: "2026-09-15",
-    dateModified: "2026-09-23",
+    dateModified: "2026-11-20",
     category: "Oral Surgery & Extractions",
     readTime: "8 min read",
     excerpt: "A complete guide to tooth extraction cost in Bangalore (₹1,500 to ₹10,000), simple vs surgical extractions, impacted wisdom tooth oral surgery, dry socket prevention, and healing protocols.",
@@ -416,7 +438,7 @@ export const BLOG_POSTS: BlogPost[] = [
     introParagraphs: [
       "At Aureva Dental, our fundamental clinical philosophy is conservative tooth preservation. We exhaust every available restorative modality—including rotary root canals, periodontal therapy, and protective ceramic crowns—to keep your natural tooth healthy in your mouth. However, when a tooth suffers severe vertical root fractures, catastrophic subgingival decay, advanced periodontitis bone loss, or painful wisdom tooth impaction, extraction becomes the safest biological necessity.",
       "Many patients facing tooth extraction are anxious about surgical pain, recovery timelines, and procedural costs across Bangalore dental clinics.",
-      "In this guide authored by Dr. Agniss Mishra, we provide a transparent price breakdown for simple and surgical extractions, explain atraumatic socket-preservation protocols, and provide practical instructions for a speedy, complications-free recovery."
+      "In this guide, clinically reviewed by Dr. Shweta, we provide a transparent price breakdown for simple and surgical extractions, explain atraumatic socket-preservation protocols, and provide practical instructions for a speedy, complications-free recovery."
     ],
     sections: [
       {
@@ -1084,123 +1106,113 @@ export const BLOG_POSTS: BlogPost[] = [
   "ctaText": "Aureva Dental is conveniently located on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or message on WhatsApp for gentle, same-day diagnosis."
 },
 {
-  "slug": "chipped-front-tooth-repair",
-  "title": "Chipped Front Tooth Repair: Options, Costs & Emergency Care in Bangalore | Aureva Dental",
-  "headline": "Chipped Front Tooth Repair: Composite Bonding, Porcelain Veneers & Crown Options",
-  "metaDescription": "Chipped or fractured a front tooth? Learn about emergency steps, same-day composite bonding, porcelain veneers, and crowns at Aureva Dental Bangalore.",
-  "author": "Dr. Shweta Singh",
-  "authorRole": "Lead Aesthetic Architect & Clinical Director",
-  "authorCredentials": "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
-  "date": "September 2026",
-  "datePublished": "2026-09-27",
-  "dateModified": "2026-09-28",
-  "category": "Cosmetic Dentistry & Restorations",
-  "readTime": "7 min read",
-  "excerpt": "From immediate first-aid protocols to high-end composite edge bonding and porcelain veneers, discover how Aureva Dental restores chipped front teeth seamlessly in Bangalore.",
-  "relatedTreatmentUrl": "/treatments/cosmetic-dentistry",
-  "relatedTreatmentName": "Cosmetic Dentistry & Composite Bonding",
-  "introParagraphs": [
-    "A chipped front tooth is one of the most sudden and distressing dental events. Whether caused by biting into a hard olive pit, a sports collision, or accidental trauma, fracturing a visible front incisor instantly impacts your smile confidence and ability to speak naturally.",
-    "Fortunately, modern aesthetic dentistry offers several seamless, natural-looking solutions—often completed in a single clinic appointment. At Aureva Dental in Hennur and Horamavu, Bangalore, our Lead Aesthetic Architect Dr. Shweta Singh specializes in biomimetic composite bonding, porcelain veneers, and all-ceramic crowns to make your repaired tooth look indistinguishable from natural enamel."
-  ],
-  "sections": [
-    {
-      "heading": "First Aid: What to Do Immediately After Chipping a Tooth",
-      "paragraphs": [
-        "Taking the right immediate steps can safeguard your tooth from nerve damage and maximize restorative success:",
-        "1. Locate and Save the Fragment: If you can find the broken tooth chip, place it in a small container of cold milk, contact lens saline, or saliva. In some cases, we can re-bond your natural enamel fragment directly!",
-        "2. Rinse with Lukewarm Water: Gently rinse your mouth with warm water to clear blood and debris.",
-        "3. Control Bleeding: If your lip or gum is cut, apply gentle pressure with sterile gauze for 10 minutes.",
-        "4. Cover Sharp Edges: If the remaining tooth edge is sharp and lacerating your tongue, place a small piece of sugarless chewing gum or orthodontic wax over the edge.",
-        "5. Avoid Biting on the Area: Do not chew or bite on front teeth until evaluated by a dental professional."
-      ]
-    },
-    {
-      "heading": "Classifying the Fracture: How Severe Is It?",
-      "paragraphs": [
-        "Dentists classify dental fractures using the Ellis Classification system, which dictates the necessary treatment approach:"
-      ],
-      "bulletPoints": [
-        "Ellis Class I (Enamel Only): Minor chip involving only the outer white enamel layer. No pain or sensitivity. Repaired easily with cosmetic contouring or composite bonding.",
-        "Ellis Class II (Enamel and Dentin): The fracture penetrates the yellowish middle dentin layer. The tooth feels sensitive to cold air, hot drinks, or touch. Requires protective bonding or a veneer to shield dentinal tubules.",
-        "Ellis Class III (Enamel, Dentin, and Pulp Exposure): The fracture reaches the innermost nerve. You will see a tiny red dot of bleeding tissue on the broken surface, accompanied by sharp pain. Requires emergency root canal therapy followed by a crown."
-      ]
-    },
-    {
-      "heading": "Modern Restorative Options for Chipped Front Teeth",
-      "paragraphs": [
-        "Depending on fracture size, aesthetic expectations, and budget, we offer three primary clinical solutions:"
-      ],
-      "table": {
-        "headers": [
-          "Treatment",
-          "Ideally Suited For",
-          "Procedure Time",
-          "Durability",
-          "Cost Range (INR)"
+    slug: "chipped-front-tooth-repair",
+    title: "Chipped or Broken Front Tooth Repair Cost in Bangalore | Aureva Dental",
+    headline: "Chipped or Broken Front Tooth: Repair Options and Cost in Bangalore",
+    metaDescription: "Chipped front tooth repair in Bangalore: bonding ₹1,500–₹4,000 per tooth, veneers ₹8,000–₹24,000, crowns from ₹4,000. First aid and which option fits.",
+    author: "Dr. Shweta",
+    authorRole: "Dental Surgeon",
+    authorCredentials: "Aureva Dental, Hennur",
+    reviewedBy: "Dr. Shweta",
+    date: "November 2026",
+    datePublished: "2026-09-27",
+    dateModified: "2026-11-20",
+    category: "Cosmetic & Restorative",
+    readTime: "5 min read",
+    excerpt: "Chipped front tooth repair in Bangalore: bonding ₹1,500–₹4,000 per tooth, veneers ₹8,000–₹24,000, crowns from ₹4,000. First aid and which option fits.",
+    relatedTreatmentUrl: "/treatments/cosmetic-dentistry",
+    relatedTreatmentName: "Cosmetic Dentistry & Bonding",
+    introParagraphs: [
+      "A chipped front tooth is usually more upsetting than painful. The good news is that most chips can be repaired, and small ones often in a single visit. Here's what to do right away, the options, and what each costs at our Hennur clinic.",
+      `Quick answer: a small to medium chip is usually repaired with composite bonding at ${CANONICAL_PRICES.composite_bonding}. Bigger breaks may need a veneer (${CANONICAL_PRICES.veneers_porcelain}) or a crown (${formatPriceRange(PRICE_VALUES.crown_pfm[0], PRICE_VALUES.crown_zirconia[1])} depending on material). If the break reaches the nerve, a root canal comes first.`
+    ],
+    sections: [
+      {
+        heading: "First aid: what to do in the first hour",
+        paragraphs: [
+          "Come in the same day if: you see a pink or red spot in the middle of the broken surface (the nerve may be exposed), the tooth is loose or pushed out of position, or the pain is sharp and constant. We're open 7 days and accept walk-ins until 9 PM."
         ],
-        "rows": [
-          [
-            "Composite Edge Bonding",
-            "Small to medium chips, incisal edges",
-            "Single visit (45 mins)",
-            "5 to 8 years",
-            "₹1,500 – ₹4,000"
-          ],
-          [
-            "Porcelain Veneers (E.max)",
-            "Significant fractures, aesthetic demands",
-            "2 visits (3D scan + lab)",
-            "15 to 20 years",
-            "₹10,000 – ₹18,000"
-          ],
-          [
-            "All-Ceramic Zirconia Crown",
-            "Severe fractures (>50% tooth loss / RCT)",
-            "2 visits",
-            "15+ years",
-            "₹10,000 – ₹18,000"
-          ],
-          [
-            "Enamel Smoothing / Contouring",
-            "Tiny, superficial micro-chips",
-            "15 minutes",
-            "Permanent",
-            "₹1,000 – ₹2,000"
+        bulletPoints: [
+          "Find the broken piece. Keep it in a small container of milk or saliva and bring it with you. Sometimes it can be bonded back on.",
+          "Rinse gently with lukewarm water.",
+          "Stop bleeding from a cut lip or gum by pressing with clean gauze for 10 minutes.",
+          "Cover a sharp edge with a small piece of sugar-free chewing gum or dental wax if it's cutting your tongue.",
+          "Don't bite with that tooth until it has been checked."
+        ]
+      },
+      {
+        heading: "How bad is the break?",
+        paragraphs: [],
+        bulletPoints: [
+          "Enamel only: a small chip with no sensitivity. Usually smoothed or bonded.",
+          "Into the dentine (the yellowish layer): the tooth is sensitive to cold or air. It needs to be covered, usually with bonding or a veneer.",
+          "Nerve exposed: pain, sometimes a red dot of bleeding. This needs root canal treatment, then usually a crown."
+        ]
+      },
+      {
+        heading: "Repair options and prices",
+        paragraphs: [
+          `The ${CANONICAL_PRICES.consultation_general} new-patient consultation includes a digital X-ray, to check whether the root or nerve is affected. It is valid for 6 months.`
+        ],
+        table: {
+          headers: ["Option", "Suited to", "Visits", "Price at Aureva Dental"],
+          rows: [
+            ["Composite bonding", "Small to medium chips, broken corners", "Usually 1", CANONICAL_PRICES.composite_bonding],
+            ["Porcelain veneer", "Larger chips, or when several front teeth need matching", "Usually 2", CANONICAL_PRICES.veneers_porcelain],
+            ["PFM crown", "Large breaks, mostly back teeth", "Usually 2", CANONICAL_PRICES.crown_pfm],
+            ["Ceramic crown", "Large breaks on visible teeth", "Usually 2", CANONICAL_PRICES.crown_ceramic],
+            ["Zirconia or E-max crown", "Large breaks, or after a root canal", "Usually 2", CANONICAL_PRICES.crown_zirconia],
+            ["Root canal, front tooth (if the nerve is involved)", "Breaks reaching the nerve", "1–2", CANONICAL_PRICES.rct_anterior]
           ]
+        }
+      },
+      {
+        heading: "Bonding, veneer or crown: how to choose",
+        paragraphs: [
+          "Your dentist will show you the break on screen using our intraoral camera and talk you through which option fits your tooth and budget."
+        ],
+        bulletPoints: [
+          "Bonding is quick and conservative. Tooth-coloured resin is shaped directly on the tooth, usually with little or no drilling. It can stain or chip again over the years and may need touching up.",
+          "A veneer is a thin ceramic shell made in a lab and bonded to the front of the tooth. It holds its colour better than bonding and suits bigger repairs or matching several teeth. A thin layer of enamel is usually removed.",
+          "A crown covers the whole tooth. It's the choice when a large part of the tooth is missing or the tooth has had a root canal."
+        ]
+      },
+      {
+        heading: "Does fixing a chipped tooth hurt?",
+        paragraphs: [
+          "Small bonding repairs often don't need an injection. For larger repairs, crowns or anything near the nerve, the tooth is numbed first with local anaesthetic."
         ]
       }
-    },
-    {
-      "heading": "Why Choose Aureva Dental for Smile Restoration",
-      "paragraphs": [
-        "Rebuilding a front tooth is an art as much as a science. Natural teeth are not flat white; they exhibit subtle translucency at the biting edge, micro-textures, and warm gradient undertones. At Aureva Dental, we use multi-layer polychromatic nano-hybrid composites that mimic natural tooth refraction so perfectly that no one will ever know your tooth was chipped.",
-        "We offer same-day emergency appointments throughout the week and all day Sunday, ensuring you never have to wait with a broken front smile."
-      ]
-    }
-  ],
-  "faqs": [
-    {
-      "question": "Can a chipped tooth heal or grow back on its own?",
-      "answer": "No. Tooth enamel is non-living tissue that contains no cells and cannot regenerate or heal itself once chipped. A dentist must physically restore the lost enamel to prevent bacterial penetration and sensitivity."
-    },
-    {
-      "question": "How long does cosmetic composite bonding last on a front tooth?",
-      "answer": "High-grade nano-hybrid composite bonding typically lasts 5 to 8 years with proper oral care. Avoiding biting directly on hard objects (ice, fingernails, hard nuts) and regular dental cleanings help prolong its aesthetic lifespan."
-    },
-    {
-      "question": "Is fixing a chipped tooth painful?",
-      "answer": "Fixing a minor or moderate chip with composite bonding or a veneer is completely comfortable and often requires zero anesthesia, as only minimal or no tooth structure is prepared."
-    },
-    {
-      "question": "What is the cost of repairing a chipped front tooth at Aureva Dental?",
-      "answer": "Composite bonding for a chipped front tooth at Aureva Dental Hennur ranges between ₹1,500 and ₹4,000 per tooth depending on the fracture volume. Transparent pricing is explained prior to beginning treatment."
-    }
-  ],
-  "conclusion": "A chipped front tooth can be repaired quickly, comfortably, and beautifully. Restore your confident smile today at Aureva Dental in Hennur and Horamavu, Bangalore.",
-  "ctaHeadline": "Restore Your Chipped Smile Today",
-  "ctaText": "Visit Aureva Dental on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp to book your same-day smile restoration."
-},
+    ],
+    faqs: [
+      {
+        question: "How much does it cost to fix a chipped front tooth in Bangalore?",
+        answer: `At Aureva Dental, bonding costs ${CANONICAL_PRICES.composite_bonding}, veneers ${CANONICAL_PRICES.veneers_porcelain}, and crowns ${formatPriceRange(PRICE_VALUES.crown_pfm[0], PRICE_VALUES.crown_zirconia[1])} depending on the material.`
+      },
+      {
+        question: "Can a chipped tooth heal on its own?",
+        answer: "No. Enamel can't grow back. A small chip with no sensitivity isn't urgent, but it should still be checked and smoothed or repaired so it doesn't crack further."
+      },
+      {
+        question: "How long does bonding last?",
+        answer: "Usually several years. It depends on your bite and habits: avoid biting nails, ice or pen caps. It may need polishing or a top-up over time."
+      },
+      {
+        question: "Can the broken piece be stuck back on?",
+        answer: "Sometimes, if it's in one piece and has been kept moist in milk or saliva. Bring it with you."
+      },
+      {
+        question: "Is a broken front tooth an emergency?",
+        answer: "It is if the nerve is exposed, the tooth is loose, or you're in strong pain. Come in the same day. A small chip that doesn't hurt can wait for a booked appointment."
+      }
+    ],
+    ctaHeadline: "Book a consultation, or walk in any day until 9 PM.",
+    ctaText: "Tue–Sun 9:30 AM–9 PM, Mon 4–9 PM. 2nd floor with lift, Horamavu Agara Road, near Nayara Petrol Bunk, Hennur Bande. Parking available for 4-wheelers and 2-wheelers.",
+    relatedPosts: [
+      { title: "Dental crown cost in Bangalore", url: "/blog/dental-crown-cost-bangalore" },
+      { title: "Emergency dentist in Hennur", url: "/emergency-dentist-hennur" }
+    ]
+  },
 {
   "slug": "root-canal-aftercare",
   "title": "Root Canal Aftercare: Recovery Timeline, Pain Management & Diet Guide | Aureva Dental",
@@ -1689,6 +1701,478 @@ export const BLOG_POSTS: BlogPost[] = [
   ctaHeadline: "Get a Complimentary Pre-Travel Assessment",
   ctaText: "Connect with Dr. Shweta Singh via WhatsApp (+91 73497 01002). Send your X-rays or treatment plan for a provisional assessment within 24 to 48 hours."
 }
+,
+  {
+    slug: "dental-crown-cost-bangalore",
+    title: "Dental Crown Cost in Bangalore (2026): PFM, Zirconia, E-max | Aureva Dental",
+    headline: "Dental Crown Cost in Bangalore: Which Crown, and What It Costs",
+    metaDescription: "Dental crown cost in Bangalore: PFM ₹4,000–₹6,000, ceramic ₹6,000–₹10,000, zirconia and E-max ₹10,000–₹18,000. Which crown suits which tooth.",
+    author: "Dr. Shweta",
+    authorRole: "Dental Surgeon",
+    authorCredentials: "Aureva Dental, Hennur",
+    reviewedBy: "Dr. Shweta",
+    date: "November 2026",
+    datePublished: "2026-11-20",
+    dateModified: "2026-11-20",
+    category: "Root Canal & Crowns",
+    readTime: "5 min read",
+    excerpt: "Dental crown cost in Bangalore: PFM ₹4,000–₹6,000, ceramic ₹6,000–₹10,000, zirconia and E-max ₹10,000–₹18,000. Which crown suits which tooth.",
+    relatedTreatmentUrl: "/dental-crowns-hennur",
+    relatedTreatmentName: "Dental Crowns in Hennur",
+    introParagraphs: [
+      "A crown, also called a cap, covers a tooth that's too damaged for a filling, or one that has had a root canal. The price depends almost entirely on the material. Here's the full price list from our Hennur clinic and how to choose.",
+      `Quick answer: crowns at Aureva Dental cost ${formatPriceRange(PRICE_VALUES.crown_pfm[0], PRICE_VALUES.crown_zirconia[1]).replace(' – ', ' to ')} per tooth. PFM is the budget option. Zirconia and E-max sit at the upper end of the range.`
+    ],
+    sections: [
+      {
+        heading: "Crown prices at Aureva Dental",
+        paragraphs: [
+          `Bridges (to replace a missing tooth) are priced per unit at the same rates as the crown material you choose. A three-unit PFM bridge, for example, is 3 × ${CANONICAL_PRICES.crown_pfm}, which comes to ${CALCULATED_TOTALS.bridge_3unit_pfm}.`
+        ],
+        table: {
+          headers: ["Crown", "Price per tooth", "Looks", "Typically used for"],
+          rows: [
+            ["PFM (porcelain-fused-to-metal)", CANONICAL_PRICES.crown_pfm, "Tooth-coloured; a thin dark line can show at the gum over time", "Back teeth, budget-conscious"],
+            ["Ceramic (metal-free)", CANONICAL_PRICES.crown_ceramic, "Natural, no metal line", "Visible teeth"],
+            ["Zirconia", CANONICAL_PRICES.crown_zirconia, "Natural, metal-free, very strong", "Back teeth that take heavy chewing"],
+            ["E-max", CANONICAL_PRICES.crown_emax, "Very natural translucency, close to enamel", "Front teeth and premolars"],
+            ["New-patient consultation + digital X-ray", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`, "", ""]
+          ]
+        }
+      },
+      {
+        heading: "When do you need a crown?",
+        paragraphs: [
+          `If only a small part of the tooth is damaged, a filling (${CANONICAL_PRICES.filling_composite}) or bonding (${CANONICAL_PRICES.composite_bonding}) may be enough. Your dentist will tell you honestly if you don't need a crown.`
+        ],
+        bulletPoints: [
+          "After a root canal.",
+          "When a large filling has broken, or the tooth has cracked.",
+          "When a tooth is badly worn down from grinding.",
+          "To hold a bridge, or on top of a dental implant.",
+          "Sometimes to improve the shape or colour of a tooth, though a veneer is often less invasive for that."
+        ]
+      },
+      {
+        heading: "Which crown should you choose?",
+        paragraphs: [],
+        bulletPoints: [
+          "For a back molar: zirconia if strength and no metal matter to you, PFM if you want to keep the cost down. Both work well for chewing.",
+          "For a front tooth: E-max or ceramic, for a natural look.",
+          "For a premolar that shows when you smile: E-max or zirconia.",
+          "If you grind your teeth: tell your dentist. It affects which material is suitable."
+        ]
+      },
+      {
+        heading: "How getting a crown works",
+        paragraphs: [],
+        bulletPoints: [
+          "Visit 1: the tooth is numbed, shaped to make room for the crown, and an impression of it is taken. You leave with a temporary crown.",
+          "The lab makes your crown. This usually takes a few days.",
+          "Visit 2: the temporary comes off, the fit, bite and colour are checked, and the crown is cemented."
+        ]
+      },
+      {
+        heading: "Looking after a crown",
+        paragraphs: [
+          "The crown itself can't decay, but the tooth underneath can, at the edge where the crown meets the gum. Brush twice a day, floss or use interdental brushes around it, and keep your 6-month check-ups. Avoid using crowned teeth to open packets or crack hard nuts."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How much does a dental crown cost in Bangalore?",
+        answer: `At Aureva Dental: PFM ${CANONICAL_PRICES.crown_pfm}, ceramic ${CANONICAL_PRICES.crown_ceramic}, and zirconia or E-max ${CANONICAL_PRICES.crown_zirconia} per tooth.`
+      },
+      {
+        question: "Zirconia or E-max: which is better?",
+        answer: "Neither is better overall. Zirconia is generally chosen for strength on back teeth. E-max is usually chosen for its natural look on front teeth. Both are the same price at our clinic."
+      },
+      {
+        question: "How long does a crown last?",
+        answer: "With good brushing, flossing and regular check-ups, many crowns last for many years. Grinding, gum disease and new decay under the crown are the usual reasons they need replacing."
+      },
+      {
+        question: "Does getting a crown hurt?",
+        answer: "The tooth is numbed with local anaesthetic before it's shaped. It may feel slightly sensitive for a few days afterwards."
+      },
+      {
+        question: "Is a crown needed after a root canal?",
+        answer: "In most cases, yes. See our root canal cost guide for the combined cost."
+      }
+    ],
+    ctaHeadline: "Book a consultation, or walk in any day until 9 PM.",
+    ctaText: "Tue–Sun 9:30 AM–9 PM, Mon 4–9 PM. 2nd floor with lift, Horamavu Agara Road, near Nayara Petrol Bunk, Hennur Bande. Parking available for 4-wheelers and 2-wheelers.",
+    relatedPosts: [
+      { title: "Root canal treatment cost", url: "/blog/root-canal-treatment-cost-hennur" },
+      { title: "Chipped front tooth repair", url: "/blog/chipped-front-tooth-repair" }
+    ]
+  },
+
+  {
+    slug: "child-first-dental-visit",
+    title: "Your Child's First Dental Visit: When, What Happens, Cost | Aureva Dental",
+    headline: "Your Child's First Dental Visit: When to Go, What Happens, and What It Costs",
+    metaDescription: "When should your child first see a dentist? By age 1. What happens at the visit, toothpaste amounts by age, and kids' check-up prices at our Hennur clinic.",
+    author: "Dr. Shweta",
+    authorRole: "Dental Surgeon",
+    authorCredentials: "Aureva Dental, Hennur",
+    reviewedBy: "Dr. Shweta",
+    date: "November 2026",
+    datePublished: "2026-11-20",
+    dateModified: "2026-11-20",
+    category: "Kids Dentistry",
+    readTime: "5 min read",
+    excerpt: "When should your child first see a dentist? By age 1. What happens at the visit, toothpaste amounts by age, and kids' check-up prices at our Hennur clinic.",
+    relatedTreatmentUrl: "/treatments/pediatric-dentistry",
+    relatedTreatmentName: "Kids Dentistry",
+    introParagraphs: [
+      "Many parents in Bengaluru take their child to a dentist for the first time only when there's already pain. A study of children in Bengaluru found the average first dental visit happened at about 8 years of age, most commonly at 6, and usually because of pain or decay.¹ By then, problems that could have been prevented are already there.",
+      `Quick answer: book your child's first check-up by their first birthday, or within 6 months of the first tooth appearing, whichever comes first.² A kids' check-up at Aureva Dental is ${CANONICAL_PRICES.consultation_general} and stays valid for 6 months.`
+    ],
+    sections: [
+      {
+        heading: "Why so early?",
+        paragraphs: [
+          "Baby teeth can start decaying as soon as they come in, especially with night-time milk bottles, frequent snacking or sweet drinks. An early visit is mostly about prevention and guidance:",
+          "Baby teeth matter even though they fall out. They hold space for adult teeth, help with chewing and speech, and decay in them can cause pain and infection."
+        ],
+        bulletPoints: [
+          "Checking how the teeth are coming in and spotting early white spots (the first sign of decay).",
+          "Showing you how to brush your child's teeth and how much toothpaste to use.",
+          "Advice on bottles, night feeds, snacks and thumb-sucking.",
+          "Getting your child used to the clinic before there's ever a problem, so later visits aren't frightening."
+        ]
+      },
+      {
+        heading: "What happens at the first visit",
+        paragraphs: [
+          "Tips for the day:"
+        ],
+        bulletPoints: [
+          "Usually short. For toddlers it's often done with your child sitting on your lap.",
+          "The dentist looks at the teeth and gums. We use an intraoral camera so you can see your child's teeth on the screen too.",
+          "Usually no treatment. If something needs doing, we explain it first and plan it for another day.",
+          "X-rays only if needed. For very young children, X-rays are taken only when there's a specific reason."
+        ]
+      },
+      {
+        heading: "Tips for the day",
+        paragraphs: [],
+        bulletPoints: [
+          "Pick a time when your child is usually fed and rested, not nap time.",
+          "Talk about it simply and positively. Avoid words like \"hurt\" or \"injection\".",
+          "Bring a favourite toy."
+        ]
+      },
+      {
+        heading: "How much toothpaste, by age",
+        paragraphs: [
+          "These amounts follow the American Academy of Pediatric Dentistry's guidance.²"
+        ],
+        bulletPoints: [
+          "From the first tooth until age 3: a smear the size of a grain of rice, of fluoride toothpaste, twice a day.",
+          "Age 3 to 6: a pea-sized amount, twice a day.",
+          "Supervise: you brush, and help them spit rather than rinse."
+        ]
+      },
+      {
+        heading: "Kids' dental prices at Aureva Dental",
+        paragraphs: [
+          "Fluoride and sealants are preventive. Fluoride helps strengthen enamel. Sealants protect the deep grooves of the back teeth, especially the first permanent molars that come in around age 6, where many children's cavities start."
+        ],
+        table: {
+          headers: ["Treatment", "Price"],
+          rows: [
+            ["Kids' dental check-up", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`],
+            ["Fluoride application", CANONICAL_PRICES.kids_fluoride],
+            ["Pit and fissure sealant", CANONICAL_PRICES.kids_sealant],
+            ["Kids' tooth filling", CANONICAL_PRICES.kids_filling],
+            ["Baby tooth pulpectomy (root canal for a baby tooth)", CANONICAL_PRICES.kids_pulpectomy]
+          ]
+        }
+      },
+      {
+        heading: "How often after that?",
+        paragraphs: [
+          "Usually every 6 months, or as your dentist advises based on your child's risk of decay."
+        ]
+      },
+      {
+        heading: "Getting here",
+        paragraphs: [],
+        bulletPoints: [
+          "Lift: we're on the 2nd floor and there's a lift, so prams are fine.",
+          "Parking: available for 4-wheelers and 2-wheelers.",
+          "Weekend slots: we're open Tuesday to Sunday 9:30 AM–9 PM and Monday 4–9 PM."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "At what age should my child first see a dentist?",
+        answer: "By their first birthday, or within 6 months of the first tooth, whichever is earlier."
+      },
+      {
+        question: "How much is a kids' dental check-up?",
+        answer: `${CANONICAL_PRICES.consultation_general} at Aureva Dental, valid for 6 months.`
+      },
+      {
+        question: "My child is 4 and has never been. Is that too late?",
+        answer: "Not at all. Book a check-up now. Earlier is better, but any time is better than waiting for pain."
+      },
+      {
+        question: "Do you treat children who are scared?",
+        answer: "Yes. The first visit is kept gentle and unhurried, and treatment is planned for another day if your child isn't ready."
+      },
+      {
+        question: "Can I stay with my child?",
+        answer: "Yes, you can stay with your child."
+      }
+    ],
+    sources: [
+      "Subramaniam P, Reghuvaran J. Age and reasons for first dental visit: a cross-sectional study of children in Bengaluru, India. Journal of Indian Association of Public Health Dentistry, 2019.",
+      "American Academy of Pediatric Dentistry, parent guidance (first visit by age 1 or within 6 months of the first tooth; a rice-grain smear of fluoride toothpaste under 3, pea-sized from 3). See also: \"Visit to the Dentist for Oral Health Prevention at 'Age One': A proposed policy report from the Indian perspective\", Journal of Indian Society of Pedodontics and Preventive Dentistry, 2024."
+    ],
+    ctaHeadline: "Book a consultation, or walk in any day until 9 PM.",
+    ctaText: "Tue–Sun 9:30 AM–9 PM, Mon 4–9 PM. 2nd floor with lift, Horamavu Agara Road, near Nayara Petrol Bunk, Hennur Bande. Parking available for 4-wheelers and 2-wheelers.",
+    relatedPosts: [
+      { title: "Dentist in Kothanur", url: "/dentist-in-kothanur" },
+      { title: "Dentist in Thanisandra", url: "/dentist-in-thanisandra" }
+    ]
+  },
+
+  {
+    slug: "teeth-cleaning-cost-bangalore",
+    title: "Teeth Cleaning (Scaling) Cost in Bangalore (2026) | Aureva Dental",
+    headline: "Teeth Cleaning (Scaling and Polishing) Cost in Bangalore",
+    metaDescription: "Teeth cleaning cost in Bangalore: scaling and polishing ₹2,000–₹5,000, deep scaling ₹8,000–₹15,000 at our Hennur clinic. Does scaling damage teeth? Answers.",
+    author: "Dr. Shweta",
+    authorRole: "Dental Surgeon",
+    authorCredentials: "Aureva Dental, Hennur",
+    reviewedBy: "Dr. Shweta",
+    date: "November 2026",
+    datePublished: "2026-11-20",
+    dateModified: "2026-11-20",
+    category: "Preventive Care",
+    readTime: "5 min read",
+    excerpt: "Teeth cleaning cost in Bangalore: scaling and polishing ₹2,000–₹5,000, deep scaling ₹8,000–₹15,000 at our Hennur clinic. Does scaling damage teeth? Answers.",
+    relatedTreatmentUrl: "/treatments/scaling-and-polishing",
+    relatedTreatmentName: "Scaling & Polishing",
+    introParagraphs: [
+      "Brushing removes soft plaque. It can't remove tartar, the hard, yellow-brown deposit that builds up along the gums and between the teeth. Only a professional cleaning removes it. Here's what it costs at our Hennur clinic, what happens, and the common myths.",
+      `Quick answer: routine scaling and polishing costs ${CANONICAL_PRICES.scaling_polishing}. Deep scaling for gum disease costs ${CANONICAL_PRICES.scaling_deep}. On your first visit there is also the ${CANONICAL_PRICES.consultation_general} new-patient consultation with a digital X-ray, valid for 6 months.`
+    ],
+    sections: [
+      {
+        heading: "Prices at Aureva Dental",
+        paragraphs: [
+          "Why a range? It depends on how much tartar and staining there is. A first cleaning after several years usually takes longer than a routine 6-monthly one. You're told the price after the check-up, before we start."
+        ],
+        table: {
+          headers: ["Treatment", "What it is", "Price"],
+          rows: [
+            ["New-patient consultation + digital X-ray", "Full check-up before treatment", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`],
+            ["Scaling and polishing", "Removes tartar, plaque and surface stains from all teeth", CANONICAL_PRICES.scaling_polishing],
+            ["Deep scaling / root planing", "Cleans below the gum line for heavy tartar, gum pockets and bleeding gums", CANONICAL_PRICES.scaling_deep]
+          ]
+        }
+      },
+      {
+        heading: "Signs you're due for a cleaning",
+        paragraphs: [],
+        bulletPoints: [
+          "Gums bleed when you brush or floss.",
+          "Visible tartar: yellow or brown deposits, especially behind the lower front teeth.",
+          "Bad breath that doesn't go away with brushing.",
+          "Stains from tea, coffee, smoking or paan.",
+          "It's been more than a year since your last cleaning."
+        ]
+      },
+      {
+        heading: "What happens during scaling",
+        paragraphs: [],
+        bulletPoints: [
+          "Check first: the dentist looks at your teeth and gums. We use an intraoral camera so you can see the tartar and any problem areas on screen.",
+          "Removing the tartar: an ultrasonic scaler loosens it, with a water spray to keep things cool and rinse it away. You'll feel vibration and hear a buzzing sound.",
+          "Polishing: the teeth are polished to remove stains and smooth the surface, so plaque sticks less.",
+          "How long it takes: a routine cleaning usually takes under an hour. Deep scaling may be split into two or more visits."
+        ]
+      },
+      {
+        heading: "Common myths",
+        paragraphs: [
+          "\"Scaling weakens teeth or makes them loose.\" No. Scaling removes deposits sitting on the tooth, not the tooth itself. Teeth that feel loose after scaling were usually already loose from gum disease, and the tartar had been holding them in place. Removing it is the first step to treating that.",
+          "\"Scaling creates gaps between teeth.\" The gaps were already there, filled with tartar. Once the gums heal, they often tighten up a little.",
+          "\"My teeth are sensitive after scaling, so something went wrong.\" Mild sensitivity for a few days is common, because tooth surfaces that were covered by tartar are now exposed. It usually settles on its own, and a sensitivity toothpaste helps."
+        ]
+      },
+      {
+        heading: "How often should you get your teeth cleaned?",
+        paragraphs: [
+          "For most adults, every 6 to 12 months. If you have gum disease, smoke or have diabetes, your dentist may advise more often."
+        ]
+      },
+      {
+        heading: "Scaling vs whitening",
+        paragraphs: [
+          `Scaling removes surface stains and tartar, so teeth look cleaner and brighter. It does not change the natural shade of the tooth. Whitening (${CANONICAL_PRICES.teeth_whitening}) is a separate cosmetic treatment that lightens the tooth colour, and it's usually done after a cleaning.`
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How much does teeth cleaning cost in Bangalore?",
+        answer: `At Aureva Dental, scaling and polishing costs ${CANONICAL_PRICES.scaling_polishing}. Deep scaling for gum disease costs ${CANONICAL_PRICES.scaling_deep}. The ${CANONICAL_PRICES.consultation_general} new-patient consultation with X-ray is separate and valid for 6 months.`
+      },
+      {
+        question: "Does scaling hurt?",
+        answer: "Most people find a routine cleaning comfortable and feel vibration rather than pain. If your gums are very inflamed, or you need deep scaling, the area can be numbed first."
+      },
+      {
+        question: "Can I eat after scaling?",
+        answer: "Yes. Avoid very hot, very cold or strongly coloured food and drinks (tea, coffee, turmeric) for a few hours, especially if a polish or fluoride was applied."
+      },
+      {
+        question: "Is teeth cleaning necessary if I brush twice a day?",
+        answer: "Yes. Brushing can't remove tartar once it has hardened, and it builds up even in people who brush well."
+      }
+    ],
+    ctaHeadline: "Book a consultation, or walk in any day until 9 PM.",
+    ctaText: "Tue–Sun 9:30 AM–9 PM, Mon 4–9 PM. 2nd floor with lift, Horamavu Agara Road, near Nayara Petrol Bunk, Hennur Bande. Parking available for 4-wheelers and 2-wheelers.",
+    relatedPosts: [
+      { title: "Gum treatment in Hennur", url: "/gum-treatment-hennur" },
+      { title: "Scaling aftercare", url: "/blog/scaling-aftercare" }
+    ]
+  },
+
+  {
+    slug: "dentures-cost-bangalore",
+    title: "Dentures Cost in Bangalore (2026): Full, Partial, Flexible | Aureva Dental",
+    headline: "Dentures Cost in Bangalore: Types, Prices and What to Expect",
+    metaDescription: "Dentures cost in Bangalore at our Hennur clinic: complete, partial and flexible dentures explained, with prices, number of visits and getting used to them.",
+    author: "Dr. Shweta",
+    authorRole: "Dental Surgeon",
+    authorCredentials: "Aureva Dental, Hennur",
+    reviewedBy: "Dr. Shweta",
+    date: "November 2026",
+    datePublished: "2026-11-20",
+    dateModified: "2026-11-20",
+    category: "Tooth Replacement",
+    readTime: "5 min read",
+    excerpt: "Dentures cost in Bangalore at our Hennur clinic: complete, partial and flexible dentures explained, with prices, number of visits and getting used to them.",
+    relatedTreatmentUrl: "/treatments/dentures",
+    relatedTreatmentName: "Dentures",
+    introParagraphs: [
+      "Dentures are removable replacement teeth. They're an affordable way to replace several missing teeth, or all of them, and to get back to chewing and smiling comfortably. Here's what's available at our Hennur clinic and what each costs.",
+      `Quick answer: at Aureva Dental, complete dentures cost ${CANONICAL_PRICES.denture_complete_single_arch} per arch (${CANONICAL_PRICES.denture_complete_both_arches} for both). Partial dentures cost ${CALCULATED_TOTALS.denture_partial_overall}, depending on the type and how many teeth they replace. The ${CANONICAL_PRICES.consultation_general} new-patient consultation includes a digital X-ray to check the gums and remaining teeth.`
+    ],
+    sections: [
+      {
+        heading: "Types of dentures",
+        paragraphs: [
+          "Complete dentures replace all the teeth in the upper or lower jaw. They rest on the gums. Upper dentures usually stay in place well through suction against the palate. Lower dentures move more, because the tongue and cheeks push on them.",
+          "Partial dentures replace some missing teeth and clip onto your remaining natural teeth.",
+          `Implant-supported overdentures clip onto two or more dental implants. They are much more stable than a regular lower denture. The overdenture costs ${CANONICAL_PRICES.denture_implant_supported_overdenture}, and the implants are priced separately (${CANONICAL_PRICES.implants_per_tooth}).`
+        ],
+        bulletPoints: [
+          "Acrylic partials are the economical option.",
+          "Cast partials have a thin metal framework. They are slimmer and more stable.",
+          "Flexible partials are made of a bendable material with gum-coloured clasps instead of metal ones."
+        ]
+      },
+      {
+        heading: "Prices at Aureva Dental",
+        paragraphs: [],
+        table: {
+          headers: ["Denture type", "Price"],
+          rows: [
+            ["New-patient consultation + digital X-ray", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`],
+            ["Complete denture, one arch (upper or lower)", CANONICAL_PRICES.denture_complete_single_arch],
+            ["Complete dentures, both arches", CANONICAL_PRICES.denture_complete_both_arches],
+            ["Partial denture, acrylic", CANONICAL_PRICES.denture_partial_acrylic],
+            ["Partial denture, cast metal framework", CANONICAL_PRICES.denture_partial_cast_metal],
+            ["Flexible partial denture", CANONICAL_PRICES.denture_flexible_partial],
+            ["Implant-supported overdenture (denture only; implants priced separately)", CANONICAL_PRICES.denture_implant_supported_overdenture],
+            ["Denture reline or repair", CANONICAL_PRICES.denture_reline_repair]
+          ]
+        }
+      },
+      {
+        heading: "What changes the price",
+        paragraphs: [],
+        bulletPoints: [
+          "Complete or partial, and how many teeth are replaced.",
+          "Material: acrylic, metal framework or flexible.",
+          "Preparation needed: removing loose or broken teeth, or treating gum disease.",
+          "Standard or implant-supported."
+        ]
+      },
+      {
+        heading: "How many visits?",
+        paragraphs: [
+          "Making a good-fitting denture takes several appointments: impressions, bite recording, a try-in so you can check the look and fit before it's finished, then the final fitting. This usually takes several visits over a few weeks.",
+          "After fitting, expect one or two short follow-up visits to ease any sore spots."
+        ]
+      },
+      {
+        heading: "Getting used to dentures",
+        paragraphs: [],
+        bulletPoints: [
+          "The first few weeks: they will feel bulky. Speaking and eating take practice. Start with soft food cut into small pieces, and chew on both sides at once.",
+          "Sore spots: these are common early on. Don't adjust the denture yourself; come in and we'll adjust it.",
+          "At night: take them out to rest your gums. Keep them in water or denture-cleaning solution so they don't dry out.",
+          "Cleaning: clean them daily with a soft brush. Rinse after meals.",
+          "Fit over time: your gums and jawbone change shape over the years, so dentures may need relining or remaking. Regular check-ups catch this early."
+        ]
+      },
+      {
+        heading: "Dentures, bridge or implants?",
+        paragraphs: [
+          "Your dentist will go through which options suit your gums, bone and budget."
+        ],
+        bulletPoints: [
+          "Dentures: the lower-cost option, and removable.",
+          `Bridge: fixed, using the neighbouring teeth for support. Priced per unit at our crown rates, ${formatPriceRange(PRICE_VALUES.crown_pfm[0], PRICE_VALUES.crown_zirconia[1])} per unit depending on material.`,
+          `Implants: fixed, and they don't involve the neighbouring teeth. ${CANONICAL_PRICES.implants_per_tooth}, or ${CANONICAL_PRICES.implants_with_crown} with the crown.`
+        ]
+      },
+      {
+        heading: "Getting here",
+        paragraphs: [
+          "We're on the 2nd floor with a lift, so there are no stairs. Parking is available for 4-wheelers and 2-wheelers. Family members are welcome to come along to the consultation."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How much do dentures cost in Bangalore?",
+        answer: `At Aureva Dental, complete dentures cost ${CANONICAL_PRICES.denture_complete_single_arch} per arch, or ${CANONICAL_PRICES.denture_complete_both_arches} for both. Partial dentures cost ${formatPriceRange(PRICE_VALUES.denture_partial_acrylic[0], PRICE_VALUES.denture_partial_acrylic[1])} in acrylic, ${CANONICAL_PRICES.denture_flexible_partial} flexible and ${CANONICAL_PRICES.denture_partial_cast_metal} with a cast metal framework, depending on how many teeth they replace.`
+      },
+      {
+        question: "How long do dentures last?",
+        answer: "They usually need relining or replacing after some years, because the gums and jawbone change shape. Regular check-ups help keep them fitting well."
+      },
+      {
+        question: "Can I eat normally with dentures?",
+        answer: "Most people get back to a wide range of food after a few weeks of practice. Very hard or sticky foods remain difficult."
+      },
+      {
+        question: "Should I sleep with my dentures?",
+        answer: "We advise taking them out at night to rest your gums, and keeping them in water or a cleaning solution."
+      },
+      {
+        question: "Can a loose denture be fixed?",
+        answer: `Often, yes, with a reline (${CANONICAL_PRICES.denture_reline_repair}). If it's loose because of bone loss, implant-supported overdentures are an option to discuss.`
+      }
+    ],
+    ctaHeadline: "Book a consultation, or walk in any day until 9 PM.",
+    ctaText: "Tue–Sun 9:30 AM–9 PM, Mon 4–9 PM. 2nd floor with lift, Horamavu Agara Road, near Nayara Petrol Bunk, Hennur Bande. Parking available for 4-wheelers and 2-wheelers.",
+    relatedPosts: [
+      { title: "Dental implants in Hennur", url: "/dental-implants-hennur" },
+      { title: "Dental bridges", url: "/treatments/dental-bridges" }
+    ]
+  }
 ];
 
 export function getAllBlogPosts(): BlogPost[] {

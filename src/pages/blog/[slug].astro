@@ -36,6 +36,7 @@ const blogPostSchema = JSON.stringify(generateBlogPostSchema({
   url: canonicalUrl,
   authorName: post.author,
   authorJobTitle: post.authorRole,
+  reviewedByName: post.reviewedBy,
   datePublished: post.datePublished,
   dateModified: post.dateModified
 }));
@@ -90,17 +91,25 @@ const authorInitials = post.author.replace(/Dr\.?\s*/i, '').split(/\s+/).map(n =
           {post.headline}
         </h1>
 
-        <!-- Author Byline -->
+        <!-- Author / Reviewer Byline -->
         <div class="flex items-center gap-4 pt-2">
           <div class="w-12 h-12 rounded-full bg-japandi-moss/15 text-japandi-moss font-serif text-lg font-medium flex items-center justify-center shrink-0 border border-japandi-clay/60">
-            {authorInitials}
+            {post.reviewedBy ? 'DS' : authorInitials}
           </div>
           <div>
             <div class="text-sm font-semibold text-japandi-charcoal">
-              By <span class="text-japandi-moss">{post.author}</span>
+              {post.reviewedBy ? (
+                <span>Clinically reviewed by <span class="text-japandi-moss">{post.reviewedBy}</span></span>
+              ) : (
+                <span>By <span class="text-japandi-moss">{post.author}</span></span>
+              )}
             </div>
             <div class="text-xs text-japandi-earth font-light">
-              {post.authorRole}, Aureva Dental &bull; Last updated: {post.date}
+              {post.reviewedBy ? (
+                <span>Last updated: {post.date}</span>
+              ) : (
+                <span>{post.authorRole}, Aureva Dental &bull; Last updated: {post.date}</span>
+              )}
             </div>
           </div>
         </div>
@@ -129,31 +138,55 @@ const authorInitials = post.author.replace(/Dr\.?\s*/i, '').split(/\s+/).map(n =
               </p>
             ))}
 
-            {/* Custom Table if present */}
+            {/* Custom Table if present (Mobile card-stack to prevent horizontal scroll + Desktop table) */}
             {sec.table && (
-              <div class="overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-sand/35 my-6">
-                <table class="w-full text-left text-xs sm:text-sm">
-                  <thead>
-                    <tr class="border-b border-japandi-clay/40 bg-japandi-sand/80">
-                      {sec.table.headers.map((h, hIdx) => (
-                        <th class={`py-4 px-6 font-serif font-medium ${hIdx === 0 ? 'text-japandi-charcoal' : hIdx === 1 ? 'text-japandi-moss' : 'text-japandi-earth'}`}>
-                          {h}
-                        </th>
+              <div class="my-6">
+                <!-- Mobile Card Stack (No sideways scrolling on 360px screens) -->
+                <div class="block sm:hidden space-y-3">
+                  {sec.table.rows.map((row) => (
+                    <div class="p-4 rounded-2xl border border-japandi-clay/50 bg-japandi-sand/35 space-y-2">
+                      <div class="font-medium text-japandi-charcoal text-sm">
+                        {row[0]}
+                      </div>
+                      <div class="flex items-baseline justify-between pt-1 border-t border-japandi-clay/20 text-xs">
+                        <span class="text-japandi-earth font-light">{sec.table.headers[1] || 'Price'}:</span>
+                        <span class="font-semibold text-japandi-moss text-sm">{row[1]}</span>
+                      </div>
+                      {row.slice(2).map((cell, idx) => (
+                        <div class="text-xs text-japandi-earth font-light pt-0.5">
+                          <span class="font-medium text-japandi-charcoal/80">{sec.table.headers[idx + 2]}: </span>
+                          <span>{cell}</span>
+                        </div>
                       ))}
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-japandi-clay/20 text-japandi-charcoal font-light">
-                    {sec.table.rows.map((row) => (
-                      <tr class="hover:bg-japandi-sand/40 transition-colors">
-                        {row.map((cell, cIdx) => (
-                          <td class={`py-4 px-6 ${cIdx === 0 ? 'font-medium text-japandi-charcoal' : cIdx === 1 ? 'font-semibold text-japandi-moss' : 'text-japandi-earth'}`}>
-                            {cell}
-                          </td>
+                    </div>
+                  ))}
+                </div>
+
+                <!-- Desktop Table View -->
+                <div class="hidden sm:block overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-sand/35">
+                  <table class="w-full text-left text-xs sm:text-sm">
+                    <thead>
+                      <tr class="border-b border-japandi-clay/40 bg-japandi-sand/80">
+                        {sec.table.headers.map((h, hIdx) => (
+                          <th class={`py-4 px-6 font-serif font-medium ${hIdx === 0 ? 'text-japandi-charcoal' : hIdx === 1 ? 'text-japandi-moss' : 'text-japandi-earth'}`}>
+                            {h}
+                          </th>
                         ))}
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody class="divide-y divide-japandi-clay/20 text-japandi-charcoal font-light">
+                      {sec.table.rows.map((row) => (
+                        <tr class="hover:bg-japandi-sand/40 transition-colors">
+                          {row.map((cell, cIdx) => (
+                            <td class={`py-4 px-6 ${cIdx === 0 ? 'font-medium text-japandi-charcoal' : cIdx === 1 ? 'font-semibold text-japandi-moss' : 'text-japandi-earth'}`}>
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             )}
 
@@ -214,6 +247,19 @@ const authorInitials = post.author.replace(/Dr\.?\s*/i, '').split(/\s+/).map(n =
           </div>
         )}
 
+        {/* Related Guides Links */}
+        {post.relatedPosts && post.relatedPosts.length > 0 && (
+          <div class="my-6 p-4 sm:p-5 rounded-2xl bg-japandi-sand/30 border border-japandi-clay/35 text-xs sm:text-sm text-japandi-earth">
+            <span class="font-medium text-japandi-charcoal">Related: </span>
+            {post.relatedPosts.map((rel, rIdx) => (
+              <span>
+                <a href={rel.url} class="text-japandi-moss hover:underline font-medium">{rel.title}</a>
+                {rIdx < post.relatedPosts!.length - 1 && <span class="mx-2 text-japandi-clay">&middot;</span>}
+              </span>
+            ))}
+          </div>
+        )}
+
         <!-- FAQs Accordion -->
         {post.faqs && post.faqs.length > 0 && (
           <section class="pt-10 space-y-6">
@@ -249,6 +295,18 @@ const authorInitials = post.author.replace(/Dr\.?\s*/i, '').split(/\s+/).map(n =
                 </div>
               ))}
             </div>
+          </section>
+        )}
+
+        <!-- Sources Section if present -->
+        {post.sources && post.sources.length > 0 && (
+          <section class="pt-8 space-y-3 border-t border-japandi-clay/25 text-xs text-japandi-earth">
+            <h4 class="font-serif text-sm font-medium text-japandi-charcoal">Sources</h4>
+            <ol class="list-decimal pl-5 space-y-1.5 font-light leading-relaxed">
+              {post.sources.map((src) => (
+                <li>{src}</li>
+              ))}
+            </ol>
           </section>
         )}
 

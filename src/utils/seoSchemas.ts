@@ -497,22 +497,24 @@ export function generateBlogPostSchema(params: {
   headline: string;
   description: string;
   url: string;
-  authorName: string;
+  authorName?: string;
   authorJobTitle?: string;
+  reviewedByName?: string;
+  reviewedByRole?: string;
   datePublished: string;
   dateModified: string;
   image?: string;
 }) {
-  return {
+  const schema: any = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": params.headline,
     "description": params.description,
     "image": params.image || "https://aurevadental.com/og-image.jpg",
     "author": {
-      "@type": "Person",
-      "name": params.authorName,
-      "jobTitle": params.authorJobTitle || "Clinical Director & Dental Surgeon"
+      "@type": "Organization",
+      "name": "Aureva Dental",
+      "url": "https://aurevadental.com/"
     },
     "publisher": {
       "@type": "DentalClinic",
@@ -531,6 +533,15 @@ export function generateBlogPostSchema(params: {
       "@id": params.url
     }
   };
+
+  if (params.reviewedByName) {
+    schema.reviewedBy = {
+      "@type": "Person",
+      "name": params.reviewedByName
+    };
+  }
+
+  return schema;
 }
 
 

@@ -1,6 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../../utils/seoSchemas';
+import { CANONICAL_PRICES } from '../../data/prices';
+
+const denturePriceList = [
+  { name: "Complete denture, one arch (upper or lower)", price: CANONICAL_PRICES.denture_complete_single_arch },
+  { name: "Complete dentures, both arches", price: CANONICAL_PRICES.denture_complete_both_arches },
+  { name: "Partial denture, acrylic", price: CANONICAL_PRICES.denture_partial_acrylic },
+  { name: "Partial denture, cast metal framework", price: CANONICAL_PRICES.denture_partial_cast_metal },
+  { name: "Flexible partial denture", price: CANONICAL_PRICES.denture_flexible_partial },
+  { name: "Implant-supported overdenture (denture only; implants priced separately)", price: CANONICAL_PRICES.denture_implant_supported_overdenture },
+  { name: "Denture reline or repair", price: CANONICAL_PRICES.denture_reline_repair },
+  { name: "New-patient consultation with digital X-ray", price: `${CANONICAL_PRICES.consultation} (valid 6 months)` }
+];
 
 
 const pageTitle = "Custom Dentures in Bangalore | Full & Partial Dentures | Aureva Dental";
@@ -184,6 +196,55 @@ const seoProps = {
             Implant-supported overdentures are held in place by implants with locator attachments, providing stability, and can reduce problems with loose dentures and help preserve the jawbone.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Denture Pricing Section -->
+  <section class="py-16 px-6 lg:px-24 bg-transparent border-t border-japandi-clay/20">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div class="space-y-2 text-center sm:text-left">
+        <div class="text-[10px] font-semibold text-japandi-moss uppercase tracking-widest">Clear &amp; Transparent Costs</div>
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">Dentures Cost at Aureva Dental</h2>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed">
+          Transparent prices for custom full and partial dentures at our Hennur clinic. The ₹600 new-patient consultation includes a digital X-ray to check the gums and remaining teeth.
+        </p>
+      </div>
+
+      <!-- Mobile Card Stack (No sideways scrolling on 360px screens) -->
+      <div class="block sm:hidden space-y-3">
+        {denturePriceList.map((item) => (
+          <div class="p-4 rounded-2xl border border-japandi-clay/50 bg-japandi-sand/35 space-y-1">
+            <div class="font-medium text-japandi-charcoal text-sm">{item.name}</div>
+            <div class="text-sm font-semibold text-japandi-moss">{item.price}</div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Desktop Table -->
+      <div class="hidden sm:block overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-sand/35">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-japandi-clay/40 bg-japandi-sand/80">
+              <th class="py-4 px-6 font-serif font-medium text-japandi-charcoal">Denture type</th>
+              <th class="py-4 px-6 font-serif font-medium text-japandi-moss">Price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-japandi-clay/20 text-japandi-charcoal font-light">
+            {denturePriceList.map((item) => (
+              <tr class="hover:bg-japandi-sand/40 transition-colors">
+                <td class="py-4 px-6 font-medium text-japandi-charcoal">{item.name}</td>
+                <td class="py-4 px-6 font-semibold text-japandi-moss">{item.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pt-2 text-sm">
+        <a href="/blog/dentures-cost-bangalore" class="text-japandi-moss hover:underline font-medium inline-flex items-center gap-1">
+          Read the cost guide &rarr;
+        </a>
       </div>
     </div>
   </section>
