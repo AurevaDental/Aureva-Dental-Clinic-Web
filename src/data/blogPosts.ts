@@ -589,6 +589,8 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Traditional Metal Braces", "₹30,000 – ₹45,000", "Teenagers, school students, and budget-conscious patients with complex bite issues"],
             ["Aesthetic Ceramic Braces", "₹45,000 – ₹80,000", "Patients wanting lower visibility with fixed bracket reliability"],
             ["Self-Ligating (Damon) Braces", "₹60,000 – ₹80,000", "Reduced friction brackets that require fewer adjustments and shorter chair time"],
+            ["Lingual orthodontics (braces fitted behind the teeth)", "—", "Patients seeking fixed braces fitted behind the teeth for discreet orthodontic care"],
+            ["Lingual retainers", "—", "Custom-bonded retention wires fitted behind the teeth to maintain alignment"],
             ["Certified Indian Aligner Systems", "₹80,000 – ₹1,40,000", "Working professionals and adults with mild-to-moderate crowding seeking value"],
             ["Global Aligner Systems (Invisalign)", "₹1,50,000 – ₹2,50,000+", "Complex full-arch malocclusions requiring patented SmartTrack engineering"]
           ]

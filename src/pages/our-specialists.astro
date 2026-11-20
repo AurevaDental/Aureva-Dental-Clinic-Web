@@ -1,0 +1,223 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { generateBreadcrumbSchema } from '../utils/seoSchemas';
+import { CANONICAL_PRICES } from '../data/prices';
+
+const pageTitle = "Dental Specialists in Hennur Bande | Aureva Dental";
+const pageDescription = "Visiting MDS specialists in all 7 dental departments at one Hennur Bande clinic. Open daily till 9 PM, Sundays too. ₹600 consult incl. X-ray.";
+const canonicalUrl = "https://aurevadental.com/our-specialists";
+const phoneCallUrl = "tel:+917349701002";
+const whatsappUrl = "https://wa.me/917349701002?text=Hello%20Aureva%20Dental%2C%20I%20would%20like%20to%20consult%20with%20a%20specialist.";
+
+const breadcrumbs = [
+  { name: "Home", url: "https://aurevadental.com/" },
+  { name: "Our Specialists", url: canonicalUrl }
+];
+
+const breadcrumbSchema = JSON.stringify(generateBreadcrumbSchema(breadcrumbs));
+
+const seoProps = {
+  title: pageTitle,
+  description: pageDescription,
+  canonical: canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: canonicalUrl,
+  schemaMarkup: [breadcrumbSchema]
+};
+
+const departments = [
+  {
+    name: "Endodontics (Conservative Dentistry)",
+    handles: "Handles root canals, re-treatment, and fillings.",
+    links: [
+      { name: "Root canal page", url: "/root-canal-treatment-hennur" }
+    ]
+  },
+  {
+    name: "Prosthodontics",
+    handles: "Handles crowns, bridges, dentures, and implant-supported teeth.",
+    links: [
+      { name: "Crowns", url: "/dental-crowns-hennur" },
+      { name: "Dentures", url: "/treatments/dentures" },
+      { name: "Implants", url: "/treatments/dental-implants" }
+    ]
+  },
+  {
+    name: "Periodontics",
+    handles: "Handles gum disease, deep scaling, and gum treatment around implants.",
+    links: [
+      { name: "Gum treatment", url: "/gum-treatment-hennur" },
+      { name: "Scaling", url: "/treatments/scaling-and-polishing" }
+    ]
+  },
+  {
+    name: "Oral and Maxillofacial Surgery",
+    handles: "Handles wisdom teeth, extractions, and implant surgery.",
+    links: [
+      { name: "Wisdom tooth", url: "/wisdom-tooth-removal-hennur" },
+      { name: "Extraction", url: "/treatments/tooth-extraction" },
+      { name: "Implants", url: "/treatments/dental-implants" }
+    ]
+  },
+  {
+    name: "Orthodontics",
+    handles: "Handles braces, clear aligners, lingual orthodontics and lingual retainers.",
+    links: [
+      { name: "Braces", url: "/treatments/clear-aligners" },
+      { name: "Aligners", url: "/treatments/clear-aligners" }
+    ]
+  },
+  {
+    name: "Paediatric Dentistry",
+    handles: "Handles children's check-ups, fluoride, sealants, fillings and pulp treatment.",
+    links: [
+      { name: "Kids dentistry page", url: "/treatments/pediatric-dentistry" }
+    ]
+  },
+  {
+    name: "Oral Medicine and Radiology",
+    handles: "Handles digital X-ray diagnosis, mouth ulcers and patches that don't heal, jaw and face pain, and oral screening for tobacco users.",
+    links: [],
+    whatsappButton: true,
+    whatsappUrl: "https://wa.me/917349701002?text=Hello%20Aureva%20Dental%2C%20I%20would%20like%20to%20book%20a%20consultation%20for%20Oral%20Medicine%20and%20Radiology."
+  }
+];
+---
+
+<Layout {...seoProps}>
+  <!-- Breadcrumb Navigation -->
+  <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto flex items-center gap-2">
+      <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-japandi-charcoal font-medium">Our Specialists</span>
+    </div>
+  </nav>
+
+  <!-- Hero Header Section -->
+  <section class="py-16 md:py-24 px-6 lg:px-24 bg-japandi-sand/20 border-b border-japandi-clay/30">
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-japandi-clay bg-japandi-sand/75 text-[11px] md:text-xs font-semibold text-japandi-moss tracking-wider">
+        <span class="w-1.5 h-1.5 rounded-full bg-japandi-moss shrink-0"></span>
+        <span>Visiting MDS Specialists • Open Daily till 9 PM</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-japandi-charcoal font-medium tracking-tight [line-height:1.2]">
+        Every dental specialist, one clinic in Hennur Bande
+      </h1>
+
+      <p class="text-base sm:text-lg text-japandi-earth font-light [line-height:1.625] max-w-3xl mx-auto">
+        Aureva Dental brings visiting MDS specialists from every dental department to one clinic in Hennur Bande, open every day until 9 PM, including Sundays. Your first visit is a {CANONICAL_PRICES.consultation} consultation that includes a digital X-ray and stays valid for 6 months, and the right specialist is booked if you need one.
+      </p>
+
+      <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+        <a 
+          href={phoneCallUrl}
+          class="px-6 py-3 rounded-full border border-japandi-moss text-japandi-moss text-xs font-semibold uppercase tracking-wider hover:bg-japandi-moss/10 transition-colors"
+        >
+          Call: +91 73497 01002
+        </a>
+        <a 
+          href={whatsappUrl}
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="px-6 py-3 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold uppercase tracking-wider hover:bg-japandi-charcoal transition-colors shadow-sm"
+        >
+          Book on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seven Department Cards Section -->
+  <section class="py-16 md:py-24 px-6 lg:px-24 bg-transparent">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {departments.map((dept, index) => (
+          <div class="bg-japandi-cream/90 border border-japandi-clay/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-md transition-all">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest">
+                  Department 0{index + 1}
+                </span>
+                <span class="w-2 h-2 rounded-full bg-japandi-moss/50"></span>
+              </div>
+              <h2 class="text-xl font-serif text-japandi-charcoal font-medium">
+                {dept.name}
+              </h2>
+              <p class="text-xs sm:text-sm text-japandi-earth font-light [line-height:1.625]">
+                {dept.handles}
+              </p>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-japandi-clay/20">
+              {dept.links && dept.links.length > 0 && (
+                <div class="flex flex-wrap gap-2">
+                  {dept.links.map((link) => (
+                    <a 
+                      href={link.url}
+                      class="inline-flex items-center gap-1 text-xs font-medium text-japandi-moss hover:text-japandi-charcoal transition-colors py-1 px-2.5 rounded-lg bg-japandi-sand/50 hover:bg-japandi-sand"
+                    >
+                      <span>{link.name}</span>
+                      <span aria-hidden="true">&rarr;</span>
+                    </a>
+                  ))}
+                </div>
+              )}
+
+              {dept.whatsappButton && (
+                <a 
+                  href={dept.whatsappUrl}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 py-2.5 px-4 rounded-full bg-emerald-600 text-white text-xs font-semibold hover:bg-emerald-700 transition-colors shadow-sm"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-3.5 h-3.5">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.57 4.187 1.564 5.945l-1.664 6.083 6.223-1.632c1.7 1.002 3.69 1.574 5.82 1.574 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  <span>Book on WhatsApp</span>
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Mandatory Single Line Under Cards -->
+      <div class="text-center pt-4">
+        <p class="text-base sm:text-lg font-serif text-japandi-charcoal font-medium">
+          Every treatment starts with a written plan and the price, before any work begins.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Block Section -->
+  <section class="py-16 md:py-20 px-6 lg:px-24 bg-japandi-sand/30 border-t border-japandi-clay/30 text-center">
+    <div class="max-w-3xl mx-auto space-y-6">
+      <h3 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+        Consult with the Right Specialist in Hennur Bande
+      </h3>
+      <p class="text-xs sm:text-sm text-japandi-earth font-light [line-height:1.625] max-w-xl mx-auto">
+        Visiting MDS consultants across all dental departments, available every day until 9 PM including Sundays. Digital X-ray included in your first consultation.
+      </p>
+      <div class="pt-3 flex flex-wrap items-center justify-center gap-4">
+        <a 
+          href={phoneCallUrl}
+          class="px-6 py-3 rounded-full border border-japandi-moss text-japandi-moss text-xs font-semibold uppercase tracking-wider hover:bg-japandi-moss/10 transition-colors"
+        >
+          Call: +91 73497 01002
+        </a>
+        <a 
+          href={whatsappUrl}
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="px-6 py-3 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold uppercase tracking-wider hover:bg-japandi-charcoal transition-colors shadow-sm"
+        >
+          Book on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

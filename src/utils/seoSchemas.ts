@@ -301,12 +301,13 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
     ],
     "medicalSpecialty": [
       "Dentistry",
-      "CosmeticDentistry",
-      "Orthodontics",
       "Endodontics",
-      "PediatricDentistry",
       "Prosthodontics",
-      "OralSurgery"
+      "Periodontics",
+      "OralSurgery",
+      "Orthodontics",
+      "PediatricDentistry",
+      "OralMedicineAndRadiology"
     ],
     "availableService": [
       {
