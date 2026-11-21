@@ -148,6 +148,7 @@ export const CANONICAL_PRICES = {
 
   // Cosmetic & Whitening
   whitening_laser: formatPriceRange(8000, 15000),
+  whitening_in_clinic: formatPriceRange(8000, 15000),
   whitening_trays: formatPriceRange(5000, 9000),
   whitening_combo: formatPriceRange(12000, 18000),
   whitening_otc: formatPriceRange(500, 2500),

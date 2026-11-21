@@ -182,7 +182,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedTreatmentName: "Root Canal Treatment in Hennur",
     introParagraphs: [
       "If you've been told you need a root canal, the first two questions are usually \"how much?\" and \"do I really need it?\" This guide answers the first one with our actual prices, and explains what changes the cost, so you can plan before you visit.",
-      `Quick answer: at Aureva Dental in Hennur, root canal treatment costs ${formatPriceRange(PRICE_VALUES.rct_anterior[0], PRICE_VALUES.rct_molar[1]).replace(' – ', ' to ')} per tooth, depending on which tooth it is. Most teeth also need a crown afterwards, which is priced separately. The ${CANONICAL_PRICES.consultation_general} new-patient consultation includes a digital X-ray and is valid for 6 months.`
+      `Quick answer: at Aureva Dental in Hennur, root canal treatment costs ${formatPriceRange(PRICE_VALUES.rct_anterior[0], PRICE_VALUES.rct_molar[1]).replace(' – ', ' to ')} per tooth, depending on which tooth it is. Most teeth also need a crown afterwards, which is priced separately. The ${CANONICAL_PRICES.consultation} new-patient consultation includes a digital X-ray and is valid for 6 months.`
     ],
     sections: [
       {
@@ -197,7 +197,7 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Premolar", CANONICAL_PRICES.rct_premolar],
             ["Molar (back chewing tooth)", CANONICAL_PRICES.rct_molar],
             ["Re-root canal (redoing an old one)", CANONICAL_PRICES.rct_re_treatment],
-            ["New-patient consultation with digital X-ray", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`]
+            ["New-patient consultation with digital X-ray", `${CANONICAL_PRICES.consultation} (valid 6 months)`]
           ]
         }
       },
@@ -220,16 +220,16 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "What the total usually comes to",
         paragraphs: [
           "Add the root canal and the crown. Examples using our price ranges:",
-          `Add the ${CANONICAL_PRICES.consultation_general} consultation on your first visit. You get a written quote after the X-ray, before any treatment starts.`
+          `Add the ${CANONICAL_PRICES.consultation} consultation on your first visit. You get a written quote after the X-ray, before any treatment starts.`
         ],
         table: {
           headers: ["Tooth", "Root canal + crown", "Total range"],
           rows: [
-            ["Molar", "+ PFM crown", CALCULATED_TOTALS.rct_molar_pfm],
-            ["Molar", "+ zirconia crown", CALCULATED_TOTALS.rct_molar_zirconia],
-            ["Premolar", "+ PFM crown", CALCULATED_TOTALS.rct_premolar_pfm],
-            ["Premolar", "+ E-max crown", CALCULATED_TOTALS.rct_premolar_emax],
-            ["Front tooth", "+ ceramic crown", CALCULATED_TOTALS.rct_front_ceramic]
+            ["Molar", "+ PFM crown", CALCULATED_TOTALS.molar_pfm],
+            ["Molar", "+ zirconia crown", CALCULATED_TOTALS.molar_zirconia],
+            ["Premolar", "+ PFM crown", CALCULATED_TOTALS.premolar_pfm],
+            ["Premolar", "+ E-max crown", CALCULATED_TOTALS.premolar_emax],
+            ["Front tooth", "+ ceramic crown", CALCULATED_TOTALS.front_ceramic]
           ]
         }
       },
@@ -1126,7 +1126,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedTreatmentName: "Cosmetic Dentistry & Bonding",
     introParagraphs: [
       "A chipped front tooth is usually more upsetting than painful. The good news is that most chips can be repaired, and small ones often in a single visit. Here's what to do right away, the options, and what each costs at our Hennur clinic.",
-      `Quick answer: a small to medium chip is usually repaired with composite bonding at ${CANONICAL_PRICES.composite_bonding}. Bigger breaks may need a veneer (${CANONICAL_PRICES.veneers_porcelain}) or a crown (${formatPriceRange(PRICE_VALUES.crown_pfm[0], PRICE_VALUES.crown_zirconia[1])} depending on material). If the break reaches the nerve, a root canal comes first.`
+      `Quick answer: a small to medium chip is usually repaired with composite bonding at ${CANONICAL_PRICES.composite_edge_bonding}. Bigger breaks may need a veneer (${CANONICAL_PRICES.veneers_porcelain}) or a crown (${formatPriceRange(PRICE_VALUES.crown_pfm[0], PRICE_VALUES.crown_zirconia[1])} depending on material). If the break reaches the nerve, a root canal comes first.`
     ],
     sections: [
       {
@@ -1154,12 +1154,12 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Repair options and prices",
         paragraphs: [
-          `The ${CANONICAL_PRICES.consultation_general} new-patient consultation includes a digital X-ray, to check whether the root or nerve is affected. It is valid for 6 months.`
+          `The ${CANONICAL_PRICES.consultation} new-patient consultation includes a digital X-ray, to check whether the root or nerve is affected. It is valid for 6 months.`
         ],
         table: {
           headers: ["Option", "Suited to", "Visits", "Price at Aureva Dental"],
           rows: [
-            ["Composite bonding", "Small to medium chips, broken corners", "Usually 1", CANONICAL_PRICES.composite_bonding],
+            ["Composite bonding", "Small to medium chips, broken corners", "Usually 1", CANONICAL_PRICES.composite_edge_bonding],
             ["Porcelain veneer", "Larger chips, or when several front teeth need matching", "Usually 2", CANONICAL_PRICES.veneers_porcelain],
             ["PFM crown", "Large breaks, mostly back teeth", "Usually 2", CANONICAL_PRICES.crown_pfm],
             ["Ceramic crown", "Large breaks on visible teeth", "Usually 2", CANONICAL_PRICES.crown_ceramic],
@@ -1189,7 +1189,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         question: "How much does it cost to fix a chipped front tooth in Bangalore?",
-        answer: `At Aureva Dental, bonding costs ${CANONICAL_PRICES.composite_bonding}, veneers ${CANONICAL_PRICES.veneers_porcelain}, and crowns ${formatPriceRange(PRICE_VALUES.crown_pfm[0], PRICE_VALUES.crown_zirconia[1])} depending on the material.`
+        answer: `At Aureva Dental, bonding costs ${CANONICAL_PRICES.composite_edge_bonding}, veneers ${CANONICAL_PRICES.veneers_porcelain}, and crowns ${formatPriceRange(PRICE_VALUES.crown_pfm[0], PRICE_VALUES.crown_zirconia[1])} depending on the material.`
       },
       {
         question: "Can a chipped tooth heal on its own?",
@@ -1729,7 +1729,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Crown prices at Aureva Dental",
         paragraphs: [
-          `Bridges (to replace a missing tooth) are priced per unit at the same rates as the crown material you choose. A three-unit PFM bridge, for example, is 3 × ${CANONICAL_PRICES.crown_pfm}, which comes to ${CALCULATED_TOTALS.bridge_3unit_pfm}.`
+          `Bridges (to replace a missing tooth) are priced per unit at the same rates as the crown material you choose. A three-unit PFM bridge, for example, is 3 × ${CANONICAL_PRICES.crown_pfm}, which comes to ${CALCULATED_TOTALS.bridge_3_unit_pfm}.`
         ],
         table: {
           headers: ["Crown", "Price per tooth", "Looks", "Typically used for"],
@@ -1738,14 +1738,14 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Ceramic (metal-free)", CANONICAL_PRICES.crown_ceramic, "Natural, no metal line", "Visible teeth"],
             ["Zirconia", CANONICAL_PRICES.crown_zirconia, "Natural, metal-free, very strong", "Back teeth that take heavy chewing"],
             ["E-max", CANONICAL_PRICES.crown_emax, "Very natural translucency, close to enamel", "Front teeth and premolars"],
-            ["New-patient consultation + digital X-ray", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`, "", ""]
+            ["New-patient consultation + digital X-ray", `${CANONICAL_PRICES.consultation} (valid 6 months)`, "", ""]
           ]
         }
       },
       {
         heading: "When do you need a crown?",
         paragraphs: [
-          `If only a small part of the tooth is damaged, a filling (${CANONICAL_PRICES.filling_composite}) or bonding (${CANONICAL_PRICES.composite_bonding}) may be enough. Your dentist will tell you honestly if you don't need a crown.`
+          `If only a small part of the tooth is damaged, a filling (${CANONICAL_PRICES.tooth_filling}) or bonding (${CANONICAL_PRICES.composite_edge_bonding}) may be enough. Your dentist will tell you honestly if you don't need a crown.`
         ],
         bulletPoints: [
           "After a root canal.",
@@ -1830,7 +1830,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedTreatmentName: "Kids Dentistry",
     introParagraphs: [
       "Many parents in Bengaluru take their child to a dentist for the first time only when there's already pain. A study of children in Bengaluru found the average first dental visit happened at about 8 years of age, most commonly at 6, and usually because of pain or decay.¹ By then, problems that could have been prevented are already there.",
-      `Quick answer: book your child's first check-up by their first birthday, or within 6 months of the first tooth appearing, whichever comes first.² A kids' check-up at Aureva Dental is ${CANONICAL_PRICES.consultation_general} and stays valid for 6 months.`
+      `Quick answer: book your child's first check-up by their first birthday, or within 6 months of the first tooth appearing, whichever comes first.² A kids' check-up at Aureva Dental is ${CANONICAL_PRICES.consultation} and stays valid for 6 months.`
     ],
     sections: [
       {
@@ -1886,11 +1886,11 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Treatment", "Price"],
           rows: [
-            ["Kids' dental check-up", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`],
+            ["Kids' dental check-up", `${CANONICAL_PRICES.consultation} (valid 6 months)`],
             ["Fluoride application", CANONICAL_PRICES.kids_fluoride],
             ["Pit and fissure sealant", CANONICAL_PRICES.kids_sealant],
             ["Kids' tooth filling", CANONICAL_PRICES.kids_filling],
-            ["Baby tooth pulpectomy (root canal for a baby tooth)", CANONICAL_PRICES.kids_pulpectomy]
+            ["Baby tooth pulpectomy (root canal for a baby tooth)", CANONICAL_PRICES.baby_tooth_pulpectomy]
           ]
         }
       },
@@ -1917,7 +1917,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         question: "How much is a kids' dental check-up?",
-        answer: `${CANONICAL_PRICES.consultation_general} at Aureva Dental, valid for 6 months.`
+        answer: `${CANONICAL_PRICES.consultation} at Aureva Dental, valid for 6 months.`
       },
       {
         question: "My child is 4 and has never been. Is that too late?",
@@ -1963,7 +1963,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedTreatmentName: "Scaling & Polishing",
     introParagraphs: [
       "Brushing removes soft plaque. It can't remove tartar, the hard, yellow-brown deposit that builds up along the gums and between the teeth. Only a professional cleaning removes it. Here's what it costs at our Hennur clinic, what happens, and the common myths.",
-      `Quick answer: routine scaling and polishing costs ${CANONICAL_PRICES.scaling_polishing}. Deep scaling for gum disease costs ${CANONICAL_PRICES.scaling_deep}. On your first visit there is also the ${CANONICAL_PRICES.consultation_general} new-patient consultation with a digital X-ray, valid for 6 months.`
+      `Quick answer: routine scaling and polishing costs ${CANONICAL_PRICES.scaling_routine}. Deep scaling for gum disease costs ${CANONICAL_PRICES.scaling_deep}. On your first visit there is also the ${CANONICAL_PRICES.consultation} new-patient consultation with a digital X-ray, valid for 6 months.`
     ],
     sections: [
       {
@@ -1974,8 +1974,8 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Treatment", "What it is", "Price"],
           rows: [
-            ["New-patient consultation + digital X-ray", "Full check-up before treatment", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`],
-            ["Scaling and polishing", "Removes tartar, plaque and surface stains from all teeth", CANONICAL_PRICES.scaling_polishing],
+            ["New-patient consultation + digital X-ray", "Full check-up before treatment", `${CANONICAL_PRICES.consultation} (valid 6 months)`],
+            ["Scaling and polishing", "Removes tartar, plaque and surface stains from all teeth", CANONICAL_PRICES.scaling_routine],
             ["Deep scaling / root planing", "Cleans below the gum line for heavy tartar, gum pockets and bleeding gums", CANONICAL_PRICES.scaling_deep]
           ]
         }
@@ -2018,14 +2018,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Scaling vs whitening",
         paragraphs: [
-          `Scaling removes surface stains and tartar, so teeth look cleaner and brighter. It does not change the natural shade of the tooth. Whitening (${CANONICAL_PRICES.teeth_whitening}) is a separate cosmetic treatment that lightens the tooth colour, and it's usually done after a cleaning.`
+          `Scaling removes surface stains and tartar, so teeth look cleaner and brighter. It does not change the natural shade of the tooth. Whitening (${CANONICAL_PRICES.whitening_in_clinic}) is a separate cosmetic treatment that lightens the tooth colour, and it's usually done after a cleaning.`
         ]
       }
     ],
     faqs: [
       {
         question: "How much does teeth cleaning cost in Bangalore?",
-        answer: `At Aureva Dental, scaling and polishing costs ${CANONICAL_PRICES.scaling_polishing}. Deep scaling for gum disease costs ${CANONICAL_PRICES.scaling_deep}. The ${CANONICAL_PRICES.consultation_general} new-patient consultation with X-ray is separate and valid for 6 months.`
+        answer: `At Aureva Dental, scaling and polishing costs ${CANONICAL_PRICES.scaling_routine}. Deep scaling for gum disease costs ${CANONICAL_PRICES.scaling_deep}. The ${CANONICAL_PRICES.consultation} new-patient consultation with X-ray is separate and valid for 6 months.`
       },
       {
         question: "Does scaling hurt?",
@@ -2067,7 +2067,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedTreatmentName: "Dentures",
     introParagraphs: [
       "Dentures are removable replacement teeth. They're an affordable way to replace several missing teeth, or all of them, and to get back to chewing and smiling comfortably. Here's what's available at our Hennur clinic and what each costs.",
-      `Quick answer: at Aureva Dental, complete dentures cost ${CANONICAL_PRICES.denture_complete_single_arch} per arch (${CANONICAL_PRICES.denture_complete_both_arches} for both). Partial dentures cost ${CALCULATED_TOTALS.denture_partial_overall}, depending on the type and how many teeth they replace. The ${CANONICAL_PRICES.consultation_general} new-patient consultation includes a digital X-ray to check the gums and remaining teeth.`
+      `Quick answer: at Aureva Dental, complete dentures cost ${CANONICAL_PRICES.denture_complete_single_arch} per arch (${CANONICAL_PRICES.denture_complete_both_arches} for both). Partial dentures cost ${CALCULATED_TOTALS.partial_dentures_overall}, depending on the type and how many teeth they replace. The ${CANONICAL_PRICES.consultation} new-patient consultation includes a digital X-ray to check the gums and remaining teeth.`
     ],
     sections: [
       {
@@ -2075,7 +2075,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Complete dentures replace all the teeth in the upper or lower jaw. They rest on the gums. Upper dentures usually stay in place well through suction against the palate. Lower dentures move more, because the tongue and cheeks push on them.",
           "Partial dentures replace some missing teeth and clip onto your remaining natural teeth.",
-          `Implant-supported overdentures clip onto two or more dental implants. They are much more stable than a regular lower denture. The overdenture costs ${CANONICAL_PRICES.denture_implant_supported_overdenture}, and the implants are priced separately (${CANONICAL_PRICES.implants_per_tooth}).`
+          `Implant-supported overdentures clip onto two or more dental implants. They are much more stable than a regular lower denture. The overdenture costs ${CANONICAL_PRICES.denture_implant_supported_overdenture}, and the implants are priced separately (${CANONICAL_PRICES.implant_single_fixture}).`
         ],
         bulletPoints: [
           "Acrylic partials are the economical option.",
@@ -2089,7 +2089,7 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Denture type", "Price"],
           rows: [
-            ["New-patient consultation + digital X-ray", `${CANONICAL_PRICES.consultation_general} (valid 6 months)`],
+            ["New-patient consultation + digital X-ray", `${CANONICAL_PRICES.consultation} (valid 6 months)`],
             ["Complete denture, one arch (upper or lower)", CANONICAL_PRICES.denture_complete_single_arch],
             ["Complete dentures, both arches", CANONICAL_PRICES.denture_complete_both_arches],
             ["Partial denture, acrylic", CANONICAL_PRICES.denture_partial_acrylic_table],
@@ -2136,7 +2136,7 @@ export const BLOG_POSTS: BlogPost[] = [
         bulletPoints: [
           "Dentures: the lower-cost option, and removable.",
           `Bridge: fixed, using the neighbouring teeth for support. Priced per unit at our crown rates, ${formatPriceRange(PRICE_VALUES.crown_pfm[0], PRICE_VALUES.crown_zirconia[1])} per unit depending on material.`,
-          `Implants: fixed, and they don't involve the neighbouring teeth. ${CANONICAL_PRICES.implants_per_tooth}, or ${CANONICAL_PRICES.implants_with_crown} with the crown.`
+          `Implants: fixed, and they don't involve the neighbouring teeth. ${CANONICAL_PRICES.implant_single_fixture}, or ${CANONICAL_PRICES.implant_with_crown} with the crown.`
         ]
       },
       {
