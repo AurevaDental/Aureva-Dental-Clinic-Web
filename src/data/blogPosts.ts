@@ -25,8 +25,8 @@ export interface BlogPost {
   headline: string;
   metaDescription: string;
   author: string;
-  authorRole: string;
-  authorCredentials: string;
+  authorRole?: string;
+  authorCredentials?: string;
   date: string;
   datePublished: string;
   dateModified: string;
@@ -52,9 +52,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Clear Aligners Cost in Bangalore | Aureva Dental",
     headline: "Clear Aligners Cost in Bangalore: The Complete 2026 Guide & What to Expect",
     metaDescription: "Transparent breakdown of clear aligners cost in Bangalore (₹80,000 to ₹2,50,000), invisible braces brands, 3D scans & EMI options at Aureva Dental.",
-    author: "Dr. Shweta Singh",
-    authorRole: "Clinical Director & Dental Surgeon",
-    authorCredentials: "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+    author: "Aureva Dental",
     date: "September 2026",
     datePublished: "2026-09-01",
     dateModified: "2026-09-23",
@@ -108,7 +106,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "We have standardized our orthodontic workflow to deliver complete clinical predictability:",
           "Step 1: Consultation & 3D Digital Scan — Intraoral examination and low-radiation digital RVG diagnostics to evaluate periodontal health and root structure.",
-          "Step 2: 3D Biomechanical Simulation — Custom computerized tooth movement plan created by Dr. Shweta Singh, showing exact tooth trajectory stage by stage.",
+          "Step 2: 3D Biomechanical Simulation — Custom tooth movement plan created by your orthodontist, showing exact tooth trajectory stage by stage.",
           "Step 3: Tray Fabrication & Delivery — Custom medical-grade polyurethane trays delivered with precision attachments placed on teeth.",
           "Step 4: Wear Protocol — Trays are worn 20 to 22 hours per day, removing them only for meals, brushing, and hot beverages. Each tray is changed every 7 to 10 days.",
           "Step 5: Retention Phase — After achieving optimal alignment, clear retainers are worn nightly to prevent relapse while bone remodels around the roots."
@@ -156,7 +154,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         question: "Why choose Aureva Dental for clear aligners in Hennur?",
-        answer: "Our clinical director Dr. Shweta Singh provides comprehensive digital smile design, personalized orthodontic oversight, and hospital-grade sterilization at our studio on Horamavu Agara Road in Hennur Bande."
+        answer: "Aureva Dental provides digital smile design, personalized orthodontic oversight, and hospital-grade sterilization at our studio on Horamavu Agara Road in Hennur Bande."
       }
     ],
     conclusion: "Investing in clear aligners is an investment in your lifelong dental health, facial balance, and self-confidence. Schedule your 3D digital scan at Aureva Dental in Hennur to start your journey.",
@@ -168,10 +166,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Root Canal Treatment Cost in Bangalore (2026) | Aureva Dental",
     headline: "Root Canal Treatment Cost in Bangalore: 2026 Prices at Our Hennur Clinic",
     metaDescription: "Root canal cost in Bangalore: ₹4,000–₹10,000 per tooth at our Hennur clinic, by tooth type. Crown prices, total cost examples and what affects the price.",
-    author: "Dr. Shweta",
-    authorRole: "Dental Surgeon",
-    authorCredentials: "Aureva Dental, Hennur",
-    reviewedBy: "Dr. Shweta",
+    author: "Aureva Dental",
     date: "November 2026",
     datePublished: "2026-09-10",
     dateModified: "2026-11-20",
@@ -306,9 +301,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Dental Implant Cost in Bangalore | Aureva Dental",
     headline: "Dental Implant Cost in Bangalore (2026 Guide): Titanium vs Zirconia Pricing",
     metaDescription: "Detailed dental implant cost in Bangalore (₹45,000 to ₹80,000), bone grafting, full-mouth implants, established implant brands & transparent pricing in Hennur.",
-    author: "Dr. Shweta Singh",
-    authorRole: "Clinical Director & Dental Surgeon",
-    authorCredentials: "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+    author: "Aureva Dental",
     date: "September 2026",
     datePublished: "2026-09-12",
     dateModified: "2026-09-23",
@@ -395,7 +388,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         question: "Is dental implant surgery painful?",
-        answer: "Dental implant surgery is surprisingly gentle and typically involves less post-operative discomfort than a standard tooth extraction. The bone itself has no nerve endings. Under computerized local anesthesia, the procedure is completely comfortable."
+        answer: "Dental implant surgery is surprisingly gentle and typically involves less post-operative discomfort than a standard tooth extraction. The bone itself has no nerve endings. Under local anaesthesia, you stay numb throughout the procedure."
       },
       {
         question: "How long does the entire dental implant process take?",
@@ -423,10 +416,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Tooth Extraction Cost in Bangalore | Aureva Dental",
     headline: "Tooth Extraction Cost in Bangalore: Simple vs Surgical & Wisdom Teeth (2026)",
     metaDescription: "Transparent tooth extraction cost in Bangalore (₹1,500 to ₹10,000), simple vs surgical removal, wisdom tooth care & comfortable oral surgery at Aureva Dental.",
-    author: "Aureva Dental team",
-    authorRole: "Clinical Team",
-    authorCredentials: "Aureva Dental Team — Editorial & Clinical Board",
-    reviewedBy: "Dr. Shweta",
+    author: "Aureva Dental",
     date: "September 2026",
     datePublished: "2026-09-15",
     dateModified: "2026-11-20",
@@ -438,7 +428,7 @@ export const BLOG_POSTS: BlogPost[] = [
     introParagraphs: [
       "At Aureva Dental, our fundamental clinical philosophy is conservative tooth preservation. We exhaust every available restorative modality—including root canal treatment, gum treatment, and protective crowns—to keep your natural tooth healthy in your mouth. However, when a tooth suffers severe vertical root fractures, catastrophic subgingival decay, advanced periodontitis bone loss, or painful wisdom tooth impaction, extraction becomes a necessary clinical step.",
       "Many patients facing tooth extraction are anxious about surgical pain, recovery timelines, and procedural costs across Bangalore dental clinics.",
-      "In this guide, clinically reviewed by Dr. Shweta, we provide a transparent price breakdown for simple and surgical extractions, explain atraumatic socket-preservation protocols, and provide practical instructions for a speedy, complications-free recovery."
+      "In this guide we provide a transparent price breakdown for simple and surgical extractions, explain atraumatic socket-preservation protocols, and provide practical instructions for a speedy, complications-free recovery."
     ],
     sections: [
       {
@@ -512,7 +502,7 @@ export const BLOG_POSTS: BlogPost[] = [
     faqs: [
       {
         question: "Is tooth extraction painful at Aureva Dental?",
-        answer: "No. Our dental surgeons utilize profound computerized local anesthesia and topical numbing agents. You will feel mechanical pressure as the tooth is elevated, and the area is numbed before treatment so you feel pressure but not sharp pain."
+        answer: "No. Our dental surgeons utilize local anaesthesia and topical numbing agents. You will feel mechanical pressure as the tooth is elevated, and the area is numbed before treatment so you feel pressure but not sharp pain."
       },
       {
         question: "How long does it take for an extraction socket to heal?",
@@ -544,9 +534,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Braces vs Clear Aligners Guide | Aureva Dental",
     headline: "Braces vs Clear Aligners: Comprehensive Comparison, Costs & Results (2026)",
     metaDescription: "Braces vs clear aligners compared: cost (₹30,000 vs ₹80,000+), treatment time, comfort, aesthetics & orthodontic effectiveness at Aureva Dental in Hennur.",
-    author: "Dr. Shweta Singh",
-    authorRole: "Clinical Director & Dental Surgeon",
-    authorCredentials: "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+    author: "Aureva Dental",
     date: "September 2026",
     datePublished: "2026-09-18",
     dateModified: "2026-09-23",
@@ -558,7 +546,7 @@ export const BLOG_POSTS: BlogPost[] = [
     introParagraphs: [
       "Crooked, crowded, or spaced teeth affect far more than your smile's visual harmony. Malaligned teeth are notoriously difficult to clean with regular brushing and flossing, leading to premature enamel wear, plaque accumulation, gum inflammation, and chronic temporomandibular joint (TMJ) discomfort.",
       "If you have decided to straighten your smile, you face a major clinical decision: Should you choose traditional bonded braces or modern removable clear aligners?",
-      "In this detailed orthodontic comparison from Aureva Dental in Hennur, Bangalore, Dr. Shweta Singh analyzes the scientific pros and cons, cost differences, treatment durations, and daily lifestyle considerations of braces versus invisible aligners to help you make an informed choice."
+      "In this detailed orthodontic comparison from Aureva Dental in Hennur, Bangalore, we compare the pros and cons, cost differences, treatment durations, and daily lifestyle considerations of braces versus invisible aligners to help you make an informed choice."
     ],
     sections: [
       {
@@ -665,9 +653,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Teeth Whitening Cost in Bangalore | Aureva Dental",
     headline: "Teeth Whitening Cost in Bangalore (2026): In-Office Laser vs Home Trays",
     metaDescription: "Transparent teeth whitening cost in Bangalore (₹8,000 to ₹15,000), professional LED/Laser whitening vs home trays, safety & shade improvement in Hennur.",
-    author: "Dr. Shweta Singh",
-    authorRole: "Clinical Director & Dental Surgeon",
-    authorCredentials: "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+    author: "Aureva Dental",
     date: "September 2026",
     datePublished: "2026-09-20",
     dateModified: "2026-09-23",
@@ -679,7 +665,7 @@ export const BLOG_POSTS: BlogPost[] = [
     introParagraphs: [
       "A bright, radiant smile conveys youthfulness, health, and vitality. However, daily consumption of coffee, South Indian filter coffee, tea, red wine, turmeric-rich curries, and natural aging gradually deposits stubborn chromogen stains within the microscopic porous tubules of your tooth enamel.",
       "If you are preparing for a wedding, graduation, job interview, or simply want to refresh your personal aesthetic, professional teeth whitening is the fastest, least invasive cosmetic dental treatment available.",
-      "In this guide from Aureva Dental in Hennur, Bangalore, Dr. Shweta Singh breaks down the true cost of in-office LED/Laser whitening versus take-home trays, explains how medical-grade bleaching works safely without damaging enamel, and shares guidelines to keep your smile glowing for years."
+      "In this guide from Aureva Dental in Hennur, Bangalore, we break down the true cost of in-office LED/Laser whitening versus take-home trays, explains how medical-grade bleaching works safely without damaging enamel, and shares guidelines to keep your smile glowing for years."
     ],
     sections: [
       {
@@ -745,8 +731,7 @@ export const BLOG_POSTS: BlogPost[] = [
         bulletPoints: [
           "Peroxide oxidation targets organic chromogens without dissolving inorganic mineral enamel",
           "pH-buffered formulations maintain enamel hardness throughout the 60-minute procedure",
-          "Post-treatment remineralization restores optimal calcium-phosphate balance",
-          "Clinically supervised by Dr. Shweta Singh for maximum safety and aesthetic brilliance"
+          "Post-treatment remineralization restores optimal calcium-phosphate balance"
         ]
       }
     ],
@@ -786,9 +771,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Severe Throbbing Toothache at Night: Causes, Relief & When It's an Emergency | Aureva Dental",
   "headline": "Severe Throbbing Toothache at Night: Causes, Immediate Relief & When to See an Emergency Dentist",
   "metaDescription": "Waking up with a severe throbbing toothache at night? Understand acute irreversible pulpitis, practical night relief steps, and same-day root canal care at Aureva Dental Bangalore.",
-  "author": "Dr. Shweta Singh",
-  "authorRole": "Clinical Director & Dental Surgeon",
-  "authorCredentials": "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  "author": "Aureva Dental",
   "date": "September 2026",
   "datePublished": "2026-09-25",
   "dateModified": "2026-09-28",
@@ -888,7 +871,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "heading": "How Aureva Dental Provides Definitive Pain Relief",
       "paragraphs": [
         "Most root canal treatments at Aureva Dental are done in 1–2 sittings, designed to relieve severe tooth pain. Using high-resolution digital RVG radiography, we pinpoint the exact apical pathology in seconds.",
-        "Under computerized local anesthesia, the infected pulp tissue is gently removed using flexible nickel-titanium rotary files. The root canal system is thoroughly disinfected with ultrasonic irrigation and sealed with biocompatible gutta-percha. "
+        "Under local anaesthesia, the infected pulp tissue is gently removed using flexible nickel-titanium rotary files. The root canal system is thoroughly disinfected with ultrasonic irrigation and sealed with biocompatible gutta-percha. "
       ]
     }
   ],
@@ -919,9 +902,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Wisdom Tooth Pain Radiating to Jaw and Ear: Symptoms, Pericoronitis & Treatment | Aureva Dental",
   "headline": "Wisdom Tooth Pain Radiating to Jaw, Ear & Neck: Causes, Relief & Gentle Removal",
   "metaDescription": "Experiencing shooting wisdom tooth pain radiating to your ear and jaw? Learn why pericoronitis and impaction cause nerve pain and how gentle removal at Aureva Dental helps.",
-  "author": "Aureva Dental team",
-  "authorRole": "Clinical Team",
-  "authorCredentials": "Aureva Dental Team — Editorial & Clinical Board",
+  "author": "Aureva Dental",
   "date": "September 2026",
   "datePublished": "2026-09-26",
   "dateModified": "2026-09-28",
@@ -1028,9 +1009,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Pimple on Gum Above Tooth: Causes of Dental Fistula, Abscess & Treatment | Aureva Dental",
   "headline": "Pimple on Gum Above Tooth (Dental Fistula): What It Means, Dangers & Treatment Options",
   "metaDescription": "Noticed a small pimple, bump, or boil on your gum above a tooth? Discover what a parulis / dental fistula indicates, why popping it is dangerous, and how root canals cure it.",
-  "author": "Dr. Shweta Singh",
-  "authorRole": "Clinical Director & Dental Surgeon",
-  "authorCredentials": "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  "author": "Aureva Dental",
   "date": "September 2026",
   "datePublished": "2026-09-26",
   "dateModified": "2026-09-28",
@@ -1095,7 +1074,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       "question": "Does root canal treatment for a gum boil hurt?",
-      "answer": "Not at all. At Aureva Dental, we use gentle computerized local anesthesia to ensure complete numbness before any instrumentation. Most patients report feeling instant relief once the canal pressure is evacuated."
+      "answer": "Not at all. At Aureva Dental, we use gentle local anaesthesia to ensure complete numbness before any instrumentation. Most patients report feeling instant relief once the canal pressure is evacuated."
     },
     {
       "question": "How long does it take for the gum pimple to disappear after treatment?",
@@ -1111,10 +1090,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Chipped or Broken Front Tooth Repair Cost in Bangalore | Aureva Dental",
     headline: "Chipped or Broken Front Tooth: Repair Options and Cost in Bangalore",
     metaDescription: "Chipped front tooth repair in Bangalore: bonding ₹1,500–₹4,000 per tooth, veneers ₹8,000–₹24,000, crowns from ₹4,000. First aid and which option fits.",
-    author: "Dr. Shweta",
-    authorRole: "Dental Surgeon",
-    authorCredentials: "Aureva Dental, Hennur",
-    reviewedBy: "Dr. Shweta",
+    author: "Aureva Dental",
     date: "November 2026",
     datePublished: "2026-09-27",
     dateModified: "2026-11-20",
@@ -1219,9 +1195,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Root Canal Aftercare: Recovery Timeline, Pain Management & Diet Guide | Aureva Dental",
   "headline": "Root Canal Aftercare Guide: What to Expect, Recovery Timeline & What to Eat",
   "metaDescription": "Complete patient aftercare guide following root canal treatment (RCT). Pain management, chewing restrictions, temporary filling care & crown placement advice by Aureva Dental.",
-  "author": "Dr. Shweta Singh",
-  "authorRole": "Clinical Director & Dental Surgeon",
-  "authorCredentials": "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  "author": "Aureva Dental",
   "date": "September 2026",
   "datePublished": "2026-09-27",
   "dateModified": "2026-09-28",
@@ -1307,9 +1281,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Wisdom Tooth Extraction Aftercare: Preventing Dry Socket & Fast Healing | Aureva Dental",
   "headline": "Wisdom Tooth Extraction Aftercare: Days 1 to 7 Recovery & How to Prevent Dry Socket",
   "metaDescription": "Essential wisdom tooth removal aftercare instructions. Swelling management, bleeding control, soft food list, and vital tips to prevent dry socket by Aureva Dental.",
-  "author": "Aureva Dental team",
-  "authorRole": "Clinical Team",
-  "authorCredentials": "Aureva Dental Team — Editorial & Clinical Board",
+  "author": "Aureva Dental",
   "date": "September 2026",
   "datePublished": "2026-09-27",
   "dateModified": "2026-09-28",
@@ -1391,9 +1363,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Dental Implant Aftercare: Day-by-Day Recovery & Osseointegration Care | Aureva Dental",
   "headline": "Dental Implant Aftercare Guide: Recovery Timeline, Oral Hygiene & Long-Term Success",
   "metaDescription": "Comprehensive post-operative guide for dental implants. Swelling control, bleeding management, soft diet protocols & how to safeguard bone osseointegration by Aureva Dental.",
-  "author": "Dr. Shweta Singh",
-  "authorRole": "Clinical Director & Dental Surgeon",
-  "authorCredentials": "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  "author": "Aureva Dental",
   "date": "September 2026",
   "datePublished": "2026-09-28",
   "dateModified": "2026-09-28",
@@ -1470,9 +1440,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Teeth Cleaning & Scaling Aftercare: What to Expect, Diet & Sensitivity | Aureva Dental",
   "headline": "Teeth Cleaning & Scaling Aftercare: Sensitivity Management & Gum Care Guide",
   "metaDescription": "What to expect after ultrasonic scaling and teeth cleaning. Understanding normal sensitivity, gum healing, foods to avoid, and flossing tips by Aureva Dental Bangalore.",
-  "author": "Aureva Dental team",
-  "authorRole": "Clinical Team",
-  "authorCredentials": "Aureva Dental Team — Editorial & Clinical Board",
+  "author": "Aureva Dental",
   "date": "September 2026",
   "datePublished": "2026-09-28",
   "dateModified": "2026-09-28",
@@ -1551,9 +1519,7 @@ export const BLOG_POSTS: BlogPost[] = [
   title: "Dental Treatment Cost: India vs UK (2026 Comparison) | Aureva Dental",
   headline: "Dental Treatment Costs in India vs. the UK: An Educational Breakdown of Pricing, Materials, and Clinical Care",
   metaDescription: "An objective, educational comparison of dental treatment costs between India and the UK for implants, root canals, crowns, aligners, and extractions.",
-  author: "Dr. Shweta Singh",
-  authorRole: "Clinical Director & Dental Surgeon",
-  authorCredentials: "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  author: "Aureva Dental",
   date: "October 2026",
   datePublished: "2026-09-15",
   dateModified: "2026-10-04",
@@ -1629,9 +1595,7 @@ export const BLOG_POSTS: BlogPost[] = [
   title: "Dental Treatment Cost: India vs USA (2026 Comparison) | Aureva Dental",
   headline: "Dental Treatment Costs in India vs. the USA: An Educational Analysis of Fees, Materials & Standards of Care",
   metaDescription: "An objective, educational guide comparing dental costs between India and the United States for implants, root canals, crowns, aligners, and extractions.",
-  author: "Dr. Shweta Singh",
-  authorRole: "Clinical Director & Dental Surgeon",
-  authorCredentials: "Dr. Shweta Singh — Clinical Director, Aureva Dental (Alumna, The Oxford Dental College)",
+  author: "Aureva Dental",
   date: "October 2026",
   datePublished: "2026-09-18",
   dateModified: "2026-10-04",
@@ -1680,7 +1644,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Administrative Overhead: US dental practices employ extensive administrative staff solely to handle insurance pre-authorizations, claims processing, and denials.",
         "Facility & Lease Expenses: Rent for clinical premises in North Bangalore is significantly lower than equivalent real estate in major US metropolitan areas.",
         "Medical Education Financing: Indian dentists train under merit-based university systems without incurring massive private student debts.",
-        "Quality Medical Hardware: Low-radiation digital RVG sensors, sealed pouch autoclave sterilization, and digital dental design software adhere to rigorous clinical standards."
+        "Quality Medical Hardware: Low-radiation digital RVG sensors, autoclave sterilization, and digital dental design software adhere to rigorous clinical standards."
       ]
     }
   ],
@@ -1700,7 +1664,7 @@ export const BLOG_POSTS: BlogPost[] = [
   ],
   conclusion: "For selected dental procedures, Aureva Dental's published fees can be 70% or more below the referenced private-dental benchmarks in the UK or US. Aureva Dental's published prices are in INR. Foreign-currency conversions are illustrative and may change with exchange rates. Final treatment plans and fees are confirmed after in-person clinical assessment.",
   ctaHeadline: "Get a Complimentary Pre-Travel Assessment",
-  ctaText: "Connect with Dr. Shweta Singh via WhatsApp (+91 73497 01002). Send your X-rays or treatment plan for a provisional assessment within 24 to 48 hours."
+  ctaText: "Connect with our clinic team via WhatsApp (+91 73497 01002). Send your X-rays or treatment plan for a provisional assessment within 24 to 48 hours."
 }
 ,
   {
@@ -1708,10 +1672,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Dental Crown Cost in Bangalore (2026): PFM, Zirconia, E-max | Aureva Dental",
     headline: "Dental Crown Cost in Bangalore: Which Crown, and What It Costs",
     metaDescription: "Dental crown cost in Bangalore: PFM ₹4,000–₹6,000, ceramic ₹6,000–₹10,000, zirconia and E-max ₹10,000–₹18,000. Which crown suits which tooth.",
-    author: "Dr. Shweta",
-    authorRole: "Dental Surgeon",
-    authorCredentials: "Aureva Dental, Hennur",
-    reviewedBy: "Dr. Shweta",
+    author: "Aureva Dental",
     date: "November 2026",
     datePublished: "2026-11-20",
     dateModified: "2026-11-20",
@@ -1815,10 +1776,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Your Child's First Dental Visit: When, What Happens, Cost | Aureva Dental",
     headline: "Your Child's First Dental Visit: When to Go, What Happens, and What It Costs",
     metaDescription: "When should your child first see a dentist? By age 1. What happens at the visit, toothpaste amounts by age, and kids' check-up prices at our Hennur clinic.",
-    author: "Dr. Shweta",
-    authorRole: "Dental Surgeon",
-    authorCredentials: "Aureva Dental, Hennur",
-    reviewedBy: "Dr. Shweta",
+    author: "Aureva Dental",
     date: "November 2026",
     datePublished: "2026-11-20",
     dateModified: "2026-11-20",
@@ -1948,10 +1906,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Teeth Cleaning (Scaling) Cost in Bangalore (2026) | Aureva Dental",
     headline: "Teeth Cleaning (Scaling and Polishing) Cost in Bangalore",
     metaDescription: "Teeth cleaning cost in Bangalore: scaling and polishing ₹2,000–₹5,000, deep scaling ₹8,000–₹15,000 at our Hennur clinic. Does scaling damage teeth? Answers.",
-    author: "Dr. Shweta",
-    authorRole: "Dental Surgeon",
-    authorCredentials: "Aureva Dental, Hennur",
-    reviewedBy: "Dr. Shweta",
+    author: "Aureva Dental",
     date: "November 2026",
     datePublished: "2026-11-20",
     dateModified: "2026-11-20",
@@ -2052,10 +2007,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Dentures Cost in Bangalore (2026): Full, Partial, Flexible | Aureva Dental",
     headline: "Dentures Cost in Bangalore: Types, Prices and What to Expect",
     metaDescription: "Dentures cost in Bangalore at our Hennur clinic: complete, partial and flexible dentures explained, with prices, number of visits and getting used to them.",
-    author: "Dr. Shweta",
-    authorRole: "Dental Surgeon",
-    authorCredentials: "Aureva Dental, Hennur",
-    reviewedBy: "Dr. Shweta",
+    author: "Aureva Dental",
     date: "November 2026",
     datePublished: "2026-11-20",
     dateModified: "2026-11-20",

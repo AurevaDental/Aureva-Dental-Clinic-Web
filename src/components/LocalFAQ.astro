@@ -56,8 +56,8 @@ import { LOCAL_FAQS } from '../utils/seoSchemas';
             aria-labelledby={`faq-question-${index}`}
             class="faq-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out px-6 sm:px-8 text-xs sm:text-sm text-japandi-earth font-light leading-relaxed"
           >
-            <p class="pb-6 pt-2 border-t border-japandi-clay/25">
-              {faq.answer}
+            <p class="pb-6 pt-2 border-t border-japandi-clay/25" set:html={faq.answer}>
+              
             </p>
           </div>
         </div>

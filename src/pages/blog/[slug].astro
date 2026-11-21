@@ -91,27 +91,9 @@ const authorInitials = post.author.replace(/Dr\.?\s*/i, '').split(/\s+/).map(n =
           {post.headline}
         </h1>
 
-        <!-- Author / Reviewer Byline -->
-        <div class="flex items-center gap-4 pt-2">
-          <div class="w-12 h-12 rounded-full bg-japandi-moss/15 text-japandi-moss font-serif text-lg font-medium flex items-center justify-center shrink-0 border border-japandi-clay/60">
-            {post.reviewedBy ? 'DS' : authorInitials}
-          </div>
-          <div>
-            <div class="text-sm font-semibold text-japandi-charcoal">
-              {post.reviewedBy ? (
-                <span>Clinically reviewed by <span class="text-japandi-moss">{post.reviewedBy}</span></span>
-              ) : (
-                <span>By <span class="text-japandi-moss">{post.author}</span></span>
-              )}
-            </div>
-            <div class="text-xs text-japandi-earth font-light">
-              {post.reviewedBy ? (
-                <span>Last updated: {post.date}</span>
-              ) : (
-                <span>{post.authorRole}, Aureva Dental &bull; Last updated: {post.date}</span>
-              )}
-            </div>
-          </div>
+        <!-- Author Byline -->
+        <div class="pt-2 text-xs text-japandi-earth font-light">
+          <span>Aureva Dental &bull; Last updated: {post.date}</span>
         </div>
       </header>
 

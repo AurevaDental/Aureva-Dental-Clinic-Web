@@ -22,8 +22,8 @@ export const LOCAL_FAQS: FaqItem[] = [
     answer: "We accept all major Credit Cards, Debit Cards, UPI, and Net Banking. Patients wishing to split payments into monthly installments can seamlessly convert credit card transactions into flexible monthly EMIs directly via their bank's post-payment portal or net banking app."
   },
   {
-    question: "Who is the lead dentist at Aureva Dental Hennur?",
-    answer: "Aureva Dental was founded by Dr. Shweta Singh (Clinical Director) and Agniss Mishra (Co-founder & CEO). Dr. Shweta Singh (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Clinical Director and Founder of Aureva Dental."
+    question: "Who runs Aureva Dental?",
+    answer: "Aureva Dental is a specialist dental clinic in Hennur Bande with visiting MDS specialists in every department. Meet the team on our <a href=\"/about\">About page</a>."
   },
   {
     question: "Does Aureva Dental accept walk-ins or emergency appointments on Sundays?",
@@ -131,7 +131,7 @@ export function generateWebSiteSchema() {
   };
 }
 
-export function generateDentistSchema(config: any = {}, includeFullCatalog: boolean = false) {
+export function generateDentistSchema(config: any = {}, includeFullCatalog: boolean = false, isAboutPage: boolean = false) {
   const socialLinks = config?.social_media?.map((s: any) => s.url) || [];
   const allProfiles = [
     "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
@@ -353,58 +353,46 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
         "itemListElement": DENTAL_OFFER_CATALOG
       }
     } : {}),
-    "employee": [
+    "founder": [
       {
         "@type": "Person",
-        "name": "Dr. Shweta Singh",
-        "jobTitle": "Co-founder & Clinical Head",
-        "image": "https://aurevadental.com/assets/dr-shweta-singh.webp",
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "The Oxford Dental College, Bangalore"
-        },
-        "medicalSpecialty": [
-          "Dentistry"
-        ],
-        "description": "Dental surgeon focused on smile design, clear aligners and aesthetic restorative dentistry. Registered with the Karnataka State Dental Council.",
-        "worksFor": {
-          "@id": "https://aurevadental.com/#dentist"
-        }
+        "name": "Dr. Shweta Singh"
       },
       {
         "@type": "Person",
-        "name": "Agniss Mishra",
-        "jobTitle": "Co-founder & CEO",
-        "description": "Agniss co-founded Aureva Dental and leads the clinic's operations, patient experience and growth.",
-        "worksFor": {
-          "@id": "https://aurevadental.com/#dentist"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Dr. Pala Satya Sri",
-        "jobTitle": "Consultant Oral & Maxillofacial Surgeon",
-        "medicalSpecialty": [
-          "OralSurgery"
-        ],
-        "description": "Consultant oral and maxillofacial surgeon at Aureva Dental, specializing in surgical wisdom tooth removal and minor oral surgeries.",
-        "worksFor": {
-          "@id": "https://aurevadental.com/#dentist"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Dr. Panshul V Kharche",
-        "jobTitle": "Consultant Periodontist & Implantologist",
-        "medicalSpecialty": [
-          "Periodontics"
-        ],
-        "description": "Consultant periodontist and implantologist at Aureva Dental, specializing in laser gum therapy, regenerative periodontal procedures, and dental implants.",
-        "worksFor": {
-          "@id": "https://aurevadental.com/#dentist"
-        }
+        "name": "Agniss Mishra"
       }
     ],
+    ...(isAboutPage ? {
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "Dr. Shweta Singh",
+          "jobTitle": "Co-founder & Clinical Head",
+          "image": "https://aurevadental.com/assets/dr-shweta-singh.webp",
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "The Oxford Dental College, Bangalore"
+          },
+          "medicalSpecialty": [
+            "Dentistry"
+          ],
+          "description": "Dental surgeon focused on smile design, clear aligners and aesthetic restorative dentistry. Registered with the Karnataka State Dental Council.",
+          "worksFor": {
+            "@id": "https://aurevadental.com/#dentist"
+          }
+        },
+        {
+          "@type": "Person",
+          "name": "Agniss Mishra",
+          "jobTitle": "Co-founder & CEO",
+          "description": "Agniss co-founded Aureva Dental and leads the clinic's operations, patient experience and growth.",
+          "worksFor": {
+            "@id": "https://aurevadental.com/#dentist"
+          }
+        }
+      ]
+    } : {}),
     ...(GOOGLE_RATING > 0 && GOOGLE_REVIEW_COUNT > 0 ? {
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -499,7 +487,7 @@ export function generateBlogPostSchema(params: {
   dateModified: string;
   image?: string;
 }) {
-  const schema: any = {
+  return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": params.headline,
@@ -511,8 +499,7 @@ export function generateBlogPostSchema(params: {
       "url": "https://aurevadental.com/"
     },
     "publisher": {
-      "@type": "DentalClinic",
-      "@id": "https://aurevadental.com/#dentist",
+      "@type": "Organization",
       "name": "Aureva Dental",
       "url": "https://aurevadental.com/",
       "logo": {
@@ -527,15 +514,6 @@ export function generateBlogPostSchema(params: {
       "@id": params.url
     }
   };
-
-  if (params.reviewedByName) {
-    schema.reviewedBy = {
-      "@type": "Person",
-      "name": params.reviewedByName
-    };
-  }
-
-  return schema;
 }
 
 
