@@ -1,4 +1,5 @@
 ---
+import { CANONICAL_PRICES } from '../data/prices';
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../utils/seoSchemas';
 import { GOOGLE_REVIEWS_LABEL } from '../config/clinic';
@@ -27,7 +28,7 @@ const faqs = [
   },
   {
     question: "How much does a Root Canal Treatment (RCT) cost at Aureva Dental in Hennur?",
-    answer: "At Aureva Dental, Root Canal Treatments range from ₹4,000 to ₹10,000 based on tooth position and complexity: Anterior front teeth (single canal): ₹4,000 to ₹6,000; Premolars (1–2 canals): ₹5,000 to ₹8,000; Molars (3–4 canals): ₹6,000 to ₹10,000. Re-RCT of previously failed procedures ranges from ₹8,000 to ₹10,000. Complete transparent pricing is provided in writing before treatment."
+    answer: `At Aureva Dental, Root Canal Treatments range from ${CANONICAL_PRICES.rct_overall} based on tooth position and complexity: Anterior front teeth (single canal): ${CANONICAL_PRICES.rct_anterior}; Premolars (1–2 canals): ${CANONICAL_PRICES.rct_premolar}; Molars (3–4 canals): ${CANONICAL_PRICES.rct_molar}. Re-RCT of previously failed procedures ranges from ${CANONICAL_PRICES.rct_re_treatment}. Complete transparent pricing is provided in writing before treatment.`
   },
   {
     question: "Why is a dental crown necessary after an RCT?",
@@ -126,7 +127,7 @@ const seoProps = {
         <!-- Price-First Summary Block -->
         <div class="p-4 rounded-2xl bg-japandi-sand/60 border border-japandi-clay/50 w-full max-w-2xl">
           <p class="text-xs sm:text-sm font-semibold text-japandi-charcoal">
-            Root canal ₹4,000 – ₹10,000 depending on the tooth · re-RCT ₹8,000 – ₹10,000 · consultation ₹600
+            Root canal {CANONICAL_PRICES.rct_overall} depending on the tooth · re-RCT {CANONICAL_PRICES.rct_re_treatment} · consultation {CANONICAL_PRICES.consultation}
           </p>
         </div>
 
@@ -288,42 +289,42 @@ const seoProps = {
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">New Patient Consultation + RVG X-Ray</td>
                 <td class="p-4">Clinical examination &amp; digital radiograph</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹600</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.consultation}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Anterior Tooth Root Canal</td>
                 <td class="p-4">Single canal endodontic therapy (front teeth)</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹4,000 – ₹6,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.rct_anterior}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Premolar Root Canal</td>
                 <td class="p-4">Intermediate 1–2 canal endodontic treatment</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹5,000 – ₹8,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.rct_premolar}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Molar Root Canal</td>
                 <td class="p-4">Multi-canal posterior endodontic treatment (3–4 canals)</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹6,000 – ₹10,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.rct_molar}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Re-Root Canal Treatment</td>
                 <td class="p-4">Retreatment of previously failing root canals</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹8,000 – ₹10,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.rct_re_treatment}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — PFM</td>
                 <td class="p-4">Porcelain-fused-to-metal restoration</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹4,000 – ₹6,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.crown_pfm}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — Ceramic</td>
                 <td class="p-4">All-ceramic aesthetic restoration</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹6,000 – ₹10,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.crown_ceramic}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — Monolithic Zirconia</td>
                 <td class="p-4">High-strength, metal-free lab-milled zirconia crown</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹10,000 – ₹18,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.crown_zirconia}</td>
               </tr>
             </tbody>
           </table>

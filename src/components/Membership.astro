@@ -1,5 +1,6 @@
 ---
 import { getConfig } from '../utils/getConfig';
+import { formatExactPrice } from '../data/prices';
 
 const config = getConfig();
 const { membership_section } = config;
@@ -72,7 +73,7 @@ const { membership_section } = config;
               {/* Pricing */}
               <div class="flex items-baseline mb-8">
                 <span class="text-4xl sm:text-5xl font-serif font-semibold tracking-tight">
-                  {plan.price}
+                  {plan.priceAmount ? formatExactPrice(plan.priceAmount) : plan.price}
                 </span>
                 <span class={`text-xs ml-2 font-light uppercase tracking-widest ${isRoyalty ? 'text-japandi-cream/70' : 'text-japandi-earth'}`}>
                   / {plan.period}

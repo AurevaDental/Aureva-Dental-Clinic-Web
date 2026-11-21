@@ -1,8 +1,11 @@
 ---
 import { getConfig } from '../utils/getConfig';
+import { CANONICAL_PRICES } from '../data/prices';
 
 const config = getConfig();
 const { holistic_services } = config;
+
+const getPrice = (item: any) => item.priceKey ? (CANONICAL_PRICES as any)[item.priceKey] : item.price;
 ---
 
 <section id="pricing" class="py-24 px-6 lg:px-24 bg-transparent border-t border-japandi-clay/40 relative">
@@ -71,7 +74,7 @@ const { holistic_services } = config;
                       )}
                       <span class="flex-grow mx-3 border-b border-dotted border-japandi-clay/70 self-end mb-1.5 opacity-40 group-hover:opacity-100 transition-opacity"></span>
                       <span class="text-sm font-semibold text-japandi-moss shrink-0">
-                        {item.price}
+                        {getPrice(item)}
                       </span>
                     </li>
                   );
@@ -93,6 +96,17 @@ const { holistic_services } = config;
           </div>
         );
       })}
+    </div>
+
+    <!-- See all prices link -->
+    <div class="mt-12 text-center">
+      <a 
+        href="/prices" 
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-japandi-sand/80 hover:bg-japandi-sand border border-japandi-clay/60 hover:border-japandi-moss text-japandi-charcoal hover:text-japandi-moss text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm"
+      >
+        <span>See all prices</span>
+        <span>&rarr;</span>
+      </a>
     </div>
 
     <!-- Comprehensive Clinical Services Hub -->

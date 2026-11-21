@@ -4,7 +4,7 @@ import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_REVIEWS_LABEL } from '../con
 import { CANONICAL_PRICES } from '../data/prices';
 
 const pageTitle = "Dentist in Kalyan Nagar, Bengaluru | Aureva Dental, 2.7 km away";
-const pageDescription = "Dentist near Kalyan Nagar & HRBR Layout, 2.7 km away. Open 7 days with ₹600 consultation including digital X-ray. Walk in or call to book.";
+const pageDescription = `Dentist near Kalyan Nagar & HRBR Layout, 2.7 km away. Open 7 days with ${CANONICAL_PRICES.consultation} consultation including digital X-ray. Walk in or call to book.`;
 const canonicalUrl = "https://aurevadental.com/dentist-in-kalyan-nagar";
 const phoneCallUrl = "tel:+917349701002";
 const whatsappUrl = "https://wa.me/917349701002?text=Hi%20Aureva%20Dental%2C%20I%20am%20visiting%20from%20Kalyan%20Nagar%20and%20would%20like%20to%20consult.";
@@ -27,7 +27,8 @@ const treatmentPricing = [
   { name: "Composite Tooth Filling", price: CANONICAL_PRICES.tooth_filling, note: "Tooth-colored biomimetic resin" },
   { name: "Root Canal Treatment (Rotary RCT)", price: CANONICAL_PRICES.rct_overall, note: "Gentle single or multi-visit" },
   { name: "Crowns & Caps (PFM, Ceramic, Zirconia)", price: CANONICAL_PRICES.crown_overall, note: "Custom laboratory fabricated" },
-  { name: "Wisdom Tooth Removal", price: CANONICAL_PRICES.wisdom_hennur_faq_overall, note: "Simple & surgical impactions" },
+  { name: "Tooth Extraction", price: CANONICAL_PRICES.extraction_overall, note: "Simple & surgical" },
+  { name: "Wisdom Tooth Removal", price: CANONICAL_PRICES.wisdom_overall, note: "Simple & surgical impactions" },
   { name: "Teeth Whitening", price: CANONICAL_PRICES.whitening_laser, note: "In-office LED brightening" },
   { name: "Kids Dentistry (Pediatric Care)", price: CANONICAL_PRICES.kids_dentistry_summary, note: "Gentle cavity care & sealants" },
   { name: "Dental Implants", price: CANONICAL_PRICES.implant_single_fixture, note: "Titanium replacement tooth" },
@@ -45,15 +46,15 @@ const faqs = [
   },
   {
     q: "Do you have an orthodontic clinic near Kalyan Nagar for braces and aligners?",
-    a: "Yes. An MDS orthodontist visits Aureva Dental on a scheduled case basis to consult on bite alignment, dental crowding, and spacing issues. We provide traditional metal braces starting from ₹30,000, aesthetic ceramic braces starting from ₹45,000, and removable clear aligners ranging from ₹80,000 to ₹2,50,000, as priced on our clinic price list. Every orthodontic evaluation includes digital imaging and a written estimate."
+    a: `Yes. An MDS orthodontist visits Aureva Dental on a scheduled case basis to consult on bite alignment, dental crowding, and spacing issues. We provide traditional metal braces starting from ${CANONICAL_PRICES.braces_metal_starting}, aesthetic ceramic braces starting from ${CANONICAL_PRICES.braces_ceramic_starting}, and removable clear aligners ranging from ${CANONICAL_PRICES.clear_aligners_overall}, as priced on our clinic price list. Every orthodontic evaluation includes digital imaging and a written estimate.`
   },
   {
     q: "Are you easily accessible for residents coming from Kammanahalli?",
-    a: "Yes. Patients from the Kammanahalli and HRBR Layout residential pockets easily travel north via Hennur Main Road to reach our Horamavu Agara Road studio in approximately 12 to 14 minutes. We offer comprehensive new-patient consultations for ₹600 including digital RVG X-rays valid for 6 months, and we welcome walk-ins until 9:00 PM every evening."
+    a: `Yes. Patients from the Kammanahalli and HRBR Layout residential pockets easily travel north via Hennur Main Road to reach our Horamavu Agara Road studio in approximately 12 to 14 minutes. We offer comprehensive new-patient consultations for ${CANONICAL_PRICES.consultation} including digital RVG X-rays valid for 6 months, and we welcome walk-ins until 9:00 PM every evening.`
   },
   {
     q: "What are your check-up charges and walk-in policies?",
-    a: "A new-patient consultation is ₹600, which includes a detailed clinical oral examination, low-radiation digital RVG X-rays as clinically indicated, and an itemized written estimate before any care begins. The consultation remains valid for 6 months. Walk-ins are always welcome until 9:00 PM, though calling or sending a WhatsApp message in advance helps reserve your preferred time slot."
+    a: `A new-patient consultation is ${CANONICAL_PRICES.consultation}, which includes a detailed clinical oral examination, low-radiation digital RVG X-rays as clinically indicated, and an itemized written estimate before any care begins. The consultation remains valid for 6 months. Walk-ins are always welcome until 9:00 PM, though calling or sending a WhatsApp message in advance helps reserve your preferred time slot.`
   }
 ];
 
@@ -175,13 +176,13 @@ const faqSchema = {
         </h2>
         <div class="space-y-4 text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
           <p>
-            Inquiries from Kalyan Nagar households often focus on multi-generational family dentistry, pediatric preventive care, and modern orthodontic alignment. Parents regularly bring young children for preventive fissure sealants and cavity check-ups, benefiting from visits with our visiting paedodontist who specializes in gentle, child-friendly care. Teenagers and adult working professionals routinely inquire about discreet alignment alternatives, consulting our visiting orthodontist to explore traditional metal braces starting at ₹30,000, subtle tooth-colored ceramic brackets starting at ₹45,000, or custom-fabricated clear aligners ranging from ₹80,000 to ₹2,50,000.
+            Inquiries from Kalyan Nagar households often focus on multi-generational family dentistry, pediatric preventive care, and modern orthodontic alignment. Parents regularly bring young children for preventive fissure sealants and cavity check-ups, benefiting from visits with our visiting paedodontist who specializes in gentle, child-friendly care. Teenagers and adult working professionals routinely inquire about discreet alignment alternatives, consulting our visiting orthodontist to explore traditional metal braces starting at {CANONICAL_PRICES.braces_metal_starting}, subtle tooth-colored ceramic brackets starting at {CANONICAL_PRICES.braces_ceramic_starting}, or custom-fabricated clear aligners ranging from {CANONICAL_PRICES.clear_aligners_overall}.
           </p>
           <p>
-            For older adults and parents experiencing wear or missing teeth, our restorative options include tooth-colored composite restorations starting at ₹1,500, precision porcelain-fused-to-metal and zirconia crowns ranging from ₹4,000 to ₹18,000, and titanium dental implants from ₹35,000 to ₹60,000. Routine preventive ultrasonic scaling and polishing ranges from ₹2,000 to ₹5,000, helping maintain periodontal health across all age brackets.
+            For older adults and parents experiencing wear or missing teeth, our restorative options include tooth-colored composite restorations starting at {CANONICAL_PRICES.tooth_filling}, precision porcelain-fused-to-metal and zirconia crowns ranging from {CANONICAL_PRICES.crown_overall}, and titanium dental implants from {CANONICAL_PRICES.implant_single_fixture}. Routine preventive ultrasonic scaling and polishing ranges from {CANONICAL_PRICES.scaling_routine}, helping maintain periodontal health across all age brackets.
           </p>
           <p>
-            Because our new-patient consultation is ₹600 including digital RVG X-rays and remains valid for six months, you have ample time to review your itemized treatment options comfortably at home before scheduling treatment appointments. We ensure that every treatment pathway is paced according to individual comfort and clinical necessity, giving households full control over their oral healthcare decisions.
+            Because our new-patient consultation is {CANONICAL_PRICES.consultation} including digital RVG X-rays and remains valid for six months, you have ample time to review your itemized treatment options comfortably at home before scheduling treatment appointments. We ensure that every treatment pathway is paced according to individual comfort and clinical necessity, giving households full control over their oral healthcare decisions.
           </p>
         </div>
       </div>
@@ -207,7 +208,7 @@ const faqSchema = {
             </p>
           </div>
           <div class="p-5 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/40 space-y-2">
-            <h3 class="font-serif text-base font-medium text-japandi-charcoal">Hospital-Grade Sterilisation</h3>
+            <h3 class="font-serif text-base font-medium text-japandi-charcoal">Sterilisation</h3>
             <p class="text-xs text-japandi-earth font-light leading-relaxed">
               Strict instrument processing utilizing sealed single-use instrument kits and clinical surface disinfection between every visit.
             </p>
@@ -262,7 +263,7 @@ const faqSchema = {
             <span class="w-7 h-7 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold flex items-center justify-center">1</span>
             <h3 class="font-serif text-base font-medium text-japandi-charcoal pt-1">Examination &amp; Digital X-Ray</h3>
             <p class="text-xs text-japandi-earth font-light leading-relaxed">
-              We begin with a thorough examination of teeth, gums, and bite alignment. Low-radiation RVG digital X-rays are taken to inspect beneath the surface. Consultation is ₹600 and stays valid for 6 months.
+              We begin with a thorough examination of teeth, gums, and bite alignment. Low-radiation RVG digital X-rays are taken to inspect beneath the surface. Consultation is {CANONICAL_PRICES.consultation} and stays valid for 6 months.
             </p>
           </div>
           <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">

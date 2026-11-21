@@ -51,14 +51,14 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "clear-aligners-cost-bangalore",
     title: "Clear Aligners Cost in Bangalore | Aureva Dental",
     headline: "Clear Aligners Cost in Bangalore: The Complete 2026 Guide & What to Expect",
-    metaDescription: "Transparent breakdown of clear aligners cost in Bangalore (₹80,000 to ₹2,50,000), invisible braces brands, 3D scans & EMI options at Aureva Dental.",
+    metaDescription: `Transparent breakdown of clear aligners cost in Bangalore (${CANONICAL_PRICES.clear_aligners_overall}), invisible braces brands, 3D scans & EMI options at Aureva Dental.`,
     author: "Aureva Dental",
     date: "September 2026",
     datePublished: "2026-09-01",
     dateModified: "2026-09-23",
     category: "Orthodontics & Clear Aligners",
     readTime: "8 min read",
-    excerpt: "A transparent breakdown of clear aligners cost in Bangalore (₹80,000 to ₹2,50,000), factors determining price, invisible braces vs. metal brackets, and what to expect during your 3D digital smile scan.",
+    excerpt: `A transparent breakdown of clear aligners cost in Bangalore (${CANONICAL_PRICES.clear_aligners_overall}), factors determining price, invisible braces vs. metal brackets, and what to expect during your 3D digital smile scan.`,
     relatedTreatmentUrl: "/treatments/clear-aligners",
     relatedTreatmentName: "Clear Aligners & Invisible Braces",
     introParagraphs: [
@@ -70,20 +70,20 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "1. Average Clear Aligner Cost in Bangalore (2026 Pricing Overview)",
         paragraphs: [
-          "In Bangalore, the total financial investment for comprehensive clear aligner therapy typically ranges between ₹80,000 and ₹2,50,000. The wide variation reflects the severity of malocclusion, the total number of custom polyurethane trays required to guide teeth into alignment, and whether your treatment utilizes domestic certified aligner laboratories or global systems."
+          `In Bangalore, the total financial investment for comprehensive clear aligner therapy typically ranges between ${CANONICAL_PRICES.clear_aligners_overall}. The wide variation reflects the severity of malocclusion, the total number of custom polyurethane trays required to guide teeth into alignment, and whether your treatment utilizes domestic certified aligner laboratories or global systems.`
         ],
         table: {
           headers: ["Treatment Tier / Complexity", "Typical Price Range (INR)", "Primary Clinical Indications"],
           rows: [
-            ["Mild Alignment / Minor Spacing", "₹80,000 – ₹1,20,000", "Minor front teeth spacing, slight rotations, post-braces orthodontic relapse"],
-            ["Moderate Crowding / Bite Correction", "₹1,20,000 – ₹1,80,000", "Moderate dental crowding, midline discrepancies, mild overbites or crossbites"],
-            ["Complex Full-Arch Orthodontics", "₹1,80,000 – ₹2,50,000", "Severe rotations, deep skeletal overbites, open bites, comprehensive arch expansion"]
+            ["Mild Alignment / Minor Spacing", CANONICAL_PRICES.aligners_mild, "Minor front teeth spacing, slight rotations, post-braces orthodontic relapse"],
+            ["Moderate Crowding / Bite Correction", CANONICAL_PRICES.aligners_moderate, "Moderate dental crowding, midline discrepancies, mild overbites or crossbites"],
+            ["Complex Full-Arch Orthodontics", CANONICAL_PRICES.aligners_complex, "Severe rotations, deep skeletal overbites, open bites, comprehensive arch expansion"]
           ]
         },
         callout: {
           type: "warning",
           title: "Crucial Note on Direct-to-Consumer At-Home Kits",
-          text: "Beware of unregulated mail-order 'at-home impression kits' advertising aligners for ₹30,000 without doctor supervision. Shifting teeth without an in-person 3D digital scan, alveolar bone height evaluation, and periodic clinical reviews by an experienced dentist frequently leads to irreversible root resorption, bite collapse, and gum recession."
+          text: "Beware of unregulated mail-order 'at-home impression kits' advertising aligners without doctor supervision. Shifting teeth without an in-person 3D digital scan, alveolar bone height evaluation, and periodic clinical reviews by an experienced dentist frequently leads to irreversible root resorption, bite collapse, and gum recession."
         }
       },
       {
@@ -115,7 +115,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "4. Clear Aligners vs Traditional Metal Braces: The Cost-Value Analysis",
         paragraphs: [
-          "While traditional metal braces often carry a lower upfront price (₹30,000 to ₹45,000), clear aligners deliver significant lifestyle advantages that make them the preferred choice for adults and working professionals across Bangalore:",
+          `While traditional metal braces often carry a lower upfront price (${CANONICAL_PRICES.braces_metal}), clear aligners deliver significant lifestyle advantages that make them the preferred choice for adults and working professionals across Bangalore:`,
           "Virtually invisible aesthetics allow you to smile confidently in workplace meetings and social gatherings. Removable trays allow you to eat any food without breaking brackets, and maintain flawless oral hygiene without special floss threaders.",
           "Furthermore, aligner visits require quick 15-minute check-ins every 6 to 8 weeks rather than frequent emergency visits for pokey wires or dislodged brackets."
         ]
@@ -154,7 +154,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         question: "Why choose Aureva Dental for clear aligners in Hennur?",
-        answer: "Aureva Dental provides digital smile design, personalized orthodontic oversight, and hospital-grade sterilization at our studio on Horamavu Agara Road in Hennur Bande."
+        answer: "Aureva Dental provides digital smile design, personalized orthodontic oversight, and strict sterilisation at our studio on Horamavu Agara Road in Hennur Bande."
       }
     ],
     conclusion: "Investing in clear aligners is an investment in your lifelong dental health, facial balance, and self-confidence. Schedule your 3D digital scan at Aureva Dental in Hennur to start your journey.",
@@ -165,14 +165,14 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "root-canal-treatment-cost-hennur",
     title: "Root Canal Treatment Cost in Bangalore (2026) | Aureva Dental",
     headline: "Root Canal Treatment Cost in Bangalore: 2026 Prices at Our Hennur Clinic",
-    metaDescription: "Root canal cost in Bangalore: ₹4,000–₹10,000 per tooth at our Hennur clinic, by tooth type. Crown prices, total cost examples and what affects the price.",
+    metaDescription: `Root canal cost in Bangalore: ${CANONICAL_PRICES.rct_overall} per tooth at our Hennur clinic, by tooth type. Crown prices, total cost examples and what affects the price.`,
     author: "Aureva Dental",
     date: "November 2026",
     datePublished: "2026-09-10",
     dateModified: "2026-11-20",
     category: "Root Canal & Crowns",
     readTime: "6 min read",
-    excerpt: "Root canal cost in Bangalore: ₹4,000–₹10,000 per tooth at our Hennur clinic, by tooth type. Crown prices, total cost examples and what affects the price.",
+    excerpt: `Root canal cost in Bangalore: ${CANONICAL_PRICES.rct_overall} per tooth at our Hennur clinic, by tooth type. Crown prices, total cost examples and what affects the price.`,
     relatedTreatmentUrl: "/root-canal-treatment-hennur",
     relatedTreatmentName: "Root Canal Treatment in Hennur",
     introParagraphs: [
@@ -300,36 +300,27 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "dental-implant-cost-bangalore",
     title: "Dental Implant Cost in Bangalore | Aureva Dental",
     headline: "Dental Implant Cost in Bangalore (2026 Guide): Titanium vs Zirconia Pricing",
-    metaDescription: "Detailed dental implant cost in Bangalore (₹45,000 to ₹80,000), bone grafting, full-mouth implants, established implant brands & transparent pricing in Hennur.",
+    metaDescription: `Detailed dental implant cost in Bangalore (${CANONICAL_PRICES.implant_with_crown}), bone grafting, full-mouth implants, established implant brands & transparent pricing in Hennur.`,
     author: "Aureva Dental",
     date: "September 2026",
     datePublished: "2026-09-12",
     dateModified: "2026-09-23",
     category: "Implantology & Oral Surgery",
     readTime: "9 min read",
-    excerpt: "A comprehensive guide to dental implant cost in Bangalore (₹45,000 to ₹80,000), comparing Swiss, German, and Korean titanium implant brands, bone grafting requirements, and full-arch rehabilitation.",
+    excerpt: `A comprehensive guide to dental implant cost in Bangalore (${CANONICAL_PRICES.implant_with_crown}), comparing Swiss, German, and Korean titanium implant brands, bone grafting requirements, and full-arch rehabilitation.`,
     relatedTreatmentUrl: "/treatments/dental-implants",
     relatedTreatmentName: "Dental Implants",
     introParagraphs: [
       "Missing teeth affect far more than just your appearance. A missing tooth compromises your chewing efficiency, causes adjacent natural teeth to tilt and shift into the vacant gap, and leads to progressive jawbone resorption over time. Among all restorative options available in modern dentistry, dental implants are universally recognized as the gold standard fixed solution.",
       "Because dental implants integrate directly with your living jawbone through biocompatible osseointegration, they look, feel, and function exactly like natural tooth roots.",
-      "However, patients seeking tooth replacement across Bangalore often encounter wildly conflicting price estimates ranging from ₹20,000 to over ₹80,000 per tooth. In this guide from Aureva Dental in Hennur, we provide a transparent, medically verified breakdown of dental implant pricing in Bangalore, explain what separates premium implant systems, and guide you through the clinical process."
+      "However, patients seeking tooth replacement across Bangalore often encounter conflicting price estimates. In this guide from Aureva Dental in Hennur, we provide a transparent, medically verified breakdown of dental implant pricing in Bangalore, explain what separates premium implant systems, and guide you through the clinical process."
     ],
     sections: [
       {
         heading: "1. Complete Dental Implant Cost in Bangalore (2026 Price Overview)",
         paragraphs: [
-          "In Bangalore, the typical cost for a single complete dental implant—which comprises the titanium or zirconia implant post, custom abutment connector, and lifelike porcelain crown—ranges from ₹45,000 to ₹80,000 per tooth."
-        ],
-        table: {
-          headers: ["Implant System & Origin", "Price Range per Tooth (INR)", "Key Clinical Highlights"],
-          rows: [
-            ["Certified Value Systems (Osstem, Dentium / South Korea)", "₹28,000 – ₹38,000", "US-FDA approved, excellent osseointegration track record, widely accessible components"],
-            ["Premium European Systems (Adin, MIS / Israel, Germany)", "₹38,000 – ₹48,000", "Advanced SLA surface treatment, micro-threads for high primary stability"],
-            ["Elite Global Systems (Straumann / Switzerland, Nobel Biocare / Sweden)", "₹50,000 – ₹68,000+", "Patented SLActive / TiUnite surfaces, 4-week osseointegration, global manufacturer support"],
-            ["Metal-Free Zirconia Implants (Ceramic)", "₹60,000 – ₹85,000", "Fully white biocompatible ceramic; ideal for patients with metal hypersensitivity or thin gum biotypes"]
-          ]
-        }
+          `The price depends on the implant brand (we place Nobel Biocare, Straumann and other systems) and on the case; a single implant is ${CANONICAL_PRICES.implant_single_fixture}.`
+        ]
       },
       {
         heading: "2. The Three Components of a Dental Implant Investment",
@@ -353,10 +344,10 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Ancillary Procedure", "Typical Cost Range (INR)", "When It Is Medically Required"],
           rows: [
-            ["Pre-Surgical Digital Radiographic Assessment", "₹2,500 – ₹4,000", "Pre-surgical radiographic assessment to measure exact bone height, width, and nerve canals"],
-            ["Bone Grafting (Bone graft / Synthetic)", "₹15,000 – ₹20,000", "Required when bone width or density is insufficient to encapsulate the implant"],
-            ["Direct / Indirect Sinus Lift", "₹15,000 – ₹20,000", "Required in upper back molars when the maxillary sinus cavity has expanded downward"],
-            ["PRP / PRF Growth Factor Therapy", "₹3,000 – ₹6,000", "Concentrated patient platelets applied to surgical site to accelerate soft-tissue healing"]
+            ["Pre-Surgical Digital Radiographic Assessment", CANONICAL_PRICES.implant_pre_surgical_assessment, "Pre-surgical radiographic assessment to measure exact bone height, width, and nerve canals"],
+            ["Bone Grafting (Bone graft / Synthetic)", CANONICAL_PRICES.bone_graft, "Required when bone width or density is insufficient to encapsulate the implant"],
+            ["Direct / Indirect Sinus Lift", CANONICAL_PRICES.sinus_lift, "Required in upper back molars when the maxillary sinus cavity has expanded downward"],
+            ["PRP / PRF Growth Factor Therapy", CANONICAL_PRICES.prp_prf, "Concentrated patient platelets applied to surgical site to accelerate soft-tissue healing"]
           ]
         }
       },
@@ -364,8 +355,8 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "4. Full-Mouth Dental Implant Rehabilitation (All-on-4 & All-on-6)",
         paragraphs: [
           "For patients who have lost all teeth in an arch or suffer from terminal loose teeth due to advanced periodontitis, full-arch fixed implant bridges offer a life-changing alternative to unstable removable dentures.",
-          "All-on-4 Protocol (₹1,80,000 to ₹3,20,000 per arch): Four strategic implants support a complete fixed hybrid bridge of 12 to 14 teeth.",
-          "All-on-6 Protocol (₹2,50,000 to ₹4,50,000 per arch): Six implants provide maximum bite force distribution for patients with adequate bone volume, supporting a monolithic zirconia fixed bridge.",
+          `All-on-4 Protocol (${CANONICAL_PRICES.all_on_4}): Four strategic implants support a complete fixed hybrid bridge of 12 to 14 teeth.`,
+          `All-on-6 Protocol (${CANONICAL_PRICES.all_on_6}): Six implants provide maximum bite force distribution for patients with adequate bone volume, supporting a monolithic zirconia fixed bridge.`,
           "These fixed restorations eliminate the slippage, speech impediment, palate coverage, and messy adhesive pastes associated with traditional full dentures."
         ]
       },
@@ -415,14 +406,14 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "tooth-extraction-cost-bangalore",
     title: "Tooth Extraction Cost in Bangalore | Aureva Dental",
     headline: "Tooth Extraction Cost in Bangalore: Simple vs Surgical & Wisdom Teeth (2026)",
-    metaDescription: "Transparent tooth extraction cost in Bangalore (₹1,500 to ₹10,000), simple vs surgical removal, wisdom tooth care & comfortable oral surgery at Aureva Dental.",
+    metaDescription: `Transparent tooth extraction cost in Bangalore (${CANONICAL_PRICES.extraction_overall}), simple vs surgical removal, wisdom tooth care & comfortable oral surgery at Aureva Dental.`,
     author: "Aureva Dental",
     date: "September 2026",
     datePublished: "2026-09-15",
     dateModified: "2026-11-20",
     category: "Oral Surgery & Extractions",
     readTime: "8 min read",
-    excerpt: "A complete guide to tooth extraction cost in Bangalore (₹1,500 to ₹10,000), simple vs surgical extractions, impacted wisdom tooth oral surgery, dry socket prevention, and healing protocols.",
+    excerpt: `A complete guide to tooth extraction cost in Bangalore (${CANONICAL_PRICES.extraction_overall}), simple vs surgical extractions, impacted wisdom tooth oral surgery, dry socket prevention, and healing protocols.`,
     relatedTreatmentUrl: "/treatments/tooth-extraction",
     relatedTreatmentName: "Tooth Extraction",
     introParagraphs: [
@@ -434,24 +425,24 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "1. Tooth Extraction Cost in Bangalore (2026 Price Table)",
         paragraphs: [
-          "In Bangalore, tooth extraction costs vary between ₹1,500 and ₹10,000 depending on the anatomical difficulty, root curvature, degree of impaction under bone, and whether surgical sectioning is required."
+          `In Bangalore, tooth extraction costs vary between ${CANONICAL_PRICES.extraction_overall} for routine extractions (and ${CANONICAL_PRICES.wisdom_overall} for wisdom teeth) depending on the anatomical difficulty, root curvature, degree of impaction under bone, and whether surgical sectioning is required.`
         ],
         table: {
           headers: ["Extraction Category / Procedure", "Typical Cost Range (INR)", "Clinical Inclusions & Complexity"],
           rows: [
-            ["Simple Front Tooth / Loose Tooth Extraction", "₹1,500 – ₹2,000", "Single straight root, minimal bone resistance, comfortable local anesthesia"],
-            ["Firm Posterior Molar Extraction", "₹3,000 – ₹4,000", "Multi-rooted firm tooth requiring gentle periotome elevation and luxation"],
-            ["Surgical Extraction / Fractured Root Retrieval", "₹3,500 – ₹5,000", "Tooth broken at gum line; requires micro-flap elevation and bone troughing"],
-            ["Wisdom Tooth — Simple Erupted Extraction", "₹4,000 – ₹5,000", "Non-impacted third molar extraction under profound local anesthesia"],
-            ["Impacted Wisdom Tooth (Soft Tissue Impaction)", "₹5,000 – ₹7,000", "Third molar covered by gum flap; requires incision, elevation, and dissolvable sutures"],
-            ["Impacted Wisdom Tooth (Partial Bony Impaction)", "₹6,000 – ₹8,000", "Partially enclosed in bone; requires bone troughing and gentle tooth sectioning"],
-            ["Impacted Wisdom Tooth (Deep Bony / Fully Horizontal)", "₹7,000 – ₹10,000", "Deeply embedded in mandibular bone; requires crown sectioning and oral surgeon expertise"]
+            ["Simple Front Tooth / Loose Tooth Extraction", CANONICAL_PRICES.extraction_front_loose, "Single straight root, minimal bone resistance, comfortable local anesthesia"],
+            ["Firm Posterior Molar Extraction", CANONICAL_PRICES.extraction_back_tooth, "Multi-rooted firm tooth requiring gentle periotome elevation and luxation"],
+            ["Surgical Extraction / Fractured Root Retrieval", CANONICAL_PRICES.extraction_surgical, "Tooth broken at gum line; requires micro-flap elevation and bone troughing"],
+            ["Wisdom Tooth — Simple Erupted Extraction", CANONICAL_PRICES.wisdom_erupted, "Non-impacted third molar extraction under profound local anesthesia"],
+            ["Impacted Wisdom Tooth (Soft Tissue Impaction)", CANONICAL_PRICES.wisdom_soft_tissue, "Third molar covered by gum flap; requires incision, elevation, and dissolvable sutures"],
+            ["Impacted Wisdom Tooth (Partial Bony Impaction)", CANONICAL_PRICES.wisdom_partial_bony, "Partially enclosed in bone; requires bone troughing and gentle tooth sectioning"],
+            ["Impacted Wisdom Tooth (Deep Bony / Fully Horizontal)", CANONICAL_PRICES.wisdom_deep_bony, "Deeply embedded in mandibular bone; requires crown sectioning and oral surgeon expertise"]
           ]
         },
         callout: {
           type: "info",
           title: "Pre-Extraction Diagnostic RVG Imaging",
-          text: "At Aureva Dental in Hennur, every extraction is preceded by high-resolution digital RVG radiography (consultation ₹600) to trace root proximity to the inferior alveolar nerve canal or maxillary sinus, for precise clinical planning."
+          text: `At Aureva Dental in Hennur, every extraction is preceded by high-resolution digital RVG radiography (consultation ${CANONICAL_PRICES.consultation}) to trace root proximity to the inferior alveolar nerve canal or maxillary sinus, for precise clinical planning.`
         }
       },
       {
@@ -487,8 +478,8 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Leaving an empty space after extracting an adult chewing molar triggers long-term dental complications. Over several months, adjacent teeth tilt toward the gap, while the opposing tooth in the opposite jaw over-erupts into the vacant space, disrupting your bite and causing TMJ stress.",
           "At Aureva Dental, we discuss replacement alternatives before performing the extraction:",
-          "Dental Implants (₹45,000 to ₹80,000): A titanium root screw stimulates the jawbone, preventing atrophy, while a custom zirconia crown restores full chewing efficiency without touching neighboring teeth.",
-          "Fixed Dental Bridges (₹4,000 to ₹18,000 per unit depending on material — PFM ₹4,000 – ₹6,000, Ceramic ₹6,000 – ₹10,000, Zirconia ₹10,000 – ₹18,000 per unit): A non-surgical, fixed restoration where adjacent healthy teeth anchor the replacement tooth.",
+          `Dental Implants (${CANONICAL_PRICES.implant_with_crown}): A titanium root screw stimulates the jawbone, preventing atrophy, while a custom zirconia crown restores full chewing efficiency without touching neighboring teeth.`,
+          `Fixed Dental Bridges (${CANONICAL_PRICES.bridge_per_unit} depending on material — PFM ${CANONICAL_PRICES.crown_pfm}, Ceramic ${CANONICAL_PRICES.crown_ceramic}, Zirconia ${CANONICAL_PRICES.crown_zirconia}): A non-surgical, fixed restoration where adjacent healthy teeth anchor the replacement tooth.`,
           `Flexible Removable Partial Dentures (${CANONICAL_PRICES.denture_flexible_partial}): A removable option suitable when multiple teeth are missing in an arch.`
         ],
         bulletPoints: [
@@ -533,7 +524,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "braces-vs-clear-aligners",
     title: "Braces vs Clear Aligners Guide | Aureva Dental",
     headline: "Braces vs Clear Aligners: Comprehensive Comparison, Costs & Results (2026)",
-    metaDescription: "Braces vs clear aligners compared: cost (₹30,000 vs ₹80,000+), treatment time, comfort, aesthetics & orthodontic effectiveness at Aureva Dental in Hennur.",
+    metaDescription: `Braces vs clear aligners compared: cost (${CANONICAL_PRICES.braces_metal_starting} vs ${CANONICAL_PRICES.clear_aligners_overall}), treatment time, comfort, aesthetics & orthodontic effectiveness at Aureva Dental in Hennur.`,
     author: "Aureva Dental",
     date: "September 2026",
     datePublished: "2026-09-18",
@@ -559,7 +550,7 @@ export const BLOG_POSTS: BlogPost[] = [
           rows: [
             ["Visibility & Aesthetics", "Noticeable metal brackets or tooth-colored ceramic brackets with archwires", "Virtually invisible, transparent medical-grade polyurethane trays"],
             ["Removability", "Permanently bonded to teeth for the entire treatment duration", "Fully removable for meals, brushing, flossing, and special occasions"],
-            ["Average Cost in Bangalore", "₹30,000 – ₹80,000 (Metal: ₹30k–₹45k; Ceramic: ₹45k–₹80k)", "₹80,000 – ₹2,50,000 (depending on case severity and brand)"],
+            ["Average Cost in Bangalore", `${CANONICAL_PRICES.braces_overall} (Metal: ${CANONICAL_PRICES.braces_metal}; Ceramic: ${CANONICAL_PRICES.braces_ceramic})`, `${CANONICAL_PRICES.clear_aligners_overall} (depending on case severity and brand)`],
             ["Dietary Restrictions", "Strict restrictions: No hard nuts, sticky candy, popcorn, or biting into whole apples", "Zero restrictions: Remove trays and enjoy all your favorite foods freely"],
             ["Oral Hygiene Routine", "Complex: Requires orthodontic brushes, interdental brushes, and floss threaders", "Effortless: Brush and floss normally, then rinse and brush your clear trays"],
             ["Appointment Frequency", "Every 4 to 6 weeks for wire tightening and bracket adjustments", "Every 6 to 8 weeks for progress check-ins and picking up your next batches"]
@@ -574,12 +565,12 @@ export const BLOG_POSTS: BlogPost[] = [
         table: {
           headers: ["Orthodontic System", "Typical Price Range (INR)", "Who It Is Ideally Suited For"],
           rows: [
-            ["Traditional Metal Braces", "₹30,000 – ₹45,000", "Teenagers, school students, and budget-conscious patients with complex bite issues"],
-            ["Aesthetic Ceramic Braces", "₹45,000 – ₹80,000", "Patients wanting lower visibility with fixed bracket reliability"],
-            ["Self-Ligating Braces", "₹60,000 – ₹80,000", "Reduced friction brackets that require fewer adjustments and shorter chair time"],
+            ["Traditional Metal Braces", CANONICAL_PRICES.braces_metal, "Teenagers, school students, and budget-conscious patients with complex bite issues"],
+            ["Aesthetic Ceramic Braces", CANONICAL_PRICES.braces_ceramic, "Patients wanting lower visibility with fixed bracket reliability"],
+            ["Self-Ligating Braces", CANONICAL_PRICES.braces_self_ligating, "Reduced friction brackets that require fewer adjustments and shorter chair time"],
             ["Lingual orthodontics (braces fitted behind the teeth)", "—", "Patients seeking fixed braces fitted behind the teeth for discreet orthodontic care"],
             ["Lingual retainers", "—", "Custom-bonded retention wires fitted behind the teeth to maintain alignment"],
-            ["Certified Indian Aligner Systems", "₹80,000 – ₹1,40,000", "Working professionals and adults with mild-to-moderate crowding seeking value"]
+            ["Certified Indian Aligner Systems", CANONICAL_PRICES.aligners_indian_systems, "Working professionals and adults with mild-to-moderate crowding seeking value"]
           ]
         }
       },
@@ -652,40 +643,40 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "teeth-whitening-cost-bangalore",
     title: "Teeth Whitening Cost in Bangalore | Aureva Dental",
     headline: "Teeth Whitening Cost in Bangalore (2026): In-Office Laser vs Home Trays",
-    metaDescription: "Transparent teeth whitening cost in Bangalore (₹8,000 to ₹15,000), professional LED/Laser whitening vs home trays, safety & shade improvement in Hennur.",
+    metaDescription: `Transparent teeth whitening cost in Bangalore (${CANONICAL_PRICES.whitening_laser}), professional LED/Laser whitening vs home trays, safety & shade improvement in Hennur.`,
     author: "Aureva Dental",
     date: "September 2026",
     datePublished: "2026-09-20",
     dateModified: "2026-09-23",
     category: "Cosmetic Dentistry & Smile Enhancement",
     readTime: "8 min read",
-    excerpt: "A complete price guide to professional teeth whitening in Bangalore (₹8,000 to ₹15,000), comparing chairside LED/Laser whitening, custom take-home trays, OTC kits, and safety protocols.",
+    excerpt: `A complete price guide to professional teeth whitening in Bangalore (${CANONICAL_PRICES.whitening_laser}), comparing chairside LED/Laser whitening, custom take-home trays, OTC kits, and safety protocols.`,
     relatedTreatmentUrl: "/teeth-whitening-hennur",
     relatedTreatmentName: "Teeth Whitening",
     introParagraphs: [
       "A bright, radiant smile conveys youthfulness, health, and vitality. However, daily consumption of coffee, South Indian filter coffee, tea, red wine, turmeric-rich curries, and natural aging gradually deposits stubborn chromogen stains within the microscopic porous tubules of your tooth enamel.",
       "If you are preparing for a wedding, graduation, job interview, or simply want to refresh your personal aesthetic, professional teeth whitening is the fastest, least invasive cosmetic dental treatment available.",
-      "In this guide from Aureva Dental in Hennur, Bangalore, we break down the true cost of in-office LED/Laser whitening versus take-home trays, explains how medical-grade bleaching works safely without damaging enamel, and shares guidelines to keep your smile glowing for years."
+      "In this guide from Aureva Dental in Hennur, Bangalore, we break down the cost of in-office LED/laser whitening versus take-home trays, explain how professional bleaching works, and share tips to keep your smile bright."
     ],
     sections: [
       {
         heading: "1. Teeth Whitening Cost in Bangalore (2026 Price Overview)",
         paragraphs: [
-          "In Bangalore, professional teeth whitening costs range between ₹8,000 and ₹15,000 depending on the clinical technology utilized, the concentration of the medical bleaching agent, and whether laser activation is included."
+          `In Bangalore, professional teeth whitening costs range between ${CANONICAL_PRICES.whitening_laser} depending on the clinical technology utilized, the concentration of the medical bleaching agent, and whether laser activation is included.`
         ],
         table: {
           headers: ["Whitening Method", "Typical Cost Range (INR)", "Expected Results & Timeline"],
           rows: [
-            ["In-Office Advanced LED/Laser Teeth Whitening", "₹8,000 – ₹15,000", "Single 45 to 60-minute session; results vary from person to person"],
-            ["Customized Dentist Take-Home Trays", "₹5,000 – ₹9,000", "Custom lab-made trays + medical gel; gradual 3 to 6-shade lift over 10 to 14 days"],
-            ["Combination Package (In-Office + Take-Home Kit)", "₹12,000 – ₹18,000", "Maximum radiance: Immediate laser lift plus home maintenance kit for annual touch-ups"],
-            ["Over-the-Counter Strips & Charcoal Pastes", "₹500 – ₹2,500", "Minimal 1 to 2 shades lift; abrasive pastes frequently strip protective enamel"]
+            ["In-Office Advanced LED/Laser Teeth Whitening", CANONICAL_PRICES.whitening_laser, "Single 45 to 60-minute session; results vary from person to person"],
+            ["Customized Dentist Take-Home Trays", CANONICAL_PRICES.whitening_take_home, "Custom lab-made trays + medical gel; gradual 3 to 6-shade lift over 10 to 14 days"],
+            ["Combination Package (In-Office + Take-Home Kit)", CANONICAL_PRICES.whitening_combo, "Maximum radiance: Immediate laser lift plus home maintenance kit for annual touch-ups"],
+            ["Over-the-Counter Strips & Charcoal Pastes", CANONICAL_PRICES.whitening_otc, "Minimal 1 to 2 shades lift; abrasive pastes frequently strip protective enamel"]
           ]
         },
         callout: {
           type: "tip",
           title: "Pre-Whitening Cleaning Requirement",
-          text: "Professional teeth whitening must be preceded by an ultrasonic Scaling & Polishing (₹2,000 – ₹5,000) to remove surface plaque, calculus, and external tobacco/tea stains. Bleaching gel applied over calcified tartar cannot penetrate enamel pores evenly."
+          text: `Professional teeth whitening must be preceded by an ultrasonic Scaling & Polishing (${CANONICAL_PRICES.scaling_routine}) to remove surface plaque, calculus, and external tobacco/tea stains. Bleaching gel applied over calcified tartar cannot penetrate enamel pores evenly.`
         }
       },
       {
@@ -890,7 +881,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       "question": "How much does emergency root canal treatment cost in Bangalore?",
-      "answer": "Root canal treatments at Aureva Dental range from ₹4,000 to ₹10,000 depending on the tooth's anatomical position (front incisor vs. multi-rooted molar) and clinical complexity. Transparent pricing is provided before starting any procedure."
+      "answer": `Root canal treatments at Aureva Dental range from ${CANONICAL_PRICES.rct_overall} depending on the tooth's anatomical position (front incisor vs. multi-rooted molar) and clinical complexity. Transparent pricing is provided before starting any procedure.`
     }
   ],
   "conclusion": "A severe throbbing toothache at night is your body's urgent distress call. Do not endure another sleepless night in pain—reach out to Aureva Dental for compassionate, same-day relief.",
@@ -989,7 +980,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       "question": "Is wisdom tooth extraction painful?",
-      "answer": "No. With modern high-potency local anesthesia, the entire quadrant is completely numb before we begin. You will feel gentle pressure, but absolutely zero sharp pain during the extraction."
+      "answer": "No. With modern high-potency local anesthesia, the entire quadrant is completely numb before we begin. You will feel gentle pressure while the area stays numb."
     },
     {
       "question": "How long does recovery take after wisdom tooth removal?",
@@ -1089,14 +1080,14 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "chipped-front-tooth-repair",
     title: "Chipped or Broken Front Tooth Repair Cost in Bangalore | Aureva Dental",
     headline: "Chipped or Broken Front Tooth: Repair Options and Cost in Bangalore",
-    metaDescription: "Chipped front tooth repair in Bangalore: bonding ₹1,500–₹4,000 per tooth, veneers ₹8,000–₹24,000, crowns from ₹4,000. First aid and which option fits.",
+    metaDescription: `Chipped front tooth repair in Bangalore: bonding ${CANONICAL_PRICES.composite_bonding}, veneers ${CANONICAL_PRICES.veneers_porcelain}, crowns ${CANONICAL_PRICES.crown_overall}. First aid and which option fits.`,
     author: "Aureva Dental",
     date: "November 2026",
     datePublished: "2026-09-27",
     dateModified: "2026-11-20",
     category: "Cosmetic & Restorative",
     readTime: "5 min read",
-    excerpt: "Chipped front tooth repair in Bangalore: bonding ₹1,500–₹4,000 per tooth, veneers ₹8,000–₹24,000, crowns from ₹4,000. First aid and which option fits.",
+    excerpt: `Chipped front tooth repair in Bangalore: bonding ${CANONICAL_PRICES.composite_bonding}, veneers ${CANONICAL_PRICES.veneers_porcelain}, crowns ${CANONICAL_PRICES.crown_overall}. First aid and which option fits.`,
     relatedTreatmentUrl: "/treatments/cosmetic-dentistry",
     relatedTreatmentName: "Cosmetic Dentistry & Bonding",
     introParagraphs: [
@@ -1544,20 +1535,21 @@ export const BLOG_POSTS: BlogPost[] = [
     {
       heading: "2. Procedure Cost Comparison: UK vs. India (2026 Averages)",
       paragraphs: [
-        "The following table compares typical private UK dental benchmarks with published treatment fees at Aureva Dental in Bangalore (illustrative INR conversion based on the exchange rate on the article's update date of October 4, 2026: £1 GBP ≈ ₹127 INR):"
+        "The following table compares typical private UK dental benchmarks with published treatment fees at Aureva Dental in Bangalore (illustrative INR conversion based on the exchange rate on the article's update date of October 4, 2026: £1 GBP ≈ 127 INR):"
       ],
       table: {
-        headers: ["Treatment Procedure", "Private UK Fee Range", "India Cost (INR ₹)", "India Equiv. (£)", "Approximate Difference"],
+        headers: ["Treatment Procedure", "Private UK Fee Range", "India Cost (INR)", "India Equiv. (£)", "Approximate Difference"],
         rows: [
-          ["Dental Implant (Fixture Only)", "£990 – £1,800", "₹35,000 – ₹60,000", "~£276 – £472", "~72% – 74% lower (Midpoint: ~73.2%)"],
-          ["Complete Implant with Abutment & Crown", "£2,095 – £3,700", "₹45,000 – ₹80,000", "~£354 – £630", "~83% lower (Midpoint: ~83.0%)"],
-          ["Molar Root Canal (Rotary Endodontics)", "£645 – £1,060", "₹6,000 – ₹10,000", "~£47 – £79", "~93% lower (Midpoint: ~92.6%)"],
-          ["Monolithic Zirconia Crown (Lab-Milled)", "£850 – £1,337", "₹10,000 – ₹18,000", "~£79 – £142", "~89% – 91% lower (Midpoint: ~89.9%)"],
-          ["Dental Crown — PFM", "£720 – £1,100", "₹4,000 – ₹6,000", "~£31 – £47", "~95% – 96% lower (Midpoint: ~95.7%)"],
-          ["Dental Crown — Ceramic", "£720 – £1,100", "₹6,000 – ₹10,000", "~£47 – £79", "~93% lower (Midpoint: ~93.1%)"],
-          ["Tooth Extraction (Simple to Surgical)", "£250 – £540", "₹1,500 – ₹10,000", "~£12 – £79", "~85% – 95% lower (Midpoint: ~88.5%)"],
-          ["Comprehensive Clear Aligners", "£2,500 – £4,500", "₹80,000 – ₹2,50,000", "~£630 – £1,969", "~56% – 75% lower (Midpoint: ~62.9%)"],
-          ["Porcelain Veneer (Per Tooth)", "£650 – £1,200", "₹8,000 – ₹24,000", "~£63 – £189", "~84% – 90% lower (Midpoint: ~86.4%)"]
+          ["Dental Implant (Fixture Only)", "£990 – £1,800", CANONICAL_PRICES.implant_single_fixture, "~£276 – £472", "~72% – 74% lower (Midpoint: ~73.2%)"],
+          ["Complete Implant with Abutment & Crown", "£2,095 – £3,700", CANONICAL_PRICES.implant_with_crown, "~£354 – £630", "~83% lower (Midpoint: ~83.0%)"],
+          ["Molar Root Canal (Rotary Endodontics)", "£645 – £1,060", CANONICAL_PRICES.rct_molar, "~£47 – £79", "~93% lower (Midpoint: ~92.6%)"],
+          ["Monolithic Zirconia Crown (Lab-Milled)", "£850 – £1,337", CANONICAL_PRICES.crown_zirconia, "~£79 – £142", "~89% – 91% lower (Midpoint: ~89.9%)"],
+          ["Dental Crown — PFM", "£720 – £1,100", CANONICAL_PRICES.crown_pfm, "~£31 – £47", "~95% – 96% lower (Midpoint: ~95.7%)"],
+          ["Dental Crown — Ceramic", "£720 – £1,100", CANONICAL_PRICES.crown_ceramic, "~£47 – £79", "~93% lower (Midpoint: ~93.1%)"],
+          ["Tooth Extraction (Routine / Simple)", "£250", CANONICAL_PRICES.extraction_overall, "~£12 – £39", "~84% – 95% lower (Midpoint: ~89.8%)"],
+          ["Wisdom Tooth Extraction (Surgical / Impacted)", "£540", CANONICAL_PRICES.wisdom_overall, "~£31 – £79", "~85% – 94% lower (Midpoint: ~89.8%)"],
+          ["Comprehensive Clear Aligners", "£2,500 – £4,500", CANONICAL_PRICES.clear_aligners_overall, "~£630 – £1,969", "~56% – 75% lower (Midpoint: ~62.9%)"],
+          ["Porcelain Veneer (Per Tooth)", "£650 – £1,200", CANONICAL_PRICES.veneers_porcelain, "~£63 – £189", "~84% – 90% lower (Midpoint: ~86.4%)"]
         ]
       }
     },
@@ -1620,20 +1612,21 @@ export const BLOG_POSTS: BlogPost[] = [
     {
       heading: "2. Procedure Fee Comparison: USA vs. India (2026)",
       paragraphs: [
-        "The following table compares typical private US dental fee benchmarks with published treatment fees at Aureva Dental in Bangalore (illustrative INR conversion based on the exchange rate on the article's update date of October 4, 2026: $1 USD ≈ ₹96 INR):"
+        "The following table compares typical private US dental fee benchmarks with published treatment fees at Aureva Dental in Bangalore (illustrative INR conversion based on the exchange rate on the article's update date of October 4, 2026: $1 USD ≈ 96 INR):"
       ],
       table: {
-        headers: ["Procedure", "US Self-Pay Fee Range ($)", "India Cost (INR ₹)", "India Equiv. ($ USD)", "Approximate Difference"],
+        headers: ["Procedure", "US Self-Pay Fee Range ($)", "India Cost (INR)", "India Equiv. ($ USD)", "Approximate Difference"],
         rows: [
-          ["Dental Implant (Fixture Only)", "$1,646 – $2,800", "₹35,000 – ₹60,000", "~$365 – $625", "~78% lower (Midpoint: ~77.7%)"],
-          ["Full Implant + Abutment + Crown", "$3,000 – $5,500", "₹45,000 – ₹80,000", "~$469 – $833", "~84% – 85% lower (Midpoint: ~84.7%)"],
-          ["Molar Root Canal (Rotary Endodontics)", "$1,030 – $2,471", "₹6,000 – ₹10,000", "~$63 – $104", "~94% – 96% lower (Midpoint: ~95.2%)"],
-          ["Monolithic Zirconia Crown (Lab-Milled)", "$915 – $2,500", "₹10,000 – ₹18,000", "~$104 – $188", "~89% – 93% lower (Midpoint: ~91.5%)"],
-          ["Dental Crown — PFM", "$915 – $2,000", "₹4,000 – ₹6,000", "~$42 – $63", "~95% – 97% lower (Midpoint: ~96.5%)"],
-          ["Dental Crown — Ceramic", "$915 – $2,000", "₹6,000 – ₹10,000", "~$63 – $104", "~93% – 95% lower (Midpoint: ~94.3%)"],
-          ["Tooth Extraction (Simple to Surgical)", "$150 – $702", "₹1,500 – ₹10,000", "~$16 – $104", "~85% – 90% lower (Midpoint: ~86.0%)"],
-          ["Comprehensive Clear Aligners", "$3,500 – $7,500", "₹80,000 – ₹2,50,000", "~$833 – $2,604", "~65% – 76% lower (Midpoint: ~68.8%)"],
-          ["Porcelain Veneer (Per Tooth)", "$1,020 – $2,506", "₹8,000 – ₹24,000", "~$83 – $250", "~90% – 92% lower (Midpoint: ~90.5%)"]
+          ["Dental Implant (Fixture Only)", "$1,646 – $2,800", CANONICAL_PRICES.implant_single_fixture, "~$365 – $625", "~78% lower (Midpoint: ~77.7%)"],
+          ["Full Implant + Abutment + Crown", "$3,000 – $5,500", CANONICAL_PRICES.implant_with_crown, "~$469 – $833", "~84% – 85% lower (Midpoint: ~84.7%)"],
+          ["Molar Root Canal (Rotary Endodontics)", "$1,030 – $2,471", CANONICAL_PRICES.rct_molar, "~$63 – $104", "~94% – 96% lower (Midpoint: ~95.2%)"],
+          ["Monolithic Zirconia Crown (Lab-Milled)", "$915 – $2,500", CANONICAL_PRICES.crown_zirconia, "~$104 – $188", "~89% – 93% lower (Midpoint: ~91.5%)"],
+          ["Dental Crown — PFM", "$915 – $2,000", CANONICAL_PRICES.crown_pfm, "~$42 – $63", "~95% – 97% lower (Midpoint: ~96.5%)"],
+          ["Dental Crown — Ceramic", "$915 – $2,000", CANONICAL_PRICES.crown_ceramic, "~$63 – $104", "~93% – 95% lower (Midpoint: ~94.3%)"],
+          ["Tooth Extraction (Routine / Simple)", "$150", CANONICAL_PRICES.extraction_overall, "~$16 – $52", "~65% – 90% lower (Midpoint: ~77.4%)"],
+          ["Wisdom Tooth Extraction (Surgical / Impacted)", "$702", CANONICAL_PRICES.wisdom_overall, "~$42 – $104", "~85% – 94% lower (Midpoint: ~89.6%)"],
+          ["Comprehensive Clear Aligners", "$3,500 – $7,500", CANONICAL_PRICES.clear_aligners_overall, "~$833 – $2,604", "~65% – 76% lower (Midpoint: ~68.8%)"],
+          ["Porcelain Veneer (Per Tooth)", "$1,020 – $2,506", CANONICAL_PRICES.veneers_porcelain, "~$83 – $250", "~90% – 92% lower (Midpoint: ~90.5%)"]
         ]
       }
     },
@@ -1671,14 +1664,14 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "dental-crown-cost-bangalore",
     title: "Dental Crown Cost in Bangalore (2026): PFM, Zirconia, E-max | Aureva Dental",
     headline: "Dental Crown Cost in Bangalore: Which Crown, and What It Costs",
-    metaDescription: "Dental crown cost in Bangalore: PFM ₹4,000–₹6,000, ceramic ₹6,000–₹10,000, zirconia and E-max ₹10,000–₹18,000. Which crown suits which tooth.",
+    metaDescription: `Dental crown cost in Bangalore: PFM ${CANONICAL_PRICES.crown_pfm}, ceramic ${CANONICAL_PRICES.crown_ceramic}, zirconia and E-max ${CANONICAL_PRICES.crown_zirconia}. Which crown suits which tooth.`,
     author: "Aureva Dental",
     date: "November 2026",
     datePublished: "2026-11-20",
     dateModified: "2026-11-20",
     category: "Root Canal & Crowns",
     readTime: "5 min read",
-    excerpt: "Dental crown cost in Bangalore: PFM ₹4,000–₹6,000, ceramic ₹6,000–₹10,000, zirconia and E-max ₹10,000–₹18,000. Which crown suits which tooth.",
+    excerpt: `Dental crown cost in Bangalore: PFM ${CANONICAL_PRICES.crown_pfm}, ceramic ${CANONICAL_PRICES.crown_ceramic}, zirconia and E-max ${CANONICAL_PRICES.crown_zirconia}. Which crown suits which tooth.`,
     relatedTreatmentUrl: "/dental-crowns-hennur",
     relatedTreatmentName: "Dental Crowns in Hennur",
     introParagraphs: [
@@ -1905,14 +1898,14 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "teeth-cleaning-cost-bangalore",
     title: "Teeth Cleaning (Scaling) Cost in Bangalore (2026) | Aureva Dental",
     headline: "Teeth Cleaning (Scaling and Polishing) Cost in Bangalore",
-    metaDescription: "Teeth cleaning cost in Bangalore: scaling and polishing ₹2,000–₹5,000, deep scaling ₹8,000–₹15,000 at our Hennur clinic. Does scaling damage teeth? Answers.",
+    metaDescription: `Teeth cleaning cost in Bangalore: scaling and polishing ${CANONICAL_PRICES.scaling_routine}, deep scaling ${CANONICAL_PRICES.scaling_deep} at our Hennur clinic. Does scaling damage teeth? Answers.`,
     author: "Aureva Dental",
     date: "November 2026",
     datePublished: "2026-11-20",
     dateModified: "2026-11-20",
     category: "Preventive Care",
     readTime: "5 min read",
-    excerpt: "Teeth cleaning cost in Bangalore: scaling and polishing ₹2,000–₹5,000, deep scaling ₹8,000–₹15,000 at our Hennur clinic. Does scaling damage teeth? Answers.",
+    excerpt: `Teeth cleaning cost in Bangalore: scaling and polishing ${CANONICAL_PRICES.scaling_routine}, deep scaling ${CANONICAL_PRICES.scaling_deep} at our Hennur clinic. Does scaling damage teeth? Answers.`,
     relatedTreatmentUrl: "/treatments/scaling-and-polishing",
     relatedTreatmentName: "Scaling & Polishing",
     introParagraphs: [

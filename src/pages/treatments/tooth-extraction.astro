@@ -1,4 +1,5 @@
 ---
+import { CANONICAL_PRICES } from '../../data/prices';
 import Layout from '../../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../../utils/seoSchemas';
 
@@ -28,7 +29,7 @@ const faqs = [
   },
   {
     question: "What is the cost of tooth extraction in Hennur, Bangalore?",
-    answer: "At Aureva Dental Hennur, simple extractions of front or loose teeth range from ₹1,500 to ₹2,000, simple posterior molar extractions range from ₹3,000 to ₹4,000, and surgical extractions for fractured roots or RCT-treated teeth range from ₹3,500 to ₹5,000. Transparent pricing is provided upfront following your low-radiation digital RVG X-ray."
+    answer: "At Aureva Dental Hennur, simple extractions of front or loose teeth range from ${CANONICAL_PRICES.extraction_front_loose}, simple posterior molar extractions range from ${CANONICAL_PRICES.extraction_back_tooth}, and surgical extractions for fractured roots or RCT-treated teeth range from ${CANONICAL_PRICES.extraction_surgical}. Transparent pricing is provided upfront following your low-radiation digital RVG X-ray."
   }
 ];
 
@@ -91,10 +92,10 @@ const seoProps = {
         <!-- Price-First Summary Block -->
         <div class="p-4 sm:p-5 rounded-2xl bg-japandi-sand/60 border border-japandi-clay/50 w-full max-w-2xl space-y-2">
           <p class="text-xs sm:text-sm font-semibold text-japandi-charcoal">
-            Front or mobile tooth ₹1,500 – ₹2,000 · Premolar to second molar ₹3,000 – ₹4,000 · Fractured root or RCT-treated tooth ₹3,500 – ₹5,000
+            Front or mobile tooth {CANONICAL_PRICES.extraction_front_loose} · Premolar to second molar {CANONICAL_PRICES.extraction_back_tooth} · Fractured root or RCT-treated tooth {CANONICAL_PRICES.extraction_surgical}
           </p>
           <p class="text-xs text-japandi-earth font-light">
-            ₹600 consultation · includes digital X-ray · valid for 6 months.
+            {CANONICAL_PRICES.consultation} consultation · includes digital X-ray · valid for 6 months.
           </p>
           <p class="text-xs text-japandi-moss font-medium pt-1">
             Wisdom teeth: see <a href="/wisdom-tooth-removal-hennur" class="underline hover:text-japandi-charcoal">wisdom tooth removal</a>.

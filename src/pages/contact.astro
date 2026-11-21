@@ -1,4 +1,5 @@
 ---
+import { CANONICAL_PRICES } from '../data/prices';
 import Layout from '../layouts/Layout.astro';
 import { getConfig } from '../utils/getConfig';
 import { generateBreadcrumbSchema, generateDentistSchema } from '../utils/seoSchemas';
@@ -32,7 +33,7 @@ const contactFaqs = [
   },
   {
     question: "What is the consultation fee at Aureva Dental?",
-    answer: "Our consultation is ₹600 (includes digital X-ray, valid for 6 months), including high-resolution digital RVG imaging and a personalized treatment roadmap."
+    answer: "Our consultation is ${CANONICAL_PRICES.consultation} (includes digital X-ray, valid for 6 months), including high-resolution digital RVG imaging and a personalized treatment roadmap."
   }
 ];
 

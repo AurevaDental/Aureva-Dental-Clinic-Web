@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas';
+import { CANONICAL_PRICES } from '../data/prices';
 
 
 const pageTitle = "International Patient Dental Care in North Bangalore | Aureva Dental";
@@ -103,21 +104,22 @@ const treatmentTimelines = [
 ];
 
 const publishedPricing = [
-  { service: "New Patient Consultation (Incl. RVG Digital X-ray)", fee: "₹600", note: "Comprehensive oral examination and low-radiation digital radiography." },
-  { service: "Routine Scaling & Polishing", fee: "₹2,000 – ₹5,000", note: "Ultrasonic scaling and prophylactic polishing." },
-  { service: "Tooth Filling (Composite / Glass Ionomer)", fee: "₹1,500 – ₹4,000", note: "Tooth-colored direct restoration depending on cavity size." },
-  { service: "Root Canal Treatment — Anterior Tooth", fee: "₹4,000 – ₹6,000", note: "Single-root endodontic therapy." },
-  { service: "Root Canal Treatment — Premolar", fee: "₹5,000 – ₹8,000", note: "Intermediate canal endodontic treatment." },
-  { service: "Root Canal Treatment — Molar", fee: "₹6,000 – ₹10,000", note: "Multi-canal posterior endodontic treatment." },
-  { service: "Re-Root Canal Treatment", fee: "₹8,000 – ₹10,000", note: "Retreatment of previously failing root canals." },
-  { service: "Dental Crown — PFM", fee: "₹4,000 – ₹6,000", note: "Porcelain-fused-to-metal restoration." },
-  { service: "Dental Crown — Ceramic", fee: "₹6,000 – ₹10,000", note: "All-ceramic aesthetic restoration." },
-  { service: "Dental Crown — Monolithic Zirconia", fee: "₹10,000 – ₹18,000", note: "High-strength, metal-free lab-milled zirconia crown." },
-  { service: "Dental Implant (Per Fixture)", fee: "₹35,000 – ₹60,000", note: "Surgical placement of grade-4 titanium or zirconia fixture." },
-  { service: "Dental Implant with Final Crown", fee: "₹45,000 – ₹80,000", note: "Complete single-tooth implant fixture, abutment, and crown." },
-  { service: "Tooth Extraction (Simple to Surgical)", fee: "₹1,500 – ₹10,000", note: "Routine extraction to surgical / impacted wisdom tooth removal." },
-  { service: "Clear Aligners (Full Arch Series)", fee: "₹80,000 – ₹2,50,000", note: "Custom transparent aligner series based on case complexity." },
-  { service: "Porcelain Veneers (Per Tooth)", fee: "₹8,000 – ₹24,000", note: "Custom aesthetic porcelain restoration per unit." }
+  { service: "New Patient Consultation (Incl. RVG Digital X-ray)", fee: CANONICAL_PRICES.consultation, note: "Comprehensive oral examination and low-radiation digital radiography." },
+  { service: "Routine Scaling & Polishing", fee: CANONICAL_PRICES.scaling_routine, note: "Ultrasonic scaling and prophylactic polishing." },
+  { service: "Tooth Filling (Composite / Glass Ionomer)", fee: CANONICAL_PRICES.tooth_filling, note: "Tooth-colored direct restoration depending on cavity size." },
+  { service: "Root Canal Treatment — Anterior Tooth", fee: CANONICAL_PRICES.rct_anterior, note: "Single-root endodontic therapy." },
+  { service: "Root Canal Treatment — Premolar", fee: CANONICAL_PRICES.rct_premolar, note: "Intermediate canal endodontic treatment." },
+  { service: "Root Canal Treatment — Molar", fee: CANONICAL_PRICES.rct_molar, note: "Multi-canal posterior endodontic treatment." },
+  { service: "Re-Root Canal Treatment", fee: CANONICAL_PRICES.rct_re_treatment, note: "Retreatment of previously failing root canals." },
+  { service: "Dental Crown — PFM", fee: CANONICAL_PRICES.crown_pfm, note: "Porcelain-fused-to-metal restoration." },
+  { service: "Dental Crown — Ceramic", fee: CANONICAL_PRICES.crown_ceramic, note: "All-ceramic aesthetic restoration." },
+  { service: "Dental Crown — Monolithic Zirconia", fee: CANONICAL_PRICES.crown_zirconia, note: "High-strength, metal-free lab-milled zirconia crown." },
+  { service: "Dental Implant (Per Fixture)", fee: CANONICAL_PRICES.implant_single_fixture, note: "Surgical placement of grade-4 titanium or zirconia fixture." },
+  { service: "Dental Implant with Final Crown", fee: CANONICAL_PRICES.implant_with_crown, note: "Complete single-tooth implant fixture, abutment, and crown." },
+  { service: "Tooth Extraction", fee: CANONICAL_PRICES.extraction_overall, note: "Routine extraction to surgical removal." },
+  { service: "Wisdom Tooth Removal", fee: CANONICAL_PRICES.wisdom_overall, note: "Surgical / impacted wisdom tooth removal." },
+  { service: "Clear Aligners (Full Arch Series)", fee: CANONICAL_PRICES.clear_aligners_overall, note: "Custom transparent aligner series based on case complexity." },
+  { service: "Porcelain Veneers (Per Tooth)", fee: CANONICAL_PRICES.veneers_porcelain, note: "Custom aesthetic porcelain restoration per unit." }
 ];
 ---
 
@@ -297,8 +299,8 @@ const publishedPricing = [
             <div class="flex items-start gap-3.5 pb-4 border-b border-japandi-clay/30">
               <span class="w-8 h-8 rounded-full bg-japandi-moss text-japandi-cream flex items-center justify-center font-bold text-xs shrink-0">1</span>
               <div>
-                <strong class="text-japandi-charcoal block font-medium">Approximate airport-to-clinic cab fare (Uber/Ola, varies with demand): ₹800 – ₹1,200</strong>
-                <p class="text-japandi-earth font-light mt-0.5">Available 24/7 at designated airport pickup bays. Typical fares to North Bangalore range between ₹800 and ₹1,200 depending on peak travel hours and demand.</p>
+                <strong class="text-japandi-charcoal block font-medium">Approximate airport-to-clinic cab fare (Uber/Ola, varies with demand): {CANONICAL_PRICES.airport_cab_fare}</strong>
+                <p class="text-japandi-earth font-light mt-0.5">Available 24/7 at designated airport pickup bays. Typical fares to North Bangalore range between {CANONICAL_PRICES.airport_cab_fare} depending on peak travel hours and demand.</p>
               </div>
             </div>
 
@@ -515,7 +517,7 @@ const publishedPricing = [
           <thead>
             <tr class="border-b border-japandi-clay/40 bg-japandi-sand/70">
               <th class="py-4 px-6 font-serif font-medium text-japandi-charcoal">Treatment Service</th>
-              <th class="py-4 px-6 font-serif font-medium text-japandi-moss">Published Fee (INR ₹)</th>
+              <th class="py-4 px-6 font-serif font-medium text-japandi-moss">Published Fee (INR)</th>
               <th class="py-4 px-6 font-serif font-medium text-japandi-earth">Clinical Scope &amp; Inclusions</th>
             </tr>
           </thead>

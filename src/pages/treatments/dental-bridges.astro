@@ -1,4 +1,5 @@
 ---
+import { CANONICAL_PRICES } from '../../data/prices';
 import Layout from '../../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../../utils/seoSchemas';
 
@@ -28,7 +29,7 @@ const faqs = [
   },
   {
     question: "What is the cost of dental bridges in Hennur, Bangalore?",
-    answer: "At Aureva Dental Hennur, dental bridge pricing is calculated per unit (tooth). PFM bridge units range from ₹4,000 to ₹6,000 per unit, Ceramic units range from ₹6,000 to ₹10,000 per unit, Monolithic Zirconia units range from ₹10,000 to ₹18,000 per unit, and E-Max units range from ₹10,000 to ₹18,000 per unit. A 3-unit bridge replaces one missing tooth."
+    answer: "At Aureva Dental Hennur, dental bridge pricing is calculated per unit (tooth). PFM bridge units range from ${CANONICAL_PRICES.crown_pfm} per unit, Ceramic units range from ${CANONICAL_PRICES.crown_ceramic} per unit, Monolithic Zirconia units range from ${CANONICAL_PRICES.crown_zirconia} per unit, and E-Max units range from ${CANONICAL_PRICES.crown_emax} per unit. A 3-unit bridge replaces one missing tooth."
   }
 ];
 

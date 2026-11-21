@@ -1,4 +1,5 @@
 ---
+import { CANONICAL_PRICES } from '../../data/prices';
 import Layout from '../../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../../utils/seoSchemas';
 
@@ -28,7 +29,7 @@ const faqs = [
   },
   {
     question: "What is the cost of a smile makeover in Hennur, Bangalore?",
-    answer: "At Aureva Dental Hennur, direct composite veneers range from ₹4,500 to ₹8,000 per tooth. Hand-crafted porcelain and E-Max ceramic veneers range from ₹8,000 to ₹24,000 per tooth depending on aesthetic customization. Complete bridal, groom, and full-mouth rehabilitation packages are tailored with zero-cost EMI plans."
+    answer: "At Aureva Dental Hennur, direct composite veneers range from ${CANONICAL_PRICES.composite_veneers}. Hand-crafted porcelain and E-Max ceramic veneers range from ${CANONICAL_PRICES.veneers_porcelain} depending on aesthetic customization. Complete bridal, groom, and full-mouth rehabilitation packages are tailored with zero-cost EMI plans."
   }
 ];
 

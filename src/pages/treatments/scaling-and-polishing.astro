@@ -1,4 +1,5 @@
 ---
+import { CANONICAL_PRICES } from '../../data/prices';
 import Layout from '../../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../../utils/seoSchemas';
 import { GOOGLE_REVIEWS_LABEL } from '../../config/clinic';
@@ -29,7 +30,7 @@ const faqs = [
   },
   {
     question: "What is the cost of teeth scaling and polishing in Hennur, Bangalore?",
-    answer: "At Aureva Dental Hennur, routine ultrasonic scaling and prophy polishing ranges from ₹2,000 to ₹5,000. Advanced deep subgingival scaling or periodontal root planing for heavy calculus and swollen bleeding gums ranges from ₹8,000 to ₹15,000 across all four quadrants."
+    answer: "At Aureva Dental Hennur, routine ultrasonic scaling and prophy polishing ranges from ${CANONICAL_PRICES.scaling_routine}. Advanced deep subgingival scaling or periodontal root planing for heavy calculus and swollen bleeding gums ranges from ${CANONICAL_PRICES.scaling_deep} across all four quadrants."
   }
 ];
 
@@ -265,9 +266,9 @@ const seoProps = {
           <div class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
               <h3 class="font-serif text-base font-medium text-japandi-charcoal">Comprehensive Consultation &amp; Digital RVG X-Ray</h3>
-              <p class="text-xs text-japandi-earth font-light">₹600 consultation · includes digital X-ray · valid for 6 months</p>
+              <p class="text-xs text-japandi-earth font-light">{CANONICAL_PRICES.consultation} consultation · includes digital X-ray · valid for 6 months</p>
             </div>
-            <div class="text-base font-serif font-semibold text-japandi-moss shrink-0">₹600</div>
+            <div class="text-base font-serif font-semibold text-japandi-moss shrink-0">{CANONICAL_PRICES.consultation}</div>
           </div>
 
           <div class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
@@ -275,7 +276,7 @@ const seoProps = {
               <h3 class="font-serif text-base font-medium text-japandi-charcoal">Routine Ultrasonic Scaling &amp; Stain Polishing</h3>
               <p class="text-xs text-japandi-earth font-light">Plaque &amp; tartar removal plus stain buffing across all teeth</p>
             </div>
-            <div class="text-base font-serif font-semibold text-japandi-moss shrink-0">₹2,000 – ₹5,000</div>
+            <div class="text-base font-serif font-semibold text-japandi-moss shrink-0">{CANONICAL_PRICES.scaling_routine}</div>
           </div>
 
           <div class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
@@ -283,7 +284,7 @@ const seoProps = {
               <h3 class="font-serif text-base font-medium text-japandi-charcoal">Deep Periodontal Scaling / Root Planing</h3>
               <p class="text-xs text-japandi-earth font-light">Subgingival cleaning for heavy calculus, pocket therapy &amp; bleeding gums</p>
             </div>
-            <div class="text-base font-serif font-semibold text-japandi-moss shrink-0">₹8,000 – ₹15,000</div>
+            <div class="text-base font-serif font-semibold text-japandi-moss shrink-0">{CANONICAL_PRICES.scaling_deep}</div>
           </div>
         </div>
         <div class="pt-2 text-sm">

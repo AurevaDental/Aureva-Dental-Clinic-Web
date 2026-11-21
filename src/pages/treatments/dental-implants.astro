@@ -1,4 +1,5 @@
 ---
+import { CANONICAL_PRICES } from '../../data/prices';
 import Layout from '../../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../../utils/seoSchemas';
 
@@ -24,7 +25,7 @@ const faqs = [
   },
   {
     question: "What is the cost of dental implants at Aureva Dental in Bangalore?",
-    answer: "At Aureva Dental, single dental implant fixtures range from ₹35,000 to ₹60,000 depending on the implant brand system (Nobel Biocare, Straumann, Osstem) and surgical requirements. An implant with a custom lab-milled zirconia crown ranges between ₹45,000 and ₹80,000. Full-mouth rehabilitations start from ₹2,50,000 onwards. We accept all major Credit Cards, Debit Cards, UPI, and Net Banking; post-payment monthly EMI conversion is available via your issuing bank."
+    answer: "At Aureva Dental, single dental implant fixtures range from ${CANONICAL_PRICES.implant_single_fixture} depending on the implant brand system (Nobel Biocare, Straumann, Osstem) and surgical requirements. An implant with a custom lab-milled zirconia crown ranges between ${CANONICAL_PRICES.implant_with_crown}. Full-mouth rehabilitations start from ${CANONICAL_PRICES.full_mouth_implants_from}. We accept all major Credit Cards, Debit Cards, UPI, and Net Banking; post-payment monthly EMI conversion is available via your issuing bank."
   }
 ];
 
@@ -150,7 +151,7 @@ const seoProps = {
 
           <div class="mt-8 pt-6 border-t border-japandi-clay/40 flex items-center justify-between text-xs">
             <span class="text-japandi-earth">Consultation & RVG X-ray</span>
-            <span class="font-serif text-base font-semibold text-japandi-charcoal">₹600</span>
+            <span class="font-serif text-base font-semibold text-japandi-charcoal">{CANONICAL_PRICES.consultation}</span>
           </div>
         </div>
       </div>
@@ -180,7 +181,7 @@ const seoProps = {
             </p>
           </div>
           <div class="pt-4 border-t border-japandi-clay/30 text-xs text-japandi-charcoal font-medium">
-            ₹35,000 – ₹60,000 / implant
+            {CANONICAL_PRICES.implant_single_fixture} / implant
           </div>
         </div>
 
@@ -206,7 +207,7 @@ const seoProps = {
             </p>
           </div>
           <div class="pt-4 border-t border-japandi-clay/30 text-xs text-japandi-charcoal font-medium">
-            ₹2,50,000 onwards / arch
+            {CANONICAL_PRICES.full_mouth_implants_from}
           </div>
         </div>
       </div>
@@ -223,7 +224,7 @@ const seoProps = {
         </h2>
         <div class="space-y-4 text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
           <p>
-            Traditional dental implants often relied on invasive gum incising. At Aureva Dental Hennur, our surgeons utilize <strong class="text-japandi-charcoal font-medium">3D Computer-Guided Surgical Stents</strong> mapped from high-resolution digital scans.
+            Traditional dental implants often relied on invasive gum incising. At Aureva Dental Hennur, implant position is planned from your X-rays and 3D scans before surgery.
           </p>
           <p>
             This enables micro-surgical "keyhole" insertion with millimeter depth control, bypassing vital nerve pathways and maxillary sinus cavities. Results include minimal swelling, virtually zero bleeding, and accelerated osseointegration.
@@ -281,23 +282,23 @@ const seoProps = {
           <div class="space-y-3 text-xs text-japandi-earth font-light">
             <div class="flex justify-between border-b border-japandi-clay/20 pb-2">
               <span>New Patient Consultation & RVG</span>
-              <span class="font-semibold text-japandi-charcoal">₹600</span>
+              <span class="font-semibold text-japandi-charcoal">{CANONICAL_PRICES.consultation}</span>
             </div>
             <div class="flex justify-between border-b border-japandi-clay/20 pb-2">
               <span>Dental Implant Post (Per Unit)</span>
-              <span class="font-semibold text-japandi-charcoal">₹35,000 – ₹60,000</span>
+              <span class="font-semibold text-japandi-charcoal">{CANONICAL_PRICES.implant_single_fixture}</span>
             </div>
             <div class="flex justify-between border-b border-japandi-clay/20 pb-2">
               <span>Implant with Custom Ceramic Crown</span>
-              <span class="font-semibold text-japandi-charcoal">₹45,000 – ₹80,000</span>
+              <span class="font-semibold text-japandi-charcoal">{CANONICAL_PRICES.implant_with_crown}</span>
             </div>
             <div class="flex justify-between border-b border-japandi-clay/20 pb-2">
               <span>Bone Grafting (If Needed)</span>
-              <span class="font-semibold text-japandi-charcoal">₹15,000 – ₹20,000</span>
+              <span class="font-semibold text-japandi-charcoal">{CANONICAL_PRICES.bone_graft}</span>
             </div>
             <div class="flex justify-between">
               <span>Sinus Lift (If Needed)</span>
-              <span class="font-semibold text-japandi-charcoal">₹15,000 – ₹20,000</span>
+              <span class="font-semibold text-japandi-charcoal">{CANONICAL_PRICES.sinus_lift}</span>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 ---
+import { CANONICAL_PRICES } from '../../data/prices';
 import Layout from '../../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../../utils/seoSchemas';
 
@@ -28,7 +29,7 @@ const faqs = [
   },
   {
     question: "What is the cost of emergency dental care at Aureva Dental Hennur?",
-    answer: "Emergency visits are charged as the ₹600 consultation (includes digital X-ray, valid 6 months) plus the normal price of the treatment. For example: temporary filling ₹500 – ₹1,000, broken tooth composite repair ₹1,500 – ₹4,000, incision and drainage ₹2,000 – ₹3,000, routine extraction ₹1,500 – ₹5,000 depending on the tooth, and root canal ₹4,000 – ₹10,000. Prices are quoted before treatment begins."
+    answer: "Emergency visits are charged as the ${CANONICAL_PRICES.consultation} consultation (includes digital X-ray, valid 6 months) plus the normal price of the treatment. For example: temporary filling ${CANONICAL_PRICES.temporary_filling}, broken tooth composite repair ${CANONICAL_PRICES.composite_bonding}, incision and drainage ${CANONICAL_PRICES.incision_drainage}, routine extraction ${CANONICAL_PRICES.extraction_overall} depending on the tooth, and root canal ${CANONICAL_PRICES.rct_overall}. Prices are quoted before treatment begins."
   }
 ];
 
@@ -158,36 +159,36 @@ const seoProps = {
       <div class="space-y-2">
         <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">Emergency Care Fees &amp; Transparent Pricing</h2>
         <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
-          Emergency visits are charged as the ₹600 consultation (includes digital X-ray, valid 6 months) plus the normal price of the treatment.
+          Emergency visits are charged as the {CANONICAL_PRICES.consultation} consultation (includes digital X-ray, valid 6 months) plus the normal price of the treatment.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-light min-h-[300px]">
         <div class="p-4 rounded-2xl bg-japandi-cream border border-japandi-clay/40 flex justify-between items-center min-h-[58px]">
           <span class="text-japandi-charcoal font-medium">Temporary filling</span>
-          <span class="text-japandi-moss font-semibold shrink-0 ml-2">₹500 – ₹1,000</span>
+          <span class="text-japandi-moss font-semibold shrink-0 ml-2">{CANONICAL_PRICES.temporary_filling}</span>
         </div>
         <div class="p-4 rounded-2xl bg-japandi-cream border border-japandi-clay/40 flex justify-between items-center min-h-[58px]">
           <span class="text-japandi-charcoal font-medium">Broken tooth composite repair</span>
-          <span class="text-japandi-moss font-semibold shrink-0 ml-2">₹1,500 – ₹4,000</span>
+          <span class="text-japandi-moss font-semibold shrink-0 ml-2">{CANONICAL_PRICES.composite_bonding}</span>
         </div>
         <div class="p-4 rounded-2xl bg-japandi-cream border border-japandi-clay/40 flex justify-between items-center min-h-[58px]">
           <span class="text-japandi-charcoal font-medium">Incision and drainage</span>
-          <span class="text-japandi-moss font-semibold shrink-0 ml-2">₹2,000 – ₹3,000</span>
+          <span class="text-japandi-moss font-semibold shrink-0 ml-2">{CANONICAL_PRICES.incision_drainage}</span>
         </div>
         <div class="p-4 rounded-2xl bg-japandi-cream border border-japandi-clay/40 flex justify-between items-center min-h-[58px]">
           <div>
             <span class="text-japandi-charcoal font-medium">Routine extraction</span>
             <div class="text-[11px] text-japandi-earth">Depending on the tooth · <a href="/treatments/tooth-extraction" class="text-japandi-moss underline underline-offset-2">learn more</a></div>
           </div>
-          <span class="text-japandi-moss font-semibold shrink-0 ml-2">₹1,500 – ₹5,000</span>
+          <span class="text-japandi-moss font-semibold shrink-0 ml-2">{CANONICAL_PRICES.extraction_overall}</span>
         </div>
         <div class="p-4 rounded-2xl bg-japandi-cream border border-japandi-clay/40 sm:col-span-2 flex justify-between items-center min-h-[58px]">
           <div>
             <span class="text-japandi-charcoal font-medium">Root canal</span>
             <div class="text-[11px] text-japandi-earth">Depending on the tooth · <a href="/root-canal-treatment-hennur" class="text-japandi-moss underline underline-offset-2">learn more</a></div>
           </div>
-          <span class="text-japandi-moss font-semibold shrink-0 ml-2">₹4,000 – ₹10,000</span>
+          <span class="text-japandi-moss font-semibold shrink-0 ml-2">{CANONICAL_PRICES.rct_overall}</span>
         </div>
       </div>
     </div>

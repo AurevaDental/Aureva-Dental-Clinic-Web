@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { CANONICAL_PRICES, formatExactPrice } from '../../data/prices';
 import { generateBreadcrumbSchema, generateBlogPostSchema, generateFaqSchema } from '../../utils/seoSchemas';
 
 
@@ -26,7 +27,7 @@ const faqs = [
   },
   {
     question: "What does Aureva Dental's published pricing include?",
-    answer: "Aureva Dental publishes transparent treatment fee ranges in Indian Rupees (INR). For example, a single molar root canal is ₹6,000 to ₹10,000, and a monolithic zirconia crown is ₹10,000 to ₹18,000. Fees are confirmed in a written clinical plan following in-person clinical assessment and diagnostic radiographs."
+    answer: "Aureva Dental publishes transparent treatment fee ranges in Indian Rupees (INR). For example, a single molar root canal is ${CANONICAL_PRICES.rct_molar}, and a monolithic zirconia crown is ${CANONICAL_PRICES.crown_zirconia}. Fees are confirmed in a written clinical plan following in-person clinical assessment and diagnostic radiographs."
   },
   {
     question: "Can UK travelers receive an itemized receipt for insurance or reimbursement?",
@@ -61,121 +62,170 @@ const seoProps = {
   schemaMarkup: [breadcrumbSchema, blogPostSchema, faqSchema]
 };
 
-// Data comparison table using exact published Aureva pricing & verified UK private benchmarks
-// Exchange rate snapshot date: October 4, 2026 (£1 GBP ≈ ₹127 INR)
-const articleUpdateDate = "October 4, 2026";
-const exchangeRateSnapshot = "£1 GBP ≈ ₹127 INR";
-
-const costComparisons = [
-  {
-    treatment: "Dental Implant with Crown (Complete Single Tooth)",
-    aurevaPriceInr: "₹45,000 – ₹80,000",
-    foreignBenchmark: "£2,095 – £3,700",
-    currency: "GBP (£)",
-    illustrativeInr: "₹2,66,065 – ₹4,69,900",
-    approxDifference: "~83% lower (Midpoint: ~83.0%)",
-    sourceAndType: "UK private-practice range",
-    sourceLabel: "Dental Art Implant Clinic (£2,095–£2,970) & Bow Lane Dental Group (£3,700)",
-    sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
-    inclusions: "Grade-4 titanium implant fixture, custom abutment, and final crown. Bone grafting or sinus lifts, if required, are separate."
-  },
-  {
-    treatment: "Dental Implant (Fixture Only)",
-    aurevaPriceInr: "₹35,000 – ₹60,000",
-    foreignBenchmark: "£990 – £1,800",
-    currency: "GBP (£)",
-    illustrativeInr: "₹1,25,730 – ₹2,28,600",
-    approxDifference: "~72% – 74% lower (Midpoint: ~73.2%)",
-    sourceAndType: "UK private-practice range",
-    sourceLabel: "Dental Art Implant Clinic (£990 fixture) & illustrative Bupa Dental Care practice guides (£1,200–£1,800)",
-    sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
-    inclusions: "Surgical placement of titanium or zirconia fixture. Abutment and final crown billed separately based on material choice."
-  },
-  {
-    treatment: "Root Canal Treatment — Molar (Posterior)",
-    aurevaPriceInr: "₹6,000 – ₹10,000",
-    foreignBenchmark: "£645 – £1,060",
-    currency: "GBP (£)",
-    illustrativeInr: "₹81,915 – ₹1,34,620",
-    approxDifference: "~93% lower (Midpoint: ~92.6%)",
-    sourceAndType: "UK private-practice range",
-    sourceLabel: "Bupa Dental Care Manchester St Ann's Square (£645) & Bow Lane Dental Group specialist endodontics (£1,060)",
-    sourceUrl: "https://www.bupa.co.uk/dental/dental-care/practices/manchester-st-anns-square/treatment-and-prices",
-    inclusions: "Multi-canal rotary endodontic therapy, apex locator verification, and bio-ceramic seal. Final protective crown is separate."
-  },
-  {
-    treatment: "Monolithic Zirconia Crown (lab-milled Milled)",
-    aurevaPriceInr: "₹10,000 – ₹18,000",
-    foreignBenchmark: "£850 – £1,337",
-    currency: "GBP (£)",
-    illustrativeInr: "₹1,07,950 – ₹1,69,799",
-    approxDifference: "~89% – 91% lower (Midpoint: ~89.9%)",
-    sourceAndType: "UK private-practice range",
-    sourceLabel: "Dental Art Implant Clinic (£850 zirconium) & Bow Lane Dental Group (£1,337 crown)",
-    sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
-    inclusions: "High-translucency lab-milled monolithic zirconia crown. Core buildup or post-and-core, if clinically required, billed separately."
-  },
-  {
-    treatment: "Dental Crown — PFM",
-    aurevaPriceInr: "₹4,000 – ₹6,000",
-    foreignBenchmark: "£720 – £1,100",
-    currency: "GBP (£)",
-    illustrativeInr: "₹91,440 – ₹1,39,700",
-    approxDifference: "~95% – 96% lower (Midpoint: ~95.7%)",
-    sourceAndType: "UK private-practice range",
-    sourceLabel: "Dental Art Implant Clinic (£720 PFM) & Bupa Dental Care practice illustrative ceramic guides (£1,100)",
-    sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
-    inclusions: "Custom porcelain-fused-to-metal (PFM) restoration including digital impressions and precision laboratory sintering."
-  },
-  {
-    treatment: "Dental Crown — Ceramic",
-    aurevaPriceInr: "₹6,000 – ₹10,000",
-    foreignBenchmark: "£720 – £1,100",
-    currency: "GBP (£)",
-    illustrativeInr: "₹91,440 – ₹1,39,700",
-    approxDifference: "~93% lower (Midpoint: ~93.1%)",
-    sourceAndType: "UK private-practice range",
-    sourceLabel: "Dental Art Implant Clinic (£720 PFM) & Bupa Dental Care practice illustrative ceramic guides (£1,100)",
-    sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
-    inclusions: "Custom all-ceramic aesthetic crown including digital impressions and precision laboratory sintering."
-  },
-  {
-    treatment: "Tooth Extraction (Simple to Surgical / Impacted)",
-    aurevaPriceInr: "₹1,500 – ₹10,000",
-    foreignBenchmark: "£250 – £540",
-    currency: "GBP (£)",
-    illustrativeInr: "₹31,750 – ₹68,580",
-    approxDifference: "~85% – 95% lower (Midpoint: ~88.5%)",
-    sourceAndType: "UK private-practice example",
-    sourceLabel: "Bupa Dental Care Manchester St Ann's Square (£250 simple, £540 surgical)",
-    sourceUrl: "https://www.bupa.co.uk/dental/dental-care/practices/manchester-st-anns-square/treatment-and-prices",
-    inclusions: "Local anesthesia, clinical extraction, and sutures. Range covers routine extractions (₹1,500) to surgical/impacted wisdom teeth (up to ₹10,000)."
-  },
-  {
-    treatment: "Comprehensive Clear Aligners (Full Arch Series)",
-    aurevaPriceInr: "₹80,000 – ₹2,50,000",
-    foreignBenchmark: "£2,500 – £4,500",
-    currency: "GBP (£)",
-    illustrativeInr: "₹3,17,500 – ₹5,71,500",
-    approxDifference: "~56% – 75% lower (Midpoint: ~62.9%)",
-    sourceAndType: "UK private-practice range",
-    sourceLabel: "MiSmile UK Network (£2,500–£4,500) & Sensu London (£2,700–£3,300+)",
-    sourceUrl: "https://mismile.co.uk",
-    inclusions: "Intraoral digital scan, treatment simulation, and full aligner tray series based on mild, moderate, or complex malocclusion."
-  },
-  {
-    treatment: "Porcelain Veneer (Per Tooth)",
-    aurevaPriceInr: "₹8,000 – ₹24,000",
-    foreignBenchmark: "£650 – £1,200",
-    currency: "GBP (£)",
-    illustrativeInr: "₹82,550 – ₹1,52,400",
-    approxDifference: "~84% – 90% lower (Midpoint: ~86.4%)",
-    sourceAndType: "UK private-practice range",
-    sourceLabel: "Tooth Club UK & UK private cosmetic dentistry fee guides (£650–£1,200)",
-    sourceUrl: "https://www.toothclub.co.uk",
-    inclusions: "Custom aesthetic porcelain veneer per unit including conservative preparation and clinical bonding."
+const FOREIGN_BENCHMARKS = {
+  articleUpdateDate: "October 4, 2026",
+  exchangeRateSnapshot: "£1 GBP ≈ ₹127 INR",
+  rateSnapshotSentence: "All INR conversions use the illustrative snapshot rate of £1 GBP ≈ ₹127 INR as of October 4, 2026.",
+  comparisons: [
+    {
+      id: "implant_with_crown",
+      treatment: "Dental Implant with Crown (Complete Single Tooth)",
+      priceKey: "implant_with_crown",
+      foreignBenchmark: "£2,095 – £3,700",
+      currency: "GBP (£)",
+      illustrativeInr: "₹2,66,065 – ₹4,69,900",
+      approxDifference: "~83% lower (Midpoint: ~83.0%)",
+      sourceAndType: "UK private-practice range",
+      sourceLabel: "Dental Art Implant Clinic (£2,095–£2,970) & Bow Lane Dental Group (£3,700)",
+      sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
+      inclusions: "Grade-4 titanium implant fixture, custom abutment, and final crown. Bone grafting or sinus lifts, if required, are separate."
+    },
+    {
+      id: "implant_fixture",
+      treatment: "Dental Implant (Fixture Only)",
+      priceKey: "implant_single_fixture",
+      foreignBenchmark: "£990 – £1,800",
+      currency: "GBP (£)",
+      illustrativeInr: "₹1,25,730 – ₹2,28,600",
+      approxDifference: "~72% – 74% lower (Midpoint: ~73.2%)",
+      sourceAndType: "UK private-practice range",
+      sourceLabel: "Dental Art Implant Clinic (£990 fixture) & illustrative Bupa Dental Care practice guides (£1,200–£1,800)",
+      sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
+      inclusions: "Surgical placement of titanium or zirconia fixture. Abutment and final crown billed separately based on material choice."
+    },
+    {
+      id: "rct_molar",
+      treatment: "Root Canal Treatment — Molar (Posterior)",
+      priceKey: "rct_molar",
+      foreignBenchmark: "£645 – £1,060",
+      currency: "GBP (£)",
+      illustrativeInr: "₹81,915 – ₹1,34,620",
+      approxDifference: "~93% lower (Midpoint: ~92.6%)",
+      sourceAndType: "UK private-practice range",
+      sourceLabel: "Bupa Dental Care Manchester St Ann's Square (£645) & Bow Lane Dental Group specialist endodontics (£1,060)",
+      sourceUrl: "https://www.bupa.co.uk/dental/dental-care/practices/manchester-st-anns-square/treatment-and-prices",
+      inclusions: "Multi-canal rotary endodontic therapy, apex locator verification, and bio-ceramic seal. Final protective crown is separate."
+    },
+    {
+      id: "crown_zirconia",
+      treatment: "Monolithic Zirconia Crown (lab-milled Milled)",
+      priceKey: "crown_zirconia",
+      foreignBenchmark: "£850 – £1,337",
+      currency: "GBP (£)",
+      illustrativeInr: "₹1,07,950 – ₹1,69,799",
+      approxDifference: "~89% – 91% lower (Midpoint: ~89.9%)",
+      sourceAndType: "UK private-practice range",
+      sourceLabel: "Dental Art Implant Clinic (£850 zirconium) & Bow Lane Dental Group (£1,337 crown)",
+      sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
+      inclusions: "High-translucency lab-milled monolithic zirconia crown. Core buildup or post-and-core, if clinically required, billed separately."
+    },
+    {
+      id: "crown_pfm",
+      treatment: "Dental Crown — PFM",
+      priceKey: "crown_pfm",
+      foreignBenchmark: "£720 – £1,100",
+      currency: "GBP (£)",
+      illustrativeInr: "₹91,440 – ₹1,39,700",
+      approxDifference: "~95% – 96% lower (Midpoint: ~95.7%)",
+      sourceAndType: "UK private-practice range",
+      sourceLabel: "Dental Art Implant Clinic (£720 PFM) & Bupa Dental Care practice illustrative ceramic guides (£1,100)",
+      sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
+      inclusions: "Custom porcelain-fused-to-metal (PFM) restoration including digital impressions and precision laboratory sintering."
+    },
+    {
+      id: "crown_ceramic",
+      treatment: "Dental Crown — Ceramic",
+      priceKey: "crown_ceramic",
+      foreignBenchmark: "£720 – £1,100",
+      currency: "GBP (£)",
+      illustrativeInr: "₹91,440 – ₹1,39,700",
+      approxDifference: "~93% lower (Midpoint: ~93.1%)",
+      sourceAndType: "UK private-practice range",
+      sourceLabel: "Dental Art Implant Clinic (£720 PFM) & Bupa Dental Care practice illustrative ceramic guides (£1,100)",
+      sourceUrl: "https://www.dentalartimplantclinic.co.uk/fees/",
+      inclusions: "Custom all-ceramic aesthetic crown including digital impressions and precision laboratory sintering."
+    },
+    {
+      id: "extraction_routine",
+      treatment: "Tooth Extraction (Routine / Simple)",
+      priceKey: "extraction_overall",
+      foreignBenchmark: "£250",
+      currency: "GBP (£)",
+      illustrativeInr: "₹31,750",
+      approxDifference: "~84% – 95% lower (Midpoint: ~89.8%)",
+      sourceAndType: "UK private-practice example",
+      sourceLabel: "Bupa Dental Care Manchester St Ann's Square (£250 simple)",
+      sourceUrl: "https://www.bupa.co.uk/dental/dental-care/practices/manchester-st-anns-square/treatment-and-prices",
+      inclusions: "Local anesthesia, clinical extraction, and sutures. Covers routine tooth extractions."
+    },
+    {
+      id: "wisdom_surgical",
+      treatment: "Wisdom Tooth Extraction (Surgical / Impacted)",
+      priceKey: "wisdom_overall",
+      foreignBenchmark: "£540",
+      currency: "GBP (£)",
+      illustrativeInr: "₹68,580",
+      approxDifference: "~85% – 94% lower (Midpoint: ~89.8%)",
+      sourceAndType: "UK private-practice example",
+      sourceLabel: "Bupa Dental Care Manchester St Ann's Square (£540 surgical)",
+      sourceUrl: "https://www.bupa.co.uk/dental/dental-care/practices/manchester-st-anns-square/treatment-and-prices",
+      inclusions: "Surgical removal of impacted third molars, sectioning, and sutures."
+    },
+    {
+      id: "clear_aligners",
+      treatment: "Comprehensive Clear Aligners (Full Arch Series)",
+      priceKey: "clear_aligners_overall",
+      foreignBenchmark: "£2,500 – £4,500",
+      currency: "GBP (£)",
+      illustrativeInr: "₹3,17,500 – ₹5,71,500",
+      approxDifference: "~56% – 75% lower (Midpoint: ~62.9%)",
+      sourceAndType: "UK private-practice range",
+      sourceLabel: "MiSmile UK Network (£2,500–£4,500) & Sensu London (£2,700–£3,300+)",
+      sourceUrl: "https://mismile.co.uk",
+      inclusions: "Intraoral digital scan, treatment simulation, and full aligner tray series based on mild, moderate, or complex malocclusion."
+    },
+    {
+      id: "veneers",
+      treatment: "Porcelain Veneer (Per Tooth)",
+      priceKey: "veneers_porcelain",
+      foreignBenchmark: "£650 – £1,200",
+      currency: "GBP (£)",
+      illustrativeInr: "₹82,550 – ₹1,52,400",
+      approxDifference: "~84% – 90% lower (Midpoint: ~86.4%)",
+      sourceAndType: "UK private-practice range",
+      sourceLabel: "Tooth Club UK & UK private cosmetic dentistry fee guides (£650–£1,200)",
+      sourceUrl: "https://www.toothclub.co.uk",
+      inclusions: "Custom aesthetic porcelain veneer per unit including conservative preparation and clinical bonding."
+    }
+  ],
+  calculations: {
+    implant: {
+      benchmark: "£2,095 – £3,700 (Midpoint: £2,897.50 = ₹3,67,982.50 INR illustrative equivalent at £1 = ₹127).",
+      lower: "((₹2,66,065 - ₹45,000) / ₹2,66,065) × 100 = ~83.1% difference.",
+      upper: "((₹4,69,900 - ₹80,000) / ₹4,69,900) × 100 = ~83.0% difference.",
+      midpoint: "((₹3,67,982.50 - ₹62,500) / ₹3,67,982.50) × 100 = ~83.0% difference."
+    },
+    molarRct: {
+      benchmark: "£645 – £1,060 (Midpoint: £852.50 = ₹1,08,267.50 INR illustrative equivalent at £1 = ₹127).",
+      lower: "((₹81,915 - ₹6,000) / ₹81,915) × 100 = ~92.7% difference.",
+      upper: "((₹1,34,620 - ₹10,000) / ₹1,34,620) × 100 = ~92.6% difference.",
+      midpoint: "((₹1,08,267.50 - ₹8,000) / ₹1,08,267.50) × 100 = ~92.6% difference."
+    },
+    aligners: {
+      benchmark: "£2,500 – £4,500 (Illustrative INR: ₹3,17,500 – ₹5,71,500; Midpoint: £3,500 = ₹4,44,500).",
+      lower: "((₹3,17,500 - ₹80,000) / ₹3,17,500) × 100 = ~74.8% difference.",
+      upper: "((₹5,71,500 - ₹2,50,000) / ₹5,71,500) × 100 = ~56.3% difference (Falls below 70%).",
+      midpoint: "((₹4,44,500 - ₹1,65,000) / ₹4,44,500) × 100 = ~62.9% difference (Falls below 70%)."
+    }
   }
-];
+};
+
+const costComparisons = FOREIGN_BENCHMARKS.comparisons.map((row) => ({
+  ...row,
+  aurevaPriceInr: (CANONICAL_PRICES as any)[row.priceKey]
+}));
+
+const { articleUpdateDate, exchangeRateSnapshot } = FOREIGN_BENCHMARKS;
 ---
 
 <Layout {...seoProps}>
@@ -262,7 +312,7 @@ const costComparisons = [
       <section class="space-y-6">
         <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">2. Procedure Cost Comparison: UK Private Benchmarks vs. Aureva Dental</h2>
         <p>
-          The table below compares referenced private dental benchmarks in the UK with Aureva Dental's published treatment fees in Bangalore. All INR conversions use the illustrative snapshot rate of £1 GBP ≈ ₹127 INR as of {articleUpdateDate}. Treatment packages and inclusions can differ between countries and providers, so these comparisons are illustrative rather than like-for-like quotations:
+          The table below compares referenced private dental benchmarks in the UK with Aureva Dental's published treatment fees in Bangalore. {FOREIGN_BENCHMARKS.rateSnapshotSentence} Treatment packages and inclusions can differ between countries and providers, so these comparisons are illustrative rather than like-for-like quotations:
         </p>
 
         <div class="overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-sand/30 my-6">
@@ -316,21 +366,21 @@ const costComparisons = [
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
           <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2 text-xs">
             <strong class="font-medium text-japandi-charcoal block text-sm">Example A: Dental Implant with Crown</strong>
-            <p><strong>UK Private Benchmark Range:</strong> £2,095 – £3,700 (Midpoint: £2,897.50 = ₹3,67,982.50 INR illustrative equivalent at £1 = ₹127).</p>
-            <p><strong>Aureva Published Range:</strong> ₹45,000 – ₹80,000 (Midpoint: ₹62,500 INR).</p>
-            <p><strong>Lower Endpoint Calculation:</strong> ((₹2,66,065 - ₹45,000) / ₹2,66,065) &times; 100 = <strong>~83.1% difference</strong>.</p>
-            <p><strong>Upper Endpoint Calculation:</strong> ((₹4,69,900 - ₹80,000) / ₹4,69,900) &times; 100 = <strong>~83.0% difference</strong>.</p>
-            <p><strong>Midpoint Calculation:</strong> ((₹3,67,982.50 - ₹62,500) / ₹3,67,982.50) &times; 100 = <strong>~83.0% difference</strong>.</p>
+            <p><strong>UK Private Benchmark Range:</strong> {FOREIGN_BENCHMARKS.calculations.implant.benchmark}</p>
+            <p><strong>Aureva Published Range:</strong> {CANONICAL_PRICES.implant_with_crown} (Midpoint: {formatExactPrice(62500)} INR).</p>
+            <p><strong>Lower Endpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.implant.lower}</p>
+            <p><strong>Upper Endpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.implant.upper}</p>
+            <p><strong>Midpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.implant.midpoint}</p>
             <p class="text-japandi-earth font-light italic">Supports 70%+ claim: YES. Indicative comparison. Bone grafting, if clinically required, is separate.</p>
           </div>
 
           <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2 text-xs">
             <strong class="font-medium text-japandi-charcoal block text-sm">Example B: Molar Root Canal Treatment</strong>
-            <p><strong>UK Private Benchmark Range:</strong> £645 – £1,060 (Midpoint: £852.50 = ₹1,08,267.50 INR illustrative equivalent at £1 = ₹127).</p>
-            <p><strong>Aureva Published Range:</strong> ₹6,000 – ₹10,000 (Midpoint: ₹8,000 INR).</p>
-            <p><strong>Lower Endpoint Calculation:</strong> ((₹81,915 - ₹6,000) / ₹81,915) &times; 100 = <strong>~92.7% difference</strong>.</p>
-            <p><strong>Upper Endpoint Calculation:</strong> ((₹1,34,620 - ₹10,000) / ₹1,34,620) &times; 100 = <strong>~92.6% difference</strong>.</p>
-            <p><strong>Midpoint Calculation:</strong> ((₹1,08,267.50 - ₹8,000) / ₹1,08,267.50) &times; 100 = <strong>~92.6% difference</strong>.</p>
+            <p><strong>UK Private Benchmark Range:</strong> {FOREIGN_BENCHMARKS.calculations.molarRct.benchmark}</p>
+            <p><strong>Aureva Published Range:</strong> {CANONICAL_PRICES.rct_molar} (Midpoint: {formatExactPrice(8000)} INR).</p>
+            <p><strong>Lower Endpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.molarRct.lower}</p>
+            <p><strong>Upper Endpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.molarRct.upper}</p>
+            <p><strong>Midpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.molarRct.midpoint}</p>
             <p class="text-japandi-earth font-light italic">Supports 70%+ claim: YES. Multi-canal posterior endodontic treatment. Crown billed separately.</p>
           </div>
         </div>
@@ -341,11 +391,11 @@ const costComparisons = [
             We do not claim arbitrary 70% savings across all treatments. For instance, in <strong>Comprehensive Clear Aligners</strong>:
           </p>
           <ul class="list-disc pl-4 space-y-1 font-light">
-            <li>UK private aligner benchmark range: £2,500 – £4,500 (Illustrative INR: ₹3,17,500 – ₹5,71,500; Midpoint: £3,500 = ₹4,44,500).</li>
-            <li>Aureva published fee range: ₹80,000 – ₹2,50,000 (Midpoint: ₹1,65,000).</li>
-            <li><strong>Lower Endpoint Calculation (Mild):</strong> ((₹3,17,500 - ₹80,000) / ₹3,17,500) &times; 100 = <strong>~74.8% difference</strong>.</li>
-            <li><strong>Upper Endpoint Calculation (Complex Full-Arch):</strong> ((₹5,71,500 - ₹2,50,000) / ₹5,71,500) &times; 100 = <strong>~56.3% difference</strong> (Falls below 70%).</li>
-            <li><strong>Midpoint Calculation:</strong> ((₹4,44,500 - ₹1,65,000) / ₹4,44,500) &times; 100 = <strong>~62.9% difference</strong> (Falls below 70%).</li>
+            <li>UK private aligner benchmark range: {FOREIGN_BENCHMARKS.calculations.aligners.benchmark}</li>
+            <li>Aureva published fee range: {CANONICAL_PRICES.clear_aligners_overall} (Midpoint: {formatExactPrice(165000)}).</li>
+            <li><strong>Lower Endpoint Calculation (Mild):</strong> {FOREIGN_BENCHMARKS.calculations.aligners.lower}</li>
+            <li><strong>Upper Endpoint Calculation (Complex Full-Arch):</strong> {FOREIGN_BENCHMARKS.calculations.aligners.upper}</li>
+            <li><strong>Midpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.aligners.midpoint}</li>
           </ul>
           <p class="font-light">
             Because complex aligner cases fall below 70%, the 70% threshold applies strictly to selected restorative procedures (implants, root canals, crowns, extractions, veneers) and is not a blanket discount on all dentistry.
@@ -362,11 +412,11 @@ const costComparisons = [
         <ul class="space-y-2.5 text-xs sm:text-sm text-japandi-earth pl-2">
           <li class="flex items-start gap-2.5">
             <span class="text-japandi-moss font-bold">&bull;</span>
-            <span><strong>Clinical Complexity &amp; Canal Count:</strong> In endodontics, anterior teeth (1 canal) are ₹4,000–₹6,000, while multi-canal molars are ₹6,000–₹10,000. Retreatment of previous root canals starts from ₹8,000.</span>
+            <span><strong>Clinical Complexity &amp; Canal Count:</strong> In endodontics, anterior teeth (1 canal) are {CANONICAL_PRICES.rct_anterior}, while multi-canal molars are {CANONICAL_PRICES.rct_molar}. Retreatment of previous root canals is {CANONICAL_PRICES.rct_re_treatment}.</span>
           </li>
           <li class="flex items-start gap-2.5">
             <span class="text-japandi-moss font-bold">&bull;</span>
-            <span><strong>Material Selection:</strong> Dental crowns range from PFM (₹4,000–₹6,000) to all-ceramic (₹6,000–₹10,000) and monolithic lab-milled zirconia (₹10,000–₹18,000).</span>
+            <span><strong>Material Selection:</strong> Dental crowns range from PFM ({CANONICAL_PRICES.crown_pfm}) to all-ceramic ({CANONICAL_PRICES.crown_ceramic}) and monolithic lab-milled zirconia ({CANONICAL_PRICES.crown_zirconia}).</span>
           </li>
           <li class="flex items-start gap-2.5">
             <span class="text-japandi-moss font-bold">&bull;</span>

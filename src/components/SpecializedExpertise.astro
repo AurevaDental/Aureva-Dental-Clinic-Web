@@ -1,8 +1,11 @@
 ---
 import { getConfig } from '../utils/getConfig';
+import { CANONICAL_PRICES } from '../data/prices';
 
 const config = getConfig();
 const { specialized_expertise } = config;
+
+const getPrice = (item: any) => item.priceKey ? (CANONICAL_PRICES as any)[item.priceKey] : item.price;
 ---
 
 <section id="specialized-expertise" class="py-24 px-6 lg:px-24 bg-japandi-sand/10 border-t border-japandi-clay/40 relative">
@@ -66,7 +69,7 @@ const { specialized_expertise } = config;
                       )}
                       <span class="flex-grow mx-3 border-b border-dotted border-japandi-clay/70 self-end mb-1.5 opacity-40 group-hover:opacity-100 transition-opacity"></span>
                       <span class="text-sm font-semibold text-japandi-moss shrink-0">
-                        {item.price}
+                        {getPrice(item)}
                       </span>
                     </li>
                   );

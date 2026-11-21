@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas';
+import { CANONICAL_PRICES } from '../data/prices';
 
 
 const pageTitle = "Emergency Dentist in Hennur | Aureva Dental";
@@ -33,7 +34,7 @@ const faqs = [
   },
   {
     question: "How much does an emergency dental visit cost at Aureva Dental Hennur?",
-    answer: "Our initial emergency clinical consultation with digital RVG low-radiation imaging is ₹600. Temporary emergency fillings range from ₹500 to ₹1,000, emergency pain-relief nerve dressings or pulpectomy start from ₹1,500 to ₹2,500, and root canals range from ₹4,000 to ₹10,000 depending on tooth anatomy. All treatment costs are provided transparently upfront with zero surprise fees."
+    answer: `Our initial emergency clinical consultation with digital RVG low-radiation imaging is ${CANONICAL_PRICES.consultation}. Temporary emergency fillings range from ${CANONICAL_PRICES.temporary_filling}, emergency pain-relief nerve dressings or pulpectomy start from ${CANONICAL_PRICES.emergency_pain_dressing}, and root canals range from ${CANONICAL_PRICES.rct_overall} depending on tooth anatomy. All treatment costs are provided transparently upfront with zero surprise fees.`
   },
   {
     question: "Do you treat dental emergencies for children and pediatric patients?",
@@ -95,7 +96,7 @@ const seoProps = {
         </h1>
 
         <p class="text-base sm:text-lg text-japandi-earth font-light leading-relaxed max-w-2xl">
-          Severe dental pain, fractured teeth, and facial swellings cannot wait for weeks. At Aureva Dental, we provide rapid same-day emergency relief, advanced digital RVG diagnostic imaging, and hospital-grade surgical precision for patients across Hennur, Horamavu, Kalyan Nagar, Babusapalya, and Thanisandra.
+          Severe dental pain, fractured teeth, and facial swellings cannot wait for weeks. At Aureva Dental, we provide rapid same-day emergency relief, advanced digital RVG diagnostic imaging, and careful treatment for patients across Hennur, Horamavu, Kalyan Nagar, Babusapalya, and Thanisandra.
         </p>
 
         <!-- Direct Action Emergency CTA Buttons -->
@@ -155,7 +156,7 @@ const seoProps = {
             <span class="w-6 h-6 rounded-full bg-red-100 text-red-700 flex items-center justify-center shrink-0 font-bold text-[10px]">4</span>
             <div>
               <strong class="font-medium block text-japandi-charcoal">Transparent Emergency Pricing:</strong>
-              <span class="text-japandi-earth">Full diagnostic fee (₹600) and treatment quotes shared upfront.</span>
+              <span class="text-japandi-earth">Full diagnostic fee ({CANONICAL_PRICES.consultation}) and treatment quotes shared upfront.</span>
             </div>
           </li>
         </ul>
@@ -324,37 +325,42 @@ const seoProps = {
             <tbody class="divide-y divide-japandi-clay/20 text-japandi-charcoal font-light">
               <tr class="hover:bg-japandi-sand/40 transition-colors">
                 <td class="py-4 px-6 font-medium">Emergency Diagnostic Consultation</td>
-                <td class="py-4 px-6 text-japandi-moss font-semibold">₹600</td>
+                <td class="py-4 px-6 text-japandi-moss font-semibold">{CANONICAL_PRICES.consultation}</td>
                 <td class="py-4 px-6 text-japandi-earth">Intraoral exam, high-definition digital RVG X-ray &amp; medical prescription</td>
               </tr>
               <tr class="hover:bg-japandi-sand/40 transition-colors">
                 <td class="py-4 px-6 font-medium">Emergency Pulpectomy / Pain Dressing</td>
-                <td class="py-4 px-6 text-japandi-moss font-semibold">₹1,500 – ₹2,500</td>
+                <td class="py-4 px-6 text-japandi-moss font-semibold">{CANONICAL_PRICES.emergency_pain_dressing}</td>
                 <td class="py-4 px-6 text-japandi-earth">Local anesthesia, nerve extirpation, antibacterial medicament &amp; temp seal</td>
               </tr>
               <tr class="hover:bg-japandi-sand/40 transition-colors">
                 <td class="py-4 px-6 font-medium">Root Canal Treatment (RCT), often in 1–2 sittings</td>
-                <td class="py-4 px-6 text-japandi-moss font-semibold">₹4,000 – ₹10,000</td>
+                <td class="py-4 px-6 text-japandi-moss font-semibold">{CANONICAL_PRICES.rct_overall}</td>
                 <td class="py-4 px-6 text-japandi-earth">Rotary instrumentation, motorized disinfection, biocompatible obturation</td>
               </tr>
               <tr class="hover:bg-japandi-sand/40 transition-colors">
                 <td class="py-4 px-6 font-medium">Emergency Tooth Extraction</td>
-                <td class="py-4 px-6 text-japandi-moss font-semibold">₹4,000 – ₹10,000</td>
+                <td class="py-4 px-6 text-japandi-moss font-semibold">{CANONICAL_PRICES.extraction_overall}</td>
                 <td class="py-4 px-6 text-japandi-earth">Comfortable local anesthesia, atraumatic luxation &amp; socket preservation</td>
               </tr>
               <tr class="hover:bg-japandi-sand/40 transition-colors">
+                <td class="py-4 px-6 font-medium">Wisdom Tooth Removal</td>
+                <td class="py-4 px-6 text-japandi-moss font-semibold">{CANONICAL_PRICES.wisdom_overall}</td>
+                <td class="py-4 px-6 text-japandi-earth">Surgical evaluation &amp; impaction removal by specialist oral surgeon</td>
+              </tr>
+              <tr class="hover:bg-japandi-sand/40 transition-colors">
                 <td class="py-4 px-6 font-medium">Temporary Emergency Filling</td>
-                <td class="py-4 px-6 text-japandi-moss font-semibold">₹500 – ₹1,000</td>
+                <td class="py-4 px-6 text-japandi-moss font-semibold">{CANONICAL_PRICES.temporary_filling}</td>
                 <td class="py-4 px-6 text-japandi-earth">Sedative dressing / biocompatible temporary seal for cavities &amp; lost fillings</td>
               </tr>
               <tr class="hover:bg-japandi-sand/40 transition-colors">
                 <td class="py-4 px-6 font-medium">Emergency Broken Tooth Composite Repair</td>
-                <td class="py-4 px-6 text-japandi-moss font-semibold">₹1,500 – ₹4,000</td>
+                <td class="py-4 px-6 text-japandi-moss font-semibold">{CANONICAL_PRICES.composite_bonding}</td>
                 <td class="py-4 px-6 text-japandi-earth">Color-matched biomimetic composite bonding &amp; edge polish</td>
               </tr>
               <tr class="hover:bg-japandi-sand/40 transition-colors">
                 <td class="py-4 px-6 font-medium">Crown / Bridge Recementation</td>
-                <td class="py-4 px-6 text-japandi-moss font-semibold">₹800 – ₹2,000</td>
+                <td class="py-4 px-6 text-japandi-moss font-semibold">{CANONICAL_PRICES.crown_recementation}</td>
                 <td class="py-4 px-6 text-japandi-earth">Ultrasonic cleanup, biological isolation &amp; high-bond resin cement</td>
               </tr>
             </tbody>

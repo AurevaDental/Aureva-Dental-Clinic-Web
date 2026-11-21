@@ -1,4 +1,5 @@
 ---
+import { CANONICAL_PRICES } from '../data/prices';
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas';
 import { GOOGLE_RATING, GOOGLE_REVIEWS_LABEL } from '../config/clinic';
@@ -30,7 +31,7 @@ const faqs = [
   },
   {
     question: "How much does a dental consultation cost at your Hennur clinic?",
-    answer: "Our comprehensive initial dental consultation is ₹600, which includes a full intraoral clinical assessment, high-resolution low-radiation digital RVG X-rays when indicated, and a customized, transparent digital treatment roadmap with prices quoted before treatment."
+    answer: "Our comprehensive initial dental consultation is ${CANONICAL_PRICES.consultation}, which includes a full intraoral clinical assessment, high-resolution low-radiation digital RVG X-rays when indicated, and a customized, transparent digital treatment roadmap with prices quoted before treatment."
   },
   {
     question: "How do you maintain sterilization and patient safety?",

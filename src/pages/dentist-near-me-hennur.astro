@@ -4,7 +4,7 @@ import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_REVIEWS_LABEL } from '../con
 import { CANONICAL_PRICES } from '../data/prices';
 
 const pageTitle = "Dentist near you in Hennur Bande | Aureva Dental";
-const pageDescription = "Dental clinic on Horamavu Agara Road, Hennur Bande. Open 7 days, 2nd floor with lift. Consultation ₹600 includes digital X-ray. Walk in or book by call or WhatsApp.";
+const pageDescription = `Dental clinic on Horamavu Agara Road, Hennur Bande. Open 7 days, 2nd floor with lift. ${CANONICAL_PRICES.consultation} consultation includes digital X-ray. Walk in or book by call or WhatsApp.`;
 const canonicalUrl = "https://aurevadental.com/dentist-near-me-hennur";
 const phoneCallUrl = "tel:+917349701002";
 const whatsappUrl = "https://wa.me/917349701002?text=Hi%20Aureva%20Dental%2C%20I%27d%20like%20to%20book%20a%20visit.";
@@ -344,7 +344,7 @@ const faqs = [
             2
           </div>
           <h3 class="font-serif text-sm font-medium text-japandi-charcoal">
-            Consultation (₹600)
+            Consultation ({CANONICAL_PRICES.consultation})
           </h3>
           <p class="text-xs text-japandi-earth font-light leading-relaxed">
             Your dentist examines you. The consultation includes your digital X-ray and stays valid for 6 months.

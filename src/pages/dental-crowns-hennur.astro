@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../utils/seoSchemas';
 import { GOOGLE_REVIEWS_LABEL } from '../config/clinic';
+import { CANONICAL_PRICES } from '../data/prices';
 
 
 const pageTitle = "Dental Crowns & Caps in Hennur Bangalore | Aureva Dental";
@@ -30,11 +31,11 @@ const faqs = [
   },
   {
     question: "How much do dental crowns and caps cost in Hennur?",
-    answer: "At Aureva Dental, a new patient clinical consultation including digital RVG X-ray assessment is ₹600. PFM (porcelain-fused-to-metal) crowns range from ₹4,000 to ₹6,000, all-ceramic crowns range from ₹6,000 to ₹10,000, and premium monolithic lab-milled Zirconia or E-max lithium disilicate crowns range from ₹10,000 to ₹18,000. Transparent written pricing is provided before any tooth preparation begins."
+    answer: `At Aureva Dental, a new patient clinical consultation including digital RVG X-ray assessment is ${CANONICAL_PRICES.consultation}. PFM (porcelain-fused-to-metal) crowns range from ${CANONICAL_PRICES.crown_pfm}, all-ceramic crowns range from ${CANONICAL_PRICES.crown_ceramic}, and premium monolithic lab-milled Zirconia or E-max lithium disilicate crowns range from ${CANONICAL_PRICES.crown_zirconia}. Transparent written pricing is provided before any tooth preparation begins.`
   },
   {
     question: "Can a chipped or broken front tooth be repaired without a full crown?",
-    answer: "Yes. For minor to moderate superficial chips where the tooth pulp is unharmed, direct composite bonding (₹1,500 – ₹4,000) can restore natural contours in a single visit. However, if the fracture extends across more than half of the tooth or involves the biting edge under heavy occlusal load, a full coverage ceramic or E-max crown is recommended for long-term structural durability."
+    answer: `Yes. For minor to moderate superficial chips where the tooth pulp is unharmed, direct composite bonding (${CANONICAL_PRICES.composite_bonding}) can restore natural contours in a single visit. However, if the fracture extends across more than half of the tooth or involves the biting edge under heavy occlusal load, a full coverage ceramic or E-max crown is recommended for long-term structural durability.`
   },
   {
     question: "What is the difference between a single dental crown and a dental bridge?",
@@ -123,10 +124,10 @@ const seoProps = {
         <!-- Price-First Summary Block -->
         <div class="p-4 rounded-2xl bg-japandi-sand/60 border border-japandi-clay/50 w-full max-w-2xl space-y-1.5">
           <p class="text-xs sm:text-sm font-semibold text-japandi-charcoal">
-            PFM ₹4,000 – ₹6,000 · Ceramic ₹6,000 – ₹10,000 · Zirconia ₹10,000 – ₹18,000 · E-max ₹10,000 – ₹18,000
+            PFM {CANONICAL_PRICES.crown_pfm} · Ceramic {CANONICAL_PRICES.crown_ceramic} · Zirconia {CANONICAL_PRICES.crown_zirconia} · E-max {CANONICAL_PRICES.crown_emax}
           </p>
           <p class="text-xs text-japandi-earth font-light">
-            ₹600 consultation · includes digital X-ray · valid for 6 months.
+            {CANONICAL_PRICES.consultation_home}.
           </p>
         </div>
 
@@ -240,13 +241,13 @@ const seoProps = {
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm text-japandi-earth font-light pt-2">
           <div class="p-6 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-3">
-            <h4 class="font-serif text-base text-japandi-charcoal font-medium">Composite Tooth Bonding (₹1,500 – ₹4,000)</h4>
+            <h4 class="font-serif text-base text-japandi-charcoal font-medium">Composite Tooth Bonding ({CANONICAL_PRICES.composite_bonding})</h4>
             <p class="leading-relaxed">
               Ideal for minor chips, enamel fractures, and slight corner breaks on incisors where more than 70% of natural tooth structure remains intact. Nano-hybrid composite resin is color-matched, sculpted directly chairside, and cured with high-intensity LED light in a single 45-minute visit.
             </p>
           </div>
           <div class="p-6 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-3">
-            <h4 class="font-serif text-base text-japandi-charcoal font-medium">Full Coverage Crown (₹4,000 – ₹18,000)</h4>
+            <h4 class="font-serif text-base text-japandi-charcoal font-medium">Full Coverage Crown ({CANONICAL_PRICES.crown_overall})</h4>
             <p class="leading-relaxed">
               Recommended when a fracture compromises a tooth cusp, extends near the gumline, or affects structural integrity under chewing loads. A customized crown encases the entire tooth, which protects the remaining tooth structure and prevents nerve exposure.
             </p>
@@ -267,7 +268,7 @@ const seoProps = {
           <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
             <div class="flex items-center justify-between">
               <h4 class="font-serif text-base text-japandi-charcoal font-medium">Monolithic Lab-Milled Zirconia Crowns</h4>
-              <span class="text-xs font-semibold text-japandi-moss">₹10,000 – ₹18,000</span>
+              <span class="text-xs font-semibold text-japandi-moss">{CANONICAL_PRICES.crown_zirconia}</span>
             </div>
             <p class="leading-relaxed">
               Milled from solid blocks of medical-grade zirconium dioxide, monolithic zirconia offers high fracture resistance (over 1,100 MPa). It is completely metal-free, gentle on opposing enamel when polished, and resistant to chipping. Highly recommended for posterior molars where heavy chewing forces occur.
@@ -277,7 +278,7 @@ const seoProps = {
           <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
             <div class="flex items-center justify-between">
               <h4 class="font-serif text-base text-japandi-charcoal font-medium">IPS E-Max Lithium Disilicate Crowns</h4>
-              <span class="text-xs font-semibold text-japandi-moss">₹10,000 – ₹18,000</span>
+              <span class="text-xs font-semibold text-japandi-moss">{CANONICAL_PRICES.crown_emax}</span>
             </div>
             <p class="leading-relaxed">
               E-max is renowned for lifelike optical translucency, mimicking natural tooth enamel light refraction. Ideal for front teeth (incisors and canines) and premolars visible in your smile line. Biocompatible and bonded adhesive to tooth structure.
@@ -287,7 +288,7 @@ const seoProps = {
           <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
             <div class="flex items-center justify-between">
               <h4 class="font-serif text-base text-japandi-charcoal font-medium">All-Ceramic Aesthetic Crowns</h4>
-              <span class="text-xs font-semibold text-japandi-moss">₹6,000 – ₹10,000</span>
+              <span class="text-xs font-semibold text-japandi-moss">{CANONICAL_PRICES.crown_ceramic}</span>
             </div>
             <p class="leading-relaxed">
               Metal-free ceramic crowns that provide natural tooth coloration without the dark metal margin at the gumline seen with older restorations. Excellent tissue compatibility for patients with mild metal sensitivities.
@@ -297,7 +298,7 @@ const seoProps = {
           <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-2">
             <div class="flex items-center justify-between">
               <h4 class="font-serif text-base text-japandi-charcoal font-medium">Porcelain-Fused-to-Metal (PFM) Crowns</h4>
-              <span class="text-xs font-semibold text-japandi-moss">₹4,000 – ₹6,000</span>
+              <span class="text-xs font-semibold text-japandi-moss">{CANONICAL_PRICES.crown_pfm}</span>
             </div>
             <p class="leading-relaxed">
               A time-tested restorative solution featuring a durable cast metal framework veneered with tooth-colored porcelain. PFM provides reliable strength for posterior teeth at an accessible fee structure.
@@ -331,37 +332,37 @@ const seoProps = {
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">New Patient Consultation</td>
                 <td class="p-4">Full clinical dental exam, shade evaluation &amp; digital RVG radiograph</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹600</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.consultation}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Broken / Chipped Tooth Composite Repair</td>
                 <td class="p-4">Direct nano-hybrid resin layering, bonding &amp; anatomical polish</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹1,500 – ₹4,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.composite_bonding}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — PFM</td>
                 <td class="p-4">Porcelain-fused-to-metal crown with custom shade matching</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹4,000 – ₹6,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.crown_pfm}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — Ceramic</td>
                 <td class="p-4">Metal-free ceramic crown with natural tooth shade gradation</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹6,000 – ₹10,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.crown_ceramic}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — Monolithic Zirconia</td>
                 <td class="p-4">High-strength lab-milled monolithic zirconia crown (1,100+ MPa)</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹10,000 – ₹18,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.crown_zirconia}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Dental Crown — E-Max</td>
                 <td class="p-4">Lithium disilicate all-ceramic crown with lifelike enamel translucency</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹10,000 – ₹18,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.crown_emax}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Dental Bridge (Per Unit)</td>
                 <td class="p-4">Multi-unit fixed bridge (calculated per crown unit of chosen material)</td>
-                <td class="p-4 text-japandi-moss font-semibold">PFM: ₹4k–₹6k | Ceramic: ₹6k–₹10k | Zirconia / E-max: ₹10k–₹18k</td>
+                <td class="p-4 text-japandi-moss font-semibold">PFM: {CANONICAL_PRICES.crown_pfm} | Ceramic: {CANONICAL_PRICES.crown_ceramic} | Zirconia / E-max: {CANONICAL_PRICES.crown_zirconia}</td>
               </tr>
             </tbody>
           </table>
@@ -382,7 +383,7 @@ const seoProps = {
           When one or two consecutive teeth are missing, a fixed dental bridge offers a stable, non-removable restorative option without needing surgical implant placement. A bridge consists of two anchoring crowns placed over the natural teeth on either side of the space (abutments), connected to an artificial suspended prosthetic tooth in the middle (pontic).
         </p>
         <p class="text-sm text-japandi-earth font-light leading-relaxed">
-          At Aureva Dental, pricing for dental bridges is completely straightforward: it is calculated per unit, exactly matching the individual crown price of your chosen material. For instance, a 3-unit monolithic zirconia bridge replacing one missing molar consists of 3 crown units (₹10,000 – ₹18,000 per unit). Our clinicians verify proper bite balance and seamless margin adaptation using digital RVG imaging so your bridge feels natural from day one.
+          At Aureva Dental, pricing for dental bridges is completely straightforward: it is calculated per unit, exactly matching the individual crown price of your chosen material. For instance, a 3-unit monolithic zirconia bridge replacing one missing molar consists of 3 crown units ({CANONICAL_PRICES.bridge_unit_zirconia}). Our clinicians verify proper bite balance and seamless margin adaptation using digital RVG imaging so your bridge feels natural from day one.
         </p>
       </div>
 

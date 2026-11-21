@@ -86,19 +86,23 @@
         "items": [
           {
             "name": "New Patient Consultation (Incl. RVG X-ray)",
-            "price": "₹600 consultation · includes digital X-ray · valid for 6 months"
+            "priceKey": "consultation_home"
           },
           {
             "name": "Scaling & Polishing",
-            "price": "₹2,000 – ₹5,000"
+            "priceKey": "scaling_routine"
           },
           {
             "name": "Tooth Filling",
-            "price": "₹1,500 – ₹4,000"
+            "priceKey": "tooth_filling"
           },
           {
             "name": "Tooth Extraction",
-            "price": "₹1,500 – ₹7,000"
+            "priceKey": "extraction_overall"
+          },
+          {
+            "name": "Wisdom Tooth Removal",
+            "priceKey": "wisdom_overall"
           }
         ]
       },
@@ -108,19 +112,19 @@
         "items": [
           {
             "name": "RCT (Anterior Tooth)",
-            "price": "₹4,000 – ₹6,000"
+            "priceKey": "rct_anterior"
           },
           {
             "name": "RCT (Premolar)",
-            "price": "₹5,000 – ₹8,000"
+            "priceKey": "rct_premolar"
           },
           {
             "name": "RCT (Molar)",
-            "price": "₹6,000 – ₹10,000"
+            "priceKey": "rct_molar"
           },
           {
             "name": "Re-RCT",
-            "price": "₹8,000 – ₹10,000"
+            "priceKey": "rct_re_treatment"
           }
         ]
       },
@@ -129,15 +133,15 @@
         "items": [
           {
             "name": "Kids Dental Check-up",
-            "price": "₹600"
+            "priceKey": "kids_checkup"
           },
           {
             "name": "Fluoride Application",
-            "price": "₹1,500 – ₹2,000 per arch"
+            "priceKey": "kids_fluoride"
           },
           {
             "name": "Pit and Fissure Sealant",
-            "price": "₹1,500 per tooth"
+            "priceKey": "kids_sealant"
           }
         ]
       }
@@ -152,23 +156,23 @@
         "items": [
           {
             "name": "PFM Crown",
-            "price": "₹4,000 – ₹6,000"
+            "priceKey": "crown_pfm"
           },
           {
             "name": "Ceramic Crown",
-            "price": "₹6,000 – ₹10,000"
+            "priceKey": "crown_ceramic"
           },
           {
             "name": "Zirconia Crown",
-            "price": "₹10,000 – ₹18,000"
+            "priceKey": "crown_zirconia"
           },
           {
             "name": "Bridge (Per Unit, by material)",
-            "price": "₹4,000 – ₹18,000"
+            "priceKey": "bridge_per_unit"
           },
           {
             "name": "E-Max Crown",
-            "price": "₹10,000 – ₹18,000"
+            "priceKey": "crown_emax"
           }
         ]
       },
@@ -177,27 +181,27 @@
         "items": [
           {
             "name": "Dental Implant (Per Implant)",
-            "price": "₹35,000 – ₹60,000"
+            "priceKey": "implant_single_fixture"
           },
           {
             "name": "Implant with Crown",
-            "price": "₹45,000 – ₹80,000"
+            "priceKey": "implant_with_crown"
           },
           {
             "name": "Full Mouth Implants",
-            "price": "₹2,50,000 onwards"
+            "priceKey": "full_mouth_implants_from"
           },
           {
             "name": "Metal Braces",
-            "price": "₹30,000 onwards"
+            "priceKey": "braces_metal_starting"
           },
           {
             "name": "Ceramic Braces",
-            "price": "₹45,000 onwards"
+            "priceKey": "braces_ceramic_starting"
           },
           {
             "name": "Clear Aligners",
-            "price": "₹80,000 – ₹2,50,000"
+            "priceKey": "clear_aligners_overall"
           }
         ]
       },
@@ -206,23 +210,23 @@
         "items": [
           {
             "name": "Smile Consultation",
-            "price": "₹600 consultation · includes digital X-ray · valid for 6 months"
+            "priceKey": "consultation_home"
           },
           {
             "name": "Digital Smile Design",
-            "price": "₹5,000 – ₹10,000"
+            "priceKey": "digital_smile_design"
           },
           {
             "name": "Teeth Whitening (Advanced)",
-            "price": "₹8,000 – ₹15,000"
+            "priceKey": "whitening_in_clinic"
           },
           {
             "name": "Veneers (Per Tooth)",
-            "price": "₹8,000 – ₹24,000"
+            "priceKey": "veneers_porcelain"
           },
           {
             "name": "Smile Makeover",
-            "price": "₹80,000 onwards"
+            "priceKey": "smile_makeover"
           }
         ]
       },
@@ -231,23 +235,23 @@
         "items": [
           {
             "name": "Couple Consultation (Bride & Groom Together)",
-            "price": "₹1,000 (₹600 individual)"
+            "priceKey": "bridal_couple_consultation"
           },
           {
-            "name": "The Express Glow (Whitening + Polish)",
-            "price": "₹12,000 – ₹18,000"
+            "name": "The Express Glow",
+            "priceKey": "bridal_express_glow"
           },
           {
             "name": "The Signature Bride / Groom",
-            "price": "₹35,000 – ₹55,000"
+            "priceKey": "bridal_signature"
           },
           {
             "name": "The Luxury Couture Smile",
-            "price": "₹1,20,000 – ₹1,80,000"
+            "priceKey": "bridal_luxury_couture"
           },
           {
             "name": "Couple's Wedding Radiance Pass",
-            "price": "₹1,80,000 – ₹2,50,000"
+            "priceKey": "bridal_couple_radiance"
           }
         ]
       }
@@ -259,35 +263,35 @@
     "plans": [
       {
         "name": "Aureva Essential (Individual)",
-        "price": "₹7,000",
         "period": "year",
         "features": [
           "Priority booking",
           "2 Free Consultations",
           "10% off treatments"
-        ]
+        ],
+        "priceAmount": 7000
       },
       {
         "name": "Aureva Privilege (Family)",
-        "price": "₹18,000",
         "period": "year",
         "features": [
           "Prioritized Family booking",
           "4 Free Consultations",
           "15% off treatments",
           "Bonus: Free Whitening for one member"
-        ]
+        ],
+        "priceAmount": 18000
       },
       {
         "name": "Aureva Royalty (VIP)",
-        "price": "₹35,000",
         "period": "year",
         "features": [
           "VIP Concierge booking",
           "Unlimited Consultations",
           "20% off treatments",
           "Event Dedicated Smile Coach for weddings"
-        ]
+        ],
+        "priceAmount": 35000
       }
     ]
   },

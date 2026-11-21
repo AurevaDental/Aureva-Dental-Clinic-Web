@@ -1,4 +1,5 @@
 ---
+import { CANONICAL_PRICES } from '../data/prices';
 import Layout from '../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../utils/seoSchemas';
 import { GOOGLE_REVIEWS_LABEL } from '../config/clinic';
@@ -30,7 +31,7 @@ const faqs = [
   },
   {
     question: "How much does deep gum treatment cost in Hennur?",
-    answer: "At Aureva Dental, a comprehensive new patient consultation including digital RVG X-ray assessment is ₹600. Deep periodontal scaling and root planing across affected quadrants ranges from ₹8,000 to ₹15,000 based on pocket depth and bone involvement. Transparent written pricing is provided prior to commencing care."
+    answer: "At Aureva Dental, a comprehensive new patient consultation including digital RVG X-ray assessment is ${CANONICAL_PRICES.consultation}. Deep periodontal scaling and root planing across affected quadrants ranges from ${CANONICAL_PRICES.scaling_deep} based on pocket depth and bone involvement. Transparent written pricing is provided prior to commencing care."
   },
   {
     question: "Is there a gum specialist (periodontist) available at Aureva Dental?",
@@ -282,22 +283,22 @@ const seoProps = {
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">New Patient Consultation (Incl. RVG X-ray)</td>
                 <td class="p-4">Clinical periodontal examination &amp; digital radiograph</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹600</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.consultation}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Routine Ultrasonic Scaling and Polishing</td>
                 <td class="p-4">Supragingival plaque &amp; tartar removal and polishing</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹2,000 – ₹5,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.scaling_routine}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Deep Periodontal Scaling / Root Planing</td>
                 <td class="p-4">Subgingival ultrasonic debridement, root planing &amp; antiseptic irrigation</td>
-                <td class="p-4 text-japandi-moss font-semibold">₹8,000 – ₹15,000</td>
+                <td class="p-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.scaling_deep}</td>
               </tr>
               <tr>
                 <td class="p-4 font-medium text-japandi-charcoal">Laser Gum Treatment</td>
                 <td class="p-4">Targeted laser pocket sterilization &amp; soft-tissue decontamination</td>
-                <td class="p-4 text-japandi-moss font-semibold">Price depends on the case. Consultation ₹600.</td>
+                <td class="p-4 text-japandi-moss font-semibold">Price depends on the case. Consultation {CANONICAL_PRICES.consultation}.</td>
               </tr>
             </tbody>
           </table>

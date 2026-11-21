@@ -4,7 +4,7 @@ import { GOOGLE_RATING, GOOGLE_REVIEW_COUNT, GOOGLE_REVIEWS_LABEL } from '../con
 import { CANONICAL_PRICES } from '../data/prices';
 
 const pageTitle = "Dentist in Thanisandra, Bengaluru | Aureva Dental, 3.7 km away";
-const pageDescription = "Dentist near Thanisandra & Nagawara, 3.7 km away. Open 7 days with ₹600 consultation including digital X-ray. Walk in or call to book.";
+const pageDescription = `Dentist near Thanisandra & Nagawara, 3.7 km away. Open 7 days with ${CANONICAL_PRICES.consultation} consultation including digital X-ray. Walk in or call to book.`;
 const canonicalUrl = "https://aurevadental.com/dentist-in-thanisandra";
 const phoneCallUrl = "tel:+917349701002";
 const whatsappUrl = "https://wa.me/917349701002?text=Hi%20Aureva%20Dental%2C%20I%20am%20visiting%20from%20Thanisandra%20and%20would%20like%20to%20consult.";
@@ -27,7 +27,8 @@ const treatmentPricing = [
   { name: "Composite Tooth Filling", price: CANONICAL_PRICES.tooth_filling, note: "Tooth-colored biomimetic resin" },
   { name: "Root Canal Treatment (Rotary RCT)", price: CANONICAL_PRICES.rct_overall, note: "Gentle single or multi-visit" },
   { name: "Crowns & Caps (PFM, Ceramic, Zirconia)", price: CANONICAL_PRICES.crown_overall, note: "Custom laboratory fabricated" },
-  { name: "Wisdom Tooth Removal", price: CANONICAL_PRICES.wisdom_hennur_faq_overall, note: "Simple & surgical impactions" },
+  { name: "Tooth Extraction", price: CANONICAL_PRICES.extraction_overall, note: "Simple & surgical" },
+  { name: "Wisdom Tooth Removal", price: CANONICAL_PRICES.wisdom_overall, note: "Simple & surgical impactions" },
   { name: "Teeth Whitening", price: CANONICAL_PRICES.whitening_laser, note: "In-office LED brightening" },
   { name: "Kids Dentistry (Pediatric Care)", price: CANONICAL_PRICES.kids_dentistry_summary, note: "Gentle cavity care & sealants" },
   { name: "Dental Implants", price: CANONICAL_PRICES.implant_single_fixture, note: "Titanium replacement tooth" },
@@ -49,11 +50,11 @@ const faqs = [
   },
   {
     q: "What is the teeth cleaning cost at Aureva Dental?",
-    a: "Routine ultrasonic scaling and prophy polishing ranges from ₹2,000 to ₹5,000, depending on the presence of stubborn tea, coffee, or smoke stains and calculus buildup. The procedure gently removes bacterial plaque and surface stains while preserving natural tooth enamel."
+    a: `Routine ultrasonic scaling and prophy polishing ranges from ${CANONICAL_PRICES.scaling_routine}, depending on the presence of stubborn tea, coffee, or smoke stains and calculus buildup. The procedure gently removes bacterial plaque and surface stains while preserving natural tooth enamel.`
   },
   {
     q: "What are your consultation fees and scheduling options?",
-    a: "Our comprehensive new-patient consultation is ₹600 and includes low-radiation digital RVG X-rays as clinically indicated, staying valid for 6 months. Walk-ins are welcomed until 9:00 PM, or you can reserve a prioritized slot by phone call or WhatsApp message."
+    a: `Our comprehensive new-patient consultation is ${CANONICAL_PRICES.consultation} and includes low-radiation digital RVG X-rays as clinically indicated, staying valid for 6 months. Walk-ins are welcomed until 9:00 PM, or you can reserve a prioritized slot by phone call or WhatsApp message.`
   }
 ];
 
@@ -176,13 +177,13 @@ const faqSchema = {
         </h2>
         <div class="space-y-4 text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
           <p>
-            Tech employees and residents from Thanisandra and Nagawara frequently schedule appointments for comprehensive dental hygiene, aesthetic brightening, and durable crown restorations. Routine ultrasonic scaling and prophy polishing ranges from ₹2,000 to ₹5,000, effectively removing stubborn coffee, tea, and tobacco discoloration accumulated during long work hours. In-office laser teeth whitening sessions ranging from ₹8,000 to ₹15,000 are popular among professionals preparing for weddings, client presentations, or social milestones.
+            Tech employees and residents from Thanisandra and Nagawara frequently schedule appointments for comprehensive dental hygiene, aesthetic brightening, and durable crown restorations. Routine ultrasonic scaling and prophy polishing ranges from {CANONICAL_PRICES.scaling_routine}, effectively removing stubborn coffee, tea, and tobacco discoloration accumulated during long work hours. In-office laser teeth whitening sessions ranging from {CANONICAL_PRICES.whitening_laser} are popular among professionals preparing for weddings, client presentations, or social milestones.
           </p>
           <p>
-            For fractured, cracked, or root-treated teeth, durable all-ceramic and zirconia crowns ranging from ₹4,000 to ₹18,000 provide lasting chewing stability and natural appearance. Working adults seeking teeth straightening without visible metal wires regularly consult our visiting orthodontist regarding removable clear aligners ranging from ₹80,000 to ₹2,50,000.
+            For fractured, cracked, or root-treated teeth, durable all-ceramic and zirconia crowns ranging from {CANONICAL_PRICES.crown_overall} provide lasting chewing stability and natural appearance. Working adults seeking teeth straightening without visible metal wires regularly consult our visiting orthodontist regarding removable clear aligners ranging from {CANONICAL_PRICES.clear_aligners_overall}.
           </p>
           <p>
-            If sudden dental pain arises, our walk-in emergency protocols until 9:00 PM accommodate immediate clinical relief, single or two-visit rotary root canals ranging from ₹4,000 to ₹10,000, and tooth extractions starting at ₹1,500. New-patient consultations are ₹600, including digital RVG X-rays, and remain active for six months so you can review options on your own schedule. With clear written breakdowns provided before treatment starts, professionals can manage healthcare expenditures with full transparency.
+            If sudden dental pain arises, our walk-in emergency protocols until 9:00 PM accommodate immediate clinical relief, single or two-visit rotary root canals ranging from {CANONICAL_PRICES.rct_overall}, and tooth extractions starting at {CANONICAL_PRICES.extraction_front_loose}. New-patient consultations are {CANONICAL_PRICES.consultation}, including digital RVG X-rays, and remain active for six months so you can review options on your own schedule. With clear written breakdowns provided before treatment starts, professionals can manage healthcare expenditures with full transparency.
           </p>
         </div>
       </div>
@@ -263,7 +264,7 @@ const faqSchema = {
             <span class="w-7 h-7 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold flex items-center justify-center">1</span>
             <h3 class="font-serif text-base font-medium text-japandi-charcoal pt-1">Examination &amp; Digital X-Ray</h3>
             <p class="text-xs text-japandi-earth font-light leading-relaxed">
-              We begin with a thorough examination of teeth, gums, and bite alignment. Low-radiation RVG digital X-rays are taken to inspect beneath the surface. Consultation is ₹600 and stays valid for 6 months.
+              We begin with a thorough examination of teeth, gums, and bite alignment. Low-radiation RVG digital X-rays are taken to inspect beneath the surface. Consultation is {CANONICAL_PRICES.consultation} and stays valid for 6 months.
             </p>
           </div>
           <div class="p-6 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/30 space-y-2">

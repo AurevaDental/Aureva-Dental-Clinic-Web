@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { CANONICAL_PRICES, formatExactPrice } from '../../data/prices';
 import { generateBreadcrumbSchema, generateBlogPostSchema, generateFaqSchema } from '../../utils/seoSchemas';
 
 
@@ -61,121 +62,170 @@ const seoProps = {
   schemaMarkup: [breadcrumbSchema, blogPostSchema, faqSchema]
 };
 
-// Data comparison table using exact published Aureva pricing & verified US private benchmarks
-// Exchange rate snapshot date: October 4, 2026 ($1 USD ≈ ₹96 INR)
-const articleUpdateDate = "October 4, 2026";
-const exchangeRateSnapshot = "$1 USD ≈ ₹96 INR";
-
-const costComparisons = [
-  {
-    treatment: "Dental Implant with Crown (Complete Single Tooth)",
-    aurevaPriceInr: "₹45,000 – ₹80,000",
-    foreignBenchmark: "$3,000 – $5,500",
-    currency: "USD ($)",
-    illustrativeInr: "₹2,88,000 – ₹5,28,000",
-    approxDifference: "~84% – 85% lower (Midpoint: ~84.7%)",
-    sourceAndType: "US private-practice range",
-    sourceLabel: "CareCredit Dental Implant Cost Guide ($3,000–$5,500)",
-    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-implant-cost/",
-    inclusions: "Grade-4 titanium implant fixture, custom abutment, and final crown. Bone grafting or sinus lifts, if required, are separate."
-  },
-  {
-    treatment: "Dental Implant (Fixture Only)",
-    aurevaPriceInr: "₹35,000 – ₹60,000",
-    foreignBenchmark: "$1,646 – $2,800",
-    currency: "USD ($)",
-    illustrativeInr: "₹1,58,016 – ₹2,68,800",
-    approxDifference: "~78% lower (Midpoint: ~77.7%)",
-    sourceAndType: "US private-practice range",
-    sourceLabel: "CareCredit Single Implant Guide ($1,646–$2,800) & FAIR Health Consumer (CDT D6010)",
-    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-implant-cost/",
-    inclusions: "Surgical placement of titanium or zirconia fixture. Abutment and final crown billed separately based on material choice."
-  },
-  {
-    treatment: "Root Canal Treatment — Molar (Posterior)",
-    aurevaPriceInr: "₹6,000 – ₹10,000",
-    foreignBenchmark: "$1,030 – $2,471",
-    currency: "USD ($)",
-    illustrativeInr: "₹98,880 – ₹2,37,216",
-    approxDifference: "~94% – 96% lower (Midpoint: ~95.2%)",
-    sourceAndType: "US private-practice range",
-    sourceLabel: "CareCredit Root Canal Guide ($1,030–$2,471) & FAIR Health Consumer (CDT D3330)",
-    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/root-canal-cost/",
-    inclusions: "Multi-canal rotary endodontic therapy, apex locator verification, and bio-ceramic seal. Final protective crown is separate."
-  },
-  {
-    treatment: "Monolithic Zirconia Crown (lab-milled Milled)",
-    aurevaPriceInr: "₹10,000 – ₹18,000",
-    foreignBenchmark: "$915 – $2,500",
-    currency: "USD ($)",
-    illustrativeInr: "₹87,840 – ₹2,40,000",
-    approxDifference: "~89% – 93% lower (Midpoint: ~91.5%)",
-    sourceAndType: "US private-practice range",
-    sourceLabel: "CareCredit Dental Crown Guide ($915–$2,500) & FAIR Health Consumer (CDT D2740)",
-    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-crown-cost/",
-    inclusions: "High-translucency lab-milled monolithic zirconia crown. Core buildup or post-and-core, if clinically required, billed separately."
-  },
-  {
-    treatment: "Dental Crown — PFM",
-    aurevaPriceInr: "₹4,000 – ₹6,000",
-    foreignBenchmark: "$915 – $2,000",
-    currency: "USD ($)",
-    illustrativeInr: "₹87,840 – ₹1,92,000",
-    approxDifference: "~95% – 97% lower (Midpoint: ~96.5%)",
-    sourceAndType: "US private-practice range",
-    sourceLabel: "CareCredit Crown Guide ($915–$2,000) & FAIR Health Consumer (CDT D2740)",
-    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-crown-cost/",
-    inclusions: "Custom porcelain-fused-to-metal (PFM) restoration including precision impressions and laboratory sintering."
-  },
-  {
-    treatment: "Dental Crown — Ceramic",
-    aurevaPriceInr: "₹6,000 – ₹10,000",
-    foreignBenchmark: "$915 – $2,000",
-    currency: "USD ($)",
-    illustrativeInr: "₹87,840 – ₹1,92,000",
-    approxDifference: "~93% – 95% lower (Midpoint: ~94.3%)",
-    sourceAndType: "US private-practice range",
-    sourceLabel: "CareCredit Crown Guide ($915–$2,000) & FAIR Health Consumer (CDT D2740)",
-    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-crown-cost/",
-    inclusions: "Custom ceramic restoration including digital optical impressions and precision laboratory sintering."
-  },
-  {
-    treatment: "Tooth Extraction (Simple to Surgical / Impacted)",
-    aurevaPriceInr: "₹1,500 – ₹10,000",
-    foreignBenchmark: "$150 – $702",
-    currency: "USD ($)",
-    illustrativeInr: "₹14,400 – ₹67,392",
-    approxDifference: "~85% – 90% lower (Midpoint: ~86.0%)",
-    sourceAndType: "US private-practice range",
-    sourceLabel: "CareCredit Extraction Guide ($150–$702) & FAIR Health Consumer (CDT D7140/D7210)",
-    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/tooth-extraction-cost/",
-    inclusions: "Local anesthesia, clinical extraction, and sutures. Covers routine extractions (₹1,500) to surgical wisdom teeth (up to ₹10,000)."
-  },
-  {
-    treatment: "Comprehensive Clear Aligners (Full Arch Series)",
-    aurevaPriceInr: "₹80,000 – ₹2,50,000",
-    foreignBenchmark: "$3,500 – $7,500",
-    currency: "USD ($)",
-    illustrativeInr: "₹3,36,000 – ₹7,20,000",
-    approxDifference: "~65% – 76% lower (Midpoint: ~68.8%)",
-    sourceAndType: "US private-practice range",
-    sourceLabel: "CareCredit Clear Aligners Cost Guide ($3,500–$7,500)",
-    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/clear-aligners-cost/",
-    inclusions: "Intraoral 3D scan, digital orthodontic planning, and custom aligner tray sequence based on mild, moderate, or complex malocclusion."
-  },
-  {
-    treatment: "Porcelain Veneer (Per Tooth)",
-    aurevaPriceInr: "₹8,000 – ₹24,000",
-    foreignBenchmark: "$1,020 – $2,506",
-    currency: "USD ($)",
-    illustrativeInr: "₹97,920 – ₹2,40,576",
-    approxDifference: "~90% – 92% lower (Midpoint: ~90.5%)",
-    sourceAndType: "US private-practice range",
-    sourceLabel: "CareCredit Veneers Cost Guide ($1,020–$2,506 per tooth)",
-    sourceUrl: "https://www.carecredit.com/well-u/health-wellness/how-much-do-veneers-cost/",
-    inclusions: "Custom aesthetic porcelain veneer per unit including conservative preparation and clinical bonding."
+const FOREIGN_BENCHMARKS = {
+  articleUpdateDate: "October 4, 2026",
+  exchangeRateSnapshot: "$1 USD ≈ ₹96 INR",
+  rateSnapshotSentence: "All INR conversions use the illustrative snapshot rate of $1 USD ≈ ₹96 INR as of October 4, 2026.",
+  comparisons: [
+    {
+      id: "implant_with_crown",
+      treatment: "Dental Implant with Crown (Complete Single Tooth)",
+      priceKey: "implant_with_crown",
+      foreignBenchmark: "$3,000 – $5,500",
+      currency: "USD ($)",
+      illustrativeInr: "₹2,88,000 – ₹5,28,000",
+      approxDifference: "~84% – 85% lower (Midpoint: ~84.7%)",
+      sourceAndType: "US private-practice range",
+      sourceLabel: "CareCredit Dental Implant Cost Guide ($3,000–$5,500)",
+      sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-implant-cost/",
+      inclusions: "Grade-4 titanium implant fixture, custom abutment, and final crown. Bone grafting or sinus lifts, if required, are separate."
+    },
+    {
+      id: "implant_fixture",
+      treatment: "Dental Implant (Fixture Only)",
+      priceKey: "implant_single_fixture",
+      foreignBenchmark: "$1,646 – $2,800",
+      currency: "USD ($)",
+      illustrativeInr: "₹1,58,016 – ₹2,68,800",
+      approxDifference: "~78% lower (Midpoint: ~77.7%)",
+      sourceAndType: "US private-practice range",
+      sourceLabel: "CareCredit Single Implant Guide ($1,646–$2,800) & FAIR Health Consumer (CDT D6010)",
+      sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-implant-cost/",
+      inclusions: "Surgical placement of titanium or zirconia fixture. Abutment and final crown billed separately based on material choice."
+    },
+    {
+      id: "rct_molar",
+      treatment: "Root Canal Treatment — Molar (Posterior)",
+      priceKey: "rct_molar",
+      foreignBenchmark: "$1,030 – $2,471",
+      currency: "USD ($)",
+      illustrativeInr: "₹98,880 – ₹2,37,216",
+      approxDifference: "~94% – 96% lower (Midpoint: ~95.2%)",
+      sourceAndType: "US private-practice range",
+      sourceLabel: "CareCredit Root Canal Guide ($1,030–$2,471) & FAIR Health Consumer (CDT D3330)",
+      sourceUrl: "https://www.carecredit.com/well-u/health-wellness/root-canal-cost/",
+      inclusions: "Multi-canal rotary endodontic therapy, apex locator verification, and bio-ceramic seal. Final protective crown is separate."
+    },
+    {
+      id: "crown_zirconia",
+      treatment: "Monolithic Zirconia Crown (lab-milled Milled)",
+      priceKey: "crown_zirconia",
+      foreignBenchmark: "$915 – $2,500",
+      currency: "USD ($)",
+      illustrativeInr: "₹87,840 – ₹2,40,000",
+      approxDifference: "~89% – 93% lower (Midpoint: ~91.5%)",
+      sourceAndType: "US private-practice range",
+      sourceLabel: "CareCredit Dental Crown Guide ($915–$2,500) & FAIR Health Consumer (CDT D2740)",
+      sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-crown-cost/",
+      inclusions: "High-translucency lab-milled monolithic zirconia crown. Core buildup or post-and-core, if clinically required, billed separately."
+    },
+    {
+      id: "crown_pfm",
+      treatment: "Dental Crown — PFM",
+      priceKey: "crown_pfm",
+      foreignBenchmark: "$915 – $2,000",
+      currency: "USD ($)",
+      illustrativeInr: "₹87,840 – ₹1,92,000",
+      approxDifference: "~95% – 97% lower (Midpoint: ~96.5%)",
+      sourceAndType: "US private-practice range",
+      sourceLabel: "CareCredit Crown Guide ($915–$2,000) & FAIR Health Consumer (CDT D2740)",
+      sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-crown-cost/",
+      inclusions: "Custom porcelain-fused-to-metal (PFM) restoration including precision impressions and laboratory sintering."
+    },
+    {
+      id: "crown_ceramic",
+      treatment: "Dental Crown — Ceramic",
+      priceKey: "crown_ceramic",
+      foreignBenchmark: "$915 – $2,000",
+      currency: "USD ($)",
+      illustrativeInr: "₹87,840 – ₹1,92,000",
+      approxDifference: "~93% – 95% lower (Midpoint: ~94.3%)",
+      sourceAndType: "US private-practice range",
+      sourceLabel: "CareCredit Crown Guide ($915–$2,000) & FAIR Health Consumer (CDT D2740)",
+      sourceUrl: "https://www.carecredit.com/well-u/health-wellness/dental-crown-cost/",
+      inclusions: "Custom ceramic restoration including digital optical impressions and precision laboratory sintering."
+    },
+    {
+      id: "extraction_routine",
+      treatment: "Tooth Extraction (Routine / Simple)",
+      priceKey: "extraction_overall",
+      foreignBenchmark: "$150",
+      currency: "USD ($)",
+      illustrativeInr: "₹14,400",
+      approxDifference: "~65% – 90% lower (Midpoint: ~77.4%)",
+      sourceAndType: "US private-practice range",
+      sourceLabel: "CareCredit Extraction Guide ($150 simple) & FAIR Health Consumer (CDT D7140)",
+      sourceUrl: "https://www.carecredit.com/well-u/health-wellness/tooth-extraction-cost/",
+      inclusions: "Local anesthesia, clinical extraction, and sutures. Covers routine tooth extractions."
+    },
+    {
+      id: "wisdom_surgical",
+      treatment: "Wisdom Tooth Extraction (Surgical / Impacted)",
+      priceKey: "wisdom_overall",
+      foreignBenchmark: "$702",
+      currency: "USD ($)",
+      illustrativeInr: "₹67,392",
+      approxDifference: "~85% – 94% lower (Midpoint: ~89.6%)",
+      sourceAndType: "US private-practice range",
+      sourceLabel: "CareCredit Extraction Guide ($702 surgical) & FAIR Health Consumer (CDT D7210)",
+      sourceUrl: "https://www.carecredit.com/well-u/health-wellness/tooth-extraction-cost/",
+      inclusions: "Surgical removal of impacted third molars, bone relief, and sutures."
+    },
+    {
+      id: "clear_aligners",
+      treatment: "Comprehensive Clear Aligners (Full Arch Series)",
+      priceKey: "clear_aligners_overall",
+      foreignBenchmark: "$3,500 – $7,500",
+      currency: "USD ($)",
+      illustrativeInr: "₹3,36,000 – ₹7,20,000",
+      approxDifference: "~65% – 76% lower (Midpoint: ~68.8%)",
+      sourceAndType: "US private-practice range",
+      sourceLabel: "CareCredit Clear Aligners Cost Guide ($3,500–$7,500)",
+      sourceUrl: "https://www.carecredit.com/well-u/health-wellness/clear-aligners-cost/",
+      inclusions: "Intraoral 3D scan, digital orthodontic planning, and custom aligner tray sequence based on mild, moderate, or complex malocclusion."
+    },
+    {
+      id: "veneers",
+      treatment: "Porcelain Veneer (Per Tooth)",
+      priceKey: "veneers_porcelain",
+      foreignBenchmark: "$1,020 – $2,506",
+      currency: "USD ($)",
+      illustrativeInr: "₹97,920 – ₹2,40,576",
+      approxDifference: "~90% – 92% lower (Midpoint: ~90.5%)",
+      sourceAndType: "US private-practice range",
+      sourceLabel: "CareCredit Veneers Cost Guide ($1,020–$2,506 per tooth)",
+      sourceUrl: "https://www.carecredit.com/well-u/health-wellness/how-much-do-veneers-cost/",
+      inclusions: "Custom aesthetic porcelain veneer per unit including conservative preparation and clinical bonding."
+    }
+  ],
+  calculations: {
+    implant: {
+      benchmark: "$3,000 – $5,500 (Midpoint: $4,250 = ₹4,08,000 INR illustrative equivalent at $1 = ₹96).",
+      lower: "((₹2,88,000 - ₹45,000) / ₹2,88,000) × 100 = ~84.4% difference.",
+      upper: "((₹5,28,000 - ₹80,000) / ₹5,28,000) × 100 = ~84.8% difference.",
+      midpoint: "((₹4,08,000 - ₹62,500) / ₹4,08,000) × 100 = ~84.7% difference."
+    },
+    molarRct: {
+      benchmark: "$1,030 – $2,471 (Midpoint: $1,750.50 = ₹1,68,048 INR illustrative equivalent at $1 = ₹96).",
+      lower: "((₹98,880 - ₹6,000) / ₹98,880) × 100 = ~93.9% difference.",
+      upper: "((₹2,37,216 - ₹10,000) / ₹2,37,216) × 100 = ~95.8% difference.",
+      midpoint: "((₹1,68,048 - ₹8,000) / ₹1,68,048) × 100 = ~95.2% difference."
+    },
+    aligners: {
+      benchmark: "$3,500 – $7,500 (Illustrative INR: ₹3,36,000 – ₹7,20,000; Midpoint: $5,500 = ₹5,28,000).",
+      lower: "((₹3,36,000 - ₹80,000) / ₹3,36,000) × 100 = ~76.2% difference.",
+      upper: "((₹7,20,000 - ₹2,50,000) / ₹7,20,000) × 100 = ~65.3% difference (Falls below 70%).",
+      midpoint: "((₹5,28,000 - ₹1,65,000) / ₹5,28,000) × 100 = ~68.8% difference (Falls below 70%)."
+    }
   }
-];
+};
+
+const costComparisons = FOREIGN_BENCHMARKS.comparisons.map((row) => ({
+  ...row,
+  aurevaPriceInr: (CANONICAL_PRICES as any)[row.priceKey]
+}));
+
+const { articleUpdateDate, exchangeRateSnapshot } = FOREIGN_BENCHMARKS;
 ---
 
 <Layout {...seoProps}>
@@ -251,7 +301,7 @@ const costComparisons = [
       <section class="space-y-6">
         <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">2. Procedure Fee Comparison: US Benchmarks vs. Aureva Dental</h2>
         <p>
-          The table below compares referenced self-pay dental fee benchmarks in the United States with Aureva Dental's published treatment fees in Bangalore. All INR conversions use the illustrative snapshot rate of $1 USD ≈ ₹96 INR as of {articleUpdateDate}. Treatment packages and inclusions can differ between countries and providers, so these comparisons are illustrative rather than like-for-like quotations:
+          The table below compares referenced self-pay dental fee benchmarks in the United States with Aureva Dental's published treatment fees in Bangalore. {FOREIGN_BENCHMARKS.rateSnapshotSentence} Treatment packages and inclusions can differ between countries and providers, so these comparisons are illustrative rather than like-for-like quotations:
         </p>
 
         <div class="overflow-x-auto rounded-3xl border border-japandi-clay/50 bg-japandi-sand/30 my-6">
@@ -305,21 +355,21 @@ const costComparisons = [
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
           <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2 text-xs">
             <strong class="font-medium text-japandi-charcoal block text-sm">Example A: Dental Implant with Crown</strong>
-            <p><strong>US Private Benchmark Range:</strong> $3,000 – $5,500 (Midpoint: $4,250 = ₹4,08,000 INR illustrative equivalent at $1 = ₹96).</p>
-            <p><strong>Aureva Published Range:</strong> ₹45,000 – ₹80,000 (Midpoint: ₹62,500 INR).</p>
-            <p><strong>Lower Endpoint Calculation:</strong> ((₹2,88,000 - ₹45,000) / ₹2,88,000) &times; 100 = <strong>~84.4% difference</strong>.</p>
-            <p><strong>Upper Endpoint Calculation:</strong> ((₹5,28,000 - ₹80,000) / ₹5,28,000) &times; 100 = <strong>~84.8% difference</strong>.</p>
-            <p><strong>Midpoint Calculation:</strong> ((₹4,08,000 - ₹62,500) / ₹4,08,000) &times; 100 = <strong>~84.7% difference</strong>.</p>
+            <p><strong>US Private Benchmark Range:</strong> {FOREIGN_BENCHMARKS.calculations.implant.benchmark}</p>
+            <p><strong>Aureva Published Range:</strong> {CANONICAL_PRICES.implant_with_crown} (Midpoint: {formatExactPrice(62500)} INR).</p>
+            <p><strong>Lower Endpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.implant.lower}</p>
+            <p><strong>Upper Endpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.implant.upper}</p>
+            <p><strong>Midpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.implant.midpoint}</p>
             <p class="text-japandi-earth font-light italic">Supports 70%+ claim: YES. Indicative comparison. Bone grafting, if clinically required, is separate.</p>
           </div>
 
           <div class="p-6 rounded-2xl bg-japandi-cream border border-japandi-clay/40 space-y-2 text-xs">
             <strong class="font-medium text-japandi-charcoal block text-sm">Example B: Molar Root Canal Treatment</strong>
-            <p><strong>US Private Benchmark Range:</strong> $1,030 – $2,471 (Midpoint: $1,750.50 = ₹1,68,048 INR illustrative equivalent at $1 = ₹96).</p>
-            <p><strong>Aureva Published Range:</strong> ₹6,000 – ₹10,000 (Midpoint: ₹8,000 INR).</p>
-            <p><strong>Lower Endpoint Calculation:</strong> ((₹98,880 - ₹6,000) / ₹98,880) &times; 100 = <strong>~93.9% difference</strong>.</p>
-            <p><strong>Upper Endpoint Calculation:</strong> ((₹2,37,216 - ₹10,000) / ₹2,37,216) &times; 100 = <strong>~95.8% difference</strong>.</p>
-            <p><strong>Midpoint Calculation:</strong> ((₹1,68,048 - ₹8,000) / ₹1,68,048) &times; 100 = <strong>~95.2% difference</strong>.</p>
+            <p><strong>US Private Benchmark Range:</strong> {FOREIGN_BENCHMARKS.calculations.molarRct.benchmark}</p>
+            <p><strong>Aureva Published Range:</strong> {CANONICAL_PRICES.rct_molar} (Midpoint: {formatExactPrice(8000)} INR).</p>
+            <p><strong>Lower Endpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.molarRct.lower}</p>
+            <p><strong>Upper Endpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.molarRct.upper}</p>
+            <p><strong>Midpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.molarRct.midpoint}</p>
             <p class="text-japandi-earth font-light italic">Supports 70%+ claim: YES. Multi-canal posterior endodontic treatment. Crown billed separately.</p>
           </div>
         </div>
@@ -330,11 +380,11 @@ const costComparisons = [
             We do not claim arbitrary 70% savings across all treatments. For instance, in <strong>Comprehensive Clear Aligners</strong>:
           </p>
           <ul class="list-disc pl-4 space-y-1 font-light">
-            <li>US private aligner benchmark range: $3,500 – $7,500 (Illustrative INR: ₹3,36,000 – ₹7,20,000; Midpoint: $5,500 = ₹5,28,000).</li>
-            <li>Aureva published fee range: ₹80,000 – ₹2,50,000 (Midpoint: ₹1,65,000).</li>
-            <li><strong>Lower Endpoint Calculation (Mild):</strong> ((₹3,36,000 - ₹80,000) / ₹3,36,000) &times; 100 = <strong>~76.2% difference</strong>.</li>
-            <li><strong>Upper Endpoint Calculation (Complex Full-Arch):</strong> ((₹7,20,000 - ₹2,50,000) / ₹7,20,000) &times; 100 = <strong>~65.3% difference</strong> (Falls below 70%).</li>
-            <li><strong>Midpoint Calculation:</strong> ((₹5,28,000 - ₹1,65,000) / ₹5,28,000) &times; 100 = <strong>~68.8% difference</strong> (Falls below 70%).</li>
+            <li>US private aligner benchmark range: {FOREIGN_BENCHMARKS.calculations.aligners.benchmark}</li>
+            <li>Aureva published fee range: {CANONICAL_PRICES.clear_aligners_overall} (Midpoint: {formatExactPrice(165000)}).</li>
+            <li><strong>Lower Endpoint Calculation (Mild):</strong> {FOREIGN_BENCHMARKS.calculations.aligners.lower}</li>
+            <li><strong>Upper Endpoint Calculation (Complex Full-Arch):</strong> {FOREIGN_BENCHMARKS.calculations.aligners.upper}</li>
+            <li><strong>Midpoint Calculation:</strong> {FOREIGN_BENCHMARKS.calculations.aligners.midpoint}</li>
           </ul>
           <p class="font-light">
             Because complex aligner cases fall below 70%, the 70% threshold applies strictly to selected restorative procedures (implants, root canals, crowns, extractions, veneers) and is not a blanket discount on all dentistry.
@@ -351,11 +401,11 @@ const costComparisons = [
         <ul class="space-y-2.5 text-xs sm:text-sm text-japandi-earth pl-2">
           <li class="flex items-start gap-2.5">
             <span class="text-japandi-moss font-bold">&bull;</span>
-            <span><strong>Clinical Complexity &amp; Canal Count:</strong> In endodontics, anterior teeth are ₹4,000–₹6,000, while multi-canal molars are ₹6,000–₹10,000. Retreatment of previous root canals starts from ₹8,000.</span>
+            <span><strong>Clinical Complexity &amp; Canal Count:</strong> In endodontics, anterior teeth are {CANONICAL_PRICES.rct_anterior}, while multi-canal molars are {CANONICAL_PRICES.rct_molar}. Retreatment of previous root canals starts from {CANONICAL_PRICES.rct_re_treatment}.</span>
           </li>
           <li class="flex items-start gap-2.5">
             <span class="text-japandi-moss font-bold">&bull;</span>
-            <span><strong>Material Selection:</strong> Dental crowns range from PFM (₹4,000–₹6,000) to all-ceramic (₹6,000–₹10,000) and monolithic lab-milled zirconia (₹10,000–₹18,000).</span>
+            <span><strong>Material Selection:</strong> Dental crowns range from PFM ({CANONICAL_PRICES.crown_pfm}) to all-ceramic ({CANONICAL_PRICES.crown_ceramic}) and monolithic lab-milled zirconia ({CANONICAL_PRICES.crown_zirconia}).</span>
           </li>
           <li class="flex items-start gap-2.5">
             <span class="text-japandi-moss font-bold">&bull;</span>
