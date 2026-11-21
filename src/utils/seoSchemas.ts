@@ -23,7 +23,7 @@ export const LOCAL_FAQS: FaqItem[] = [
   },
   {
     question: "Who is the lead dentist at Aureva Dental Hennur?",
-    answer: "Dr. Shweta Singh (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Lead Aesthetic Architect, Clinical Director, and Founder of Aureva Dental. Our clinical team also includes Co-Founder Dr. Agniss Mishra (The Oxford Dental College, Bangalore), Dental Surgeon providing gentle preventive and restorative dental care."
+    answer: "Aureva Dental was founded by Dr. Shweta Singh (Clinical Director) and Agniss Mishra (Co-founder & CEO). Dr. Shweta Singh (The Oxford Dental College, Bangalore; registered with the Karnataka State Dental Council) is the Clinical Director and Founder of Aureva Dental."
   },
   {
     question: "Does Aureva Dental accept walk-ins or emergency appointments on Sundays?",
@@ -35,7 +35,7 @@ export const LOCAL_FAQS: FaqItem[] = [
   },
   {
     question: "How much does a Root Canal Treatment (RCT) or Consultation cost?",
-    answer: "Our new patient consultation (including digital RVG low-radiation X-ray) is ₹600. Single-sitting and specialized Root Canal Treatments start from ₹4,000 to ₹10,000 depending on tooth location (anterior, premolar, or molar). Transparent pricing is shared upfront before every procedure with no surprise fees."
+    answer: "Our new patient consultation (including digital RVG low-radiation X-ray) is ₹600. Most root canal treatments at Aureva Dental are done in 1–2 sittings, ranging from ₹4,000 to ₹10,000 depending on tooth location (anterior, premolar, or molar). Transparent pricing is shared upfront before every procedure with no surprise fees."
   },
   {
     question: "Do you offer Clear Aligners and Smile Makeovers?",
@@ -313,7 +313,7 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       {
         "@type": "MedicalProcedure",
         "name": "Root Canal Treatment",
-        "description": "Micro-precision cleaning and long-term tooth preservation using multi-sitting specialized protocols and digital imaging."
+        "description": "Precision cleaning and long-term tooth preservation using specialized protocols and digital imaging."
       },
       {
         "@type": "MedicalProcedure",
@@ -373,16 +373,9 @@ export function generateDentistSchema(config: any = {}, includeFullCatalog: bool
       },
       {
         "@type": "Person",
-        "name": "Dr. Agniss Mishra",
-        "jobTitle": "Co-founder & Chief Executive",
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "The Oxford Dental College, Bangalore"
-        },
-        "medicalSpecialty": [
-          "Dentistry"
-        ],
-        "description": "Co-Founder and Dental Surgeon providing gentle preventive and restorative dental care at Aureva Dental.",
+        "name": "Agniss Mishra",
+        "jobTitle": "Co-founder & CEO",
+        "description": "Agniss co-founded Aureva Dental and leads the clinic's operations, patient experience and growth.",
         "worksFor": {
           "@id": "https://aurevadental.com/#dentist"
         }

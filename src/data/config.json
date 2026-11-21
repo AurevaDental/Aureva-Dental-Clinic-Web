@@ -12,7 +12,7 @@
     "google_analytics_id": "G-7N3BPH5397",
     "google_tag_manager_id": "GTM-WRVN4QWK",
     "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA",
-    "rating_value": 5.0,
+    "rating_value": 5,
     "review_count": 48,
     "local_areas_served": [
       "Hennur",
@@ -50,7 +50,7 @@
   },
   "hero_section": {
     "headline": "Calm Mind. Healthy Smile.",
-    "sub_headline": "Modern dental clinic in Hennur, Bangalore. Specializing in single-sitting root canals, dental implants, clear aligners, LED/Laser teeth whitening, and gentle family care.",
+    "sub_headline": "Modern dental clinic in Hennur, Bangalore. Root canals (often in 1–2 sittings), dental implants, clear aligners, LED/Laser teeth whitening, and gentle family care.",
     "cta_text": "Reserve Your Visit / Call Desk",
     "video_url": "https://assets.mixkit.co/videos/preview/mixkit-modern-dental-office-interior-41984-large.mp4"
   },
@@ -70,11 +70,6 @@
       "label": "Verified Reviews",
       "value": 48,
       "suffix": ""
-    },
-    {
-      "label": "Sterile Diagnostic Kits",
-      "value": 100,
-      "suffix": "%"
     },
     {
       "label": "Days Open / Week",
@@ -109,7 +104,7 @@
       },
       {
         "title": "Root Canal Treatment (RCT)",
-        "description": "Specialized Root Canal Treatments focusing on careful disinfection, micro-precision cleaning, and long-term tooth preservation using multi-sitting specialized clinical protocols and digital imaging.",
+        "description": "Specialized Root Canal Treatments focusing on careful disinfection, precision cleaning, and long-term tooth preservation using specialized clinical protocols and digital imaging.",
         "items": [
           {
             "name": "RCT (Anterior Tooth)",
@@ -352,11 +347,11 @@
       },
       {
         "id": "agniss",
-        "name": "Dr. Agniss Mishra",
-        "role": "Dental Surgeon & Co-Founder",
-        "qualifications": "Dental Surgeon",
+        "name": "Agniss Mishra",
+        "role": "Co-founder & CEO",
+        "qualifications": "Co-founder & CEO",
         "image_url": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=600&h=800",
-        "philosophy": "Treating the mouth is treating the gateway to the entire body's wellness."
+        "philosophy": "Agniss co-founded Aureva Dental and leads the clinic's operations, patient experience and growth."
       }
     ],
     "visiting_specialists_section": {
@@ -379,7 +374,7 @@
           "specialty": "Conservative Dentistry & Endodontics",
           "role": "Consultant Endodontist",
           "degree": "MDS (Endodontics)",
-          "focus": "Microscopic Rotary Root Canal Therapy, Complex Re-RCT & Apicoectomy",
+          "focus": "Rotary Root Canal Therapy, Complex Re-RCT & Apicoectomy",
           "availability": "Case-to-Case Scheduled Appointments"
         },
         {
@@ -444,23 +439,12 @@
   "social_proof": {
     "title": "Serene Experiences & Google Reviews",
     "subtitle": "VERIFIED PATIENT STORIES",
-    "google_rating": 5.0,
+    "google_rating": 5,
     "review_count": 48,
     "badge_text": "5.0 (48 Google Reviews)",
     "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
   },
-  "google_reviews": [
-    {
-      "name": "Abhishek Sundar",
-      "role": "Hennur Resident • Verified Google Review",
-      "date": "Recent",
-      "treatment": "General & Specialized Dental Care",
-      "rating": 5,
-      "text": "Finding a trustworthy clinic in Hennur, Bengaluru can be tough, but Aureva Dental is hands down the best! From the warm, welcoming hospitality at the front desk to the immaculate clinic environment, every detail is designed to put you at ease.\n\nThe specialized doctors are exceptionally experienced with complex cases, yet wonderfully gentle and empathetic. They listen carefully, explain everything clearly, and ensure a completely pain-free visit.\n\nIf you live in or around Hennur and need expert dental care with a compassionate touch, I cannot recommend Aureva Dental enough!",
-      "verified": true,
-      "google_maps_url": "https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
-    }
-  ],
+  "google_reviews": [],
   "social_media": [
     {
       "platform": "Instagram",

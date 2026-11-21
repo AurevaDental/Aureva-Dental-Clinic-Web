@@ -89,6 +89,7 @@ const displayReviews = rawReviews
   .filter((r: any) => {
     const textKey = (r.text || '').trim().toLowerCase();
     if (!textKey) return true;
+    if (textKey.includes("completely pain-free visit")) return false;
     if (seenTexts.has(textKey)) {
       return false;
     }

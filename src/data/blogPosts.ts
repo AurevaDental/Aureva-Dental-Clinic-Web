@@ -125,7 +125,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "5. Long-Term Maintenance: Retention & Post-Orthodontic Stability",
         paragraphs: [
-          "Achieving your desired tooth alignment is only the first phase of successful orthodontic treatment. Once active aligner therapy concludes, the surrounding alveolar bone and periodontal ligament fibers require several months to reorganize, mineralize, and permanently stabilize around the new root positions.",
+          "Achieving your desired tooth alignment is only the first phase of successful orthodontic treatment. Once active aligner therapy concludes, the surrounding alveolar bone and periodontal ligament fibers require several months to reorganize, mineralize, and stabilize around the new root positions.",
           "Without dedicated retention, natural physiological forces and chewing pressure will cause gradual orthodontic relapse, allowing teeth to drift back toward their original crowded positions. At Aureva Dental, every clear aligner package includes custom precision retainers.",
           "We typically fabricate medical-grade vacuum-formed clear retainers (similar in appearance to aligners) or bonded fixed lingual retainers on the inner surfaces of your lower front incisors. Nightly retainer wear ensures your investment remains protected for decades."
         ],
@@ -151,8 +151,8 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: "Clear aligners are vastly more comfortable than metal braces. When transitioning to a new set of trays, patients feel mild pressure or tightness for the first 24 to 48 hours, indicating that gentle orthodontic forces are working."
       },
       {
-        question: "Are payment plans and 0% card EMIs available at Aureva Dental?",
-        answer: "Yes, we offer transparent milestone payments and accept all major Credit Cards, Debit Cards, and UPI. Credit card payments can be converted into flexible monthly EMIs directly via your banking app."
+        question: "Are EMI options available at Aureva Dental?",
+        answer: "Yes, EMI options are available, and the terms and payment options are explained during your consultation at the clinic."
       },
       {
         question: "Why choose Aureva Dental for clear aligners in Hennur?",
@@ -318,7 +318,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedTreatmentUrl: "/treatments/dental-implants",
     relatedTreatmentName: "Dental Implants",
     introParagraphs: [
-      "Missing teeth affect far more than just your appearance. A missing tooth compromises your chewing efficiency, causes adjacent natural teeth to tilt and shift into the vacant gap, and leads to progressive jawbone resorption over time. Among all restorative options available in modern dentistry, dental implants are universally recognized as the gold standard permanent solution.",
+      "Missing teeth affect far more than just your appearance. A missing tooth compromises your chewing efficiency, causes adjacent natural teeth to tilt and shift into the vacant gap, and leads to progressive jawbone resorption over time. Among all restorative options available in modern dentistry, dental implants are universally recognized as the gold standard fixed solution.",
       "Because dental implants integrate directly with your living jawbone through biocompatible osseointegration, they look, feel, and function exactly like natural tooth roots.",
       "However, patients seeking tooth replacement across Bangalore often encounter wildly conflicting price estimates ranging from ₹20,000 to over ₹80,000 per tooth. In this guide from Aureva Dental in Hennur, we provide a transparent, medically verified breakdown of dental implant pricing in Bangalore, explain what separates premium implant systems, and guide you through the clinical process."
     ],
@@ -333,7 +333,7 @@ export const BLOG_POSTS: BlogPost[] = [
           rows: [
             ["Certified Value Systems (Osstem, Dentium / South Korea)", "₹28,000 – ₹38,000", "US-FDA approved, excellent osseointegration track record, widely accessible components"],
             ["Premium European Systems (Adin, MIS / Israel, Germany)", "₹38,000 – ₹48,000", "Advanced SLA surface treatment, micro-threads for high primary stability"],
-            ["Elite Global Systems (Straumann / Switzerland, Nobel Biocare / Sweden)", "₹50,000 – ₹68,000+", "Patented SLActive / TiUnite surfaces, fastest 4-week osseointegration, lifetime global warranty"],
+            ["Elite Global Systems (Straumann / Switzerland, Nobel Biocare / Sweden)", "₹50,000 – ₹68,000+", "Patented SLActive / TiUnite surfaces, 4-week osseointegration, global manufacturer support"],
             ["Metal-Free Zirconia Implants (Ceramic)", "₹60,000 – ₹85,000", "Fully white biocompatible ceramic; ideal for patients with metal hypersensitivity or thin gum biotypes"]
           ]
         }
@@ -344,10 +344,10 @@ export const BLOG_POSTS: BlogPost[] = [
           "When comparing dental implant estimates between clinics in Hennur, Horamavu, Kalyan Nagar, or Central Bangalore, it is vital to verify whether the quote is all-inclusive or covers only the surgical post. A complete implant restoration requires three distinct elements:",
           "1. The Implant Fixture (Post): A precision medical-grade titanium screw surgically placed into the alveolar bone beneath the gum line, functioning as an artificial tooth root.",
           "2. The Abutment: A precision titanium or ceramic connector secured into the internal chamber of the implant post once healing is complete.",
-          "3. The Prosthetic Crown: The custom-crafted visible tooth crown, milled from monolithic CAD/CAM zirconia or ceramic to match the shade, contour, and translucency of your adjacent natural teeth."
+          "3. The Prosthetic Crown: The custom-crafted visible tooth crown, milled from monolithic lab-milled zirconia or ceramic to match the shade, contour, and translucency of your adjacent natural teeth."
         ],
         bulletPoints: [
-          "Always confirm if the quote includes the final CAD/CAM zirconia crown or only the surgical screw",
+          "Always confirm if the quote includes the final zirconia crown or only the surgical screw",
           "Ensure your clinic utilizes genuine, traceable implant components with manufacturer batch certificates",
           "Verify that precision digital bone mapping is performed prior to surgical placement"
         ]
@@ -361,7 +361,7 @@ export const BLOG_POSTS: BlogPost[] = [
           headers: ["Ancillary Procedure", "Typical Cost Range (INR)", "When It Is Medically Required"],
           rows: [
             ["Pre-Surgical Digital Radiographic Assessment", "₹2,500 – ₹4,000", "Pre-surgical radiographic assessment to measure exact bone height, width, and nerve canals"],
-            ["Bone Grafting (Bio-Oss / Synthetic)", "₹15,000 – ₹20,000", "Required when bone width or density is insufficient to encapsulate the implant"],
+            ["Bone Grafting (Bone graft / Synthetic)", "₹15,000 – ₹20,000", "Required when bone width or density is insufficient to encapsulate the implant"],
             ["Direct / Indirect Sinus Lift", "₹15,000 – ₹20,000", "Required in upper back molars when the maxillary sinus cavity has expanded downward"],
             ["PRP / PRF Growth Factor Therapy", "₹3,000 – ₹6,000", "Concentrated patient platelets applied to surgical site to accelerate soft-tissue healing"]
           ]
@@ -372,12 +372,12 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "For patients who have lost all teeth in an arch or suffer from terminal loose teeth due to advanced periodontitis, full-arch fixed implant bridges offer a life-changing alternative to unstable removable dentures.",
           "All-on-4 Protocol (₹1,80,000 to ₹3,20,000 per arch): Four strategic implants support a complete fixed hybrid bridge of 12 to 14 teeth.",
-          "All-on-6 Protocol (₹2,50,000 to ₹4,50,000 per arch): Six implants provide maximum bite force distribution for patients with adequate bone volume, supporting a monolithic zirconia permanent bridge.",
-          "These permanent restorations eliminate the slippage, speech impediment, palate coverage, and messy adhesive pastes associated with traditional full dentures."
+          "All-on-6 Protocol (₹2,50,000 to ₹4,50,000 per arch): Six implants provide maximum bite force distribution for patients with adequate bone volume, supporting a monolithic zirconia fixed bridge.",
+          "These fixed restorations eliminate the slippage, speech impediment, palate coverage, and messy adhesive pastes associated with traditional full dentures."
         ]
       },
       {
-        heading: "5. The Science of Osseointegration & Lifetime Implant Maintenance",
+        heading: "5. The Science of Osseointegration & Long-Term Implant Maintenance",
         paragraphs: [
           "The remarkable durability of dental implants relies on osseointegration—a biological phenomenon discovered by Prof. P.I. Brånemark where living alveolar bone cells (osteoblasts) attach directly to the micro-textured titanium oxide surface of the implant without intervening connective scar tissue.",
           "Because dental implants do not contain living pulp nerves, they are impervious to dental decay. However, the surrounding gum collar (peri-implant mucosa) requires diligent hygiene to prevent peri-implantitis—a bacterial inflammatory condition analogous to gum disease that causes progressive bone resorption around implants.",
@@ -402,19 +402,19 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: "Initial placement takes about 45 to 60 minutes per implant. Osseointegration (bone fusion) requires 8 to 12 weeks for the lower jaw and 12 to 16 weeks for the upper jaw. Once fused, taking digital scans and securing your final zirconia crown takes 7 to 10 days."
       },
       {
-        question: "What is the clinical success rate of dental implants?",
-        answer: "Modern dental implants placed by experienced dental surgeons boast a documented long-term clinical success rate of 95% to 98% in healthy non-smoking individuals."
+        question: "How predictable are modern dental implants?",
+        answer: "Modern dental implants placed with thorough clinical planning provide reliable, predictable long-term tooth replacement in healthy non-smoking individuals."
       },
       {
         question: "Can diabetic patients receive dental implants safely?",
-        answer: "Yes, well-controlled diabetic patients with an HbA1c level below 7.0% can safely receive dental implants with success rates comparable to non-diabetic individuals."
+        answer: "Yes, well-controlled diabetic patients with an HbA1c level below 7.0% can safely receive dental implants with healing outcomes comparable to non-diabetic individuals."
       },
       {
         question: "How do I care for my dental implant after placement?",
         answer: "You brush and floss your dental implant exactly like a natural tooth. Routine biannual scaling and clinical evaluations at Aureva Dental in Hennur ensure your surrounding gums remain firm and healthy."
       }
     ],
-    conclusion: "Dental implants are a once-in-a-lifetime investment in your ability to eat your favorite foods, smile without hesitation, and preserve your youthful facial structure. Schedule your consultation at Aureva Dental Hennur today.",
+    conclusion: "Dental implants are an investment in your ability to eat your favorite foods, smile without hesitation, and preserve your facial structure. Schedule your consultation at Aureva Dental Hennur today.",
     ctaHeadline: "Restore Your Complete Smile with Dental Implants in Hennur",
     ctaText: "Consult our dental implant specialists at Aureva Dental on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp for a 3D digital implant assessment."
   },
@@ -423,9 +423,9 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Tooth Extraction Cost in Bangalore | Aureva Dental",
     headline: "Tooth Extraction Cost in Bangalore: Simple vs Surgical & Wisdom Teeth (2026)",
     metaDescription: "Transparent tooth extraction cost in Bangalore (₹1,500 to ₹10,000), simple vs surgical removal, wisdom tooth care & comfortable oral surgery at Aureva Dental.",
-    author: "Dr. Agniss Mishra",
-    authorRole: "Dental Surgeon",
-    authorCredentials: "Dr. Agniss Mishra — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+    author: "Aureva Dental team",
+    authorRole: "Clinical Team",
+    authorCredentials: "Aureva Dental Team — Editorial & Clinical Board",
     reviewedBy: "Dr. Shweta",
     date: "September 2026",
     datePublished: "2026-09-15",
@@ -436,7 +436,7 @@ export const BLOG_POSTS: BlogPost[] = [
     relatedTreatmentUrl: "/treatments/tooth-extraction",
     relatedTreatmentName: "Tooth Extraction",
     introParagraphs: [
-      "At Aureva Dental, our fundamental clinical philosophy is conservative tooth preservation. We exhaust every available restorative modality—including root canal treatment, gum treatment, and protective crowns—to keep your natural tooth healthy in your mouth. However, when a tooth suffers severe vertical root fractures, catastrophic subgingival decay, advanced periodontitis bone loss, or painful wisdom tooth impaction, extraction becomes the safest biological necessity.",
+      "At Aureva Dental, our fundamental clinical philosophy is conservative tooth preservation. We exhaust every available restorative modality—including root canal treatment, gum treatment, and protective crowns—to keep your natural tooth healthy in your mouth. However, when a tooth suffers severe vertical root fractures, catastrophic subgingival decay, advanced periodontitis bone loss, or painful wisdom tooth impaction, extraction becomes a necessary clinical step.",
       "Many patients facing tooth extraction are anxious about surgical pain, recovery timelines, and procedural costs across Bangalore dental clinics.",
       "In this guide, clinically reviewed by Dr. Shweta, we provide a transparent price breakdown for simple and surgical extractions, explain atraumatic socket-preservation protocols, and provide practical instructions for a speedy, complications-free recovery."
     ],
@@ -469,7 +469,7 @@ export const BLOG_POSTS: BlogPost[] = [
         paragraphs: [
           "Conventional extraction methods often used excessive brute force with dental forceps, rocking the tooth and fracturing delicate buccal bone plates. This resulted in significant bone loss, creating deep sunken hollows in the jaw that made future dental implant placement complex and expensive.",
           "At Aureva Dental, we practice modern Atraumatic Oral Surgery using specialized micro-periotomes and piezoelectric surgical instruments. By gently severing the periodontal ligament fibers with micro-vibrations, the tooth lifts smoothly out of the socket without damaging the surrounding bone architecture.",
-          "When patients plan to replace the extracted tooth with a dental implant in the future, we perform immediate Socket Preservation (Ridge Preservation). We place biocompatible mineralized bone graft granules into the empty socket and seal it with a collagen membrane, preserving 90%+ of natural bone height and width."
+          "When patients plan to replace the extracted tooth with a dental implant in the future, we perform immediate Socket Preservation (Ridge Preservation). We place biocompatible mineralized bone graft granules into the empty socket and seal it with a collagen membrane, preserving natural bone height and width."
         ]
       },
       {
@@ -505,7 +505,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Immediate implant placement can often be performed during the same extraction visit",
           "Ridge preservation bone grafting keeps your jaw foundation stable for future restorations",
           "Never leave an extraction gap unaddressed for years to avoid bite collapse and facial sagging",
-          "Consult Dr. Agniss Mishra at Aureva Dental in Hennur to customize your post-extraction plan"
+          "Consult your dentist at Aureva Dental in Hennur to customize your post-extraction plan"
         ]
       }
     ],
@@ -588,11 +588,10 @@ export const BLOG_POSTS: BlogPost[] = [
           rows: [
             ["Traditional Metal Braces", "₹30,000 – ₹45,000", "Teenagers, school students, and budget-conscious patients with complex bite issues"],
             ["Aesthetic Ceramic Braces", "₹45,000 – ₹80,000", "Patients wanting lower visibility with fixed bracket reliability"],
-            ["Self-Ligating (Damon) Braces", "₹60,000 – ₹80,000", "Reduced friction brackets that require fewer adjustments and shorter chair time"],
+            ["Self-Ligating Braces", "₹60,000 – ₹80,000", "Reduced friction brackets that require fewer adjustments and shorter chair time"],
             ["Lingual orthodontics (braces fitted behind the teeth)", "—", "Patients seeking fixed braces fitted behind the teeth for discreet orthodontic care"],
             ["Lingual retainers", "—", "Custom-bonded retention wires fitted behind the teeth to maintain alignment"],
-            ["Certified Indian Aligner Systems", "₹80,000 – ₹1,40,000", "Working professionals and adults with mild-to-moderate crowding seeking value"],
-            ["Global Aligner Systems (Invisalign)", "₹1,50,000 – ₹2,50,000+", "Complex full-arch malocclusions requiring patented SmartTrack engineering"]
+            ["Certified Indian Aligner Systems", "₹80,000 – ₹1,40,000", "Working professionals and adults with mild-to-moderate crowding seeking value"]
           ]
         }
       },
@@ -627,7 +626,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Fast-track aligner options for minor cosmetic relapse (typically 10 to 16 sets of trays)",
           "Avoids visible metal brackets in corporate and client-facing professions",
           "Includes 3D digital smile simulation before beginning treatment",
-          "Permanent fixed bonded lingual retainers available to eliminate compliance worries"
+          "Fixed bonded lingual retainers available to eliminate compliance worries"
         ]
       }
     ],
@@ -797,7 +796,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "readTime": "7 min read",
   "excerpt": "Why toothaches throb violently at night, the clinical science of irreversible pulpitis, practical emergency steps to survive until morning, and definitive pain relief at Aureva Dental.",
   "relatedTreatmentUrl": "/root-canal-treatment-hennur",
-  "relatedTreatmentName": "Single-Sitting Root Canal Treatment",
+  "relatedTreatmentName": "Root Canal Treatment",
   "introParagraphs": [
     "There are few physical experiences as distressing as waking up in the dead of night to a severe, rhythmic, throbbing pain radiating through your jaw and temple. Nighttime toothaches are notoriously intense—pounding in sync with your heartbeat and resisting standard household painkillers.",
     "At Aureva Dental in Hennur and Horamavu, Bangalore, nocturnal dental pain is the single most common reason patients reach out to our emergency helpline. This comprehensive clinical guide explains why dental pain surges when lying down, what your symptoms indicate, practical steps to survive the night, and the definitive dental care needed to save your natural tooth."
@@ -888,8 +887,8 @@ export const BLOG_POSTS: BlogPost[] = [
     {
       "heading": "How Aureva Dental Provides Definitive Pain Relief",
       "paragraphs": [
-        "Aureva Dental specializes in gentle, single-sitting root canal treatments (RCT) designed to eradicate severe tooth pain permanently. Using high-resolution digital RVG radiography, we pinpoint the exact apical pathology in seconds.",
-        "Under computerized local anesthesia, the infected pulp tissue is gently removed using flexible nickel-titanium rotary files. The root canal system is thoroughly disinfected with ultrasonic irrigation and sealed with biocompatible gutta-percha. Most patients experience complete, lasting relief within 45 minutes and sleep peacefully the very next night."
+        "Most root canal treatments at Aureva Dental are done in 1–2 sittings, designed to relieve severe tooth pain. Using high-resolution digital RVG radiography, we pinpoint the exact apical pathology in seconds.",
+        "Under computerized local anesthesia, the infected pulp tissue is gently removed using flexible nickel-titanium rotary files. The root canal system is thoroughly disinfected with ultrasonic irrigation and sealed with biocompatible gutta-percha. "
       ]
     }
   ],
@@ -908,7 +907,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       "question": "How much does emergency root canal treatment cost in Bangalore?",
-      "answer": "Single-sitting root canal treatments at Aureva Dental range from ₹4,000 to ₹10,000 depending on the tooth's anatomical position (front incisor vs. multi-rooted molar) and clinical complexity. Transparent pricing is provided before starting any procedure."
+      "answer": "Root canal treatments at Aureva Dental range from ₹4,000 to ₹10,000 depending on the tooth's anatomical position (front incisor vs. multi-rooted molar) and clinical complexity. Transparent pricing is provided before starting any procedure."
     }
   ],
   "conclusion": "A severe throbbing toothache at night is your body's urgent distress call. Do not endure another sleepless night in pain—reach out to Aureva Dental for compassionate, same-day relief.",
@@ -920,9 +919,9 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Wisdom Tooth Pain Radiating to Jaw and Ear: Symptoms, Pericoronitis & Treatment | Aureva Dental",
   "headline": "Wisdom Tooth Pain Radiating to Jaw, Ear & Neck: Causes, Relief & Gentle Removal",
   "metaDescription": "Experiencing shooting wisdom tooth pain radiating to your ear and jaw? Learn why pericoronitis and impaction cause nerve pain and how gentle removal at Aureva Dental helps.",
-  "author": "Dr. Agniss Mishra",
-  "authorRole": "Dental Surgeon & Oral Surgery Lead",
-  "authorCredentials": "Dr. Agniss Mishra — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "author": "Aureva Dental team",
+  "authorRole": "Clinical Team",
+  "authorCredentials": "Aureva Dental Team — Editorial & Clinical Board",
   "date": "September 2026",
   "datePublished": "2026-09-26",
   "dateModified": "2026-09-28",
@@ -933,7 +932,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "relatedTreatmentName": "Comfortable Wisdom Tooth Removal",
   "introParagraphs": [
     "If you are suffering from a dull, persistent ache in the back of your mouth that radiates upward into your ear canal, temples, or downward along your jawline, you are likely dealing with an impacted third molar (wisdom tooth).",
-    "Many patients consult ENT specialists believing they have a chronic middle-ear infection, only to discover that the root cause is a partially erupted wisdom tooth trapped beneath the gums. This guide breaks down the anatomy of referred dental pain, common complications, and how modern oral surgery at Aureva Dental resolves the condition permanently."
+    "Many patients consult ENT specialists believing they have a chronic middle-ear infection, only to discover that the root cause is a partially erupted wisdom tooth trapped beneath the gums. This guide breaks down the anatomy of referred dental pain, common complications, and how modern oral surgery at Aureva Dental resolves the condition."
   ],
   "sections": [
     {
@@ -1005,7 +1004,7 @@ export const BLOG_POSTS: BlogPost[] = [
   "faqs": [
     {
       "question": "Can I just take antibiotics instead of extracting the wisdom tooth?",
-      "answer": "Antibiotics will temporarily suppress the bacterial flare-up, but as soon as you finish the medication course, bacteria will inevitably reaccumulate under the persistent gum flap. The infection will recur, often more aggressively. Removing the problematic tooth provides the only permanent solution."
+      "answer": "Antibiotics will temporarily suppress the bacterial flare-up, but as soon as you finish the medication course, bacteria will inevitably reaccumulate under the persistent gum flap. The infection will recur, often more aggressively. Removing the problematic tooth provides a definitive resolution."
     },
     {
       "question": "Is wisdom tooth extraction painful?",
@@ -1037,9 +1036,9 @@ export const BLOG_POSTS: BlogPost[] = [
   "dateModified": "2026-09-28",
   "category": "Emergency Dental Care & Endodontics",
   "readTime": "7 min read",
-  "excerpt": "Learn what a gum boil or parulis signifies, why bursting it provides deceptive relief while bone loss continues, and how root canals permanently eliminate dental fistulas.",
+  "excerpt": "Learn what a gum boil or parulis signifies, why bursting it provides deceptive relief while bone loss continues, and how root canals treat dental fistulas.",
   "relatedTreatmentUrl": "/root-canal-treatment-hennur",
-  "relatedTreatmentName": "Single-Sitting Root Canal Treatment",
+  "relatedTreatmentName": "Root Canal Treatment",
   "introParagraphs": [
     "Discovering a small white, yellow, or reddish bump on your gums—often resembling an ordinary acne pimple—can be alarming. You might notice it periodically swells, bursts with a foul or salty taste, and then seemingly disappears, only to reappear weeks later.",
     "In dentistry, this lesion is known as a **parulis** or **dental fistula**. It is not a superficial skin problem, but the visible drainage portal of an underlying chronic dental infection inside your jawbone. This guide outlines why gum pimples develop, why popping them at home is dangerous, and how root canal therapy cures the issue at the source."
@@ -1081,7 +1080,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "heading": "How Aureva Dental Diagnoses and Treats Gum Fistulas",
       "paragraphs": [
         "At Aureva Dental in Hennur/Horamavu, Bangalore, diagnosing a sinus tract is quick and precise. We often perform a specialized 'fistulogram' by inserting a flexible, sterile gutta-percha point into the tract and taking a digital RVG X-ray. The point points directly to the infected root tip with exceptional diagnostic accuracy.",
-        "In over 95% of cases, the tooth can be preserved through single-sitting root canal treatment. We thoroughly debride and sterilize the infected canals with ultrasonic sodium hypochlorite and seal them with biocompatible gutta-percha. Within 7 to 14 days following treatment, the gum pimple shrinks and completely vanishes as healthy jawbone regenerates."
+        "In most cases, the tooth can be preserved through root canal treatment. We thoroughly debride and clean the infected canals with ultrasonic irrigation and seal them with biocompatible gutta-percha. Within 7 to 14 days following treatment, the gum pimple shrinks and resolves as healthy jawbone regenerates."
       ]
     }
   ],
@@ -1251,7 +1250,7 @@ export const BLOG_POSTS: BlogPost[] = [
     {
       "heading": "Pain Management & Medication Protocol",
       "paragraphs": [
-        "Take all prescribed anti-inflammatory and pain medications exactly as directed by Dr. Shweta Singh or Dr. Agniss Mishra:",
+        "Take all prescribed anti-inflammatory and pain medications exactly as directed by your dentist:",
         "1. Scheduled Analgesics: If prescribed an NSAID (such as Ibuprofen or Paracetamol), taking the first dose before the numbness completely wears off significantly minimizes discomfort.",
         "2. Antibiotic Course: If antibiotics were prescribed due to pre-existing swelling or bone infection, complete the full course even if you feel completely fine after two days. Stopping early can breed resistant bacteria.",
         "3. Avoid Home Poking: Do not poke the treated tooth with your tongue, fingers, or toothpicks."
@@ -1308,9 +1307,9 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Wisdom Tooth Extraction Aftercare: Preventing Dry Socket & Fast Healing | Aureva Dental",
   "headline": "Wisdom Tooth Extraction Aftercare: Days 1 to 7 Recovery & How to Prevent Dry Socket",
   "metaDescription": "Essential wisdom tooth removal aftercare instructions. Swelling management, bleeding control, soft food list, and vital tips to prevent dry socket by Aureva Dental.",
-  "author": "Dr. Agniss Mishra",
-  "authorRole": "Dental Surgeon & Oral Surgery Lead",
-  "authorCredentials": "Dr. Agniss Mishra — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "author": "Aureva Dental team",
+  "authorRole": "Clinical Team",
+  "authorCredentials": "Aureva Dental Team — Editorial & Clinical Board",
   "date": "September 2026",
   "datePublished": "2026-09-27",
   "dateModified": "2026-09-28",
@@ -1385,7 +1384,7 @@ export const BLOG_POSTS: BlogPost[] = [
   ],
   "conclusion": "Recovering from wisdom tooth extraction is smooth and straightforward when following these guidelines. Contact Aureva Dental whenever you need guidance.",
   "ctaHeadline": "Need Post-Extraction Assistance in Hennur?",
-  "ctaText": "Our clinic is open Tuesday to Sunday. Call +91 73497 01002 or contact us on WhatsApp for any post-operative questions."
+  "ctaText": "Our clinic is open 7 days a week (Monday 4–9 PM, Tuesday to Sunday 9:30 AM–9 PM). Call +91 73497 01002 or contact us on WhatsApp for any post-operative questions."
 },
 {
   "slug": "dental-implant-aftercare",
@@ -1400,12 +1399,12 @@ export const BLOG_POSTS: BlogPost[] = [
   "dateModified": "2026-09-28",
   "category": "Patient Aftercare Guides",
   "readTime": "7 min read",
-  "excerpt": "Learn how to care for your new dental implant: the first 72 hours, protecting the osseointegration phase, cleaning techniques, and ensuring a lifetime of stable function.",
+  "excerpt": "Learn how to care for your new dental implant: the first 72 hours, protecting the osseointegration phase, cleaning techniques, and supporting long-term stable function.",
   "relatedTreatmentUrl": "/treatments/dental-implants",
   "relatedTreatmentName": "Dental Implants",
   "introParagraphs": [
-    "Congratulations on taking a permanent step toward restoring your complete smile! A dental implant is the gold standard in modern tooth replacement, fusing directly with your jawbone in a biological process called **osseointegration**.",
-    "The success rate of dental implants at Aureva Dental exceeds 98%. Ensuring proper post-operative care during the initial healing days safeguards the bone-to-implant interface and sets the stage for a lifetime of stable chewing and natural aesthetics."
+    "Congratulations on taking an important step toward restoring your complete smile! A dental implant is the gold standard in modern tooth replacement, fusing directly with your jawbone in a biological process called **osseointegration**.",
+    "Ensuring proper post-operative care during the initial healing days safeguards the bone-to-implant interface and supports long-term stable chewing and natural aesthetics."
   ],
   "sections": [
     {
@@ -1455,14 +1454,14 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       "question": "Can dental implants fail or get rejected by the body?",
-      "answer": "Titanium is completely biocompatible and cannot be 'rejected' by the immune system in the way an organ transplant might be. Failures are extremely rare (under 2%) and are almost always caused by poor oral hygiene (peri-implantitis), heavy smoking, or uncontrolled diabetes."
+      "answer": "Titanium is biocompatible and cannot be 'rejected' by the immune system in the way an organ transplant might be. Complications are uncommon and are typically associated with poor oral hygiene (peri-implantitis), heavy smoking, or uncontrolled diabetes."
     },
     {
       "question": "Is smoking permitted after dental implant placement?",
       "answer": "Smoking significantly compromises peripheral micro-circulation and is a primary cause of early implant failure. We strongly advise abstaining from all tobacco and vaping products for at least 2 weeks before and 4 weeks after implant placement."
     }
   ],
-  "conclusion": "With proper post-operative care and regular dental checkups, your dental implant can last a lifetime. Reach out to Aureva Dental for any questions during your recovery.",
+  "conclusion": "With proper post-operative care and regular dental checkups, your dental implant provides durable, long-term tooth replacement. Reach out to Aureva Dental for any questions during your recovery.",
   "ctaHeadline": "Dedicated Dental Implant Care in Hennur",
   "ctaText": "Aureva Dental is located on Horamavu Agara Road, Hennur Bande. Call +91 73497 01002 or WhatsApp us for post-op guidance."
 },
@@ -1471,9 +1470,9 @@ export const BLOG_POSTS: BlogPost[] = [
   "title": "Teeth Cleaning & Scaling Aftercare: What to Expect, Diet & Sensitivity | Aureva Dental",
   "headline": "Teeth Cleaning & Scaling Aftercare: Sensitivity Management & Gum Care Guide",
   "metaDescription": "What to expect after ultrasonic scaling and teeth cleaning. Understanding normal sensitivity, gum healing, foods to avoid, and flossing tips by Aureva Dental Bangalore.",
-  "author": "Dr. Agniss Mishra",
-  "authorRole": "Dental Surgeon & Preventive Care Lead",
-  "authorCredentials": "Dr. Agniss Mishra — Dental Surgeon, Aureva Dental (Alumnus, The Oxford Dental College)",
+  "author": "Aureva Dental team",
+  "authorRole": "Clinical Team",
+  "authorCredentials": "Aureva Dental Team — Editorial & Clinical Board",
   "date": "September 2026",
   "datePublished": "2026-09-28",
   "dateModified": "2026-09-28",
@@ -1513,7 +1512,7 @@ export const BLOG_POSTS: BlogPost[] = [
     {
       "heading": "Dietary Recommendations for the First 24 Hours",
       "paragraphs": [
-        "If your scaling session included stain polishing or air-polishing, your teeth's microscopic pellicle layer takes a few hours to regenerate:",
+        "If your scaling session included stain polishing, your teeth's microscopic pellicle layer takes a few hours to regenerate:",
         "- Avoid Deeply Pigmented Foods: Stay away from strong stain-causing foods and beverages for 24 hours—such as black coffee, turmeric-heavy curries, red wine, soy sauce, and cola.",
         "- Avoid Acidic Foods: Citrus fruits, tomatoes, and vinegar can irritate slightly tender gingival margins.",
         "- No Tobacco: Avoid smoking or chewing tobacco, which severely irritates recovering gum tissues and quickly re-stains freshly polished enamel."
@@ -1525,7 +1524,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "To keep your smile fresh and plaque-free until your next checkup:",
         "1. 2x2 Brushing Rule: Brush twice daily for two full minutes using fluoridated toothpaste and a soft-bristled brush angled at 45 degrees towards the gumline.",
         "2. Daily Flossing: Floss once every evening before bed to dislodge interdental food particles that toothbrush bristles cannot reach.",
-        "3. Six-Month Recall: Schedule routine ultrasonic cleanings every 6 months at Aureva Dental to prevent hard calculus re-accumulation and keep your breath permanently fresh."
+        "3. Six-Month Recall: Schedule routine ultrasonic cleanings every 6 months at Aureva Dental to prevent hard calculus re-accumulation and keep your breath fresh."
       ]
     }
   ],
@@ -1573,7 +1572,7 @@ export const BLOG_POSTS: BlogPost[] = [
       heading: "1. The Context of Dental Care: UK vs. India",
       paragraphs: [
         "In the UK, Band 3 NHS dental care (crowns, dentures, bridges) can involve waiting lists ranging from months to over two years in many NHS trusts. Private UK dental fees, meanwhile, have escalated alongside energy, real estate, and clinical staff wage inflation.",
-        "Bangalore is home to well-established healthcare and dental institutions like The Oxford Dental College, combining clinical education with modern CAD/CAM milling laboratories, strict autoclave sterilization protocols, and low-radiation digital RVG diagnostics."
+        "Bangalore is home to well-established healthcare and dental institutions like The Oxford Dental College, combining clinical education with modern precision dental milling laboratories, strict autoclave sterilization protocols, and low-radiation digital RVG diagnostics."
       ]
     },
     {
@@ -1587,7 +1586,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ["Dental Implant (Fixture Only)", "£990 – £1,800", "₹35,000 – ₹60,000", "~£276 – £472", "~72% – 74% lower (Midpoint: ~73.2%)"],
           ["Complete Implant with Abutment & Crown", "£2,095 – £3,700", "₹45,000 – ₹80,000", "~£354 – £630", "~83% lower (Midpoint: ~83.0%)"],
           ["Molar Root Canal (Rotary Endodontics)", "£645 – £1,060", "₹6,000 – ₹10,000", "~£47 – £79", "~93% lower (Midpoint: ~92.6%)"],
-          ["Monolithic Zirconia Crown (CAD/CAM)", "£850 – £1,337", "₹10,000 – ₹18,000", "~£79 – £142", "~89% – 91% lower (Midpoint: ~89.9%)"],
+          ["Monolithic Zirconia Crown (Lab-Milled)", "£850 – £1,337", "₹10,000 – ₹18,000", "~£79 – £142", "~89% – 91% lower (Midpoint: ~89.9%)"],
           ["Dental Crown — PFM", "£720 – £1,100", "₹4,000 – ₹6,000", "~£31 – £47", "~95% – 96% lower (Midpoint: ~95.7%)"],
           ["Dental Crown — Ceramic", "£720 – £1,100", "₹6,000 – ₹10,000", "~£47 – £79", "~93% lower (Midpoint: ~93.1%)"],
           ["Tooth Extraction (Simple to Surgical)", "£250 – £540", "₹1,500 – ₹10,000", "~£12 – £79", "~85% – 95% lower (Midpoint: ~88.5%)"],
@@ -1603,18 +1602,18 @@ export const BLOG_POSTS: BlogPost[] = [
         "Commercial Rents & Overheads: Operating costs for clinical premises in North Bangalore are a fraction of commercial lease rates in London or Manchester.",
         "Domestic Laboratory Technician Economics: Skilled dental ceramists and digital technicians in India work within the domestic cost of living, reducing custom crown and bridge fabrication costs.",
         "Educational Debt & Malpractice Insurance: Indian dentists train under merit-based university systems without incurring massive private student debts, and malpractice indemnity premiums are structured differently from British underwriting costs.",
-        "Certified Restorative Materials: Aureva Dental utilizes standardized grade-4 titanium implant systems and computerized CAD/CAM monolithic zirconia ceramics."
+        "Certified Restorative Materials: Aureva Dental utilizes standardized grade-4 titanium implant systems and computerized monolithic zirconia ceramics."
       ]
     }
   ],
   faqs: [
     {
       question: "Are the dental implant and crown materials used in India internationally standardized?",
-      answer: "Yes. Reputable dental centers like Aureva Dental utilize standardized grade-4 titanium implant fixtures and high-strength monolithic zirconia ceramics fabricated using precision 5-axis CAD/CAM milling."
+      answer: "Yes. Reputable dental centers like Aureva Dental utilize standardized grade-4 titanium implant fixtures and high-strength monolithic zirconia ceramics fabricated using precision laboratory milling."
     },
     {
       question: "How long should a UK patient plan to spend in Bangalore for a root canal and crown?",
-      answer: "A complete endodontic restoration typically requires 3 to 5 business days in Bangalore for single-sitting rotary root canal treatment, digital scanning, CAD/CAM zirconia crown milling, and final cementation."
+      answer: "A complete endodontic restoration typically requires 3 to 5 business days in Bangalore for rotary root canal treatment, digital scanning, lab-milled zirconia crown fabrication, and final cementation."
     },
     {
       question: "Can I claim treatment done at Aureva Dental on my UK private dental insurance?",
@@ -1665,7 +1664,7 @@ export const BLOG_POSTS: BlogPost[] = [
           ["Dental Implant (Fixture Only)", "$1,646 – $2,800", "₹35,000 – ₹60,000", "~$365 – $625", "~78% lower (Midpoint: ~77.7%)"],
           ["Full Implant + Abutment + Crown", "$3,000 – $5,500", "₹45,000 – ₹80,000", "~$469 – $833", "~84% – 85% lower (Midpoint: ~84.7%)"],
           ["Molar Root Canal (Rotary Endodontics)", "$1,030 – $2,471", "₹6,000 – ₹10,000", "~$63 – $104", "~94% – 96% lower (Midpoint: ~95.2%)"],
-          ["Monolithic Zirconia Crown (CAD/CAM)", "$915 – $2,500", "₹10,000 – ₹18,000", "~$104 – $188", "~89% – 93% lower (Midpoint: ~91.5%)"],
+          ["Monolithic Zirconia Crown (Lab-Milled)", "$915 – $2,500", "₹10,000 – ₹18,000", "~$104 – $188", "~89% – 93% lower (Midpoint: ~91.5%)"],
           ["Dental Crown — PFM", "$915 – $2,000", "₹4,000 – ₹6,000", "~$42 – $63", "~95% – 97% lower (Midpoint: ~96.5%)"],
           ["Dental Crown — Ceramic", "$915 – $2,000", "₹6,000 – ₹10,000", "~$63 – $104", "~93% – 95% lower (Midpoint: ~94.3%)"],
           ["Tooth Extraction (Simple to Surgical)", "$150 – $702", "₹1,500 – ₹10,000", "~$16 – $104", "~85% – 90% lower (Midpoint: ~86.0%)"],
@@ -1681,7 +1680,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "Administrative Overhead: US dental practices employ extensive administrative staff solely to handle insurance pre-authorizations, claims processing, and denials.",
         "Facility & Lease Expenses: Rent for clinical premises in North Bangalore is significantly lower than equivalent real estate in major US metropolitan areas.",
         "Medical Education Financing: Indian dentists train under merit-based university systems without incurring massive private student debts.",
-        "Quality Medical Hardware: Low-radiation digital RVG sensors, sealed pouch autoclave sterilization, and CAD/CAM software adhere to rigorous clinical standards."
+        "Quality Medical Hardware: Low-radiation digital RVG sensors, sealed pouch autoclave sterilization, and digital dental design software adhere to rigorous clinical standards."
       ]
     }
   ],
@@ -1696,7 +1695,7 @@ export const BLOG_POSTS: BlogPost[] = [
     },
     {
       question: "How do the materials used in India compare with global dental standards?",
-      answer: "Aureva Dental utilizes internationally standardized materials including grade-4 titanium implant fixtures, hybrid composite resins, and CAD/CAM monolithic zirconia ceramics."
+      answer: "Aureva Dental utilizes internationally standardized materials including grade-4 titanium implant fixtures, hybrid composite resins, and lab-milled monolithic zirconia ceramics."
     }
   ],
   conclusion: "For selected dental procedures, Aureva Dental's published fees can be 70% or more below the referenced private-dental benchmarks in the UK or US. Aureva Dental's published prices are in INR. Foreign-currency conversions are illustrative and may change with exchange rates. Final treatment plans and fees are confirmed after in-person clinical assessment.",

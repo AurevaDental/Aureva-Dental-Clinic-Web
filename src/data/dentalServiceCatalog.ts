@@ -605,7 +605,7 @@ export const DENTAL_OFFER_CATALOG: ServiceCategoryCatalog[] = [
         itemOffered: {
           "@type": "Service",
           name: "Fixed Bonded Lingual Retainer Wires",
-          description: "Discreet braided wire bonded behind lower front teeth for permanent relapse prevention."
+          description: "Discreet braided wire bonded behind lower front teeth for long-term relapse prevention."
         }
       },
       {
@@ -668,7 +668,7 @@ export const DENTAL_OFFER_CATALOG: ServiceCategoryCatalog[] = [
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Single-Sitting Rotary Root Canal Treatment",
+          name: "Rotary Root Canal Treatment",
           description: "Gentle root canal disinfection and obturation completed in a single comfortable visit."
         }
       },
@@ -701,7 +701,7 @@ export const DENTAL_OFFER_CATALOG: ServiceCategoryCatalog[] = [
         itemOffered: {
           "@type": "Service",
           name: "Molar Root Canal Treatment",
-          description: "Complex microscopic navigation and 3D filling of multi-rooted, curved posterior molars."
+          description: "Complex navigation and 3D filling of multi-rooted, curved posterior molars."
         }
       },
       {
@@ -725,7 +725,7 @@ export const DENTAL_OFFER_CATALOG: ServiceCategoryCatalog[] = [
         itemOffered: {
           "@type": "Service",
           name: "Calcified Root Canal Management",
-          description: "Microscopic negotiation of severely narrowed or sclerosed root canals using specialized burs."
+          description: "Precision negotiation of severely narrowed or sclerosed root canals using specialized burs."
         }
       },
       {
@@ -1293,7 +1293,7 @@ export const DENTAL_OFFER_CATALOG: ServiceCategoryCatalog[] = [
         itemOffered: {
           "@type": "Service",
           name: "Custom Implant Abutment Milling",
-          description: "Digitally CAD/CAM milled titanium and zirconia abutments matching individual natural emergence profiles."
+          description: "Digitally lab-milled titanium and zirconia abutments matching individual natural emergence profiles."
         }
       }
     ]
