@@ -1,0 +1,60 @@
+---
+interface Props {
+  title?: string;
+  aftercare?: string[];
+  instructions?: string[];
+  whenToCall?: string[];
+}
+const { 
+  title = "Aftercare & when to call us", 
+  aftercare = Astro.props.instructions || [], 
+  whenToCall = [] 
+} = Astro.props;
+---
+<section class="py-12 md:py-16 px-6 lg:px-24 bg-transparent border-t border-japandi-clay/30">
+  <div class="max-w-4xl mx-auto space-y-8">
+    <div>
+      <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+        {title}
+      </h2>
+      <p class="text-xs sm:text-sm text-japandi-earth font-light mt-1">
+        Post-procedure care guidelines and signs that require immediate clinical attention.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-2xl bg-japandi-sand/55 border border-japandi-clay/50 space-y-3">
+        <h3 class="text-base font-serif font-medium text-japandi-charcoal flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-japandi-moss shrink-0"></span>
+          <span>Home aftercare guidelines</span>
+        </h3>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-japandi-earth font-light">
+          {aftercare.map((item) => (
+            <li class="flex items-start gap-2">
+              <span class="text-japandi-moss font-bold">&bull;</span>
+              <span class="leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-japandi-sand/55 border border-japandi-clay/50 space-y-3">
+        <h3 class="text-base font-serif font-medium text-japandi-charcoal flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-red-600 shrink-0"></span>
+          <span>When to call us</span>
+        </h3>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-japandi-earth font-light">
+          {whenToCall.map((item) => (
+            <li class="flex items-start gap-2">
+              <span class="text-red-600 font-bold">&bull;</span>
+              <span class="leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="pt-2 text-xs text-japandi-earth">
+          Emergency phone line: <a href="tel:+917349701002" class="text-japandi-moss font-semibold hover:underline">+91 73497 01002</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,127 @@
+---
+const clinicPhotos = [
+  {
+    src: "/assets/hero-card-800.webp",
+    alt: "Aureva Dental private treatment room and consultation operatory in Hennur Bande",
+    caption: "Private treatment operatory"
+  },
+  {
+    src: "/assets/near-me/reception_desk_aureva.webp",
+    alt: "Reception desk and welcoming lounge at Aureva Dental in Hennur",
+    caption: "Reception and lounge"
+  },
+  {
+    src: "/assets/near-me/treatment_operatory_chair.webp",
+    alt: "Ergonomic dental chair and clean clinical setup at Aureva Dental",
+    caption: "Ergonomic treatment suite"
+  },
+  {
+    src: "/assets/clinic-exterior-800.webp",
+    alt: "Aureva Dental clinic building exterior on Horamavu Agara Road near Nayara Petrol Bunk",
+    caption: "Clinic building exterior"
+  }
+];
+---
+
+<section class="py-16 md:py-24 px-6 lg:px-24 bg-transparent border-t border-japandi-clay/40">
+  <div class="max-w-7xl mx-auto space-y-12">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          The clinic
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light mt-2">
+          Designed for quiet focus, sound-damped operatories, and rigorous clinical hygiene.
+        </p>
+      </div>
+      <a 
+        href="/dental-clinic-in-hennur"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-japandi-sand/80 hover:bg-japandi-moss hover:text-japandi-cream border border-japandi-clay/60 text-japandi-charcoal text-xs uppercase font-semibold tracking-wider transition-all duration-300 shadow-sm shrink-0 self-start sm:self-auto"
+      >
+        <span>Visit the clinic</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Clinic Photos Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {clinicPhotos.map((photo) => (
+        <div class="space-y-2 group">
+          <div class="rounded-2xl overflow-hidden border border-japandi-clay/50 aspect-[4/3] bg-japandi-clay/20">
+            <img 
+              src={photo.src}
+              alt={photo.alt}
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <p class="text-[11px] sm:text-xs text-japandi-earth font-light">
+            {photo.caption}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Clinic Facts & Map Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-5 space-y-6">
+        <div class="p-6 sm:p-8 rounded-3xl bg-japandi-sand/55 border border-japandi-clay/50 space-y-5">
+          <h3 class="text-lg sm:text-xl font-serif text-japandi-charcoal font-medium">
+            Location & Access
+          </h3>
+
+          <div class="space-y-3 text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+            <p class="text-japandi-charcoal font-medium">
+              2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043
+            </p>
+            <p class="flex items-center gap-2 text-japandi-moss font-semibold">
+              <span class="w-2 h-2 rounded-full bg-japandi-moss shrink-0"></span>
+              Parking available for 4-wheelers and 2-wheelers.
+            </p>
+            <p class="flex items-center gap-2 text-japandi-charcoal">
+              <span class="w-2 h-2 rounded-full bg-japandi-moss shrink-0"></span>
+              2nd floor with lift
+            </p>
+            <p class="flex items-center gap-2 text-japandi-charcoal">
+              <span class="w-2 h-2 rounded-full bg-japandi-moss shrink-0"></span>
+              Mon 4–9 PM, Tue–Sun 9:30 AM–9 PM
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <a 
+              href="https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-xs font-semibold text-japandi-moss hover:underline"
+            >
+              <span>Open directions in Google Maps</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map Embed -->
+      <div class="lg:col-span-7 rounded-3xl overflow-hidden border border-japandi-clay/60 shadow-sm aspect-[16/10] w-full relative bg-japandi-clay/20">
+        <iframe
+          title="Aureva Dental Google Maps Location in Hennur Bande"
+          src="https://maps.google.com/maps?q=13.0381741,77.6416031+(Aureva+Dental)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="w-full h-full"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>

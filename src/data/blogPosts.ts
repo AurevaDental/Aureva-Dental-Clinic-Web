@@ -570,7 +570,9 @@ export const BLOG_POSTS: BlogPost[] = [
             ["Self-Ligating Braces", CANONICAL_PRICES.braces_self_ligating, "Reduced friction brackets that require fewer adjustments and shorter chair time"],
             ["Lingual orthodontics (braces fitted behind the teeth)", "—", "Patients seeking fixed braces fitted behind the teeth for discreet orthodontic care"],
             ["Lingual retainers", "—", "Custom-bonded retention wires fitted behind the teeth to maintain alignment"],
-            ["Certified Indian Aligner Systems", CANONICAL_PRICES.aligners_indian_systems, "Working professionals and adults with mild-to-moderate crowding seeking value"]
+            ["Clear Aligners (Mild)", CANONICAL_PRICES.aligners_mild, "Mild crowding or minor spacing, typically treated in 6 to 9 months"],
+            ["Clear Aligners (Moderate)", CANONICAL_PRICES.aligners_moderate, "Moderate crowding, rotational corrections, or bite alignment"],
+            ["Clear Aligners (Complex)", CANONICAL_PRICES.aligners_complex, "Complex malocclusion cases requiring comprehensive aligner staging"]
           ]
         }
       },

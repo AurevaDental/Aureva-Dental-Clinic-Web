@@ -2,7 +2,9 @@
 import { CANONICAL_PRICES } from '../../data/prices';
 import Layout from '../../layouts/Layout.astro';
 import { generateBreadcrumbSchema, generateFaqSchema, generateTreatmentServiceSchema } from '../../utils/seoSchemas';
-
+import TreatmentDepartmentCard from '../../components/TreatmentDepartmentCard.astro';
+import TreatmentAftercare from '../../components/TreatmentAftercare.astro';
+import TreatmentActions from '../../components/TreatmentActions.astro';
 
 const pageTitle = "Comfortable Tooth Extraction in Bangalore | Aureva Dental";
 const pageDescription = "Gentle tooth extractions & socket bone preservation in Bangalore at Aureva Dental. Atraumatic oral surgery by experienced dental surgeons.";
@@ -13,15 +15,15 @@ const whatsappUrl = "https://wa.me/917349701002?text=Hello%2C%20I%20need%20a%20c
 const faqs = [
   {
     question: "Is tooth extraction painful at Aureva Dental?",
-    answer: "No. At Aureva Dental, we prioritize complete patient comfort. We administer modern, high-potency local anesthesia with micro-fine needles. The area is numbed before the procedure, and you may feel pressure but not sharp pain."
+    answer: "No. At Aureva Dental, we prioritize patient comfort. We administer modern local anesthesia with micro-fine needles. The area is completely numbed before the procedure, so you may feel pressure but not sharp pain."
   },
   {
-    question: "When is a tooth extraction absolutely necessary?",
-    answer: "Our primary clinical philosophy is conservative tooth preservation. However, extraction becomes essential when a tooth has severe root fractures beyond repair, extensive unrestorable dental decay below the bone margin, advanced periodontal mobility with catastrophic bone loss, or severe crowding requiring orthodontic space."
+    question: "When is a tooth extraction necessary?",
+    answer: "Our primary clinical philosophy is conservative tooth preservation. However, extraction becomes essential when a tooth has severe root fractures beyond repair, extensive unrestorable dental decay below the bone margin, advanced periodontal mobility with bone loss, or severe crowding requiring orthodontic space."
   },
   {
     question: "How long does it take to recover after a tooth extraction?",
-    answer: "Initial soft tissue healing occurs within 48 to 72 hours. Most patients resume desk work the following morning. Complete bone regeneration inside the extraction socket takes 6 to 10 weeks. We provide detailed aftercare instructions and cold compresses to ensure seamless, swelling-free healing."
+    answer: "Initial soft tissue healing occurs within 48 to 72 hours. Most patients resume desk work the following morning. Complete bone regeneration inside the extraction socket takes 6 to 10 weeks. Detailed aftercare instructions are provided."
   },
   {
     question: "What is bone grafting or socket preservation?",
@@ -29,7 +31,7 @@ const faqs = [
   },
   {
     question: "What is the cost of tooth extraction in Hennur, Bangalore?",
-    answer: "At Aureva Dental Hennur, simple extractions of front or loose teeth range from ${CANONICAL_PRICES.extraction_front_loose}, simple posterior molar extractions range from ${CANONICAL_PRICES.extraction_back_tooth}, and surgical extractions for fractured roots or RCT-treated teeth range from ${CANONICAL_PRICES.extraction_surgical}. Transparent pricing is provided upfront following your low-radiation digital RVG X-ray."
+    answer: `At Aureva Dental Hennur, simple extractions of front or loose teeth range from ${CANONICAL_PRICES.extraction_front_loose}, simple posterior molar extractions range from ${CANONICAL_PRICES.extraction_back_tooth}, and surgical extractions for fractured roots or RCT-treated teeth range from ${CANONICAL_PRICES.extraction_surgical}. Transparent pricing is provided upfront following your low-radiation digital RVG X-ray.`
   }
 ];
 
@@ -72,42 +74,27 @@ const seoProps = {
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- 1. Hero / H1 Section -->
   <section class="py-16 md:py-24 px-6 lg:px-24 bg-transparent relative overflow-hidden">
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <div class="lg:col-span-7 flex flex-col items-start space-y-6 animate-slow-fade">
         <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-japandi-clay/60 bg-japandi-sand/70 text-[10px] font-semibold text-japandi-moss uppercase tracking-widest">
-          Atraumatic Oral Surgery &bull; Hennur Bande, Bangalore
+          Oral Surgery &bull; Hennur Bande, Bangalore
         </div>
         
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif text-japandi-charcoal leading-tight font-medium tracking-tight">
-          Gentle, Comfortable <br class="hidden sm:inline"/>
-          <span class="italic text-japandi-moss">Tooth Extraction.</span>
+          Tooth Extraction in Bangalore
         </h1>
 
         <p class="text-base sm:text-lg text-japandi-earth font-light leading-relaxed max-w-2xl">
-          When an unrestorable or severely decayed tooth threatens your oral health, our dental surgeons perform gentle, atraumatic extractions designed to preserve maximum surrounding bone and ensure a swift, comfortable recovery.
+          When an unrestorable or severely decayed tooth threatens your oral health, our dental surgeons perform gentle, atraumatic extractions designed to preserve surrounding bone and ensure a swift recovery.
         </p>
 
-        <!-- Price-First Summary Block -->
-        <div class="p-4 sm:p-5 rounded-2xl bg-japandi-sand/60 border border-japandi-clay/50 w-full max-w-2xl space-y-2">
-          <p class="text-xs sm:text-sm font-semibold text-japandi-charcoal">
-            Front or mobile tooth {CANONICAL_PRICES.extraction_front_loose} · Premolar to second molar {CANONICAL_PRICES.extraction_back_tooth} · Fractured root or RCT-treated tooth {CANONICAL_PRICES.extraction_surgical}
-          </p>
-          <p class="text-xs text-japandi-earth font-light">
-            {CANONICAL_PRICES.consultation} consultation · includes digital X-ray · valid for 6 months.
-          </p>
-          <p class="text-xs text-japandi-moss font-medium pt-1">
-            Wisdom teeth: see <a href="/wisdom-tooth-removal-hennur" class="underline hover:text-japandi-charcoal">wisdom tooth removal</a>.
-          </p>
-        </div>
-
-        <!-- Direct Action CTA Buttons -->
+        <!-- CTA Buttons -->
         <div class="pt-2 flex flex-wrap items-center gap-4 w-full sm:w-auto">
           <button 
             type="button"
             data-open-booking
-            data-treatment="Tooth Extraction & Preservation"
             class="inline-flex items-center justify-center gap-2 px-7 py-4 bg-japandi-moss text-japandi-cream hover:bg-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 shadow-md shadow-japandi-moss/15 cursor-none"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
@@ -117,235 +104,233 @@ const seoProps = {
           </button>
 
           <a 
-            href={whatsappUrl}
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 px-7 py-4 border border-japandi-clay hover:border-japandi-moss text-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 bg-japandi-sand/40 hover:bg-japandi-sand cursor-none"
+            href={phoneCallUrl}
+            class="inline-flex items-center justify-center gap-2 px-7 py-4 border border-japandi-clay bg-japandi-sand/50 hover:bg-japandi-sand text-japandi-charcoal text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 cursor-none"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4 text-emerald-600">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-japandi-moss">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
             </svg>
-            <span>WhatsApp Clinic</span>
+            <span>Call +91 73497 01002</span>
           </a>
         </div>
       </div>
 
+      <!-- Quick Feature Card -->
       <div class="lg:col-span-5 relative">
-        <div class="p-8 rounded-3xl bg-japandi-sand/50 border border-japandi-clay/40 shadow-sm space-y-6">
-          <h2 class="text-xs uppercase font-semibold text-japandi-moss tracking-widest">Clinical Care Highlights</h2>
-          <div class="space-y-4 text-xs font-light text-japandi-earth">
-            <div class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-full bg-japandi-moss/20 text-japandi-moss flex items-center justify-center shrink-0 mt-0.5">&check;</span>
-              <div>
-                <strong class="text-japandi-charcoal font-medium">Atraumatic Periotome Elevation:</strong> Preserves the delicate buccal bone plate to avoid facial bone collapse.
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-full bg-japandi-moss/20 text-japandi-moss flex items-center justify-center shrink-0 mt-0.5">&check;</span>
-              <div>
-                <strong class="text-japandi-charcoal font-medium">Low-Radiation RVG Diagnostics:</strong> Digital precision assessment of nerve proximity and root curvature.
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-full bg-japandi-moss/20 text-japandi-moss flex items-center justify-center shrink-0 mt-0.5">&check;</span>
-              <div>
-                <strong class="text-japandi-charcoal font-medium">Socket Preservation Protocol:</strong> Bone graft or synthetic graft placement for future implant stability.
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="w-5 h-5 rounded-full bg-japandi-moss/20 text-japandi-moss flex items-center justify-center shrink-0 mt-0.5">&check;</span>
-              <div>
-                <strong class="text-japandi-charcoal font-medium">Same-Day Emergency Relief:</strong> Immediate slot booking for painful broken roots or acute infection.
-              </div>
-            </div>
-          </div>
+        <div class="p-8 rounded-3xl bg-japandi-sand/50 border border-japandi-clay/40 shadow-sm space-y-4">
+          <span class="text-xs uppercase font-semibold text-japandi-moss tracking-widest block">Atraumatic Approach</span>
+          <h3 class="font-serif text-xl font-medium text-japandi-charcoal">Surgical Precision</h3>
+          <ul class="space-y-3 text-xs font-light text-japandi-earth">
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-japandi-moss mt-1.5 shrink-0"></span>
+              <div><strong class="text-japandi-charcoal font-medium">Bone Preservation:</strong> Specialized periotomes and luxators to protect the alveolar socket walls.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-japandi-moss mt-1.5 shrink-0"></span>
+              <div><strong class="text-japandi-charcoal font-medium">Local Anesthesia:</strong> Careful numbing protocol ensuring a pressure-only experience.</div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-japandi-moss mt-1.5 shrink-0"></span>
+              <div><strong class="text-japandi-charcoal font-medium">Socket Preservation Option:</strong> Placement of bone graft material to prepare for future dental implants.</div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Detailed Clinical Steps (H2 Hierarchy) -->
-  <section class="py-16 px-6 lg:px-24 bg-japandi-sand/20 border-t border-japandi-clay/20">
-    <div class="max-w-7xl mx-auto space-y-12">
-      <div class="max-w-3xl space-y-3">
-        <div class="text-[10px] font-semibold text-japandi-moss uppercase tracking-widest">Our Surgical Protocol</div>
-        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium">How We Ensure a Smooth, Comfortable Extraction</h2>
-        <p class="text-sm text-japandi-earth font-light">
-          Whether you require a simple extraction or surgical root retrieval, our surgical workflow is engineered for comfort, safety, and rapid healing.
-        </p>
+  <!-- 2. Who It's For (Symptoms in Plain Words) -->
+  <section class="py-16 md:py-20 px-6 lg:px-24 bg-japandi-sand/25 border-t border-japandi-clay/30">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div>
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block mb-2">Indications</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Who tooth extraction is for
+        </h2>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-8 rounded-3xl bg-japandi-cream border border-japandi-clay/40 space-y-4">
-          <div class="text-3xl font-serif text-japandi-moss">01</div>
-          <h3 class="text-base font-serif font-medium text-japandi-charcoal">Digital X-ray (RVG) evaluation</h3>
-          <p class="text-xs text-japandi-earth font-light leading-relaxed">
-            High-resolution digital RVG imaging reveals root anatomy, canal curvature, and relationship to the mandibular nerve or maxillary sinus.
-          </p>
+      <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+        Extraction is advised only when a tooth cannot be saved restoratively, such as in:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-japandi-earth font-light">
+        <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-1.5">
+          <h3 class="font-serif text-base text-japandi-charcoal font-medium">Unrestorable Tooth Decay</h3>
+          <p>Cavities that extend deeply beneath the gumline or into the root bifurcation where fillings cannot hold.</p>
         </div>
-
-        <div class="p-8 rounded-3xl bg-japandi-cream border border-japandi-clay/40 space-y-4">
-          <div class="text-3xl font-serif text-japandi-moss">02</div>
-          <h3 class="text-base font-serif font-medium text-japandi-charcoal">Deep Local Anesthesia</h3>
-          <p class="text-xs text-japandi-earth font-light leading-relaxed">
-            We use buffered, pH-neutral local anesthetic agents administered with ultra-fine gauge needles, ensuring the surgical area is totally numb.
-          </p>
+        <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-1.5">
+          <h3 class="font-serif text-base text-japandi-charcoal font-medium">Vertical Root Fractures</h3>
+          <p>A crack that splits the tooth root vertically, causing recurrent pain and bone destruction.</p>
         </div>
-
-        <div class="p-8 rounded-3xl bg-japandi-cream border border-japandi-clay/40 space-y-4">
-          <div class="text-3xl font-serif text-japandi-moss">03</div>
-          <h3 class="text-base font-serif font-medium text-japandi-charcoal">Atraumatic Extraction &amp; Care</h3>
-          <p class="text-xs text-japandi-earth font-light leading-relaxed">
-            Micro-instruments gently expand the alveolar socket without damaging surrounding bone, followed by biocompatible collagen plugs and home care instructions.
-          </p>
+        <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-1.5">
+          <h3 class="font-serif text-base text-japandi-charcoal font-medium">Severe Mobility (Gum Disease)</h3>
+          <p>Teeth with advanced periodontal disease and catastrophic bone loss that can no longer support chewing.</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 space-y-1.5">
+          <h3 class="font-serif text-base text-japandi-charcoal font-medium">Orthodontic Crowding</h3>
+          <p>Strategic removal of select premolars planned by an orthodontist to create space for alignment.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Local Area Targeting Section -->
-  <section class="py-14 px-6 lg:px-24 bg-transparent border-t border-japandi-clay/20">
-    <div class="max-w-7xl mx-auto space-y-6">
-      <div class="max-w-3xl space-y-2">
-        <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">Serving Hennur, Kalyan Nagar &amp; North Bangalore</h2>
-        <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
-          Patients across Hennur Bande, Horamavu Agara Road, Kalyan Nagar, HRBR Layout, Banaswadi, Kammanahalli, and Kothanur trust Aureva Dental for stress-free tooth extractions and emergency dental care. Parking available for 4-wheelers and 2-wheelers. Our clinic provides tranquil Japandi interiors and walk-in emergency appointments.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQs Section -->
-  <section class="py-16 px-6 lg:px-24 bg-japandi-sand/30 border-t border-japandi-clay/20">
+  <!-- 3. What Happens, Visit by Visit, & Number of Sittings -->
+  <section class="py-16 md:py-20 px-6 lg:px-24 bg-transparent border-t border-japandi-clay/30">
     <div class="max-w-4xl mx-auto space-y-8">
-      <div class="space-y-2 text-center">
-        <div class="text-[10px] font-semibold text-japandi-moss uppercase tracking-widest">Frequently Asked Questions</div>
-        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">Tooth Extraction FAQs</h2>
+      <div>
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block mb-2">Clinical Protocol</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          What happens, visit by visit
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light mt-2">
+          Tooth extraction is completed in 1 sitting, with an optional suture removal or healing check at 7 to 10 days.
+        </p>
+      </div>
+
+      <div class="space-y-4 text-xs sm:text-sm text-japandi-earth font-light">
+        <div class="p-6 rounded-2xl bg-japandi-sand/30 border border-japandi-clay/40 space-y-2">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-base text-japandi-charcoal font-medium">Step 1: Digital X-Ray &amp; Local Numbing</h3>
+            <span class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-japandi-moss/10 text-japandi-moss">Sitting 1</span>
+          </div>
+          <p class="leading-relaxed">
+            Digital RVG X-ray evaluates root curvature and surrounding bone density. Local anesthesia is administered to ensure complete numbness of the tooth and gum tissue.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-japandi-sand/30 border border-japandi-clay/40 space-y-2">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-base text-japandi-charcoal font-medium">Step 2: Atraumatic Removal &amp; Hemostasis</h3>
+            <span class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded bg-japandi-moss/10 text-japandi-moss">Sitting 1</span>
+          </div>
+          <p class="leading-relaxed">
+            The tooth is gently elevated and lifted from its socket using micro-instruments to protect the bone. The socket is debrided, and sterile gauze is placed with gentle bite pressure to form a stable blood clot.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Price Table from Keys -->
+  <section class="py-16 md:py-20 px-6 lg:px-24 bg-japandi-sand/25 border-t border-japandi-clay/30">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div>
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block mb-2">Transparent Pricing</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Tooth extraction fees
+        </h2>
+        <p class="text-xs sm:text-sm text-japandi-earth font-light mt-1">
+          Prices are ranges, confirmed after examination.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-japandi-clay/40 overflow-hidden bg-japandi-cream/90 shadow-sm">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-japandi-sand/60 text-japandi-charcoal font-serif border-b border-japandi-clay/30">
+            <tr>
+              <th class="py-3 px-4">Extraction Type</th>
+              <th class="py-3 px-4">Price Range</th>
+              <th class="py-3 px-4 hidden sm:table-cell">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-japandi-clay/20 text-japandi-earth font-light">
+            <tr>
+              <td class="py-3 px-4 font-medium text-japandi-charcoal">Front or Mobile Tooth</td>
+              <td class="py-3 px-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.extraction_front_loose}</td>
+              <td class="py-3 px-4 hidden sm:table-cell">Simple single-rooted tooth removal</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-japandi-charcoal">Premolar to Second Molar</td>
+              <td class="py-3 px-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.extraction_back_tooth}</td>
+              <td class="py-3 px-4 hidden sm:table-cell">Multi-rooted posterior tooth extraction</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-japandi-charcoal">Surgical Extraction / Fractured Root</td>
+              <td class="py-3 px-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.extraction_surgical}</td>
+              <td class="py-3 px-4 hidden sm:table-cell">Root stumps, brittle RCT teeth, sectioning</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-japandi-charcoal">Consultation with Digital X-Ray</td>
+              <td class="py-3 px-4 text-japandi-moss font-semibold">{CANONICAL_PRICES.consultation}</td>
+              <td class="py-3 px-4 hidden sm:table-cell">Valid for 6 months</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-japandi-earth font-light">
+        See our complete pricing catalog on the <a href="/prices" class="text-japandi-moss underline decoration-japandi-moss/40 hover:decoration-japandi-moss font-medium">treatment prices</a> page.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5. Which Department Handles It -->
+  <TreatmentDepartmentCard 
+    department="Oral & Maxillofacial Surgery"
+    link="/our-specialists#surgery"
+    description="Complex surgical extractions, fractured root retrievals, and socket preservation are led by our visiting MDS Oral & Maxillofacial Surgeons."
+  />
+
+  <!-- 6. Aftercare and When to Call Us -->
+  <TreatmentAftercare 
+    instructions={[
+      "Keep firm bite pressure on the cotton gauze pad for 45 to 60 minutes after the procedure.",
+      "Do not spit, drink through a straw, or smoke for 24 hours to protect the healing blood clot.",
+      "Eat soft, cool foods (yogurt, ice cream, soft rice) and avoid hot, spicy, or crunchy meals for 48 hours.",
+      "Gently rinse with warm salt water starting 24 hours after extraction, especially after meals."
+    ]}
+    whenToCall={[
+      "Bleeding from the socket restarts heavily and does not slow after biting on fresh gauze for 30 minutes.",
+      "You develop severe, throbbing pain radiating to your ear 3 to 4 days post-extraction (suspected dry socket).",
+      "Swelling increases significantly after 48 hours or you develop a fever."
+    ]}
+  />
+
+  <!-- 7. FAQs (with Schema) -->
+  <section class="py-16 md:py-20 px-6 lg:px-24 bg-japandi-sand/25 border-t border-japandi-clay/30">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div>
+        <span class="text-xs font-semibold text-japandi-moss uppercase tracking-widest block mb-2">Common Questions</span>
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Frequently asked questions
+        </h2>
       </div>
 
       <div class="space-y-4">
-        {faqs.map((faq, index) => (
-          <div class="faq-item bg-japandi-sand/45 border border-japandi-clay/45 rounded-2xl overflow-hidden transition-all duration-300 hover:border-japandi-moss/50">
-            <button
-              type="button"
-              class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none cursor-none group"
-              aria-expanded="false"
-            >
-              <span class="text-base font-serif text-japandi-charcoal font-medium group-hover:text-japandi-moss transition-colors">
-                {faq.question}
-              </span>
-              <div class="w-7 h-7 rounded-full bg-japandi-cream border border-japandi-clay/60 flex items-center justify-center shrink-0 text-japandi-moss group-hover:bg-japandi-moss group-hover:text-japandi-cream transition-all">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 faq-icon transition-transform duration-300">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                </svg>
-              </div>
-            </button>
-            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6 text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
-              <div class="pb-5 pt-1 border-t border-japandi-clay/20">
-                {faq.answer}
-              </div>
-            </div>
+        {faqs.map((faq) => (
+          <div class="bg-japandi-cream/90 border border-japandi-clay/40 rounded-2xl p-6 space-y-2">
+            <h3 class="font-serif text-base sm:text-lg text-japandi-charcoal font-medium">
+              {faq.question}
+            </h3>
+            <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+              {faq.answer}
+            </p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Related Treatments & Internal Linking -->
-  <section class="py-12 px-6 lg:px-24 bg-japandi-sand/30 border-t border-japandi-clay/30">
+  <!-- 8. Related Treatments -->
+  <section class="py-16 px-6 lg:px-24 bg-transparent border-t border-japandi-clay/30">
     <div class="max-w-4xl mx-auto space-y-6">
-      <div class="space-y-1">
-        <h3 class="text-lg font-serif font-medium text-japandi-charcoal">Related Treatments &amp; Restorative Options</h3>
-        <p class="text-xs text-japandi-earth font-light">Explore tooth replacement and oral surgery solutions at our Hennur clinic:</p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-light">
-        <a href="/treatments/dental-implants" class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 hover:border-japandi-moss transition-all group">
-          <span class="font-medium text-japandi-charcoal group-hover:text-japandi-moss block mb-1">Dental Implants &rarr;</span>
-          <span class="text-japandi-earth text-[11px]">Replace extracted teeth with titanium implant posts.</span>
+      <h2 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
+        Related treatments
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+        <a href="/wisdom-tooth-removal-hennur" class="p-4 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/40 hover:border-japandi-moss transition-colors block space-y-1">
+          <span class="font-serif text-sm text-japandi-charcoal font-medium block">Wisdom Tooth Removal</span>
+          <span class="text-japandi-earth font-light">Surgical extraction for impacted third molars</span>
         </a>
-        <a href="/wisdom-tooth-removal-hennur" class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 hover:border-japandi-moss transition-all group">
-          <span class="font-medium text-japandi-charcoal group-hover:text-japandi-moss block mb-1">Wisdom Tooth Removal &rarr;</span>
-          <span class="text-japandi-earth text-[11px]">Atraumatic extraction of impacted, painful third molars.</span>
+        <a href="/treatments/dental-implants" class="p-4 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/40 hover:border-japandi-moss transition-colors block space-y-1">
+          <span class="font-serif text-sm text-japandi-charcoal font-medium block">Dental Implants</span>
+          <span class="text-japandi-earth font-light">Replacing extracted teeth with permanent fixtures</span>
         </a>
-        <a href="/root-canal-treatment-hennur" class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 hover:border-japandi-moss transition-all group">
-          <span class="font-medium text-japandi-charcoal group-hover:text-japandi-moss block mb-1">Root Canal Treatment &rarr;</span>
-          <span class="text-japandi-earth text-[11px]">Save deeply infected teeth before extraction becomes necessary.</span>
-        </a>
-        <a href="/contact" class="p-4 rounded-2xl bg-japandi-cream/90 border border-japandi-clay/40 hover:border-japandi-moss transition-all group">
-          <span class="font-medium text-japandi-charcoal group-hover:text-japandi-moss block mb-1">Contact Clinic &rarr;</span>
-          <span class="text-japandi-earth text-[11px]">Find our location on Horamavu Agara Road near Nayara Bunk.</span>
+        <a href="/root-canal-treatment-hennur" class="p-4 rounded-2xl bg-japandi-sand/40 border border-japandi-clay/40 hover:border-japandi-moss transition-colors block space-y-1">
+          <span class="font-serif text-sm text-japandi-charcoal font-medium block">Root Canal Treatment</span>
+          <span class="text-japandi-earth font-light">Saving severely decayed teeth to avoid extraction</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Catchment Footer Note & Final Callout -->
-  <section class="py-14 px-6 lg:px-24 bg-japandi-sand/40 border-t border-japandi-clay/30 text-center">
-    <div class="max-w-4xl mx-auto space-y-4">
-      <h3 class="text-xl font-serif text-japandi-charcoal font-medium">Relieve Severe Tooth Pain Safely Today</h3>
-      <p class="text-xs text-japandi-earth font-light max-w-xl mx-auto leading-relaxed">
-        Conveniently located for patients in Hennur, Kalyan Nagar, Horamavu, Banaswadi, Kammanahalli, and HRBR Layout.
-      </p>
-      <div class="pt-3 flex items-center justify-center gap-3">
-        <a 
-          href={phoneCallUrl}
-          class="px-6 py-3 rounded-full border border-japandi-moss text-japandi-moss text-xs font-semibold uppercase tracking-wider hover:bg-japandi-moss/10 transition-colors"
-        >
-          Call: +91 73497 01002
-        </a>
-        <a 
-          href={whatsappUrl}
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="px-6 py-3 rounded-full bg-japandi-moss text-japandi-cream text-xs font-semibold uppercase tracking-wider hover:bg-japandi-charcoal transition-colors shadow-sm"
-        >
-          Chat on WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
+  <!-- 9. Book / WhatsApp / Call -->
+  <TreatmentActions treatmentName="Tooth Extraction Consultation" />
 </Layout>
-
-<script>
-  function setupPageAccordions() {
-    const items = document.querySelectorAll('.faq-item');
-    items.forEach((item) => {
-      const toggle = item.querySelector('.faq-toggle');
-      const content = item.querySelector('.faq-content') as HTMLElement;
-      const icon = item.querySelector('.faq-icon');
-      if (!toggle || !content) return;
-
-      const newBtn = toggle.cloneNode(true) as HTMLElement;
-      toggle.parentNode?.replaceChild(newBtn, toggle);
-
-      newBtn.addEventListener('click', () => {
-        const isExpanded = newBtn.getAttribute('aria-expanded') === 'true';
-        items.forEach((other) => {
-          if (other !== item) {
-            const ob = other.querySelector('.faq-toggle');
-            const oc = other.querySelector('.faq-content') as HTMLElement;
-            const oi = other.querySelector('.faq-icon');
-            if (ob && oc) {
-              ob.setAttribute('aria-expanded', 'false');
-              oc.style.maxHeight = '0px';
-              oi?.classList.remove('rotate-45');
-            }
-          }
-        });
-
-        if (isExpanded) {
-          newBtn.setAttribute('aria-expanded', 'false');
-          content.style.maxHeight = '0px';
-          icon?.classList.remove('rotate-45');
-        } else {
-          newBtn.setAttribute('aria-expanded', 'true');
-          content.style.maxHeight = content.scrollHeight + 'px';
-          icon?.classList.add('rotate-45');
-        }
-      });
-    });
-  }
-
-  setupPageAccordions();
-  document.addEventListener('astro:after-swap', setupPageAccordions);
-</script>

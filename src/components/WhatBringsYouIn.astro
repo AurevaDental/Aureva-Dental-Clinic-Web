@@ -1,0 +1,70 @@
+---
+const cards = [
+  {
+    title: "Tooth pain",
+    line: "Root canal treatment and relief for deep aching teeth.",
+    url: "/root-canal-treatment-hennur"
+  },
+  {
+    title: "Missing teeth",
+    line: "Fixed dental implants and durable tooth replacement.",
+    url: "/dental-implants-hennur"
+  },
+  {
+    title: "Crooked teeth",
+    line: "Clear aligners and orthodontic straightening for all ages.",
+    url: "/invisible-aligners-hennur"
+  },
+  {
+    title: "Stained or chipped teeth",
+    line: "Cosmetic bonding, porcelain veneers, and shade brightening.",
+    url: "/treatments/cosmetic-dentistry"
+  },
+  {
+    title: "For my child",
+    line: "Gentle cavity prevention, fluoride treatments, and check-ups.",
+    url: "/treatments/pediatric-dentistry"
+  },
+  {
+    title: "Emergency today",
+    line: "Same-day walk-in care for sudden pain, injury, or swelling.",
+    url: "/emergency-dentist-hennur"
+  }
+];
+---
+
+<section id="services" class="py-16 md:py-24 px-6 lg:px-24 bg-transparent border-t border-japandi-clay/40">
+  <div class="max-w-7xl mx-auto space-y-10">
+    <div class="max-w-2xl">
+      <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium tracking-tight">
+        What brings you in?
+      </h2>
+      <p class="text-sm sm:text-base text-japandi-earth font-light mt-2">
+        Select your concern to explore treatment pathways, visit steps, and specialist care.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {cards.map((card) => (
+        <a 
+          href={card.url}
+          class="group p-6 sm:p-8 rounded-3xl bg-japandi-sand/55 hover:bg-japandi-sand border border-japandi-clay/50 hover:border-japandi-moss/60 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between min-h-[160px]"
+        >
+          <div>
+            <div class="flex items-center justify-between gap-3 mb-3">
+              <h3 class="text-lg sm:text-xl font-serif font-medium text-japandi-charcoal group-hover:text-japandi-moss transition-colors">
+                {card.title}
+              </h3>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-japandi-moss transform group-hover:translate-x-1 transition-transform shrink-0">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </div>
+            <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+              {card.line}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

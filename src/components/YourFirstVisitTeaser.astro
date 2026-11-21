@@ -1,0 +1,66 @@
+---
+const steps = [
+  {
+    num: "1",
+    title: "Examination and digital X-ray",
+    desc: "A thorough clinical evaluation with low-radiation RVG digital X-rays to assess tooth and bone health."
+  },
+  {
+    num: "2",
+    title: "See your teeth on screen with the intraoral camera",
+    desc: "Walk through high-definition chairside camera views so you observe exactly what the dentist observes."
+  },
+  {
+    num: "3",
+    title: "Written plan with prices",
+    desc: "Receive an itemized written estimate with clear price ranges, valid for 6 months, before any work begins."
+  },
+  {
+    num: "4",
+    title: "Treatment by the right specialist",
+    desc: "When treatment requires specialized expertise, your appointment is scheduled directly with our visiting MDS specialist."
+  }
+];
+---
+
+<section class="py-16 md:py-24 px-6 lg:px-24 bg-japandi-sand/25 border-t border-japandi-clay/40">
+  <div class="max-w-7xl mx-auto space-y-10">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Your first visit
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light mt-2">
+          A calm, unhurried initial assessment in four clear steps.
+        </p>
+      </div>
+      <a 
+        href="/your-first-visit"
+        class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-japandi-moss hover:text-japandi-charcoal transition-colors self-start sm:self-auto"
+      >
+        <span>First visit guide</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {steps.map((step) => (
+        <div class="p-6 sm:p-7 rounded-3xl bg-japandi-sand/60 border border-japandi-clay/50 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <span class="w-9 h-9 rounded-full bg-japandi-moss/10 text-japandi-moss font-serif font-bold text-base flex items-center justify-center">
+              {step.num}
+            </span>
+            <h3 class="text-base sm:text-lg font-serif font-medium text-japandi-charcoal">
+              {step.title}
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+            {step.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+---
+interface Props {
+  treatmentName?: string;
+}
+const { treatmentName = "Treatment" } = Astro.props;
+const phoneCallUrl = "tel:+917349701002";
+const whatsappUrl = `https://wa.me/917349701002?text=${encodeURIComponent(`Hello Aureva Dental, I would like to book a consultation for ${treatmentName}.`)}`;
+---
+<section class="py-14 px-6 lg:px-24 bg-japandi-sand/35 border-t border-japandi-clay/30 text-center">
+  <div class="max-w-4xl mx-auto space-y-5">
+    <h3 class="text-xl sm:text-2xl font-serif text-japandi-charcoal font-medium">
+      Book your consultation at Aureva Dental
+    </h3>
+    <p class="text-xs sm:text-sm text-japandi-earth font-light max-w-xl mx-auto leading-relaxed">
+      Located on Horamavu Agara Road near Nayara Petrol Bunk, Hennur Bande. Open Monday 4–9 PM, Tuesday to Sunday 9:30 AM–9 PM.
+    </p>
+    <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+      <button 
+        type="button" 
+        data-open-booking 
+        class="px-7 py-3.5 rounded-full bg-japandi-moss hover:bg-japandi-charcoal text-japandi-cream text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm"
+      >
+        Book Visit
+      </button>
+      <a 
+        href={whatsappUrl} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm"
+      >
+        WhatsApp
+      </a>
+      <a 
+        href={phoneCallUrl} 
+        class="px-7 py-3.5 rounded-full border border-japandi-clay bg-japandi-sand/80 hover:bg-japandi-sand text-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all duration-300"
+      >
+        Call +91 73497 01002
+      </a>
+    </div>
+  </div>
+</section>

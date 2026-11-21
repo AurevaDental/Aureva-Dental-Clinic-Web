@@ -4,7 +4,7 @@
  */
 
 export const GOOGLE_RATING = 5.0;
-export const GOOGLE_REVIEW_COUNT = 48;
+export const GOOGLE_REVIEW_COUNT = 50;
 export const GOOGLE_REVIEWS_LABEL = `${GOOGLE_RATING.toFixed(1)} (${GOOGLE_REVIEW_COUNT} Google Reviews)`;
 
 export const clinicConfig = {

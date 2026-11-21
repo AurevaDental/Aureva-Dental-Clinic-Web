@@ -1,0 +1,31 @@
+---
+interface Props {
+  department: string;
+  description: string;
+}
+const { department, description } = Astro.props;
+---
+<section class="py-12 md:py-16 px-6 lg:px-24 bg-japandi-sand/20 border-t border-japandi-clay/30">
+  <div class="max-w-4xl mx-auto space-y-4">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-japandi-moss/10 text-japandi-moss text-[10px] font-semibold uppercase tracking-wider">
+      <span>Specialist Department</span>
+    </div>
+    <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+      Which department handles this treatment?
+    </h2>
+    <p class="text-sm sm:text-base text-japandi-earth font-light leading-relaxed">
+      This treatment is managed by our visiting specialists in <strong>{department}</strong>. {description}
+    </p>
+    <div class="pt-1">
+      <a 
+        href="/our-specialists" 
+        class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-japandi-moss hover:text-japandi-charcoal transition-colors"
+      >
+        <span>View all 7 specialist departments</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

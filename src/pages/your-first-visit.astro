@@ -1,0 +1,395 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { generateBreadcrumbSchema, generateFaqSchema } from '../utils/seoSchemas';
+import { CANONICAL_PRICES } from '../data/prices';
+
+const pageTitle = "Your First Visit | Aureva Dental, Hennur Bande";
+const pageDescription = `What to expect on your first visit to Aureva Dental in Hennur Bande. ${CANONICAL_PRICES.consultation} consultation includes clinical examination, digital RVG X-rays, intraoral camera tour, and a written plan.`;
+const canonicalUrl = "https://aurevadental.com/your-first-visit";
+const phoneCallUrl = "tel:+917349701002";
+const whatsappUrl = "https://wa.me/917349701002?text=Hello%20Aureva%20Dental%2C%20I%20would%20like%20to%20book%20my%20first%20visit.";
+
+const breadcrumbs = [
+  { name: "Home", url: "https://aurevadental.com/" },
+  { name: "Your First Visit", url: canonicalUrl }
+];
+
+const faqs = [
+  {
+    question: "What is included in the new patient consultation?",
+    answer: `The ${CANONICAL_PRICES.consultation} consultation includes a full clinical examination, digital RVG X-rays, an intraoral camera walkthrough, and an itemized written treatment plan with confirmed prices valid for 6 months.`
+  },
+  {
+    question: "What should I bring to my first appointment?",
+    answer: "Please bring any previous dental X-rays or records you have, a list of current medications or health conditions, and any earlier treatment plans if you are seeking a second opinion."
+  },
+  {
+    question: "What happens if my condition requires a specialist?",
+    answer: "If your treatment requires specialized clinical care, we book an appointment with the appropriate visiting MDS specialist from one of our 7 dental departments."
+  },
+  {
+    question: "What payment options and modes do you accept?",
+    answer: "We accept all major credit and debit cards, UPI, and net banking. Flexible EMI options are also available for eligible treatment plans."
+  },
+  {
+    question: "Where is the clinic located and is there parking?",
+    answer: "We are located at 2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043. We are on the 2nd floor with lift. Parking available for 4-wheelers and 2-wheelers."
+  }
+];
+
+const breadcrumbSchema = JSON.stringify(generateBreadcrumbSchema(breadcrumbs));
+const faqSchema = JSON.stringify(generateFaqSchema(faqs));
+
+const seoProps = {
+  title: pageTitle,
+  description: pageDescription,
+  canonical: canonicalUrl,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: canonicalUrl,
+  schemaMarkup: [breadcrumbSchema, faqSchema]
+};
+
+const firstVisitPhotos = [
+  {
+    src: "/assets/hero-card-800.webp",
+    alt: "Aureva Dental private treatment operatory and consultation room in Hennur Bande",
+    caption: "Private Consultation Operatory"
+  },
+  {
+    src: "/assets/near-me/reception_desk_aureva.webp",
+    alt: "Reception desk and front entrance lounge at Aureva Dental",
+    caption: "Reception Lounge"
+  },
+  {
+    src: "/assets/near-me/treatment_operatory_chair.webp",
+    alt: "Ergonomic dental chair and digital treatment unit at Aureva Dental",
+    caption: "Ergonomic Treatment Suite"
+  }
+];
+---
+
+<Layout {...seoProps}>
+  <!-- Breadcrumb Navigation -->
+  <nav class="bg-japandi-sand/30 border-b border-japandi-clay/20 py-3.5 px-6 lg:px-24 text-xs font-light text-japandi-earth" aria-label="Breadcrumb">
+    <div class="max-w-5xl mx-auto flex items-center gap-2">
+      <a href="/" class="hover:text-japandi-moss transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-japandi-charcoal font-medium">Your First Visit</span>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <section class="py-16 md:py-24 px-6 lg:px-24 bg-transparent border-b border-japandi-clay/30">
+    <div class="max-w-5xl mx-auto space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-japandi-clay bg-japandi-sand/80 text-[11px] font-semibold text-japandi-moss uppercase tracking-wider">
+        <span class="w-1.5 h-1.5 rounded-full bg-japandi-moss"></span>
+        <span>Aureva Dental &bull; Hennur Bande</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-serif text-japandi-charcoal font-medium tracking-tight">
+        Your first visit
+      </h1>
+
+      <p class="text-base sm:text-lg text-japandi-earth font-light leading-relaxed max-w-3xl">
+        We believe dental visits should be calm, unhurried, and transparent. Here is everything you need to know about what happens on your first visit, what to bring, and how we plan your care.
+      </p>
+
+      <div class="pt-2 flex flex-wrap items-center gap-3">
+        <button 
+          type="button" 
+          data-open-booking 
+          class="px-7 py-3.5 rounded-full bg-japandi-moss hover:bg-japandi-charcoal text-japandi-cream text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm"
+        >
+          Book Your First Visit
+        </button>
+        <a 
+          href={whatsappUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="px-6 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm"
+        >
+          WhatsApp Us
+        </a>
+        <a 
+          href={phoneCallUrl} 
+          class="px-6 py-3.5 rounded-full border border-japandi-clay bg-japandi-sand/80 hover:bg-japandi-sand text-japandi-charcoal text-xs font-semibold uppercase tracking-wider transition-all duration-300"
+        >
+          Call Clinic
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clinic Photos Preview -->
+  <section class="py-12 px-6 lg:px-24 bg-japandi-sand/20 border-b border-japandi-clay/30">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {firstVisitPhotos.map((photo) => (
+        <div class="space-y-2">
+          <div class="rounded-2xl overflow-hidden border border-japandi-clay/50 aspect-[4/3] bg-japandi-clay/20">
+            <img 
+              src={photo.src}
+              alt={photo.alt}
+              width="400"
+              height="300"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <p class="text-xs text-japandi-earth font-light">{photo.caption}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Section 1: What the Consultation Includes -->
+  <section class="py-14 md:py-20 px-6 lg:px-24 bg-transparent border-b border-japandi-clay/30">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          What the {CANONICAL_PRICES.consultation} consultation includes
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light mt-2">
+          Your initial consultation is a complete clinical evaluation designed to understand your oral health status.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="p-6 rounded-2xl bg-japandi-sand/55 border border-japandi-clay/50 space-y-3">
+          <h3 class="text-base font-serif font-medium text-japandi-charcoal">
+            1. Comprehensive Examination
+          </h3>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+            A detailed check of your teeth, gums, occlusion (bite), and soft oral tissues to assess signs of wear, cavities, or inflammation.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-japandi-sand/55 border border-japandi-clay/50 space-y-3">
+          <h3 class="text-base font-serif font-medium text-japandi-charcoal">
+            2. Digital RVG X-ray
+          </h3>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+            High-resolution digital sensor imaging with minimal radiation to inspect hidden root pathology, interdental decay, and bone levels.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-japandi-sand/55 border border-japandi-clay/50 space-y-3">
+          <h3 class="text-base font-serif font-medium text-japandi-charcoal">
+            3. Intraoral Camera Walkthrough
+          </h3>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+            Real-time magnification on a chairside screen so you see exactly what the dentist sees, with clear visual explanations.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-japandi-sand/55 border border-japandi-clay/50 space-y-3">
+          <h3 class="text-base font-serif font-medium text-japandi-charcoal">
+            4. Written Plan With Prices
+          </h3>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+            An itemized, written estimate with exact price ranges valid for 6 months. You receive full clarity before any procedure is scheduled.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: What to Bring & Specialist Care -->
+  <section class="py-14 md:py-20 px-6 lg:px-24 bg-japandi-sand/20 border-b border-japandi-clay/30">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <!-- What to bring -->
+      <div class="space-y-5">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          What to bring
+        </h2>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed">
+          To help us provide the most comprehensive evaluation, please bring:
+        </p>
+        <ul class="space-y-3 text-xs sm:text-sm text-japandi-charcoal font-light">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-japandi-moss shrink-0 mt-0.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+            </svg>
+            <span><strong>Previous dental records or X-rays:</strong> If you have recent radiographs or treatment summaries from another clinic.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-japandi-moss shrink-0 mt-0.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+            </svg>
+            <span><strong>List of medications:</strong> Any current prescriptions, supplements, or medical conditions we should note.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-japandi-moss shrink-0 mt-0.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+            </svg>
+            <span><strong>Prior treatment plans:</strong> If you are visiting us for a clinical second opinion.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- If you need a specialist -->
+      <div class="space-y-5">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          If you need a specialist
+        </h2>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed">
+          Aureva Dental brings together visiting MDS specialists across all 7 dental disciplines. When your clinical situation calls for advanced root canal therapy, orthodontic alignment, surgical extraction, gum treatment, or implants, we coordinate directly with the right department specialist.
+        </p>
+        <p class="text-sm text-japandi-earth font-light leading-relaxed">
+          You don't need to travel across Bangalore to find specialists — all visiting consultations and specialized procedures happen right here in our Hennur Bande clinic.
+        </p>
+        <a 
+          href="/our-specialists" 
+          class="inline-flex items-center gap-2 text-xs font-semibold text-japandi-moss uppercase tracking-wider hover:underline"
+        >
+          <span>Explore our specialist departments</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Paying -->
+  <section class="py-14 md:py-20 px-6 lg:px-24 bg-transparent border-b border-japandi-clay/30">
+    <div class="max-w-5xl mx-auto space-y-6">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Paying for treatment
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light mt-2">
+          We keep financial aspects straightforward and clear, with no unexpected additions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div class="p-6 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/50 space-y-2">
+          <h3 class="text-base font-serif font-medium text-japandi-charcoal">Digital & Card Payments</h3>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light">All major credit cards, debit cards, UPI payments, and net banking accepted.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/50 space-y-2">
+          <h3 class="text-base font-serif font-medium text-japandi-charcoal">EMI Options Available</h3>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light">Flexible installment plans available for eligible orthodontic, implant, and restorative care.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/50 space-y-2">
+          <h3 class="text-base font-serif font-medium text-japandi-charcoal">Upfront Itemized Estimates</h3>
+          <p class="text-xs sm:text-sm text-japandi-earth font-light">Your written plan outlines each cost component before any work begins, valid for 6 months.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Getting Here -->
+  <section class="py-14 md:py-20 px-6 lg:px-24 bg-japandi-sand/20 border-b border-japandi-clay/30">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Getting here
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light mt-2">
+          Conveniently located on Horamavu Agara Road near Nayara Petrol Bunk in Hennur Bande.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="p-6 rounded-2xl bg-japandi-sand/60 border border-japandi-clay/50 space-y-4 text-xs sm:text-sm text-japandi-earth font-light">
+            <p class="text-japandi-charcoal font-medium">
+              2nd floor, No.11, 4, Horamavu Agara Rd, near Nayara Petrol Bunk, Hennur Bande, Hennur Gardens, Bengaluru, Karnataka 560043
+            </p>
+            <p class="flex items-center gap-2 text-japandi-moss font-semibold">
+              <span class="w-2 h-2 rounded-full bg-japandi-moss shrink-0"></span>
+              Parking available for 4-wheelers and 2-wheelers.
+            </p>
+            <p class="flex items-center gap-2 text-japandi-charcoal">
+              <span class="w-2 h-2 rounded-full bg-japandi-moss shrink-0"></span>
+              2nd floor with lift
+            </p>
+            <p class="flex items-center gap-2 text-japandi-charcoal">
+              <span class="w-2 h-2 rounded-full bg-japandi-moss shrink-0"></span>
+              Mon 4–9 PM, Tue–Sun 9:30 AM–9 PM
+            </p>
+          </div>
+
+          <a 
+            href="https://maps.app.goo.gl/dhU4UySs9WFkHAzYA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-xs font-semibold text-japandi-moss hover:underline"
+          >
+            <span>Open directions in Google Maps</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-japandi-clay/60 aspect-[16/10] w-full relative bg-japandi-clay/20">
+          <iframe
+            title="Aureva Dental Google Maps Location in Hennur Bande"
+            src="https://maps.google.com/maps?q=13.0381741,77.6416031+(Aureva+Dental)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-full"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: FAQs -->
+  <section class="py-14 md:py-20 px-6 lg:px-24 bg-transparent">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-serif text-japandi-charcoal font-medium">
+          Frequently asked questions about your first visit
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {faqs.map((faq) => (
+          <div class="p-6 rounded-2xl bg-japandi-sand/50 border border-japandi-clay/50 space-y-2">
+            <h3 class="text-sm sm:text-base font-serif font-medium text-japandi-charcoal">
+              {faq.question}
+            </h3>
+            <p class="text-xs sm:text-sm text-japandi-earth font-light leading-relaxed">
+              {faq.answer}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="pt-8 flex flex-wrap items-center justify-center gap-4">
+        <button 
+          type="button" 
+          data-open-booking 
+          class="px-8 py-4 rounded-full bg-japandi-moss hover:bg-japandi-charcoal text-japandi-cream text-xs uppercase font-semibold tracking-wider transition-all duration-300 shadow-sm"
+        >
+          Book Your First Visit
+        </button>
+        <a 
+          href={whatsappUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs uppercase font-semibold tracking-wider transition-all duration-300 shadow-sm"
+        >
+          WhatsApp Us
+        </a>
+        <a 
+          href={phoneCallUrl} 
+          class="px-8 py-4 rounded-full border border-japandi-clay bg-japandi-sand/80 hover:bg-japandi-sand text-japandi-charcoal text-xs uppercase font-semibold tracking-wider transition-all duration-300"
+        >
+          Call +91 73497 01002
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

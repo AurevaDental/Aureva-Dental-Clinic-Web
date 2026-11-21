@@ -1,0 +1,76 @@
+---
+import { CANONICAL_PRICES } from '../data/prices';
+
+const teaserTreatments = [
+  {
+    name: "Consultation & Digital X-ray",
+    price: CANONICAL_PRICES.consultation,
+    url: "/prices"
+  },
+  {
+    name: "Routine Scaling & Polishing",
+    price: CANONICAL_PRICES.scaling_routine,
+    url: "/treatments/scaling-and-polishing"
+  },
+  {
+    name: "Tooth-Coloured Composite Filling",
+    price: CANONICAL_PRICES.tooth_filling,
+    url: "/prices"
+  },
+  {
+    name: "Root Canal Treatment (Molar)",
+    price: CANONICAL_PRICES.rct_molar,
+    url: "/root-canal-treatment-hennur"
+  },
+  {
+    name: "Single Dental Implant",
+    price: CANONICAL_PRICES.implant_single_fixture,
+    url: "/dental-implants-hennur"
+  },
+  {
+    name: "Clear Aligners (Mild)",
+    price: CANONICAL_PRICES.aligners_mild,
+    url: "/treatments/clear-aligners"
+  }
+];
+---
+
+<section class="py-16 md:py-24 px-6 lg:px-24 bg-japandi-sand/30 border-t border-japandi-clay/40">
+  <div class="max-w-7xl mx-auto space-y-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-4xl font-serif text-japandi-charcoal font-medium tracking-tight">
+          Common treatment prices
+        </h2>
+        <p class="text-sm sm:text-base text-japandi-earth font-light mt-2">
+          Transparent price ranges confirmed in writing after clinical examination.
+        </p>
+      </div>
+      <a 
+        href="/prices"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-japandi-moss hover:bg-japandi-charcoal text-japandi-cream text-xs uppercase font-semibold tracking-wider transition-all duration-300 shadow-sm shrink-0 self-start sm:self-auto"
+      >
+        <span>See all prices</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {teaserTreatments.map((t) => (
+        <a 
+          href={t.url}
+          class="p-5 sm:p-6 rounded-2xl bg-japandi-sand/60 hover:bg-japandi-sand border border-japandi-clay/50 hover:border-japandi-moss/50 transition-all duration-300 flex items-center justify-between gap-4"
+        >
+          <span class="text-xs sm:text-sm font-medium text-japandi-charcoal">
+            {t.name}
+          </span>
+          <span class="text-xs sm:text-sm font-semibold text-japandi-moss shrink-0">
+            {t.price}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

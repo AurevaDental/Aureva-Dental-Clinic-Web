@@ -217,9 +217,9 @@ const priceGroups: PriceGroup[] = [
       { treatment: "Bridal: The Signature Bride / Groom", price: CANONICAL_PRICES.bridal_signature },
       { treatment: "Bridal: The Luxury Couture Smile", price: CANONICAL_PRICES.bridal_luxury_couture },
       { treatment: "Bridal: Couple's Wedding Radiance Pass", price: CANONICAL_PRICES.bridal_couple_radiance },
-      { treatment: "Aureva Essential (Individual)", price: CANONICAL_PRICES.membership_essential, notes: "Annual preventive care" },
-      { treatment: "Aureva Privilege (Family)", price: CANONICAL_PRICES.membership_privilege, notes: "Annual family coverage" },
-      { treatment: "Aureva Royalty (VIP)", price: CANONICAL_PRICES.membership_royalty, notes: "Comprehensive annual coverage" },
+      { treatment: "Aureva Essential (Individual)", price: CANONICAL_PRICES.membership_essential, notes: "Priority booking, 2 consultations, 10% off treatments" },
+      { treatment: "Aureva Privilege (Family)", price: CANONICAL_PRICES.membership_privilege, notes: "Family priority booking, 4 consultations, 15% off treatments, whitening for one member" },
+      { treatment: "Aureva Royalty (VIP)", price: CANONICAL_PRICES.membership_royalty, notes: "Concierge booking, unlimited consultations, 20% off treatments, wedding smile coach" },
       { treatment: "Corporate dental plans", price: PACE },
       { treatment: "International patient packages", price: "Written estimate after records review", url: "/international-patients" }
     ]
@@ -227,7 +227,7 @@ const priceGroups: PriceGroup[] = [
 ];
 ---
 
-<Layout seo={seoProps}>
+<Layout {...seoProps}>
   <section class="py-16 md:py-24 px-6 lg:px-24 bg-transparent border-b border-japandi-clay/30">
     <div class="max-w-5xl mx-auto space-y-6">
       <nav aria-label="Breadcrumb" class="text-xs text-japandi-earth font-light">

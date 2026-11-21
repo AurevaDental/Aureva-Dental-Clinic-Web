@@ -181,6 +181,14 @@ const treatments = [
           <span>Book Visit</span>
         </button>
 
+        <!-- Mobile Quick Prices Link -->
+        <a 
+          href="/prices" 
+          class="md:hidden px-3 py-1.5 rounded-full border border-japandi-moss/40 text-japandi-moss font-semibold text-xs tracking-wider uppercase hover:bg-japandi-moss hover:text-japandi-cream transition-colors"
+        >
+          Prices
+        </a>
+
         <!-- Mobile Menu Toggle Button -->
         <button 
           id="mobile-menu-btn"
@@ -214,7 +222,16 @@ const treatments = [
   <!-- Mobile Collapsible Navigation Drawer -->
   <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-japandi-clay/20 mt-3 animate-slow-fade">
     <div class="flex flex-col gap-3 text-xs font-medium uppercase tracking-widest text-japandi-earth">
-      <div class="px-2 pt-1 text-[10px] text-japandi-moss font-semibold tracking-wider">Treatments</div>
+      <a href={servicesLink} class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">Services</a>
+      <a href="/prices" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors font-medium text-japandi-moss">Prices</a>
+      <a href="/our-specialists" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors font-medium text-japandi-moss">Our specialists</a>
+      <a href="/your-first-visit" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors font-medium text-japandi-moss">Your first visit</a>
+      <a href="/dental-clinic-in-hennur" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">Visit the clinic</a>
+      <a href="/international-patients" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">International</a>
+      <a href="/blog" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">Blog</a>
+      <a href="/contact" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">Contact</a>
+
+      <div class="px-2 pt-2 text-[10px] text-japandi-moss font-semibold tracking-wider border-t border-japandi-clay/20">Treatments</div>
       <div class="grid grid-cols-2 gap-2 pb-2 border-b border-japandi-clay/20">
         {treatments.map((t) => (
           <a 
@@ -226,17 +243,6 @@ const treatments = [
           </a>
         ))}
       </div>
-      <a href="/our-specialists" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors font-medium text-japandi-moss">Our specialists</a>
-      <a href={servicesLink} class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">Services</a>
-      <a href="/prices" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors font-medium text-japandi-moss">Prices</a>
-      <a href="/international-patients" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors font-medium text-japandi-moss">International Patients</a>
-      <a href="/about" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">About Us</a>
-      <a href={teamLink} class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">Our team</a>
-      <a href={locationsLink} class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">Visit the clinic</a>
-      <a href="/blog" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">Blog</a>
-      <a href="/contact" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">Contact</a>
-      <a href={faqLink} class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">FAQ</a>
-      <a href="/feedback" class="px-2 py-1.5 hover:text-japandi-charcoal transition-colors">Feedback</a>
       <div class="pt-2 grid grid-cols-3 gap-2">
         <a 
           href={phoneCallUrl}
